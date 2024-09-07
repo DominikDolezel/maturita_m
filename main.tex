@@ -1,11 +1,17 @@
 \documentclass[11pt]{template/cauchy}
 \usepackage[czech]{babel}
 
+\usepackage{enumerate}
 \usepackage{mlmodern}
 \usepackage{template/mathsphystools}
 % \usepackage{thmstyles}
 % \usepackage{graphicx}
 % \graphicspath{{images/}}
+
+\newtheorem{definition}{Definice}
+\newtheorem{example}{Příklad}
+\newtheorem{veta}{Věta}
+\newtheorem{pozn}{Poznámka}
 
 \title[Title for the Header]{Matematika}
 \subtitle{}
@@ -32,6 +38,8 @@
 \mainmatter
 
 % \input{01_nazev_otazky}
+
+\input{chapters/01_teorie_mnozin}
 
 \nocite{*}
 \clearpage
