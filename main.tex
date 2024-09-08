@@ -4,14 +4,51 @@
 \usepackage{enumerate}
 \usepackage{mlmodern}
 \usepackage{template/mathsphystools}
+\usepackage{amsthm,thmtools,xcolor}
 % \usepackage{thmstyles}
 % \usepackage{graphicx}
 % \graphicspath{{images/}}
 
-\newtheorem{definition}{Definice}
-\newtheorem{example}{Příklad}
-\newtheorem{veta}{Věta}
-\newtheorem{pozn}{Poznámka}
+\declaretheoremstyle[
+  headfont=\color{red}\normalfont\bfseries,
+  bodyfont=\color{black}\normalfont,
+]{def}
+
+\declaretheoremstyle[
+  headfont=\color{blue}\normalfont\bfseries,
+  bodyfont=\color{black}\normalfont\itshape,
+]{pr}
+
+\declaretheoremstyle[
+  headfont=\color{green}\normalfont\bfseries,
+  bodyfont=\color{black}\normalfont\itshape,
+]{veta}
+
+\declaretheoremstyle[
+  headfont=\color{orange}\normalfont\bfseries,
+  bodyfont=\color{black}\normalfont,
+]{pozn}
+
+\declaretheorem[
+  style=def,
+  name=Definice,
+]{definition}
+
+\declaretheorem[
+  style=pr,
+  name=Příklad,
+]{example}
+
+\declaretheorem[
+  style=veta,
+  name=Věta,
+]{veta}
+
+\declaretheorem[
+  style=pozn,
+  name=Poznámka,
+]{pozn}
+
 
 \title[Title for the Header]{Matematika}
 \subtitle{}
