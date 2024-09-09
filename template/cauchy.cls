@@ -84,7 +84,7 @@
 
   \renewcommand{\sectionmark}[1]{\markright{{#1}}}
   \renewcommand{\subsectionmark}[1]{}
-  
+
   % Header-Footer style for the blank page
   \fancypagestyle{fancy-blank}{
     \fancyhf{}
@@ -210,10 +210,10 @@
 %------------------------------------------------------------
 % THE LISTS
 %------------------------------------------------------------
-\RequirePackage{enumitem}
-\setlist[itemize,1]{label=$\bullet$}
-\setlist[itemize,2]{leftmargin=6mm}
-\setlist[itemize,3]{leftmargin=6mm, label=$\ast$}
+%\RequirePackage{enumitem}
+%\setlist[itemize,1]{label=$\bullet$}
+%\setlist[itemize,2]{leftmargin=6mm}
+%\setlist[itemize,3]{leftmargin=6mm, label=$\ast$}
 
 %------------------------------------------------------------
 % TABLES
