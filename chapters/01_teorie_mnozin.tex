@@ -222,9 +222,25 @@ $$[a, b][c, d] = [ac - bd, ad + bc].$$
   \end{enumerate}
 \end{example}
 
-\begin{example}
+\begin{example}[SMP 140/6abc]
   Pomocí Vennových diagramů zjednodušte zápisy množin:
   \begin{enumerate}[a.]
     \item $(A \cap B \cap C) \cup [B \cap (A^\prime \cup C)^\prime]$
+    \item $[(A \cup B)^\prime \cup (B \cup C)] \cap (C \cup A)$
+    \item $[(A \cup B^\prime) \cap C] \cup [(B^\prime \cup A^\prime)^\prime \cap C]$
   \end{enumerate}
+  Řešení viz papír nemám kapacitu na to v 2103 vymýšlet množiny v latexu
+\end{example}
+
+\begin{example}[SÚM 109/36]
+  Dokažte, že číslo $\sqrt{5}$ je iracionální.
+
+  Dk. sporem: Nechť $\sqrt{5} \in \Q \Rightarrow \sqrt{5} = \frac{a}{b}, a, b \in \Z, D(a, b) = 1$.
+  $$\sqrt{5} = \frac{a}{b}$$
+  $$5 = \frac{a^2}{b^2}$$
+  $$5b^2 = a^2 \Rightarrow 5 \mid a^2 \Rightarrow 5 \mid a \Rightarrow \exists k: a = 5k$$
+  $$5b^2 = (5k)^2$$
+  $$5b^2 = 25k^2$$
+  $$b^2 = 5k^2 \Rightarrow 5 \mid b^2 \Rightarrow 5 \mid b$$ -- spor s předpokladem, že $D(a, b) = 1$
+  $$\sqrt{5} \in \mathbb{I}$$
 \end{example}
