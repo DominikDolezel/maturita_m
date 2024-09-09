@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+Reallocating 'name_of_file' (item size: 1) to 15 items.
+The style file: elsarticle-num.bst
+Reallocating 'name_of_file' (item size: 1) to 11 items.
+Database file #1: references.bib
+Warning--entry type for "IEEEexample:BSTcontrol" isn't style-file defined
+--line 4 of file references.bib
+Warning--empty year in IEEEexample:BSTcontrol
+Warning--all relevant fields are empty in IEEEexample:BSTcontrol
+You've used 4 entries,
+            2952 wiz_defined-function locations,
+            691 strings with 5887 characters,
+and the built_in function-call counts, 1240 in all, are:
+= -- 103
+> -- 31
+< -- 3
++ -- 13
+- -- 9
+* -- 66
+:= -- 159
+add.period$ -- 4
+call.type$ -- 4
+change.case$ -- 4
+chr.to.int$ -- 0
+cite$ -- 6
+duplicate$ -- 53
+empty$ -- 157
+format.name$ -- 11
+if$ -- 333
+int.to.chr$ -- 0
+int.to.str$ -- 4
+missing$ -- 2
+newline$ -- 21
+num.names$ -- 3
+pop$ -- 39
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 99
+stack$ -- 0
+substring$ -- 40
+swap$ -- 19
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 2
+while$ -- 7
+width$ -- 5
+write$ -- 39
+(There were 3 warnings)

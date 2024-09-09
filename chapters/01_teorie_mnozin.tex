@@ -227,13 +227,19 @@ $$[a, b][c, d] = [ac - bd, ad + bc].$$
 \end{example}
 
 \begin{example}[SMP 140/6abc]
-  Pomocí Vennových diagramů zjednodušte zápisy množin:
-  \begin{enumerate}[a.]
-    \item $(A \cap B \cap C) \cup [B \cap (A^\prime \cup C)^\prime]$
-    \item $[(A \cup B)^\prime \cup (B \cup C)] \cap (C \cup A)$
-    \item $[(A \cup B^\prime) \cap C] \cup [(B^\prime \cup A^\prime)^\prime \cap C]$
-  \end{enumerate}
-  Řešení viz papír nemám kapacitu na to v 2103 vymýšlet množiny v latexu
+  Pomocí Vennových diagramů zjednodušte zápisy množin: \\
+  \begin{minipage}{0.5\textwidth}
+    \begin{enumerate}[a.]
+      \item $(A \cap B \cap C) \cup [B \cap (A^\prime \cup C)^\prime]$
+      \item $[(A \cup B)^\prime \cup (B \cup C)] \cap (C \cup A)$
+      \item $[(A \cup B^\prime) \cap C] \cup [(B^\prime \cup A^\prime)^\prime \cap C]$
+    \end{enumerate}
+  \end{minipage}
+  \hfill
+  \noindent\begin{minipage}{0.5\textwidth}
+      \includegraphics[width=\linewidth]{vennovy}
+      \captionof{figure}{}
+  \end{minipage}
 \end{example}
 
 \begin{example}[SÚM 109/36]
@@ -247,4 +253,88 @@ $$[a, b][c, d] = [ac - bd, ad + bc].$$
   $$5b^2 = 25k^2$$
   $$b^2 = 5k^2 \Rightarrow 5 \mid b^2 \Rightarrow 5 \mid b$$ -- spor s předpokladem, že $D(a, b) = 1$
   $$\sqrt{5} \in \mathbb{I}$$
+\end{example}
+
+\begin{example}[SÚM 109/37]
+  Dokažte, že číslo $\sqrt{2} - 1$ je iracionální.
+
+  Dk. sporem: Nechť $(\sqrt{2} - 1) \in \Q \Rightarrow \sqrt{2} - 1 = \frac{a}{b}, a, b \in \Z, D(a, b) = 1$.
+  $$\sqrt{2} - 1 = \frac{a}{b}$$
+  $$1 - 2\sqrt{2} = \frac{a^2}{b^2}$$
+  $$\frac{b^2-a^2}{2b^2} = \sqrt{2} \Rightarrow \sqrt{2} = \frac{p}{q}, p,q \in \Z \Rightarrow \sqrt(2) \in \Q$$ -- spor
+  $$(\sqrt{2} - 1) \in \mathbb{I}$$
+\end{example}
+
+\begin{example}[SÚM 109/38]
+  Dokažte, že číslo $2\sqrt{5}$ je iracionální.
+
+  Dk. sporem: Nechť $2\sqrt{5} \in \Q \Rightarrow 2\sqrt{5} = \frac{a}{b}, a, b \in \Z, D(a, b) = 1$.
+  $$2\sqrt{5} = \frac{a}{b}$$
+  $$10 = \frac{a^2}{b^2}$$
+  $$10b^2 = a^2 \Rightarrow 10 \mid a^2 \Rightarrow 10 \mid a \Rightarrow \exists k: a = 10k$$
+  $$10b^2 = (10k)^2$$
+  $$10b^2 = 100k^2$$
+  $$b^2 = 10k^2 \Rightarrow 10 \mid b^2 \Rightarrow 10 \mid b$$ -- spor s předpokladem, že $D(a, b) = 1$
+  $$2\sqrt{5} \in \mathbb{I}$$
+\end{example}
+
+\begin{example}[SÚM 109/39]
+  Dokažte, že jestliže přirozené číslo $m$ není druhou mocninou žádného přirozeného čísla, potom $\sqrt{m}$ je číslo iracionální.
+
+  Dk. sporem: Nechť $m \in \N, m != n^2 \forall n \in \N, \sqrt{m} \in \Q \Rightarrow \sqrt{m} = \frac{a}{b}, a, b \in \N, D(a, b) = 1$.
+  $$\sqrt{m} = \frac{a}{b}$$
+  $$m = \frac{a^2}{b^2}, m \in \N \Rightarrow b^2 = 1$$
+  $$m = a^2, a \in \N$$ -- spor s předpokladem, že $m != n^2 \forall n \in \N$
+  QED
+\end{example}
+
+\begin{example}[SÚM 144/301]
+  Dokažte, že:
+  \begin{enumerate}[a.]
+    \item součet dvou dvojciferných čísel přirozených, která se liší jen pořadím cifer, je dělitelný jedenácti: $$S = \overline{ab} + \overline{ba} = 10a + b + 10b + a = 11(a + b) \Rightarrow 11 \mid S$$
+    \item rozdíl dvou dvojciferných čísel přirozených, která se liší jen pořadím cifer, je dělitelný devítí: $$S = \overline{ab} - \overline{ba} = 10a + b - 10b - a = 9(a - b) \Rightarrow 9 \mid S$$
+    \item rozdíl přirozeného čísla trojciferného  a čísla, které vznikne z tohoto záměnou krajních cifer, je dělitelný 99: $$S = \overline{abc} - \overline{cba} = 100a + 10b + c - 100c - 10b - a = 99(a - c) \Rightarrow 99 \mid S$$
+  \end{enumerate}
+\end{example}
+
+\begin{example}[SÚM 145/303]
+  Dokažte, že tři mocniny čísla 2, jejichž exponenty jsou tři po sobě jdoucí přirozená čísla, mají součet dělitelný sedmi: $$S = 2^a + 2^{a+1} + 2^{a+2} = 2^a + 2^a*2^1 + 2^a*2^2 = 7*2^a \Rightarrow 7 \mid S$$
+\end{example}
+
+\begin{example}[SÚM 145/305]
+  Dokažte, že součet třetích mocnin tří po sobě jdoucích přirozených čísel je dělitelný třemi: $$S = a^3 + (a+1)^3 + (a+2)^3 = a^3 + a^3 + 3a^2 + 3a + 1 + a^3 + 6a^2 + 12a + 8 = 3(a^3 + 3a^2 + 5a + 3) \Rightarrow 3 \mid S $$
+\end{example}
+
+\begin{example}[SÚM 145/306]
+  Dokažte, že:
+  \begin{enumerate}[a]
+    \item číslo utvořené z rozdílu třetí mociny přirozeného čísla $n$ a tohoto čísla je dělitelné šesti: $$S = n^3 - n = n(n^2-1) = (n-1)n(n+1)$$ Jsou to tři po sobě jdoucí čísla $\Rightarrow$ právě 1 z nich je dělitelné třemi $\Rightarrow 3 \mid S$
+    \item je-li číslo $n$ liché, je uvažovaný rozdíl dělitelný čísel 24: $$S = (n-1)n(n+1)$$ Jsou to tři po sobě jdoucí čísla a to prostřední je liché $\Rightarrow$ dělitelné třemi, z dalších čísel je jedno dělitelné 2 a jedno dělitelné čtyřmi: 2*4*3 = 24 $\Rightarrow 24 \mid S$
+  \end{enumerate}
+\end{example}
+
+\begin{example}[SÚM 145/307]
+  Dokažte, že je—li přirozené číslo $x$ liché, je výraz $V = x^3 + 3x^2 — x — 3$ dělitelný číslem 48: $$V = x^3 + 3x^2 — x — 3 = x^2(x+3) -(x+3) = (x^2 - 1)(x+3) = (x-1)(x+1)(x+3)$$ $\Rightarrow$ tři po sobě jdoucí sudá čísla $\Rightarrow$ jedno dělitelné 2, jedno 4 a jedno 6 $\Rightarrow 2*4*6 = 48 \Rightarrow 48 \mid V$
+\end{example}
+
+\begin{example}[SÚM 145/308]
+  Dokažte, že výraz $V = 5x^3 + 15x^2 + 10x$ je dělitelný číslem 30 prokaždé přirozené číslo $x$: $$V = 5x^3 + 15x^2 + 10x = 5x(x^2 + 3x + 2) = 5x(x+2)(x+1)$$ $\Rightarrow$ $x$, $x+1$, $x+2$ tři po sobě jdoucí čísla $\Rightarrow$ jedno dělitelné 3, alespoň jedno dělitelné 2, $5x$ dělitelné 5 $\Rightarrow 2*3*5=30 \Rightarrow 30 \mid V$
+\end{example}
+
+\begin{example}[SÚM 145/312]
+  Dokažte, že je-li $n$ číslo přirozené, je číslo $N = n^3 + 11n$ dělitelné šesti:
+  mod 6:
+  \begin{enumerate}
+    \item $n = 6k$: $n^3 + 11n \equiv 0^3 + 11*0 \equiv 0 \Rightarrow 6 \mid N$
+    \item $n = 6k + 1$: $n^3 + 11n \equiv 1^3 + 11*1 \equiv 12 \equiv 0 \Rightarrow 6 \mid N$
+    \item $n = 6k + 2$: $n^3 + 11n \equiv 2^3 + 11*2 \equiv 30 \equiv 0 \Rightarrow 6 \mid N$
+    \item $n = 6k + 3$: $n^3 + 11n \equiv 3^3 + 11*3 \equiv 60 \equiv 0 \Rightarrow 6 \mid N$
+    \item $n = 6k + 4$: $n^3 + 11n \equiv 4^3 + 11*4 \equiv 108 \equiv 0 \Rightarrow 6 \mid N$
+    \item $n = 6k + 5$: $n^3 + 11n \equiv 5^3 + 11*5 \equiv 180 \equiv 0 \Rightarrow 6 \mid N$
+  \end{enumerate}
+  $\Rightarrow 6 \mid N \forall n \in \N$
+\end{example}
+
+\begin{example}[SÚM 145/315]
+
 \end{example}
