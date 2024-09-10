@@ -281,10 +281,10 @@ $$[a, b][c, d] = [ac - bd, ad + bc].$$
 \begin{example}[SÚM 109/39]
   Dokažte, že jestliže přirozené číslo $m$ není druhou mocninou žádného přirozeného čísla, potom $\sqrt{m}$ je číslo iracionální.
 
-  Dk. sporem: Nechť $m \in \N, m != n^2 \forall n \in \N, \sqrt{m} \in \Q \Rightarrow \sqrt{m} = \frac{a}{b}, a, b \in \N, D(a, b) = 1$.
+  Dk. sporem: Nechť $m \in \N, m \neq n^2 \forall n \in \N, \sqrt{m} \in \Q \Rightarrow \sqrt{m} = \frac{a}{b}, a, b \in \N, D(a, b) = 1$.
   $$\sqrt{m} = \frac{a}{b}$$
   $$m = \frac{a^2}{b^2}, m \in \N \Rightarrow b^2 = 1$$
-  $$m = a^2, a \in \N$$ -- spor s předpokladem, že $m != n^2 \forall n \in \N$
+  $$m = a^2, a \in \N$$ -- spor s předpokladem, že $\forall n \in \N: m \neq n^2 $
   QED
 \end{example}
 
@@ -298,7 +298,7 @@ $$[a, b][c, d] = [ac - bd, ad + bc].$$
 \end{example}
 
 \begin{example}[SÚM 145/303]
-  Dokažte, že tři mocniny čísla 2, jejichž exponenty jsou tři po sobě jdoucí přirozená čísla, mají součet dělitelný sedmi: $$S = 2^a + 2^{a+1} + 2^{a+2} = 2^a + 2^a*2^1 + 2^a*2^2 = 7*2^a \Rightarrow 7 \mid S$$
+  Dokažte, že tři mocniny čísla 2, jejichž exponenty jsou tři po sobě jdoucí přirozená čísla, mají součet dělitelný sedmi: $$S = 2^a + 2^{a+1} + 2^{a+2} = 2^a + 2^a\cdot2^1 + 2^a\cdot2^2 = 7\cdot2^a \Rightarrow 7 \mid S$$
 \end{example}
 
 \begin{example}[SÚM 145/305]
@@ -309,28 +309,28 @@ $$[a, b][c, d] = [ac - bd, ad + bc].$$
   Dokažte, že:
   \begin{enumerate}[a]
     \item číslo utvořené z rozdílu třetí mociny přirozeného čísla $n$ a tohoto čísla je dělitelné šesti: $$S = n^3 - n = n(n^2-1) = (n-1)n(n+1)$$ Jsou to tři po sobě jdoucí čísla $\Rightarrow$ právě 1 z nich je dělitelné třemi $\Rightarrow 3 \mid S$
-    \item je-li číslo $n$ liché, je uvažovaný rozdíl dělitelný čísel 24: $$S = (n-1)n(n+1)$$ Jsou to tři po sobě jdoucí čísla a to prostřední je liché $\Rightarrow$ dělitelné třemi, z dalších čísel je jedno dělitelné 2 a jedno dělitelné čtyřmi: 2*4*3 = 24 $\Rightarrow 24 \mid S$
+    \item je-li číslo $n$ liché, je uvažovaný rozdíl dělitelný čísel 24: $$S = (n-1)n(n+1)$$ Jsou to tři po sobě jdoucí čísla a to prostřední je liché $\Rightarrow$ dělitelné třemi, z dalších čísel je jedno dělitelné 2 a jedno dělitelné čtyřmi: $2\cdot4\cdot3 = 24 \Rightarrow 24 \mid S$
   \end{enumerate}
 \end{example}
 
 \begin{example}[SÚM 145/307]
-  Dokažte, že je—li přirozené číslo $x$ liché, je výraz $V = x^3 + 3x^2 — x — 3$ dělitelný číslem 48: $$V = x^3 + 3x^2 — x — 3 = x^2(x+3) -(x+3) = (x^2 - 1)(x+3) = (x-1)(x+1)(x+3)$$ $\Rightarrow$ tři po sobě jdoucí sudá čísla $\Rightarrow$ jedno dělitelné 2, jedno 4 a jedno 6 $\Rightarrow 2*4*6 = 48 \Rightarrow 48 \mid V$
+  Dokažte, že je—li přirozené číslo $x$ liché, je výraz $V = x^3 + 3x^2 — x — 3$ dělitelný číslem 48: $$V = x^3 + 3x^2 — x — 3 = x^2(x+3) -(x+3) = (x^2 - 1)(x+3) = (x-1)(x+1)(x+3)$$ $\Rightarrow$ tři po sobě jdoucí sudá čísla $\Rightarrow$ jedno dělitelné 2, jedno 4 a jedno 6 $\Rightarrow 2\cdot4\cdot6 = 48 \Rightarrow 48 \mid V$
 \end{example}
 
 \begin{example}[SÚM 145/308]
-  Dokažte, že výraz $V = 5x^3 + 15x^2 + 10x$ je dělitelný číslem 30 prokaždé přirozené číslo $x$: $$V = 5x^3 + 15x^2 + 10x = 5x(x^2 + 3x + 2) = 5x(x+2)(x+1)$$ $\Rightarrow$ $x$, $x+1$, $x+2$ tři po sobě jdoucí čísla $\Rightarrow$ jedno dělitelné 3, alespoň jedno dělitelné 2, $5x$ dělitelné 5 $\Rightarrow 2*3*5=30 \Rightarrow 30 \mid V$
+  Dokažte, že výraz $V = 5x^3 + 15x^2 + 10x$ je dělitelný číslem 30 prokaždé přirozené číslo $x$: $$V = 5x^3 + 15x^2 + 10x = 5x(x^2 + 3x + 2) = 5x(x+2)(x+1)$$ $\Rightarrow$ $x$, $x+1$, $x+2$ tři po sobě jdoucí čísla $\Rightarrow$ jedno dělitelné 3, alespoň jedno dělitelné 2, $5x$ dělitelné 5 $\Rightarrow 2\cdot3\cdot5=30 \Rightarrow 30 \mid V$
 \end{example}
 
 \begin{example}[SÚM 145/312]
   Dokažte, že je-li $n$ číslo přirozené, je číslo $N = n^3 + 11n$ dělitelné šesti:
   mod 6:
   \begin{enumerate}
-    \item $n = 6k$: $n^3 + 11n \equiv 0^3 + 11*0 \equiv 0 \Rightarrow 6 \mid N$
-    \item $n = 6k + 1$: $n^3 + 11n \equiv 1^3 + 11*1 \equiv 12 \equiv 0 \Rightarrow 6 \mid N$
-    \item $n = 6k + 2$: $n^3 + 11n \equiv 2^3 + 11*2 \equiv 30 \equiv 0 \Rightarrow 6 \mid N$
-    \item $n = 6k + 3$: $n^3 + 11n \equiv 3^3 + 11*3 \equiv 60 \equiv 0 \Rightarrow 6 \mid N$
-    \item $n = 6k + 4$: $n^3 + 11n \equiv 4^3 + 11*4 \equiv 108 \equiv 0 \Rightarrow 6 \mid N$
-    \item $n = 6k + 5$: $n^3 + 11n \equiv 5^3 + 11*5 \equiv 180 \equiv 0 \Rightarrow 6 \mid N$
+    \item $n = 6k$: $n^3 + 11n \equiv 0^3 + 11\cdot0 \equiv 0 \Rightarrow 6 \mid N$
+    \item $n = 6k + 1$: $n^3 + 11n \equiv 1^3 + 11\cdot1 \equiv 12 \equiv 0 \Rightarrow 6 \mid N$
+    \item $n = 6k + 2$: $n^3 + 11n \equiv 2^3 + 11\cdot2 \equiv 30 \equiv 0 \Rightarrow 6 \mid N$
+    \item $n = 6k + 3$: $n^3 + 11n \equiv 3^3 + 11\cdot3 \equiv 60 \equiv 0 \Rightarrow 6 \mid N$
+    \item $n = 6k + 4$: $n^3 + 11n \equiv 4^3 + 11\cdot4 \equiv 108 \equiv 0 \Rightarrow 6 \mid N$
+    \item $n = 6k + 5$: $n^3 + 11n \equiv 5^3 + 11\cdot5 \equiv 180 \equiv 0 \Rightarrow 6 \mid N$
   \end{enumerate}
   $\Rightarrow 6 \mid N \forall n \in \N$
 \end{example}
