@@ -104,15 +104,17 @@ Iracionální čísla ($\mathbb{I}$) jsou doplněk racionálních v $\mathbb{R}$
 \end{definition}
 
 \begin{definition}
-  Množina komplexních čísel $\mathbb C$ je množina uspořádaných reálných dvojic $[x, y]$, na kterých je definována rovnost, sčítání a násobení následovně:
-$$[a, b] = [c, d] \Leftrightarrow a = c \land b = d,$$
-$$[a, b] + [c, d] = [a + c, b + d],$$
-$$[a, b][c, d] = [ac - bd, ad + bc].$$
-  Dvojici $[0, 1]$ označíme $i$ a budeme ji nazývat komplexní jednotkou. Zřejmě pak platí, že $i^2 = -1$.
+  Množina komplexních čísel $\mathbb C$ je množina uspořádaných reálných dvojic $(x, y)$, na kterých je definována rovnost, sčítání a násobení následovně:
+  \begin{align*}
+    (a, b) = (c, d) & \Leftrightarrow a = c \land b = d, \\
+    (a, b) + (c, d) & = (a + c, b + d), \\
+    (a, b)(c, d) & = (ac - bd, ad + bc).
+  \end{align*}
+  Dvojici $(0, 1)$ označíme $i$ a budeme ji nazývat komplexní jednotkou. Zřejmě pak platí, že $i^2 = -1$.
 \end{definition}
 
 \begin{definition}
-  Pokud je uspořádaná dvojice z předchozí definice ve tvaru $[0, b], b \in \R$, nazveme toto číslo \textbf{ryze imaginárním}.
+  Pokud je uspořádaná dvojice z předchozí definice ve tvaru $(0, b), b \in \R$, nazveme toto číslo \textbf{ryze imaginárním}.
 \end{definition}
 
 \begin{example}[SÚM 169/8]
@@ -173,9 +175,9 @@ $$[a, b][c, d] = [ac - bd, ad + bc].$$
 \begin{example}[SÚM 174/42]
   Jsou dány množiny $M=\left\{1,2; 3; 4\right\},N=\left\{x;y;z\right\}.$ Uveďte alespoň jeden příklad na zobrazení množiny
   \begin{enumerate}[a.]
-    \item $M$ do $N$\hfill $1,2\rightarrow x; 3\rightarrow y; 4 \rightarrow y$
-    \item $N$ do $M$ \hfill $x\rightarrow 1,2; y\rightarrow 3; z\rightarrow 3$
-    \item $M$ na $N.$ \hfill $1,2\rightarrow x; 3 \rightarrow y; 4 \rightarrow z$
+    \item $M$ do $N$\hfill $1,2\implies x; 3\implies y; 4 \implies y$
+    \item $N$ do $M$ \hfill $x\implies 1,2; y\implies 3; z\implies 3$
+    \item $M$ na $N.$ \hfill $1,2\implies x; 3 \implies y; 4 \implies z$
   \end{enumerate}
 \end{example}
 
@@ -245,45 +247,50 @@ $$[a, b][c, d] = [ac - bd, ad + bc].$$
 \begin{example}[SÚM 109/36]
   Dokažte, že číslo $\sqrt{5}$ je iracionální.
 
-  Dk. sporem: Nechť $\sqrt{5} \in \Q \Rightarrow \sqrt{5} = \frac{a}{b}, a, b \in \Z, D(a, b) = 1$.
-  $$\sqrt{5} = \frac{a}{b}$$
-  $$5 = \frac{a^2}{b^2}$$
-  $$5b^2 = a^2 \Rightarrow 5 \mid a^2 \Rightarrow 5 \mid a \Rightarrow \exists k: a = 5k$$
-  $$5b^2 = (5k)^2$$
-  $$5b^2 = 25k^2$$
-  $$b^2 = 5k^2 \Rightarrow 5 \mid b^2 \Rightarrow 5 \mid b$$ -- spor s předpokladem, že $D(a, b) = 1$
-  $$\sqrt{5} \in \mathbb{I}$$
+  \rm
+  Dk. sporem: Nechť $\sqrt{5} \in \Q \implies \sqrt{5} = \frac{a}{b}, a, b \in \Z, D(a, b) = 1$.
+  \begin{align*}
+    \sqrt{5} & = \frac{a}{b} \\
+    5 & = \frac{a^2}{b^2} \\
+    5b^2 & = a^2 \implies 5 \mid a^2 \implies 5 \mid a \implies \exists k: a = 5k \\
+    5b^2 & = (5k)^2 \\
+    5b^2 & = 25k^2 \\
+    b^2 & = 5k^2 \implies 5 \mid b^2 \implies 5 \mid b
+  \end{align*}
+  -- spor s předpokladem, že $D(a, b) = 1 \implies \sqrt{5} \in \mathbb{I}$
 \end{example}
 
 \begin{example}[SÚM 109/37]
   Dokažte, že číslo $\sqrt{2} - 1$ je iracionální.
 
-  Dk. sporem: Nechť $(\sqrt{2} - 1) \in \Q \Rightarrow \sqrt{2} - 1 = \frac{a}{b}, a, b \in \Z, D(a, b) = 1$.
+  \rm
+  Dk. sporem: Nechť $(\sqrt{2} - 1) \in \Q \implies \sqrt{2} - 1 = \frac{a}{b}, a, b \in \Z, D(a, b) = 1$.
   $$\sqrt{2} - 1 = \frac{a}{b}$$
   $$1 - 2\sqrt{2} = \frac{a^2}{b^2}$$
-  $$\frac{b^2-a^2}{2b^2} = \sqrt{2} \Rightarrow \sqrt{2} = \frac{p}{q}, p,q \in \Z \Rightarrow \sqrt(2) \in \Q$$ -- spor
-  $$(\sqrt{2} - 1) \in \mathbb{I}$$
+  $$\frac{b^2-a^2}{2b^2} = \sqrt{2} \implies \sqrt{2} = \frac{p}{q}, p,q \in \Z \implies \sqrt 2 \in \Q \textrm{ -- spor} \implies \sqrt{2} - 1 \in \mathbb{I}$$
 \end{example}
 
 \begin{example}[SÚM 109/38]
   Dokažte, že číslo $2\sqrt{5}$ je iracionální.
 
-  Dk. sporem: Nechť $2\sqrt{5} \in \Q \Rightarrow 2\sqrt{5} = \frac{a}{b}, a, b \in \Z, D(a, b) = 1$.
+  \rm
+  Dk. sporem: Nechť $2\sqrt{5} \in \Q \implies 2\sqrt{5} = \frac{a}{b}, a, b \in \Z, D(a, b) = 1$.
   $$2\sqrt{5} = \frac{a}{b}$$
   $$10 = \frac{a^2}{b^2}$$
-  $$10b^2 = a^2 \Rightarrow 10 \mid a^2 \Rightarrow 10 \mid a \Rightarrow \exists k: a = 10k$$
+  $$10b^2 = a^2 \implies 10 \mid a^2 \implies 10 \mid a \implies \exists k: a = 10k$$
   $$10b^2 = (10k)^2$$
   $$10b^2 = 100k^2$$
-  $$b^2 = 10k^2 \Rightarrow 10 \mid b^2 \Rightarrow 10 \mid b$$ -- spor s předpokladem, že $D(a, b) = 1$
+  $$b^2 = 10k^2 \implies 10 \mid b^2 \implies 10 \mid b$$ -- spor s předpokladem, že $D(a, b) = 1$
   $$2\sqrt{5} \in \mathbb{I}$$
 \end{example}
 
 \begin{example}[SÚM 109/39]
   Dokažte, že jestliže přirozené číslo $m$ není druhou mocninou žádného přirozeného čísla, potom $\sqrt{m}$ je číslo iracionální.
 
-  Dk. sporem: Nechť $m \in \N, m \neq n^2 \forall n \in \N, \sqrt{m} \in \Q \Rightarrow \sqrt{m} = \frac{a}{b}, a, b \in \N, D(a, b) = 1$.
+  \rm
+  Dk. sporem: Nechť $m \in \N, m \neq n^2 \forall n \in \N, \sqrt{m} \in \Q \implies \sqrt{m} = \frac{a}{b}, a, b \in \N, D(a, b) = 1$.
   $$\sqrt{m} = \frac{a}{b}$$
-  $$m = \frac{a^2}{b^2}, m \in \N \Rightarrow b^2 = 1$$
+  $$m = \frac{a^2}{b^2}, m \in \N \implies b^2 = 1$$
   $$m = a^2, a \in \N$$ -- spor s předpokladem, že $\forall n \in \N: m \neq n^2 $
   QED
 \end{example}
@@ -291,48 +298,54 @@ $$[a, b][c, d] = [ac - bd, ad + bc].$$
 \begin{example}[SÚM 144/301]
   Dokažte, že:
   \begin{enumerate}[a.]
-    \item součet dvou dvojciferných čísel přirozených, která se liší jen pořadím cifer, je dělitelný jedenácti: $$S = \overline{ab} + \overline{ba} = 10a + b + 10b + a = 11(a + b) \Rightarrow 11 \mid S$$
-    \item rozdíl dvou dvojciferných čísel přirozených, která se liší jen pořadím cifer, je dělitelný devítí: $$S = \overline{ab} - \overline{ba} = 10a + b - 10b - a = 9(a - b) \Rightarrow 9 \mid S$$
-    \item rozdíl přirozeného čísla trojciferného  a čísla, které vznikne z tohoto záměnou krajních cifer, je dělitelný 99: $$S = \overline{abc} - \overline{cba} = 100a + 10b + c - 100c - 10b - a = 99(a - c) \Rightarrow 99 \mid S$$
+    \item součet dvou dvojciferných čísel přirozených, která se liší jen pořadím cifer, je dělitelný jedenácti: $$S = \overline{ab} + \overline{ba} = 10a + b + 10b + a = 11(a + b) \implies 11 \mid S$$
+    \item rozdíl dvou dvojciferných čísel přirozených, která se liší jen pořadím cifer, je dělitelný devítí: $$S = \overline{ab} - \overline{ba} = 10a + b - 10b - a = 9(a - b) \implies 9 \mid S$$
+    \item rozdíl přirozeného čísla trojciferného  a čísla, které vznikne z tohoto záměnou krajních cifer, je dělitelný 99: $$S = \overline{abc} - \overline{cba} = 100a + 10b + c - 100c - 10b - a = 99(a - c) \implies 99 \mid S$$
   \end{enumerate}
 \end{example}
 
 \begin{example}[SÚM 145/303]
-  Dokažte, že tři mocniny čísla 2, jejichž exponenty jsou tři po sobě jdoucí přirozená čísla, mají součet dělitelný sedmi: $$S = 2^a + 2^{a+1} + 2^{a+2} = 2^a + 2^a\cdot2^1 + 2^a\cdot2^2 = 7\cdot2^a \Rightarrow 7 \mid S$$
+  Dokažte, že tři mocniny čísla 2, jejichž exponenty jsou tři po sobě jdoucí přirozená čísla, mají součet dělitelný sedmi: $$S = 2^a + 2^{a+1} + 2^{a+2} = 2^a + 2^a\cdot2^1 + 2^a\cdot2^2 = 7\cdot2^a \implies 7 \mid S$$
 \end{example}
 
 \begin{example}[SÚM 145/305]
-  Dokažte, že součet třetích mocnin tří po sobě jdoucích přirozených čísel je dělitelný třemi: $$S = a^3 + (a+1)^3 + (a+2)^3 = a^3 + a^3 + 3a^2 + 3a + 1 + a^3 + 6a^2 + 12a + 8 = 3(a^3 + 3a^2 + 5a + 3) \Rightarrow 3 \mid S $$
+  Dokažte, že součet třetích mocnin tří po sobě jdoucích přirozených čísel je dělitelný třemi: $$S = a^3 + (a+1)^3 + (a+2)^3 = a^3 + a^3 + 3a^2 + 3a + 1 + a^3 + 6a^2 + 12a + 8 = 3(a^3 + 3a^2 + 5a + 3) \implies 3 \mid S $$
 \end{example}
 
 \begin{example}[SÚM 145/306]
   Dokažte, že:
-  \begin{enumerate}[a]
-    \item číslo utvořené z rozdílu třetí mociny přirozeného čísla $n$ a tohoto čísla je dělitelné šesti: $$S = n^3 - n = n(n^2-1) = (n-1)n(n+1)$$ Jsou to tři po sobě jdoucí čísla $\Rightarrow$ právě 1 z nich je dělitelné třemi $\Rightarrow 3 \mid S$
-    \item je-li číslo $n$ liché, je uvažovaný rozdíl dělitelný čísel 24: $$S = (n-1)n(n+1)$$ Jsou to tři po sobě jdoucí čísla a to prostřední je liché $\Rightarrow$ dělitelné třemi, z dalších čísel je jedno dělitelné 2 a jedno dělitelné čtyřmi: $2\cdot4\cdot3 = 24 \Rightarrow 24 \mid S$
+  \begin{enumerate}[a.]
+    \item číslo utvořené z rozdílu třetí mociny přirozeného čísla $n$ a tohoto čísla je dělitelné šesti: $$S = n^3 - n = n(n^2-1) = (n-1)n(n+1)$$ \rm Jsou to tři po sobě jdoucí čísla $\implies$ právě 1 z nich je dělitelné třemi $\implies 3 \mid S$
+    \item je-li číslo $n$ liché, je uvažovaný rozdíl dělitelný čísel 24: $$S = (n-1)n(n+1)$$ \rm
+    Jsou to tři po sobě jdoucí čísla a to prostřední je liché $\implies$ dělitelné třemi, z dalších čísel je jedno dělitelné 2 a jedno dělitelné čtyřmi: $2\cdot4\cdot3 = 24 \implies 24 \mid S$
   \end{enumerate}
 \end{example}
 
 \begin{example}[SÚM 145/307]
-  Dokažte, že je—li přirozené číslo $x$ liché, je výraz $V = x^3 + 3x^2 — x — 3$ dělitelný číslem 48: $$V = x^3 + 3x^2 — x — 3 = x^2(x+3) -(x+3) = (x^2 - 1)(x+3) = (x-1)(x+1)(x+3)$$ $\Rightarrow$ tři po sobě jdoucí sudá čísla $\Rightarrow$ jedno dělitelné 2, jedno 4 a jedno 6 $\Rightarrow 2\cdot4\cdot6 = 48 \Rightarrow 48 \mid V$
+  Dokažte, že je-li přirozené číslo $x$ liché, je výraz $V = x^3 + 3x^2 — x — 3$ dělitelný číslem 48.
+
+  \rm$$V = x^3 + 3x^2 — x — 3 = x^2(x+3) -(x+3) = (x^2 - 1)(x+3) = (x-1)(x+1)(x+3)$$ $\implies$ tři po sobě jdoucí sudá čísla $\implies$ jedno dělitelné 2, jedno 4 a jedno 6 $\implies 2\cdot4\cdot6 = 48 \implies 48 \mid V$
 \end{example}
 
 \begin{example}[SÚM 145/308]
-  Dokažte, že výraz $V = 5x^3 + 15x^2 + 10x$ je dělitelný číslem 30 prokaždé přirozené číslo $x$: $$V = 5x^3 + 15x^2 + 10x = 5x(x^2 + 3x + 2) = 5x(x+2)(x+1)$$ $\Rightarrow$ $x$, $x+1$, $x+2$ tři po sobě jdoucí čísla $\Rightarrow$ jedno dělitelné 3, alespoň jedno dělitelné 2, $5x$ dělitelné 5 $\Rightarrow 2\cdot3\cdot5=30 \Rightarrow 30 \mid V$
+  Dokažte, že výraz $V = 5x^3 + 15x^2 + 10x$ je dělitelný číslem 30 prokaždé přirozené číslo $x$.
+
+  \rm $$V = 5x^3 + 15x^2 + 10x = 5x(x^2 + 3x + 2) = 5x(x+2)(x+1)$$ $\implies$ $x$, $x+1$, $x+2$ tři po sobě jdoucí čísla $\implies$ jedno dělitelné 3, alespoň jedno dělitelné 2, $5x$ dělitelné 5 $\implies 2\cdot3\cdot5=30 \implies 30 \mid V$
 \end{example}
 
 \begin{example}[SÚM 145/312]
   Dokažte, že je-li $n$ číslo přirozené, je číslo $N = n^3 + 11n$ dělitelné šesti:
-  mod 6:
+
+  \rm $\mod 6:$
   \begin{enumerate}
-    \item $n = 6k$: $n^3 + 11n \equiv 0^3 + 11\cdot0 \equiv 0 \Rightarrow 6 \mid N$
-    \item $n = 6k + 1$: $n^3 + 11n \equiv 1^3 + 11\cdot1 \equiv 12 \equiv 0 \Rightarrow 6 \mid N$
-    \item $n = 6k + 2$: $n^3 + 11n \equiv 2^3 + 11\cdot2 \equiv 30 \equiv 0 \Rightarrow 6 \mid N$
-    \item $n = 6k + 3$: $n^3 + 11n \equiv 3^3 + 11\cdot3 \equiv 60 \equiv 0 \Rightarrow 6 \mid N$
-    \item $n = 6k + 4$: $n^3 + 11n \equiv 4^3 + 11\cdot4 \equiv 108 \equiv 0 \Rightarrow 6 \mid N$
-    \item $n = 6k + 5$: $n^3 + 11n \equiv 5^3 + 11\cdot5 \equiv 180 \equiv 0 \Rightarrow 6 \mid N$
+    \item $n = 6k$: $n^3 + 11n \equiv 0^3 + 11\cdot0 \equiv 0 \implies 6 \mid N$
+    \item $n = 6k + 1$: $n^3 + 11n \equiv 1^3 + 11\cdot1 \equiv 12 \equiv 0 \implies 6 \mid N$
+    \item $n = 6k + 2$: $n^3 + 11n \equiv 2^3 + 11\cdot2 \equiv 30 \equiv 0 \implies 6 \mid N$
+    \item $n = 6k + 3$: $n^3 + 11n \equiv 3^3 + 11\cdot3 \equiv 60 \equiv 0 \implies 6 \mid N$
+    \item $n = 6k + 4$: $n^3 + 11n \equiv 4^3 + 11\cdot4 \equiv 108 \equiv 0 \implies 6 \mid N$
+    \item $n = 6k + 5$: $n^3 + 11n \equiv 5^3 + 11\cdot5 \equiv 180 \equiv 0 \implies 6 \mid N$
   \end{enumerate}
-  $\Rightarrow 6 \mid N \forall n \in \N$
+  $\implies 6 \mid N : \forall n \in \N$
 \end{example}
 
 \begin{example}[SÚM 145/315]
