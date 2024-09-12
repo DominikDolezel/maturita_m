@@ -1,0 +1,32 @@
+\section{Výroková logika}
+\begin{definition}
+  \textbf{Výrokem} nazýváme každou oznamvací větu, která je buď pravdivá, nebo nepravdivá. \textbf{Pravdivostní hodnotou} výroku rozumíme jeho pravdivost / nepravdivost.
+\end{definition}
+
+\begin{definition}
+  \textbf{Negací výroku} $V$ nazýváme výrok $V^\prime$, který má opačnou pravdivostní hodnotu než výrok $V$.
+\end{definition}
+
+\begin{pozn}
+  \textbf{Kvantifikované výroky} jsou výroky, které uvádějí počet objektů. Pro to lze použít
+  \begin{itemize}
+    \item obecný kvantifikátor $\forall$ (pro všechno platí),
+    \item existenční kvantifikátor $\exists$ (existuje alespoň jeden, že pro něj platí) a
+    \item zesílený existenční kvantifikátor $\exists !$ (existuje právě jeden, že pro něj platí) a
+  \end{itemize}
+\end{pozn}
+
+\begin{definition}
+  \textbf{Složeným výrokem} rozumíme více výroků spojených logickými spojkami:
+  \begin{center}
+    \begin{tabular}{l | c c}
+      název & zápis & význam \\
+      \hline
+      negace & $X^\prime$ & není pravda, že \\
+      konjunkce & $X\land Y$ & $X$ a $Y$ platí současně \\
+      alternativa & $X\lor Y$ & platí alespoň jedno z $X,Y$\\
+      implikace & $X\implies Y$ & jestliže $X$, pak $Y$\\
+      ekvivalence & $X\iff Y$ & $X$ platí právě tehdy, když platí $Y$
+    \end{tabular}
+  \end{center}
+\end{definition}
