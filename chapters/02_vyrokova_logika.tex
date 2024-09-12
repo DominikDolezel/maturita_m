@@ -30,3 +30,98 @@
     \end{tabular}
   \end{center}
 \end{definition}
+
+
+\begin{example}[SMP 143/4]
+  Jsou následující výroky tautologie?
+  \rm
+  \begin{enumerate}[a.]
+    \item $\left[(A\implies B)\land A\right]\implies B$
+    \begin{center}
+      \begin{tabular}{c c | c c c}
+        $A$ & $B$ & $A \implies B$ & $(A\implies B)\land A$ & $(A\implies B)\land A]\implies B$ \\
+        \hline
+        1 & 1 & 1 & 1 & 1 \\
+        1 & 0 & 0 & 0 & 1 \\
+        0 & 1 & 1 & 0 & 1 \\
+        0 & 0 & 1 & 0 & 1
+      \end{tabular}
+    \end{center}
+    Výrok je tautologií.
+    \item $\left[(A\implies B)\land B^\prime\right]\implies A^\prime$
+    \begin{center}
+      \begin{tabular}{c c c c | c c c}
+        $A$ & $B$ & $A^\prime$ & $B^\prime$ &  $A \implies B$ & $(A\implies B)\land B^\prime$ & $\left[(A\implies B)\land B^\prime\right]\implies A^\prime$ \\
+        \hline
+        1 & 1 & 0 & 0 & 1 & 0 & 1 \\
+        1 & 0 & 0 & 1 & 0 & 0 & 1 \\
+        0 & 1 & 1 & 0 & 1 & 0 & 1 \\
+        0 & 0 & 1 & 1 & 1 & 1 & 1
+      \end{tabular}
+    \end{center}
+    Výrok je tautologií.
+  \end{enumerate}
+\end{example}
+
+\begin{example}[SMP 144/8]
+  Na modelu kolejiště je možno uvést do pohybu tři vlakové soupravy A,B,C. V daném okamžiku je jejich
+situace charakterizována formulí $$\left[(A^\prime \lor B^\prime) \implies C\right]\land\left[(A \lor C) \implies B^\prime\right].$$ Které soupravy jsou v pohybu?
+
+\rm Napišme tabulku pravdivostních hodnot.
+\begin{center}
+  \begin{tabular}{c c c c c | c c c c c}
+    $A$ & $B$ & $C$ & $A^\prime$ & $B^\prime$ & $A^\prime \lor B^\prime$ & $(A^\prime \lor B^\prime) \implies C$ & $A\lor C$ & $(A \lor C) \implies B^\prime $ & celkem\\
+    \hline
+    1 & 1 & 1 & 0 & 0 & 0 & 1 & 1 & 0 & 0 \\
+    1 & 1 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 \\
+    1 & 1 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 \\
+    1 & 0 & 1 & 0 & 1 & 1 & 0 & 1 & 1 & 0 \\
+    0 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 0 & 0 \\
+    0 & 1 & 0 & 1 & 0 & 1 & 0 & 0 & 1 & 0 \\
+    0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+    0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0
+  \end{tabular}
+\end{center}
+Buď jsou v provozu soupravy $A$ a $C$ nebo jen souprava $C$.
+\end{example}
+
+\begin{example}[SMP 144/10]
+  Květa si pozvala na oslavu svých osmnáctin přátele. Uvažuje takto:
+  \begin{enumerate}[a.]
+    \item Alena a Boris chodí vždycky spolu. Přijdou oba, nebo ani jeden.
+    \item Přijde Boris nebo Dan, ale určitě ne oba.
+    \item Když přijde Alena, pak přijde i Eva.
+    \item Když Eva nepřijde, nepřijde Dan.
+  \end{enumerate}
+  S jakým největším počtem přátel může Květa počítat? Vyplývá z Květiny úvahy, že může nastat situace, kdy nepřijde ani jeden z pozvaných?
+
+  \rm Přeložme tato tvrzení symbolicky.
+  \begin{enumerate}[a.]
+    \item $A\iff B$
+    \item $B^\prime \lor D^\prime$
+    \item $A\implies E$
+    \item $E^\prime \implies D^\prime$
+  \end{enumerate}
+  Protože alespoň jeden z dvojice Boris, Dan nemůže přijít a zbytek podmínek si neodporují, na oslavu můžou přijít nejvýše tři lidé.
+
+  Situace, že nepřijde nikdo nastat může.
+\end{example}
+
+\begin{example}[SMP 144/12]
+  Trenér se věnuje trojici gymnastů -- Adamovi, Břéťovi a Čeňkovi. Rozhodněte, koho vyšle na kontrolní
+závod, jestliže splní tyto tři podmínky:
+\begin{itemize}
+  \item Tělovýchovnou jednotu budou reprezentovat nejvýše dva závodníci, přitom pojede aspoň jeden.
+  \item Pojede Adam nebo Čeňek, ale určitě ne oba součastně.
+  \item Nepojede-li Čeňek, pak nepojede ani Břéťa.
+\end{itemize}
+
+\rm Rozdělme příklad na dva případy.
+\begin{enumerate}[$i.$]
+  \item pojede Adam: pak nepojede Čeněk a tedy ani Břéťa,
+  \item pojede Čeněk: pak může jet i Břéťa.
+\end{enumerate}
+
+Buď pojede Adam sám nebo Čeněk sám nebo Čeněk s Břéťou.
+
+\end{example}
