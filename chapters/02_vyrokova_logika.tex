@@ -125,3 +125,146 @@ závod, jestliže splní tyto tři podmínky:
 Buď pojede Adam sám nebo Čeněk sám nebo Čeněk s Břéťou.
 
 \end{example}
+
+\begin{example}[SMP 143/13]
+  V souvislosti s otevřením další části metra uvažuje komise o účelnosti autobusových linek A, B, C, D. Je přitom třeba vzít v úvahu tyto tři skutečnosti:
+  \begin{itemize}
+    \item  Aspoň jedna z linek A, B, C bude zrušena.
+    \item Bude-li zrušena linka A, pak bude zachována linka B nebo D.
+    \item Nebude-li zrušena linka C, pak bude zrušena linka A nebo D.
+  \end{itemize}
+  Najděte všechna řešení a rozhodněte, zda stačí zachovat jen jednu z linek.
+
+  \rm Pokud linka $X$ jezdí, píšeme $X$, v opačném případě $X^\prime.$ Podmínky převedeme jako:
+  \begin{itemize}
+    \item $A^\prime\lor B^\prime \lor C^\prime$
+    \item $A^\prime \implies (B\lor D)$
+    \item $C\implies (A^\prime\lor D^\prime)$
+  \end{itemize}
+  Sestavme tabulku (\uv{celkem} značí konkunkci všech tří podmínek výše):
+  \begin{widetext}
+    \begin{center}
+      \begin{tabular}{c c c c | c c c c c | c}
+        $A$ & $B$ & $C$ & $D$ & $A^\prime\lor B^\prime \lor C^\prime$ & $B\lor D$ & $A^\prime \implies (B\lor D)$ & $A^\prime \lor D^\prime$ & $C\implies (A^\prime\lor D^\prime)$ & celkem \\
+        \hline
+        1 & 1 & 1 & 1 & 0 & 1 & 1 & 0 & 0 & 0 \\
+        1 & 1 & 1 & 0 & 0 & 1 & 1 & 1 & 1 & 0 \\
+        1 & 1 & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 0 \\
+        1 & 1 & 0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 \\
+        1 & 0 & 1 & 1 & 1 & 1 & 1 & 0 & 0 & 0 \\
+        1 & 0 & 1 & 0 & 1 & 0 & 1 & 1 & 0 & 1 \\
+        1 & 0 & 0 & 1 & 1 & 1 & 1 & 0 & 1 & 0 \\
+        1 & 0 & 0 & 0 & 1 & 0 & 1 & 1 & 1 & 1 \\
+        0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+        0 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 \\
+        0 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+        0 & 1 & 0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 \\
+        0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+        0 & 0 & 1 & 0 & 1 & 0 & 0 & 1 & 1 & 0 \\
+        0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+        0 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & 1 & 0 \\
+      \end{tabular}
+    \end{center}
+  \end{widetext}
+  Výsledek je patrný z tabulky. Může nastat situace, že bude jezdit jediná linka, a to buď $A$, nebo $D$.
+\end{example}
+
+\begin{example}[ŘMÚ 174/28.5]
+  \begin{enumerate}[a.]
+    \item K implikaci \uv{jestliže funkce $f$ má v každém bodě intervalu $(a,b)$ kladnou derivaci, pak funkce $f$ je v intervalu $(a,b)$ rostoucí} utvořte negaci, obměněnou a obrácenou implikaci a stanovte jejich pravdivostní hodnoty.
+
+    {\rm negace: \uv{funkce $f$ má v každém bodě intervalu $(a,b)$ kladnou derivaci a funkce $f$ není v intervalu $(a,b)$ rostoucí}, obměna: \uv{jestliže funkce $f$ není v intervalu $(a,b)$ rostoucí, pak funkce $f$ alespoň v jednom bodu intervalu $(a,b)$ nemá kladnou derivaci}, obrácení: \uv{jestliže funkce $f$ je v intervalu $(a,b)$ rostoucí, pak funkce $f$ má v každém bodě intervalu $(a,b)$ kladnou derivaci}}
+    \item Negujte výroky:
+    \begin{enumerate}[1.]
+      \item Aspoň jeden příklad jsem vyřešil správně.
+      \item V tomto sadě je aspoň dvacet jabloní.
+      \item Nejvýše šest žáků naší třídy prospělo s vyznamenáním.
+      \item Každý den vstávám v sedm hodin.
+    \end{enumerate}
+    \vspace{3em}
+    {\rm
+      \begin{enumerate}[1.]
+        \item Všechny příklady jsem vyřešil špatně.
+        \item V tomto sadě je nejvýše devatenáct jadbloní.
+        \item Alespoň sedm žáků naší třídy prospělo s vyznamenáním.
+        \item Alespoň v jeden den nevstávám v sedm hodin.
+      \end{enumerate}
+    }
+    \item Když si dám kávu, dám si i moučník. Nedám-li si zmrzlinu, nedám si moučník.
+    \begin{enumerate}[1.]
+      \item Vyplývá z uvedeného, že dám-li si zmrzlinu, pak si nedám kávu?\hfill {\rm ne}
+      \item Vyplývá z uvedeného, že když si dám kávu, dám si i zmrzlinu?\hfill {\rm ano}
+    \end{enumerate}
+  \end{enumerate}
+\end{example}
+
+\begin{example}[ŘMÚ 275/28.6]
+  \begin{enumerate}[a.]
+    \item K implikaci \uv{Je-li dané přirozené číslo dělitelné dvěma a zároveň třemi, pak je dělitelné šesti}  utvořte
+negaci, obměněnou a obrácenou implikaci.
+\item Nebude-li ráno pršet, pojedeme na chalupu. Zjišťujeme, že ráno prší. Usuzujeme správně, když z uvedeného
+odvodíme, že na chalupu nepojedeme?
+\item Pro práci strojů A, B, C platí dvě podmínky: Nesmí pracovat pouze stroj B. Když pracuje stroj A, pak musí
+být v chodu i stroj B. Navrhněte síť, která bude pro tuto trojici strojů kontrolním zařízením a bude
+signalizovat nesplnění aspoň jedné z uvedených podmínek.
+  \end{enumerate}
+  \vspace{3em}
+  \rm
+  \begin{enumerate}[a.]
+    negace: \uv{Dané přirozené číslo je dělitelné dvěma a zároveň třemi a není dělitelné šesti}, obměna: \uv{Jetliže dané přirozené číslo není dělitelné šesti, pak není dělitelné dvojkou nebo trojkou}, obrácení: \uv{Jestliže je dané přirozené číslo dělitelné šesti, pak je dělitelné dvěma a třemi}.
+    \item ne
+    \item Podmínky lze zapsat jako:
+      $$B\implies (A\lor C), A\implies B.$$
+    Z tabulky pravdivostních hodnot lze vyvodit, že nevyhovují jen možnosti $A, B^\prime, C$ a $A, B^\prime, C^\prime$.
+  \end{enumerate}
+\end{example}
+
+\begin{example}[SÚM 240/1]
+  Počet úhlopříček vypuklého $n$-úhelníka se vypočítá podle vzorce $P_n=\frac{n(n-3)}{2},$ kde $n$ je přirozené číslo větší než tři. Dokažte jeho správnost matematickou indukcí.
+
+  \rm \begin{enumerate}[$i.$]
+    \item $n=4:$
+    $$P_4 = \frac{4(4-3)}{2}=2 \rightarrow \textrm{platí}$$
+    \item úvaha: Přidáním $n$-tého bodu se zvýší počet úhlopříček o $n-3$ (úhlopříčky mezi novým bodem a těmi starými, se kterými nemá společnou stranu) a $1$ (strana, jejíž koncové body jsou ty body, se kterými má $n$-tý bod společnou stranu, se přemění v úhlopříčku) $\rightarrow$ celkem přibyde $n-2$ úhlopříček. \\
+    Chceme: $P_n=\frac{n(n-3)}{2}\implies P_{n+1}=\frac{(n+1)(n-2)}{2}$
+
+    \begin{align*}
+      P_{n+1} & =P_n + (n-1) = \frac{n(n-3)}{2}+n-1 \\
+      & =\frac{n(n-3)+2n-2}{2} = \frac{n^2-n-2}{2}\\
+      & = \frac{(n+1)(n-2)}{2} \rightarrow \textrm{platí}
+    \end{align*}
+\end{enumerate}
+\end{example}
+
+\begin{example}[SÚM 240/5]
+  Dokažte matematickou indukcí, že číslo $Q_n=5^{n+1}+6^{2n-1}$ je dělitelné číslem 31 pro každé přirozené číslo $n$.
+
+  \rm \begin{enumerate}[$i.$]
+    \item $n=1:$
+    $$Q_1=5^2+6^1=31 \rightarrow \textrm{platí}$$
+    \item chceme: $31 \, | \, Q_n \implies 31 \, | \, Q_{n+1}$
+
+    \begin{align*}
+      Q_{n+1}&=5^{n+2}+6^{2(n+1)-1}=5^{n+2}+6^{2n+1}\\
+      & = 5\cdot 5^{n+2} + 6^{2n+1} = 5V_n - 5\cdot 6^{2n-1}+6^{2n+1} \\
+      & = 5V_n + 6 ^{2n-1}(6^2-5)=5V_n + 31 \cdot 6^{2n-1} \rightarrow \textrm{platí}
+    \end{align*}
+\end{enumerate}
+\end{example}
+
+\begin{example}[SÚM 241/8]
+  Dokažte, že součet třetích mocnin tří po sobě jdoucích přirozených čísel je dělitelný devíti.
+
+  \rm Zapišme součet tří po sobě jdoucích přirozených čísel jako $a_n = (a-1) ^3 + a^3 + (a+1)^3 = 3a^3+6a.$
+  \begin{enumerate}[$i.$]
+    \item $a = 2:$
+    $$a_2 = 1^3 + 2^3 + 3 ^3 = 36 \rightarrow \textrm{platí}$$
+    \item chceme: $9\, | \, a_n \implies 9 \, | \, a_{n+1}$
+    \begin{align*}
+      a_{n+1} & = a^3 + (a+1)^3 + (a+2)^3 = \\
+      & = a^3 + a^3 + 3a^2 + 3a + 1 + a^3 + 3\cdot 2\cdot a^2 + 3\cdot a\cdot 2^2 + 2^3\\
+      &= 3a^3 + 9a^2 + 15a+9\\
+      &= a_n + 9a^2 + 9a+ 9 = a_n + 9(a^2+a+1) \rightarrow \textrm{platí}
+    \end{align*}
+\end{enumerate}
+\end{example}
