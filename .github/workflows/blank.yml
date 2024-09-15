@@ -29,11 +29,11 @@ jobs:
             mapa_skoly.tex
             pruvodce_prvaka.tex
           extra_fonts: |
-            ./fonts/ClearSans-Bold.ttf
-            ./fonts/ClearSans-BoldItalic.ttf
-            ./fonts/ClearSans-Italic.ttf
-            ./fonts/ClearSans-Regular.ttf
-            ./fonts/Kapitan-Medium.otf
+            fonts/ClearSans-Bold.ttf
+            fonts/ClearSans-BoldItalic.ttf
+            fonts/ClearSans-Italic.ttf
+            fonts/ClearSans-Regular.ttf
+            fonts/Kapitan-Medium.otf
           latexmk_use_xelatex: true
       - name: Create Release
         id: create_release
