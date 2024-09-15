@@ -32,6 +32,61 @@
 \end{definition}
 
 
+\begin{pozn}
+  Pravdivostní hodnoty vžrokových formulí s logickou spojkou:
+  \begin{tabular}{c c | c c | c c c c}
+    $X$ & $Y$ & $X^\prime$ & $Y^\prime$ & $X\land Y$ & $X\lor Y$ & $X\implies Y$ & $X\iff Y$ \\
+    \hline
+    1 & 1 & 0 & 0 & 1 & 1 & 1 & 1 \\
+    1 & 0 & 0 & 1 & 0 & 1 & 0 & 0 \\
+    0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 \\
+    0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 \\
+  \end{tabular}
+\end{pozn}
+
+\begin{definition}
+  Výrazy sestavené z výrokových proměnných, závorek a logických spojek nazýváme \textbf{výrokové formule}.
+\end{definition}
+
+\begin{definition}
+  Výroková formule, která nabývá pravdivostní hodnoty 1 bez ohledu na pravdivostní hodnoty elementárních výroků, se nazývá \textbf{tautologie}.
+\end{definition}
+
+\begin{veta}
+  Pro každé dva výroky $X,Y$ platí:
+  \begin{enumerate}[$i.$]
+    \item $(X\lor Y)^\prime = X^\prime \land Y^\prime$,
+    \item $(X\land Y)^\prime = X^\prime \lor Y^\prime$,
+    \item $(X\implies Y)^\prime = X\land Y^\prime$ a
+    \item $(X\iff Y)^\prime = (X\land Y^\prime) \lor (X^\prime \land Y)$
+  \end{enumerate}
+\end{veta}
+
+\begin{definition}
+  Nechť $X\implies Y$ je implikace. Pak
+  \begin{enumerate}[$i.$]
+    \item implikaci $Y\implies X$ nazýváme \textbf{obrácením} a
+    \item implikaci $Y^\prime \implies X^\prime$ nazýváme \textbf{obměnou}
+  \end{enumerate}
+  původní implikace.
+\end{definition}
+
+\begin{veta}
+  Implikace a její obměna mají touž pravdivostní hodnotu.
+\end{veta}
+
+\begin{pozn}
+  Implikace a její obrácení nemusí vždy mít touž pravdivostní hodnotu.
+\end{pozn}
+
+\begin{definition}
+  \textbf{Výroková forma} je tvrzení obsahující proměnné. Po dosazení konstant za proměnné dostáváme výrok.
+\end{definition}
+
+\begin{pozn}
+  Důležitému netriviálnímu a dostatečně obecnému výroku říkáme \textbf{věta}. 
+\end{pozn}
+
 \begin{example}[SMP 143/4]
   Jsou následující výroky tautologie?
   \rm
