@@ -26,8 +26,6 @@ jobs:
         uses: xu-cheng/latex-action@3.2.0
         with: 
           root_file: main.tex
-      - name: Build
-        run: cargo build --release --locked
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@v2.9.0
         with:
