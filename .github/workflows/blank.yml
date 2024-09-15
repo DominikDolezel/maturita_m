@@ -35,18 +35,13 @@ jobs:
             fonts/ClearSans-Regular.ttf
             fonts/Kapitan-Medium.otf
           latexmk_use_xelatex: true
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+      - name: Build
+        run: cargo build --release --locked
+      - name: Upload binaries to release
+        uses: svenstaro/upload-release-action@v2
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          body: |
-            Changes in this Release
-            - First Change
-            - Second Change
-          draft: false
-          prerelease: false
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: pruvodce_prvaka.pdf
+          asset_name: ${{ matrix.asset_name }}
+          tag: ${{ github.ref }}
             
