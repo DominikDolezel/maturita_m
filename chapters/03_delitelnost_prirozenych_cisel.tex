@@ -1,0 +1,82 @@
+\section{Dělitelnost přirozených čísel}
+\begin{definition}
+  Nechť $a,b\in\mathbb Z.$ Číslo $a$ dělí číslo $b$, jestliže $\exists c \in \mathbb Z: b=ac$. Zapisujeme $a\, | \, b$.
+\end{definition}
+
+\begin{definition}
+  Nechť $a\in \mathbb R$. Číslo $|a|$ takové, že
+  \begin{enumerate}[$i.$]
+    \item $a\geq 0 \implies |a| = a$,
+    \item $a<0 \implies |a| = - a$
+  \end{enumerate}
+  nazýváme \textbf{absolutní hodnotou} čísla $a$.
+\end{definition}
+
+\begin{veta}[O dělení se zbytkem]
+  Nechť $a\in \mathbb Z, b\in \mathbb N.$ Pak $\exists ! q \in \mathbb Z, r\in \mathbb N_0:$
+  $$a=bq+r, 0 \leq r < b.$$
+\end{veta}
+
+\begin{definition}
+  Nechť $a,b\in \mathbb N$. Pak $c$ je \textbf{společným dělitelem} čísel $a,b$, jestliže $c \, | \, a \land c\, | \, b.$
+\end{definition}
+
+\begin{definition}
+  $d\in \mathbb N$ je \textbf{největší společný dělitel} čísel $a,b \in \mathbb N,$ jestliže jsou splněny zároveň obě podmínky:
+  \begin{enumerate}[$i.$]
+    \item $d\, | \, a \land d \, | \, b$ a
+    \item $\forall c \in \mathbb N: c \, | \, a \land c \, | \, b \implies c \, | \, d.$
+  \end{enumerate}
+  Takové číslo značíme $d=D(a,b)=(a,b).$
+\end{definition}
+
+\begin{definition}
+  -- INSERT EUKLIDŮV ALGORITMUS --
+\end{definition}
+
+\begin{definition}
+  Nechť $a,b\in \mathbb N.$ Tato čísla jsou \textbf{nesoudělná}, jestliže $D(a,b)=1$. V opačném případě jsou \textbf{soudělná}.
+\end{definition}
+
+\begin{veta}[Fundamentální věta aritmetiky]
+  Nechť $a_1,a_2,b\in \mathbb N, b>1.$ Pak $b \, | \, a_1a_2 \land D(a_1,b)=1\implies b\, | \, a_2.$
+\end{veta}
+
+\begin{definition}
+  Nechť $a,b\in \mathbb N.$ Pak $c$ je \textbf{společným násobek} čísel $a,b$, jestliže $a \, | \, c \land b\, | \, c.$
+\end{definition}
+
+\begin{definition}
+  $n\in \mathbb N$ je \textbf{nejmenší společný násobek} čísel $a,b \in \mathbb N,$ jestliže jsou splněny zároveň obě podmínky:
+  \begin{enumerate}[$i.$]
+    \item $a\, | \, n \land b \, | \, n$ a
+    \item $\forall m \in \mathbb N: a \, | \, m \land b \, | \, m \implies m \, | \, n.$
+  \end{enumerate}
+  Takové číslo značíme $n=n(a,b)=\left [ a,b\right ] .$
+\end{definition}
+
+\begin{veta}
+  $\forall a,b \in \mathbb N: ab=D(a,b)\cdot n(a,b).$
+\end{veta}
+
+\begin{definition}
+  Nechť $n\in \mathbb N, n>1.$ Má-li číslo $n$ pouze triviální dělitele ($1 \, | \, n, n \, | \, n$), nazýváme jej \textbf{prvočíslem}. V opačném případě hovoříme o \textbf{čísle složeném}.
+\end{definition}
+
+\begin{veta}
+  Každé přirozené složené číslo $n$ má alespoň jednoho prvočíselného dělitele $p\leq \sqrt{n}$.
+\end{veta}
+
+\begin{veta}
+  Prvočísel je nekonečně mnoho.
+\end{veta}
+
+\begin{veta}[Základní věta aritmetiky]
+  Každé přirozené číslo $n>1$ lze zapsat ve tvaru:
+  $$n=p_1^{m_1}\cdot p_2^{m_2} \cdot p_3^{m_3}\cdot \hdots \cdot p_r^{m_r},$$
+  kde $p_i,i\in\{ 1, 2, \dots, r \}$ jsou navzájem různá prvočísla, $m_i\in \mathbb N_0$. Toto vyjádření je jednoznačné až na pořadí činitelů a říkáme mu \textbf{rozklad čísla} $n$ \textbf{na součin prvočinitelů}.
+\end{veta}
+
+\begin{veta}[Věta o iraciálnosti odmocnin]
+  Nechť $n\in \mathbb N.$ Pak platí: Pokud $n$ není druhou mocninou přirozeného čísla, pak odmocnina z $n$ je iracionální.
+\end{veta}
