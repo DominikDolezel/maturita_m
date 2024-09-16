@@ -80,3 +80,37 @@
 \begin{veta}[Věta o iraciálnosti odmocnin]
   Nechť $n\in \mathbb N.$ Pak platí: Pokud $n$ není druhou mocninou přirozeného čísla, pak odmocnina z $n$ je iracionální.
 \end{veta}
+
+\subsection*{Kritéria dělitelnosti}
+\begin{věta}
+  Nechť $n\in \mathbb N, n=a_k\cdot 10^k+a_{k-1}\cdot 10^{k-1}+\dots + a\cdot 10 + a_0.$ Pak platí:
+  \begin{enuemrate}[$i.$]
+    \item $2 \, | \, n \iff 2 \, | \, a_0$,
+    \item $4 \, | \, n \iff 4 \, | \, (10a_1 + a_0)$,
+    \item $5 \, | \, n \iff 5 \, | \, a_0$,
+    \item $8 \, | \, n \iff 8 \, | \, (10^2a_2 + 10a_1 + a_0)$ a
+    \item $10 \, | \, n \iff a_0 = 0$.
+  \end{enuemrate}
+\end{věta}
+
+\begin{proof}
+  $$n = 10(a_k\cdot 10^{k-1}+a_{k-1}\cdot 10 ^{k-2}+\dots+a_1)+a_0 = 10l+a_0, l\in \mathbb N$$
+\end{proof}
+
+\begin{definition}
+  Nechť $n\in \mathbb N, n=a_k\cdot 10^k+a_{k-1}\cdot 10^{k-1}+\dots + a\cdot 10 + a_0.$ Pak číslo
+  $$S(n) = \sum_{i=0}^k a_i$$
+  nazveme \textbf{ciferným součtem} čísla $n$.
+\end{definition}
+
+\begin{veta}
+  Nechť $n\in \mathbb N, n=a_k\cdot 10^k+a_{k-1}\cdot 10^{k-1}+\dots + a\cdot 10 + a_0,$ $S(n)$ je ciferný součet čísla $n$. Pak platí:
+  \begin{enumerate}[$i.$]
+    \item $3\, | \, n \iff 3 \, | \, S(n)$ a
+    \item $9\, | \, n \iff 9 \, | \, S(n)$
+  \end{enumerate}
+\end{veta}
+
+\begin{proof}
+  už se mi nechce
+\end{proof}
