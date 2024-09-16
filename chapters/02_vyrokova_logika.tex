@@ -325,3 +325,113 @@ signalizovat nesplnění aspoň jedné z uvedených podmínek.
     \end{align*}
 \end{enumerate}
 \end{example}
+
+\begin{example}[SÚM 241/9]
+  Dokažte matematickou indukcí, že číslo $V_n = n^3 + 11n$ je dělitelné šesti pro každé přirozené číslo n.
+  \begin{enumerate}[$i.$]
+    \item $a = 1:$
+    $$a_1 = 1^3 + 11\cdot1 = 12 \rightarrow \textrm{platí}$$
+    \item chceme: $6\, | \, V_n \implies 6 \, | \, V_{n+1}$. Předpokládejme, že $6\, | \, V_n$.
+    \begin{align*}
+      V_{n+1} & = (n+1)^3 + 11\cdot(n+1) = \\
+      & = n^3 + 3n^2 + 3n + 1 + 11n + 11\\
+      &= n^3 + 11n + 3n^2 + 3n + 12\\
+      &= V_n + 3n^2 + 3n + 12 = V_n + 12+ 3n(n+1) \rightarrow \textrm{platí}
+    \end{align*}
+\end{enumerate}
+\end{example}
+
+\begin{example}[SÚM 242/18]
+  Matematickou indukcí dokažte tyto vzorce:
+\begin{enumerate}[a.]
+  \item $\frac{1}{1\cdot3}+\frac{1}{3\cdot5}+...+\frac{1}{(2n-1)\cdot(2n+1)} = \frac{n}{2n+1}$
+    \begin{enumerate}[$i.$]
+      \item $a = 1:$
+      $$a_1 = \frac{1}{1\cdot3} = \frac{1}{2\cdot1 + 1}\rightarrow \textrm{platí}$$
+      \item chceme: $S_n = \frac{n}{2n+1} \implies S_{n+1} = \frac{n+1}{2n+3}$. Předpokládejme, že $S_n = \frac{n}{2n+1}$.
+      \begin{align*}
+        S_{n+1} & = S_n + \frac{1}{(2n+1)\cdot(2n+3)} = \\
+        & = \frac{n}{2n+1} + \frac{1}{(2n+1)\cdot(2n+3)}\\
+        &= \frac{n\cdot(2n+3)+1}{(2n+1)\cdot(2n+3)}\\
+        &= \frac{2n^2+3n+1}{(2n+1)\cdot(2n+3)} = \frac{(2n+1)\cdot(n+1)}{(2n+1)\cdot(2n+3)} = \frac{n+1}{2n+3} \rightarrow \textrm{platí}
+      \end{align*}
+    \end{enumerate}
+  \item $\frac{1}{1\cdot4} + \frac{1}{4\cdot7}+...+\frac{1}{(3n-2)(3n+1)} = \frac{n}{3n+1}$
+    \begin{enumerate}[$i.$]
+      \item $a = 1:$
+      $$a_1 = \frac{1}{1\cdot4} = \frac{1}{3\cdot1 + 1}\rightarrow  \textrm{platí}$$
+      \item chceme: $S_n = \frac{n}{3n+1} \implies S_{n+1} = \frac{n+1}{3n+4}$. Předpokládejme, že $S_n = \frac{n}{3n+1}$.
+      \begin{align*}
+        S_{n+1} & = S_n + \frac{1}{(3n+1)(3n+4)} = \\
+        & = \frac{n}{3n+1} + \frac{1}{(3n+1)(3n+4)}\\
+        &= \frac{n\cdot(3n+4)+1}{(3n+1)(3n+4)}\\
+        &= \frac{3n^2+4n+1}{(3n+1)(3n+4)} = \frac{(3n+1)(n+1)}{(3n+1)(3n+4)} = \frac{n+1}{3n+4} \rightarrow \textrm{platí}
+      \end{align*}
+    \end{enumerate}
+  \item $\frac{1}{1\cdot 5}+ \frac{1}{5\cdot9}+...+\frac{1}{(4n-3)(4n+1)} = \frac{n}{4n+1}$
+    \begin{enumerate}[$i.$]
+      \item $a = 1:$
+      $$a_1 = \frac{1}{1\cdot5} = \frac{1}{4\cdot1 + 1}\rightarrow  \textrm{platí}$$
+      \item chceme: $S_n = \frac{n}{4n+1} \implies S_{n+1} = \frac{n+1}{4n+5}$. Předpokládejme, že $S_n = \frac{n}{4n+1}$.
+      \begin{align*}
+        S_{n+1} & = S_n + \frac{1}{(4n+1)(4n+5)} = \\
+        & = \frac{n}{4n+1} + \frac{1}{(4n+1)(4n+5)}\\
+        &= \frac{n\cdot(4n+5)+1}{(4n+1)(4n+5)}\\
+        &= \frac{4n^2+5n+1}{(4n+1)(4n+5)} = \frac{(4n+1)(n+1)}{(4n+1)(4n+5)} = \frac{n+1}{4n+5} \rightarrow \textrm{platí}
+      \end{align*}
+    \end{enumerate}
+  \item $1^2 + 3^2 + 5^2 + ... + (2n-1)^2 = \frac{n(2n-1)(2n+1)}{3}$
+    \begin{enumerate}[$i.$]
+      \item $a = 1:$
+      $$a_1 = 1^2 = \frac{1\cdot1\cdot3}{3}\rightarrow  \textrm{platí}$$
+      \item chceme: $S_n = \frac{n(2n-1)(2n+1)}{3} \implies S_{n+1} = \frac{(n+1)(2n+1)(2n+3)}{3}$. Předpokládejme, že $S_n = \frac{n(2n-1)(2n+1)}{3}$.
+      \begin{align*}
+        S_{n+1} & = S_n + (2n-1)^2 = \\
+        & = \frac{n(2n-1)(2n+1)}{3} + \frac{12n^2-12n+3}{3}\\
+        &= \frac{4n^3-n+12n^2-12n+3}{3}\\
+        &= \frac{4n^3+12n^2-13n+3}{3} = \frac{(n+1)(2n+1)(2n+3)}{3} \rightarrow \textrm{platí}
+      \end{align*}
+    \end{enumerate}
+    \item $1^3 + 2^3 + 3^3 + ... + n^3 = (\frac{n(n+1)}{2})^2$
+      \begin{enumerate}[$i.$]
+        \item $a = 1:$
+        $$a_1 = 1^3 = (\frac{1\cdot2}{2})^2 \rightarrow  \textrm{platí}$$
+        \item chceme: $S_n = (\frac{n(n+1)}{2})^2 \implies S_{n+1} =   (\frac{(n+1)(n+2)}{2})^2$. Předpokládejme, že $S_n = (\frac{n(n+1)}{2})^2$.
+        \begin{align*}
+          S_{n+1} & = S_n + n^3 = \\
+          & = (\frac{n(n+1)}{2})^2 + \frac{4n^3}{4}\\
+          &= \frac{n^4 + 2n^3 + n^2}{4} + \frac{4n^3}{4}\\
+          &= \frac{n^4 + 6n^3 + n^2}{4} \rightarrow \textrm{neplatí?}
+        \end{align*}
+      \end{enumerate}
+\end{enumerate}
+\end{example}
+
+\begin{example}[SÚM 242/19]
+
+\end{example}
+
+\begin{example}[SÚM 242/20]
+
+\end{example}
+
+\begin{example}[SMP 127/4]
+  Matematickou indukcí dokažte Moivreovu větu: $(cos α + i sin α)^n = cos nα + i sin nα$.
+  \begin{enumerate}[$i.$]
+    \item $a = 1:$
+    $$(cosø + isinø)^1 = cos(1ø) + isin(1ø)$$
+    \item chceme: $S_n = (\frac{n(n+1)}{2})^2 \implies S_{n+1} =   (\frac{(n+1)(n+2)}{2})^2$. Předpokládejme, že $S_n = (\frac{n(n+1)}{2})^2$.
+    \begin{align*}
+      (cosø + isinø)^k = cos(kø) + isin(kø). (cosø + isinø)^{k+1} = cos((k + 1)ø) + isin((k + 1)ø).
+   (cosø + isinø)^{k+1} = (cosø + isinø)^k x (cosø + isinø)
+        = (cos(kø) + isin(kø)) x (cosø + isinø)
+                 = cos(kø)cos(ø) + icos(kø)sin(ø) + isin(kø)cos(ø) - sin(kø)sin(ø)
+                 = cos(kø + ø) + isin(kø + ø)
+                = cos((k + 1)ø) + isin((k + 1)ø) \rightarrow \textrm{platí}
+    \end{align*}
+  \end{enumerate}
+\end{example}
+
+\begin{example}
+
+\end{example}
