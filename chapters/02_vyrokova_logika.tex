@@ -416,18 +416,20 @@ signalizovat nesplnění aspoň jedné z uvedených podmínek.
 \end{example}
 
 \begin{example}[SMP 127/4]
-  Matematickou indukcí dokažte Moivreovu větu: $(cos α + i sin α)^n = cos nα + i sin nα$.
+  Matematickou indukcí dokažte Moivreovu větu: $(\cos \alpha + i \sin \alpha)^n = \cos n\alpha + i \sin n\alpha$.
   \begin{enumerate}[$i.$]
     \item $a = 1:$
-    $$(cosø + isinø)^1 = cos(1ø) + isin(1ø)$$
+    $$(\cos \alpha + i\sin \alpha)^1 = \cos(1\alpha) + i\sin(1\alpha)$$
     \item chceme: $S_n = (\frac{n(n+1)}{2})^2 \implies S_{n+1} =   (\frac{(n+1)(n+2)}{2})^2$. Předpokládejme, že $S_n = (\frac{n(n+1)}{2})^2$.
     \begin{align*}
-      (cosø + isinø)^k = cos(kø) + isin(kø). (cosø + isinø)^{k+1} = cos((k + 1)ø) + isin((k + 1)ø).
-   (cosø + isinø)^{k+1} = (cosø + isinø)^k x (cosø + isinø)
-        = (cos(kø) + isin(kø)) x (cosø + isinø)
-                 = cos(kø)cos(ø) + icos(kø)sin(ø) + isin(kø)cos(ø) - sin(kø)sin(ø)
-                 = cos(kø + ø) + isin(kø + ø)
-                = cos((k + 1)ø) + isin((k + 1)ø) \rightarrow \textrm{platí}
+      (\cos \alpha + i\sin \alpha)^k & = \cos(k\alpha) + i\sin(k\alpha)\cdot  (\cos  \alpha + i\sin\alpha)^{k+1}\\
+      &  = \cos((k + 1)\alpha) + i\sin((k + 1)\alpha)\cdot
+   (\cos\alpha + i\sin\alpha)^{k+1}\\
+   & = (\cos\alpha + i\sin\alpha)^k \cdot (\cos\alpha + i\sin\alpha)\\
+   & = (\cos(k\alpha) + i\sin(k\alpha)) \cdot (\cos\alpha + i\sin\alpha)\\
+   & = \cos(k\alpha)\cos(\alpha) + i\cos(k\alpha)\sin(\alpha) + i\sin(k\alpha)\cos(\alpha) - \sin(k\alpha)\sin(\alpha)\\
+   & = \cos(k\alpha + \alpha) + i\sin(k\alpha + \alpha)\\
+  & = \cos((k + 1)\alpha) + i\sin((k + 1)\alpha) \rightarrow \rm{platí}
     \end{align*}
   \end{enumerate}
 \end{example}
