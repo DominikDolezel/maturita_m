@@ -30,8 +30,16 @@
   Takové číslo značíme $d=D(a,b)=(a,b).$
 \end{definition}
 
-\begin{definition}
-  -- INSERT EUKLIDŮV ALGORITMUS --
+\begin{definition}[Euklidův algoritmus]
+  Je dán následující algoritmus.  \\
+  \texttt{Mějme dána dvě přirozená čísla, uložená v proměnných $u$ a $w$.} \\
+  \texttt{Dokud $w$ není nulové, opakuj:}
+  \begin{itemize}
+    \item \texttt{Do $r$ ulož zbytek po dělení čísla $u$ číslem $w$}
+    \item \texttt{Do $u$ ulož $w$}
+    \item \texttt{Do $w$ ulož $r$}
+  \end{itemize}
+  \texttt{Konec algoritmu, v $u$ je uložen největší společný dělitel původních čísel.}
 \end{definition}
 
 \begin{definition}
@@ -94,7 +102,7 @@
 \end{veta}
 
 \begin{proof}
-  $$n = 10(a_k\cdot 10^{k-1}+a_{k-1}\cdot 10 ^{k-2}+\dots+a_1)+a_0 = 10l+a_0, l\in \mathbb N$$
+  $$n = 10(a_k\cdot 10^{k-1}+a_{k-1}\cdot 10 ^{k-2}+\dots+a_1)+a_0 = 10l+a_0, l\in \mathbb N$$ 
 \end{proof}
 
 \begin{definition}
@@ -112,5 +120,64 @@
 \end{veta}
 
 \begin{proof}
-  už se mi nechce
+  Dokážeme položku $ii$. Důkaz té první proběhne obdobně.
+  \begin{align*}
+    10^k & = (9+1)^k = 9l+1, l \in \mathbb N \\
+    n & = a_k(9l_k+1)+a_{k-1}(9l_{k-1}+1)+\dots + a_1(9l_1+1)+a_0 \\
+      & = 9(a_kl_K+a_{k-1}l_{k-1}+\dots+a_1l_1)+(a_k+a_{k-1}+\dots+a_0) \\
+      & = 9m+S(n), m \in \mathbb N
+  \end{align*}
+  \begin{enumerate}
+    \item $\implies: 9 \, | \, n \land 9 \, | \, 9m \implies 9 \, | \, S(n)$,
+    \item $\impliedby: 9 \, | \, S(n) \land 9 \, | \, 9m \implies 9 \, | \, n.$ \qedhere
+  \end{enumerate}
 \end{proof}
+
+\begin{veta}
+  Nechť $n\in \mathbb N, n=a_k\cdot 10^k + a_{k-1}\cdot 10^{k-1}+\dots+a_1\cdot 10+ a_0$. Pak platí 
+  \[
+    11 \, | \, n \iff 11 \, | \, (a_0-a_1+a_2-a_3+\dots+(-1)^k a_k).
+  \]
+\end{veta}
+
+\begin{veta}
+  Nechť $n\in \mathbb N, n-10k+a_0,k\in \mathbb N.$ Pak platí
+  \begin{enumerate}[$i.$]
+    \item $7 \, | \, n \iff 7 \, | \, (k+5a_0),$
+    \item $13 \, | \, n \iff 13 \, | \, (k+4a_0) $ 
+  \end{enumerate}
+\end{veta}
+
+\begin{proof}
+  $n=10k+a_0$
+  \begin{enumerate}[$i.$]
+    \item $b=k+5a_0$ 
+      \[
+        10b=10k+50a_0=10k+a_0+49a_0=n+49a_0
+      \]
+      \begin{enumerate}
+        \item $\implies: 7 \, | \, n \land 7 \, | \, 49a_0 \implies 7 \, | \, 10b \implies 7 \, | \, b \textrm{, neboť } D(7,10)=1$
+        \item $\impliedby: 7 \, | \, b \implies 7 \, | \, 10 b \land 7 \, | \, 49 a_0 \implies 7 \, | \, n$
+      \end{enumerate}
+    \item $b=k+4a_0$
+      \[
+        10b=10k+40a_0=10k+a_0+39a_0=n+39a_0
+      \]
+      \begin{enumerate}
+        \item $\implies: 13 \, | \, n \land 13 \, | \, 39a_0 \implies 13 \, | \, 10b \implies 13 \, | \, b \textrm{, neboť } D(7,10)=1$
+        \item $\impliedby: 13 \, | \, b \implies  13 \, | \, 10 b \land 13 \, | \, 13a_0 \implies 13 \, | \, n$ \qedhere
+      \end{enumerate}
+  \end{enumerate}
+\end{proof}
+
+\begin{veta}[Binomická věta]\label{bin_v}
+  Nechť $x,y \in \mathbb N_0$. Pak
+  $$(x+y)^n=\sum_{k=0}^n \binom{n}{k}x^{n-k}y^k.$$
+\end{veta}
+
+\begin{dusledek}
+  Důsledkem věty \ref{bin_v} je následující fakt:
+  \[
+    (a+b)^n=a^n+kb=la+b^n,\,\,\, k,l\in \mathbb N.
+  \]
+\end{dusledek}
