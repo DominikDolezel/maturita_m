@@ -181,3 +181,35 @@
     (a+b)^n=a^n+kb=la+b^n,\,\,\, k,l\in \mathbb N.
   \]
 \end{dusledek}
+
+\begin{example}[SÚM 140/272]
+  Dokažte, že platí vztah $n=\displaystyle\frac{ab}{d},$ kde $a,b\in \mathbb N$ a $d = D(a,b),$ $n=n(a,b).$
+  \rm 
+  \begin{equation*}
+    n=\displaystyle\frac{ab}{d}\iff nd=ab
+  \end{equation*}
+  Označme $a=da^\prime, b=db^\prime,$ kde $D(a^\prime, b^\prime)=1$. Pak
+  \[
+    ab=da^\prime b^\prime = d(a^\prime b^\prime d) = dn.
+  \]
+\end{example}
+
+
+\begin{example}[SÚM 141/273]
+  Nejmenší společný násobek čísla 21900 a trojciferného čísla $x$ je 13140. Určete číslo $x$.
+
+  \rm
+  Označme $a=2190=da^\prime$, $x=dx^\prime$ je hledané trojciferné číslo a $d = D(a,x),$ navíc platí $D(a^\prime,x^\prime)=1.$ Potom platí
+  \begin{align*}
+     ax&=nd \\
+     a^\prime dx^\prime d &= nd\\
+    n&=da^\prime x ^\prime = 13140 \implies x ^\prime= \displaystyle\frac{13140}{2190}=6 \\
+    a^\prime d & = 2190
+  \end{align*}
+  Rozložme číslo 2190 na součin prvočinitelů. 
+  \[
+    2190=2\cdot 3 \cdot 5\cdot 73
+  \]
+  Aby byla splněna podmínka $D(a^\prime, x^\prime)=1$, číslo $a^\prime$ nesmí být násobek čísel $2,3$, a proto musí být jejich násobek číslo $d$ (tzn. $d$ je násobek šesti). Navíc, aby bylo číslo $x$ trojciferné, musí platit $17 \leq d \leq 166.$ Aby byly obě podmínky splněny, musí jedině $d=30$. Potom $x=180.$
+  \end{enumerate}
+\end{example}
