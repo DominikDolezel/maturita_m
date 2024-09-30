@@ -102,7 +102,7 @@
 \end{veta}
 
 \begin{proof}
-  $$n = 10(a_k\cdot 10^{k-1}+a_{k-1}\cdot 10 ^{k-2}+\dots+a_1)+a_0 = 10l+a_0, l\in \mathbb N$$ 
+  $$n = 10(a_k\cdot 10^{k-1}+a_{k-1}\cdot 10 ^{k-2}+\dots+a_1)+a_0 = 10l+a_0, l\in \mathbb N$$
 \end{proof}
 
 \begin{definition}
@@ -124,7 +124,7 @@
   \begin{align*}
     10^k & = (9+1)^k = 9l+1, l \in \mathbb N \\
     n & = a_k(9l_k+1)+a_{k-1}(9l_{k-1}+1)+\dots + a_1(9l_1+1)+a_0 \\
-      & = 9(a_kl_K+a_{k-1}l_{k-1}+\dots+a_1l_1)+(a_k+a_{k-1}+\dots+a_0) \\
+      & = 9(a_kl_k+a_{k-1}l_{k-1}+\dots+a_1l_1)+(a_k+a_{k-1}+\dots+a_0) \\
       & = 9m+S(n), m \in \mathbb N
   \end{align*}
   \begin{enumerate}
@@ -134,7 +134,7 @@
 \end{proof}
 
 \begin{veta}
-  Nechť $n\in \mathbb N, n=a_k\cdot 10^k + a_{k-1}\cdot 10^{k-1}+\dots+a_1\cdot 10+ a_0$. Pak platí 
+  Nechť $n\in \mathbb N, n=a_k\cdot 10^k + a_{k-1}\cdot 10^{k-1}+\dots+a_1\cdot 10+ a_0$. Pak platí
   \[
     11 \, | \, n \iff 11 \, | \, (a_0-a_1+a_2-a_3+\dots+(-1)^k a_k).
   \]
@@ -144,14 +144,14 @@
   Nechť $n\in \mathbb N, n-10k+a_0,k\in \mathbb N.$ Pak platí
   \begin{enumerate}[$i.$]
     \item $7 \, | \, n \iff 7 \, | \, (k+5a_0),$
-    \item $13 \, | \, n \iff 13 \, | \, (k+4a_0) $ 
+    \item $13 \, | \, n \iff 13 \, | \, (k+4a_0) $
   \end{enumerate}
 \end{veta}
 
 \begin{proof}
   $n=10k+a_0$
   \begin{enumerate}[$i.$]
-    \item $b=k+5a_0$ 
+    \item $b=k+5a_0$
       \[
         10b=10k+50a_0=10k+a_0+49a_0=n+49a_0
       \]
@@ -184,7 +184,7 @@
 
 \begin{example}[SÚM 140/272]
   Dokažte, že platí vztah $n=\displaystyle\frac{ab}{d},$ kde $a,b\in \mathbb N$ a $d = D(a,b),$ $n=n(a,b).$
-  \rm 
+  \rm
   \begin{equation*}
     n=\displaystyle\frac{ab}{d}\iff nd=ab
   \end{equation*}
@@ -206,10 +206,9 @@
     n&=da^\prime x ^\prime = 13140 \implies x ^\prime= \displaystyle\frac{13140}{2190}=6 \\
     a^\prime d & = 2190
   \end{align*}
-  Rozložme číslo 2190 na součin prvočinitelů. 
+  Rozložme číslo 2190 na součin prvočinitelů.
   \[
     2190=2\cdot 3 \cdot 5\cdot 73
   \]
   Aby byla splněna podmínka $D(a^\prime, x^\prime)=1$, číslo $a^\prime$ nesmí být násobek čísel $2,3$, a proto musí být jejich násobek číslo $d$ (tzn. $d$ je násobek šesti). Navíc, aby bylo číslo $x$ trojciferné, musí platit $17 \leq d \leq 166.$ Aby byly obě podmínky splněny, musí jedině $d=30$. Potom $x=180.$
-  \end{enumerate}
 \end{example}
