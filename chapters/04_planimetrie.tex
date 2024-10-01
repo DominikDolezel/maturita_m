@@ -7,17 +7,17 @@
   Nechť $p,q\in \mathscr P$. Jestliže platí:
   \begin{enumerate}[$i.$]
     \item $p=q$, pak přímky $p,q$ se nazývají \textbf{splývající rovnoběžky},
-    \item $p\ne q \land p\cap q = \emptyset$, pak přímky $p,q$ se nazývají \textbf{různé rovnoběžky},
-    \item $p\ne q \land \p\cap q \ne \emptyset$, pak přímky $p,q$ se nazývají \textbf{různoběžky}.
+    \item $p \ne q \land p\cap q = \emptyset$, pak přímky $p,q$ se nazývají \textbf{různé rovnoběžky},
+    \item $p \ne q \land p\cap q \ne \emptyset$, pak přímky $p,q$ se nazývají \textbf{různoběžky}.
   \end{enumerate}
 \end{definition}
 
 \begin{definition}
-  Nechť $p\in \mathscr P,a\in p, b \in p, A\ne B.$ Množinu 
+  Nechť $p\in \mathscr P,A \in p, B \in p, A \ne B.$ Množinu
   \[
-    P(A)=\left \{ X\in \mathbb E_2; X=b \lor X\,\mu\, AB \lor B\, \mu\, AX \right \}
+    P(A)=\left \{ X\in \mathbb E_2; X=B \lor X\,\mu\, AB \lor B\, \mu\, AX \right \}
   \]
-  (resp. množinu $P(A)\cup \{A\}$) nazýváme \textbf{otevřenou} (resp. \textbf{uzavřenou}) \textbf{polopřímkou} $AB$ s počátkem v bodě $A$. Množinu 
+  (resp. množinu $P(A)\cup \{A\}$) nazýváme \textbf{otevřenou} (resp. \textbf{uzavřenou}) \textbf{polopřímkou} $AB$ s počátkem v bodě $A$. Množinu
   \[
     Q(A)=\left \{ X\in \mathbb E_2; A\,\mu\, BX \right \}
   \]
@@ -25,11 +25,11 @@
 \end{definition}
 
 \begin{definition}
-  Nechť body $A,B\in \mathbb E_2, A\ne B$. Průnik uzanřených polopřímek $AB$ a $BA$ nazveme \textbf{úsečkou} $AB$. Body $A,B$ se nazývají \textbf{krajní body úsečky} $AB$, bod $X\,\mu,\, AB$ se nazývá \textbf{vnitřní bod} úsečky $AB$.  
+  Nechť body $A,B\in \mathbb E_2, A\ne B$. Průnik uzanřených polopřímek $AB$ a $BA$ nazveme \textbf{úsečkou} $AB$. Body $A,B$ se nazývají \textbf{krajní body úsečky} $AB$, bod $X\,\mu \, AB$ se nazývá \textbf{vnitřní bod} úsečky $AB$.
 \end{definition}
 
 \begin{definition}
-Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a$ \textbf{odděluje body} $A,B$ a zapisujeme $a\, \nu\, AB.$ V opčaném případě \textbf{přímka} $a$ \textbf{neodděluje body} $A,B$. Zapisujeme $a\, \overline \nu \,AB.$ 
+Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a$ \textbf{odděluje body} $A,B$ a zapisujeme $a\, \nu\, AB.$ V opčaném případě \textbf{přímka} $a$ \textbf{neodděluje body} $A,B$. Zapisujeme $a\, \overline \nu \,AB.$
 \end{definition}
 
 \begin{definition}
@@ -39,7 +39,7 @@ Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a
       \[
         \forall x \in P(a), \forall Y \in Q(a): a \, \nu \, XY
       \]
-    \item přímka $a$ neodděluje žádné dva body z jedné podmnožiny 
+    \item přímka $a$ neodděluje žádné dva body z jedné podmnožiny
       \[
         \forall X, Y \in P(a) \land \forall X,Y \in Q(a): a \,\overline \nu\, XY.
       \]
@@ -48,7 +48,7 @@ Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a
 \end{definition}
 
 \begin{definition}
-  Nechť $A,B,V \in \mathbb E_2$ jsou tři různé nekolineární body. Průnik polorovin $VBA \cap VAB$ nazveme \textbf{konvexním úhlem} (zapisujeme $\angle BVA$), $V$ jeho \textbf{vrcholem}, polopřímky $VA, VB$ jeho \textbf{rameny}. \textbf{Nekonvexním úhlem} $BVA$ nazveme sjednocení polorovin opačných k polorovinám $VBA,VAB.$
+  Nechť $A,B,V \in \mathbb E_2$ jsou tři různé nekolineární body. Průnik polorovin $VBA \cap VAB$ nazveme \textbf{konvexním úhlem} (zapisujeme $\sphericalangle BVA$), $V$ jeho \textbf{vrcholem}, polopřímky $VA, VB$ jeho \textbf{rameny}. \textbf{Nekonvexním úhlem} $BVA$ nazveme sjednocení polorovin opačných k polorovinám $VBA,VAB.$
 \end{definition}
 
 \begin{definition}
@@ -66,28 +66,28 @@ Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a
 \end{definition}
 
 \begin{definition}
-  Každému konvexnímu úhlu $\angle AVC$ přiřaďme \textbf{velikost úhlu} (ozn. $|\angle AVC|$) ve stupních tak, že
+  Každému konvexnímu úhlu $\sphericalangle AVC$ přiřaďme \textbf{velikost úhlu} (ozn. $|\sphericalangle AVC|$) ve stupních tak, že
   \begin{enumerate}[$i.$]
     \item nulový úhel má velikost $0^\circ$, přímý $180^\circ$,
     \item každý jiný konvexní úhel má velikost $n^\circ, $ kde $0^\circ< n ^\circ< 180^\circ, u \in \mathbb R,$
-    \item jestliže polopřímka $VB$ prochází mezi rameny konvexního úhlu $\angle AVC$, pak $|\angle AVC|=|\angle AVB|+ |\angle BVC|$ a
-    \item nechť $VA$ je polopřímka, $u \in \mahtbb R, u \in \left < 0 ^\circ,180^\circ \right >$. Pak existuje polopřímka $VB$ taková, že $|\angle AVB|=u^\circ.$
+    \item jestliže polopřímka $VB$ prochází mezi rameny konvexního úhlu $\sphericalangle AVC$, pak $|\sphericalangle AVC|=|\sphericalangle AVB|+ |\sphericalangle BVC|$ a
+    \item nechť $VA$ je polopřímka, $u \in \mathbb R, u \in \left < 0 ^\circ,180^\circ \right >$. Pak existuje polopřímka $VB$ taková, že $|\sphericalangle AVB|=u^\circ.$
   \end{enumerate}
 \end{definition}
 
 \begin{pozn}
-  \textbf{Radián} je středový úhel příslušný v jednotkové kružnici kruhovému oblouku délky 1. Z definice plyne: 
+  \textbf{Radián} je středový úhel příslušný v jednotkové kružnici kruhovému oblouku délky 1. Z definice plyne:
   \[
     360^\circ = 2\pi.
   \]
 \end{pozn}
 
 \begin{definition}
-  Nechť $p,q\in \mathscr P$ jsou dvě různoběžky. Řekneme, že $p,q$ jsou na sebe \textbf{kolmé} (a zapisujeme $p\perp q$), jestliže všechny čtyři phly, které spolu svírají, jsou shodné (a tedy pravé).
+  Nechť $p,q\in \mathscr P$ jsou dvě různoběžky. Řekneme, že $p,q$ jsou na sebe \textbf{kolmé} (a zapisujeme $p\perp q$), jestliže všechny čtyři úhly, které spolu svírají, jsou shodné (a tedy pravé).
 \end{definition}
 
 \begin{pozn}[Klasifikace úhlů podle velikosti]
-  Nechť $\alpha$ je velikost úhlu $|\angle ABC|$. Potom je úhel $|\angle ABC|$
+  Nechť $\alpha$ je velikost úhlu $|\sphericalangle ABC|$. Potom je úhel $|\sphericalangle ABC|$
   \begin{itemize}
     \item nulový, pokud $\alpha=0^\circ$,
   \item ostrý, pokud $0^\circ <\alpha < 90^\circ,$
@@ -117,6 +117,145 @@ Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a
 \begin{definition}
   Nechť $a,b\in \mathscr P.$ \textbf{Odchylkou přímek} $a,b$ nazveme reálné číslo $\varphi^\circ\in \left <0, 180\right>$, kde $\varphi$ je velikost úhlu, který spolu přímky $a,b$ svírají. U rovnoběžek klademe $\varphi = 0^\circ.$
 \end{definition}
+
+\begin{definition}
+  Dvojice úhlů:
+  \begin{itemize}
+    \item \textbf{vrcholové úhly} -- dvojice úhlů, jejichž ramena jsou opačné polopřímky
+    \item \textbf{vedlejší úhly} --	dvojice úhlů, jejichž jedno rameno je společné a druhá ramena jsou opačné polopřímky
+    \item \textbf{souhlasné úhly} -- dvojice úhlů, jejichž první ramena leží na jedné přímce a druhá ramena jsou rovnoběžná, přitom směr příslušných ramen je stejný
+    \item \textbf{střídavé úhly}	-- dvojice úhlů, jejichž první ramena leží na jedné přímce a druhá ramena jsou rovnoběžná, přitom směr příslušných ramen je opačný
+    \item \textbf{přilehlé úhly} -- dvojice úhlů, jejichž první ramena leží na jedné přímce a jdou do opačných směrů a druhá ramena jsou rovnoběžná
+  \end{itemize}
+\end{definition}
+
+\begin{definition}
+  Dvě polopřímky, ležící na téže přímce nazývámě \textbf{souhlasnými}, jestliže jedna z nich je podmnožinou druhé. V opačném případě je nazveme \textbf{nesouhlasnými}.
+\end{definition}
+
+\begin{definition}
+  Nechť $\triangle ABC$. \textbf{Vnitřním úhlem} $\triangle ABC$ při vrcholu A (B, C) nazýváme $\sphericalangle CAB (ABC, BCA)$, \textbf{vnějším úhlem} $\triangle ABC$ při vrcholu A (B, C) pak vedlejší úhel k úhlu $\sphericalangle CAB (ABC, BCA)$.
+\end{definition}
+
+\begin{veta}
+  Součet všech vnitřních úhlů v trojúhelníku je $180^\circ$.
+\end{veta}
+
+\begin{proof}
+  \begin{figure}[h]
+      \includegraphics[width=\linewidth]{trojuhelnik_1.png}
+  \end{figure}
+\end{proof}
+
+\begin{veta}
+  Součet libovolných dvou vnitřních úhlů v trojúhelníku je menší něž $180^\circ$.
+\end{veta}
+
+\begin{proof}
+  Plyne z předchozí věty a tvrzení, že vnitřní úhel v trojúhelníku je nenulový.
+\end{proof}
+
+\begin{veta}
+  V každém trojúhelníku je velikost vnějšího úhlu při jednom vrcholu rovna součtu velikostí dvou zbylých vnitřních úhlů.
+\end{veta}
+
+\begin{proof}
+  $$\alpha + \alpha^\prime = 180^\circ$$ (úhly vedlejší)
+  $$\alpha + \beta + \gamma = 180^\circ$$
+  $$\Rightarrow \alpha^\prime = \beta + \gamma$$
+\end{proof}
+
+\begin{definition}
+  Trojúhelník se nazývá \textbf{rovnoramenný}, jestliže alespoň dvě jeho strany jsou shodné úsečky. Strany stejné délky nazveme \textbf{rameny}, tu třetí \textbf{základnou} a vrchol proti základně \textbf{vrcholem}.
+  Trojúhelník se nazývá \textbf{rovnostranný}, jestliže všechny tři jeho strany jsou shodné úsečky.
+  Trojúhelník se nazývá \textbf{pravoúhlý}, jestliže je jeden jeho vnitřní úhel pravý. Dvě strany, které jsou rameny pravého úhlu nazveme \textbf{odvěsnami}, tu třetí \textbf{přeponou}.
+\end{definition}
+
+\begin{definition}
+  \textbf{Střední příčkou} trojúhelníku nazýváme úsečku spojující středy dvou stran trojúhelníka.
+  \textbf{Těžnicí} trojúhelníku nazýváme úsečku spojující vrchol trojúhelníku se středem protější strany. Průsečík těžnic nazýváme \textbf{těžíště}.
+  \textbf{Výškou} trojúhelníku nazýváme úsečku procházející vrcholem trojúhelníka, která je kolmá na přímku, na které leží protější strana trojúhelníku. Průsečík výšek nazýváme \textbf{ortocentrum}.
+\end{definition}
+
+\begin{veta}
+  Každá střední příčka je rovnoběžná s protilehlou stranou a je dvakrát menší než protilehlá strana.
+\end{veta}
+
+\begin{proof}
+  Trojúhelníky vrchol - střední příčka a vrchol - protilehlá strana jsou zjevně podobné s koeficientem 2.
+\end{proof}
+
+\begin{veta}
+  Těžnice trojúhelníku se všechny protínají v jednom bodě, který je dělí v poměru $2:1$.
+\end{veta}
+
+\begin{proof}
+  Doslova nevim, ve skriptách to není.
+\end{proof}
+
+\begin{veta}
+  Nechť $\triangle ABC$ je rovnoramenný trojúhelník se základnou $AB$. Pak platí, že těžnice $t_c$ splývá s výškou $v_c$ a s osou úhlu $\sphericalangle ACB$.
+\end{veta}
+
+\begin{proof}
+  Nechť $t_c = CC_1$, kde $C_1$ je středem $AB$.
+  $$\triangle AC_1 C \cong \triangle BC_1 C$ (sus), neboť $|AC| = |BC|, |AC_1| = |BC_1|$ a $|\sphericalangle CAC_1| = |\sphericalangle CBC_1|$$
+  \begin{itemize}[a.]
+    \item $|\sphericalangle AC_1 C| = |\sphericalangle BC_1 C| = 90^\circ implies CC_1 = v_c$
+    \item $|\sphericalangle AC_1 C| = |\sphericalangle BC_1 C| \implies CC_1 = $ osa úhlu $\sphericalangle ACB$
+  \end{itemize}
+\end{proof}
+
+\begin{veta}[Trojúhelníková nerovnost]
+  V každém $\triangle ABC$ platí, že součet délek dvou libovolných stran je větší než strana třetí.
+\end{veta}
+
+\begin{proof}
+  Ukážeme, že $|AC| < |AB| + |BC|$. Sestrojme na $\overrightarrow{AB}$ bod $D$ tak, že $|BD| = |BC| \land B \mu AD$. $\triangle BCD$ je rovnoramenný s hlavním vrcholem B $\implies \omega_1 = \delta$
+  $B \mu AD \implies \omega_1 < \omega$
+  $\implies \delta < \omega \implies |AC| < |AD| = |AB| + |BD| = |AB| + |BC| \implies |AC| < |AB| + |BC|$
+\end{proof}
+
+\begin{veta}[Věty o shodnosti trojúhelníků]
+  \begin{itemize}
+    \item \textbf{sss}: Shodují-li se dva trojúhelníky ve všech třech odpovídajících si stranách, pak jsou shodné.
+    \item \textbf{sus}: Shodují-li se dva trojúhelníky ve dvou stranách a úhlu jimi sevřeném, jsou shodné.
+    \item \textbf{usu}: Shodují-li se dva trojúhelníky v jedné straně a v obou úhlech k ní přilehlých, jsou shodné.
+    \item \textbf{Ssu}: Shodují-li se dva trojúhelníky ve dvou stranách a úhlu proti delší z nich, jsou shodné.
+  \end{itemize}
+\end{veta}
+
+\begin{proof}
+  Jednu si určím jako axiom (sus) a zbylé převedu na tuto rozkladem na případy.
+\end{proof}
+
+\begin{definition}
+  Trojúhelníky jsou \textbf{podobné}, zapisujeme $\triangle\ABC \approx \triangle\DEF$, jestliže $\exists k \in \R^+$:$k = \frac{|AB|}{|DE|}=\frac{|BC|}{|EF|}=\frac{|CA|}{|FD|}$. $k$ nazveme \textbf{koeficientem podobnosti}.
+\end{definition}
+
+\begin{veta}[Věty o podobnosti trojúhelníků]
+  \begin{itemize}
+    \item \textbf{uu}: Shodují-li se dva trojúhelníky ve dvou úhlech, jsou podobné.
+    \item \textbf{sus}: Shodují-li se dva trojúhelníky v poměru dvou stran a úhlu jimi sevřeném, jsou podobné.
+  \end{itemize}
+\end{veta}
+
+\begin{veta}[Euklidova věta o výšce]
+  Nechť je dán pravoúhlý trojúhelník ABC s přeponou AB. Pak platí, že obsah čtverce nad výškou na přeponu je roven obsahu obdélníka o stranách rovných úsekům na přeponě oddělených touto výškou.
+  $$v_c^2 = c_a \cdot c_b$$
+\end{veta}
+
+\begin{proof}
+  $\triangle ACC_0 \approx \triangle CBC_0$ (uu), neboť $\sphericalangle C_0 CB$ je otočením $\sphericalangle C_0 AC$
+  $\frac{|CC_0|}{|AC_0|} = \frac{|BC_0|}{|CC_0|} \implies \frac{v_c}{c_b} = \frac{c_a}{v_c} \implies v_c^2 = c_a \cdot c_b$
+\end{proof}
+
+\begin{veta}[Euklidovy věty o odvěsnách]
+  Nechť je dán pravoúhlý trojúhelník s přeponou AB. Pak platí, že obsah čtverce nad odvěsnou je roven obsahu obdélníka o stranách rovných přeponě a úseku na přeponě přilehlému k této odvěsně odděleného výškou na přeponu.
+  $$b^2 = c \cdot c_b$$
+  $$a^2 = c \cdot c_a$$
+\end{veta}
+
 
 předposlední blok ---
 
@@ -158,4 +297,4 @@ poslední blok ---
 \end{veta}
 
 
-
+\end{proof}
