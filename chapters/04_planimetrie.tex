@@ -134,7 +134,7 @@ Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a
 \end{definition}
 
 \begin{definition}
-  Nechť $\triangle ABC$. \textbf{Vnitřním úhlem} $\triangle ABC$ při vrcholu A (B, C) nazýváme $\sphericalangle CAB (ABC, BCA)$, \textbf{vnějším úhlem} $\triangle ABC$ při vrcholu A (B, C) pak vedlejší úhel k úhlu $\sphericalangle CAB (ABC, BCA)$.
+  Nechť $\triangle ABC$. \textbf{Vnitřním úhlem} $\triangle ABC$ při vrcholu $A$ ($B, C$) nazýváme $\sphericalangle CAB$ $(\sphericalangle ABC, \sphericalangle BCA)$, \textbf{vnějším úhlem} $\triangle ABC$ při vrcholu $A$ ($B, C$) pak vedlejší úhel k úhlu $\sphericalangle CAB$ ($\sphericalangle ABC, \sphericalangle BCA$).
 \end{definition}
 
 \begin{veta}
@@ -142,9 +142,10 @@ Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a
 \end{veta}
 
 \begin{proof}
-  \begin{figure}[h]
-      \includegraphics[width=\linewidth]{trojuhelnik_1.png}
-  \end{figure}
+  $ $ \newline
+  \begin{center}
+   \includegraphics[width=0.5\linewidth]{trojuhelnik_1.png}
+  \end{center}
 \end{proof}
 
 \begin{veta}
@@ -199,11 +200,11 @@ Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a
 
 \begin{proof}
   Nechť $t_c = CC_1$, kde $C_1$ je středem $AB$.
-  $$\triangle AC_1 C \cong \triangle BC_1 C$ (sus), neboť $|AC| = |BC|, |AC_1| = |BC_1|$ a $|\sphericalangle CAC_1| = |\sphericalangle CBC_1|$$
-  \begin{itemize}[a.]
+  $\triangle AC_1 C \cong \triangle BC_1 C$ (sus), neboť $|AC| = |BC|, |AC_1| = |BC_1|$ a $|\sphericalangle CAC_1| = |\sphericalangle CBC_1|$
+  \begin{enumerate}[$i.$]
     \item $|\sphericalangle AC_1 C| = |\sphericalangle BC_1 C| = 90^\circ implies CC_1 = v_c$
-    \item $|\sphericalangle AC_1 C| = |\sphericalangle BC_1 C| \implies CC_1 = $ osa úhlu $\sphericalangle ACB$
-  \end{itemize}
+    \item $|\sphericalangle AC_1 C| = |\sphericalangle BC_1 C| \implies CC_1 = $ osa úhlu $\sphericalangle ACB$\qedhere
+  \end{enumerate}
 \end{proof}
 
 \begin{veta}[Trojúhelníková nerovnost]
@@ -230,7 +231,7 @@ Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a
 \end{proof}
 
 \begin{definition}
-  Trojúhelníky jsou \textbf{podobné}, zapisujeme $\triangle\ABC \approx \triangle\DEF$, jestliže $\exists k \in \R^+$:$k = \frac{|AB|}{|DE|}=\frac{|BC|}{|EF|}=\frac{|CA|}{|FD|}$. $k$ nazveme \textbf{koeficientem podobnosti}.
+  Trojúhelníky jsou \textbf{podobné}, zapisujeme $\triangle\ABC \approx \triangle\DEF$, jestliže $\exists k \in \R^+:k = \frac{|AB|}{|DE|}=\frac{|BC|}{|EF|}=\frac{|CA|}{|FD|}$. Číslo $k$ nazveme \textbf{koeficientem podobnosti}.
 \end{definition}
 
 \begin{veta}[Věty o podobnosti trojúhelníků]
@@ -252,13 +253,117 @@ Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a
 
 \begin{veta}[Euklidovy věty o odvěsnách]
   Nechť je dán pravoúhlý trojúhelník s přeponou AB. Pak platí, že obsah čtverce nad odvěsnou je roven obsahu obdélníka o stranách rovných přeponě a úseku na přeponě přilehlému k této odvěsně odděleného výškou na přeponu.
-  $$b^2 = c \cdot c_b$$
-  $$a^2 = c \cdot c_a$$
+  \begin{align*}
+    b^2 = c \cdot c_b\\
+    a^2 = c \cdot c_a
+  \end{align*}
 \end{veta}
 
 
-předposlední blok ---
+blok kružnice, kruh, tětiva atd. ---
+\begin{definition}
+  Nechť $S \in \mathbb E_2, r \in \mathbb R^+.$\\
+  \textbf{Kružnicí} (resp. \textbf{kruhem}) se středem $S$ a poloměrem $R$ nazýváme množinu všech bodů $X\in \mathbb E_2, $ kde $|SX|=r$ (resp. $|SX|\leq r$).
+\end{definition}
 
+\begin{definition}
+  Nechť $k(S,r)$ je kružnice, $X_1, X_2 \in km X_1\ne X_2.$ Úsečku (resp. přímku) $X_1X_2$ nazýváme \textbf{tětivou} (resp. \textbf{sečnou}) kružnice $k$.
+\end{definition}
+
+
+\begin{definition}
+  Nechť $k(S,r)$ je kružnice, $T\in k$. Přímku $t$, pro níž platí $T\in t \land ST \perp t$ nazýváme \textbf{tečnou} kružnice $k$ s \textbf{bodem dotyku} $T$. 
+\end{definition}
+
+\begin{definition}
+  Nechť je dán oblouk $AB$ na kružnici $k(S,r).$ Polopřímky $\overrightarrow{SA}, \overrightarrow{SB}$ jso urameny dvou úhlů, z nichž právě jedno obsahuje oblouk $AB$. Tento úhel nazýváme \textbf{středovým úhlem} příslušným oblouku $AB$. Každý úhel $\sphericalangle AXB,$ kde $X\in k \land X\in AB,$ nazýváme \textbf{obvodovým úhlem} příslušným oblouku $AB$.
+\end{definition}
+
+\begin{veta}
+  Nechť $k(S,r)$ je kružnice. Pak středový úhel je dvojnásobkem libovolného obvodového úhlu příslušného k témuž oblouku kružnice.
+\end{veta}
+
+
+\begin{proof}
+  insert důkaz nechce se mi je toho strašně moc
+\end{proof}
+
+
+\begin{veta}
+  Každé dva obloukové úhly příslušné témuž oblouku kružnice jsou shodné.
+\end{veta}
+
+
+\begin{veta}[Thaletova]
+  Každý obvodový úhel příslušný polokružnici je pravý.
+\end{veta}
+
+\begin{definition}
+  Nechť $AB$ je menší oblouk kružnice $k(S,r)$, $t$ tečna ke kružnici $k$ v bodě $A$, bod $C\in t$, $C\in o$, kde $o$ je polorovina k $overrightarrow{ABS}.$ Úhel $\sphericalangle CAB$ nazýváme \textbf{úsekovým úhlem} příslušným oblouku $AB$.
+\end{definition}
+
+předposlední blok ---
+\begin{veta}\label{mbdv}
+  Nechť $AB$ je úsečka. Množinou všech bodů $X\in \mathbb E_2,$ pro něž $|AX|=|BX|$, je \textbf{osa} $o$ \textbf{úsečky} $AB$.
+\end{veta}
+
+\begin{proof}
+  $U=\{ X\in \mathbb E_2: |AX|=|BX| \}$
+  \begin{enumerate}[$i.$]
+    \item $o\subseteq U: X\in o$ lib. $\implies$ nechť $X\in AB\implies X=S$ -- střed $AB \implies |AS|=|BS|\implies X\in U.$ Nechť $X\notin AB\implies \triangle ASX \cong\triangleBSX$ (sus) $\implies |AX|=|BX|\implies X\in U$.
+    \item $U \subseteq o: X\in U$ lib. $\implies |AX|=|BX|\implies$ nechť $X\in AB\implies X=S\in o.$ Nechť $X\notin AB \implies \exists \triangle ABC$ -- rovnoramenný se základnou $AB$, kde $XS$ je těžnice, ale i výška $\implies XS \perp AB \implies X\in o.$ \qedhere
+  \end{enumerate}
+\end{proof}
+
+\begin{veta}
+  Nechť $AB$ je úsečka, $o$ její osa. Pak platí:
+  \begin{enumerate}[$i.$]
+    \item $\overrightarrow{oA}=\{ X\in \mathbb E_2:|AX|\leq |BX| \},$
+    \item $\overrightarrow{oB}=\{ X \in \mathbb E_2 : |AX| \geq |BX| \}.$
+  \end{enumerate}
+\end{veta}
+
+\begin{proof}
+  \begin{enumerate}[$i.$]
+    \item Nechť $X\in \overrightarrow{oA}$. Nechť $X\in o\implies$ platí podle věty \ref{mbdv}. Nechť $X\notin o$. Nechť $X\in AB$ -- zřejmé. Nechť $X\notin AB$. Označme $Y\in o \cap BX$, $|BX|=|BY|+|YX|=|AY|+|YX|>|AX|\implies |BX|>|AX|\implies$ platí vlastnost.
+    \item Nechť $X\notin \overrightarrow{oA}$. Nechť $X\notin o \implies X\in \overrightarrow{oB}\implies |BX|<|AX|\implies$ neplatí vlastnost pro polorovinu $\overrightarrow{oA}.$ \qedhere
+\end{enumerate}
+\end{proof}
+
+\begin{veta}
+  Nechť $a,b$ jsou dvě různé různoběžky, $a\cap b = \{P\}.$ Množinou všech bodů $X\in \mathbb E_2$, pro něž platí $\rho(X,a)=\rho(X,b)$, je sjednocení přímek $o_1\cap 0_2,$ kde  $o_1$, $o_2$ jsou \textbf{osy úhlů}, které přímky $a,b$ svírají.
+\end{veta}
+
+
+\begin{veta}
+  Nechť $a,b$ jsou dvě různé rovnoběžky. Množinou všech bodů $X\in \mathbb E_2,$ pro něž platí $\rho(X,a)=\rho(X,b)$ je přímka $o\parallel a$, kde $\rho(o,a)=\rho(o,b)$. Tuto přímku nazveme \textbf{osou pásu} s hraničními přímkami $a,b$.
+\end{veta}
+
+\begin{veta}
+  Nechť $\sphericalangle AVB$ je konvexní nenulový úhel. Množinou všech bodů $X\in \mathbb E_2, X\in \sphericalangle AVB,$ pro něž platí $\rho(X, \overrightarrow{VA})=\rho(X,\overrightarrow{VB}),$ je \textbf{polopřímka} $o$, která je osou konvexního úhlu $\sphericalangle AVB.$
+\end{veta} 
+
+\begin{veta}
+  Nechť $ú$ je přímka. Množinou všech bodů $X \in \mathbb E_2,$ které mají od přímky $p$ stejnou vzdálenost $a\in \mathbb R^+$, je sjednocení přímek $e_1\cup e_2,$ kde $e_1 \parallel e_2 \land \rho(e_1,p)=\rho(e_2,p)=a$. Tyto přímky nazveme 
+  \textbf{ekvidistantou přímky} $p$.
+\end{veta}
+
+\begin{veta}
+  Nechť $k(S,r)$ je kružnice. Množinou všech bodů $X\in \mathbb E_2,$ které mají od kružnice $k$ stejnou vzdálenost $a, a \in \mathbb R^+, a< r,$ je sjednocení kružnic $e_1, e_2,$ kde kružnice $k,e_1,e_2$ jsou soustředné a platí $\rho(e_1,k)= \rho(e_2,k)=a.$ Tyto kružnice nazveme 
+  \textbf{ekvidistantou kružnice} $k$.
+\end{veta}
+
+\begin{veta}
+  Nechť $AB$ je úsečka. Množinou všech vrcholů $C\in \mathbb E_2$ všech pravoúhlých trojúhelníků $\triangle ABC$ s přeponou $AB$ je množina $k-\{ A,B\}$, kde $k\left (S,\frac{|AB|}{2}\right )$ je kružnice, $S$ je střed $AB$. Tuto množinu budeme nazývat \textbf{Thaletovou kružnicí} nad přeponou $AB$ a označovat $k_T(AB).$
+\end{veta}
+
+\begin{veta}
+  Nechť $AB$ je úsečka, $|\sphericalangle ACB|$ velikost úhlu $\gamma.$ Množinou vrcholů $X\in \mathbb E_2$ všech $\triangle ABX$ s jednou stranou $AB$ a úhlem $\gamma$ o velikosti $|\sphericalangle ACB|$ je sjednocení \textbf{vnitřku oblouku} $ACB$ s jeho obrazem $AC^\prime B^\prime$ v souměrnosti podle přímky $AB$.
+\end{veta}
+
+\begin{pozn}
+  Pokud $\sphericalangle AXB = \alpha,$ pak říkáme, že úsečka $AB$ je vidět z bodu $X$ pod úhlem $\alpha$, resp. úhel $\alpha$ se nazývá \textbf{zorným úhlem úsečky} $AB.$
+\end{pozn}
 
 poslední blok ---
 \begin{definition}
@@ -297,4 +402,4 @@ poslední blok ---
 \end{veta}
 
 
-\end{proof}
+
