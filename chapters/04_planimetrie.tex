@@ -202,7 +202,7 @@ Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a
   Nechť $t_c = CC_1$, kde $C_1$ je středem $AB$.
   $\triangle AC_1 C \cong \triangle BC_1 C$ (sus), neboť $|AC| = |BC|, |AC_1| = |BC_1|$ a $|\sphericalangle CAC_1| = |\sphericalangle CBC_1|$
   \begin{enumerate}[$i.$]
-    \item $|\sphericalangle AC_1 C| = |\sphericalangle BC_1 C| = 90^\circ implies CC_1 = v_c$
+    \item $|\sphericalangle AC_1 C| = |\sphericalangle BC_1 C| = 90^\circ \implies CC_1 = v_c$
     \item $|\sphericalangle AC_1 C| = |\sphericalangle BC_1 C| \implies CC_1 = $ osa úhlu $\sphericalangle ACB$\qedhere
   \end{enumerate}
 \end{proof}
@@ -302,6 +302,12 @@ blok kružnice, kruh, tětiva atd. ---
   Nechť $AB$ je menší oblouk kružnice $k(S,r)$, $t$ tečna ke kružnici $k$ v bodě $A$, bod $C\in t$, $C\in o$, kde $o$ je polorovina k $overrightarrow{ABS}.$ Úhel $\sphericalangle CAB$ nazýváme \textbf{úsekovým úhlem} příslušným oblouku $AB$.
 \end{definition}
 
+
+\begin{definition}
+  Nechť $AB$ je úsečka. \textbf{Osou úsečky} $AB$ nezveme přímku $o$, která prochází středem úsečky $AB$ a je na ni kolmá.
+\end{definition}
+
+
 předposlední blok ---
 \begin{veta}\label{mbdv}
   Nechť $AB$ je úsečka. Množinou všech bodů $X\in \mathbb E_2,$ pro něž $|AX|=|BX|$, je \textbf{osa} $o$ \textbf{úsečky} $AB$.
@@ -331,34 +337,34 @@ předposlední blok ---
 \end{proof}
 
 \begin{veta}
-  Nechť $a,b$ jsou dvě různé různoběžky, $a\cap b = \{P\}.$ Množinou všech bodů $X\in \mathbb E_2$, pro něž platí $\rho(X,a)=\rho(X,b)$, je sjednocení přímek $o_1\cap 0_2,$ kde  $o_1$, $o_2$ jsou \textbf{osy úhlů}, které přímky $a,b$ svírají.
+  Nechť $a,b$ jsou dvě různoběžky, $a\cap b = \{P\}.$ Množinou všech bodů $X\in \mathbb E_2$, pro něž platí $\rho(X,a)=\rho(X,b)$, je sjednocení přímek $o_1\cap o_2,$ kde  $o_1$, $o_2$ jsou osy úhlů, které přímky $a,b$ svírají.
 \end{veta}
 
 
-\begin{veta}
+\begin{definition}
   Nechť $a,b$ jsou dvě různé rovnoběžky. Množinou všech bodů $X\in \mathbb E_2,$ pro něž platí $\rho(X,a)=\rho(X,b)$ je přímka $o\parallel a$, kde $\rho(o,a)=\rho(o,b)$. Tuto přímku nazveme \textbf{osou pásu} s hraničními přímkami $a,b$.
-\end{veta}
+\end{definition}
 
 \begin{veta}
-  Nechť $\sphericalangle AVB$ je konvexní nenulový úhel. Množinou všech bodů $X\in \mathbb E_2, X\in \sphericalangle AVB,$ pro něž platí $\rho(X, \overrightarrow{VA})=\rho(X,\overrightarrow{VB}),$ je \textbf{polopřímka} $o$, která je osou konvexního úhlu $\sphericalangle AVB.$
+  Nechť $\sphericalangle AVB$ je konvexní nenulový úhel. Množinou všech bodů $X\in \mathbb E_2, X\in \sphericalangle AVB,$ pro něž platí $\rho(X, \overrightarrow{VA})=\rho(X,\overrightarrow{VB}),$ je polopřímka $o$, která je osou konvexního úhlu $\sphericalangle AVB.$
 \end{veta} 
 
-\begin{veta}
-  Nechť $ú$ je přímka. Množinou všech bodů $X \in \mathbb E_2,$ které mají od přímky $p$ stejnou vzdálenost $a\in \mathbb R^+$, je sjednocení přímek $e_1\cup e_2,$ kde $e_1 \parallel e_2 \land \rho(e_1,p)=\rho(e_2,p)=a$. Tyto přímky nazveme 
+\begin{definition}
+  Nechť $p$ je přímka. Množinou všech bodů $X \in \mathbb E_2,$ které mají od přímky $p$ stejnou vzdálenost $a\in \mathbb R^+$, je sjednocení přímek $e_1\cup e_2,$ kde $e_1 \parallel e_2 \land \rho(e_1,p)=\rho(e_2,p)=a$. Tyto přímky nazveme 
   \textbf{ekvidistantou přímky} $p$.
-\end{veta}
+\end{definition}
 
-\begin{veta}
+\begin{definition}
   Nechť $k(S,r)$ je kružnice. Množinou všech bodů $X\in \mathbb E_2,$ které mají od kružnice $k$ stejnou vzdálenost $a, a \in \mathbb R^+, a< r,$ je sjednocení kružnic $e_1, e_2,$ kde kružnice $k,e_1,e_2$ jsou soustředné a platí $\rho(e_1,k)= \rho(e_2,k)=a.$ Tyto kružnice nazveme 
   \textbf{ekvidistantou kružnice} $k$.
-\end{veta}
+\end{definition}
 
-\begin{veta}
+\begin{definition}
   Nechť $AB$ je úsečka. Množinou všech vrcholů $C\in \mathbb E_2$ všech pravoúhlých trojúhelníků $\triangle ABC$ s přeponou $AB$ je množina $k-\{ A,B\}$, kde $k\left (S,\frac{|AB|}{2}\right )$ je kružnice, $S$ je střed $AB$. Tuto množinu budeme nazývat \textbf{Thaletovou kružnicí} nad přeponou $AB$ a označovat $k_T(AB).$
-\end{veta}
+\end{definition}
 
 \begin{veta}
-  Nechť $AB$ je úsečka, $|\sphericalangle ACB|$ velikost úhlu $\gamma.$ Množinou vrcholů $X\in \mathbb E_2$ všech $\triangle ABX$ s jednou stranou $AB$ a úhlem $\gamma$ o velikosti $|\sphericalangle ACB|$ je sjednocení \textbf{vnitřku oblouku} $ACB$ s jeho obrazem $AC^\prime B^\prime$ v souměrnosti podle přímky $AB$.
+  Nechť $AB$ je úsečka, $|\sphericalangle ACB|$ velikost úhlu $\gamma.$ Množinou vrcholů $X\in \mathbb E_2$ všech $\triangle ABX$ s jednou stranou $AB$ a úhlem $\gamma$ o velikosti $|\sphericalangle ACB|$ je sjednocení vnitřku oblouku $ACB$ s jeho obrazem $AC^\prime B^\prime$ v souměrnosti podle přímky $AB$.
 \end{veta}
 
 \begin{pozn}
