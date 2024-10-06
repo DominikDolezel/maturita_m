@@ -283,6 +283,85 @@ blok čtyřúhelník a dál ---
   Nechť $ABCD$ je uzavřená lomená čára, která sama sebe neprotíná. Pak \textbf{čtyřúhelníkem} $ABCD$ nazveme sjednocení této lomené čáry s množinou jejích vnitřních bodů. Body $A,B,C,D$ se nazývají \textbf{vrcholy}, uzavřená lomená čára $ABCD$ \textbf{obvodem}, každá úsečka \textbf{stranou} a úsečky $AC,BD$ se nazývají \textbf{úhlopříčky}.
 \end{definition}
 
+\begin{veta}
+  Součet vnitřních úhlů čtyřúhelníka je $360^\circ$.
+\end{veta}
+
+\begin{proof}
+  --- insert obrázek //TODO % TODO
+  $\delta+\beta_1+\alhpa_2 = 180^\circ$\\
+  $\gamma + \beta_2 + \alpha_1 = 180^\circ$\\
+  \alpha+\beta+\gamma+\delta=360^\circ
+\end{proof}
+
+\begin{definition}
+  Nechť $ABCD$ je čtyřúhelník, jehož protější strany jsou rovnoběžné. Pak ho nazveme \textbf{rovnoběžníkem}.
+\end{definition}
+
+\begin{veta}
+  V rovnoběžníku $ABCD$ platí:
+  \begin{enumerate}[$i.$]
+    \item $|AB|=|CD| \land |BC|=|AD|,$
+    \item protilehlé úhly jsou shodné.
+  \end{enumerate}
+\end{veta}
+
+\begin{proof}
+  Plyne ze shodnosti trojúhelníků $ABD$ a $CDB.$
+\end{proof}
+
+\begin{veta}
+  Úhlořpíčky rovnoběžníka se navzájem půlí.
+\end{veta}
+
+
+\begin{proof}
+  Plyne ze shodnosti trpjúhelníků $ASD$ a $CSB$, kde $S$ je průsečík úhlopříček.
+\end{proof}
+
+\begin{definition}
+  Čtyřúhelník, jehož všechny čtyři úhly jsou pravé, nazveme \textbf{pravoúhelník}.
+\end{definition}
+
+\begin{veta}
+  \begin{enumerate}[$i.$]
+    \item Každý pravoúhelník je rovnoběžník.
+    \item Úhlopříčky pravoúhelníka jsou shodné.
+  \end{enumerate}
+\end{veta}
+
+\begin{proof}
+  \begin{enumerate}[$i.$]
+    \item Protější úhly v rovnoběžníku jsou střídavé úhly u rovnoběžek.
+    \item Plyne ze shodnosti trojúhelníků $ABD$ a $BAC$.\qedhere
+  \end{enumerate}
+\end{proof}
+
+\begin{definition}
+  Rovnoběžník $ABCD$ se nazývá \textbf{kosočtvercem} (resp. \textbf{kosodélníkem}), jestliže $|AB|=|BC|$ (resp. $|AB\ne BC|$) a žádný vnitřní úhel není pravý.
+\end{definition}
+
+
+\begin{veta}
+  Úhlopříčky v kosočtverci se navzájem půlí.
+\end{veta}
+
+\begin{definition}
+  Pravoúhelník $ABCD$ nazýváme
+  \begin{itemize}
+    \item \textbf{čtvercem}, jestliže $|AB|=|BC|,$
+    \item \textbf{obdélníkem}, jestliže $|AB| \ne |BC|$
+  \end{itemize}
+\end{definition}
+
+\begin{definition}
+  Konvexní čtyřúhelník $ABCD$, kde $AB \parallel CD \land BC \nparallel AD,$ nazveme \textbf{lichoběžníkem}. Strany $AB, CD$ nazveme \textbf{základnami} a strany $BC$ a $DA$ \textbf{rameny lichoběžníka}.
+\end{definition}
+
+\begin{definition}
+  Uzavřená lomená čára $A_1A_2\dots A_nA_1$, která leží v rovině a sama sebe nikdy neprotíná ohraničuje část roviny, která se nazývá \textbf{mnohoúhelník} nebo také \textbf{$n$-úhelník}.
+\end{definition}
+
 blok kružnice, kruh, tětiva atd. ---
 \begin{definition}
   Nechť $S \in \mathbb E_2, r \in \mathbb R^+.$\\
