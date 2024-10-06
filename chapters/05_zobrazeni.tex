@@ -1,0 +1,75 @@
+\section{Kartézský součin, binární relace, zobrazení}
+\begin{definition}
+  \textbf{Kartézským součinem množin} $A,B$ nazýváme množinu $A\times B$ všech uspořádaných dvojic $(a,b)$ takových, že $a\in A,b\in B$.
+  \[
+    A\times B=\left{ (a,b): a\in A,b\in B \right}
+  \]
+\end{definition}
+
+\begin{pozn}
+  Kartézský součin $A\times A$ nazveme \textbf{kartézským čtvercem} množiny $A$.
+\end{pozn}
+
+\begin{pozn}
+  Kartézský graf je graf, kde prvky na ose $x$ (resp. $y$) jsou prvky z množiny $A$ (resp. $B$) a uspořádanou dvojici $(a,b)$ zaneseme jako příslušný bod se souřadnicemi $[a,b].$
+\end{pozn}
+
+\begin{definition}
+  Nechť $A,B$ jsou dvě množiny. Pak každou podmnožinu $A\times B$ nazýváme \textbf{binární relací} mezi množinami $A,B$ (v tomto pořadí). Je-li speciálně $A=B$, pak hovoříme o \textbf{binární relaci v množině} $A$.
+\end{definition}
+
+\begin{definition}
+  Relace na množině $A$ je
+  \begin{enumerate}[$i.$]
+    \item \textbf{reflexivní}, pokud $\forall a\in A: a\sim a$,
+    \item \textbf{symetrická}, pokud $\forall a,b \in A: a\sim b \implies b\sim a,$
+    \item \textbf{tranzitivní}, pokud $\forall a,b,c\in A: a\sim b \land b\sim c \implies a\sim c.$
+  \end{enumerate}
+\end{definition}
+
+\begin{definition}
+  Relaci na množině $A$, která je zároveň reflexivní, symetrická a tranzitivní nazveme \textbf{relací ekvivalence}.
+\end{definition}
+
+\begin{pozn}
+  Každé relaci ekvivalence na množině $A$ přísluší \textbf{rozklad příslušný ekvivalenci} tak, že množinu $A$ rozdělíme na po dvou disjunktní podmnožiny, jejichž sjednocení dává množinu $A$ a navíc platí, že všechny prvky v jedné podmnožině jsou navzájem ekvivalentní a žádné dva prvky z jiných podmnožin ekvivalentní nejsou.
+\end{pozn}
+
+\begin{definition}
+  Nechť $A,B$ jsou dvě množiny. \textbf{Zobrazením} $f$ \textbf{z množiny $A$ do množiny $B$} nazýváme relaci $f\subseteqA\times B,$ pro níž platí: $\forall x\in A: \exists \text{ max. 1 }y\in B: (x,y)\in f$. Prvek $x$ nazveme \textbf{vzorem} a $y$ \textbf{obrazem}.
+\end{definition}
+
+\begin{definition}
+  Nechť $f\subseteq A\times B$ je zobrazení. \textbf{Definičním oborem} (resp. \textbf{oborem hodnot}) zobrazení $f$ nazveme množinu $D(f)\subseteq A$ (resp. $H(f)\subseteq B$) všech prvků $a\in A$ (resp. $b\in B$) tak, že k nim existuje právě jedno $b\in B$ (resp. alespoň jedno $a\in A$) tak, že $b=f(a)$ (resp. $a=f(b)$).
+\end{definition}
+
+\begin{definition}
+  Pokud $D(f) = A$ (resp. $D(f)\ne A$), hovoříme o \textbf{zobrazení množiny} (resp. \textbf{zobrazení z množiny}) $A$. Pokud $H(f)=B$ (resp. $H(f)\ne B$), hovoříme o \textbf{zobrazení na množinu} (resp. \textbf{zobrazení do množiny}) $B$. 
+  Zobrazení na nazýváme \textbf{surjekcí}. Je li $A=B$, hovoříme o \textbf{zobrazení v množině} $A$.
+\end{definition}
+
+\begin{definition}
+  Nechť $f$ je zobrazení z $A$ do $B$. Zobrazení $f$ je \textbf{prosté}, jestliže ke každému $b\in B$ existuje nejvýše jedno $a \in A$ tak, že $b=f(a).$
+\end{definition}
+
+\begin{definition}
+  Zobrazení množiny do množiny, které je prosté, nazýváme \textbf{injekce}. Zobrazení, které je současně surjekcí a injekcí, nazýváme \textbf{bijekce}.
+\end{definition}
+
+\begin{definition}
+  Nechť $\alpha \subseteq A\times B$ je binární relace. \textbf{Inverzní relací} k relaci $\alpha$ nazveme relaci $\alpha^{-1} \subseteq B\times A$ takovou, že 
+  \[
+    \alpha^{-1}=\left{ (b,a)\in B\times ;  (a,b\in \alpha)\right}.
+  \]
+  Je-li $\alpha^{-1}$ zobrazení, nazveme relaci $\alhpa ^{-1}$ \textbf{inverzním zobrazením} k zobrazení $\alpha$.
+\end{definition}
+
+\begin{definition}
+  Nechť $f:A\to B, g:B\to C$ jsou zobrazení. \textbf{Složeným zobrazením} ze zobrazení $f$ g $g$ nazveme relaci $h\subseteq A\times C$ takovou, že
+  \[
+    h=\left{ (a,c)\in A\times C;\exists b\in B: f(a)=b \land g(b)=c \right}.
+  \]
+  Značíme $c=g(f(a))$, $h=g\, \circ \, f $ (čteme \uv{$g$ po $f$}).
+\end{definition}
+
+
