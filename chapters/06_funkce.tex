@@ -1,0 +1,64 @@
+\section{Funkce a jejich základní vlastnosti}
+\begin{definition}
+  \textbf{Funkcí} $f$ nazýváme každé zobrazení z $\mathbb R$ do $\mathbb R$.
+\end{definition}
+
+\begin{definition}
+  Nechť $f\subseteq \mathbf R \times \mathbb R$ je funkce. Množinu
+  \[
+    D(f) = \left  \{ x \in \mathbb R:\exists ! y \in \mathbb R:y=f(x) \right \}
+  \]
+  nazveme \textbf{definičním oborem} funkce $f$. Množinu
+  \[
+    H(f) = \left  \{ y \in \mathbb R:\exists ! x \in \mathbb R:y=f(x) \right \}
+  \]
+  nazveme \textbf{oborem hodnot} funkce $f$.
+\end{definition}
+
+\begin{pozn}
+  \textbf{Grafem funkce} rozumíme množinu všech bodů $[x,f(x)]$, kde $x\in D(f).$
+\end{pozn}
+
+
+\begin{definition}
+  Funkce $f$ se nazývá \textbf{sudá} (resp. \textbf{lichá}), jestliže platí 
+\begin{itemize}
+  \item 
+  $\forall x \in D(f):(-x) \in D(f)$
+\item 
+ $\forall x \in D(f): f(-x)=f(x)$, resp. $f(-x)=f(x)$.
+\end{itemize}
+
+\end{definition}
+
+\begin{definition}
+  Funkce $f$ se nazývá \textbf{prostá}, právě tehdy když platí
+  \[
+    \forall x_1,x_2\in D(f): x_1\ne x_2 \implies f(x_1)\ne f(x_2)
+  \]
+\end{definition}
+
+\begin{definition}
+  Nechť $f$ je funkce a $M$ alespoň dvouprvková množina z $D(f)$. Řekneme, že funkce $f$ je v množině $M$
+  \begin{enumerate}[$i.$]
+    \item \textbf{rostoucí} $\iff \forall x_1, x_2 \in M: x_1 < x_2 \implies f(x_1) < f(x_2),$
+    \item \textbf{klesající} $\iff \forall x_1, x_2 \in M: x_1 < x_2 \implies f(x_1) > f(x_2),$
+    \item \textbf{neklesající} $\iff \forall x_1, x_2 \in M: x_1 < x_2 \implies f(x_1) \leq f(x_2),$
+    \item \textbf{nerostoucí} $\iff \forall x_1, x_2 \in M: x_1 < x_2 \implies f(x_1) \geq f(x_2).$
+  \end{enumerate}
+  Je-li $f$ neklesající nebo nerostoucí, je \textbf{monotónní}. POkud je klesající nebo rostoucí, je \textbf{ryze monotónní}.
+\end{definition}
+
+\begin{definition}
+  Nechť $f$ je funkce, $M\subseteq D(f)$. Řekneme, že funkce $f$ je v množině $M$
+  \begin{enumerate}[$i.$]
+    \item \textbf{shora omezená} $\iff \exists k \in \mathbb R: \forall x \in M: f(x)\leq k,$
+    \item \textbf{zdola omezená} $\iff \exists k \in \mathbb R: \forall x \in M: f(x)\geq k,$
+    \item \textbf{omezená} $\iff $ je zdola i shora omezená.
+  \end{enumerate}
+\end{definition}
+
+
+\begin{definition}
+
+\end{definition}
