@@ -231,7 +231,7 @@ Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a
 \end{proof}
 
 \begin{definition}
-  Trojúhelníky jsou \textbf{podobné}, zapisujeme $\triangle\ABC \approx \triangle\DEF$, jestliže $\exists k \in \R^+:k = \frac{|AB|}{|DE|}=\frac{|BC|}{|EF|}=\frac{|CA|}{|FD|}$. Číslo $k$ nazveme \textbf{koeficientem podobnosti}.
+  Trojúhelníky jsou \textbf{podobné}, zapisujeme $\triangle ABC \approx \triangle DEF$, jestliže $\exists k \in \R^+:k = \frac{|AB|}{|DE|}=\frac{|BC|}{|EF|}=\frac{|CA|}{|FD|}$. Číslo $k$ nazveme \textbf{koeficientem podobnosti}.
 \end{definition}
 
 \begin{veta}[Věty o podobnosti trojúhelníků]
@@ -289,9 +289,9 @@ blok čtyřúhelník a dál ---
 
 \begin{proof}
   --- insert obrázek //TODO % TODO
-  $\delta+\beta_1+\alhpa_2 = 180^\circ$\\
+  $\delta+ \beta_1+ \alpha_2 = 180^\circ$\\
   $\gamma + \beta_2 + \alpha_1 = 180^\circ$\\
-  \alpha+\beta+\gamma+\delta=360^\circ
+  $\alpha+\beta+\gamma+\delta=360^\circ$
 \end{proof}
 
 \begin{definition}
@@ -374,7 +374,7 @@ blok kružnice, kruh, tětiva atd. ---
 
 
 \begin{definition}
-  Nechť $k(S,r)$ je kružnice, $T\in k$. Přímku $t$, pro níž platí $T\in t \land ST \perp t$ nazýváme \textbf{tečnou} kružnice $k$ s \textbf{bodem dotyku} $T$. 
+  Nechť $k(S,r)$ je kružnice, $T\in k$. Přímku $t$, pro níž platí $T\in t \land ST \perp t$ nazýváme \textbf{tečnou} kružnice $k$ s \textbf{bodem dotyku} $T$.
 \end{definition}
 
 \begin{definition}
@@ -418,8 +418,8 @@ předposlední blok ---
 \begin{proof}
   $U=\{ X\in \mathbb E_2: |AX|=|BX| \}$
   \begin{enumerate}[$i.$]
-    \item $o\subseteq U: X\in o$ lib. $\implies$ nechť $X\in AB\implies X=S$ -- střed $AB \implies |AS|=|BS|\implies X\in U.$ Nechť $X\notin AB\implies \triangle ASX \cong\triangleBSX$ (sus) $\implies |AX|=|BX|\implies X\in U$.
-    \item $U \subseteq o: X\in U$ lib. $\implies |AX|=|BX|\implies$ nechť $X\in AB\implies X=S\in o.$ Nechť $X\notin AB \implies \exists \triangle ABC$ -- rovnoramenný se základnou $AB$, kde $XS$ je těžnice, ale i výška $\implies XS \perp AB \implies X\in o.$ \qedhere
+    \item $o \subseteq U: X \in o$ lib. $\implies$ nechť $X\in AB \implies X=S$ -- střed $AB \implies |AS|=|BS| \implies X \in U.$ Nechť $X \notin AB \implies \triangle ASX \cong \triangle BSX$ (sus) $\implies |AX|=|BX| \implies X \in U$.
+    \item $U \subseteq o: X \in U$ lib. $\implies |AX|=|BX| \implies$ nechť $X \in AB \implies X=S \in o.$ Nechť $X \notin AB \implies \exists \triangle ABC$ -- rovnoramenný se základnou $AB$, kde $XS$ je těžnice, ale i výška $\implies XS \perp AB \implies X \in o.$ \qedhere
   \end{enumerate}
 \end{proof}
 
@@ -449,15 +449,15 @@ předposlední blok ---
 
 \begin{veta}
   Nechť $\sphericalangle AVB$ je konvexní nenulový úhel. Množinou všech bodů $X\in \mathbb E_2, X\in \sphericalangle AVB,$ pro něž platí $\rho(X, \overrightarrow{VA})=\rho(X,\overrightarrow{VB}),$ je polopřímka $o$, která je osou konvexního úhlu $\sphericalangle AVB.$
-\end{veta} 
+\end{veta}
 
 \begin{definition}
-  Nechť $p$ je přímka. Množinou všech bodů $X \in \mathbb E_2,$ které mají od přímky $p$ stejnou vzdálenost $a\in \mathbb R^+$, je sjednocení přímek $e_1\cup e_2,$ kde $e_1 \parallel e_2 \land \rho(e_1,p)=\rho(e_2,p)=a$. Tyto přímky nazveme 
+  Nechť $p$ je přímka. Množinou všech bodů $X \in \mathbb E_2,$ které mají od přímky $p$ stejnou vzdálenost $a\in \mathbb R^+$, je sjednocení přímek $e_1\cup e_2,$ kde $e_1 \parallel e_2 \land \rho(e_1,p)=\rho(e_2,p)=a$. Tyto přímky nazveme
   \textbf{ekvidistantou přímky} $p$.
 \end{definition}
 
 \begin{definition}
-  Nechť $k(S,r)$ je kružnice. Množinou všech bodů $X\in \mathbb E_2,$ které mají od kružnice $k$ stejnou vzdálenost $a, a \in \mathbb R^+, a< r,$ je sjednocení kružnic $e_1, e_2,$ kde kružnice $k,e_1,e_2$ jsou soustředné a platí $\rho(e_1,k)= \rho(e_2,k)=a.$ Tyto kružnice nazveme 
+  Nechť $k(S,r)$ je kružnice. Množinou všech bodů $X\in \mathbb E_2,$ které mají od kružnice $k$ stejnou vzdálenost $a, a \in \mathbb R^+, a< r,$ je sjednocení kružnic $e_1, e_2,$ kde kružnice $k,e_1,e_2$ jsou soustředné a platí $\rho(e_1,k)= \rho(e_2,k)=a.$ Tyto kružnice nazveme
   \textbf{ekvidistantou kružnice} $k$.
 \end{definition}
 
@@ -508,6 +508,3 @@ poslední blok ---
     \end{cases}
   \]
 \end{veta}
-
-
-

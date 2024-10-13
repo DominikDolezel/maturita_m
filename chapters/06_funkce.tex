@@ -4,7 +4,7 @@
 \end{definition}
 
 \begin{definition}
-  Nechť $f\subseteq \mathbf R \times \mathbb R$ je funkce. Množinu
+  Nechť $f\subseteq \mathbb R \times \mathbb R$ je funkce. Množinu
   \[
     D(f) = \left  \{ x \in \mathbb R:\exists ! y \in \mathbb R:y=f(x) \right \}
   \]
@@ -21,11 +21,11 @@
 
 
 \begin{definition}
-  Funkce $f$ se nazývá \textbf{sudá} (resp. \textbf{lichá}), jestliže platí 
+  Funkce $f$ se nazývá \textbf{sudá} (resp. \textbf{lichá}), jestliže platí
 \begin{itemize}
-  \item 
+  \item
   $\forall x \in D(f):(-x) \in D(f)$
-\item 
+\item
  $\forall x \in D(f): f(-x)=f(x)$, resp. $f(-x)=f(x)$.
 \end{itemize}
 
@@ -60,5 +60,21 @@
 
 
 \begin{definition}
+  Nechť $f$ je funkce, $M \subseteq D(f)$, v ní prvek $a \in M$.
+  Řekneme, že funkce f má v bodě a:
+  \begin{enumerate}[i.]
+    \item ostré maximum na množině $M$ právě tehdy, když $\forall x \in M; x \not = a: f(x) < f(a)$
+    \item maximum (neostré) na množině $M$ právě tehdy, když $\forall x \in M : f(x) \leq f(a)$
+    \item ostré minimum na množině $M$ právě tehdy, když $\forall x \in M; x > a: f(x) > f(a)$
+    \item minimum (neostré) na množině $M$ právě tehdy, když $\forall x \in M : f(x) \geq f(a)$
+  \end{enumerate}
+\end{definition}
 
+\begin{definition}
+  Nechť $f$ je funkce. Funkce $f$ se nazývá periodická, pokud $\forall p \in \mathbb R^{+}: \forall x \in D(f):$
+  \begin{enumerate}
+    \item $x \in D(f) \implies x \pm p \in D(f)$
+    \item $f(x) = f(x \pm p)$
+  \end{enumerate}
+  Číslo $p$ se nazývá periodou této funkce. Periodu $p_0$ nazveme nejmenší periodou funkce, pokud pro všechny ostatní periody $p$ platí $p > p_0$. V opačném případě se funkce nazývá neperiodická.
 \end{definition}

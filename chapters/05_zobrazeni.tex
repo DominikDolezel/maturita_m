@@ -2,7 +2,7 @@
 \begin{definition}
   \textbf{Kartézským součinem množin} $A,B$ nazýváme množinu $A\times B$ všech uspořádaných dvojic $(a,b)$ takových, že $a\in A,b\in B$.
   \[
-    A\times B=\left{ (a,b): a\in A,b\in B \right}
+    A \times B = \left \{ (a,b): a\in A,b\in B \right \}
   \]
 \end{definition}
 
@@ -36,7 +36,7 @@
 \end{pozn}
 
 \begin{definition}
-  Nechť $A,B$ jsou dvě množiny. \textbf{Zobrazením} $f$ \textbf{z množiny $A$ do množiny $B$} nazýváme relaci $f\subseteqA\times B,$ pro níž platí: $\forall x\in A: \exists \text{ max. 1 }y\in B: (x,y)\in f$. Prvek $x$ nazveme \textbf{vzorem} a $y$ \textbf{obrazem}.
+  Nechť $A,B$ jsou dvě množiny. \textbf{Zobrazením} $f$ \textbf{z množiny $A$ do množiny $B$} nazýváme relaci $f\subseteq A \times B,$ pro níž platí: $\forall x \in A: \exists \text{ max. 1 } y \in B: (x,y) \in f$. Prvek $x$ nazveme \textbf{vzorem} a $y$ \textbf{obrazem}.
 \end{definition}
 
 \begin{definition}
@@ -44,7 +44,7 @@
 \end{definition}
 
 \begin{definition}
-  Pokud $D(f) = A$ (resp. $D(f)\ne A$), hovoříme o \textbf{zobrazení množiny} (resp. \textbf{zobrazení z množiny}) $A$. Pokud $H(f)=B$ (resp. $H(f)\ne B$), hovoříme o \textbf{zobrazení na množinu} (resp. \textbf{zobrazení do množiny}) $B$. 
+  Pokud $D(f) = A$ (resp. $D(f)\ne A$), hovoříme o \textbf{zobrazení množiny} (resp. \textbf{zobrazení z množiny}) $A$. Pokud $H(f)=B$ (resp. $H(f)\ne B$), hovoříme o \textbf{zobrazení na množinu} (resp. \textbf{zobrazení do množiny}) $B$.
   Zobrazení na nazýváme \textbf{surjekcí}. Je li $A=B$, hovoříme o \textbf{zobrazení v množině} $A$.
 \end{definition}
 
@@ -57,19 +57,17 @@
 \end{definition}
 
 \begin{definition}
-  Nechť $\alpha \subseteq A\times B$ je binární relace. \textbf{Inverzní relací} k relaci $\alpha$ nazveme relaci $\alpha^{-1} \subseteq B\times A$ takovou, že 
+  Nechť $\alpha \subseteq A\times B$ je binární relace. \textbf{Inverzní relací} k relaci $\alpha$ nazveme relaci $\alpha^{-1} \subseteq B\times A$ takovou, že
   \[
-    \alpha^{-1}=\left{ (b,a)\in B\times ;  (a,b\in \alpha)\right}.
+    \alpha^{-1}=\left\{ (b,a)\in B\times ;  (a,b\in \alpha)\right\}.
   \]
-  Je-li $\alpha^{-1}$ zobrazení, nazveme relaci $\alhpa ^{-1}$ \textbf{inverzním zobrazením} k zobrazení $\alpha$.
+  Je-li $\alpha^{-1}$ zobrazení, nazveme relaci $\alpha ^{-1}$ \textbf{inverzním zobrazením} k zobrazení $\alpha$.
 \end{definition}
 
 \begin{definition}
   Nechť $f:A\to B, g:B\to C$ jsou zobrazení. \textbf{Složeným zobrazením} ze zobrazení $f$ g $g$ nazveme relaci $h\subseteq A\times C$ takovou, že
   \[
-    h=\left{ (a,c)\in A\times C;\exists b\in B: f(a)=b \land g(b)=c \right}.
+    h=\left\{ (a,c)\in A\times C;\exists b\in B: f(a)=b \land g(b)=c \right\}.
   \]
   Značíme $c=g(f(a))$, $h=g\, \circ \, f $ (čteme \uv{$g$ po $f$}).
 \end{definition}
-
-
