@@ -85,13 +85,15 @@
 
 \begin{definition}
   \textbf{Dirichletova funkce} je definována vzorcem
-  $f(x) = 1 \text{ pokud } x \in Q
-         0 \text{ jinak }$
+  $$f(x) = \begin{cases}
+1 \text{ pokud } x \in \mathbb Q \\
+0 \text{ jinak }
+  \end{cases}  $$       
 \end{definition}
 
 \begin{definition}
   Nechť $x \in \mathbb{R}$ je libovolné číslo. Pak existuje právě jedna dvojice $z \in \mathbb{Z}, a \in \left \langle 0;1 \right) \text{ tak, že } x = z + a$.
-Číslo z nazýváme celou částí čísla x a zapisujeme $[x] = z (\lfloor x \rfloor = z)$.
+Číslo $z$ nazýváme celou částí čísla $x$ a zapisujeme $[x] = z (\lfloor x \rfloor = z)$.
 \end{definition}
 
 \begin{definition}
@@ -99,19 +101,20 @@
 \end{definition}
 
 \begin{definition}
-  Číslo $A\in \mathbb {R}$ je limitou funkce $f:\mathbb {R} \rightarrow \mathbb {R}$ v bodě $ a\in \mathbb {R}$, jestliže k libovolnému $ \varepsilon >0$ existuje takové $ \delta >0$, že pro všechna $x\in D_{f}$ taková, že $ \left|x-a\right|<\delta$ ($x$ leží v prstencovém okolí bodu $a$) platí $\left|f(x)-A\right|<\varepsilon $.
+  Číslo $A\in \mathbb {R}$ je limitou funkce $f:\mathbb {R} \rightarrow \mathbb {R}$ v bodě $ a\in \mathbb {R}$, jestliže k libovolnému $ \varepsilon >0$ existuje takové $ \delta >0$, že pro všechna $x\in D(f)$ taková, že $ \left|x-a\right|<\delta$ ($x$ leží v prstencovém okolí bodu $a$) platí $\left|f(x)-A\right|<\varepsilon $.
 
   Limitu má smysl zkoumat jen v definičním oboru funkce neobsahujícím bod $a$, tj. libovolně blízko k bodu $a$ musí být funkce definována.
 \end{definition}
 
 \begin{definition}
-  Nejběžnější moderní definice \textbf{derivace} funkce $f$ v bodě $a$, zapisujeme $f'(a)$ je $f'(a)=\lim _{h\to 0}{\frac {f(a+h)-f(a)}{h}}=\lim _{x\to a}{\frac {f(x)-f(a)}{x-a}}$.
+  Nejběžnější moderní definice \textbf{derivace} funkce $f$ v bodě $a$, zapisujeme $f'(a)$ je 
+  $$f'(a)=\lim _{h\to 0}{\frac {f(a+h)-f(a)}{h}}=\lim _{x\to a}{\frac {f(x)-f(a)}{x-a}}.$$
 
   Co to znamená se mě neptejte (klidně se zeptejte). Vložte intuitivní definici derivace.
 \end{definition}
 
 \begin{definition}
-  Nechť f je funkce spojitá na intervalu $(a,b)$. Pak říkáme, že funkce f je na intervalu $(a,b)$ \textbf{konvexní} (resp. \textbf{ryze konvexní}) právě tehdy, když pro libovolné číslo $\lambda \in (0,1)$ s vlastností $\forall x,y\in (a,b),x<y:f(\lambda x+(1-\lambda )y) < (\text{resp. } \leq) \lambda f(x)+(1-\lambda )f(y)$
+  Nechť $f$ je funkce spojitá na intervalu $(a,b)$. Pak říkáme, že funkce $f$ je na intervalu $(a,b)$ \textbf{konvexní} (resp. \textbf{ryze konvexní}) právě tehdy, když pro libovolné číslo $\lambda \in (0,1)$ s vlastností $\forall x,y\in (a,b),x<y:f(\lambda x+(1-\lambda )y) < (\text{resp. } \leq) \lambda f(x)+(1-\lambda )f(y)$
 
   Pokud spojitá funkce není na intervalu konvexní (resp. ryze konvexní), je na něm ryze konkávní (resp. konkávní).
 \end{definition}
