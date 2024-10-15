@@ -63,18 +63,61 @@
   Nechť $f$ je funkce, $M \subseteq D(f)$, v ní prvek $a \in M$.
   Řekneme, že funkce f má v bodě a:
   \begin{enumerate}[i.]
-    \item ostré maximum na množině $M$ právě tehdy, když $\forall x \in M; x \not = a: f(x) < f(a)$
-    \item maximum (neostré) na množině $M$ právě tehdy, když $\forall x \in M : f(x) \leq f(a)$
-    \item ostré minimum na množině $M$ právě tehdy, když $\forall x \in M; x > a: f(x) > f(a)$
-    \item minimum (neostré) na množině $M$ právě tehdy, když $\forall x \in M : f(x) \geq f(a)$
+    \item \textbf{ostré maximum} na množině $M$ právě tehdy, když $\forall x \in M; x \not = a: f(x) < f(a)$
+    \item \textbf{maximum} (neostré) na množině $M$ právě tehdy, když $\forall x \in M : f(x) \leq f(a)$
+    \item \textbf{ostré minimum} na množině $M$ právě tehdy, když $\forall x \in M; x > a: f(x) > f(a)$
+    \item \textbf{minimum} (neostré) na množině $M$ právě tehdy, když $\forall x \in M : f(x) \geq f(a)$
   \end{enumerate}
 \end{definition}
 
 \begin{definition}
-  Nechť $f$ je funkce. Funkce $f$ se nazývá periodická, pokud $\forall p \in \mathbb R^{+}: \forall x \in D(f):$
+  Nechť $f$ je funkce. Funkce $f$ se nazývá \textbf{periodická}, pokud $\forall p \in \mathbb R^{+}: \forall x \in D(f):$
   \begin{enumerate}
     \item $x \in D(f) \implies x \pm p \in D(f)$
     \item $f(x) = f(x \pm p)$
   \end{enumerate}
-  Číslo $p$ se nazývá periodou této funkce. Periodu $p_0$ nazveme nejmenší periodou funkce, pokud pro všechny ostatní periody $p$ platí $p > p_0$. V opačném případě se funkce nazývá neperiodická.
+  Číslo $p$ se nazývá \textbf{periodou} této funkce. Periodu $p_0$ nazveme \textbf{nejmenší periodou} funkce, pokud pro všechny ostatní periody $p$ platí $p > p_0$. V opačném případě se funkce nazývá \textbf{neperiodická}.
+\end{definition}
+
+\begin{definition}
+  Máme funkci $f: y = f(u)$ s definičním oborem $D(f)$ a funkci $g: u=g(x)$ s oborem hodnot $H(g)$. Jestliže je $H(g) \subseteq D(f)$, pak funkci $h: y = f(g(x))$ nazveme \textbf{složenou funkcí} (někdy píšeme též $h=f \circ g$).
+\end{definition}
+
+\begin{definition}
+  \textbf{Dirichletova funkce} je definována vzorcem
+  $f(x) = 1 \text{ pokud } x \in Q
+         0 \text{ jinak }$
+\end{definition}
+
+\begin{definition}
+  Nechť $x \in \mathbb{R}$ je libovolné číslo. Pak existuje právě jedna dvojice $z \in \mathbb{Z}, a \in \left \langle 0;1 \right) \text{ tak, že } x = z + a$.
+Číslo z nazýváme celou částí čísla x a zapisujeme $[x] = z (\lfloor x \rfloor = z)$.
+\end{definition}
+
+\begin{definition}
+  O funkci $f:\mathbb {R} \rightarrow \mathbb {R}$ řekneme, že je \textbf{spojitá} v bodě $a$, pokud ke každému libovolně malému číslu $\varepsilon >0$ existuje takové číslo $\delta >0$, že pro všechna $x$, pro něž platí $|x-a|<\delta$, platí také $|f(x)-f(a)|<\varepsilon$.
+\end{definition}
+
+\begin{definition}
+  Číslo $A\in \mathbb {R}$ je limitou funkce $f:\mathbb {R} \rightarrow \mathbb {R}$ v bodě $ a\in \mathbb {R}$, jestliže k libovolnému $ \varepsilon >0$ existuje takové $ \delta >0$, že pro všechna $x\in D_{f}$ taková, že $ \left|x-a\right|<\delta$ ($x$ leží v prstencovém okolí bodu $a$) platí $\left|f(x)-A\right|<\varepsilon $.
+
+  Limitu má smysl zkoumat jen v definičním oboru funkce neobsahujícím bod $a$, tj. libovolně blízko k bodu $a$ musí být funkce definována.
+\end{definition}
+
+\begin{definition}
+  Nejběžnější moderní definice \textbf{derivace} funkce $f$ v bodě $a$, zapisujeme $f'(a)$ je $f'(a)=\lim _{h\to 0}{\frac {f(a+h)-f(a)}{h}}=\lim _{x\to a}{\frac {f(x)-f(a)}{x-a}}$.
+
+  Co to znamená se mě neptejte (klidně se zeptejte). Vložte intuitivní definici derivace.
+\end{definition}
+
+\begin{definition}
+  Nechť f je funkce spojitá na intervalu $(a,b)$. Pak říkáme, že funkce f je na intervalu $(a,b)$ \textbf{konvexní} (resp. \textbf{ryze konvexní}) právě tehdy, když pro libovolné číslo $\lambda \in (0,1)$ s vlastností $\forall x,y\in (a,b),x<y:f(\lambda x+(1-\lambda )y) < (\text{resp. } \leq) \lambda f(x)+(1-\lambda )f(y)$
+
+  Pokud spojitá funkce není na intervalu konvexní (resp. ryze konvexní), je na něm ryze konkávní (resp. konkávní).
+\end{definition}
+
+\begin{definition}
+  \textbf{Primitivní funkce} k funkci $f$ na intervalu $(a,b)$ je taková funkce $F$, že pro každé $x\in (a,b)$ je $F'(x)=f(x)$.
+
+  Procesu hledání primitivní funkce se často říká \textbf{integrování} nebo \textbf{integrace} (od slova integrál).
 \end{definition}
