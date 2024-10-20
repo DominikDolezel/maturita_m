@@ -33,13 +33,13 @@
 
 
 \begin{definition}
-  Nechť $P(x) \in \mathbb [x]$ a $c\in \mathbb R$ je jeho kořen. Lineární polynom $x-c$ nazveme \textbf{kořenovým činitelem}.
+  Nechť $P(x) \in \mathbb R [x]$ a $c\in \mathbb R$ je jeho kořen. Lineární polynom $x-c$ nazveme \textbf{kořenovým činitelem}.
 \end{definition}
 
 \begin{definition}
-  Nechť P(x) \in \mathbb R[x], c \in \mathbb R$ je jeho kořen a $k\in \amthbb N$. Číslo $C \in \mathbb R$ nazýváme \textbf{$k$-násobným kořenem} polynomu $P(x)$ právě tehdy, když platí
+  Nechť $P(x) \in \mathbb R [x], c \in \mathbb R$ je jeho kořen a $k \in \mathbb N$. Číslo $C \in \mathbb R$ nazýváme \textbf{$k$-násobným kořenem} polynomu $P(x)$ právě tehdy, když platí
   \[
-    (x-c)^k \, | \, P(x)\land (x-c)^{k+1} \nmid  P(x).
+    (x-c)^k \, | \, P(x) \land (x-c)^{k+1} \nmid  P(x).
   \]
 \end{definition}
 
@@ -51,4 +51,30 @@
     \vdots & \\
     \prod_{i=1}^nx_i=&(-1)^n\frac{a_0}{a_n}
   \end{align*}
+\end{veta}
+
+\begin{pozn}
+  \textbf{Hornerovo schéma} je numerická metoda pro vyhodnocení funkční hodnoty polynomu $P(x) \in \mathbb R [x]$ v bodě $ x_0 \in \mathbb R$. Příklad:
+  Vyhodnoťte $f_{1}(x)=2x^{3}-6x^{2}+2x-1\,$ v bodě $x=3\;$.
+  Opakovaným vytknutím $x$, může být $f_{1}$ zapsáno jako $x(x(2x-6)+2)-1\;$. Pro větší přehlednost užijeme k zápisu průběhu výpočtu tzv. syntetický diagram.
+
+  $x_{0}$|  $x^{3}$   $x^{2}$    $x^{1}$    $x^{0}$\\
+  ---|----------------------\\
+  3 |   2     0     2     5
+
+  Čísla ve třetím řádku jsou součty čísel v prvních dvou. Každé číslo ve druhém řádku je součinem hodnoty $x$, v níž polynom vyhodnocujeme (v tomto příkladě tedy 3) s číslem ve třetím řádku o jeden sloupec více vlevo. Čísla v prvním řádku jsou koeficienty vyhodnocovaného polynomu. Výsledek vyhodnocování je vpravo dole – v našem případě tedy 5.
+
+  Důsledkem věty o dělení polynomu polynomem je, že zbytek po vydělení f1 polynomem (x-3) je 5 a výsledkem tohoto dělení je polynom stupně 2 s koeficienty danými zbylými třemi čísly ve třetím řádku. Díky tomuto pozorování lze Hornerovo schéma použít i jako efektivní algoritmus k dělení polynomů.
+\end{pozn}
+
+\begin{veta}[Hledání racionálních kořenů polynomu s racionálními koeficienty]
+  Mějme polynom $P(x) \in \mathbb Q [x]$. Potom najdeme jeho kořeny $\frac{r}{s} \in \mathbb Q$ takto:
+  \begin{enumerate}[1.]
+    \item Nalezneme všechny celočíselné dělitele $r$ absolutního členu polynomu $a_0$.
+    \item Nalezneme všechny přirozené dělitele $s$ vedoucího členu $a_n$.
+    \item Utvoříme všechny zlomky tvaru $\frac{r}{s}, (r,s) = 1$.
+    \item Hornerovým schématem určíme $P(1)$, případně $P(-1)$ ($1$ a $-1$ také mohou být kořeny).
+    \item Vyškrtáme ty zlomky $\frac{r}{s}$, které nesplňují podmínky $(r-s) \mid P(1) \land (r+s) \mid P(-1)$.
+    \item U ostatních zlomků vyzkoušíme Hornerovým schématem, zda jsou kořeny daného polynomu.
+  \end{enumerate}
 \end{veta}
