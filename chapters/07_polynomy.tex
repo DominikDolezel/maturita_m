@@ -1,0 +1,54 @@
+\section{Polynomy, kořeny polynomů}
+\begin{definition}
+  \textbf{Polynomem} nazýváme každý výraz $P(x)$ tvaru
+  \[
+    P(x)=a_nx^n + a_{n-1}x^{n-1}+\dots + a_2x^2+a_1x+a_0,
+  \]
+  kde $a_i\in \mathbb R, i\in \{ 0,1,\dots , n \},n\in \mathbb N$. Čísla $a_i$ se nazývají \textbf{koeficienty polynomu}, sčítance $a_ix^i$ \textbf{členy polynomu}. Je-li $a_n\ne 0$, číslo $n$ se nazývá \textbf{stupeň polynomu} a označuje se $n= \text{st}(P(x))$. Je-li $a_i=0$ pro všechna $i \in \{ 0,1,\dots ,n\}$, pak klademe $\text{st}(P(x))=-\infty$ a $P(x)$ se nazývá \textbf{nulovým polynomem}. Označujeme jej $O(x).$ Je-li $a_n=1$, nazývá se $P(x)$ \textbf{normovaným polynomem}.
+\end{definition}
+
+\begin{veta}[O dělení polynomů se zbytkem]
+  Nechť $A(x), B(x) \in \mathbb R[x],B(x) \ne O(x).$ Pak existuje právě jedna dvojice polynomů $Q(x),R(x)\in \mathbb R[x]$ tak, že
+  \[
+    A(x)=B(x)\cdot Q(x)+R(x),
+  \]
+  kde $R(x)=O(x)$ nebo $\text{st}(R(x))<\text{st}(B(x)).$
+\end{veta}
+
+\begin{definition}
+  Nechť $A(x), B(x) \in \mathbb R[x]$. Řekneme, že polynom $B(x)$ \textbf{dělí} polynom $A(x)$ právě tehdy, když existuje takový polynom $C(x) \in \mathbb R[x]$ tak, že
+  \[
+    A(x) = B(x)\cdot C(x).
+  \]
+  Zapisujeme $B(x) \, | \, A(x).$
+\end{definition}
+
+\begin{definition}
+  Nechť $P(x)\in \mathbb R[x], P(x)=a_nx^n+a_{n-1}x^{n-1}+\dots +a_1x+a_0.$ Nechť $c\in \mathbb R$ je libovolné číslo. \textbf{Hodnotou polynomu} $P(x)$ \textbf{v čísle} (v bodě) $c$ nazýváme reálné číslo $P(c)$
+  \[
+    P(c) = a_nc^n+a_{n-1}c^{n-1}+\dots+a_1c+a_0.
+  \]
+  Číslo $c\in \mathbb R$ nazveme \textbf{kořenem polynomu} $P(x) \iff P(c) = 0$.
+\end{definition}
+
+
+\begin{definition}
+  Nechť $P(x) \in \mathbb [x]$ a $c\in \mathbb R$ je jeho kořen. Lineární polynom $x-c$ nazveme \textbf{kořenovým činitelem}.
+\end{definition}
+
+\begin{definition}
+  Nechť P(x) \in \mathbb R[x], c \in \mathbb R$ je jeho kořen a $k\in \amthbb N$. Číslo $C \in \mathbb R$ nazýváme \textbf{$k$-násobným kořenem} polynomu $P(x)$ právě tehdy, když platí
+  \[
+    (x-c)^k \, | \, P(x)\land (x-c)^{k+1} \nmid  P(x).
+  \]
+\end{definition}
+
+\begin{veta}[Vi\`{e}tovy vztahy]
+  Nechť $P(x)=a_nx^n+a_{n-1}x^{n-1}+\dots + a_1x+a_0$ je polynom stupně $n$, který má v množině $\mathbb R$ právě $n$ kořenů $x_1,x_2\dots,x_n$ (každý počítáme tolikrát, jaká je jeho násobnost). Pak platí:
+  \begin{align*}
+    \sum_{i=1}^n x_i = & -\frac{a_{n-1}}{a_n} \\
+    \sum_{i,j=1; i<j}^{n}x_ix_j= & \frac{a_{n-2}}{a_n} \\
+    \vdots & \\
+    \prod_{i=1}^nx_i=&(-1)^n\frac{a_0}{a_n}
+  \end{align*}
+\end{veta}
