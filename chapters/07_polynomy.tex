@@ -57,10 +57,10 @@
   \textbf{Hornerovo schéma} je numerická metoda pro vyhodnocení funkční hodnoty polynomu $P(x) \in \mathbb R [x]$ v bodě $ x_0 \in \mathbb R$. Příklad:
   Vyhodnoťte $f_{1}(x)=2x^{3}-6x^{2}+2x-1\,$ v bodě $x=3\;$.
   Opakovaným vytknutím $x$, může být $f_{1}$ zapsáno jako $x(x(2x-6)+2)-1\;$. Pro větší přehlednost užijeme k zápisu průběhu výpočtu tzv. syntetický diagram.
-
-  $x_{0}$|  $x^{3}$   $x^{2}$    $x^{1}$    $x^{0}$\\
-  ---|----------------------\\
-  3 |   2     0     2     5
+  \begin{tabular}{ c c c c c }
+    $x_{0}$ & $x^{3}$ & $x^{2}$ & $x^{1}$ & $x^{0}$
+    3 & 2 & 0 & 2 & 5
+  \end{tabular}
 
   Čísla ve třetím řádku jsou součty čísel v prvních dvou. Každé číslo ve druhém řádku je součinem hodnoty $x$, v níž polynom vyhodnocujeme (v tomto příkladě tedy 3) s číslem ve třetím řádku o jeden sloupec více vlevo. Čísla v prvním řádku jsou koeficienty vyhodnocovaného polynomu. Výsledek vyhodnocování je vpravo dole – v našem případě tedy 5.
 
@@ -78,3 +78,10 @@
     \item U ostatních zlomků vyzkoušíme Hornerovým schématem, zda jsou kořeny daného polynomu.
   \end{enumerate}
 \end{veta}
+
+\begin{veta}[Rozklad polynomu v reálném a komplexním oboru]
+  Nechť $P(x) \in \mathbb R [x], P(x) = a_n x^n + a_{n-1} x^{n-1} + ... + a_1 x + a_0$, kde $st(P(x)) \geq 1$. Pak $P(x)$ lze vyjádřit jako součin polynomů 1. a 2. stupně a koeficientu $a_n$:
+\end{veta}
+
+
+
