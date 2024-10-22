@@ -111,12 +111,12 @@
   \end{enumerate}
   Proveďme následující posloupnost dělení se zbytkem. Toto dělení ukončíme, až dostaneme zbytek -- nulový polynom. Vzhledem k nerovnosti na pravé straně, tento nulový zbytek existuje.
   \[
-    A(x) = B(x) \cdot Q_1(x) + R_1(x), \hspace st(R_1(x)) < st(B(x))
-    B(x) = R_1(x) \cdot Q_2(x) + R_2(x), \hspace st(R_2(x)) < st(R_1(x))
-    R_1(x) = R_2(x) \cdot Q_3(x) + R_3(x), \hspace st(R_3(x)) < st(R_2(x))
-    ... ...
-    R_{n-2}(x) = R_{n-1}(x) \cdot Q_n(x) + R_n(x), \hspace st(R_n(x)) < st(R_{n-1}(x))
-    R_{n-1}(x) = R_{n}(x) \cdot Q_{n+1}(x), \hspace st(R_{n-1}(x)) < 0(x))
+    A(x) = B(x) \cdot Q_1(x) + R_1(x), \hfill st(R_1(x)) < st(B(x))\\
+    B(x) = R_1(x) \cdot Q_2(x) + R_2(x), \hfill st(R_2(x)) < st(R_1(x))\\
+    R_1(x) = R_2(x) \cdot Q_3(x) + R_3(x), \hfill st(R_3(x)) < st(R_2(x))\\
+    ... ...\\
+    R_{n-2}(x) = R_{n-1}(x) \cdot Q_n(x) + R_n(x), \hfill st(R_n(x)) < st(R_{n-1}(x))\\
+    R_{n-1}(x) = R_{n}(x) \cdot Q_{n+1}(x), \hfill st(R_{n-1}(x)) < 0(x))
   \]
   Potom $(A(x), B(x)) = R_n(x)$, či libovolný násobek $R_n(x)$. \textbf{Normovaný největší společný dělitel polynomů} ale existuje právě jeden, ten se označuje $(A(x), B(x))$.
 \end{pozn}
