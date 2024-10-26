@@ -1,31 +1,31 @@
 \section{Polynomická funkce (především lineární a kvadratické)}
 
-\begin{definition}
+\begin{definition}\,
 \begin{enumerate}
   \item Nechť $b \in \mathbb R$. Funkci $f:y = b$ nazveme \textbf{konstantní funkcí}.
-  \item Nechť $a, b \in \mathbb R, a \neq 0$. Pak funkci $f:y= ax + b$ nazveme \textbf{lineární funkcí}. 
+  \item Nechť $a, b \in \mathbb R, a \neq 0$. Pak funkci $f:y= ax + b$ nazveme \textbf{lineární funkcí}.
 \end{enumerate}
 \end{definition}
 
-\begin{pozn}
+\begin{pozn}\,
   \begin{itemize}
     \item Definičním oborem konstantní i lineární funkce je $\mathbb R$. \\
           Oborem hodnot konstantní funkce je ${b}$.\\
-          Oborem hodnot lineární funkce je $\mathbb R$. 
+          Oborem hodnot lineární funkce je $\mathbb R$.
     \item Grafem konstantní funkce je přímka rovnoběžná s osou $x$. \\
           Grafem lineární funkce je přímka, která není rovnoběžná s osou $x$ ani s osou $y$.
   \end{itemize}
 \end{pozn}
 
 \begin{veta}
-  Nechť $f: y = ax + b, a \neq 0$ je lineární funkce. Pak platí: 
+  Nechť $f: y = ax + b, a \neq 0$ je lineární funkce. Pak platí:
   \begin{enumerate}[1.]
     \item $b=0 \implies f$ je lichá\\
           $b \neq 0 \implies f$ není ani sudá, ani lichá
-    \item $a > 0 \implies f$ je rostoucí\\ 
+    \item $a > 0 \implies f$ je rostoucí\\
           $a < 0 \implies f$ je klesající
     \item $f$ není ani shora, ani zdola omezená
-    \item $f$ nemá extrémy 
+    \item $f$ nemá extrémy
     \item $f$ není periodická
   \end{enumerate}
 \end{veta}
@@ -35,9 +35,35 @@
     \item $b=0 \implies f:y= ax = f(x) \land -ax = -f(x) \implies f$ je lichá\\
           $b\neq 0 \implies f:y = ax + b = f(x) = -ax + b \implies f$ není sudá ani lichá
     \item $a>0 \implies x_1 < x_2 \implies ax_1 < ax_2 \implies ax_1 + b < ax_2 + b \implies f$ je rostoucí\\
-          $a<0 \implies x_1 < x_2 \implies ax_1 > ax_2 \implies ax_1 + b > ax_2 + b \impliesf$ je klesající
+          $a<0 \implies x_1 < x_2 \implies ax_1 > ax_2 \implies ax_1 + b > ax_2 + b \implies f$ je klesající
     \item Obor hodnot je $\mathbb R \implies f$ není omezená.
     \item Plyne z grafu.
-    \item Plynez z grafu nebo z toho, že $f$ je ryze monotónní
+    \item Plyne z z grafu nebo z toho, že $f$ je ryze monotónní
   \end{enumerate}
 \end{proof}
+
+\begin{definition}
+  Nechť $a,b,c \in \mathbb R, a \neq 0$. Pak $f:y = ax^2 + bx+ x$ nazýváme \textbf{kvadratickou funkcí}.
+\end{definition}
+
+\begin{pozn}\,
+  \begin{itemize}
+    \item Definičním oborem kvadratické funkce je $\mathbb R$.
+    \item Grafem kvadratické funkce je parabola.
+  \end{itemize}
+\end{pozn}
+
+\begin{veta}
+  Nechť $f:y = ax^2, a \neq 0$ je kvadratická funkce. Pak platí:\\
+  \begin{tabularx}{\textwidth}{ >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X }
+    \, & $a>0$ & $a<0$ \\
+    obor hodnot & $H(f) = \mathbb R^{+}_0$ & $H(f) = \mathbb R^{-}_0$ \\
+    parita & sudá & sudá \\
+    monotónnost & $x \in (-\infty, 0\rangle$ -- klesající & $x \in (-\infty, 0\rangle$ -- rostoucí \\
+    \, & $x \in \langle 0, \infty)$ -- rostoucí & $x \in \langle 0, \infty)$ -- klesající \\
+    omezenost & zdola omezená & zdola neomezená \\
+    \, & shora neomezená & shora omezená \\
+    extrémy &  ostré minimum v bodě $x_0=0$ & ostré maximum v bodě $x_0=0$ \\
+    periodicita & neperiodická & neperiodická
+  \end{tabularx}
+\end{veta}
