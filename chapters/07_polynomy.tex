@@ -124,3 +124,13 @@
 \begin{definition}
   Nehcť polynomy $A(x), B(x)$. Pokud $(A(x), B(x)) = 1$, řekneme, že polynomy $A(x), B(x)$ jsou \textbf{nesoudělné}. V opačném případě jsou \textbf{soudělné}.
 \end{definition}
+
+\begin{definition}
+    Nechť $P(x) \in \mathbb R[x], P(x)=a_nx^n+a_{n-1}x^{n-1}+\dots+a_1x+a_0.$ \textbf{Derivací polynomu} $P(x)$ rozumíme polynom $P^\prime(x)$ definovaný takto:
+    $$
+        P^\prime(x)=\begin{cases}
+        0, &\text{ je-li st} (P(x)) \leq 0,\\
+        a_n n x^{n-1} + a_{n-1}(n-1)x^{n-2} + \dots + a_1, & \text{ je-li st} (P(x)) \geq 1.
+        \end{cases}
+    $$
+\end{definition}

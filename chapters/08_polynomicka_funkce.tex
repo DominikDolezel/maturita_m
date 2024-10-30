@@ -1,9 +1,9 @@
-\section{Polynomická funkce (především lineární a kvadratické)}
+\section{Polynomická funkce (především lineární a~kvadratické)}
 
 \begin{definition}\,
 \begin{enumerate}
   \item Nechť $b \in \mathbb R$. Funkci $f:y = b$ nazveme \textbf{konstantní funkcí}.
-  \item Nechť $a, b \in \mathbb R, a \neq 0$. Pak funkci $f:y= ax + b$ nazveme \textbf{lineární funkcí}.
+  \item Nechť $a, b \in \mathbb R, a \neq 0$. Funkci $f:y= ax + b$ nazveme \textbf{lineární funkcí}.
 \end{enumerate}
 \end{definition}
 
@@ -19,31 +19,31 @@
 
 \begin{veta}
   Nechť $f: y = ax + b, a \neq 0$ je lineární funkce. Pak platí:
-  \begin{enumerate}[1.]
-    \item $b=0 \implies f$ je lichá\\
-          $b \neq 0 \implies f$ není ani sudá, ani lichá
-    \item $a > 0 \implies f$ je rostoucí\\
-          $a < 0 \implies f$ je klesající
-    \item $f$ není ani shora, ani zdola omezená
-    \item $f$ nemá extrémy
-    \item $f$ není periodická
+  \begin{enumerate}[$i.$]
+    \item $b=0 \implies f$ je lichá,\\
+          $b \neq 0 \implies f$ není ani sudá, ani lichá;
+    \item $a > 0 \implies f$ je rostoucí,\\
+          $a < 0 \implies f$ je klesající;
+    \item $f$ není ani shora, ani zdola omezená;
+    \item $f$ nemá extrémy;
+    \item $f$ není periodická.
   \end{enumerate}
 \end{veta}
 
-\begin{proof}
-  \begin{enumerate}[1.]
+\begin{proof}\,
+  \begin{enumerate}[$i.$]
     \item $b=0 \implies f:y= ax = f(x) \land -ax = -f(x) \implies f$ je lichá\\
           $b\neq 0 \implies f:y = ax + b = f(x) = -ax + b \implies f$ není sudá ani lichá
     \item $a>0 \implies x_1 < x_2 \implies ax_1 < ax_2 \implies ax_1 + b < ax_2 + b \implies f$ je rostoucí\\
           $a<0 \implies x_1 < x_2 \implies ax_1 > ax_2 \implies ax_1 + b > ax_2 + b \implies f$ je klesající
     \item Obor hodnot je $\mathbb R \implies f$ není omezená.
     \item Plyne z grafu.
-    \item Plyne z z grafu nebo z toho, že $f$ je ryze monotónní
+    \item Plyne z grafu nebo z toho, že $f$ je ryze monotónní. \qedhere
   \end{enumerate}
 \end{proof}
 
 \begin{definition}
-  Nechť $a,b,c \in \mathbb R, a \neq 0$. Pak $f:y = ax^2 + bx+ x$ nazýváme \textbf{kvadratickou funkcí}.
+  Nechť $a,b,c \in \mathbb R, a \neq 0$. Pak funkci $f:y = ax^2 + bx+ x$ nazýváme \textbf{kvadratickou funkcí}.
 \end{definition}
 
 \begin{pozn}\,
@@ -55,15 +55,70 @@
 
 \begin{veta}
   Nechť $f:y = ax^2, a \neq 0$ je kvadratická funkce. Pak platí:\\
-  \begin{tabularx}{\textwidth}{ >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X }
-    \, & $a>0$ & $a<0$ \\
-    obor hodnot & $H(f) = \mathbb R^{+}_0$ & $H(f) = \mathbb R^{-}_0$ \\
-    parita & sudá & sudá \\
-    monotónnost & $x \in (-\infty, 0\rangle$ -- klesající & $x \in (-\infty, 0\rangle$ -- rostoucí \\
-    \, & $x \in \langle 0, \infty)$ -- rostoucí & $x \in \langle 0, \infty)$ -- klesající \\
-    omezenost & zdola omezená & zdola neomezená \\
-    \, & shora neomezená & shora omezená \\
-    extrémy &  ostré minimum v bodě $x_0=0$ & ostré maximum v bodě $x_0=0$ \\
-    periodicita & neperiodická & neperiodická
-  \end{tabularx}
+
+  \begin{center}
+    \begin{tabularx}{\textwidth}{ l | l  l }
+        \, & $a>0$ & $a<0$ \\
+        \hline
+        obor hodnot & $H(f) = \mathbb R^{+}_0$ & $H(f) = \mathbb R^{-}_0$ \\
+        parita & sudá & sudá \\
+        monotónnost & $x \in (-\infty, 0\rangle$ -- klesající & $x \in (-\infty, 0\rangle$ -- rostoucí \\
+        \, & $x \in \langle 0, \infty)$ -- rostoucí & $x \in \langle 0, \infty)$ -- klesající \\
+        omezenost & zdola omezená & zdola neomezená \\
+        \, & shora neomezená & shora omezená \\
+        extrémy &  ostré minimum v bodě $x_0=0$ & ostré maximum v bodě $x_0=0$ \\
+        periodicita & neperiodická & neperiodická
+    \end{tabularx}
+  \end{center}
 \end{veta}
+
+\begin{proof}
+    \begin{enumerate}[2.]
+        \item[2.] $D(f) = \mathbb R$ -- platí, $f(-x)=a(-x)^2=ax^2=f(x)$ -- $f$ je sudá
+        \item[3.] \begin{itemize}
+        \item $a>0 \land x\in \left (-\infty,0\right >$: \\
+        $x_1<x_2:ax_1^2 > ax_2^2 \iff ax_1 <ax_2 \iff ax_1^2>ax_1x_2 \land ax_1x_2 > ax_2^2$ -- platí
+            \item $a>0 \land x\in \left <0,\infty\right )$: \\
+            $x_1<x_2:ax_1^2 > ax_2^2 \iff ax_1 <ax_2 \iff ax_1^2>ax_1x_2 \land ax_1x_2 > ax_2^2$ -- platí\qedhere
+        \end{itemize}
+    \end{enumerate}
+\end{proof}
+
+\begin{veta}
+  Nechť $f:y = ax^2+bx+c, a \neq 0$ je kvadratická funkce. Pak platí:\\
+
+  \begin{center}
+    \begin{tabularx}{\textwidth}{ l | l  l }
+        \, & $a>0$ & $a<0$ \\
+        \hline
+        obor hodnot & $H(f) = \left <c-\frac{b^2}{4a}, \infty \right)$ & $H(f) = \left (-\infty, c-\frac{b^2}{4a}\right >$ \\
+        parita & obecně není ani sudá, ani lichá & \, \\
+        monotónnost & $x \in \left (-\infty, -\frac{b}{2a} \right >$ -- klesající & $x \in \left (-\infty, -\frac{b}{2a} \right >$ -- rostoucí \\
+        \, & $x \in \left < -\frac{b}{2a}, \infty \right )$ -- rostoucí & $x \in \left < -\frac{b}{2a}, \infty \right )$ -- klesající \\
+        omezenost & zdola omezená & zdola neomezená \\
+        \, & shora neomezená & shora omezená \\
+        extrémy &  ostré minimum v bodě $x_0=-\frac{b}{2a}$ & ostré maximum v bodě $x_0=-\frac{b}{2a}$ \\
+        periodicita & neperiodická & neperiodická
+    \end{tabularx}
+  \end{center}
+\end{veta}
+
+\begin{definition}
+    Nechť $P(x)\in \mathbb R[x]$ je polynom. Pak funkci $f:y=P(x)$ nazveme \textbf{polynomickou funkcí}.
+\end{definition}
+
+\begin{pozn}
+    \begin{enumerate}[$i.$]
+        \item Definičním oborem polynomické funkce je $\mathbb R.$
+        \item Jestliže je supeň polynomu lichý, pak je obor hodnot $\mathbb R.$ Jestliže je sudý a $a_n > 0,$ je obor hodnot interval $\left <c,\infty \right )$,
+        v opačném případě je to interval $\left (-\infty, c\right >$.
+    \end{enumerate}
+\end{pozn}
+
+\begin{definition}
+    Nechť $y=f(x)$ je polynomická funkce. Pak $c\in \mathbb R$ nazveme \textbf{nulovým bodem} polynomické funkce $f$ ptávě tehdy, když $f(c)=0.$
+\end{definition}
+
+\begin{pozn}
+    Nulovým bodem polynomické funkce rozumíme kořen polynomu.
+\end{pozn}
