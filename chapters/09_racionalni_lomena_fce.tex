@@ -1,0 +1,113 @@
+\section{Racionální lomená funkce}
+\begin{definition}
+    Nechť $k \in \mathbb R, k \ne 0.$ Pak funkcí $y=\frac{k}{x}$
+    nazýváme \textbf{nepřímou úměrností} s~koeficientem $k$.
+\end{definition}
+
+\begin{definition}
+    Nechť $a,b,c,d \in \mathbb R, c \ne 0, ad-bc \ne 0.$ Pak funkci
+    $f:y=\frac{ax+b}{cx+d}$ nazýváme \textbf{lineární lomenou
+    funkcí}.
+\end{definition}
+
+\begin{pozn}
+    \begin{itemize}
+        \item $D(f)=\mathbb R - \left \{ -\frac{d}{c} \right \}$
+       	\item $H(f)=\mathbb R - \left \{ \frac{a}{c} \right \}$
+       	\item Grafem je rovnoosá hyperbola s asymptotami
+        $x=-\frac{d}{c}, y=\frac{a}{c}.$
+    \end{itemize}
+\end{pozn}
+
+\begin{veta}
+    Lineární lomená funkce:
+    \begin{enumerate}[$i.$]
+        \item není ani sudá, ani lichá;
+       	\item $bc-ad > 0 \implies$ klesající v
+        $\left ( -\infty, -\frac{d}{c} \right ),
+        \left ( -\frac{d}{c}, \infty \right ) $ \\
+        $bc-ad < 0 \implies$ rostoucí v
+        $\left ( -\infty, -\frac{d}{c} \right ),
+        \left ( -\frac{d}{c}, \infty \right ) $;
+       	\item není omezená ani shora, ani zdola;
+       	\item nemá extrémy;
+       	\item není periodická;
+       	\item je prostá.
+    \end{enumerate}
+\end{veta}
+
+\begin{definition}
+    Nechť $P(x), Q(x) \mathbb R[x]$ jsou polynomy, $Q(x) \ne O(x).$
+    Pak funkci $F:y=\frac{P(x)}{Q(x)}$ nazýváme \textbf{racionální
+    lomenou funkcí}.
+\end{definition}
+
+\begin{definition}
+    Racionální lomená funkce $f: y=\frac{P(x)}{Q(x)}, Q(x) \ne O(x)$
+    se nazývá
+    \begin{enumerate}[$i.$]
+        \item \textbf{ryze lomená} racionální funkce
+        $\iff \text{st}\left (P(x) \right ) <
+        \text{st}\left (Q(x) \right )$;
+       	\item \textbf{neryze lomená} racionální funkce
+        $\iff \text{st}\left (P(x) \right ) \geq
+        \text{st}\left (Q(x) \right )$.
+    \end{enumerate}
+\end{definition}
+
+
+-- insert řešení rovnic a nerovnic v podílovém tvaru, nevim moc co to má být lol---
+
+\begin{veta}
+    Nechť $f: y=\frac{P(x)}{Q(x)}, Q(x) \ne O(x)$ je ryze lomená
+    racionální funkce, kde polynomy $P(x)$ a $Q(x)$ nemají společné
+    kořeny. Nechť
+    \begin{align*}
+        Q(x) = & \, a_n(x-c_1)^{k_1}(x-c_2)^{k_2} \dots
+        (x-c_l)^{k_l} \\
+        \cdot & \, (x^2+p_1x + q_1)^{k_1}(x^2+p_2x+q_2)
+        ^{k_2} \dots (x^2+p_sx+q_s)^{rs}
+    \end{align*}
+    je rozklad polynomu $Q(x)$ v reálném oboru. Pak existují čísla
+    \begin{center}
+        \begin{tabular}{l l l l}
+            $C_{11}$, & $C_{12}$, & $\dots$, & $C_{1k_1}$, \\
+            $C_{21}$, & $C_{22}$, & $\dots$, & $C_{2k_2}$, \\
+            \,        & \,        & $\dots$  & \,          \\
+            $C_{l1}$, & $C_{l2}$, & $\dots$, & $C_{lk_l}$; \\
+            $P_{11}$, & $P_{12}$, & $\dots$, & $P_{1r_1}$, \\
+            $P_{21}$, & $P_{22}$, & $\dots$, & $P_{2r_2}$, \\
+            \,        & \,        & $\dots$  & \,          \\
+            $P_{s1}$, & $P_{s2}$, & $\dots$, & $P_{sr_s}$; \\
+            $Q_{11}$, & $Q_{12}$, & $\dots$, & $Q_{1r_1}$, \\
+            $Q_{21}$, & $Q_{22}$, & $\dots$, & $Q_{2r_2}$, \\
+            \,        & \,        & $\dots$  & \,          \\
+            $Q_{s1}$, & $Q_{s2}$, & $\dots$, & $Q_{sr_s}$
+        \end{tabular}
+    \end{center}
+    tak, že $\forall x \in \mathbb R$ platí
+    \begin{align*}
+        y = & \left [
+              \frac{C_{11}}{x-c_1} + \frac{C_{12}}{(x-c_1)^2} +
+              \dots + \frac{C_{1k_1}}{(x-c_1)^{k_1}} \right . \\
+          & + \frac{C_{21}}{x-c_2} + \frac{C_{22}}{(x-c_2)^2} +
+              \dots + \frac{C_{2k_2}}{(x-c_1)^{k_2}} \\
+          & + \dots \\
+          & + \frac{C_{l1}}{x-c_l} + \frac{C_{l2}}{(x-c_l)^2} +
+              \dots + \frac{C_{lk_l}}{(x-c_l)^{k_l}} \\
+          & + \frac{P_{11}x + Q_{11}}{x^2 + p_1x + q_1}
+              + \frac{P_{12}x + Q_{12}}{(x^2 + p_1x + q_1)^2} + \dots
+              + \frac{P_{1r_1}x + Q_{1r_1}}{(x^2 + p_1x + q_1)^{r_1}} \\
+          & + \frac{P_{21}x + Q_{21}}{x^2 + p_2x + q_2}
+              + \frac{P_{22}x + Q_{22}}{(x^2 + p_2x + q_2)^2} + \dots
+              + \frac{P_{2r_2}x + Q_{2r_2}}{(x^2 + p_2x + q_2)^{r_2}} \\
+          & + \dots \\
+          & + \left . \frac{P_{s1}x + Q_{s1}}{x^2 + p_sx + q_s}
+              + \frac{P_{s2}x + Q_{s2}}{(x^2 + p_sx + q_s)^2} + \dots
+              + \frac{P_{sr_s}x + Q_{sr_s}}{(x^2 + p_sx + q_s)^{r_s}} \right ]
+              \cdot \frac{1}{a_n}
+    \end{align*}
+\end{veta}
+
+
+--- insert aplikace diferenciálního a integrálního počtu ---
