@@ -4,11 +4,14 @@
 \usepackage{enumerate}
 \usepackage{mlmodern}
 \usepackage{template/mathsphystools}
-\usepackage{amsthm,thmtools,xcolor}
+\usepackage{amsthm,thmtools,xcolor,amsmath,amssymb}
 \usepackage[scr]{rsfso}
 % \usepackage{thmstyles}
 \usepackage{tabularx}
 \usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{appendix}
+\usepackage{tabularx}
 \graphicspath{{images/}}
 
 \declaretheoremstyle[
@@ -61,6 +64,11 @@
   name=Důsledek,
 ]{dusledek}
 
+\DeclareMathOperator{\tg}{tg}
+\DeclareMathOperator{\cotg}{cotg}
+\DeclareMathOperator{\arctg}{arctg}
+\DeclareMathOperator{\arccotg}{arccotg}
+
 \title[Title for the Header]{Matematika}
 \subtitle{}
 \author{Dominik Doležel \& Honza Romanovský}
@@ -99,6 +107,8 @@
 \input{chapters/10_mocniny.tex}
 \input{chapters/11_exponenc_fce.tex}
 \input{chapters/12_log.tex}
+\input{chapters/13_sin_cos.tex}
+\input{chapters/13A_appendix.tex}
 
 \nocite{*}
 \clearpage

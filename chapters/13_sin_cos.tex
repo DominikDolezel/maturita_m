@@ -1,0 +1,112 @@
+\section{Funkce sinus, kosinus, arkussinus, arkuskosinus}
+\begin{definition}
+    Nechť $\sphericalangle AVB$ je úhel. Pak mu přiřazujeme číslo $a\in \mathbb R$,
+    které nazýváme \textbf{velikostí úhlu} $\sphericalangle AVB$ takto:\\
+    Nechť $k(V,r), X\in k\cap \overrightarrow{VA}, Y\in k\cap \overrightarrow{VB}.$
+    Označme $s$ velikost oblouku $XY.$ Velikost úhlu pak definujeme jako
+    $$\alpha = \frac{s}{r}.$$
+\end{definition}
+
+\begin{pozn}
+    Je-li $s=r,$ má úhel $\alpha$ velikost 1 \textbf{radián}. Velikost úhlu lze vyjadřovat
+    též ve stupních, přičemž platí $2\pi=360^\circ$.
+\end{pozn}
+
+\begin{veta}
+    Nechť $\sphericalangle AVB$ je úhel, $\alpha$ jeho velikost v radiánech a $\beta$
+    jeho velikost ve stupních. Pak platí:
+    \begin{align*}
+        \alpha = \beta\cdot \frac{\pi}{180^\circ}, & & \beta = \alpha\cdot \frac{180^\circ}{\pi}.
+    \end{align*}
+\end{veta}
+
+\begin{definition}
+    \textbf{Orientovaným úhlem} $\sphericalangle AVB$ nazýváme úhel s uspořádanou dvojicí
+    polopřímek $\overrightarrow{VA}, \overrightarrow{VB}$ se společným počátkem v bodě $V.$
+    Polopřímku $\overrightarrow{VA}$, resp. $\overrightarrow{VB}$ nazýváme \textbf{počátečním},
+    resp. \textbf{koncovým ramenem}, bod $V$ \textbf{vrchol}.
+\end{definition}
+
+\begin{definition}
+    Nechť $\sphericalangle AVB$ je orientovaný úhel o základní velikosti $\alpha.$ Pak
+    \textbf{velikostí orientovaného úhlu} $\sphericalangle AVB$ rozumíme každé z
+    čísel $\alpha +2k\pi, k \in \mathbb Z.$
+\end{definition}
+
+\begin{definition}[Sinus a cosinus]
+  Nechť je dána jednotková kružnice. Hodnotou funkce \textbf{sinus} (resp. \textbf{cosinus})
+  v bodě $x$ nazveme $y$-ovou (resp. $x$-ovou) souřadnici průsečíku této kružnice s ramenem
+  úhlu svírajícím s $x$-ovou osou úhel $\theta = x$.
+\end{definition}
+
+\begin{veta}
+    Vlastnosti funkce sinus:\\
+    Nechť $k\in \mathbb Z.$
+    \begin{enumerate}[$i.$]
+        \item $D(f)= \mathbb R$, $H(f)= \left < -1,1 \right > $.
+       	\item Je lichá.
+        \item Je rostoucí v intervalu $\left < -\frac{\pi}{2}+2k\pi, \frac{\pi}{2}+2k\pi \right > $
+        a klesající v $\left < \frac{\pi}{2}+2k\pi, \frac{3\pi}{2}+2k\pi \right > $
+        \item Je omezená.
+        \item Maximum má v bodech $\frac{\pi}{2}+2k\pi$, minimum v bodech $\frac{3\pi}{2}+2k\pi.$
+        \item Je periodická s nejmenší periodou $2\pi.$
+    \end{enumerate}
+    Vlastnoti funkce kosinus:
+    \begin{enumerate}[$i.$]
+        \item $D(f)= \mathbb R$, $H(f)= \left < -1,1 \right > $.
+       	\item Je sudá.
+        \item Je rostoucí v intervalu $\left < \pi+2k\pi, 2\pi+2k\pi \right > $
+        a klesající v $\left < 0+2k\pi, \pi+2k\pi \right > $
+        \item Je omezená.
+        \item Maximum má v bodech $2k\pi$, minimum v bodech $\pi+2k\pi.$
+        \item Je periodická s nejmenší periodou $2\pi.$
+    \end{enumerate}
+\end{veta}
+
+
+\begin{definition}[Akrussinus]
+Funkce \textbf{arkussinus}, označená $f^{-1}: y=\arcsin x$, se nazývá funkce inverzní
+k funkci $f: y=\sin x$, kde $D(f)=\left < -\frac{\pi}{2},\frac{\pi}{2} \right >$.
+\end{definition}
+\begin{pozn}
+    Funkce arkussinus má následující vlastnosti:
+    \begin{enumerate}
+    \item $D(f^{-1}) = \left < -1, 1 \right >$, $H(f^{-1}) = \left < -\frac{\pi}{2},\frac{\pi}{2} \right >,$
+    \item $f^{-1}$ je rostoucí v celém $D(f^{-1}).$
+    \end{enumerate}
+\end{pozn}
+
+
+\begin{definition}[Arkuskosinus]
+Funkce \textbf{arkuskosinus}, označená $g^{-1}: y=\arccos x$, se nazývá funkce inverzní
+k funkci $g: y=\cos x$, kde $D(g)=\left < 0,\pi \right >$.
+\end{definition}
+\begin{pozn}
+Funkce arkuskosinus má následující vlastnosti:
+\begin{enumerate}
+    \item $D(g^{-1}) = \left < -1, 1 \right >$, $H(g^{-1}) = \left < 0, \pi \right >,$
+    \item $g^{-1}$ je klesající v celém $D(g^{-1}).$
+\end{enumerate}
+\end{pozn}
+
+\begin{veta}[Trigonometrická jednička]
+  $\forall x \in \mathbb{R}:\sin^2 x + \cos^2 x = 1$
+\end{veta}
+
+\begin{veta}
+    V pravoúhlém trojúhelníku $ABC$ s přeponou $AB$ platí:
+    \begin{align*}
+        \sin \alpha = \frac{ |BC| }{ |AB| }, & & \cos \alpha = \frac{|AC|}{|AB|}.
+    \end{align*}
+\end{veta}
+
+\begin{pozn}
+    \textbf{Goniometrická (ne)rovnice} je (ne)rovnice, v níž se vyskytují goniometrické funkce.
+\end{pozn}
+
+-- insert aplikace diferenciálního a integrálního počtu --
+
+\begin{pozn}
+    Grafy jednotlivých funkcí a tabulka se základními hodnotami jsou k nalezení
+    v příloze \ref{appa}.
+\end{pozn}
