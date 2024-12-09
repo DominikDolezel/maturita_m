@@ -69,6 +69,23 @@
   Důsledkem věty o dělení polynomu polynomem je, že zbytek po vydělení f1 polynomem (x-3) je 5 a výsledkem tohoto dělení je polynom stupně 2 s koeficienty danými zbylými třemi čísly ve třetím řádku. Díky tomuto pozorování lze Hornerovo schéma použít i jako efektivní algoritmus k dělení polynomů.
 \end{pozn}
 
+\begin{veta}
+    Nechť je dána algebraická rovnice
+    \begin{equation}\label{alg_rce}
+        a_nx^n + a_{n-1}x^{n-1}+\dots + a_1x+a_0=0,
+    \end{equation}
+    $a_n \ne 0$ s celočíselnými koeficienty. Nechť $\frac{r}{s}, r\in \mathbb Z, s \in \mathbb N, D(r,s)=1$ je kořenem této rovnice.
+    Pak platí: $r \, | \, a_0 \land s \, |\, a_n.$
+\end{veta}
+
+\begin{veta}
+    Nechť $\frac{r}{s}$ je racionální kořen algebraické rovncie \ref{alg_rce} s celočíselnými koeficienty.
+    Nechť $m$ je pevné celé číslo. Pak platí:
+    $$(r-ms) \, |\, a(m),$$
+    kde $a(m)$ je hodnota polynomu $a(x)$ pro $x=m.$ Dále $r \, | \, a_0$ a $s\, |\, a(-1).$
+\end{veta}
+
+\begin{comment}
 \begin{veta}[Hledání racionálních kořenů polynomu s racionálními koeficienty]
   Mějme polynom $P(x) \in \mathbb Q [x]$. Potom najdeme jeho kořeny $\frac{r}{s} \in \mathbb Q$ takto:
   \begin{enumerate}[1.]
@@ -80,27 +97,42 @@
     \item U ostatních zlomků vyzkoušíme Hornerovým schématem, zda jsou kořeny daného polynomu.
   \end{enumerate}
 \end{veta}
+\end{comment}
+
 
 \begin{veta}[Rozklad polynomu v reálném a komplexním oboru]
-  Nechť $P(x) \in \mathbb R [x], P(x) = a_n x^n + a_{n-1} x^{n-1} + ... + a_1 x + a_0$, kde $st(P(x)) \geq 1$. Pak $P(x)$ lze v $\mathbb R$ vyjádřit jako součin polynomů 1. a 2. stupně a koeficientu $a_n$:
-  \[
-    P(x) = a_n(x-c_1)^{k_1}(x-c_2)^{k_2} ... (x-c_k)^{k_k}(x^2+p_1 x + q_1)^{r_1}(x^2+p_2 x + q_2)^{r_2} ... (x^2+p_r x + q_r)^{r_r}
-  \]
-  kde $c_1,c_2, ..., c_k$ jsou všechny jeho reálné různé kořeny s násobnostmi $l_1, k_2, ..., k_k \in \mathbb N$; $p_1, p_2, ..., p_r$ a $q_1, q_2, ..., q_r$ jsou reálná čísla, $r_1, r_2, ..., r_n \in \mathbb N$.
-  Polynomy $(x^2+p_1 x + q_1)^{r_1}(x^2+p_2 x + q_2)^{r_2} ... (x^2+p_r x + q_r)^{r_r}$ jsou kvadratické polynomy se záporným diskriminantem. Uvedený rozklad je až na pořadí činitelů jednoznačný a platí $st(P(x)) = k_1 + k_2 + ... + k_k + 2(r_1 + r_2 + ... + r_r)$.
+  Nechť $P(x) \in \mathbb R [x]$,
+  $$P(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0,$$
+  kde $\textrm{st}(P(x)) \geq 1$. Pak $P(x)$ lze v $\mathbb R$ vyjádřit jako součin polynomů 1. a 2. stupně a koeficientu $a_n$ následovně:
+  \begin{align*}
+    P(x) & = a_n(x-c_1)^{k_1}(x-c_2)^{k_2} \dots (x-c_k)^{k_k}\\
+    & \cdot (x^2+p_1 x + q_1)^{r_1}(x^2+p_2 x + q_2)^{r_2} \dots (x^2+p_r x + q_r)^{r_r},
+  \end{align*}
 
-  Jestliže $a_1 \pm ib_1, a_2 \pm ib_2, .., a_s \pm ib_s$ jsou všechny navzájem různé dvojice komplexně sdružených kořenů s násobností $r_1, r_2, ..., r_s$, $P(x)$ můžeme v $\mathbb C$ psát ve tvaru:
-  \[
-    P(x) = a_n(x-c_1)^{k_1}(x-c_2)^{k_2} ... (x-c_k)^{k_k}[(x-a_1)^2+b_1^2]^{r_1}[(x-a_2)^2+b_2^2]^{r_2} ... [(x-a_s)^2+b_s^2]^{r_s}
-  \]
+
+  kde $c_1,c_2, \dots, c_k$ jsou všechny jeho reálné různé kořeny s násobnostmi $l_1, k_2, \dots, k_k \in \mathbb N$;
+  $p_1, p_2, \dots, p_r$ a $q_1, q_2, \dots, q_r$ jsou reálná čísla, $r_1, r_2, \dots, r_n \in \mathbb N$.
+  Polynomy
+  $$(x^2+p_1 x + q_1)^{r_1}(x^2+p_2 x + q_2)^{r_2} \dots (x^2+p_r x + q_r)^{r_r}$$
+  jsou kvadratické polynomy se záporným diskriminantem. Uvedený rozklad je až na pořadí činitelů
+  jednoznačný a platí
+  $$\textrm{st}(P(x)) = k_1 + k_2 + \dots + k_k + 2(r_1 + r_2 + \dots + r_r).$$
+
+  Jestliže $a_1 \pm ib_1, a_2 \pm ib_2, \dots, a_s \pm ib_s$ jsou všechny navzájem různé
+  dvojice komplexně sdružených kořenů s násobností $r_1, r_2, \dots, r_s$, $P(x)$ můžeme v $\mathbb C$ psát ve tvaru:
+  \begin{align*}
+    P(x) & = a_n(x-c_1)^{k_1}(x-c_2)^{k_2} \dots (x-c_k)^{k_k}\\
+    & \cdot  \left [(x-a_1)^2+b_1^2\right ]^{r_1}\left [(x-a_2)^2+b_2^2\right]^{r_2} \dots \left [(x-a_s)^2+b_s^2\right ]^{r_s}
+  \end{align*}
 \end{veta}
 
 \begin{definition}
-  Nechť $A(x), B(x) \in \mathbb R [x]$. Polynom $C(x) \in \mathbb R [x]$ se nazývá \textbf{společný dělitel polynomů} $A(x), B(x)$, právě tehdy, když platí: $C(x) \mid A(x) \land C(x) \mid B(x)$.
-  Polynom $D(x) \in \mathbb R [x]$ se nazývá \textbf{největší společný dělitel polynomů} $A(x), B(x)$, který označujeme $D(A(x), B(x))$ nebo $NSD(A(x), B(x))$, právě tehdy, když platí:
-  \begin{enumerate}[1.]
-    \item $D(x) \mid A(x) \land D(x) \mid B(x)$
-    \item $\forall C(x) \in \mathbb R [x]: C(x) \mid A(x) \land C(x) \mid B(x) \implies C(x) \mid D(x)$
+  Nechť $A(x), B(x) \in \mathbb R [x]$. Polynom $C(x) \in \mathbb R [x]$ se nazývá \textbf{společný dělitel polynomů} $A(x), B(x)$
+  právě tehdy, když platí: $C(x) \mid A(x) \land C(x) \mid B(x)$.
+  Polynom $D(x) \in \mathbb R [x]$ se nazývá \textbf{největší společný dělitel polynomů} $A(x), B(x)$, který označujeme $D(A(x), B(x))$ nebo $(A(x), B(x))$, právě tehdy, když platí:
+  \begin{enumerate}[i.]
+    \item $D(x) \mid A(x) \land D(x) \mid B(x)$ a
+    \item $\forall C(x) \in \mathbb R [x]: C(x) \mid A(x) \land C(x) \mid B(x) \implies C(x) \mid D(x).$
   \end{enumerate}
 \end{definition}
 
@@ -113,21 +145,34 @@
   Proveďme následující posloupnost dělení se zbytkem. Toto dělení ukončíme, až bude zbytek nulový polynom.
   Vzhledem k nerovnosti na pravé straně tento nulový zbytek existuje.
 
+  \begin{minipage}{0.6\textwidth}
   \begin{align*}
-    A(x) & = B(x) \cdot Q_1(x) + R_1(x), & \text{st}(R_1(x)) & < \text{st}(B(x)) \\
-    B(x) & = R_1(x) \cdot Q_2(x) + R_2(x), & \text{st}(R_2(x)) & < \text{st}(R_1(x)) \\
-    R_1(x) & = R_2(x) \cdot Q_3(x) + R_3(x), & \text{st}(R_3(x)) & < \text{st}(R_2(x)) \\
-    \dots & = \dots & \dots & < \dots \\
-    R_{n-2}(x) & = R_{n-1}(x) \cdot Q_n(x) + R_n(x), & \text{st}(R_n(x)) & < \text{st}(R_{n-1}(x)) \\
-    R_{n-1}(x) & = R_{n}(x) \cdot Q_{n+1}(x),  & R_{n}(x) & < O(x)
+    A(x) & = B(x) \cdot Q_1(x) + R_1(x),  \\
+    B(x) & = R_1(x) \cdot Q_2(x) + R_2(x),  \\
+    R_1(x) & = R_2(x) \cdot Q_3(x) + R_3(x), \\
+    \dots & = \dots \\
+    R_{n-2}(x) & = R_{n-1}(x) \cdot Q_n(x) + R_n(x),  \\
+    R_{n-1}(x) & = R_{n}(x) \cdot Q_{n+1}(x),
   \end{align*}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{0.38\textwidth}
+  \begin{align*}
+   \text{st}(R_1(x)) & < \text{st}(B(x)) \\
+   \text{st}(R_2(x)) & < \text{st}(R_1(x)) \\
+ \text{st}(R_3(x)) & < \text{st}(R_2(x)) \\
+    \dots & < \dots \\
+ \text{st}(R_n(x)) & < \text{st}(R_{n-1}(x)) \\
+   R_{n}(x) & < O(x).
+  \end{align*}
+  \end{minipage}
 
   Potom $(A(x), B(x)) = R_n(x)$, či libovolný násobek $R_n(x)$. \textbf{Normovaný největší společný dělitel polynomů}
   ale existuje právě jeden, ten se označuje $(A(x), B(x))$.
 \end{pozn}
 
 \begin{definition}
-  Nehcť polynomy $A(x), B(x)$. Pokud $(A(x), B(x)) = 1$, řekneme, že polynomy $A(x), B(x)$ jsou \textbf{nesoudělné}. V opačném případě jsou \textbf{soudělné}.
+  Nechť polynomy $A(x), B(x)$. Pokud $(A(x), B(x)) = 1$, řekneme, že polynomy $A(x), B(x)$ jsou \textbf{nesoudělné}. V opačném případě jsou \textbf{soudělné}.
 \end{definition}
 
 \begin{definition}
