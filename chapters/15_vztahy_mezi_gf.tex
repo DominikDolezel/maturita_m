@@ -1,0 +1,120 @@
+\section{Vztahy mezi goniometrickými funkcemi, součtové vzorce}
+\begin{pozn}
+    Věty \ref{soucsc} a \ref{dvojnas}
+    musíme umět nazpaměť.
+\end{pozn}
+
+\begin{veta}\label{soucsc}
+    $\forall x, y \in \mathbb{R}: $
+    \begin{align*}
+        \sin \left(x\pm y\right) & = \sin x \cdot \cos y \pm \cos x \cdot \sin y \\
+        \cos \left(x\pm y\right) & = \cos x \cdot \cos y \mp \sin x \cdot \sin y
+    \end{align*}
+\end{veta}
+
+\begin{proof}
+    Důkaz máme umět, ale nedělali jsme jej.
+\end{proof}
+
+\begin{veta}\label{dvojnas}
+    $ \forall x \in \mathbb{R}:$
+    \begin{align*}
+        \sin 2x = 2\sin x \cdot \cos x, & & \cos 2x = \cos^2 x - \sin^2 x.
+    \end{align*}
+\end{veta}
+
+\begin{proof}
+    Plyne jednoduše z věty \ref{soucsc}.
+\end{proof}
+
+\begin{pozn}
+    Následující vztahy stačí \uv{rychle odvodit}.
+\end{pozn}
+
+\begin{veta}[Vyjádření gon. funkce pomocí jiné gon. funkce]
+  \,\\
+  \begin{tabular}{| c || c | c | c | c |}
+    \hline
+    & $\sin x$ & $\cos x$ & $\tg x$ & $\cotg x$ \\
+    \hline\hline
+    $\sin x$ & -- & $\sqrt{1-\cos^2 x}$ & $\frac{\tg x}{\sqrt{1+\tg^2 x}}$ & $\frac{1}{\sqrt{1+\cotg^2 x}}$\\
+    \hline
+    $\cos x$ & $\sqrt{1-\sin^2 x}$ & -- & $\frac{1}{\sqrt{1+\tg^2 x}}$ & $\frac{\cotg x}{\sqrt{1+\tg^2 x}}$\\
+    \hline
+    $\tg x$ & $\frac{\sin x}{\sqrt{1-\sin^2 x}}$ &  $\frac{\sqrt{1-\cos^2 x}}{\cos x}$ & -- & $\frac{1}{\cotg x}$\\
+    \hline
+    $\cotg x$ & $\frac{\sqrt{1-\sin^2 x}}{\sin x}$ & $\frac{\cos x}{\sqrt{1-\cos^2 x}}$ & $\frac{1}{\tg x}$ & --\\
+    \hline
+  \end{tabular}
+
+\end{veta}
+
+\begin{proof}
+    Pro druhý až čtvrtý kvadrant v tabulce plyne z definice. \\
+    Vyjádření sinu nebo kosinu pomocí funkce tangens nebo kotangens nalezneme
+    jednoduše ze vztahů v pravoúhlém trojúhelníku. Nechť je dán pravoúhlý trojúhelník
+    s přeponou $b.$ Pak $\tg \alpha = \frac{a}{c},$ položme tedy $a = \tg \alpha$ a $c=1. $
+    Potom z Pythagorovy věty plyne $b=\sqrt{1+\tg^2 \alpha}. $ Pak $\sin\alpha = \frac{\tg x}{\sqrt{\tg^2 x+1} }$ a
+    $\cos \alpha = \frac{1}{\sqrt{\tg^2 \alpha + 1} }.$ Obdobně i pro tangens.
+\end{proof}
+
+\begin{veta}
+  $\forall x,y\in\mathbb{R}-\bigcup\limits_{k\in\mathbb{Z}} \left\{\frac{(2k+1)\pi}{2}\right\}, \forall (x+y) \in \mathbb{R}-\bigcup\limits_{k\in\mathbb{Z}} \left\{\frac{(2k+1)\pi}{2}\right\}, \forall (x-y) \in \mathbb{R}-\bigcup\limits_{k\in\mathbb{Z}} \left\{\frac{(2k+1)\pi}{2}\right\}:$
+  $$\tg\left(x\pm y\right) = \frac{\tg x \pm \tg y}{1\mp\tg x \cdot \tg y}.$$
+\end{veta}
+\begin{proof}
+    Počítejme:
+    \begin{align*}
+        \tg \left(x+y\right) & = \frac{\sin \left(x+y\right)}{\cos \left(x+y\right)}=\frac{\sin x\cdot  \cos y + \cos x\cdot  \sin y}{\cos x \cdot \cos y - \sin x\cdot  \sin y} \\
+        & = \frac{\frac{\sin x \cdot \cos y + \cos x\cdot  \sin y}{\cos x \cdot \cos y}}{\frac{\cos x\cdot  \cos y - \sin x \cdot \sin y}{\cos x\cdot  \cos y}}=\frac{\tg x + \tg y}{1-\tg x \cdot \tg y}\qedhere
+    \end{align*}
+\end{proof}
+
+
+\begin{veta}
+  $\forall x,y\in\mathbb{R}-\bigcup\limits_{k\in\mathbb{Z}} \left\{\frac{k\pi}{2}\right\}, \forall (x+y) \in \mathbb{R}-\bigcup\limits_{k\in\mathbb{Z}} \left\{\frac{k\pi}{2}\right\}, \forall (x-y) \in \mathbb{R}-\bigcup\limits_{k\in\mathbb{Z}} \left\{\frac{k\pi}{2}\right\}:$
+  $$\cotg\left(x\pm y\right) = \frac{\cotg x \cdot \cotg y \mp 1}{\cotg x \pm \cotg y}.$$
+\end{veta}
+
+\begin{proof}
+    Počítejme:
+    \begin{align*}
+        \cotg \left(x+y\right) & = \frac{\cos \left(x+y\right)}{\sin \left(x+y\right)}=\frac{\cos x \cdot \cos y - \sin x\cdot  \sin y}{\sin x\cdot  \cos y + \cos x\cdot  \sin y}\\
+       &  = \frac{\frac{\cos x\cdot  \cos y - \sin x \cdot \sin y}{\sin x \cdot \sin y}}{\frac{\sin x \cdot \cos y + \cos x\cdot  \sin y}{\sin x\cdot  \sin y}}=\frac{\cotg x \cdot \cotg y-1}{\cotg x + \cotg y}\qedhere
+    \end{align*}
+\end{proof}
+
+\begin{veta}
+    $\forall x \in \mathbb{R}:$
+    \begin{align*}
+        \left| \sin \frac{x}{2} \right| = \sqrt{\frac{1-\cos x}{2}}, & & \left| \cos \frac{x}{2}\right| = \sqrt{\frac{1+\cos x}{2}}.
+    \end{align*}
+\end{veta}
+
+\begin{proof}
+  $\cos^2 \frac{x}{2} - \sin^2 \frac{x}{2} = \cos x$ a
+  $\cos^2 \frac{x}{2} + \sin^2 \frac{x}{2} =1 $
+  \begin{align*}
+    2\cos^2 \frac{x}{2}&=\cos x +1 & & 2\sin^2 \frac{x}{2}&=1-\cos x \\
+    \cos^2 \frac{x}{2}&=\frac{\cos x +1}{2} & & \sin^2 \frac{x}{2}&=\frac{1-\cos x }{2} \\
+    \left| \cos \frac{x}{2} \right| &= \sqrt{\frac{\cos x +1}{2}} & & \left| \sin \frac{x}{2} \right| &= \sqrt{\frac{1-\cos x}{2}}
+  \end{align*}
+\end{proof}
+
+\begin{veta}
+  $\forall x,y \in \mathbb{R}:$
+  \begin{align*}
+    \sin x + \sin y &= 2\sin \frac{x+y}{2}\cdot \cos \frac{x-y}{2}& & \cos x + \cos y = 2 \cos \frac{x + y}{2}\cdot \cos \frac{x - y}{2}\\
+    \sin x - \sin y &= 2\cos \frac{x + y}{2}\cdot \sin \frac{x - y}{2}& & \cos x - \cos y =-2\sin \frac{x + y}{2}\cdot \sin \frac{x -y}{2}
+  \end{align*}
+\end{veta}
+
+\begin{proof}
+    \begin{align*}
+        \sin x + \sin y & = \sin \left(\frac{x+y}{2}+\frac{x-y}{2}\right)+ \sin \left(\frac{x+y}{2}-\frac{x-y}{2}\right ) \\
+        & = \sin \frac{x+y}{2} \cos\frac{x-y}{2} + \cos\frac{x+y}{2} \sin \frac{x-y}{2} \\
+        & + \sin \frac{x+y}{2} \cos\frac{x-y}{2} -  \cos\frac{x+y}{2} \sin \frac{x-y}{2}\\
+        & = 2\sin \frac{x+y}{2} \cos\frac{x-y}{2}
+    \end{align*}
+  v ostatních případech analogicky
+\end{proof}
