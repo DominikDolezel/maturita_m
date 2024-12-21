@@ -35,3 +35,32 @@
     \end{enumerate}
     Množiny $M_1, M_2, \dots, M_k$ nazýváme \textbf{třídami rozkladu} $\mathscr R(M).$
 \end{definition}
+
+\begin{definition}
+    Nechť je dáno $n_1$ prvků prvního druhu, $n_2$ prvků druhého druhu, \dots,
+    $n_d$ prvků $d$-tého druhu, přičemž prvky téhož druhu považujeme za nerozlišitelné.
+    Nechť $n_1+n_2+\dots+n_d=n.$ \textbf{Pořadím (permutací) s opakováním} z  $n_1$
+    prvků prvního druhu, $n_2$ prvků druhého druhu, \dots, $n_d$ prvků $d$-tého druhu
+    nazveme každou uspořádanou $n$-tici, která obsahuje $n_1$ prvků prvního druhu,
+    $n_2$ prvků druhého druhu, \dots, $n_d$ prvků $d$-tého druhu. Počet všech pořadí
+    označme $P_o(n_1, n_1, \dots, n_d).$
+\end{definition}
+
+\begin{veta}
+    Nechť $n_1, n_2, \dots, n_d \in \mathbb N, n, n_1, n_2, \dots, n_d=n.$ Pak platí:
+    $$P_o(n_1, n_1, \dots, n_d)=\frac{n!}{n_1!n_2!\dots n_d!}=
+    \frac{\left ( \sum_{i=1}^d n_i \right )! }{\prod_{i=1}^d n_i!}.$$
+\end{veta}
+
+\begin{definition}
+    Nechť je dáno $n_1$ prvků prvního druhu, $n_2$ prvků druhého druhu, \dots,
+    $n_d$ prvků $d$-tého druhu. Nechť $k\in \mathbb N, k \leq n, \forall
+    i \in \left \{ 1, 2, \dots, d \right \} .$ \textbf{$k$-prvkovou variací s
+    opakováním} z prvků daných $d$ druhů nazveme každou ušpořádanou $k$-tici
+    vytvořenou z prvků těchto $d$ druhů. Počet těchto variací ozančme $V_o(k,d).$
+\end{definition}
+
+\begin{veta}
+    $\forall k, d, \in \mathbb N$ platí:
+    $$V_o(k,d)=d^k.$$
+\end{veta}
