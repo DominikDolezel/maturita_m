@@ -26,14 +26,33 @@
 
 \begin{definition}
     Nechť $M$ je neprázdná množina. \textbf{Rozklad množiny} $M$ značíme
-    $\mathscr R(M)$ a definujeme jako neprázdný systém neprázdných podmnožiny
-    $M_1, M_2, \dots, M_k, k\in \mathbb N,$ pro které platí
+    $\mathscr R(M)$ a definujeme jako neprázdný systém neprázdných podmnožin
+    $M_1, M_2, \dots, M_k, k\in \mathbb N$ množiny $M,$ pro které platí
     \begin{enumerate}[$i.$]
     \item $M_1\cup M_2 \cup \dots \cup M_k = M,$
    	\item $M_i \cap M_j = \emptyset$ pro libovolná
     $i,j \in \left \{ 1,2,\dots,k \right \},i\ne j $.
     \end{enumerate}
     Množiny $M_1, M_2, \dots, M_k$ nazýváme \textbf{třídami rozkladu} $\mathscr R(M).$
+\end{definition}
+
+\begin{definition}
+    Nechť $M$ je konečná $n$-prvková množina. Uspořádanou $n$-tici prvků z
+    množiny $M$, v níž se každý prvek vyskytuje právě jednou, nazveme \textbf{pořadím
+    (permutací) prvků} z množiny $M$. Počet všech pořadí z $n$ prvků označme $P(n).$
+\end{definition}
+
+\begin{veta}\label{vfakt}
+    $\forall n \in \mathbb N:$
+    \begin{equation}\label{fakt}
+   P(n)=n(n-1)(n-2)\dots 1.
+    \end{equation}
+\end{veta}
+
+\begin{definition}
+    Výraz \ref{fakt} z věty \ref{vfakt} značíme
+    $$n(n-1)(n-2)\dots 1=n!$$
+    a nazýváme \textbf{$n$-faktoriál}. Pro $n=0$ položme $0! =1.$
 \end{definition}
 
 \begin{definition}
@@ -53,14 +72,139 @@
 \end{veta}
 
 \begin{definition}
+    Nechť $M$ je konečná $n$-prvková množina. Nechť $k \in \mathbb N_0, k\leq n.$
+    \textbf{$k$-prvkovou variací} z prvků množiny $M$ nazveme libovolnou
+    uspořádanou $k$-tici, v níž se každý prvek vyskytuje nejvýše jednou. Počet
+    všech $k$-prvkových variací z $n$ prvků označme $V(k,n).$
+\end{definition}
+
+\begin{veta}
+    Nechť $k \in \mathbb N_0, k\leq n.$ Pak platí
+    $$V(k,n)=\frac{n!}{(n-k)!}.$$
+\end{veta}
+
+\begin{definition}
     Nechť je dáno $n_1$ prvků prvního druhu, $n_2$ prvků druhého druhu, \dots,
-    $n_d$ prvků $d$-tého druhu. Nechť $k\in \mathbb N, k \leq n, \forall
+    $n_d$ prvků $d$-tého druhu. Nechť $k\in \mathbb N, k \leq n_i, \forall
     i \in \left \{ 1, 2, \dots, d \right \} .$ \textbf{$k$-prvkovou variací s
     opakováním} z prvků daných $d$ druhů nazveme každou ušpořádanou $k$-tici
     vytvořenou z prvků těchto $d$ druhů. Počet těchto variací ozančme $V_o(k,d).$
 \end{definition}
 
 \begin{veta}
-    $\forall k, d, \in \mathbb N$ platí:
+    $\forall k, d \in \mathbb N$ platí:
     $$V_o(k,d)=d^k.$$
+\end{veta}
+
+\begin{definition}
+    Nechť $M$ je konečná $n$-prvková množina. Nechť $k \in \mathbb N_0, k\leq n.$
+    Libovolnou $k$-prvkovou podmnožinu množiny $M$ nazýváme \textbf{$k$-prvkovou
+    kombinaci prvků z množiny} $M$. Počet včech $k$-prvkových kombinací všech
+    prvků značíme $K(k,n).$
+\end{definition}
+
+\begin{veta}\label{kombcislo}
+    Nechť $k,n \in \mathbb N_0, k\leq n.$ Pak platí
+    \begin{equation}\label{bc}
+   K(k,n)=\frac{n!}{k!(n-k)!}.
+    \end{equation}
+
+\end{veta}
+
+\begin{definition}
+    Výraz \ref{bc} z věty \ref{kombcislo} značíme
+    $$\frac{n!}{k!(n-k)!}=\binom{n}{k},$$
+    čteme \uv{$n$ nad $k$} a nazýváme \textbf{kombinačním číslem} (též binomickým
+    koeficientem).
+\end{definition}
+
+\begin{pozn}
+    Platí
+    \begin{align*}
+        \binom{0}{0}=1, & & \binom{n}{0}=1, & & \binom{n}{n} = 1.
+    \end{align*}
+\end{pozn}
+
+\begin{veta}\label{binomvztahy}
+    $\forall k,n \in \mathbb N_0, k\leq n:$
+    \begin{align*}
+        \binom{n}{k} &= \binom{n}{n-k} \\
+        \binom{n}{k} + \binom{n}{k+1} &= \binom{n+1}{k+1}
+    \end{align*}
+\end{veta}
+
+\begin{definition}
+    Nechť je dáno $n_1$ prvků prvního druhu, $n_2$ prvků druhého druhu, \dots,
+    $n_d$ prvků $d$-tého druhu. Nechť $k\in \mathbb N: k\leq n_i, \forall i
+    \in \left \{ 1,2,\dots,d \right \} .$ \textbf{$k$-prvkovou kombinací s opakováním}
+    z prvku daných $d$ druhů nazveme každou neuspořádanou $k$-tici vytvořenou z
+    prvků těchto $d$ druhů. Počet všech těchto kombinací označme $K_o(k,d).$
+\end{definition}
+
+\begin{veta}
+    $\forall k,d \in \mathbb N:$
+    $$K_o(k,d)=P_o(k,d-1)=\binom{k+d-1}{d-1}.$$
+\end{veta}
+
+\begin{veta}[Binomická věta]
+    Pro všechna $a \in \mathbb N, a,b \in \mathbb R$ platí
+    \begin{align*}
+        (a+b)^n & = \binom{n}{0}a^nb^0 + \binom{n}{1}a^{n-1}b^1 + \binom{n}{2}
+        a^{n-2}b^2 + \dots + \binom{n}{n}a^0b^n \\
+        &= \sum_{k=0}^n \binom{n}{k}a^{n-k}b^k.
+    \end{align*}
+\end{veta}
+
+\begin{pozn}[Pascalův trojúhelník]
+    Napišme binomická čísla podle schémtu níže. Z věty \ref{binomvztahy} plyne,
+    že každý člen tohoto schématu je součet jeho dvou bezprostředních sousedů nad ním.
+    Navíc jsou čísla v $i$-tém řádku koeficienty binomického rozvoje $(a+b)^i.$
+
+    \begin{minipage}{0.48\textwidth}
+        \begin{gather*}
+            \binom{0}{0} \\
+            \binom{1}{0} \,\,\, \binom{1}{1} \\
+            \binom{2}{0} \,\,\, \binom{2}{1} \,\,\, \binom{2}{2} \\
+            \binom{3}{0} \,\,\, \binom{3}{1} \,\,\, \binom{3}{2} \,\,\, \binom{3}{3} \\
+            \binom{4}{0} \,\,\, \binom{4}{1} \,\,\, \binom{4}{2} \,\,\, \binom{4}{3} \,\,\, \binom{4}{4} \\
+            \binom{5}{0} \,\,\, \binom{5}{1} \,\,\, \binom{5}{2} \,\,\, \binom{5}{3} \,\,\, \binom{5}{4} \,\,\, \binom{5}{5} \\
+            \dots
+        \end{gather*}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+    \begin{gather*}
+        1 \\
+        1 \,\,\, 1 \\
+        1 \,\,\, 2 \,\,\, 1 \\
+        1 \,\,\, 3 \,\,\, 3 \,\,\, 1 \\
+        1 \,\,\, 4 \,\,\, 6 \,\,\, 4 \,\,\, 1 \\
+        1 \,\,\, 5 \,\,\, 10 \,\,\, 10 \,\,\, 5 \,\,\, 1 \\
+        \dots
+    \end{gather*}
+    \end{minipage}
+
+
+\end{pozn}
+
+
+\begin{veta}
+    Pro všechna $k,n \in \mathbb N$ platí
+    $$\binom{k}{k} + \binom{k+1}{k}+\binom{k+2}{k}+\dots + \binom{k+n-1}{k}=
+    \binom{k+n}{k+1}.$$
+\end{veta}
+
+\begin{veta}[Princip inkluze a exkluze]
+    Nechť $M_1, M_2, M_2, \dots, M_k$ jsou konečné množiny. Pak platí
+    \begin{align*}
+        \left | \bigcup_{i=1}^k  \right | &= \sum_{i=1}^k \left | M_i \right |
+        - \sum_{i=2}^k \left | M_1 \cap M_i \right | - \dots
+        - \left | M_{k-1}\cap M_k \right | \\
+        &+ \left | M_1\cap M_2 \cap M_3 \right | + \dots +
+        \left | M_{k-2}\cap M_{k-1} \cap M_k \right | - \dots \\
+        & + (-1)^{k+1} \left | M_1\cap M_2 \cap \dots \cap M_k \right |\\
+        &= \sum (-1)^{r+1} \left | M_{j_1}\cap M_{j_2} \cap \dots \cap M_{j_r} \right |,
+    \end{align*}
+    kde se sčítá přes všechny neprázdné podmnožiny $\left \{ j_1, j_2, \dots,
+   j_r \right \} $ množiny $\left \{ 1,2,\dots, r \right \}$.
 \end{veta}
