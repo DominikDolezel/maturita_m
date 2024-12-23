@@ -1,0 +1,104 @@
+\section{Pravděpodobnost}
+\begin{pozn}
+    Rozlišujeme dva typy pokusů:
+   	\begin{itemize}
+    \item náhodný (předem neznáme výsledek),
+   	\item determinovaný (předem známe výsledek).
+    \end{itemize}
+\end{pozn}
+
+\begin{definition}
+    \textbf{Náhodným jevem} rozumíme jakékoliv tvrzení o výsledku náhodného pokusu,
+    o kterém můžeme po provedení říci, zda je nebo není pravdivé.
+\end{definition}
+
+\begin{definition}
+    Nechť $A,B$ jsou jevy.
+    \begin{enumerate}[$i.$]
+    \item Řekneme, že \textbf{jev $A$ má za důsledek jev $B$} a zapisujeme
+    $A\subseteq B$ nebo $A\implies B$ právě tehdy, když jev $B$ nastane vždy, když
+    nastane jev $A.$
+   	\item Řekneme, že jevy $A$ a $B$ \textbf{jsou si rovny} a zapisujeme $A=B$ právě
+    tehdy, když $A\subseteq B \land B\subseteq A,$ tedy $B$ nastane právě tehdy,
+    když nastane $A.$
+   	\item Jev, který nastane při každé realizaci pokusu nazveme jevem \textbf{jistým}
+    a označíme $\Omega.$ Jev, který nemůže nikdy nastat nazveme jevem \textbf{nemožným}
+    a označíme $\emptyset.$
+    \end{enumerate}
+\end{definition}
+
+\begin{definition}
+    Nechť $A_1, A_2, \dots, A_n$ jsou jevy. Pak \textbf{sjednocením} (resp. \textbf{
+    průnikem}) jevů $A_1, A_2, \dots, A_n$ rozumíme takový jev $A$, který nastane
+    právě tehdy, když nastane alespoň jeden (resp. všechny z) jevů $A_1, A_2,
+    \dots, A_n$.
+\end{definition}
+
+\begin{definition}
+    Nechť $A,B$ jsou jevy.
+    \begin{enumerate}[$i.$]
+    \item \textbf{Opačným jevem} k jevu $A$ nazveme takový jev $\overline A,$ který
+    nastane právě tehdy, kdyý nenastane jev $A.$
+   	\item \textbf{Rozdílem jevů} $A,B$ nazýváme jev $A-B,$ který nastane právě tehdy,
+    když nastane jev $A$ a nenastane jev $B$.
+    \end{enumerate}
+\end{definition}
+
+\begin{definition}
+    Jevy nazveme \textbf{neslučitelné} (disjunktní), jestliže $A\cap B = \emptyset.$
+\end{definition}
+
+\begin{definition}
+    Nechť je dán náhodný pokus. Jev $A$ nazveme \textbf{elementárním jevem} právě tehdy,
+    když neexistují žádné dva jevy $B,C; A\ne B\ne C$ takové, že $A=B\cup C,$ tj.
+    $A$ nelze vyjádřit jako sjednocení dvou jevů různých od $A.$ Množinu všech
+    elementárních jevů nazveme \textbf{jevovým polem}. Je to množina všech možných
+    výsledků daného náhodného pokusu. Tuto množinu označíme $\Omega.$
+\end{definition}
+
+\begin{definition}
+    Nechť $\Omega$ je konečná neprázdná množina stejně možných výsledků daného
+    náhodného pokusu, tzn. $\Omega$ je jevové pole. Nechť $A\subseteq \Omega$ je jev.
+    Označme $|A|,$ resp. $|\Omega|$ počet prvků množiny $A$, resp. $\Omega.$ Pak
+    \textbf{pravděpodobností} jevu $A$ nazýváme číslo
+    $$P(A)=\frac{|A|}{|\Omega|}.$$
+\end{definition}
+
+\begin{veta}
+    Nechť $A,B\subseteq \Omega$ jsou jevy. Pak
+    $$P(A\cup B)=P(A)+P(B)-P(A\cap B).$$
+\end{veta}
+
+\begin{definition}
+    Nechť $A,B\subseteq \Omega$ jsou jevy. Nazveme je \textbf{nezávislé} právě tehdy,
+    když $P(A\cap B)=P(A)\cdot P(B).$
+\end{definition}
+
+\begin{definition}
+    Nechť $A,B\subseteq \Omega$ jsou jevy takové, že $P(B)>0.$ \textbf{Podmíněnou
+    pravděpodobností} jevu $A$ za předpokladu nastoupení jevu $B$ nazýváme reálné
+    číslo dané vzorcem
+    $$P(A\, | \, B) = \frac{P(A\cap B)}{P(B)}.$$
+\end{definition}
+
+\begin{veta}[Formule úplné pravděpodobnosti]
+    Nechť $A,B \subseteq \Omega, i \in \left \{ 1, 2, \dots, n \right \} $ jsou jevy
+    takové, že $A\subseteq \bigcup_{i=1}^n B_i$ a $\forall i\ne j: B_i\cap B_j\ne
+    \emptyset.$ Pak $P(A)=P(B_1)\cdot P(A\, |\, B_1) + P(B_2)\cdot P(A \, |\, B_2)+
+    \dots + P(B_n)\cdot P(A \,|\, B_n)=\sum_{i=1}^n P(B_i)\cdot P(A\, |\, B_i).$
+\end{veta}
+
+\begin{veta}[Bayesův vzorec]
+    Nechť $A,B_i \subseteq \Omega, i \in \left \{ 1, 2, \dots, n \right \} $ jsou
+    takové jevy, že $A\subseteq \bigcup_{i=1} B_i, \forall i,j, i\ne j: B_i\cap B_j=
+    \emptyset.$ Nechť $\exists i \in \left \{ 1, 2, \dots, n \right \} : P(B_i) >0.$
+    Pak platí: $\forall k\in \left \{ 1, 2, \dots, n \right \}:$
+    $$P(B_k \, |\, A)=\frac{P(B_k)\cdot P(A\, |\, B_k)}{\sum_{i=1}^n P(B_i)\cdot
+    P(A\, |\, B_i)}. $$
+\end{veta}
+
+\begin{veta}[Bernoulliho věta]
+    Provádíme-li sérii $n$ nezávislých pokusů, kdy pravděpodobnost příslušného
+    pokusu je $p,$ pak pravděpodobnost toho, že právě $k$ pokusů bude úspěšných, platí
+    $$P(k,n)=\binom{n}{k}\cdot p^k \cdot (1-p)^{n-k}.$$
+\end{veta}
