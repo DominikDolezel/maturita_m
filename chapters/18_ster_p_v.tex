@@ -1,0 +1,233 @@
+\section{Stereometrie -- polohové vlastnosti}
+
+\begin{definition}
+    Body ležící na jedné přímce (resp. v jedné rovině) se nazývají \textbf{kolineární}
+    (resp. \textbf{komplanární}).
+\end{definition}
+
+\begin{definition}
+    Přímky $p,q \in \mathscr P$ nazveme:
+    \begin{enumerate}[$i.$]
+        \item \textbf{různé rovnoběžky}, jestliže $p\cap q = \emptyset \land
+            p,q$ jsou komplanární;
+        \item \textbf{mimoběžky}, jestliže $p\cap q = \emptyset \land p,q$ nejsou
+            komplanární;
+        \item \textbf{různoběžky} s \textbf{průsečíkem} $P$, jestliže $p\cap q =
+            \left \{ P \right \} $;
+       	\item \textbf{splývající rovnoběžky}, jestliže $p\cap q = p$.
+    \end{enumerate}
+\end{definition}
+
+\begin{veta}[Axiom rovnoběžnosti]
+    Každým bodem v $\mathbb E_2$ lze vést ke každé přímce právě jednu rovnoběžku.
+\end{veta}
+
+\begin{definition}
+    Roviny $\alpha,\beta \subseteq \mathbb E_3$ nazveme:
+    \begin{enumerate}[$i.$]
+        \item \textbf{rovnoběžné splývající}, jestliže $\alpha = \beta$;
+        \item \textbf{rovnoběžné různé}, jestliže $\alpha \ne \beta \land \alpha \cap
+        \beta = \emptyset$;
+        \item \textbf{různé roviny} s \textbf{průsečnicí} $p$, jestliže $\alpha
+        \ne \beta \land \alpha \cap \beta = p$.
+    \end{enumerate}
+\end{definition}
+
+\begin{veta}[Kritérium rovnoběžnosti dvou rovin]
+    Nechť $\alpha, \beta$ jsou roviny. Jestliže rovina $\alpha$ obsahuje dvě různoběžky
+    $a,b$ takové, že $\alpha \cap \beta = \emptyset \land b \cap \beta = \emptyset,$
+    pak $\alpha \parallel \beta.$
+\end{veta}
+
+\begin{proof}
+    Je-li $\alpha = \beta,$ předpoklad tvrzení neplatí, takže implikace platí
+    triviálně. \\
+    Dále sporem: Nechť $\alpha \nparallel \beta \implies \alpha \cap \beta \ne
+    \emptyset \implies \exists c = \alpha \cap \beta.$ Protože $a,b$ jsou různoběžky,
+    alespoň jedna z těchto přímek protíná přímku $c.$ Nechť je to např. $a.$ Pak
+    $\alpha \cap c = \left \{ B \right \} .$ Protože $c\subseteq \beta,$ průsečík
+    $B\in \beta \implies \alpha \cap \beta \ne \emptyset,$ což je spor s předpokladem
+    $\alpha \cap \beta = \emptyset.$
+\end{proof}
+
+\begin{definition}
+    Přímku $a \subseteq \mathbb E_3$ nazveme s rovinou $\alpha \subseteq \mathbb E_3:$
+    \begin{enumerate}[$i.$]
+        \item \textbf{rovnoběžnou}, jestliže $a\cap \alpha = \emptyset$;
+        \item \textbf{různoběžnou}, jestliže $a\cap \alpha = \left \{ P \right \} $;
+        \item $a$ \textbf{leží v rovině} $\alpha$, jestliže $a \cap \alpha = a$.
+    \end{enumerate}
+\end{definition}
+
+\begin{veta}[Kritérium rovnoběžnosti přímky a roviny]
+    $\forall p \in \mathscr P, \forall \rho \subseteq \mathbb E_3: p \parallel \rho
+    \iff \exists q\subseteq \rho: p\parallel q.$
+\end{veta}
+
+\begin{proof}
+    Pokud $p \subseteq \rho \implies q=p$ a tvrzení platí.\\
+    Nechť $p\not \subseteq \rho:$
+    \begin{enumerate}[$i.$]
+        \item \uv{$\implies$}: Nechť $p\parallel\rho\implies p\land \rho=\emptyset.$
+        Nechť $A\in\rho$ je lib. bod. Potom bodem $A$ a přímkou $p$ je jednoznačně
+        určena rovina $\sigma.$ $A\in \rho\cap\sigma \implies \rho\cap\sigma=q,$
+        $p,q$ jsou komplanární a mají prázdný průnik $\implies p\parallel q.$
+        \item \uv{$\impliedby$}: Sporem: Předpokládejme, že $p\parallel q \land
+        p\nparallel \rho.$ $p\parallel q \implies p\cap q=\emptyset\land q\subseteq \rho,
+        p,q$ leží v téže rovině a $p\ne q\implies p\cap q = \emptyset$, což je spor.
+    \end{enumerate}
+\end{proof}
+
+\begin{definition}\label{kolmeprimky}
+    Přímky $p,q \subseteq \mathbb E_3$ se nazývají navzájem \textbf{kolmé}, právě když
+    existují $p^\prime, q^\prime \subseteq \mathbb E_3$ takové, že
+    \begin{enumerate}[$i.$]
+    \item   $p^\prime \parallel p \land q^\prime \parallel q,$
+   	\item $p^\prime, q^\prime$ jsou komplanární,
+   	\item $p^\prime \perp q^\prime.$
+    \end{enumerate}
+\end{definition}
+
+\begin{pozn}
+    Definice \ref{kolmeprimky} je i kritériem.
+\end{pozn}
+
+\begin{veta}
+    Nechť $p,q \subseteq \mathbb E_3, p\perp q.$ Pak $\forall p^\prime, q^\prime
+    \subseteq \mathbb E_3: p^\prime \parallel p, q^\prime \parallel q \implies
+    p^\prime \perp q^\prime.$
+\end{veta}
+
+\begin{definition}
+    Nechť $p\subseteq \mathbb E_3$ je přímka a $\alpha \subseteq \mathbb E_3$ je rovina.
+    Řekneme, že \textbf{přímka} $p$ je \textbf{kolmá k rovině} $\alpha$ právě tehdy,
+    když $\forall q \subseteq \alpha: q \perp p.$
+\end{definition}
+
+\begin{veta}[Kritérium kolmosti přímky a roviny]
+    Nechť $p\subseteq \mathbb E_3$ je přímka a $\alpha \subseteq \mathbb E_3$ je rovina.
+    Pak  $p\perp \alpha \iff \exists q,r \subseteq \alpha: q \nparallel r: q\perp p\land
+    r\perp p.$
+\end{veta}
+
+\begin{definition}\label{kolmeroviny}
+    Řekneme, že \textbf{rovina} $\alpha$ \textbf{je kolmá k rovině} $\beta$, jestliže
+    $\exists a\subseteq\alpha: \alpha \perp\beta.$
+\end{definition}
+
+\begin{pozn}
+    Definice \ref{kolmeroviny} je i kritériem.
+\end{pozn}
+
+\begin{pozn}
+    Musíme umět sestrojit průsečík přímky a roviny, průsečnici dvou rovin a řez
+    tělesa rovinou.
+\end{pozn}
+
+\begin{definition}
+\textbf{Shodným} (resp. \textbf{podobným}) \textbf{zobrazením} v prostoru (shodností,
+resp. podobností) nazýváme zobrazení $\mathscr Z:
+\mathbb E_3 \to \mathbb E_3$, jestliže platí
+\begin{align*}
+    \forall X, Y \in \mathbb E_3: |\mathscr Z(X)\mathscr Z(Y)| =|XY|, & & \textrm{resp. } |\mathscr Z(X)\mathscr Z(Y)|=k|XY|, \,\,\, k \in \mathbb R^+
+\end{align*}
+a číslo $k$ \textbf{koeficientem podobnosti}.
+\end{definition}
+
+\begin{pozn}
+    Shodné zobrazení je podobné zobrazení s koeficientem podobnosti 1.
+\end{pozn}
+
+\begin{definition}
+    Nechť $S\in \mathbb E_3$ je bod. Pak zobrazení $\mathscr S_S: \mathbb E_3 \to
+    \mathbb E_3$ nazýváme \textbf{středovou souměrností} se středem $S$, jestliže
+    \begin{enumerate}[$i.$]
+    \item $X=S\implies X=\mathscr S_S(X),$
+   	\item $X\ne S \implies S$ je střed $X\mathscr S_S(X).$
+    \end{enumerate}
+\end{definition}
+
+\begin{definition}
+    $\forall \mathscr U \subseteq \mathbb E_3: \mathscr U\ne \emptyset \,\,\, \mathscr
+    U$ je \textbf{útvar}.
+\end{definition}
+
+\begin{definition}
+    $S\in \mathbb E_3$ je \textbf{střed souměrnosti} útvaru $\mathscr U,$ jestliže
+    $\exists \mathscr U = \mathscr S_S(\mathscr U).$ Útvar je středově souměrný,
+    pokud $\exists S:\exists\mathscr U = \mathscr S_S(\mathscr U).$
+\end{definition}
+
+\begin{definition}
+    Nechť $\alpha$ je rovina. Pak zobrazení $\mathscr S_\alpha:\mathbb E_3 \to
+    \mathbb E_3$ je \textbf{rovinová}  souměrnost, jestliže
+    \begin{enumerate}[$i.$]
+    \item $X\in\alpha\implies \mathscr S_\alpha(X)=X,$
+   	\item $X\in\alpha\implies X\mathscr S_\alpha(X) \perp\alpha\,\land$ střed úsečky
+    $X\mathscr S_\alpha(X)\in \alpha.$
+    \end{enumerate}
+\end{definition}
+
+\begin{definition}
+    Nechť $A,B$ jsou dva různé body, $\alpha \subseteq \mathbb E_3$ rovina, která
+    prochází středem $AB$ a $AB\perp \alpha$. Pak rovinu $\alpha$ nazýváme
+    \textbf{rovinou souměrnosti} bodů $A,B.$
+\end{definition}
+
+\begin{definition}
+\begin{enumerate}[$i.$]
+\item $\alpha$ je \textbf{rovina souměrnosti} útvaru $\mathscr U\subseteq \mathbb E_3,$
+pokud $\mathscr U = \mathscr S_\alpha(\mathscr U).$
+\item \textbf{Útvar} $\mathscr U \subseteq \mathbb E_3$ je \textbf{rovinově souměrný},
+jestliže existuje jeho rovina souměrnosti.
+\end{enumerate}
+\end{definition}
+
+\begin{veta}
+    Nechť $\mathscr S_\beta \circ \mathscr S_\alpha: \mathbb E_3 \to \mathbb E_3$ je
+    složené zobrazení dvou rovin souměrných s rovinami $\alpha, \beta\subseteq \mathbb
+    E_3$. Nechť $\alpha \parallel \beta$, pak $\forall X\in \mathbb E_3: \mathscr
+    S_\beta \cap \gamma,$ kde $\gamma$ je taková rovina, že $\alpha \perp \gamma \land
+    \beta \perp \gamma, X \in \gamma.$
+\end{veta}
+
+\begin{definition}
+    Složením dvou rovinových souměrností s rovnoběžnými rovinami souměrnosti vznikne
+    zobrazení, které nazýváme \textbf{posunutím} v $\mathbb E_3.$ Směr kolmý k těmto
+    rovinám nazýváme \textbf{směr postunutí}.
+\end{definition}
+
+\begin{definition}
+    Složením dvou rovinových souměrností s různoběžnými rovinami souměrnosti vznikne
+    zobrazení, které nazýváme \textbf{otočením} v $\mathbb E_3.$ Průsečnici těchto
+    rovin nazýváme \textbf{osu otočení}.
+\end{definition}
+
+\begin{definition}
+    Zobrazením $\mathscr S_\beta \circ \mathscr S_\alpha = \mathscr O_p,$ kde
+    $\alpha \perp \beta, p=\alpha \cap \beta$, nazýváme \textbf{osovou souměrností}
+    a $p$ \textbf{osou} osové souměrnosti.
+\end{definition}
+
+\begin{definition}
+\begin{enumerate}[$i.$]
+\item $p$ je \textbf{osa souměrnosti} útvaru $\mathscr U\subseteq \mathbb E_3,$
+pokud $\mathscr U = \mathscr O_p(\mathscr U).$
+\item \textbf{Útvar} $\mathscr U \subseteq \mathbb E_3$ je \textbf{osově souměrný},
+jestliže existuje jeho osa souměrnosti.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}
+    Nechť je dán bod $S\in \mathbb E_3$ a číslo $\lambda \in \mathbb R - \left \{ 0
+    \right \}. $ Pak zobrazení $\mathscr H_{S,\lambda}: \mathbb E_3 \to \mathbb E_3$
+   nazýváme \textbf{stejnolehlost}, jestliže $\forall X \in \mathbb E_3$ platí:
+   \begin{enumerate}[$i.$]
+   \item $X=S\implies X^\prime =X=S$,
+  	\item $X\ne S\implies |SX^\prime| = |\lambda|\cdot |SX|,$ přičemž
+   \begin{enumerate}[$a.$]
+   \item $\lambda > 0: X\in \overrightarrow{SX},$
+  	\item $\lambda < 0: X$ leží na opačné polopřímce k $\overrightarrow{SX}.$
+   \end{enumerate}
+   \end{enumerate}
+\end{definition}
