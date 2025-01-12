@@ -1,0 +1,116 @@
+\section{Stereometrie -- metrické vlastnosti}
+\begin{definition}
+    Nechť $A, B \in \mathbb E_3.$ \textbf{Vzdálenost bodů} $A,B$ nazýváme délku
+    úsečky $AB$ a označujeme $\rho(A,B).$
+\end{definition}
+
+\begin{definition}
+    Nechť $A\in \mathbb E_3$ je bod a $\alpha \subseteq \mathbb E_3$ je rovina.
+    \textbf{Kolmým průmětem} bodu $A$ do roviny $\alpha$ nazýváme bod $A_0$
+    splňující
+    \begin{enumerate}[$i.$]
+    \item $A\in \alpha \implies A_0=A,$
+   	\item $A\notin \alpha \implies A_0 \in p\cap \alpha, p \perp\alpha, a \in p.$
+    \end{enumerate}
+    \textbf{Vzdáleností bodu $A$ od roviny $\alpha$} nazýváme reálné číslo označené
+    $\rho(A,\alpha) $ a definované
+    $$\rho(A,\alpha) = \rho(A, A_0) = |AA_0|,$$
+    kde $A_0$ je kolmý průmět bodu $A$ do roviny $\alpha.$
+\end{definition}
+
+\begin{definition}
+    Nechť $A\in \mathbb E_3$ je bod a $p \subseteq \mathbb E_3$ je přímka.
+    \textbf{Kolmým průmětem} bodu $A$ na přímku $p$ nazýváme bod $A_0$
+    splňující
+    \begin{enumerate}[$i.$]
+    \item $A\in \alpha \implies A_0=A,$
+    \item $A\notin p \implies A_0 \in p\cap \alpha, \alpha \perp, A \in \alpha.$
+    \end{enumerate}
+    \textbf{Vzdáleností bodu $A$ od přímky $\alpha$} nazýváme reálné číslo označené
+    $\rho(A,p) $ a definované
+    $$\rho(A,p) = \rho(A, A_0) = |AA_0|,$$
+    kde $A_0$ je kolmý průmět bodu $A$ na přímku $p.$
+\end{definition}
+
+\begin{definition}
+    Nechť $\alpha, \beta \subseteq \mathbb E_3$ jsou dvě rovnoběžné roviny. Pak
+    \textbf{vzdáleností dvou rovnoběžných rovin} $\alpha, \beta$ nazýváme reálné
+    číslo označené $\rho(\alpha, \beta)$ a definované
+    $$\rho(\alpha, \beta)=\rho(A,\beta),$$
+    kde $A\in\alpha$ je libovolný bod.
+\end{definition}
+
+\begin{definition}
+    Nechť $p\subseteq \mathbb E_3$ je přímka, $\alpha \subseteq \mathbb E_3$ je rovina.
+    Nechť $p\parallel \alpha.$ \textbf{Vzdáleností přímky $p$ od roviny $\alpha$
+    s ní rovnoběžné} nazýváme reálné číslo označené $\rho(p,\alpha)$ a definované
+    $$\rho(p,\alpha)=\rho(A,\alpha),$$
+    kde $A\in p$ je libovolný bod.
+\end{definition}
+
+\begin{definition}
+    Nechť $p,q\subseteq \mathbb E_3$ jsou rovnoběžné přímky. \textbf{Vzdáleností
+    dvou rovnoběžných přímek $p,q$} nazýváme reálné číslo označené $\rho(p,q)$ a
+    definované
+    $$\rho(p,q) = \rho(A,q),$$
+    kde $A\in p$ je libovolný bod.
+\end{definition}
+
+\begin{definition}
+    Nechť $p,q\subseteq \mathbb E_3$ jsou mimoběžné přímky. \textbf{Vzdáleností dvou
+    mimoběžných přímek} $p,q$ nazýváme reálné číslo označené $\rho(p,q)$ a definované
+    $$\rho(p,q)=\rho(\alpha, \beta),$$
+    kde $\alpha \parallel \beta, p\subseteq\alpha, q\subseteq \beta.$
+\end{definition}
+
+\begin{definition}
+    Nechť $p,q\subseteq \mathbb E_3$ jsou dvě komplanární přímky. \textbf{Odchylkou
+    dvou komplanárních přímek} $p,q$ nazýváme reálné číslo označené $|\sphericalangle
+    p,q|$ a definované
+    \begin{enumerate}[$i.$]
+    \item je-li $p\parallel q, |\sphericalangle p,q|=0^\circ,$
+   	\item je-li $p\nparallel q$ odchylka $p,q$ je velikost ostrého nebo pravého úhlu,
+        který $p,q$ svírají.
+    \end{enumerate}
+\end{definition}
+
+\begin{veta}
+    Nechť $p^\prime, q^\prime; p,q\subseteq \mathbb E_3: p\parallel p^\prime\land
+    q\parallel q^\prime.$ Pak platí: $|\sphericalangle p^\prime q^\prime|.$
+\end{veta}
+
+\begin{definition}
+    Nechť $p,q\subseteq \mathbb E_3$ jsou dvě mimoběžné přímky. \textbf{Odchylkou
+    dvou mimoběžnách přímek} $p,q$ nazýváme reálné číslo označené $|\sphericalangle
+    p,q|$ a definované
+    $$|\sphericalangle p,q| = |\sphericalangle p^\prime, q^\prime|,$$
+    kde $p^\prime \parallel p \land q^\prime \parallel q,$ kde $p^\prime, q^\prime$
+    jsou komplanární a různoběžné.
+\end{definition}
+
+\begin{definition}
+    Nechť $p\subseteq \mathbb E_3$ je přímka a $\alpha\subseteq \mathbb E_3$ je
+    rovina.. \textbf{Odchylkou přímky $p$ od roviny $\alpha$} nazýváme
+    reálné číslo označené $|\sphericalangle
+    p,\alpha|$ a definované
+    \begin{enumerate}[$i.$]
+    \item je-li $p\parallel \alpha, |\sphericalangle p,\alpha|=0^\circ,$
+    \item je-li $p\nparallel \alpha$ odchylka $p,\alpha$ je velikost ostrého nebo
+        pravého úhlu,
+        který svírají přímky $p,q$, kde $q$ je průsečnice rovin $\alpha, \beta$,
+        přičemž $\beta \perp \alpha, p\in\beta.$
+    \end{enumerate}
+\end{definition}
+
+\begin{definition}
+    Nechť $\alpha,\beta\subseteq \mathbb E_3$ jsou dvě roviny. \textbf{Odchylkou
+    rovin} $\alpha, \beta$ nazýváme reálné číslo označené $|\sphericalangle
+    \alpha, \beta|$ a definované
+    \begin{enumerate}[$i.$]
+    \item je-li $\alpha\parallel \beta, |\sphericalangle \alpha,\beta|=0^\circ,$
+   	\item je-li $\alpha\nparallel \beta$ odchylka $\alpha,\beta$ je velikost
+        ostrého nebo pravého úhlu,
+        který svírají přímky $p,q,$ kde $p\subseteq \alpha, q\subseteq \beta$ a obě
+        přímky jsou kolmé k průsečnici rovin $\alpha, \beta.$
+    \end{enumerate}
+\end{definition}
