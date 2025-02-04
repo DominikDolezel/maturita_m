@@ -116,60 +116,145 @@
 \end{definition}
 
 \begin{definition}
-  \textbf{Čtyřstěn} (zvaný též trojboký jehlan, tetraedr) je nejjednodušší mnohostěn, typ trojrozměrného tělesa. Je vymezen nejmenším možným počtem bodů, který může trojrozměrné těleso definovat, tzn. čtyřmi různými body v prostoru.
+    Nechť jsou dány nekomplanární body $A,B,C,D.$ Pak
+  \textbf{čtyřstěn} je množina bodů ohraničená trojúhelníky $\triangle ABC, \triangle
+  ABD, \triangle ACD, \triangle BCD.$
 
   \textbf{Pravidelný čtyřstěn} je tvořen čtyřmi stejnými rovnostrannými trojúhelníky.
 \end{definition}
 
 \begin{definition}
-  \textbf{Hranol} je mnohostěn se dvěma stejnými monohúhelníkovými základnami, které jsou spojeny pásem rovnoběžníků.
+    Mějme v prostoru rovinu $\rho,$ v ní konvexní mnohoúhelník $A_1\dots A_n$ a nechť
+    $A_1^\prime$ je bod, který v rovině $\rho$ neleží. Nechť $T: \mathbb E_3 \to
+    \mathbb E_3$ je takové posunutí, že $A_1^\prime=T(A_1).$ Při tomto zobrazení se rovina
+    $\rho$ zobrazí na rovinu $\rho^\prime,$ tyto dvě roviny jsou rovnoběžné. Množinu všech
+    bodů $X$, všech úseček $BB^\prime$ takových, že $B\in A_1\dots A_n$ a $B^\prime$ je
+    obraz bodu $B$ v posunutí $T$, nazýváme \textbf{hranolem}.
+\end{definition}
+
+\begin{pozn}
+    -- ještě by se tam mohly dopsat: boční stěna, podstavy, plášť, stěna, vrcholy; kosý,
+    kolmý, n-boký
+\end{pozn}
+
+\begin{definition}
+    Hranol, jehož podstavy jsou rovnoběžníky, nazýváme \textbf{rovnoběžnostěn}.
 \end{definition}
 
 \begin{definition}
-  \textbf{Rovnoběžnostěn} je čtyřboký hranol, jehož podstavou je rovnoběžník. Mezi rovnoběžnostěny patří např. kvádr, krychle nebo klenec (kosočtverco-stěn).
+    Rovnoběžnostěn, jehož všechny stěny jsou pravoúhelníky (resp. čtverce) nazýváme
+    \textbf{kvádr} (resp. \textbf{krychle}).
 \end{definition}
 
 \begin{definition}
-  \textbf{Kvádr} je trojrozměrné těleso – rovnoběžnostěn, jehož stěny tvoří šest pravoúhlých čtyřúhelníků, zpravidla obdélníků.
+    Mějme v prostoru rovinu $\rho,$ v ní kruh $K$ ohraničený kružnicí $k$, na níž
+    leží bod $A$ a nechť
+    $A^\prime$ je bod, který v rovině $\rho$ neleží. Nechť $T: \mathbb E_3 \to
+    \mathbb E_3$ je takové posunutí, že $A^\prime=T(A).$ Označme $T(\rho)=\rho^\prime,
+    T(k)=k^\prime, T(K)=K^\prime.$ Všechny body všech úseček $XX^\prime$, kde $X\in K$
+    a $X^\prime$ je obraz bodu $X$, tytvoří \textbf{válec.}
+\end{definition}
+
+\begin{pozn}
+    ---- mohly by se přidat: plášť, podstava, kolmý, kosý
+\end{pozn}
+
+\begin{definition}
+Mějme v prostoru rovinu $\rho,$ v ní konvexní mnohoúhelník $A_1\dots A_n$ a nechť
+$V$ je bod, který v rovině $\rho$ neleží. Úsečky $VX$, kde $X$ jsou všechny body
+mnohoúhelníka $A_1\dots A_n$, nazýváme \textbf{jehlanem}.
+\end{definition}
+
+\begin{pozn}
+    ---- add hlavní vrchol, vrcholy, podstava, boční stěny, hrany, podstavné hrany
+\end{pozn}
+
+\begin{definition}
+    Nechť je dán jehlan s hlavním vrcholem $V$ a podstavou $A_1\dots A_n$ v rovině
+    $\rho.$ Nechť $k \in \mathbb R, k \ne 1, k >0.$ Zaveďme $\mathscr H_{V,k}(A_1\dots A_n)
+    =A_1^\prime\dots A_n^\prime.$ Těleso ohraničené podstavami $A_1\dots A_n$,
+    $A_1^\prime\dots A_n^\prime$ a stěnami $A_iA_{i+1}A_i^\prime A_{i+1}^\prime$ se
+    nazývá \textbf{komolý jehlan}.
 \end{definition}
 
 \begin{definition}
-  \textbf{Krychle} je trojrozměrné těleso, jehož stěny tvoří 6 stejných čtverců.
+    Nechť je dán vrchol $V$ a kruhová podstava $K$ v rovině
+    $\rho.$ Množina všech bodů úseček $VX,$ kde $X\in K,$ se nazývá \textbf{kužel}.
 \end{definition}
 
 \begin{definition}
-  \textbf{Válec} je trojrozměrné těleso, vymezené dvěma rovnoběžnými podstavami a pláštěm. Plášť je rozvinutelná plocha, všechny povrchové (tvořící) přímky pláště jsou rovnoběžné a pokud jsou k podstavám kolmé, hovoříme o \textbf{kolmém válci}. Je-li podstavou kruh, pak válec označíme jako \textbf{kruhový válec}.
+Nechť je dán kužel s hlavním vrcholem $V$ a podstavou $K$ v rovině
+$\rho.$ Nechť $k \in \mathbb R, k \ne 1, k >0.$ Zaveďme $\mathscr H_{V,k}(K)
+=K^\prime.$ Množina všech bodů úseček $X\mathscr H(X),$ kde $X\in K$, je
+\textbf{komolý kužel}.
 \end{definition}
 
-\begin{definition}
-  \textbf{Jehlan} je trojrozměrné těleso. Jeho základnu (nebo také podstavu) tvoří mnohoúhelník. Vrcholy základny jsou spojeny s jedním bodem mimo rovinu základny – tento bod se obvykle nazývá \textbf{(hlavní) vrchol jehlanu}.
-\end{definition}
-
-\begin{definition}
-  \textbf{Komolý jehlan} je prostorové těleso – část jehlanu, která leží mezi dvěma rovnoběžnými rovinami procházející tímto jehlanem.
-\end{definition}
-
-\begin{definition}
-  \textbf{Kužel} je trojrozměrný geometrický tvar ohraničený kuželovou plochou a rovinou, která protíná kuželovou plochu tak, že vytváří uzavřenou křivku. Je-li podstavou kužele kruh, pak se kužel nazývá \textbf{kruhový kužel}.
-\end{definition}
-
-\begin{definition}
-  \textbf{Komolý kužel} je prostorové těleso – část kužele, která leží mezi dvěma rovnoběžnými rovinami procházejícími tímto kuželem.
-\end{definition}
-
-\begin{veta}\,
+\begin{veta}\, TODO JE TO NĚJAKÝ ROZBITÝ
 \begin{landscape}
 \begin{tabularx}{\textwidth}{ l | l  l  l }
     \, & $V$ & $S$ & $S_{pláště}$ \\
     \hline
     pravidelný čtyřstěn & $\frac{\sqrt{2}}{12}a^3$ & $\sqrt{3}a^2$ \\
-    hranol & $S_{podstavy}\cdot v$ & $2S_{podstavy}+S_{pláště}$ & $o_{podstavy} \cdot v$ \\
-    rovnoběžnostěn & $\left| ( \mathbf{a} \times \mathbf{b} ) \cdot \mathbf{c} \right| = \left| ( \mathbf{b} \times \mathbf{c} ) \cdot \mathbf{a} \right| = \left| ( \mathbf{c} \times \mathbf{a} ) \cdot \mathbf{b} \right|$ & $2 \Bigg[ \Big((\mathbf{a}\times\mathbf{b})\cdot(\mathbf{a}\times\mathbf{b})\Big)^{1/2}+ \Big((\mathbf{b}\times\mathbf{c})\cdot(\mathbf{b}\times\mathbf{c})\Big)^{1/2}+ \Big((\mathbf{c}\times\mathbf{a})\cdot(\mathbf{c}\times\mathbf{a})\Big)^{1/2} \Bigg] $ & \\
-    kvádr & $abc$ & $2(ab+bc+ca)$ & \\
-    krychle & $a^3$ & $6a$ & \\
+    hranol & $S_{podstavy} \cdot v$ & $2S_{podstavy}+S_{pláště}$ & $o_{podstavy} \cdot v$ \\
+    rovnoběžnostěn & $\left | ( \mathbf{a} \times \mathbf{b} ) \cdot \mathbf{c} \right| = \left| ( \mathbf{b} \times \mathbf{c} ) \cdot \mathbf{a} \right| = \left| ( \mathbf{c} \times \mathbf{a} ) \cdot \mathbf{b} \right|$ & $2 \Bigg[ \Big((\mathbf{a}\times\mathbf{b})\cdot(\mathbf{a}\times\mathbf{b})\Big)^{1/2}+ \Big((\mathbf{b}\times\mathbf{c})\cdot(\mathbf{b}\times\mathbf{c})\Big)^{1/2}+ \Big((\mathbf{c}\times\mathbf{a})\cdot(\mathbf{c}\times\mathbf{a})\Big)^{1/2} \Bigg] $ & \, \\
+    kvádr & $abc$ & $2(ab+bc+ca)$ & \, \\
+    krychle & $a^3$ & $6a$ & \, \\
     válec & $S_{podstavy}\cdot v$ & $2S_{podstavy} + S_{pláště} & o_{podstavy} \cdot v$ \\
+    jehlan & $\frac{1}{3}\cdot S_{podstavy}\cdot v$ & \, \\
     kužel & $\frac{1}{3}\cdot S_{podstavy}\cdot v$
+
+    DOPLNITT
 \end{tabularx}
 \end{landscape}
-
 \end{veta}
+
+\begin{veta}[Cavalieriho princip]
+    Nechť tělesa $T_1, T_2$ leží mezi dvěma rovinami $\rho_1, \rho_2$ a každá rovina
+    $\rho \parallel \rho_1\parallel \rho_2$ protne tělesa $T_1, T_2$ v konvexních
+    rovinných útvarech s obsahy $P_1, P_2.$ Jestliže pro každou rovinu $\rho$ platí
+    $P_1=P_2$, mají $T_1$ a $T_2$ stejný objem.
+\end{veta}
+
+\begin{definition}
+\textbf{Mnohostěn} je konvexní část prostoru, hranice je tvořena konečným počtem
+mnohoúhelníků.
+\end{definition}
+
+\begin{veta}[Eulerova věta]
+    Nechť $s$ je počet stěn, $h$ počet hran a $v$ počet vrcholů daného tělesa. Pak
+    platí
+    \begin{align*}
+        s-h+v &=2,\\
+        s+v &=h+2.
+    \end{align*}
+\end{veta}
+
+\begin{pozn}[Pravidelné mnohostěny]\,
+\begin{center}
+\begin{tabular}{l|l|c|c|c|r}
+    prav. mnohostěn & tvar stěny & $v$ & $s$ & $h$ & \, \\
+    čtyřstěn        & rovnostranný trojúhelník & 4 & 4&6 & tetraedr \\
+    šestistěn       & čtverec & 8 & 6&12 & hexaedr \\
+    osmistěn        & rovnostranný trojúhelník & 6 & 8&12 & oktaedr \\
+    dvanáctistěn    & pravidelný pětiúhelník & 20 & 12&30 & dodekaedr \\
+    dvacetistěn     & rovnostranný trojúhelník & 12 & 20&30 & ikosaedr \\
+\end{tabular}
+\end{center}
+
+\end{pozn}
+
+\begin{definition}
+    O tělesu $M$ v prostoru říkáme, že má $p$ za osu rotace a že je \textbf{rotačním
+    tělesem}, jestliže se zobrazí samo na sebe při každém otočení kolem přímky $p.$
+\end{definition}
+
+\begin{pozn}
+\begin{itemize}
+\item \textbf{rotační válec} -- pravoúhelník otáčený kolem své strany,
+\item \textbf{rotační kužel} -- pravidelný trojúhelník otáčený kolem odvěsny,
+\item \textbf{koule} -- půlkruh nad průměrem, hranice se nazývá \textbf{kulová plocha},
+\item \textbf{torus} -- kruh kolem osy, která leží mimo něj
+\end{itemize}
+\end{pozn}
+
+--- doplnit kulovou úseč a kulový vrchlík, což teď nemůžu najít ---
