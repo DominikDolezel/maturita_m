@@ -1,0 +1,230 @@
+\section{Vektorové prostory}
+\begin{definition}
+    Nechť $P, X, Q, Y\in \mathbb E_3$ jsou čtyři libovolné body. Řekneme, že body
+    $P, X, Q, Y$ tvoří
+    vrcholy zobecněného rovnoběžníku, jestliže střed úsečky $PQ$ splývá se středem úsečky
+    $XY$.
+\end{definition}
+
+\begin{definition}
+    Na množině $\mathscr U$ všech orientovaných úseček s pevným počátečním bodem
+    $P\in \mathbb E_3$
+    definujeme operaci sčítání takto:
+    $$\forall \overrightarrow{PX}, \overrightarrow{PY} \in \mathscr U:
+        \overrightarrow{PX} +  \overrightarrow{PY} = \overrightarrow{PQ},$$
+    je-li bod $Q\in \mathbb E_3$
+    vrcholem zobecněného rovnoběžníku $PXQY$.
+\end{definition}
+
+\begin{definition}
+    Na množině $\mathscr U$ všech orientovaných úseček s pevným počátečním bodem
+    $P\in \mathbb E_3$
+    definujeme operaci \textbf{násobení orientovaných úseček reálným číslem}
+    (tzv. vnější násobení) takto: je-li $p\in \mathbb R$ a $\overrightarrow{PX}\in \mathscr U$,
+    pak $p$-násobkem orientované
+    úsečky $\overrightarrow{PX}$ nazveme orientovanou úsečku $\overrightarrow{PY}$
+    (a zapisujeme $\overrightarrow{PY}=p \cdot \overrightarrow{PX}$), přičemž
+    platí:
+    \begin{enumerate}[$i.$]
+    \item $p=0 \implies Y=P,$
+   	\item $p\ne 0 \implies Y = \mathscr H_{P,p}(X).$
+    \end{enumerate}
+\end{definition}
+
+\begin{definition}
+    Nechť je dána množina $G$ s operací $*:G\times G \to G$ (je na $G$ uzavřená).
+    Pak dvojice $(G,*)$ je \textbf{grupa}, jestliže platí:
+    \begin{enumerate}[$i.$]
+        \item $\forall a,b,c, \in G: a*(b*c) = (a*b)*c$ (asociativita),
+       	\item $\exists e \in G$ takové, že $\forall a\in G a*e=e*a=a$ (existence neutrálního prvku),
+       	\item $\forall a\in G \exists a^{-1}$ takové, že $a*a^{-1}=a^{-1}a=1$ (existence inverzního prvku).
+    \end{enumerate}
+    Pokud navíc
+    \begin{enumerate}[$iv.$]
+        \item $\forall a,b \in G: a*b=b*a$ (komutativita),
+    \end{enumerate}
+    je $(G,*)$ \textbf{komutativní} (též \textbf{Abelovská}) \textbf{grupa}.
+\end{definition}
+
+\begin{definition}\label{vekt_prost}
+    Nechť je dána množina $V$, těleso $T$ a dvě operace $\bigoplus: V\times V \to V$ a
+    $\bigotimes: T\times V \to V$ (jsou ma $V$ uzavřené). Pak čtveřici $(V,T,\bigoplus,
+    \bigotimes)$ je \textbf{vektorový prostor} nad tělesem $T$, jestliže $\forall p,q \in T, \vec u,
+    \vec v, \vec w \in V$ platí:
+    \begin{enumerate}[$i.$]
+    \item $\vec u \bigoplus \vec v = \vec v \bigoplus \vec u$ (komutativita sčítání),
+   	\item $(\vec u \bigoplus \vec v)\bigoplus \vec w = \vec u \bigoplus (\vec v \bigoplus \vec w)$ (asociativita sčítání),
+   	\item $\exists \vec o\in V$ takové, že $\forall \vec u\in V:\vec u \bigoplus \vec o = \vec o \bigoplus \vec u = \vec u$ (existence nulového prvku),
+   	\item $\forall \vec u \in V: \exists -\vec u \in V: \vec \bigoplus (-\vec u) = (-\vec u) \bigoplus \vec u = \vec o$ (existence opačného prvku),
+   	\item $p\bigotimes (\vec u \bigoplus \vec v)=p\bigotimes \vec u \bigoplus p\bigotimes \vec v$ (distributivita),
+   	\item $(p+q)\bigotimes \vec u=p\bigotimes \vec u \bigoplus p\bigotimes \vec v$ (distributivita),
+   	\item $(p\cdot q)\bigotimes \vec u = p\bigotimes (q\bigotimes \vec u)$ (asociativita vnějšího násobení),
+   	\item $\exists \vec 1 \in T$ taková, že $\forall \vec u \in V: 1\bigotimes \vec u = \vec u$ (existence neutrálního prvku vzhledem k násobení).
+    \end{enumerate}
+\end{definition}
+
+\begin{pozn}
+    Výčet prvních čtyř podmínek z definice \ref{vekt_prost} lze zjednodušit jako:
+    $(V,+)$ je komutativní grupa.
+\end{pozn}
+
+\begin{pozn}
+    Místo znaků $\bigoplus$ (resp. $\bigotimes$) používáme znaky $+$ (resp. $\cdot$).
+    Byly použity, aby bylo jednoznačně odlišeno sčítání vektorů a čísel (resp. násobení
+    vektorů skalárem a násobení čísel). Z kontextu je však jasně zřejmé, kterou operaci
+    použít.
+\end{pozn}
+
+\begin{pozn}
+    Množina $\mathscr U_n$ všech orientovaných úseček s počátečním bodem $P\in \mathbb E_n$
+    je vektorovým prostorem
+    \textbf{vázaných vektorů}.
+\end{pozn}
+
+\begin{pozn}
+    Množina $\mathbb R^{(n)}$ všech uspořádaných $n$-tic tvoří \textbf{aritmetický}
+    vektorový prostor.
+\end{pozn}
+
+\begin{definition}
+    Nechť $A,B,C,D \in \mathbb E_n$ jsou body. Řekneme, že orientované úsečky
+    $\overrightarrow{AB}$ a $\overrightarrow{CD}$ jsou \textbf{ekvipolentní}, jestliže
+    střed úsečky $AD$ je i středem úsečky $BC$. Zapisujeme $\overrightarrow{AB}\varepsilon\overrightarrow{AB}.$
+\end{definition}
+
+\begin{definition}
+    Nechť je dána relace $R$ na množině $M$. Pokud
+    \begin{enumerate}[$i.$]
+    \item $\forall a,\in M:[a,a] \in R$ (reflexivita),
+   	\item $\forall a,b\in M: [a,b]\in R \implies [b,a] \in R$ (symetričnost),
+   	\item $\forall a,b,c\in M: ([a,b]\in R \land [b,c] \in R) \implies [a,c] \in R$ (tranzitivita),
+    \end{enumerate}
+    je $R$ \textbf{relací ekvivalence}.
+\end{definition}
+
+\begin{pozn}
+    Ke každé relaci ekvivalence na množině $M$ existuje rozklad na
+    \textbf{třídy ekvivalence} tak, že každé dva prvky v rámci každé třídy jsou navzájem ekvivalentní,
+    třídy jsou po dvou disjunktní a sjednocením všech tříd dostaneme množinu $M$.
+\end{pozn}
+
+\begin{definition}
+    Nechť je dána množina $M$ všech orientovaných úsešek v $\mathbb E_n$ a
+    relace ekvipolence $\varepsilon \subseteq M\times M.$ Pak třída rozkladu množiny
+    $M$, který přísluší relaci $\varepsilon$, je \textbf{volný vektor}.
+\end{definition}
+
+\begin{definition}
+    Nechť $V$ je množina všech volných vektorů v $\mathbb E_n$. Pak na množině $V$ definujeme
+    operace sčítání a vnější násobení takto:
+    \begin{enumerate}[$i.$]
+    \item $\forall \vec u, \vec v \in V: \vec u + \vec v = \vec w,$ kde $\vec w = \left \{ \overrightarrow{XY}; \overrightarrow{XY} \, \varepsilon \, \overrightarrow{PC} \right \} $, kde $\overrightarrow{PA}\in\vec u, \overrightarrow{PB}\in V$ a $\overrightarrow{PC}=\overrightarrow{PA}+\overrightarrow{PB}$ je součet orientovaných úseček $\overrightarrow{PA},\overrightarrow{PB}.$
+   	\item $\forall p \in \mathbb R, \forall \vec u \in V: p\cdot \vec u = \vec z, \vec z = \left \{ \overrightarrow{XY}; \overrightarrow{XY} \, \varepsilon \, \overrightarrow{PC} \right \} $, přitom $\overrightarrow{PE}\in \vec u$ a $\overrightarrow{PF} = p\cdot \overrightarrow{PE}$ je vnější součin orientované úsečky $\overrightarrow{PE}$ a čísla $p$ (tj. pomocí stejnolehlosti).
+    \end{enumerate}
+\end{definition}
+
+\begin{definition}
+Nechť $\vec u \subseteq M$ je libovolný volný vektor a $\overrightarrow{AB}\subseteq \vec u$ orientovaná úsečka, tedy
+$u =\left  \{ \overrightarrow{XY} : \overrightarrow{XY} \, \varepsilon \, \overrightarrow{AB} \right \}$. Pak orientovanou úsečku $\overrightarrow{AB}$ nazveme \textbf{umístěním} vektoru $\vec u$.
+\end{definition}
+
+\begin{definition}
+    Pokud $\overrightarrow{PA}\in \vec u$, nazýváme orientovanou úsečku $\overrightarrow{PA}$ též reprezentantem vektoru $\vec u$.
+\end{definition}
+
+\begin{definition}
+    Nechť $V$ je vektorový prostor, $\vec u_1,\dots, \vec u_k\in V$ vektory, $p_1,\dots,
+    p_k\in \mathbb R.$ Vektor
+    $$\vec x = p_1\vec u_1 + p_2\vec u_2 + \dots + p_k\vec u_k = \sum_{i=1}^{k} p_i\vec u_i$$
+    nazýváme \textbf{lineární kombinací} vektorů $\vec u_1,\dots, \vec u_k.$
+\end{definition}
+
+\begin{definition}
+    Podmožina $W$ vektorového prostoru $V$ se nazývá \textbf{podprostor} vektorového
+    prostoru $V$, jestliže $W$ je vektorový prostor.
+\end{definition}
+
+\begin{definition}
+    Množina všech lineárních kombinací vektorů množiny $S$ označená $\left < S \right >$ se nazývá \textbf{lineární
+    obal} množiny $S$ a její prvky \textbf{generátory} $\left < S \right >$.
+\end{definition}
+
+\begin{definition}
+    Nechť $S= \left \{ \vec u_1, \dots, u_k \right \} $ je množina vektorů vektorového prostoru $V$. Množina $S$ je
+   	\begin{enumerate}[$i.$]
+    \item \textbf{lineární nezávislá}, jestliže
+    $$p_1\vec u_1 + p_2\vec u_2 + \dots + p_k\vec u_k = \vec o \iff p_1 = p_2 = \dots = p_k = 0;$$
+   	\item \textbf{lineárně nezávislá}, jestliže existuje $p_i\ne 0$ takové, že
+    $$ p_1\vec u_1 + p_2\vec u_2 + \dots + p_k\vec u_k = \vec o.$$
+    \end{enumerate}
+\end{definition}
+
+\begin{veta}[Kriterium lineární závislosti]
+    Vektory jsou závislé, jestliže alespoň jeden z nich lze vyjádřit jako lineární
+    kombinaci ostatních.
+\end{veta}
+
+\begin{definition}
+    Nechť je dán vektorový prostor $V$. Pak množina $\left < W \right >,$ kde $
+    W\subseteq V$, se nazývá \textbf{podprostor} prostoru $V$ \textbf{generovaný}
+    množinou $W$ a prvky množiny $W$ \textbf{generátory} tohoto podprostoru.
+\end{definition}
+
+\begin{definition}
+    Nechť $(\vec u_1, \dots \vec u_k)$ je konečná posloupnost vektorů vektorového
+    prostoru $V$. Tato posloupnost tvoří \textbf{bázi} vektorového prostoru $V$, jestliže
+    \begin{enumerate}[$i.$]
+    \item $\vec u_1, \dots \vec u_k$ jsou generátory $V$ a
+   	\item $\vec u_1, \dots \vec u_k$ jsou lineárně nezávislé.
+    \end{enumerate}
+\end{definition}
+
+\begin{definition}
+Nechť $(\vec e_1,\dots, \vec e_k)$ je báse vektorového prostoru $V$. Pak číslo $k \in
+\mathbb N_0$ je \textbf{dimenzí} vektorového prostoru $V$ a píšeme $\dim V=k$.
+\end{definition}
+
+\begin{definition}\label{izom}
+    Nechť $(\vec e_1,\dots, \vec e_k)$ je báze vektorového prostoru $V$. Zobrazení
+    $\varphi: A\to B$ se nazývá \textbf{homomorfismus} vzhledem k operaci $*$, jestliže
+    $$\forall x,y \in A:\varphi(x*y)=\varphi(x)+\varphi(y).$$
+    Pokud je $\varphi$ navíc bijektivní, nazývá se \textbf{izomorfismus}.
+\end{definition}
+
+\begin{pozn}
+    Dva vektorové prostory jsou izomorfní, jestliže vztah z \ref{izom} platí pro
+    operace sčítání i vnější násobení.
+\end{pozn}
+
+\begin{definition}
+    Nechť $(\vec e_1, \dots, \vec e_n)$ je báze vektorového prostoru $V$. Nechť
+    $\vec x \in V$ je libovolná vektor takový, že
+    $$\vec x = x_1\vec e:1 + x_2\vec e_2 + \dots + x_n\vec e_n,$$
+    kde $x_i \in \mathbb R, i\in \left \{ 1,\dots,n \right \} .$ Pak uspořádanou
+    $n$-tici $(x_1, x_2,\dots,x_n)$ nazýváme \textbf{souřadnice vektoru} $\vec x$ v
+    bázi $(\vec e_1, \dots, \vec e_n)$.
+\end{definition}
+
+\begin{definition}
+    Nechť je dán bod $P\in \mathbb E_3$ a báze $(\vec e_1, \vec e_2, \vec e_3)$ vektorového
+    prostoru volných vektorů $\mathscr V_3$. Pak uspořádaná čtveřice
+    $(P, \vec e_1, \vec e_2, \vec e_3)$ je
+    \textbf{afinní soustava souřadnic} v $\mathbb E_3$ s počátkem $P$.
+\end{definition}
+
+\begin{definition}
+    Nechť je dán bod $P\in \mathbb E_3$ a báze $(\vec e_1, \vec e_2, \vec e_3)$ vektorového
+    prostoru volných vektorů $\mathscr V_n$ taková, že platí:\\
+    Jsou-li $X,Y,Z\in \mathbb E_3$ takové body, že
+    $\overrightarrow{PX}\in\vec e_1,\overrightarrow{PY}\in\vec e_2,
+    \overrightarrow{PZ}\in\vec e_3$, souřadné osy $\overrightarrow{PX},\overrightarrow{PY},
+    \overrightarrow{PZ}$ jsou navzájem kolmé (tedy báze je ortogonální) a jejich velikost je jedna (tedy báze je navíc ortonormální),
+    pak uspořádaná čtveřice $(P, \vec e_1, \vec e_2, \vec e_3)$ je \textbf{kartézská
+    soutava souřadnic} v $\mathbb E_3$ s počátkem $P$.
+\end{definition}
+
+\begin{definition}
+\textbf{Velikostí vektoru} $\overrightarrow{AB}$ rozumíme délku úsečky $AB$ a zapisujeme
+$|\overrightarrow{AB}| = |AB|.$ Vektor o velikosti jedna nazýváme \textbf{jednotkovým
+vektorem}.
+\end{definition}
