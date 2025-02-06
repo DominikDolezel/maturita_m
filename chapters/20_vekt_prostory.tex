@@ -48,7 +48,7 @@
 
 \begin{definition}\label{vekt_prost}
     Nechť je dána množina $V$, těleso $T$ a dvě operace $\bigoplus: V\times V \to V$ a
-    $\bigotimes: T\times V \to V$ (jsou ma $V$ uzavřené). Pak čtveřici $(V,T,\bigoplus,
+    $\bigotimes: T\times V \to V$ (jsou na $V$ uzavřené). Pak čtveřici $(V,T,\bigoplus,
     \bigotimes)$ je \textbf{vektorový prostor} nad tělesem $T$, jestliže $\forall p,q \in T, \vec u,
     \vec v, \vec w \in V$ platí:
     \begin{enumerate}[$i.$]
@@ -59,7 +59,7 @@
    	\item $p\bigotimes (\vec u \bigoplus \vec v)=p\bigotimes \vec u \bigoplus p\bigotimes \vec v$ (distributivita),
    	\item $(p+q)\bigotimes \vec u=p\bigotimes \vec u \bigoplus p\bigotimes \vec v$ (distributivita),
    	\item $(p\cdot q)\bigotimes \vec u = p\bigotimes (q\bigotimes \vec u)$ (asociativita vnějšího násobení),
-   	\item $\exists \vec 1 \in T$ taková, že $\forall \vec u \in V: 1\bigotimes \vec u = \vec u$ (existence neutrálního prvku vzhledem k násobení).
+   	\item $\exists 1 \in T$ taková, že $\forall \vec u \in V: 1\bigotimes \vec u = \vec u$ (existence neutrálního prvku vzhledem k násobení).
     \end{enumerate}
 \end{definition}
 
@@ -72,7 +72,7 @@
     Místo znaků $\bigoplus$ (resp. $\bigotimes$) používáme znaky $+$ (resp. $\cdot$).
     Byly použity, aby bylo jednoznačně odlišeno sčítání vektorů a čísel (resp. násobení
     vektorů skalárem a násobení čísel). Z kontextu je však jasně zřejmé, kterou operaci
-    použít.
+    použít. V dalším textu budeme již používat znaky $+$ (resp $\cdot$).
 \end{pozn}
 
 \begin{pozn}
@@ -187,7 +187,7 @@ Nechť $(\vec e_1,\dots, \vec e_k)$ je báse vektorového prostoru $V$. Pak čí
 \begin{definition}\label{izom}
     Nechť $(\vec e_1,\dots, \vec e_k)$ je báze vektorového prostoru $V$. Zobrazení
     $\varphi: A\to B$ se nazývá \textbf{homomorfismus} vzhledem k operaci $*$, jestliže
-    $$\forall x,y \in A:\varphi(x*y)=\varphi(x)+\varphi(y).$$
+    $$\forall x,y \in A:\varphi(x*y)=\varphi(x)*\varphi(y).$$
     Pokud je $\varphi$ navíc bijektivní, nazývá se \textbf{izomorfismus}.
 \end{definition}
 
@@ -227,4 +227,79 @@ Nechť $(\vec e_1,\dots, \vec e_k)$ je báse vektorového prostoru $V$. Pak čí
 \textbf{Velikostí vektoru} $\overrightarrow{AB}$ rozumíme délku úsečky $AB$ a zapisujeme
 $|\overrightarrow{AB}| = |AB|.$ Vektor o velikosti jedna nazýváme \textbf{jednotkovým
 vektorem}.
+\end{definition}
+
+\begin{definition}
+\textbf{Skalární součin} je zobrazení $V\times V\to \mathbb R$ (označené $\cdot$) s následujícími vlastnostmi:
+\begin{enumerate}[$i.$]
+\item $\vec u \cdot \vec v = \vec v \cdot \vec u,$
+\item $(\vec u+\vec v)\cdot \vec w = \vec u\cdot \vec w + \vec v\cdot \vec w,$
+\item $(p\cdot \vec u)\cdot v = p\cdot(\vec u \cdot \vec v),$
+\item $\vec u\cdot \vec v \geq 0, \vec u \cdot \vec u = 0 \iff \vec u = \vec o$
+\end{enumerate}
+pro všechna $\vec u, \vec v, \vec w \in V.$
+\end{definition}
+
+\begin{veta}
+    Pro nenulové vektory $\vec u, \vec v \in V$ platí
+    $$\vec u \cdot \vec v = |\vec u|\cdot |\vec v|\cdot \cos \varphi,$$
+    kde $\varphi$ je konvexní úhel, který svírají vektory $\vec u, \vec v.$
+\end{veta}
+
+\begin{definition}
+    Vektory jsou \textbf{ortogonální} (kolmé), jestliže jejich skalární součin
+    je roven nule.
+\end{definition}
+
+\begin{definition}
+    Množina vektorů je \textbf{ortonormální}, jestliže je ortogonální a všechny vektory mají
+    velikost 1.
+\end{definition}
+
+\begin{veta}[Gramm-Schmidtův ortogonalizační proces]
+    Je dán následující algoritmus.
+    Je dána množina vektorů $M=\left \{ \vec u_1,\dots, \vec u_n \right \}$.\\
+    Hledáme ortogonální bázi $\left \{ \vec e_1, \dots, \vec e_1 \right \}$
+    generující $\left < M \right >.$
+    \begin{enumerate}[1.]
+    \item Položme $\vec e_1 = \vec u_1.$
+   	\item $k$-tý vektor volíme tak, aby
+    \begin{equation}\label{gs}
+    \vec e_k = p_1\vec e_1 + p_2\vec e_2 + \dots +p_{k-1} \vec e_{k-1} + \vec u_k.
+    \end{equation}
+    Dosazením do (\ref{gs}) dostaneme
+    $$p_i = -\frac{\vec u_k\cdot \vec e_i}{\vec e_i\cdot \vec e_i}.$$
+    (Skalární součiny všech bázových vektorů jsou nula.)
+    \end{enumerate}
+\end{veta}
+
+\begin{definition}
+\textbf{Vektorový součin} je zobrazení $V\times V\to  V$ (označené $\times$) s následujícími vlastnostmi:
+\begin{enumerate}[$i.$]
+\item $\vec u\times \vec v = -(\vec v \times \vec u),$
+\item $(\vec u + \vec v)\times \vec w = \vec u \times \vec w + \vec v \times \vec w = \vec u\times (\vec v + \vec w),$
+\item $(p\cdot \vec u)\times \vec v = p\cdot(\vec u \times \vec v) = \vec u \times (p\cdot \vec v)$
+\end{enumerate}
+pro všechna $\vec u, \vec v, \vec w \in V.$
+\end{definition}
+
+\begin{veta}
+    Pro každé tři lineárně nezávislé vektory $\vec u, \vec v, \vec w \in V$ takové,
+   že $\vec u\times \vec v = \vec w,$ platí:
+   \begin{enumerate}[$i.$]
+   \item $|\vec w| = |\vec u|\cdot |\vec v|\cdot \sin \varphi,$ kde $\varphi$ je úhel, který svárají,
+  	\item $\vec w\perp u, \vec w \perp \vec v,$
+  	\item $\vec u, \vec v, \vec w$ jsou kladně orientované (v pravotočivé bázi).
+   \end{enumerate}
+\end{veta}
+
+\begin{pozn}
+    Velikost vektorového součinu je obsah trojúhelníka, jehož dvě strany jsou
+    násobené vektory.
+\end{pozn}
+
+\begin{definition}
+    Pro všechny vektory $\vec u, \vec v, \vec w \in V$ je
+    $$(\vec u \times \vec v) \cdot \vec w$$
+    \textbf{smíšený součin} vektorů $\vec u, \vec v, \vec w.$
 \end{definition}
