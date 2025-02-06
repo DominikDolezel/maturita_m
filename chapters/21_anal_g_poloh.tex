@@ -1,0 +1,159 @@
+\section{Analytická geometrie lineárních útvarů -- polohové vlastnosti}
+\begin{definition}
+    nechť je dána přímka $p$ a vektor $\vec u\ne \vec o$
+    takový, že existuje polopřímka $\overrightarrow{AB}$ --
+    jeho umístění s vlastností $A\in p, B\in p.$ Pak $\vec u$
+    je \textbf{směrový vektor} přímky $p.$
+\end{definition}
+
+\begin{definition}
+    Rovnici $X = A+t\vec u, t\in \mathbb R, \vec u = \vec o,$ nazveme
+    \textbf{parametrickou rovnicí přímky} v $\mathbb E_2,$ resp. $\mathbb E_3.$
+\end{definition}
+
+\begin{veta}[Určení vzájemné polohy dvou přímek v $\mathbb E_2$]
+    Jsou dány přímky $p(A,\vec u), q(B,\vec v).$ Pak
+    \begin{enumerate}[$i.$]
+    \item Jestliže má soustava rovnic
+    \begin{align*}
+        a_1+tu_1 &= b_1 + rv_1 \\
+        a_2+tu_2 &= b_2 + rv_2
+    \end{align*}
+    \begin{enumerate}[$a.$]
+    \item 0 řešení, jsou přímky $p,q$ rovnoběžné různé.
+   	\item 1 řešení, jsou přímky $p,q$ různoběžné.
+   	\item nekonečně množho řešení, přímky $p,q$ splývají.
+    \end{enumerate}
+   	\item Jestliže
+    \begin{enumerate}[$a.$]
+    \item jsou vektory $\vec u, \vec v$ lineárně nezávislé, jsou přímky $p,q$ různoběžné.
+   	\item jsou vektory $\vec u, \vec v$ lineárně závislé a
+   	\begin{itemize}
+    \item $B\in p,$ přímky $p,q$ splývají.
+   	\item $B\notin p,$ přímky $p,q$ jsou rovnoběžné různé.
+    \end{itemize}
+    \end{enumerate}
+    \end{enumerate}
+\end{veta}
+
+\begin{veta}[Určení vzájemné polohy dvou přímek v $\mathbb E_3$]
+    Jsou dány přímky $p(A,\vec u), q(B,\vec v).$ Pak
+    \begin{enumerate}[$i.$]
+    \item Jestliže má soustava rovnic
+    \begin{align*}
+        a_1+tu_1 &= b_1 + rv_1 \\
+        a_2+tu_2 &= b_2 + rv_2 \\
+        a_3+tu_3 &= b_3 + rv_3
+    \end{align*}
+    \begin{enumerate}[$a.$]
+    \item 0 řešení a vektory $\vec u, \vec v$ jsou
+    \begin{itemize}
+    \item lineárně nezávislé, jsou přímky $p,q$ mimoběžné.
+   	\item lineárně závislé, jsou přímky $p,q$ rovnoběžné různé.
+    \end{itemize}
+   	\item 1 řešení, jsou přímky $p,q$ různoběžné.
+   	\item nekonečně množho řešení, přímky $p,q$ splývají.
+    \end{enumerate}
+   	\item Jestliže
+    \begin{enumerate}[$a.$]
+    \item jsou vektory $\vec u, \vec v$ lineárně nezávislé a
+    \begin{itemize}
+    \item $p\cap q \ne \emptyset,$ jsou přímky $p,q$ různoběžné.
+   	\item $p\cap q = \emptyset,$ jsou přímky $p,q$ mimoběžné.
+    \end{itemize}
+   	\item jsou vektory $\vec u, \vec v$ lineárně závislé a
+   	\begin{itemize}
+    \item $B\in p,$ přímky $p,q$ splývají.
+   	\item $B\notin p,$ přímky $p,q$ jsou rovnoběžné různé.
+    \end{itemize}
+    \end{enumerate}
+    \end{enumerate}
+\end{veta}
+
+\begin{veta}[Vzájemná poloha dvou přímek]
+    Nechť $p(A,\vec u), q(B, \vec v)$ jsou dvě přímky. Pak platí
+    \begin{enumerate}[$i.$]
+    \item $p\parallel q \land p=q \iff \dim(\vec u, \vec v, \overrightarrow{AB})=1,$
+   	\item $p\parallel q \land p\ne q \iff \dim(\vec u, \vec v, \overrightarrow{AB})=2 \land \dim ( u, \vec v) = 1$,
+    \item $p, q$ jsou různoběžné $ \iff \dim(\vec u, \vec v, \overrightarrow{AB})=2 \land \dim ( u, \vec v) = 2$,
+    \item $p, q$ jsou mimoběžné $\iff \dim(\vec u, \vec v, \overrightarrow{AB})=3.$
+    \end{enumerate}
+\end{veta}
+
+\begin{definition}
+    $ax+by+c=0, (a,b)\ne(0,0)$ je \textbf{obecná rovnice přímky} v $\mathbb E_2$.
+\end{definition}
+
+\begin{definition}
+    Vektor kolmý ke směrovému vektoru přímky se nazývá \textbf{normálový}.
+\end{definition}
+
+\begin{definition}
+    Rovnice $y=kx+q$ se nazývá \textbf{směrnicový tvar rovnice přímky} v $\mathbb E_2$,
+    $k$ je \textbf{směrnice} přímky.
+\end{definition}
+
+\begin{definition}
+Rovnice $\frac{x}{q}+\frac{y}{p}=1$ se nazývá \textbf{úsekový tvar rovnice přímky} v $\mathbb E_2$.
+\end{definition}
+
+\begin{definition}
+Nechť $\rho$ je rovina, $\vec u, \vec v$ lineárně nezávislé vektory a $\overrightarrow{AB},
+\overrightarrow{AC}, A,B,C\in \rho$ jejich umístění. Pak$\vec u, \vec v$ je
+\textbf{zaměření} roviny $\rho.$
+\end{definition}
+
+\begin{definition}
+    Rovnice $X=A+r\vec u+s\vec v$ se nazývá \textbf{parametrická rovnice roviny}.
+\end{definition}
+
+\begin{definition}
+    $ax+by+cz+d=0, (a,b,c)\ne(0,0,0)$ se nazývá \textbf{obecná rovnice roviny}.
+\end{definition}
+
+\begin{definition}
+    Vektor kolmý k oběma směrovým vektorům roviny se nazývá \textbf{normálový}.
+\end{definition}
+
+\begin{veta}[Vzájemná poloha dvou rovin daných obecnými rovnicemi]
+    Nechť $\rho: ax+by+cz+d=0, \sigma: ex+fy+gz+h=0$ jsou roviny. Pak
+    \begin{enumerate}[$i.$]
+    \item $\rho = \sigma \iff (a,b,c,d) = k(e,f,g,h), k\in \mathbb R,$
+   	\item $\rho \parallel \sigma \land \rho \ne \sigma \iff (a,b,c) = k(e,f,g), k\in \mathbb R
+    \land d\ne kh,$
+   	\item $\rho \nparallel \sigma \iff \forall k \in \mathbb R: (a,b,c) \ne k(e,f,g)$.
+    \end{enumerate}
+\end{veta}
+
+\begin{veta}[Vzájemná poloha dvou rovin daných parametrickými rovnicemi]
+    Nechť $\rho(A,\vec u, \vec v), \sigma(B,\vec k, \vec l)$ jsou roviny. Pak
+    \begin{enumerate}[$i.$]
+    \item $\rho = \sigma \iff \dim (\vec u, \vec v, \vec k, \vec l) = 2 \land \dim (\vec u, \vec v, \vec k, \vec l, \overrightarrow{AB})=2,$
+   	\item $\rho \parallel \sigma \land \rho \ne \sigma \iff \dim (\vec u, \vec v, \vec k, \vec l) = 2 \land \dim (\vec u, \vec v, \vec k, \vec l, \overrightarrow{AB})=3,$
+   	\item $\rho \nparallel \sigma \iff \dim (\vec u, \vec v, \vec k, \vec l) = 3$.
+    \end{enumerate}
+\end{veta}
+
+\begin{veta}[Vzájemná poloha přímky a roviny dané parametrickou rovnicí]
+    Nechť $p(A,\vec u), \rho(B,\vec v, \vec w)$ jsou přímka a rovina. Pak
+    \begin{enumerate}[$i.$]
+    \item $p\subseteq \rho \iff \dim (\vec v, \vec w, \vec u) = 2 \land \dim (\vec v, \vec w, \vec u, \vec l, \overrightarrow{AB})=2,$
+   	\item $p \parallel \rho \land p \not\subset \rho \iff \dim (\vec v, \vec w, \vec u) = 2 \land \dim (\vec v, \vec w, \vec u, \vec l, \overrightarrow{AB})=3,$
+   	\item $p \nparallel \rho \iff \dim (\vec v, \vec w, \vec u) = 3$.
+    \end{enumerate}
+\end{veta}
+
+\begin{veta}[Vzájemná poloha přímky a roviny dané obecnou rovnicí]
+    Nechť $p(A,\vec u), \rho: ax+by+cz+d=0$ jsou přímka a rovina. Pak
+    \begin{enumerate}[$i.$]
+    \item $p\subseteq \rho \iff \vec u \cdot \vec n = 0\land A\in p,$
+   	\item $p \parallel \rho \land p \not\subset \rho \iff \vec u\cdot \vec n = 0\land A\notin p,$
+   	\item $p \nparallel \rho \iff \vec u\cdot \vec n\ne 0$.
+    \end{enumerate}
+\end{veta}
+
+\begin{definition}
+Nechť $p,q$ jsou dvě mimoběžné přímky. Přímka $r$, která je různoběžná s přímkami
+$p,q$ se nazývá \textbf{příčkou mimoběžek} $p,q$. Pokud je navíc $r$ kolmá na $p,q$,
+nazývá se \textbf{osou mimoběžek} $p,q$.
+\end{definition}
