@@ -1,0 +1,87 @@
+\section{Analytická geometrie lineárních útvarů -- metrické vlastnosti}
+\begin{definition}
+    Nechť $A,B\subseteq \mathbb E_3$ jsou dva podprostory $\mathbb E_3$. \textbf{Vzdáleností
+    podprostorů} $A,B$ nazveme nezáporné reálné číslo $\rho(A,B)$ definovené takto:
+    $$\rho(A,B) = \min \{ |XY|: X\in A, Y\in B \},$$
+    kde $|XY|$ je délka úsečky $XY.$
+\end{definition}
+
+\begin{veta}
+    Vzdálenost dvou bodů $A,B$ je délka úsečky $AB.$
+\end{veta}
+
+\begin{veta}
+    Nechť $A[a_1,a_2]\in \mathbb E_2$ je bod, $p:ax+by+c=0$ je přímka. Pak
+    $$\rho(A,p)=\frac{|aa_1+ba_2+c|}{\sqrt{a^2+b^2} }.$$
+\end{veta}
+
+\begin{pozn}
+    Vzdálenost bodu $A$ od přímky $p$ v $\mathbb E_3$ řešíme třeba vyjádřením délky úsečky
+    $AX,$ kde $X$ je nějaký bod na přímce $p$ a nalezením jejího minima.
+\end{pozn}
+
+\begin{veta}\label{vzdbodrov}
+    Nechť $A[a_1,a_2,a_3]\in \mathbb E_3$ je bod, $\alpha:ax+by+cz+d=0$ je rovina. Pak
+    $$\rho(A,\alpha)=\frac{|aa_1+ba_2+ca_2+d|}{\sqrt{a^2+b^2+c^2} }.$$
+\end{veta}
+
+\begin{veta}\label{vzdpr}
+    Nechť $p:ax+by+c=0,q:ax+by+d=0$ jsou dvě rovnoběžné přímky. Pak
+    $$\rho(p,q)=\frac{|d-c|}{\sqrt{a^2+b^2} }.$$
+\end{veta}
+
+\begin{pozn}
+    Při hledání vzdálenosti dvou rovnoběžných přímek v $\mathbb E_3$ na jedné z nich zvolíme
+    libovolný bod a dále pokračujeme podle věty \ref{vzdpr}.
+\end{pozn}
+
+\begin{pozn}
+    Při hledání vzdálenosti přímky od roviny s ní rovnoběžné na přímce zvolíme
+    libovolný bod a dále pokračujeme podle věty \ref{vzdbodrov}.
+\end{pozn}
+
+\begin{veta}\label{dverov}
+    Nechť $\alpha:ax+by+cz+d=0,\beta:ax+by+cz+e=0$ jsou dvě rovnoběžné roviny. Pak
+    $$\rho(\alpha,\beta)=\frac{|e-d|}{\sqrt{a^2+b^2+c^2} }.$$
+\end{veta}
+
+\begin{pozn}
+    Vzdálenost mimoběžných přímek určujeme buď pomocí normálového vektoru, rovin,
+    ve kterých přímky leží a následně podle věty \ref{dverov}, nebo určením
+    osy mimoběžek.
+\end{pozn}
+
+\begin{definition}
+    \textbf{Odchylka} vektorů je úhel, který dané vektory svírají. Značíme $|\sphericalangle \vec u, \vec v|.$
+\end{definition}
+
+\begin{veta}
+    Nechť jsou dány vektory $\vec u, \vec v.$ Pak
+    $$|\sphericalangle \vec u, \vec v|=\arccos \frac{\vec u \cdot \vec v}{|\vec u|\cdot |\vec v|}.$$
+\end{veta}
+
+\begin{pozn}
+    Platí obdobně i pro přímky dané obecnou rovnicí (vektory $\vec u, \vec v$ jsou
+    jejich normálové vektory.)
+\end{pozn}
+
+\begin{veta}
+    Nechť jsou dány přímky $p(A,\vec u), q(B, \vec v).$ Pak
+    $$|\sphericalangle p, q|=\arccos \frac{\vec u \cdot \vec v}{|\vec u|\cdot |\vec v|}.$$
+\end{veta}
+
+\begin{veta}
+Nechť jsou dány přímky $p(A,\vec u), q:ax+by+c=0, \vec n(a,b).$ Pak
+$$|\sphericalangle p, q|=\arcsin \frac{\vec u \cdot \vec n}{|\vec u|\cdot |\vec n|}.$$
+\end{veta}
+
+\begin{veta}
+    Nechť $p(A,\vec u)$ je přímka, $\alpha:ax+by+cz+d=0$ rovina, $\vec n(a,b,c)$. Pak
+    $$|\sphericalangle p, \alpha|=\arcsin \frac{\vec u \cdot \vec n}{|\vec u|\cdot |\vec n|}.$$
+\end{veta}
+
+\begin{veta}
+    Nechť $\alpha:ax+by+cz+d=0, ex+fy+gz+h=0$ jsou dvě roviny a $\vec m(a,b,c), \vec n(e,f,g).$
+    Pak
+    $$|\sphericalangle \alpha, \beta|=\arcsin \frac{\vec m \cdot \vec n}{|\vec m|\cdot |\vec n|}.$$
+\end{veta}
