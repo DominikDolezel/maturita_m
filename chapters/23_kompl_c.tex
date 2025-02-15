@@ -1,0 +1,137 @@
+\section{Komplexní čísla}
+\begin{definition}
+Množinu označenou $\mathbb C = \left \{ (a,b)\ a,b, \in \mathbb R \right \} $
+spolu s operacemi $+$ a $\cdot$ definovanými následovně:
+\begin{enumerate}[$i.$]
+\item $(a,b) + (c,d) = (a+c, b+d),$
+\item $(a,b) \cdot (c,d) = (ac-bd, ad+bc)$,
+\end{enumerate}
+nazýváme \textbf{komplexními čísly}.
+\end{definition}
+
+\begin{veta}
+    Pro všechna $x=(a,b),y=(c,d) \in \mathbb C$ platí
+    \begin{enumerate}[$i.$]
+    \item $x-y=(a-c, b-d)$,
+   	\item $y\ne (0,0): \frac{x}{y}=\left ( \frac{ac+bd}{b^2+d^2}, \frac{bc-ad}{b^2+d^2} \right ) .$
+    \end{enumerate}
+\end{veta}
+
+\begin{veta}
+    Množina $\mathbb C$ spolu s operacemi $+,\cdot$ tvoří pole.
+\end{veta}
+
+\begin{pozn}
+    Množina $M$ spolu s operacemi $+,\cdot$ tvoří pole, pokud
+    \begin{enumerate}[$i.$]
+    \item $(M,+)$ je komutativní grupa,
+   	\item $(M-\left \{ 0 \right \} ,\cdot)$ je komutativní grupa,
+   	\item platí distributivní zákony.
+    \end{enumerate}
+    Polem je třeba $\mathbb R, \mathbb Q;$ $\mathbb Z$ však polem není (neexistují
+    inverzní prvky vzhledem k násobení -- 5 krát co je jedna?).
+\end{pozn}
+
+\begin{veta}
+    Množiny $\mathbb R$ a $(x,0)\in \mathbb C$ jsou izomorfní.
+\end{veta}
+
+\begin{proof}
+    Pro všechna $x,y \in \mathbb R$ platí
+    \begin{enumerate}[$i.$]
+    \item $\varphi(x)+\varphi(y) = \varphi(x+y),$
+   	\item $\varphi(x)\cdot\varphi(y) = \varphi(xy),$
+    \end{enumerate}
+    kde $\varphi$ je zobrazení z $\mathbb R$ do $\mathbb C$: $\varphi(a)=(a,0).$
+\end{proof}
+
+\begin{proof}
+    Dále budeme zapisovat komplexní číslo $(a,b)$ jako $a+bi.$
+\end{proof}
+
+\begin{definition}
+    Tvar komplexního čísla $a+bi$ nazýváme \textbf{algebraický}. Číslo $a$ je jeho
+   \textbf{reálná část}, $b$ \textbf{imaginární část}.\\
+  Číslo $(0,1)$ označme $i$ a nazývejme \textbf{imaginární jednotka}. \\
+  Čísla $a+bi,$ kde $b\ne 0$ nazývejme \textbf{imaginární}. Pokud taky $a=0$,
+  nazýváme je \textbf{ryze imaginární}.
+\end{definition}
+
+\begin{pozn}
+    Komplexní číslo $x=(a,b)$ lze chápat jako bod v rovině se souřadnicemi $[a,b].$
+\end{pozn}
+
+\begin{definition}
+    Nechť je dáno komplexní číslo $x= a+bi.$ Číslo $\overline{x}=a-bi$ nazýváme
+   \textbf{komplexně sdruženým} k číslu $x$. Číslo $|x|=\sqrt{a^2+b^2}$ je \textbf{
+   absolutní hodnota} čísla $x$. Jestliže $|x|=1,$ číslu $x$ říkáme \textbf{komplexní jednotka}.
+\end{definition}
+
+\begin{definition}
+\textbf{Argumentem} komplexního čísla nazýváme orientovaný úhel $\varphi$, který svírá kladná
+poloosa reálné osy s polohovým vektorem daného bodu představujícím dané komplexní číslo.
+\end{definition}
+
+\begin{veta}
+    Každé komplexní číslo $x=a+bi, x\ne 0,$ lze zapsat ve tvaru
+    $$x=|x|(\cos \varphi + i \sin \varphi),$$
+    kde $\varphi$ je argumentem čísla $x$. Dále platí:
+    \begin{align*}
+        \cos \varphi = \frac{a}{|x|}, && \sin \varphi = \frac{b}{|x|}.
+    \end{align*}
+\end{veta}
+
+\begin{definition}
+    Tvar komplexního čísla $x= |x|(\cos \varphi + i\sin\varphi)$ nazýváme \textbf{goniometrický}.
+\end{definition}
+
+\begin{pozn}
+    Každé komplexní číslo lze zapsat uspořádanou dvojicí $x=(|x|, \varphi).$
+    Tato čísla jsou \textbf{polárními souřadnicemi} komplexního čísla $x$.
+\end{pozn}
+
+\begin{veta}[Moivreova]
+    Nechť je dáno komplexní číslo $x=|x|(\cos \varphi + i \sin \varphi)$ a $n\in \mathbb N$
+    je nenulové číslo. Pak platí
+    $$x^n = |z|^n (\cos n\varphi + i \sin n \varphi).$$
+\end{veta}
+
+\begin{pozn}
+    Gaussova rovina je množina bodů $[a,b]; a,b \in \mathbb R$.
+    Každému prvku této množiny odpovídá komplexní číslo $(a,b).$ Osa $x$ odpovídá
+    reálné části tohoto komplexního čísla, osa $y$ imaginární části.
+\end{pozn}
+
+\begin{definition}
+\textbf{Binomickou rovnicí} s neznámou $x\in \mathbb C$ nazýváme každou rovnici
+tvaru $x^n=a$, kde $a\in \mathbb C,n\in \mathbb N, n\geq 2.$ Každý komplexní
+kořen binomické rovnice nazýváme \textbf{komplexní $n$-tou odmocninou} z čísla $a.$
+\end{definition}
+
+\begin{definition}
+\textbf{Kvadratickou rovnicí s} (komplexní) \textbf{neznámou} $x\in \mathbb C$ a
+\textbf{reálnými} (resp. \textbf{komplexními}) \textbf{koeficienty} $a,b,c$
+nazýváme každou rovnici tvaru
+$ax^2+bx+c=0,a,b,c\in \mathbb R,a\ne0$ (resp. $a,b,c \in \mathbb C,a\ne 0$).
+\end{definition}
+
+\begin{definition}
+\textbf{Algebraická rovnice} $n$-tého stupně s jednou neznámou $x\in \mathbb C$ je každá
+rovnice tvaru $P(x)=0,$ kde $P(x)$ je polynom $n$-tého stupně s reálnými (resp.
+komplexními) koeficienty.
+\end{definition}
+
+\begin{veta}[Základní věta algebry]
+    Každý polynom $n$-tého stupně s komplexními koeficienty má v množině $\mathbb C$
+    právě $n$ kořenů, počítáme-li každý kořen tolikrát, kolik je jeho násobnost.
+\end{veta}
+
+\begin{veta}
+    Má-li algebraická rovnice s reálnými koeficienty imaginární kořen
+    $a+bi$, má taky kořen $a-bi.$
+\end{veta}
+
+\begin{definition}
+\textbf{Trinomická rovnice} s neznámou $x\in \mathbb C$ a reálnými koeficienty $a,b,c \in \mathbb R$
+nazýváme rovnici tvaru $ax^p + bx^q + c = 0,$ kde $p,q\in \mathbb N, p>q, a,b\ne 0.$
+\end{definition}
