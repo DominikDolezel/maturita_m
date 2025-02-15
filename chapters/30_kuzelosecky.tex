@@ -1,0 +1,167 @@
+\section{Kuželosečky}
+\begin{definition}
+    Nechť je v $\mathbb E_2$ dána afinní soustava souřadnic $\left < P,\vec e_1, \vec e_2 \right > $.
+    Nechť
+    \begin{equation}\label{kuzelosec}
+        a_{11}x^2+2a_{12}xy+a_{22}y^2+2a_{13}x+2a_{23}y+a_{33}=0,
+    \end{equation}
+    kde $a_{ij}\in \mathbb R, a_{11}^2 + a_{22}^2 + a_{33}^2\ne 0.$ Pak množinu všech
+    bodů $[x,y] \in \mathbb E_2$, jejichž souřadnice vyhovují rovnici \ref{kuzelosec},
+    nazýváme \textbf{kuželosečkou}. Rovnici \ref{kuzelosec} nazýváme \textbf{rovnicí kuželosečky}.
+\end{definition}
+
+\begin{definition}
+    Nechť $k$ je kuželosečka s rovnicí \ref{kuzelosec}. Pak matici
+    $$
+        A = \begin{pmatrix}
+            a_{11} & a_{12} & a_{13} \\
+            a_{12} & a_{22} & a_{23} \\
+            a_{13} & a_{23} & a_{33}
+        \end{pmatrix}
+    $$
+    nazýváme \textbf{maticí kuželosečky} $k$.
+\end{definition}
+
+\begin{pozn}
+    Rovnici kuželosečky lze zapsat pomocí její matice $A$ jako
+    $$\begin{pmatrix}
+        x & y & 1
+    \end{pmatrix}\cdot A \cdot \begin{pmatrix}
+        x\\
+        y\\
+        1
+    \end{pmatrix}=0.$$
+\end{pozn}
+
+\begin{definition}
+    Nechť $k$ o rovnici \ref{kuzelosec} je kuželosečka. Každou kuželosečku lze
+    vhodnou transformací soustavy souřadnic převést na jednu z následujících
+    tvarů, které nazýváme \textbf{kanonickými rovnicemi kuželosečky}.
+    \begin{enumerate}[$i.$]
+    \item $\frac{x^2}{a^2} + \frac{y^2}{b^2}=1$ (elipsa, $a,b$ jsou její poloosy),
+   	\item $\frac{x^2}{a^2} + \frac{y^2}{b^2}=-1$ (imaginární elipsa),
+   	\item $\frac{x^2}{a^2} - \frac{y^2}{b^2}=1$ (hyperbola, $a,b$ jsou její poloosy),
+   	\item $y^2=2px, p>0$ (parabola, $p$ je její parametr),
+   	\item $y^2 = k^2x^2, k>0$ (dvě různoběžky),
+   	\item $y^2 = -k^2x^2, k>0$ (bod),
+   	\item $y^2 = r^2, r>0$ (dvě různé rovnoběžky),
+   	\item $y^2 = -r^2, r>0$ (prázdná množina),
+   	\item $y^2=0$ (dvojná přímka).
+    \end{enumerate}
+\end{definition}
+
+\begin{definition}
+    Kuželosečka je \textbf{singulární}, jestliže determinant její matice je nulový.
+    V opařném případě je \textbf{regulární}.
+\end{definition}
+
+\begin{definition}
+    Vyhovuje-li rovnici kuželosečky alespoň jeden bod, je to kuželosečka
+    \textbf{bodově reálná}. V opačném případě je \textbf{formálně reálná}.
+\end{definition}
+
+\begin{definition}
+    Elipsa, jejíž poloosy mají stejnou velikost, se nazývá \textbf{kružnice}.
+\end{definition}
+
+\begin{definition}
+    Přímka, podle níž je kuželosečka souměrná, se nazývá její \textbf{osou}.
+\end{definition}
+
+\begin{definition}
+\textbf{Elipsa} je množina všech bodů v rovině, které mají od dvou různých bodů v rovině,
+které se nazývají \textbf{ohniska}, konstantní součet vzdálenosti.
+\end{definition}
+
+\begin{definition}
+\textbf{Hyperbola} je množina všech bodů v rovině, které mají od dvou různých
+bodů v rovině, které se nazývají \textbf{ohniska}, konstantní absolutní
+hodnotu rozdílu vzdálenosti.
+\end{definition}
+
+\begin{definition}
+\textbf{Parabola} je množina všech bodů v rovině, které mají od pevného bodu, který
+se nazývá \textbf{ohnisko} a pevné přímky, která se nazývá \textbf{řídící přímka},
+na níž tento bod neleží, stejnou vzdálenost.
+\end{definition}
+
+\begin{pozn}
+    Pro přehled s rovnicemi, obrázky a popisem všech prvků těchto kuželoseček
+    viz přílohu \ref{appb}.
+\end{pozn}
+
+\begin{definition}
+    Přímka, která má s regulární kuželosečkou společný právě jeden bod $T$ a neobsahuje
+    žádný bod vnitřní oblasti kuželosečky, se nazývá její \textbf{tečnou} a bod
+    $T$ jejím \textbf{bodem dotyku}.
+\end{definition}
+
+\begin{definition}
+Přímka, která má s regulární kuželosečkou společné právě dva body $T,T^\prime$, se
+nazývá její \textbf{sečnou} a úsečka $TT^\prime$ \textbf{tětivou}.
+\end{definition}
+
+\begin{veta}
+    Nechť \ref{kuzelosec} je obecná rovnice kuželosečky a nechť tečna $t$ této
+    kuželosečky se jí dotýká v bodě $T[x_r, y_r].$ Pak tečna $t$ má rovnici
+    \begin{equation}\label{kuztec}
+        (a_{11}x_r+a_{12}y_r+a_{13})x+(a_{12}x_r+a_{22}y_r+a_{23})y+a_{13}x_r +
+        a_{23}y_r+a_{33}=0.
+    \end{equation}
+\end{veta}
+
+\begin{pozn}
+    Rovnici \ref{kuztec} lze zapsat jako
+    $$
+    \begin{pmatrix}
+        x & y & 1
+    \end{pmatrix}\cdot A \cdot \begin{pmatrix}
+        x_r \\
+        y_r \\
+        1
+    \end{pmatrix}=0.
+    $$
+\end{pozn}
+
+\begin{veta}[Rovnice tečen regulárních kuželoseček v základní poloze]
+    Nechť je dána kuželosečka a její tečna s bodem dotyku $T[x_r,y_r].$ Pak tečna
+    má rovnici
+    \begin{enumerate}[$i.$]
+    \item kružnice se středem v $S[m,n]:(x-m)(x_r-m)+(y-n)(y_r-n)=r^2,$
+   	\item elipsa se středem v $S[m,n]:\frac{(x-m)(x_r-m)}{a^2}+\frac{(y-n)(y_r-n)}{b^2}=1$,
+   	\item hyperbola se středem $S[m,n]:\frac{(x-m)(x_r-m)}{a^2}-\frac{(y-n)(y_r-n)}{b^2}=1$,
+   	\item parabola s vrcholem $V[m,n]:(y-n)(y_r-n)=p(x+x_r-2m).$
+    \end{enumerate}
+\end{veta}
+
+\begin{definition}
+    Směr v rovině určený vektorem $\vec u(u_1, u_2)\ne \vec o$ nazveme
+    \textbf{asymptotickým směrem} kuželosečky o rovnici \ref{kuzelosec}, jestliže
+    $$a_{11}u_1^2 + 2a_{12}u_1u_2+a_{22}u_2^2=0.$$
+\end{definition}
+
+\begin{definition}
+    Bod $S$ je středem kuželosečky $k$ právě tehdy, když $\forall X\in k:\exists X^\prime\in k: S$ je středem $XX^\prime.$
+\end{definition}
+
+\begin{veta}
+    Bod $S[s_1,s_2]$ je střed kuželosečky o rovnici \ref{kuzelosec} právě tehdy, když
+    \begin{align*}
+        a_{11}s_1 + a_{12}s_2+a_{13}&=0,\\
+        a_{12}s_1 + a_{22}s_2 + a_{23}&=0,
+    \end{align*}
+\end{veta}
+
+\begin{definition}
+    Jestliže střed kuželosečky na ní leží, pak je to \textbf{singulární bod}.
+\end{definition}
+
+\begin{definition}
+\textbf{Kulová plocha} (resp. \textbf{koule}) se středem $S$ a poloměrem $r>0$ je množina všech bodů v prostoru,
+jejichž vzdálenost od $S$ je $r$ (resp. menší nebo rovna $r$).
+\end{definition}
+
+\begin{definition}
+\textbf{Tečná rovina} kulové plochy je taková rovina, která má s kulovou plochou právě
+jeden společný bod.
+\end{definition}
