@@ -1,0 +1,175 @@
+\section{Posloupnosti}
+\begin{definition}
+Nechť $A$ je množina. Zobrazení $a:\mathbb N\to A$ (nebo $a:\left \{ 1,2,...,k \right \} \to A$)
+se nazývá \textbf{posloupnost} prvků množiny $A$, $k\in \mathbb N.$
+\end{definition}
+
+\begin{definition}
+Nechť $\left \{ a_n \right \}_{n=1}^\infty $ je posloupnost reálných čísel. Pak je
+\begin{enumerate}[$i.$]
+\item \textbf{rostoucí} právě tehdy, když $\forall n \in \mathbb N: a_n< a_{n+1},$
+\item \textbf{klesající} právě tehdy, když $\forall n \in \mathbb N: a_n> a_{n+1},$
+\item \textbf{nerostoucí} právě tehdy, když $\forall n \in \mathbb N: a_n\geq a_{n+1},$
+\item \textbf{neklesající} právě tehdy, když $\forall n \in \mathbb N: a_n\leq a_{n+1}.$
+\end{enumerate}
+Posloupnost, která má jednu z těchto vlastností, se nazývá \textbf{monotónní}.
+Posloupnost rostoucí nebo klesající nazýváme \textbf{ryze monotónní}.
+\end{definition}
+
+\begin{definition}
+    Nechť $\left \{ a_n \right \}_{n=1}^\infty $ je posloupnost reálných čísel. Pak je
+    \begin{enumerate}[$i.$]
+    \item \textbf{prostá} právě tehdy, když $\forall m,n\in \mathbb N: m\ne n \implies a_m\ne a_n,$
+   	\item \textbf{stacionární} (konstantní) právě tehdy, když $\forall n \in \mathbb N:a_n = a_{n+1}.$
+    \end{enumerate}
+\end{definition}
+
+\begin{definition}
+    Nechť $\left \{ a_n \right \}_{n=1}^\infty $ je posloupnost reálných čísel. Pak je
+    \begin{enumerate}[$i.$]
+    \item \textbf{zdola omezená}, pokud existuje $k\in \mathbb R$ takové, že
+    $\forall n \in \mathbb N: a_n \geq k,$
+   	\item \textbf{shora omezená}, pokud existuje $k\in \mathbb R$ takové, že
+    $\forall n \in \mathbb N: a_n \leq k.$
+    \end{enumerate}
+    Posloupnost je \textbf{omezená}, pokud je omezení shora i zdola.
+    Pokud není omezení ani shora, ani zdola, je \textbf{neomezená}.
+\end{definition}
+
+\begin{definition}
+Nechť $\left \{ a_n \right \}_{n=1}^\infty $ je posloupnost reálných čísel a
+$\left \{ k_1,k_2,\dots,k_n,\dots \right \} $ je rostoucí posloupnost přirozených čísel.
+Pak posloupnost $\left \{{a_k}_n \right \}_{n=1}^\infty = \left \{ {a_k}_1, {a_k}_2, \dots, {a_k}_n,\dots \right \}  $
+je \textbf{posloupnost vybraná z posloupnosti} $\left \{ a_n \right \}_{n=1}^\infty $.
+\end{definition}
+
+\begin{definition}
+Posloupnost $\left \{ a_n \right \}_{n=1}^\infty $ je \textbf{aritmetická} právě
+tehdy, když
+$$\exists d \in \mathbb R: \forall n \in \mathbb N: a_n=a_{n-1}+d$$
+a číslo $d$ se nazývá \textbf{diference}.
+\end{definition}
+
+\begin{veta}
+    Nechť $\left \{ a_n \right \}_{n=1}^\infty $ je aritmetická posloupnost s diferencí
+    $d$. Pak platí:
+    \begin{enumerate}[$i.$]
+    \item $\forall n\in \mathbb N: a_n = a_1 + (n-1)d,$
+   	\item $\forall r,s \in \mathbb N: a_s = a_r + (s-r)d.$
+    \end{enumerate}
+\end{veta}
+
+\begin{proof}
+\begin{enumerate}[$i.$]
+\item Matematickou indukcí:
+\begin{enumerate}[1.]
+\item $n=1: a_1 = a_1+(1-1)d$ platí
+\item $a_n = a_1+(n-1)d \implies a_{n-1}=a_1+(n)d,$ takže $a_{n+1}=a_n+d=a_1+(n-1)d+d=a_1(n)d$
+\end{enumerate}
+\item Užitím již dokázeného vztahu:
+\begin{align*}
+    a_s &= a_1 + (s-1)d,\\
+    a_r &= a_1 + (r-1)d.
+\end{align*}
+Sečtením dostáváme
+$$a_s-a_r = (s-1)d-(r-1)d,$$
+takže
+$$a_s=a_r+(s-r)d,$$
+což jsme chtěli dokázat.\qedhere
+\end{enumerate}
+\end{proof}
+
+\begin{veta}
+Nechť $\left \{ a_n \right \}_{n=1}^\infty $ je aritmetická posloupnost s diferencí
+$d$. Nechť
+$$S_n=a_1+a_2+\dots+a_n$$
+je součet prvních $n$ členů nekonečné aritmetické posloupnosti nebo součet
+$n$-členné aritmetické poslouppnosti. Pak platí:
+$$\forall n \in \mathbb N:S_n = \frac{1}{2}n(a_1+a_n).$$
+\end{veta}
+
+\begin{proof}
+\begin{align*}
+    S_n &= a_1+a_2+a_3+\dots+a_{n-1}+a_n \\
+    &= a_1 + (a_1+d)+ (a_1+2d)+ \dots + [a_1+(n-2)d]+[a_1+(n-1)d]\\
+    &= [a_1+(n-1)d]+[a_1+(n-2)d]+\dots+(a_1+2d)+(a_1+d)+a_1\\
+    2S_n &= 2a_1 + (n-1)d + 2a_1 + (n-1)d + \dots + 2a_1 + (n-1)d + 2a_1 + (n-1)d\\
+    2S_n &= n [a_1 + a_1 + (n-1)d], \textrm{ takže }\\
+    S_n &= \frac{n(a_1+a_n)}{2},
+\end{align*}
+což jsme chtěli dokázat. \qedhere
+\end{proof}
+
+\begin{definition}
+Posloupnost $\left \{ a_n \right \}_{n=1}^\infty $ je \textbf{geometrická} právě
+tehdy, když
+$$\exists q \in \mathbb R: \forall n \in \mathbb N: a_n=a_{n-1}\cdot q$$
+a číslo $q$ se nazývá \textbf{kvocient}.
+\end{definition}
+
+\begin{veta}
+    Nechť $\left \{ a_n \right \}_{n=1}^\infty $ je geometrická posloupnost s kvocientem
+    $q$. Pak platí:
+    \begin{enumerate}[$i.$]
+    \item $\forall n\in \mathbb N: a_n = a_1 \cdot q^{n-1},$
+   	\item $\forall r,s \in \mathbb N: a_s = a_r \cdot q^{s-r}.$
+    \end{enumerate}
+\end{veta}
+
+\begin{proof}
+\begin{enumerate}[$i.$]
+\item Matematickou indukcí:
+\begin{enumerate}[1.]
+\item $n=1: a_1 = a_1\cdot q^0$ platí
+\item $a_n = a_1\cdot q^{n-1}\implies a_{n+1}=a_1\cdot q^n,$ takže $a_{n+1}=a_na_n\cdot q=a_1\cdot q^{n-1}\cdot q=a_1\cdot q^n$
+\end{enumerate}
+\item Užitím již dokázeného vztahu:
+\begin{align*}
+    a_s &= a_1\cdot q^{s-1},\\
+    a_r &= a_1\cdot q^{r-1}.
+\end{align*}
+Vydělením dostáváme
+$$\frac{a_s}{a_r} = \frac{a_1\cdot q^{x-1}}{a_1\cdot q^{r-1}}=q^{s-r},$$
+takže
+$$a_s=a_r\cdot q^{s-r},$$
+což jsme chtěli dokázat.\qedhere
+\end{enumerate}
+\end{proof}
+
+\begin{veta}
+Nechť $\left \{ a_n \right \}_{n=1}^\infty $ je geometrická posloupnost s kvocientem
+$q$. Nechť
+$$S_n=a_1+a_2+\dots+a_n$$
+je součet prvních $n$ členů nekonečné geometrické posloupnosti nebo součet
+$n$-členné geometrické poslouppnosti. Pak platí $\forall n \in \mathbb N$:
+\begin{enumerate}[$i.$]
+\item $q=1: S_n=na_1,$
+\item $q\ne 1: S_n = a_1\cdot \frac{q^n-1}{q-1}.$
+\end{enumerate}
+\end{veta}
+
+\begin{proof}
+\begin{align*}
+    S_n &= a_1+a_2+a_3+\dots+a_{n-1}+a_n \\
+    &= a_1 + a_1q+ a_1q^2+ \dots + a_1q^{n-1}\\
+    qS_n &= a_1q + a_1q^2 +  \dots + a_1q^{n-1} + a_1q\\
+    qS_n-S_n &= -a_1+a_1q^n\\
+    S_n(q-1) &= a_1(q^n-1), \textrm{ jestli } q\ne 0, \textrm{ pak}\\
+    S_n &= \frac{a_1(q^n-1)}{q-1}
+\end{align*}
+což jsme chtěli dokázat. \qedhere
+\end{proof}
+
+\begin{pozn}
+    Rozlišujeme dva typy zadání posloupnosti, a to:
+    \begin{enumerate}[$i.$]
+    \item \textbf{rekurentní}: pomocí jednoho nebo několika předchozích členů
+    \begin{align*}
+        a_n=a_{n-1}+d, & & a_{n-1}\cdot q;
+    \end{align*}
+   	\item \textbf{explicitní}: $n$-tý člen je vyjádřen pomocí $n$
+    \begin{align*}
+        a_n=a_1+(n-1)d, & & a_n = a_1\cdot q^{n-1}.
+    \end{align*}
+    \end{enumerate}
+\end{pozn}
