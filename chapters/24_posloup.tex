@@ -173,3 +173,78 @@ což jsme chtěli dokázat. \qedhere
     \end{align*}
     \end{enumerate}
 \end{pozn}
+
+\begin{definition}
+Nechť $\left \{ a_n \right \}_{n=1}^\infty $ je posloupnost, $A\in \mathbb R$ číslo.
+Posloupnost $\left \{ a_n \right \}_{n=1}^\infty $ má \textbf{limitu} rovnu číslu
+$A,$ jestliže
+$$\forall \varepsilon \in \mathbb R^+: \exists n_0 \in \mathbb N_0: \forall n \geq n_0,n \in \mathbb N: a_n\in(A-\varepsilon, A+\varepsilon).$$
+\end{definition}
+
+\begin{definition}
+Nechť $\left \{ a_n \right \}_{n=1}^\infty $ je posloupnost.
+Posloupnost $\left \{ a_n \right \}_{n=1}^\infty $ má \textbf{nevlastní limitu}
+$+\infty$ (resp. $-\infty$), jestliže
+$$\forall K \in \mathbb R: \exists n_0 \in \mathbb N_0: \forall n \geq n_0, n\in \mathbb N: a_n>K \,\, (\textrm{resp. } a_n<K).$$
+\end{definition}
+
+\begin{definition}
+    Má-li posloupnost vlastní limitu, je \textbf{konvergentní}. V opačném
+    případě je \textbf{divergentní}.
+\end{definition}
+
+\begin{veta}
+    Každá posloupnost má nejvýše jednu limitu.
+\end{veta}
+
+\begin{veta}
+    Každá konvergentní posloupnost je omezená.
+\end{veta}
+
+\begin{veta}
+    Každá nekonečná posloupnost vybraná z konvergentní posloupnosti
+    je konvergentní a má stejnou limitu.
+\end{veta}
+
+\begin{veta}[Věta o třech limitách]
+    Nechť $\left \{ a_n \right \}_{n=1}^\infty $, $\left \{ b_n \right \}_{n=1}^\infty $,
+    $\left \{ c_n \right \}_{n=1}^\infty $ jsou tři posloupnosti takové, že
+    $$\exists m\in \mathbb N: \forall n \geq m:a_n \leq b_n \leq c_n \land \lim_{n\to \infty}a_n=\lim_{n\to \infty}c_n=A.$$
+    Pak $\lim_{n\to\infty}b_n=A.$
+\end{veta}
+
+\begin{veta}
+Nechť $\left \{ a_n \right \}_{n=1}^\infty $, $\left \{ b_n \right \}_{n=1}^\infty $
+jsou dvě posloupnosti. Nechť $\lim_{n\to \infty}a_n = A, \lim_{n\to \infty}b_n = B$
+a $c\in \mathbb R$ je libovolné číslo. Pak platí:
+\begin{enumerate}[$i.$]
+\item $\lim_{n\to \infty}\left ( a_n\pm b_n \right ) =A\pm B,$
+\item $\lim_{n\to\infty}\left ( ca_n \right ) =c\cdot \lim_{n\to\infty}a_n=cA,$
+\item $\lim_{n\to\infty}\left ( a_nb_n \right )=A\cdot B, $
+\item $\lim_{n\to\infty}\left ( \frac{a_n}{b_n} \right ) =\frac{A}{B}.$
+\end{enumerate}
+\end{veta}
+
+\begin{veta}
+    Nechť $\left \{ a_n \right \}_{n=1}^\infty $, $\left \{ b_n \right \}_{n=1}^\infty $
+    jsou posloupnosti takové, že $\lim_{n\to\infty}a_n=0$ a $\left \{ b_n \right \}_{n=1}^\infty $
+    je omezená. Pak $\lim_{n\to\infty}\left ( a_nb_n \right ) =0.$
+\end{veta}
+
+\begin{definition}
+Nechť $M$ je podmnožina množiny reálných čísel. Číslo $a\in \mathbb R$ (pokud existuje)
+nazveme \textbf{horní} (resp. \textbf{dolní}) \textbf{závorou} množiny $M$ právě tehdy,
+když
+$$\forall x \in M:x\leq a \,\, (\textrm{resp. }x\geq a).$$
+\end{definition}
+
+\begin{definition}
+Nechť $M$ je podmnožina množiny reálných čísel. Číslo $c\in \mathbb R$ (pokud existuje)
+nazveme \textbf{supremem} (resp. \textbf{infimem}) množiny $M$, jestliže je její
+nejmenší horní závorou (resp. největší dolní závorou), tzn. že platí:
+\begin{enumerate}[$i.$]
+\item $\forall x\in M:x\leq c \,\, (\textrm{resp. } x\geq c),$
+\item $\forall t\in \mathbb R: \forall x\in  M:x\leq t \implies t\geq c \,\, (\textrm{resp. }x\geq t \implies t\leq c).$
+\end{enumerate}
+Značíme $c=\sup M$ (resp. $c=\inf M$).
+\end{definition}
