@@ -248,3 +248,86 @@ nejmenší horní závorou (resp. největší dolní závorou), tzn. že platí:
 \end{enumerate}
 Značíme $c=\sup M$ (resp. $c=\inf M$).
 \end{definition}
+
+\begin{definition}
+Nechť $\left \{ a_n \right \}_{n=1}^\infty $ je posloupnost reálných čísel. Číslo
+$$S_n=a_1+a_2+\dots+a_n = \sum_{i=1}^\infty a_i, n\in \mathbb N$$
+nazýváme \textbf{$n$-tým částečným součtem} posloupnosti $\left \{ a_n \right \}_{n=1}^\infty $.
+Posloupnost $\left \{ S_n \right \}_{n=1}^\infty $ nazýváme \textbf{posloupnost
+částečných součtů} posloupnosti $\left \{ a_n \right \}_{n=1}^\infty $.\\
+\textbf{Nekonečnou řadou} nazveme posloupnost částečných součtů
+$\left \{ S_n \right \}_{n=1}^\infty $ a značíme stručně
+$$\sum_{n=1}^\infty a_n.$$
+Čísla $a_n, n=1,2,\dots$ nazýváme \textbf{členy řady}, čísla $S_n, n=1,2,\dots$
+nazýváme \textbf{částečné součty řady}.
+\end{definition}
+
+\begin{definition}
+Má-li posloupnost částečných součtů $\left \{ S_n \right \}_{n=1}^\infty $
+limitu $S$, řekneme, že nekonečná řada $\sum_{n=1}^\infty a_n$ \textbf{konverguje}
+a číslo $S$ nazveme jejím součtem. V opačném případě \textbf{diverguje}.
+\end{definition}
+
+\begin{veta}
+    Nechť je řada $\sum_{n=1}^\infty a_n$ konvergentní, pak $\lim_{n\to\infty} a_n=0.$
+\end{veta}
+
+\begin{veta}
+    Dvě řady lišící se v konečném počtu členů se chovají stejně.
+\end{veta}
+
+\begin{pozn}
+    Dále budeme studovat řady s nezápornými členy (tzn. k jejich konvergenci stačí, aby byly shora omezené).
+\end{pozn}
+
+\begin{veta}[Srovnávací kriterium konvergence]
+Nechť $\sum_{n=1}^\infty a_n, \sum_{n=1}^\infty b_n$ jsou řady s nezápornými členy
+s vlastností
+$$\forall n \in \mathbb N: \leq a_n \leq b_n.$$
+Pak platí:
+\begin{enumerate}[$i.$]
+\item konverguje-li řada $\sum_{n=1}^\infty b_n,$ konverguje taky $\sum_{n=1}^\infty a_n.$
+\item diverguje-li řada $\sum_{n=1}^\infty a_n,$ diverguje taky $\sum_{n=1}^\infty b_n.$
+\end{enumerate}
+\end{veta}
+
+\begin{pozn}
+    Řada
+    $$\sum_{n=1}^\infty \frac{1}{n(n+1)}$$
+    konverguje.
+\end{pozn}
+
+\begin{veta}
+    Řada $\sum_{n=1}^\infty \frac{1}{n^a}$ konverguje právě tehdy, když $a>1, a\in \mathbb R^+.$
+\end{veta}
+
+\begin{veta}[Limitní srovnávací kriterium]
+Nechť $\sum_{n=1}^\infty a_n, \sum_{n=1}^\infty b_n$ jsou řady s kladnými čísly.
+Nechť $\exists \lim_{n\to\infty}\frac{a_n}{b_n}=c.$ Pak platí:
+\begin{enumerate}[$i.$]
+\item $c\ne 0\land c\ne \infty \implies$ řady se chovají stejně,
+\item $c=0 \land \sum_{n=1}^\infty b_n$ konverguje $\implies \sum_{n=1}^\infty a_n$ konverguje,
+\item $c=\infty \land \sum_{n=1}^\infty b_n$ diverguje $\implies \sum_{n=1}^\infty a_n$ diverguje.
+\end{enumerate}
+\end{veta}
+
+\begin{definition}
+Nekonečnou řadu $\sum_{n=1}^\infty a_n,$ kde $\left \{ a_n \right \}_{n=1}^\infty $
+je geometrická posloupnost s kvocientem $q$, nazveme \textbf{nekonečnou geometrickou
+řadou} a číslo $q$ nazveme jejím \textbf{kvocientem}.
+\end{definition}
+
+\begin{veta}
+    Nechť řada $\sum_{n=1}^\infty a_n$ je geometrická řada s kvocientem $q$, kde
+    $|q|<1.$ Pak je tato řada konvergentní a má součet
+    $$S=\frac{a_1}{1-q}.$$
+\end{veta}
+
+\begin{proof}
+Počítejme
+\begin{align*}
+    A =&\lim_{n\to\infty} S_n = \lim_{n\to\infty}a_1\cdot \frac{q^n - 1}{q-1}=\frac{a_1}{q-1}\cdot \lim_{n\to\infty}(q^n-1)\\
+    & \textrm{jestliže } |q|<1, \textrm{ pak} \\
+    = & \frac{a_1}{q-1}\cdot (0-1)=-\frac{a_1}{q-1}=\frac{a_1}{1-q}\qedhere
+\end{align*}
+\end{proof}
