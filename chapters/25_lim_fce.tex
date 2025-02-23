@@ -1,0 +1,198 @@
+\section{Limita funkce}
+\begin{definition}[Vlastní limita ve vlastním bodě]\label{vlimv}
+    Funkce $f$ má v bodě $x_0\in \mathbb R$ \textbf{limitu} $A\in \mathbb R,$
+    jestliže ke každému $\varepsilon \in \mathbb R^+$ existuje
+    $\delta \in \mathbb R^+$ takové, že $\forall x \in
+    \left ( x_0-\delta, x_0+\delta \right ), x\ne x_0 $ platí $f(x)\in
+    \left ( A-\varepsilon,A+\varepsilon \right ). $ Píšeme
+    $$\lim_{x\to x_0}f(x)=A.$$
+\end{definition}
+
+\begin{pozn}
+    Definici \ref{vlimv} lze taky zapsat symbolicky. Řekneme, že
+    $\lim_{x\to x_0} f(x) =A$ právě tehdy, když
+    $$
+    \forall \varepsilon \in \mathbb R^+:
+        \exists \delta \in \mathbb R^+: \forall x \in
+        \left ( x_0-\delta,x_0+\delta \right )-\left \{ x_0 \right \}:
+        f(x) \in \left ( A-\varepsilon, A+\varepsilon \right ).
+    $$
+\end{pozn}
+
+\begin{definition}[Nevlastní limita ve vlastním bodě]\label{nlimv}
+Funkce $f$ má v bodě $x_0\in \mathbb R$ \textbf{nevlastní limitu} $+\infty$ (resp.
+$-\infty$),
+jestliže ke každému $M \in \mathbb R$ existuje
+$\delta \in \mathbb R^+$ takové, že $\forall x \in
+\left ( x_0-\delta, x_0+\delta \right ), x\ne x_0 $ platí $f(x)>M $
+(resp. $f(x)<M$). Píšeme
+$$\lim_{x\to x_0}f(x)=\infty \,\,\,(\textrm{resp. } -\infty).$$
+\end{definition}
+
+\begin{pozn}
+    Definici \ref{nlimv} lze taky zapsat symbolicky. Řekneme, že
+    $\lim_{x\to x_0} f(x) =\infty$ (resp. $-\infty$) právě tehdy, když
+    $$
+    \forall M \in \mathbb R:
+        \exists \delta \in \mathbb R^+: \forall x \in
+        \left ( x_0-\delta,x_0+\delta \right )-\left \{ x_0 \right \}:
+        f(x) > M\,\,\, (\textrm{resp. } f(x) < M) .
+    $$
+\end{pozn}
+
+\begin{definition}[Vlastní limita v nevlastním bodě]\label{vlimn}
+Funkce $f$ má v bodě $\infty$ (resp. $-\infty$) \textbf{limitu} $A\in \mathbb R,$
+jestliže ke každému $\varepsilon \in \mathbb R^+$ existuje
+$K \in \mathbb R$ takové, že $\forall x \in \mathbb R, x > K$ (resp. $x<K$)
+platí $f(x)\in \left ( A-\varepsilon,A+\varepsilon \right ). $ Píšeme
+\begin{align*}
+\lim_{x\to \infty}f(x)=A, & & \textrm{resp. } \lim_{x\to -\infty}f(x)=A.
+\end{align*}
+\end{definition}
+
+\begin{pozn}
+Definici \ref{vlimn} lze taky zapsat symbolicky. Řekneme, že
+$\lim_{x\to \infty} f(x) =A$ (resp. $\lim_{x\to -\infty} f(x) =A$) právě tehdy, když
+$$
+\forall \varepsilon \in \mathbb R^+:
+    \exists K \in \mathbb R: \forall x \in \mathbb R, x > K \,\,\, (\textrm{resp. } x< K):
+    f(x) \in \left ( A-\varepsilon, A+\varepsilon \right ).
+$$
+\end{pozn}
+
+\begin{pozn}
+    Definice nevlastní limity v nevlastním bodě jsou celkem čtyři (dvakrát
+    dvě možnosti pro plus / minus nekonečno).
+    Pro ušetření místa budou oba případy zaznačeny jako $\pm \infty$.
+\end{pozn}
+
+\begin{definition}[Nevlastní limita v nevlastním bodě]\label{nlimn}
+    Funkce $f$ má v bodě $\pm \infty$ \textbf{limitu} $\pm \infty,$
+    jestliže ke každému $M \in \mathbb R$ existuje
+    $K \in \mathbb R$ takové, že $\forall x \in
+    \mathbb R, x> K $ (resp. $x<K$) platí $f(x)>M$ (resp. $f(x) <M$). Píšeme
+    $$\lim_{x\to \pm\infty}f(x)=\pm \infty.$$
+\end{definition}
+
+\begin{pozn}
+    Definici \ref{nlimn} lze taky zapsat symbolicky. Řekneme, že
+    $\lim_{x\to \pm\lim} f(x) =\pm\infty$ právě tehdy, když
+    $$
+    \forall M \in \mathbb R:
+        \exists K \in \mathbb R: \forall x \in \mathbb R, x>K\,\,\, (\textrm{resp. }x<K):
+        f(x) > M \,\,\, (\textrm{resp. } f(x)<M).
+    $$
+\end{pozn}
+
+\begin{definition}
+\textbf{Okolím bodu}
+\begin{enumerate}[$i.$]
+\item $x_0\in \mathbb R$ rozumíme množinu $(x_0-\delta,x_0+\delta), \delta \in \mathbb R^+,$
+\item $\infty$ rozumíme množinu $(h,\infty), k\in \mathbb R,$
+\item $-\infty$ rozumíme množinu $(-\infty,k), k\in \mathbb R$
+\end{enumerate}
+a značíme $\mathscr O(x_0)$ (resp. $\mathscr O(\infty)$). \textbf{Prstencovým okolím
+bodu} $x$ je množina $\mathscr O(x)-\left \{ x_0 \right \} $ a značíme $\mathscr P(x).$
+Množinu $\mathbb R \cup \left \{ \pm \infty \right \} $ nazvěme \textbf{rozšířenou množinou
+reálných čísel} a označme $\mathbb R^*.$
+\end{definition}
+
+\begin{definition}[Souhrnná definice limity]
+Řekneme, že $f$ má v bodě $x_0\in \mathbb R^*$ limitu $A \in \mathbb R^*$,
+jestliže každému okolí $\mathscr O(A)$ bodu $A$ existuje prstencové
+okolí $\mathscr P(x_0)$ bodu $x_0$ takové, že pro všechna $x\in \mathscr P(x_)$
+platí $f(x)\in \mathscr O(A).$ Píšeme
+$$
+\lim_{x\to x_0}f(x)=A.
+$$
+\end{definition}
+
+\begin{veta}
+    Funkce $f$ má v bodě $x_0\in \mathbb R^*$ nejvýše jednu limitu.
+\end{veta}
+
+\begin{definition}
+Funkce $f$ je \textbf{spojitá v bodě} $x_0\in \mathbb R,$ jestliže
+$$\lim_{x\to x_0}f(x)=f(x_0).$$
+\end{definition}
+
+\begin{definition}
+Funkce $f$ je \textbf{spojitá na intervalu} $J\subseteq \mathbb R,$ jestliže
+\begin{enumerate}[$i.$]
+\item $f$ je spojitá v každém vnitřním bodě intervalu $J,$
+\item patří-li počáteční (resp. koncový) bod $j$ k tomuto intervalu,
+je v něm funkce $f$ spojitá zprava (resp. zleva).
+\end{enumerate}
+\end{definition}
+
+\begin{pozn}[Neurčité výrazy]
+Neurčité výrazy jsou
+$$\frac{0}{0},  \,\,\, \frac{\infty}{\infty}, \,\,\, 0\cdot \infty, \,\,\, \infty - \infty, \,\,\,0^0,\,\,\, \infty^0,\,\,\, 1^\infty.$$
+\end{pozn}
+
+\begin{veta}
+Nechť $x_0\in \mathbb R^*$ a nechť existuje $\lim_{x\to x_0}f(x)$ a $\lim_{x\to x_0}g(x)$.
+Pak platí:
+\begin{enumerate}[$i.$]
+\item $\lim_{x\to x_0} \left \{ f(x)\pm g(x) \right \}= \lim_{x\to x_0}f(x) \pm \lim_{x\to x_0}g(x),$
+\item $\lim_{x\to x_0}f(x)g(x)=\lim_{x\to x_0}f(x)\cdot \lim_{x\to x_0}g(x),$
+\item $\lim_{x\to x_0}\frac{f(x)}{g(x)}=\frac{\lim_{x\to x_0}f(x)}{\lim_{x\to x_0}g(x)},$
+\item $\lim_{x\to x_0}|f(x)| = |\lim_{x\to x_0}f(x)|.$
+\end{enumerate}
+\end{veta}
+
+\begin{veta}
+Nechť jsou dány funkce $f$ a $g$ a nechť existuje prstencové okolí
+$\mathscr P(x_0)$ takové, že $\forall x \in \mathscr P(x_0):f(x)=g(x).$
+Nechť $\lim_{x\to x_0}g(x)=A, A\in \mathbb R^*.$ pak existuje $\lim_{x\to x_0}f(x)$
+a platí $\lim_{x\to x_0}f(x)=A.$
+\end{veta}
+
+\begin{veta}[Věta o sevření]
+Nechť $f,g,h$ jsou funkce a nechť rxistuje prstencové okolí $\mathscr P(x_0)$
+bodu $x_0\in \mathbb R^*$ takové, že $\forall x \in \mathscr P(x_0):q(x)\leq f(x)\leq h(x).$
+Nechť $\lim_{x\to x_0}g(x)=\lim_{x\to x_0}h(x)=A, A \in \mathbb R^*.$ Pak existuje
+$\lim_{x\to x_0}f(x)$ a  platí $ \lim_{x\to x_0}f(x) = A.$
+\end{veta}
+
+\begin{veta}[Věta o součinu nulové a ohraničené funkce]
+Nechť $f,g$ jsou funkce a $\lim_{x\to x_0}f(x)=0.$ Nechť existuje prstencové
+okolí $\mathscr P(x_0), x_0\in \mathbb R^*$ bodu $x_0\in \mathbb R^*$ takové, že
+funkce $g$ je na tomto okolí ohraničená. Pak $\lim_{x\to x_0}f(x)g(x)=0.$
+\end{veta}
+
+\begin{veta}[Věta o limitě složené funkce]\label{slozf}
+Nechť $f,g$ jsou funkce a $x_0\in \mathbb R^*, A \in \mathbb R$ a nechť platí
+\begin{enumerate}[$i.$]
+\item $\lim_{x\to x_0}g(x)=A,$
+\item funkce $f$ je spojitá v bodě $x_0.$
+\end{enumerate}
+Pak platí
+$$\lim_{x\to x_0}f \left ( g(x) \right ) =f \left ( \lim_{x\to x_0}g(x) \right ) =f(A).$$
+\end{veta}
+
+\begin{pozn}
+    Důsledkem věty \ref{slozf} je fakt, že
+    $$\lim_{x\to x_0}g(x)=A \implies \lim_{x\to x_0}e^{g(x)}=a^A.$$
+    To využíváme při výpočetu limit exponenciálních výrazů. Platí totiž
+    $$f(x)^{g(x)}=e^{g(x)\ln f(x)}.$$
+\end{pozn}
+
+\begin{veta}[Věta o limitě typu $1 / 0$]
+Nechť $f$ je funkce a nechť existuje pravé prstencové okolí $\mathscr P^+(x_0)$ bodu
+$x_0\in \mathbb R^*$ takové, že pro každé $x\in \mathscr P^+(x_0)$ platí
+$f(x)>0$ (resp. $f(x)<0$). Nechť $\lim_{x\to x_0^+}=0.$ Pak platí
+$$\lim_{x\to x_0^+} \frac{1}{f(x)}=\infty \,\,\, (\textrm{resp. } -\infty).$$
+Analogicky pro levé okolí bodu.
+\end{veta}
+
+\begin{veta}[l`H\^ospitalovo pravidlo]
+Nechť $x_0\in \mathbb R^*$. Nechť je splněna jedna z podmínek
+\begin{enumerate}[$i.$]
+\item $\lim_{x\to x_0}f(x)=\lim_{x\to x_0}g(x)=0,$
+\item $\lim_{x\to x_0}|g(x)| = +\infty.$
+\end{enumerate}
+Existuje-li $\lim_{x\to x_0}\frac{f^\prime (x)}{g^\prime (x)},$ pak existuje také
+$\lim_{x\to x_0}\frac{f(x)}{g(x)}$ a platí
+$$\lim_{x\to x_0}\frac{f(x)}{g(x)}=\lim_{x\to x_0}\frac{f^\prime (x)}{g^\prime(x)}.$$
+\end{veta}
