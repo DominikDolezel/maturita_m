@@ -1,0 +1,157 @@
+\section{Derivace funkce}
+\begin{definition}
+Nechť $a \in \mathbb R$ a $f$ je funkce. Jestliže existuje limita
+$$\lim_{h\to 0} \frac{f(a+h)-f(a)}{h},$$
+pak tuto limitu nazýváme \textbf{derivací funkce} $f$ \textbf{v bodě} $a$ a značíme ji $f^\prime (a).$
+Obdobně definujeme \textbf{derivaci zprava} a \textbf{derivaci zleva funkce} $f$\textbf{v bodě}
+$a$ předpisy
+\begin{align*}
+    f_+^\prime(a) = \lim_{h\to 0+} \frac{f(a+h)-f(a)}{h} & & a & & f_-^\prime(a) = \lim_{h\to 0-} \frac{f(a+h)-f(a)}{h}.
+\end{align*}
+Derivaci zleva a derivaci zprava souhrnně nazýváme \textbf{jednostrannými derivacemi}.
+\end{definition}
+
+\begin{pozn}
+    Derivaci lze obdobně zavést jako limitu
+    $$\lim_{x\to a} \frac{f(x)-f(a)}{x-a}.$$
+\end{pozn}
+
+\begin{pozn}
+     Při počítání derivace funkce $f$ v bodě $a\in \mathbb R$ mohou nastat
+     tyto případy:
+     $$
+     \textrm{derivace v bodě } a \begin{cases}
+        \textrm{neexistuje,} \\
+        \textrm{existuje a je} \begin{cases}
+            \textbf{vlastní}\textrm{, tj. je rovna reálnému číslu}, \\
+            \textbf{nevlastní}\textrm{, tj. je rovna } +\infty \textrm{ nebo } - \infty.
+        \end{cases}
+     \end{cases}
+     $$
+\end{pozn}
+
+\begin{pozn}
+    Hodnoda derivace v daném bodě je směrnice tečny funkce v tomto bodě.
+\end{pozn}
+
+\begin{veta}
+    Jestliže existuje derivace funkce $f$ v bodě $a$ (vlastní či nevlastní),
+    pak je určena jednoznačně.
+\end{veta}
+
+\begin{definition}
+Nechť existuje vlastní derivace funcke $f(x)$ pro všechna $x\in M, M\subset D(f).$
+Pak funkci $f^\prime(x)$, která každému bodu $x\in M$ přiřadí derivaci funkce $f$
+v tomto bodě, nazýváme \textbf{derivaci funkce} $f$ \textbf{na množině} $M.$
+\end{definition}
+
+\begin{veta}[Bolzanova]
+Má-li funkce $f$ v bodě $a$ vlastní derivaci, je v tomto bodě spojitá.
+\end{veta}
+
+\begin{pozn}
+    Má-li funkce $f:M\to \mathbb R$ na množině $M\subset \mathbb R$ vlastní derivaci
+    v každém bodě $x\in M,$ pak zobrazení $f^\prime:M\to \mathbb R,$ které přiřadí
+    bodu $x\in M$ hodnotu $f^\prime(x),$ je reálnou funkcí definovanou na množině $M$.
+\end{pozn}
+
+\begin{pozn}[Derivace základních funkcí]
+Platí:
+\begin{enumerate}[$i.$]
+\item $(c)^\prime = 0, c \in \mathbb R,$
+\item $(x^r)^\prime = r\cdot x^{r-1}, r\in \mathbb R, x \in \mathbb R^+,$
+\item $(\sin x)^\prime = \cos x, x \in \mathbb R,$
+\item $(\cos x) ^\prime = -\sin x, x \in \mathbb R,$
+\item $(e^x)^\prime = e^x,x \in \mathbb R,$
+\item $(\tg x)^\prime = \frac{1}{\cos^2 x}, x \in \mathbb R-\left \{ \frac{\pi}{2}+k\pi, k\in \mathbb Z \right \} $
+\item $(\cotg x)^\prime = -\frac{1}{\sin^2 x}, x \in \mathbb R-\left \{ k\pi, k \in \mathbb Z \right \} $
+\item $(\ln x)^\prime = \frac{1}{x}, x \in \mathbb R^+,$
+\item $(\arcsin x)^\prime = \frac{1}{\sqrt{1-x^2}}, x \in(-1,1),$
+\item $(\arccos x)^\prime=-\frac{1}{\sqrt{1-x^2} }, x \in (-1,1),$
+\item $(\arctg x)^\prime = \frac{1}{x^2+1}, x \in \mathbb R,$
+\item $(\arccotg x)^\prime = -\frac{1}{x^2+1}, x \in \mathbb R,$
+\item $(a^x)^\prime = a^x \ln a, a>0, a\ne 1, x\in \mathbb R,$
+\item $(\log_a x)^\prime=\frac{1}{x\ln a}, a>0, a\ne 1, x \in \mathbb R^+.$
+\end{enumerate}
+\end{pozn}
+
+\begin{veta}[Věta o derivaci součtu, rozdílu, součinu a podílu funkcí]
+Nechť existují derivace funkcí $f$ a $g$ v bodě $a\in \mathbb R.$ Pak
+také funkce $f\pm g, fg, f/g$ a $cf,$ kde $c\in \mathbb R$, mají v bodě $a$ derivaci a platí:
+\begin{enumerate}[$i.$]
+\item $(f\pm g)^\prime (a) = f^\prime(a) \pm g^\prime(a),$
+\item $(fg)^\prime (a) = f^\prime (a)g(a)+ f(a)g^\prime(a),$
+\item $\left ( \frac{f}{g} \right )^\prime(a)=\frac{f^\prime (a)g(a)-f(a)g^\prime(a)}{g^2(a)} $ pro $g(a)\ne 0,$
+\item $(cf)^\prime(a)=cf^\prime (a).$
+\end{enumerate}
+\end{veta}
+
+\begin{veta}[Derivace inverzní funkce]
+Nechť funcke $f:x=f(y)$ je spojitá a ryze monotónní na intervalu $I.$ Nechť $y_0$
+je vnitřní bod intervalu $I$ a nechť má $f$ v $y_0$ derivaci $f^\prime(y_0).$
+Pak inverzní funkce $f^{-1}:y=f^{-1}(x)$ má v bodě $x_0=f(y_0)$ derivaci a platí
+$$
+\left ( f^{-1} \right )^\prime(x_0)= \begin{cases}
+\frac{1}{f^\prime(y_0)}, & \textrm{je-li } f^\prime(y_0)\ne 0,\\
++\infty & \textrm{je-li } f^\prime (y_0)=0 \textrm{ a funkce } f \textrm{ je na } I \textrm{ rostoucí},\\
+-\infty & \textrm{je-li } f^\prime (y_0)=0 \textrm{ a funkce } f \textrm{ je na } I \textrm{ klesající}.
+\end{cases}
+$$
+\end{veta}
+
+\begin{veta}[Derivace složené funkce]
+Nechť $f, g$ jsou funkce. Nechť existuje derivace funkce $g$ v bodě $a$ a
+derivace funkce $f$ v bodě $b=g(a).$ Pak i složená funkce $F=f\circ g$ má derivaci
+v bodě $a$ a platí
+$$F^\prime(a)=(f\circ g)^\prime (a) = f^\prime(b)\cdot g^\prime(a)=f^\prime(g(a))\cdot g^\prime(a).$$
+\end{veta}
+
+\begin{pozn}
+    Funkce tvaru $f(x)^{g(x)}$ derivujeme jako složenou funkci $e^{g(x)\ln f(x)},$
+    protože $f(x)^{g(x)}=e^{g(x)\ln f(x)}$ a funkce $e^r, r \in \mathbb R$ je prostá
+    a spojitá.
+\end{pozn}
+
+\begin{definition}
+Nechť $n \in \mathbb N$. Potom \textbf{$n$-tou derivací} funkce $f$ rozumíme funkci,
+kterou označujeme $f^{(n)}$ a definujeme
+$$f^{(n)}=\left ( f^{(n-1)} \right )^\prime, $$
+přičemž $f^{(0)}=f.$
+\end{definition}
+
+\begin{definition}
+Přímka $t$ o rovnici
+$$y-f(x_0)=f^\prime(x_0)(x-x_0)$$
+se nazývá \textbf{tečna ke grafu funkce} $f$ v dotykovém bodě $T=(x_0,f(x_0))$.
+Přímka $n$, která prochází bodem $T$ a je kolmá k pčímce $t$, se nazývá \textbf{normála
+ke grafu funkce} $f$ v bodě $T.$
+\end{definition}
+
+\begin{veta}
+    Má-li tečna grafu funkce $t$ v dotykovém bodě $T=(x_0, f(x_0))$ rovnici
+    $$y-y_0=f^\prime(x_0)(x-x_0), \textrm{ kde } y_0=f(x_0),$$
+    pak normála $n$ má rovnici
+    $$y-y_0=-\frac{1}{f^\prime(x_0)}(x-x_0), \textrm{ pokud } f^\prime(x_0)\ne 0.$$
+\end{veta}
+
+\begin{pozn}
+    Funkci lze vyjádřit buď jako $y=f(x)$ (explicitně -- tedy vždy máme přímo vyjádřeno
+    $y$), nebo ve tvaru $f(x,y)=0$ (implicitně -- z této rovnice obecně nelze vyjádřit
+    $y$). Například $x^2+y^2-r^2=0$ je implicitní vyjádření kružnice,
+    zatímco $y=\pm \sqrt{r^2-x^2} $ je explicitní vyjádření.
+\end{pozn}
+
+\begin{veta}[Derivace funkce dané implicitně]\label{implfce}
+Nechť máme funkci danou implicitně rovnicí $F(x,y)=0$. Pak
+$$F^\prime (x,y)=\frac{\partial F(x,y)}{\partial x} + \frac{\partial F(x,y)}{\partial y}\cdot y^\prime.$$
+\end{veta}
+
+\begin{pozn}
+Věta \ref{implfce} je složitá. Lze ji shrnout asi takhle:\\
+Funkci zderivujeme podle $x$ ($y$ považujeme za konstantu) tak, jak jsme zvyklí. Pak
+funkci zderivujeme ještě podle $y$ a předtím, než to přičteme k tomu,
+co jsme předtím derivovali podle $x$, to vynásobíme $y^\prime$. \\
+To funguje,
+protože se vlastně díváme na $y$ jako na funkci $x$ ($y=f(x)$), takže
+derivace $y=f^\prime(x)\cdot (f(x))^\prime$ (např. $\left ( y^2 \right )^\prime =2yy^\prime$).
+\end{pozn}
