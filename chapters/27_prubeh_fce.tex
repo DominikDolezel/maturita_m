@@ -1,0 +1,109 @@
+\section{Průběh funkce}
+\begin{pozn}
+    Musíme umět nakreslit graf a popsat základní vlastnosti lineární a
+    kvadratické funkce, nepřímé úměrnosti, lineární lomené, mocninné, exponenciální,
+    logaritmické, goniometrické a cyklometrické funkce.
+\end{pozn}
+
+\begin{veta}
+Nechť funkce $f$ má na intervalu $(a,b),a,b\in \mathbb R^*$ derivaci. Je-li pro
+všechna $x$ z intervalu $(a,b)$:
+\begin{enumerate}[$i.$]
+\item $f^\prime(x)>0,$ pak je $f$ rostoucí,
+\item $f^\prime(x)\geq 0,$ pak je $f$ neklesající,
+\item $f^\prime(x)<0,$ pak je $f$ klesající,
+\item $f^\prime(x) \leq 0,$ pak je $f$ nerostoucí,
+\item $f^\prime(x)=0,$ pak je $f$ konstantní
+\end{enumerate}
+ma intervau $(a,b).$
+\end{veta}
+
+\begin{definition}
+Funkce $f$ má v bodě $x_0$ \textbf{lokální minimum} (resp. \textbf{maximum}),
+jestliže existuje okolí $\mathscr O(x_0)$ takové, že $\forall x \in \mathscr O(x_0):$
+\begin{align*}
+    f(x)\geq f(x_0) & & \textrm{resp. } f(x)\leq f(x_0).
+\end{align*}
+Lokální minimum (resp. maximum) je \textbf{ostré}, jestliže
+\begin{align*}
+    f(x)> f(x_0) & & \textrm{resp. } f(x)<f(x_0).
+\end{align*}
+\end{definition}
+
+\begin{definition}
+Bod $x_0\in D(f)$ takový, že $f^\prime(x_0)=0$ je \textbf{stacionární bod}.
+\end{definition}
+
+\begin{veta}
+Nechť $f$ má v bodě $x_0$ lokální extrém. Pak buď $f^\prime(x_0)=0,$ nebo
+$f^\prime(x_0)$ neexistuje.
+\end{veta}
+
+\begin{definition}
+Funkce $f$ je \textbf{konvexní} (resp. \textbf{konkávní}) v bodě $x_0\in D(f),$
+jestliže existuje okolí $\mathscr O(x_0)$ takové, že pro všechna $x\in\mathscr O(x_0)$
+platí
+\begin{align*}
+    f(x)\geq g(x), & & \textrm{resp. } f(x)\leq g(x),
+\end{align*}
+kde $g(x)$ jsou funkční hodnoty na tečně v bodě $(x_0,f(x_0)).$
+
+Funkce je konvexní (resp. konkávní) na intervalu, jestliže je konvexní (resp.
+konkávní) v každém jeho bodě.
+\end{definition}
+
+\begin{definition}
+Funkce $f$ má v bodě $x_0$ \textbf{inflexi}, jestliže existuje $f^\prime(x_0) \in
+\mathbb R$ a $f$ je v nějakém levém okolí $x_0$ konvexní a v nějakém pravém okolí
+tohoto bodu konkávní, resp. naopak. Má-li funkce $f$ v bodě $x_0$ inflexi, pak bod
+$(x_0, f(x_0))$ nazýváme \textbf{inflexním bodem} funkce $f$.
+\end{definition}
+
+\begin{veta}
+Nechť má funkce $f$ v intervalu $(a,b)$ druhou derivaci. Je-li
+\begin{enumerate}[$i.$]
+\item $f`` (x)>0$ pro všechna $x \in (a,b)$, pak je $f$
+konvexní na $(a,b)$.
+\item $f``(x)<0$ pro všechna $x \in (a,b)$, pak je $f$
+konkávní na $(a,b)$.
+\item $f``(x)=0$ v nějakém bodě $x_0\in(a,b)$ a dále je $f``$
+kladná v nějakém levém okolí bodu $x_0$ a záporná v nějakém pravém okolí bodu $x_0$,
+resp. naopak, pak má $f$ v $x_0$ inflexi.
+\end{enumerate}
+\end{veta}
+
+\begin{definition}
+Přímka $x=x_0,x_0\in \mathbb R$ se nazývá \textbf{asymptota bez směrnice}
+grafu funkce $f$, jestliže alespoň jedna jednostranná limita funkce $f$
+v bodě $x_0$ je nevlastní, tj.
+\begin{align*}
+    \lim_{x\to x_0^+} f(x) = \pm\infty, & & \lim_{x\to x_0^-} f(x)=\pm\infty.
+\end{align*}
+\end{definition}
+
+\begin{definition}
+Přímka $y=ax+b, a,b\in \mathbb R$ se nazývá \textbf{asymptota se směrnicí} grafu
+funkce $f$ v $+\infty$ (resp. $-\infty$), jestliže
+\begin{align*}
+    \lim_{x\to\infty}(f(x)-(ax+b))=0, & & \textrm{resp. }\lim_{x\to-\infty}(f(x)-(ax+b))=0.
+\end{align*}
+\end{definition}
+
+\begin{veta}
+    Přímka $y=ax+b$ je asymptota se směrnicí v $\pm\infty$ právě tehdy, když
+    \begin{align*}
+        \lim_{x\to\pm\infty}\frac{f(x)}{x}=a, a\in \mathbb R, & & \lim_{x\to\pm\infty}(f(x)-ax)=b,b \in \mathbb R.
+    \end{align*}
+\end{veta}
+
+\begin{pozn}
+    Při určování průběhu funkce musíme:
+    \begin{enumerate}[$i.$]
+    \item vyšetřit $D(f)$, body nespojitosti, nulové body, znaménka funkce, popř.
+    sudost / lichost, periodičnost,
+   	\item určit intervaly monotonie, lokální extrémy,
+   	\item určit intervaly konvexnosti / konkávnosti, inflexní body,
+   	\item určit asymptoty bez směrnice a se směrnicí a
+   	\item načrtnout graf funkce.
+    \end{enumerate}
+\end{pozn}

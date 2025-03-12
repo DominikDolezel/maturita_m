@@ -88,19 +88,19 @@ $$
 \textbf{Okolím bodu}
 \begin{enumerate}[$i.$]
 \item $x_0\in \mathbb R$ rozumíme množinu $(x_0-\delta,x_0+\delta), \delta \in \mathbb R^+,$
-\item $\infty$ rozumíme množinu $(h,\infty), k\in \mathbb R,$
+\item $\infty$ rozumíme množinu $(k,\infty), k\in \mathbb R,$
 \item $-\infty$ rozumíme množinu $(-\infty,k), k\in \mathbb R$
 \end{enumerate}
 a značíme $\mathscr O(x_0)$ (resp. $\mathscr O(\infty)$). \textbf{Prstencovým okolím
-bodu} $x$ je množina $\mathscr O(x)-\left \{ x_0 \right \} $ a značíme $\mathscr P(x).$
+bodu} $x$ je množina $\mathscr O(x)-\left \{ x \right \} $ a značíme $\mathscr P(x).$
 Množinu $\mathbb R \cup \left \{ \pm \infty \right \} $ nazvěme \textbf{rozšířenou množinou
 reálných čísel} a označme $\mathbb R^*.$
 \end{definition}
 
 \begin{definition}[Souhrnná definice limity]
 Řekneme, že $f$ má v bodě $x_0\in \mathbb R^*$ limitu $A \in \mathbb R^*$,
-jestliže každému okolí $\mathscr O(A)$ bodu $A$ existuje prstencové
-okolí $\mathscr P(x_0)$ bodu $x_0$ takové, že pro všechna $x\in \mathscr P(x_)$
+jestliže ke každému okolí $\mathscr O(A)$ bodu $A$ existuje prstencové
+okolí $\mathscr P(x_0)$ bodu $x_0$ takové, že pro všechna $x\in \mathscr P(x_0)$
 platí $f(x)\in \mathscr O(A).$ Píšeme
 $$
 \lim_{x\to x_0}f(x)=A.
@@ -142,15 +142,15 @@ Pak platí:
 \end{veta}
 
 \begin{veta}
-Nechť jsou dány funkce $f$ a $g$ a nechť existuje prstencové okolí
+Nechť jsou dány funkce $f,g$ a nechť existuje prstencové okolí
 $\mathscr P(x_0)$ takové, že $\forall x \in \mathscr P(x_0):f(x)=g(x).$
-Nechť $\lim_{x\to x_0}g(x)=A, A\in \mathbb R^*.$ pak existuje $\lim_{x\to x_0}f(x)$
+Nechť $\lim_{x\to x_0}g(x)=A, A\in \mathbb R^*.$ Pak existuje $\lim_{x\to x_0}f(x)$
 a platí $\lim_{x\to x_0}f(x)=A.$
 \end{veta}
 
 \begin{veta}[Věta o sevření]
-Nechť $f,g,h$ jsou funkce a nechť rxistuje prstencové okolí $\mathscr P(x_0)$
-bodu $x_0\in \mathbb R^*$ takové, že $\forall x \in \mathscr P(x_0):q(x)\leq f(x)\leq h(x).$
+Nechť $f,g,h$ jsou funkce a nechť existuje prstencové okolí $\mathscr P(x_0)$
+bodu $x_0\in \mathbb R^*$ takové, že $\forall x \in \mathscr P(x_0):g(x)\leq f(x)\leq h(x).$
 Nechť $\lim_{x\to x_0}g(x)=\lim_{x\to x_0}h(x)=A, A \in \mathbb R^*.$ Pak existuje
 $\lim_{x\to x_0}f(x)$ a  platí $ \lim_{x\to x_0}f(x) = A.$
 \end{veta}
