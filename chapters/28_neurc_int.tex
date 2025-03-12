@@ -1,0 +1,52 @@
+\section{Neurčitý integrál}
+\begin{definition}
+Nechť $f(x)$ je definována na intervalu $I$. Funkce $F(x)$ se nazývá \textbf{primitivní}
+k funkci $f(x)$ na $I$, jestliže platí $F^\prime(x)=f(x)$ pro každé $x\in I.$
+Množina všech primitivních funkcí k funkci $f(x)$ na $I$ se nazývá \textbf{neurčitý
+integrál} z funkce $f(x)$ a značí se $\int f(x)\, dx.$ Tedy
+$$\int f(x)\, dx= \left \{ F(x):F(x) \textrm{ je primitivní k } f(x) \textrm{ na } I \right \}. $$
+\end{definition}
+
+\begin{veta}
+    Nechť $F(x)$ je primitivní funkce k $f(x)$ na intervalu $I$, je taky
+    $F(x)+c$ primitivní funkce k $f(x)$ na $I$. Má-li funkce $f(x)$ aspoň
+    jednu primitivní funkci, má jich nekonečně mnoho.
+\end{veta}
+
+\begin{veta}
+Je-li funkce $f$ spojitá na intervalu $I$, pak na tomto intervalu existuje
+primitivní funkce k funkci $f$.
+\end{veta}
+
+\begin{veta}[Pravidla pro integrování]
+Nechť na intervalu $I$ existují integrály $\int f(x) \, dx$ a $\int f(x)\, dx.$
+Pak na $I$ existují také integrály $\int(f(x)\pm g(x))\, dx$ a $\int \alpha f(x), \alpha \in \mathbb R.$
+Platí:
+\begin{align*}
+\int (f(x)\pm g(x)) \, dx &= \int f(x)\, dx \pm \int g(x) \, dx,\\
+\int \alpha f(x)\, dx &= \alpha\int f(x)\, dx.
+\end{align*}
+\end{veta}
+
+\begin{pozn}[Tabulkové integrály]
+\begin{align*}
+    &\int 0\, dx = c & & \, \\
+    &\int dx = x+c & & \, \\
+    &\int x^n \, dx = \frac{x^{n+1}}{n+1}+x, n\ne -1 & & \, \\
+    &\int \frac{1}{x} \, dx = \ln |x| + c & & \int \frac{1}{x+a}\, dx = \ln |x+a|+c \\
+    &\int e^x\, dx = e^x+c & & \int a^{ax}\, dx = \frac{1}{a}e^{ax}+c \\
+    &\int a^x \, dx = \frac{a^x}{\ln a} + c, a >0 & & \int a^{bx} \, dx = \frac{1}{b}\cdot \frac{a^{bx}}{\ln a}+c, a>0\\
+    &\int \sin x \, dx = -\cos x + c & & \int \sin ax \, dx = -\frac{1}{a}\cos ax+c \\
+    &\int \cos x \, dx = \sin x +c & & \int \cos ax\, dx = \frac{1}{a}\sin ax + c \\
+    &\int \frac{1}{\cos^2 x}\, dx = \tg x + c & & \int \frac{1}{\cos^2 ax}\, dx=\frac{1}{a}\tg ax+c\\
+    &\int \frac{1}{\sin^2 x} \, dx = -\cotg x+c & & \int \frac{1}{\sin^2 ax}\, dx = \frac{1}{a}\cotg ax+c \\
+    &\int \frac{1}{\sqrt{1-x^2} }\, dx = \arcsin x + c & & \int \frac{1}{\sqrt{1-a^2x^2} }\, dx = \frac{1}{a}\arcsin ax+c \\
+    &\int \frac{1}{x^2+1}\, dx = \arctg x + c & & \int \frac{1}{a^2x^2 + 1}\, dx = \frac{1}{a}\arctg ax + c
+\end{align*}
+\end{pozn}
+
+\begin{veta}[Integrační metoda \textit{per partes}]
+Nechť funkce $u(x) $ a $v(x)$ mají derivaci na intervalu $I$. Pak platí
+$$\int u(x)v^\prime (x) \, dx = u(x) v(x) - \int u^\prime (x) v(x) \, dx,$$
+pokud alespoň jeden z integrálů existuje.
+\end{veta}
