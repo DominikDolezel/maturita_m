@@ -1,0 +1,36 @@
+\section{Neurčitý integrál}\label{appint}
+\subsection*{Tabulkové integrály}
+\begin{align*}
+&\int \textcolor{blue}{0} \, dx = \textcolor{blue}{c} & & \int \textcolor{blue}{1}\,  dx = \textcolor{blue}{x}+c & & \int \textcolor{blue}{x^n} \, dx = \textcolor{blue}{\frac{x^{n+1}}{n+1}}+c \\
+&\int \textcolor{blue}{\frac{1}{x}} \, dx = \textcolor{blue}{\ln |x|} + c & & \int \textcolor{blue}{e^x}\, dx = \textcolor{blue}{e^x}+c & &  \int \textcolor{blue}{a^x} \, dx = \textcolor{blue}{\frac{a^x}{\ln a}} + c \\
+&\int \textcolor{blue}{\sin x} \, dx = \textcolor{blue}{-\cos x} + c & & \int \textcolor{blue}{\cos x} \, dx = \textcolor{blue}{\sin x} +c & &\int \frac{1}{\cos^2 x}\, dx = \tg x + c \\
+&\int \textcolor{blue}{\frac{1}{\sin^2 x}} \, dx = \textcolor{blue}{-\cotg x}+c & & \int \textcolor{blue}{\frac{1}{\sqrt{1-x^2} }}\, dx = \textcolor{blue}{\frac{1}{\arcsin x}} + c & &\int \textcolor{blue}{\frac{1}{x^2+1}}\, dx = \textcolor{blue}{\arctg x} + c&
+\end{align*}
+
+\subsection*{Integrály řešené jinak než substitucí}
+\begin{align*}
+    &\textrm{integrál}                        & &                 & & \textrm{řešení} \\
+    &\int \frac{A}{x-\alpha}\, dx             & & \longrightarrow & & A\ln|x-\alpha|+c \\
+    &\int \frac{1}{(x^2+a^2)^n}\, dx          & & \longrightarrow & & \textrm{per partes vyjádříme } J_1 \textrm{ ($u=J_1, v^\prime=1$)}\\
+    &\int \frac{Mx+N}{x^2+px+q}\, dx          & & \longrightarrow & & \textrm{do čitatele dostaneme derivaci jmenovatele, vede na }\ln \\
+    &\int \frac{Mx+N}{(x^2+px+q)^n}\, dx      & & \longrightarrow & & \textrm{doplníme na čtverec, vede na }\arctg  \\
+    &\int \sin^2 x\, dx, \int \cos^2 x \, dx  & & \longrightarrow & & \textrm{pomocí vzorce pro poloviční argument}
+\end{align*}
+
+\subsection*{Integrály řešené substitucí}
+\begin{align*}
+    &\textrm{integrál}                                & & \textrm{příklad}                                       & &                 & & \textrm{substituce}\\
+    &\int \frac{A}{(x-\alpha)^n}\, dx                 & & \int \frac{5}{x-3}\, dx                                & & \longrightarrow & & x-\alpha=t \\
+    &\int \frac{Mx+N}{(x^2+\alpha^2)^k}\, dx          & & \int \frac{3x-8}{(x^2+4)^3}\, dx                       & & \longrightarrow & & x^2+\alpha^2=t \\
+    &\int R(\sin x, \cos x)\, dx                      & & \int \frac{dx}{1-\cos x+\sin x}                        & & \longrightarrow & & \tg \frac{x}{2}=t \\
+    &\int R(\sin x, \cos x)\, dx \textrm{ -- lichá v prom.}\sin x                                               & & \int \frac{\sin^3 x}{\cos^2 x}\, dx                    & & \longrightarrow & & \cos x = t \\
+    &\int R(\sin x, \cos x)\, dx \textrm{ -- lichá v prom.}\cos x                                               & & \int \frac{\cos^3 x}{1-\sin^3 x}\, dx                  & & \longrightarrow & & \sin x = t \\
+    &\int R(\sin x, \cos x)\, dx \textrm{ -- sudá v obou prom.} & & \int \frac{2\cos x - \sin x}{\cos x - 2\sin x} \, dx   & & \longrightarrow & & \tg x = t \\
+    &\int R(x^2,\sqrt[3]{x})\, dx                     & & \int \frac{x^2+\sqrt{x}+1}{x+\sqrt{x}}\, dx            & & \longrightarrow & & x=t^s \\
+    &\int R(x,\sqrt[s_1]{x},\dots,\sqrt[s_k]{x})\, dx & & \int \frac{1+x-\sqrt[3]{x}}{x+\sqrt[6]{x^5}}\, dx      & & \longrightarrow & & x=t^{\textrm{nsn}(s_1,\dots,s_k)}\\
+    &\int R(x,\sqrt[s]{ax+b})\, dx                    & & \int \frac{\sqrt{x+1}+1}{\sqrt{x+1}-1} \, dx           & & \longrightarrow & & ax+b=t^s \\
+    &\int R\left(x,\sqrt[s]{\frac{ax+b}{cx+d}}\right)\, dx       & & \int \frac{1}{x}\cdot \sqrt{\frac{x+1}{x-1}} \, dx     & & \longrightarrow & & \frac{ax+b}{cx+d}=t^s \\
+    &\int R(x,\sqrt{k^2-x^2}) \, dx                   & & \int x \sqrt{4-x^2}\, dx                               & & \longrightarrow & & x=k\sin t \\
+    &\int R(x,\sqrt{x^2+k^2})\, dx                    & & \int x \sqrt{x^2+4} \, dx                              & & \longrightarrow & & x=\tg t \\
+    &\int R(x,\sqrt{x^2-k^2} )\, dx                   & & \int \frac{1}{x}\sqrt{x^2-1}\, dx                      & & \longrightarrow & & x=\frac{k}{\sin t}
+\end{align*}

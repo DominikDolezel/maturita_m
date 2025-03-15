@@ -32,7 +32,7 @@ Platí:
 \begin{align*}
     &\int 0\, dx = c & & \, \\
     &\int dx = x+c & & \, \\
-    &\int x^n \, dx = \frac{x^{n+1}}{n+1}+x, n\ne -1 & & \, \\
+    &\int x^n \, dx = \frac{x^{n+1}}{n+1}+c, n\ne -1 & & \, \\
     &\int \frac{1}{x} \, dx = \ln |x| + c & & \int \frac{1}{x+a}\, dx = \ln |x+a|+c \\
     &\int e^x\, dx = e^x+c & & \int a^{ax}\, dx = \frac{1}{a}e^{ax}+c \\
     &\int a^x \, dx = \frac{a^x}{\ln a} + c, a >0 & & \int a^{bx} \, dx = \frac{1}{b}\cdot \frac{a^{bx}}{\ln a}+c, a>0\\
@@ -50,3 +50,205 @@ Nechť funkce $u(x) $ a $v(x)$ mají derivaci na intervalu $I$. Pak platí
 $$\int u(x)v^\prime (x) \, dx = u(x) v(x) - \int u^\prime (x) v(x) \, dx,$$
 pokud alespoň jeden z integrálů existuje.
 \end{veta}
+
+\begin{pozn}[Substituční metoda]
+    Označme si substituci $\varphi(x)=u.$ Tuto rovnost diferencujeme.
+    $$\int f(\varphi(x))\varphi^\prime(x)\, dx=\begin{vmatrix}
+        \varphi(x)=u \\
+        \varphi^\prime(x) \, dx=du
+    \end{vmatrix}=\int f(u)\, du.$$
+\end{pozn}
+
+\begin{pozn}[Integrály typu $\frac{f^\prime(x)}{f(x)}$]
+    Platí
+    $$\int \frac{f^\prime(x)}{f(x)}\, dx=\begin{vmatrix}
+        f(x)=t \\
+        f^\prime(x) \, dx = dt
+    \end{vmatrix}=\int \frac{dt}{t}=\ln |t|+c=\ln |f(x)|+c.$$
+\end{pozn}
+
+\subsection*{Integrace racionálně lomených funkcí}
+\begin{pozn}
+    Každou racionální lomenou funkci $\frac{P(x)}{Q(x)}$ lze vyjádřit ve tvaru
+    $$\frac{P(x)}{Q(x)}=S(x)+R_1(x)+\dots+R_n(x),$$
+    kde $S(x)$ je polynom a $R_1(x),\dots,R_n(x)$ jsou parciální zlomky.
+    na libovolném intervalu, který neobsahuje kořeny $Q(x)$ jsou tyto funkce spojité,
+    takže k nim existuje primitivní funkce a platí
+    $$\int \frac{P(x)}{Q(x)} \, dx=\int S(x)\, dx + \int R_1(x)\, dx + \dots + \int R_n(x)\, dx.$$
+\end{pozn}
+
+\begin{pozn}[Integrace parciálních zlomků s reálnými kořeny ve jmenovateli]
+    Parciální zlomky $\frac{A}{(x-\alpha)^k}$ integrujeme následovně:
+    \begin{enumerate}[$i.$]
+    \item je-li $k=1,$ pak triviálně
+    $$\int \frac{A}{x-\alpha} \, dx = A\ln |x-\alpha|+c.$$
+   	\item je-li $k\geq 2,$ použijeme substituci:
+    \begin{align*}
+    \int \frac{A}{(x-\alpha)^k}\, dx &=\begin{vmatrix}
+      x-\alpha=t \\
+      dx = dt
+  \end{vmatrix}=A\int \frac{dt}{t^k}=A\int t^{-k}\, dt \\
+ & = A\cdot \frac{t^{-k+1}}{-k+1}+c=\frac{A}{(1-k)t^{k-1}}+c=\frac{A}{(1-k)(x-\alpha)^{k-1}}+c.
+    \end{align*}
+    \end{enumerate}
+\end{pozn}
+
+\begin{pozn}[Integrace parciálních zlomků s komplexními kořeny ve jmenovateli]
+Parciální zlomky $\frac{Mx+N}{(x^2+px+q)^n}$ integrujeme následovně:
+\begin{enumerate}[1.]
+    \item je-li $p=0$, pak $q>0,$ položíme $q=a^2,a>0$. Je tedy
+    $$\frac{Mx+N}{(x^2+a^2)^n}.$$
+    Pak
+    $$\int \frac{Mx+N}{(x^2+a^2)^n}\, dx = M\underbrace{\int \frac{x}{(x^2+a^2)^n}\, dx}_{I.} + \underbrace{N\int \frac{1}{x^2+a^2}\, dx}_{II.}.$$
+    \begin{enumerate}[$I.$]
+    \item Zlomky tvaru $\frac{x}{(a^2+a^2)^n}\, dx$ integrujeme následovně:
+    \begin{enumerate}[$i.$]
+    \item je-li $n=1$, pak
+    \begin{align*}
+        \int \frac{x}{x^2+a^2}\, dx &= \frac{1}{2}\int \frac{2x}{x^2+a^2}\, dx = \begin{vmatrix}
+            x^2+a^2=t \\
+            2x\, dx = dt
+        \end{vmatrix} \\
+        &=\frac{1}{2} \int \frac{dt}{t}=\frac{1}{2}\ln |t|+c=\frac{1}{2}\ln(x^2+a^2)+c.
+    \end{align*}
+   	\item je-li $n \geq 2,$ pak
+    \begin{align*}
+        \int \frac{x}{(x^2+a^2)^n}\, dx &= \begin{vmatrix}
+            x^2+a^2=u \\
+            2x\, dx = du \\
+            x\, dx = \frac{1}{2}\, du
+        \end{vmatrix}=\int \frac{1}{u^n}\cdot \frac{du}{2} \\
+        &= \frac{1}{2}\int u^{-n}\, du = \frac{1}{2}\cdot \frac{u^{-n}+1}{-n+1}+c =\frac{1}{2(1-n)}\cdot \frac{1}{u^{n-1}}+c \\
+        & = \frac{1}{2(1-n) }\cdot\frac{1}{(x^2+a^2)^{n-1}}+c.
+    \end{align*}
+    \end{enumerate}
+   	\item Označme
+    $$J_n(x,a)=\int \frac{1}{(x^2+a^2)}\, dx.$$ Pak
+    $$
+        J_1(x)= \int \frac{1}{x^2+a^2} \, dx = \frac{1}{a^2}\int \frac{1}{\left ( \frac{x}{a} \right )^2+1 }\, dx =\frac{1}{a^2}\cdot \frac{1}{\frac{1}{a}}\cdot \arctg \frac{x}{a} + c = \frac{1}{a}\cdot \arctg \frac{x}{a}+c.
+    $$
+    $J_2$ určíme rekurentně tak, že vyjádříme metodou \textit{per partes} $J_1$ ($u=J_1$, $v^\prime =1$),
+    $J_3$ tak, že vyjádříme metodou \textit{per partes} $J_2$, \dots
+    \end{enumerate}
+   	\item je-li $p\ne 0,$ upravíme zlomek tak, aby v čitateli byla derivace jmenovatele, tj.
+    $$\frac{Mx+N}{(x^2+px+q)^n}=r\frac{2x+p}{(x^2+px+q)^n}+s \frac{1}{(x^2+px+q)^n}.$$
+    Bude tedy
+    $$\int \frac{Mx+N}{(x^2+px+q)^n}\, dx =r\underbrace{\int \frac{2x+p}{(x^2+px+q)^n}\, dx}_{I.}+s \underbrace{\int \frac{1}{(x^2+px+q)^n}\, dx}_{II.}.$$
+    \begin{enumerate}[$I.$]
+    \item Integrál $\int \frac{2x+p}{(x^2+px+q)^n}\, dx$ spočítáme obdobně jako první integrál v 1.
+    \begin{enumerate}[$i.$]
+    \item pro $n=1$ je
+    $$\int \frac{2x+p}{x^2+px+q}\, dx = \ln(x^2+px+q)+c.$$
+   	\item pro $n \geq 2$ použijeme substituci
+    \begin{align*}
+    \int \frac{2x+p}{(x^2+px+q)^n}\, dx &= \begin{vmatrix}
+x^2+px+q=u \\
+(2x+p)\, dx = du
+\end{vmatrix}=\int \frac{du}{u^n}\\
+& = \frac{1}{1-n}\cdot \frac{1}{u^{n-1}}+c = \frac{1}{1-n}\cdot \frac{1}{(x^2+px+q)^{n-1}}+c.
+    \end{align*}
+    \end{enumerate}
+   	\item Integrál $\int \frac{1}{(x^2+px+q)^n}\, dx$ převedeme substitucí na výpočet
+    integrálu $J_n$.
+    \begin{align*}
+        \int \frac{1}{(x^2++px+q)^n}\, dx &= \int \frac{1}{\left [ \left ( x+\frac{p}{2} \right )^2 +a^2 \right ]^n }\, dx = \begin{vmatrix}
+            x+\frac{p}{2}=u \\
+            dx = du
+        \end{vmatrix} \\
+        &= \int \frac{1}{(u^2+a^2)^n}\, du  = J_n(u,a).
+    \end{align*}
+    \end{enumerate}
+\end{enumerate}
+\end{pozn}
+
+
+\subsection*{Integrace goniometrických funkcí}
+\begin{pozn}
+    Budeme vyšetřovat integrály typu
+    $$\int R(\sin x, \cos x) \, dx,$$
+    kde $R(\sin x, \cos x)$ je funkce v proměnných $\sin x, \cos x.$ Substitucí
+    $\tg \frac{x}{2}=t$ lze tento integrál vždy převést na integrál z racionální
+    lomené funkce v proměnné $t$. \\
+    Je-li $\tg \frac{x}{2}=t,$ pak ze vztahů v pravoúhlém trojúhelníku dostáváme
+    \begin{align*}
+        \sin \frac{x}{2}=\frac{t}{\sqrt{1+t^2} }, & & \cos \frac{x}{2}=\frac{1}{\sqrt{1+t^2} }.
+    \end{align*}
+    Dále
+    \begin{align*}
+        \sin x = 2\sin \frac{x}{2}\cos \frac{x}{2}=\frac{2t}{1+t^2}, & &
+        \cos x = \cos^2 \frac{x}{2}-\sin^2 \frac{x}{2}=\frac{1-t^2}{1+t^2}.
+    \end{align*}
+    Pokud $\tg \frac{x}{2}=t,$ pak $\frac{x}{2}=\arctg t,$ a tedy
+    $$dx = \frac{2}{t^2+1}\, dt.$$
+\end{pozn}
+
+\begin{veta}
+    Je-li funkce $R(\sin x, \cos x)$ lichá vzhledem k
+    proměnné $\sin x$, používáme substituci $\cos x=t$.
+\end{veta}
+
+\begin{veta}
+    Je-li funkce $R(\sin x, \cos x)$ lichá vzhledem k
+    proměnné $\cos x$, používáme substituci $\sin x=t$.
+\end{veta}
+
+\begin{veta}
+    Je-li funkce $R(\sin x, \cos x)$ sudá vzhledem k
+    oběma proměnným, používáme substituci $\tg x=t$.
+\end{veta}
+
+\begin{pozn}
+    Integrály $\int \sin^2 x \, dx, \int \cos^2 x \, dx$ neřešíme substitucí
+    $\tg x  = t,$ nýbrž ze vzorce pro poloviční argument:
+    \begin{align*}
+        \int \sin^2 x \, dx &= \int \frac{1+\cos 2x}{2}\, dx = \frac{1}{2}x + \frac{1}{4} \sin 2x + c, \\
+        \int \cos^2 x \, dx &= \int \frac{1-\cos 2x}{2}\, dx = \frac{1}{2}x - \frac{1}{4} \sin 2x + c.
+    \end{align*}
+\end{pozn}
+
+\subsection*{Integrace některých iracionálních funkcí}
+\begin{veta}
+    Integrály tvaru
+    $$\int R(x,\sqrt[s]{x}) \, dx, \,\,\, \textrm{kde } s \in \mathbb N, s \geq 2$$
+    řešíme substitucí $x=t^s$.
+\end{veta}
+
+\begin{veta}
+    Integrály tvaru
+    $$\int S(x, \sqrt[s_1]{x}, \dots, \sqrt[s_k]{x}  ) \, dx ,\,\,\, \textrm{kde } k \in \mathbb N, s_i \geq 2$$
+    řešíme substitucí $x=t^s,$ kde $s$ je nejmenší společný násobek $s_1,\dots, s_k.$
+\end{veta}
+
+\begin{veta}
+    Integrály tvaru
+    $$\int R(x, \sqrt[s]{ax+b} )\, dx, \,\,\, \textrm{kde } s \in \mathbb N, s \geq 2, a,b \in \mathbb R$$
+    řešíme substitucí $t^s=ax+b$.
+\end{veta}
+
+\begin{veta}
+    Integrály tvaru
+    $$\int R\left (x, \sqrt[s]{\frac{ax+b}{cx+d}} \right)\, dx, \,\,\, \textrm{kde } s \in \mathbb N, s \geq 2, a,b,c,d \in \mathbb R, ad-bc \ne 0$$
+    řešíme substitucí $t^s=\frac{ax+b}{cx+d}.$
+\end{veta}
+
+\begin{veta}[Eulerovy substituce]
+    Integrály tvaru
+    $$\int R(x,\sqrt{ax^2+bx+c}) \, dx, \,\,\, \textrm{kde } a,b,c\in \mathbb R, a \ne 0$$
+    řešíme substitucemi
+    \begin{align*}
+    \sqrt{ax^2+bx+c} &= \sqrt{|a|}t(x-\alpha) & & \textrm{je-li }D >0,  \\
+    \sqrt{ax^2+bx+c} &= \pm\sqrt{|a|}x\pm t & & \textrm{je-li }D <0, a>0, \\
+    \sqrt{ax^2+bx+c} &= \pm xt \pm \sqrt{c}  & & \textrm{je-li }c >0.
+    \end{align*}
+    Pokud $b=0$, řešíme integrály
+    \begin{align*}
+        &\int R(x, \sqrt{k^2-x^2} )\, dx & & \textrm{substitucí } x=k\sin t, \\
+        &\int R(x, \sqrt{x^2+k^2})\, dx & & \textrm{substitucí } x=k\tg t, \\
+        &\int R(x, \sqrt{x^2-k^2} )\, dx & & \textrm{substitucí } x=\frac{k}{\sin t}.
+    \end{align*}
+\end{veta}
+
+\begin{pozn}
+    Přehled všech základních tabulkových integrálů a substitucí, které musíme umět, je
+    k nalezení v příloze \ref{appint}.
+\end{pozn}
