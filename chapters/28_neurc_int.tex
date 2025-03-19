@@ -19,7 +19,7 @@ primitivní funkce k funkci $f$.
 \end{veta}
 
 \begin{veta}[Pravidla pro integrování]
-Nechť na intervalu $I$ existují integrály $\int f(x) \, dx$ a $\int f(x)\, dx.$
+Nechť na intervalu $I$ existují integrály $\int f(x) \, dx$ a $\int g(x)\, dx.$
 Pak na $I$ existují také integrály $\int(f(x)\pm g(x))\, dx$ a $\int \alpha f(x), \alpha \in \mathbb R.$
 Platí:
 \begin{align*}
@@ -99,7 +99,7 @@ Parciální zlomky $\frac{Mx+N}{(x^2+px+q)^n}$ integrujeme následovně:
     \item je-li $p=0$, pak $q>0,$ položíme $q=a^2,a>0$. Je tedy
     $$\frac{Mx+N}{(x^2+a^2)^n}.$$
     Pak
-    $$\int \frac{Mx+N}{(x^2+a^2)^n}\, dx = M\underbrace{\int \frac{x}{(x^2+a^2)^n}\, dx}_{I.} + \underbrace{N\int \frac{1}{x^2+a^2}\, dx}_{II.}.$$
+    $$\int \frac{Mx+N}{(x^2+a^2)^n}\, dx = M\underbrace{\int \frac{x}{(x^2+a^2)^n}\, dx}_{I.} + \underbrace{N\int \frac{1}{(x^2+a^2)^n}\, dx}_{II.}.$$
     \begin{enumerate}[$I.$]
     \item Zlomky tvaru $\frac{x}{(a^2+a^2)^n}\, dx$ integrujeme následovně:
     \begin{enumerate}[$i.$]
@@ -118,12 +118,12 @@ Parciální zlomky $\frac{Mx+N}{(x^2+px+q)^n}$ integrujeme následovně:
             2x\, dx = du \\
             x\, dx = \frac{1}{2}\, du
         \end{vmatrix}=\int \frac{1}{u^n}\cdot \frac{du}{2} \\
-        &= \frac{1}{2}\int u^{-n}\, du = \frac{1}{2}\cdot \frac{u^{-n}+1}{-n+1}+c =\frac{1}{2(1-n)}\cdot \frac{1}{u^{n-1}}+c \\
+        &= \frac{1}{2}\int u^{-n}\, du = \frac{1}{2}\cdot \frac{u^{-n+1}}{-n+1}+c =\frac{1}{2(1-n)}\cdot \frac{1}{u^{n-1}}+c \\
         & = \frac{1}{2(1-n) }\cdot\frac{1}{(x^2+a^2)^{n-1}}+c.
     \end{align*}
     \end{enumerate}
    	\item Označme
-    $$J_n(x,a)=\int \frac{1}{(x^2+a^2)}\, dx.$$ Pak
+    $$J_n(x,a)=\int \frac{1}{(x^2+a^2)^n}\, dx.$$ Pak
     $$
         J_1(x)= \int \frac{1}{x^2+a^2} \, dx = \frac{1}{a^2}\int \frac{1}{\left ( \frac{x}{a} \right )^2+1 }\, dx =\frac{1}{a^2}\cdot \frac{1}{\frac{1}{a}}\cdot \arctg \frac{x}{a} + c = \frac{1}{a}\cdot \arctg \frac{x}{a}+c.
     $$
@@ -151,7 +151,7 @@ x^2+px+q=u \\
    	\item Integrál $\int \frac{1}{(x^2+px+q)^n}\, dx$ převedeme substitucí na výpočet
     integrálu $J_n$.
     \begin{align*}
-        \int \frac{1}{(x^2++px+q)^n}\, dx &= \int \frac{1}{\left [ \left ( x+\frac{p}{2} \right )^2 +a^2 \right ]^n }\, dx = \begin{vmatrix}
+        \int \frac{1}{(x^2+px+q)^n}\, dx &= \int \frac{1}{\left [ \left ( x+\frac{p}{2} \right )^2 +a^2 \right ]^n }\, dx = \begin{vmatrix}
             x+\frac{p}{2}=u \\
             dx = du
         \end{vmatrix} \\
