@@ -1,0 +1,104 @@
+\section{Určitý integrál}
+\begin{pozn}
+    Supremum a infimum množiny jsme již zavedli v definici \ref{supinf}.
+\end{pozn}
+
+\begin{definition}
+\textbf{Dělením} $D$ uzavřeného \textbf{intervalu} $\left < a,b \right > $
+rozumíme každou konečnou množinu čísel $x_0,\dots,x_n \in \mathbb R$ takových, že
+$a=x_0<x_1<\dots<x_n=b.$ Intervaly $\left < x_0, x_1 \right > ,
+\left < x_1, x_2 \right >, \dots, \left < x_{n-1}, x_n \right >  $ nazýváme
+\textbf{dělící intervaly}, které označíme $D=\left \{ x_0,x_1,\dots,x_n \right \} .$
+Body $x_0,\dots,x_n$ nazýváme \textbf{dělící body} dělení $D$. Číslo
+$\max \left ( x_i-x_{i-1} \right ), i=1,\dots,n $ nazýváme \textbf{normou dělení}
+$D$ a označujeme $\nu(D).$ Množinu všech dělení na intervalu $\left < a,b \right > $
+označme $\mathscr D(a,b).$
+\end{definition}
+
+\begin{definition}
+Nechť $D_1, D_2 \in \mathscr D(a,b)$. Řekneme, že dělení $D_2$ je \textbf{zjemněním
+dělení} $D_1,$ jestliže $D_1 \subset D_2.$
+\end{definition}
+
+\begin{definition}
+Nechť $f(x)$ je omezená na $\left < a,b \right > , D\in \mathscr D(a,b),
+D=\left \{ x_0,\dots,x_n \right \}. $ Pak množina $\left \{ f(x),
+x \in \left < x_{i-1},x_i \right >  \right \} $ je pro všechna $i \in \left \{
+1,\dots,n\right \} $ neprázdná a omezení a tedy má supremum a infimum.
+Označme
+\begin{align*}
+    m_i &= \inf \left \{ f(x), x \in \left < x_{i-1},x_i \right >  \right \} \textrm{ pro } D=\left \{ x_0,\dots,x_n \right \},\\
+    M_i &=   \sup \left \{ f(x), x \in \left < x_{i-1},x_i \right >  \right \} \textrm{ pro } D=\left \{ x_0,\dots,x_n \right \}.
+\end{align*}
+Číslo $S(D,f)=\sum_{i=1}^n M_i\cdot (x_i-x_{i-1})$
+(resp. $s(D,f)=\sum_{i=1}^n m_i\cdot (x_i-x_{i-1})$) je \textbf{horní} (resp. \textbf{dolní}) \textbf{součet funkce}
+$f(x)$ příslušný dělení $D$.
+\end{definition}
+
+\begin{pozn}
+    Platí $s(D,f)\leq S(D,f).$
+\end{pozn}
+
+\begin{veta}
+Nechť $f(x)$ je omezená na intervalu $\left < a,b \right >. $ Pak
+$\left \{ s(D,f); D\in \mathscr D(a,b) \right \} $ je shora omezená a množina
+$\left \{ S(D,f); D\in \mathscr D(a,b) \right \} $ je zdola omezená.
+\end{veta}
+
+\begin{pozn}
+     Množina dolních součtů má supremum a množina horních součtů má infimum.
+\end{pozn}
+
+\begin{definition}
+Nechť $f(x)$ je omezená na intervalu $\left < a,b \right > .$ Označme
+\begin{align*}
+    \int_{\underline{a}} ^b f(x) \, dx & = \sup \left \{ s(D,f); D \in \mathscr D(a,b) \right \}, \\
+    \int_{a} ^{\underline{b}} f(x) \, dx & = \inf \left \{ S(D,f); D \in \mathscr D(a,b) \right \}.
+\end{align*}
+Číslo $\int_{\underline{a}} ^b f(x)\, dx$ (resp. $\int_{a} ^{\underline{b}} f(x) \, dx$)
+nazýváme \textbf{dolní} (resp. \textbf{horní}) \textbf{integrál} funkce $f(x)$ od
+$a$ do $b$.
+\end{definition}
+
+\begin{veta}
+Nechť $f(x)$ je omezená na intervalu $\left < a,b \right >. $ Pak
+$$\int_{\underline{a}} ^b f(x)\, dx \leq \int_{a} ^{\underline{b}} f(x) \, dx.$$
+\end{veta}
+
+\begin{definition}
+Nechť $f(x)$ je omezená na intervalu $\left < a,b \right > .$ Pak funkce
+$f(x)$ je na intervalu $\left < a,b \right > $ (Riemmanovsky) \textbf{integrovatelná}
+(integrace schopna), jestliže
+$$\int_{\underline{a}} ^b f(x)\, dx = \int_{a} ^{\underline{b}} f(x) \, dx.$$
+Je-li $f(x)$ na intervalu $\left < a,b \right > $ integrovatelná, klademe
+$$\int_{\underline{a}} ^b f(x)\, dx = \int_{a} ^{\underline{b}} f(x) \, dx = \int_{a} ^b f(x) \, dx.$$
+Číslo $\int_{a} ^b f(x)\, dx$ nazýváme \textbf{Riamennův integrál} funkce $f(x)$ od
+$a$ do $b$. Pokud $\int_{\underline{a}} ^b f(x)\, dx < \int_{a} ^{\underline{b}} f(x) \, dx$,
+pak $f(x)$ není na intervalu $\left < a,b \right > $ integrovatelná a
+$\int_{a} ^b f(x)\, dx$ nedefinujeme.
+\end{definition}
+
+\begin{veta}[Newton-Leibnitzova věta]
+Nechť $f(x)$ je integrovatelná na intervalu $\left < a,b \right > , F(x)$ je spojitá
+na intervalu $\left < a,b \right > $. Buď $F(x)$ primitivní funkce k funkci $f(x)$
+na intervalu $\left ( a,b \right ) $. Pak platí:
+$$\int_{a} ^b f(x)\, dx=F(b)-F(a).$$
+\end{veta}
+
+\begin{veta}
+Nechť $f(x)$ je spojitá na intervalu $\left < a,b \right > $. Pak $f(x)$ je na
+intervalu $\left < a,b \right > $ integrovatelná.
+\end{veta}
+
+\begin{veta}
+Nechť $f(x), f_1(x),\dots,f_n(x), g(x)$ jsou integrovatelné funkce na intervalu $\left < a,b \right > $
+a $c; c_1,\dots,c\in \mathbb R.$ Pak
+\begin{enumerate}[$i.$]
+\item funkce $f(x)+g(x)$ je integrovatelná na int. $\left < a,b \right > $ a platí
+$$\int _a^b \left [ f(x)+g(x) \right ] \, dx = \int_a ^b f(x)\, dx + \int_a ^b g(x) \, dx,$$
+\item funkce $c\cdot f(x)$ je integrovatelná na int. $\left < a,b \right > $ a platí
+$$\int _a ^b c\cdot f(x) \, dx = c \int _a ^b f(x)\, dx,$$
+\item funkce $c_1\cdot f_1(x) + \dots + c_n \cdot f_n(x)$ je integrovatelná na int. $\left < a,b \right > $ a platí
+$$\int_a ^b \left [ c_1\cdot f_1(x) + \dots + c_n \cdot f_n (x) \right ]\, dx = c_1 \int _a ^b f_1(x)\, dx + \dots + c_n \int _a ^b f_n(x)\, dx. $$
+\end{enumerate}
+\end{veta}
