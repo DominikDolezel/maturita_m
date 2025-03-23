@@ -7,7 +7,7 @@
 \textbf{Dělením} $D$ uzavřeného \textbf{intervalu} $\left < a,b \right > $
 rozumíme každou konečnou množinu čísel $x_0,\dots,x_n \in \mathbb R$ takových, že
 $a=x_0<x_1<\dots<x_n=b.$ Intervaly $\left < x_0, x_1 \right > ,
-\left < x_1, x_2 \right >, \dots, \left < x_{n-1}, x_n \right >  $ nazýváme
+\left < x_1, x_2 \right >, \dots,$ $\left < x_{n-1}, x_n \right >  $ nazýváme
 \textbf{dělící intervaly}, které označíme $D=\left \{ x_0,x_1,\dots,x_n \right \} .$
 Body $x_0,\dots,x_n$ nazýváme \textbf{dělící body} dělení $D$. Číslo
 $\max \left ( x_i-x_{i-1} \right ), i=1,\dots,n $ nazýváme \textbf{normou dělení}
@@ -102,3 +102,39 @@ $$\int _a ^b c\cdot f(x) \, dx = c \int _a ^b f(x)\, dx,$$
 $$\int_a ^b \left [ c_1\cdot f_1(x) + \dots + c_n \cdot f_n (x) \right ]\, dx = c_1 \int _a ^b f_1(x)\, dx + \dots + c_n \int _a ^b f_n(x)\, dx. $$
 \end{enumerate}
 \end{veta}
+
+\begin{veta}
+Nechť $f(x)$ je integrovatelná a nezáporná na intervalu $\left < a,b \right > $. Pak
+$$\int_a ^b f(x) \, dx \geq 0.$$
+\end{veta}
+
+\begin{veta}
+Nechť funkce $f(x),g(x)$ jsou integrovatelné na intervalu $\left < a,b \right > .$
+Nechť pro každé $x\in \left < a,b \right > :f(x)\leq g(x).$ Pak
+$$\int_a^b f(x) \, dx \leq \int_a^b g(x) \, dx.$$
+\end{veta}
+
+\begin{veta}
+Nechť $a<b<c$ jsou reálná čísla a $f(x)$ je integrovatelná na intervalech
+$\left < a,b \right >, \left < b,c \right > . $ Pak
+$$\int_a^c f(x)\, dx = \int_a^b f(x)\, dx + \int_b^c f(x)\, dx.$$
+\end{veta}
+
+\begin{definition}\label{pocastechspoj}
+Funkce $f(x)$ se nazývá \textbf{po částech spojitá} na intervalu $\left < a,b \right > $,
+jestliže na intervalu $\left < a,b \right > $ spojitá s výjimkou konečného počtu
+bodů $c_1,\dots,c_n; a<c_1<\dots<c_n<b.$
+\end{definition}
+
+\begin{veta}
+Nechť funkce $f(x)$ je po částech spojitá na intervalu $\left < a,b \right > $, jako
+v definici \ref{pocastechspoj}. Pak
+$$\int_a^b f(x)\, dx = \int_a^{c_1}f(x)\, dx + \int_{c_1}^{c_2}f(x)\, dx + \dots + \int_{c_n}^b f(x)\, dx.$$
+\end{veta}
+
+\begin{definition}
+Je-li $f(x)$ definována v čísel $a \in \mathbb R,$ klademe
+$$\int _a ^a f(x)\, dx = 0.$$
+Je-li $f(x)$ integrovatelná na intervalu $\left < a,b \right > ,$ definujeme
+$$\int_b^a f(x)\, dx = -\int_a^b f(x)\, dx.$$
+\end{definition}
