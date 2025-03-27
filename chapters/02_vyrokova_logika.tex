@@ -46,6 +46,14 @@
   \end{center}
 \end{pozn}
 
+\begin{priklad}
+    Napište tabulku pravdivostních hodnot výrokové formule $A\land Y \implies (X\lor Y).$
+\end{priklad}
+
+\begin{reseni}
+    TODO
+\end{reseni}
+
 \begin{definition}
   Zápisy sestavené ze značek, výrokových proměnných, závorek a logických spojek nazýváme \textbf{výrokové formule}.
 \end{definition}
@@ -84,6 +92,58 @@
 \begin{definition}
   \textbf{Výroková forma} je tvrzení obsahující proměnné. Po dosazení konstant za proměnné dostáváme výrok.
 \end{definition}
+
+\begin{priklad}
+    V dílně jsou tři stroje $A,B,C,$ které pracují podle těchto pravidel:
+    \begin{itemize}
+    \item pracuje-li $A$, pracuje i $B$,
+   	\item praceuje alespoň jeden ze strojů $B,C$
+   	\item nepracuje-li stroj $A,$ nepracuje ani $C.$
+    \end{itemize}
+    Určete všechny možnosti práce strojů.
+\end{priklad}
+
+\begin{reseni}
+    Výroky lze zapsat jako
+    \begin{itemize}
+    \item $A\implies B$,
+   	\item $B\lor C$,
+   	\item $A^\prime \implies C^\prime$.
+    \end{itemize}
+    Sestavme tabulku pravdivostních hodnot. Zjistíme, že vyhovují možnosti, kdy pracují
+    stroje $A,B,C; A,B,$ nebo jen stroj $B.$
+\end{reseni}
+
+\begin{priklad}
+    Zapište pomocí symbolů následující výrokové formy a jejich negace:
+    \begin{enumerate}[$a.$]
+    \item Pro každé reálné číslo $b$ platí: $(b+1)^2=b^2+2b+1.$
+   	\item $B(x):$ Existuje takové reálné číslo $m$, že platí $(m+1)^3=m^3+1$.
+    \end{enumerate}
+\end{priklad}
+
+\begin{reseni}
+\begin{enumerate}[$a.$]
+\item $\forall b \in \mathbb R: (b+1)^2=b^2+2b+1,$ negace: $\exists b \in \mathbb R:  (b+1)^2\ne b^2+2b+1.$
+\item $B(x): \exists m \in \mathbb R: (m+1)^3=m^3+1$, negace: $B^\prime(x): \forall m \in \mathbb R: (m+1)^3\ne m^3+1.$
+\end{enumerate}
+\end{reseni}
+
+\begin{priklad}
+    Vytvořte obměnu, obrácení a negaci výroku
+    \begin{center}
+    \uv{Kvadrát přirozeného sudého čísla je sudé číslo.}
+    \end{center}
+\end{priklad}
+
+\begin{reseni}
+Přepíšeme symbolicky: $\forall n \in \mathbb N: n=2k \implies n^2=2l; k,l \in \mathbb N.$
+\begin{itemize}
+\item obměna: $\forall n \in \mathbb N: n^2=2l+1 \implies n=2k+1; k,l \in \mathbb N,$
+\item obrácení: $\forall n \in \mathbb N: n^2=2l \implies n=2k; k,l \in \mathbb N,$
+\item negace: $\exists n \in \mathbb N: n=2k\land n^2 = 2l+1; k,l\in \mathbb N.$
+\end{itemize}
+\end{reseni}
 
 \begin{pozn}
   Důležitému netriviálnímu a dostatečně obecnému výroku nebo výrokové formě s matematickým obsahem říkáme \textbf{věta}.
