@@ -1,16 +1,30 @@
 \section{Základní pojmy z teorie množin}
+
+\begin{priklad}
+    Rozložte $2x^2 - 3x+1.$
+\end{priklad}
+
+\begin{reseni}
+Doplněním na čtverec.
+\end{reseni}
+
 \begin{definition}
   \textbf{Množina} je sourhn objektů, chápaný jako celek. Tyto objekty nazýváme prvky množiny.
 \end{definition}
 
+\begin{pozn}
 Množina může být konečná, nekonečná nebo prázdná. Množinu lze zadat výčtem prvků nebo pomocí charakteristické vlastnosti (např. $\left \{ 2k, k \in \mathbb{N}\right\}$).
+
+\end{pozn}
 
 \begin{definition}
   \textbf{Podmnožina} množiny $A$ je taková množina $B$, že všechny její prvky patří do množiny $A$.
 \end{definition}
 
+\begin{pozn}
 Každá neprázdná množina má dvě \textbf{nevlastní podmnožiny}: množinu prázdnou a sebe sama. Všechny ostatní její podmnožiny nazýváme vlastní.
 
+\end{pozn}
 \begin{definition}
   Množiny $A$ a $B$ se rovnají právě tehdy, když $A$ je podmnožinou $B$ a zároveň $B$ je podmnožinou $A$.
 \end{definition}
@@ -39,15 +53,17 @@ Každá neprázdná množina má dvě \textbf{nevlastní podmnožiny}: množinu 
   Nechť $A, B$ jsou dvě množiny. \textbf{Rozdíl} množin je množina, která obsahuje všechny prvky množiny $A$ s výjimkou těch, jež jsou zároveň prvky množiny $B$. Zapisujeme $A - B$.
 \end{definition}
 
-\begin{veta}
-  \textbf{De Morganovy zákony} jsou zákony určující vztahy mezi sjednocením, průnikem a doplňkem množiny. Nechť $A, B$ jsou dvě množiny, $^\prime$ doplněk množiny. Potom platí:
-  $$ (A \cup B)^\prime = A^\prime \cap B^\prime$$
-  $$ (A \cap B)^\prime = A^\prime \cup B^\prime$$
+\begin{veta}[De Morganova pravidla]
+  Nechť $A, B$ jsou dvě množiny, $X^\prime$ značí doplněk množiny $X$. Potom platí
+  \begin{align*}
+  (A \cup B)^\prime &= A^\prime \cap B^\prime, \\
+  (A \cap B)^\prime &= A^\prime \cup B^\prime.
+  \end{align*}
 \end{veta}
 
 \begin{proof}
   Důkaz prvního vztahu:
-
+  \\ TODO : hezčí obrázky?\\
   \begin{minipage}{0.5\textwidth}
     \centering
         \includegraphics[width=0.5\linewidth]{vennsjed.png}
@@ -85,7 +101,7 @@ Iracionální čísla ($\mathbb{I}$) jsou doplněk racionálních v $\mathbb{R}$
 \end{definition}
 
 \begin{definition}
-  \textbf{Racionálním číslem} nazveme takové číslo $a = \frac{k}{l}, k, l \in \mathbb{Z}$, a $k,l$ jsou nesoudělná.
+  \textbf{Racionálním číslem} nazveme takové číslo $a = \frac{k}{l},$ kde $ k, l \in \mathbb{Z}$ a $k,l$ jsou nesoudělná.
 \end{definition}
 
 \begin{pozn}
@@ -103,23 +119,43 @@ Iracionální čísla ($\mathbb{I}$) jsou doplněk racionálních v $\mathbb{R}$
 \end{definition}
 
 \begin{definition}
+  TODO : nevím jestli je tohle upe košér\\
   \textbf{Periodický rozvoj čísla} je rozvoj, u kterého se za desetinnou čárkou donekonečna opakuje táž číslice nebo skupina číslic. Čísla s takovýmto rozvojem se nazývají ryze periodická čísla, opakující se číslice nebo skupina opakujících se číslic se nazývá perioda. Zapisují se tak, že se nad opakující se skupinou napíše pruh:
-  $$0,333 … = 0,\overline{3}$$
+  $$0,333 … = 0,\overline{3}.$$
 \end{definition}
 
-\begin{definition}
-  Množina komplexních čísel $\mathbb C$ je množina uspořádaných reálných dvojic $(x, y)$, na kterých je definována rovnost, sčítání a násobení následovně:
-  \begin{align*}
-    (a, b) = (c, d) & \iff a = c \land b = d, \\
-    (a, b) + (c, d) & = (a + c, b + d), \\
-    (a, b)(c, d) & = (ac - bd, ad + bc).
-  \end{align*}
-  Dvojici $(0, 1)$ označíme $i$ a budeme ji nazývat komplexní jednotkou. Zřejmě pak platí, že $i^2 = -1$.
-\end{definition}
+\begin{priklad}
+    Zapište zlomkem v základním tvaru číslo $0,\overline{14}.$
+\end{priklad}
 
-\begin{definition}
-  Pokud je uspořádaná dvojice z předchozí definice ve tvaru $(0, b), b \in \R$, nazveme toto číslo \textbf{ryze imaginárním}.
-\end{definition}
+\begin{reseni}
+    Platí
+    \begin{align*}
+        a&=0,\overline{14}\\
+        100a &= 14,\overline{14} \\
+        99a &= 14\\
+        a &= \frac{14}{99}.
+    \end{align*}
+\end{reseni}
+
+\begin{priklad}
+    Zakreslete na číselné ose
+    \begin{enumerate}[$a.$]
+    \item racionální číslo $-4/3.$
+   	\item iracionální číslo $\sqrt{3}. $
+    \end{enumerate}
+\end{priklad}
+
+\begin{reseni}
+\begin{enumerate}[$a.$]
+\item Z podobnosti trojúhelníků.
+\item Z Pythagorovy věty.
+\end{enumerate}
+\end{reseni}
+
+\begin{pozn}
+    Pro definici komplexních čísel viz definici \ref{kompl_c_def}.
+\end{pozn}
 
 \begin{comment}
 
