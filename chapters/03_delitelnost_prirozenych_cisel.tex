@@ -90,6 +90,31 @@
   Nechť $n\in \mathbb N.$ Pak platí: Pokud $n$ není druhou mocninou přirozeného čísla, pak odmocnina z $n$ je iracionální.
 \end{veta}
 
+\begin{veta}\label{existencedeleninevim}
+    Pro všechna $a,b \in \mathbb N, D(a,b)=d$ existují $q_1, q_2\in \mathbb N$ taková,
+    že $a=dq_1, b=dq_2, $ přičemž $D(q_1, q_2)=1.$
+\end{veta}
+
+\begin{priklad}
+Najděte všechny dvojice přirozených čísel, jejichž součin je 864 a jejichž největší společný dělitel je 6.
+\end{priklad}
+
+\begin{reseni}
+Podle věty \ref{existencedeleninevim}.
+\end{reseni}
+
+\begin{priklad}
+Dokažte přímo a úvahou přes rozklad: $\forall a \in \mathbb Z: 3\, | \, (a^3-a).$
+\end{priklad}
+
+\begin{priklad}
+Dokažte nepřímo a sporem: $\forall n \in \mathbb N: 5 \, | \, n^2 \implies 5 \, | n.$
+\end{priklad}
+
+\begin{reseni}
+Dokazujeme obměnu.
+\end{reseni}
+
 \subsection*{Kritéria dělitelnosti}
 \begin{veta}
   Nechť $n\in \mathbb N, n=a_k\cdot 10^k+a_{k-1}\cdot 10^{k-1}+\dots + a_1\cdot 10 + a_0.$ Pak platí:
@@ -171,6 +196,32 @@ Platí
       \end{enumerate}
   \end{enumerate}
 \end{proof}
+
+\begin{priklad}
+Dokažte, že  $\forall n \in \mathbb N: 24 \, | \, (25^n+23).$
+\end{priklad}
+
+\begin{reseni}
+Matematickou indukcí.
+\end{reseni}
+
+\begin{priklad}
+Dokažte, že $\forall a \in \mathbb Z: 3 \, \ndiv \, a \implies 3 \, | \, (a^2-1).$
+\end{priklad}
+
+\begin{reseni}
+Dokazujeme přímo dosazením za $a=3k\pm 1.$
+\end{reseni}
+
+\begin{priklad}
+největší společný dělitel čísel $a,b$ je 15 a jejich nejmenší společný násobek je 900.
+Určete čísla $a,b$.
+\end{priklad}
+
+\begin{reseni}
+Užitím věty \ref{existencedeleninevim} dostaneme $dq_1q_2=n,$ tedy $q_1q_2=60,$ přitom
+$D(q_1,q_2)=1.$ Dále dopočítáme.
+\end{reseni}
 
 \begin{veta}[Binomická věta]\label{bin_v}
   Nechť $x,y \in \mathbb N_0$. Pak
