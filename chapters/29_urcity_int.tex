@@ -133,8 +133,41 @@ $$\int_a^b f(x)\, dx = \int_a^{c_1}f(x)\, dx + \int_{c_1}^{c_2}f(x)\, dx + \dots
 \end{veta}
 
 \begin{definition}
-Je-li $f(x)$ definována v čísel $a \in \mathbb R,$ klademe
+Je-li $f(x)$ definována v čísle $a \in \mathbb R,$ klademe
 $$\int _a ^a f(x)\, dx = 0.$$
 Je-li $f(x)$ integrovatelná na intervalu $\left < a,b \right > ,$ definujeme
 $$\int_b^a f(x)\, dx = -\int_a^b f(x)\, dx.$$
 \end{definition}
+
+
+\begin{veta}[O substituci pro určité integrály]\label{ppui}
+Nechť $\varphi (t)$ má na intervalu $\left < \alpha, \beta  \right > $ spojitou derivaci
+$\varphi^\prime (t)$, $f(x)$ je spojitá na intervalu $\left < a,b \right >;
+\varphi: \left < \alpha, \beta \right >\to \left < a,b \right >  $. Označme
+$\varphi(\alpha)=a, \varphi(\beta)=b.$ Pak platí
+$$\int _a ^b f(x)\, dx = \int _\alpha ^\beta f \left [ \varphi(t) \right ]\cdot \varphi^\prime (t)\, dt. $$
+\end{veta}
+
+\begin{pozn}
+    Ve větě \ref{ppui} využíváme tzv \textbf{transofrmace mezí}.
+\end{pozn}
+
+\begin{veta}[O integraci \textit{per partes} pro určité integrály]
+Nechť funkce $u(x)$ a $v(x)$ mají na intervalu $\left < a,b \right > $ spojité derivace
+$u^\prime (x)$ a $v^\prime (x)$. Pak platí
+$$\int_a ^b u^\prime (x)v(x)\, dx = \left [ u(x)v(x) \right ]_a^b -\int _a^b u(x)v^\prime(x)\,dx.$$
+\end{veta}
+
+\begin{pozn}
+    Je-li $f(x)$ spojitá a nezáporná na intervalu $\left < a,b \right > ,$ je
+    $\int_a ^b f(x)\, dx$ obsah plochy omezené osou $x$, přímkami $x=a, x=b$ a
+    grafem funkce $y=f(x)$. Platí tedy
+    $$S=\int_a^b f(x)\, dx.$$
+\end{pozn}
+
+\begin{pozn}
+    Nechť je $f(x)$ spojitá a nezáporná na intervalu $\left < a,b \right > $ a
+    $M=\left \{ \left [ x,y \right ], x \in \left < a,b \right >, y \in \left < y, f(x) \right >    \right \} .$
+    Nechť $M$ rotuje kolem osy $x$. Dostaneme rotační těleso, jehož objem je
+    $$V=\pi \int _a^b \left [ f(x) \right ]^2 \, dx. $$
+\end{pozn}
