@@ -508,3 +508,92 @@ poslední blok ---
     \end{cases}
   \]
 \end{veta}
+
+
+\begin{priklad}
+Dvě kružnice se protínají ve dvou bodech $A,B$, bod $X \in \overleftrightarrow{AB},$
+ale neleží na úsečce $AB$. Dokažte, že délky úseků na tečnách vedených z bodu $X$
+ke kružnicím jsou shodné.
+\end{priklad}
+
+\begin{reseni}
+Označme body dotyku $T_1,T_2.$ Z mocnost bodu ke kružnici platí
+$|T_1X|^2=|XB|\cdot |XA|=|XT_2|^2.$
+\end{reseni}
+
+\begin{priklad}
+je dána přímka $p$, kružnice $k_1, k_2$ v opačných polorovinách s hranicí $p.$
+Sestrojte úsečku $XY$ tak, aby $X\in k_1, Y\in k_2, \overleftrightarrow{AB} \perp p,$ a
+střed úsečky $XY$ ležel na $p.$
+\end{priklad}
+
+\begin{reseni}
+Rozbor: $XY\perp p \, \land$ střed $XY\in p \implies X=\mathcal O_p(Y)$. Hledáme
+bod $X$: buď $X \in k_1$, nebo $X=\mathcal O_p(Y) \, \land \, Y \in k_2 \implies X \in \mathcal O_p(k_2)=k_2^\prime,$ celkem
+tedy máme $X\in k_1\cap k_2^\prime.$ Dále nesmíme v řečení zahrnout taky postup
+konstrukce, samotnou konstrukci a diskuzi počtu řešení (tady v závislosti na
+počtu průniků $k_1$ s $k_2^\prime$).
+\end{reseni}
+
+\begin{priklad}
+Jsou dány dvě rovnoběžky $a,b$ a mimo ně bod $C$. Sestrojte rovnostranný
+trújůhelník $ABC$ tak, aby $A \in a, B \in b$.
+\end{priklad}
+
+\begin{reseni}
+Strana $AC$ je stejně dlouhá jako $BC$ a navíc svírají úhel $60^\circ$. Bod
+$B$ tedy nalezneme jako průnik přímky $b$ s otočením přímky $a$ o $60^\circ$ kolem
+bodu $C.$
+\end{reseni}
+
+\begin{priklad}
+Zobrazte bod $X$ ve stejnolehlosti dané bodem $S$ a koeficientem
+\begin{enumerate}[$i.$]
+\item $\lambda = 3,$
+\item $\lambda = \frac{1}{3},$
+\item $\lambda = -\frac{1}{3},$
+\item $\lambda = -3.$
+\end{enumerate}
+\end{priklad}
+
+\begin{reseni}
+Řešení vypadá následovně:
+\begin{center}
+ \includegraphics[width=0.5\linewidth]{stejnolehlost.png}
+\end{center}
+\end{reseni}
+
+\begin{priklad}
+Je dána kružnice $k$ a uvnitř ní bod $M$. Sestrojte všechny tětivy této kružnice
+procházející bodem $M$, které jsou jím děleny v poměru $3:5.$
+\end{priklad}
+
+\begin{reseni}
+Označme tětivu jako $XY$ ($X,Y$ jsou tedy na kružnici $k$). Pak $Y$ je obraz
+bodu $X$ ve stejnolehlost se středem $M$ a koeficientem $-\frac{5}{3}$. Protože
+body $X$ leží na kružnici $k,$ pak bod $Y$ leží na kružnici $k^\prime$ (tj. obraz
+kružnice $k$ ve výše popsané stejnolehlosti). Proto je $Y$ průsečík $k\cap k^\prime$.
+\end{reseni}
+
+\begin{priklad}
+Je dán konvexní úhel $AVB$ a vnitřní bod $M$ tohoto úhlu. Sestrojte kružnici $k,M\in k,$
+která se dotýká obou ramen úhlu.
+\end{priklad}
+
+\begin{reseni}
+Sestrojíme si libovolnou kružnici $k^\prime$, která se dotýká ramen úhlu $AVB$ a pak
+ji zobrazíme ve stejnolehlost se středem $V$ a koeficientem $\frac{|VM|}{|VM^\prime|},$
+kde $M^\prime$ je průsečík úsečky $VM$ a kružnice $k^\prime$.
+\end{reseni}
+
+\begin{priklad}
+Je dána přímka $p$, kružnice $k$, která nemá s přímkou $p$ společný bod a bod $A$, který
+neleží ani na přímce $p$, ani ve vnitřní oblasti kružnice $k$. Sestrojte trojúhelník
+$ABC$ s úhlem $|\sphericalangle BAC|=60^\circ$ tak, aby $B\in p, C \in k, |AC|=2|AB|.$
+\end{priklad}
+
+\begin{reseni}
+Bod $C$ je obraz bodu $B$ ve složeném zobrazení ze stejnolehlosti se středem v bodě
+$A$ a koeficientem 2 a následném otočení o $60^\circ.$ \dots Proto je bod $C$ průsečík
+kružnice $k$ a přímky $p^\prime$ získené výše popsaným zobrazením.
+\end{reseni}

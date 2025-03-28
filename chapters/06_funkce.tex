@@ -15,10 +15,30 @@
   nazveme \textbf{oborem hodnot} funkce $f$.
 \end{definition}
 
+\begin{priklad}
+Určete definiční obor a obor hodnot funkce $y=x^2+x+1.$
+\end{priklad}
+
+\begin{reseni}
+Definiční obor je $\mathbb R$, obor hodnot (množinu všech vyhovujících $a$)
+získáme řešením rovnice $a=x^2+x+1.$
+\end{reseni}
+
 \begin{pozn}
   \textbf{Grafem funkce} rozumíme množinu všech bodů $[x,f(x)]$, kde $x\in D(f).$
 \end{pozn}
 
+\begin{priklad}
+Nakreslete graf funkce $y=2-|x+1|.$
+\end{priklad}
+
+\begin{priklad}
+Nakreslete graf funkce $y=-2x^2+x-1$.
+\end{priklad}
+
+\begin{reseni}
+Doplněním na čtverec, odkud jsou posuny jasně patrné.
+\end{reseni}
 
 \begin{definition}
   Funkce $f$ se nazývá \textbf{sudá} (resp. \textbf{lichá}), jestliže platí
@@ -30,6 +50,17 @@
 \end{itemize}
 
 \end{definition}
+
+\begin{priklad}
+Určete paritu funkce $y=x^2$.
+\end{priklad}
+
+\begin{reseni}
+\begin{enumerate}[1.]
+\item $D(f)=\mathbb R$ -- platí
+\item $f(-x)=(-x)^2=x^2=f(x)$ -- platí, tedy funkce je sudá
+\end{enumerate}
+\end{reseni}
 
 \begin{definition}
   Funkce $f$ se nazývá \textbf{prostá}, právě tehdy když platí
@@ -48,6 +79,14 @@
   \end{enumerate}
   Je-li $f$ neklesající nebo nerostoucí, je \textbf{monotónní}. Pokud je klesající nebo rostoucí, je \textbf{ryze monotónní}.
 \end{definition}
+
+\begin{priklad}
+Určete monotónnost funkce $y=x^2$ na množině $\mathbb R_0^+.$
+\end{priklad}
+\begin{reseni}
+Je-li $x_1,x_2 >0$, pak $x_1 < x_2 \implies x_1^2 < x_1x_2.$ Obdobně $x_1x_2<x_2^2$.
+Celkem tedy $x_1^2<x_2^2 \implies f(x_1)<f(x_2),$ tedy $f$ je rostoucí v $\mathbb R_0^+.$
+\end{reseni}
 
 \begin{definition}
   Nechť $f$ je funkce, $M\subseteq D(f)$. Řekneme, že funkce $f$ je v množině $M$
@@ -99,31 +138,8 @@
 Číslo z nazýváme \textbf{celou částí} čísla x a zapisujeme $[x] = z (\lfloor x \rfloor = z)$.
 \end{definition}
 
-\begin{definition}
-  O funkci $f:\mathbb {R} \rightarrow \mathbb {R}$ řekneme, že je \textbf{spojitá} v bodě $a$, pokud ke každému libovolně malému číslu $\varepsilon >0$ existuje takové číslo $\delta >0$, že pro všechna $x$, pro něž platí $|x-a|<\delta$, platí také $|f(x)-f(a)|<\varepsilon$.
-\end{definition}
-
-\begin{definition}
-  Číslo $A\in \mathbb {R}$ je \textbf{limitou} funkce $f:\mathbb {R} \rightarrow \mathbb {R}$ v bodě $ a\in \mathbb {R}$, jestliže k libovolnému $ \varepsilon >0$ existuje takové $ \delta >0$, že pro všechna $x\in D(f)$ taková, že $ \left|x-a\right|<\delta$ ($x$ leží v prstencovém okolí bodu $a$) platí $\left|f(x)-A\right|<\varepsilon $.
-
-  Limitu má smysl zkoumat jen v definičním oboru funkce neobsahujícím bod $a$, tj. libovolně blízko k bodu $a$ musí být funkce definována.
-\end{definition}
-
-\begin{definition}
-  Nejběžnější moderní definice \textbf{derivace} funkce $f$ v bodě $a$, zapisujeme $f'(a)$ je
-  $$f'(a)=\lim _{h\to 0}{\frac {f(a+h)-f(a)}{h}}=\lim _{x\to a}{\frac {f(x)-f(a)}{x-a}}.$$
-
-  Co to znamená se mě neptejte (klidně se zeptejte). Vložte intuitivní definici derivace.
-\end{definition}
-
-\begin{definition}
-  Nechť $f$ je funkce spojitá na intervalu $(a,b)$. Pak říkáme, že funkce $f$ je na intervalu $(a,b)$ \textbf{konvexní} (resp. \textbf{ryze konvexní}) právě tehdy, když pro libovolné číslo $\lambda \in (0,1)$ s vlastností $\forall x,y\in (a,b),x<y:f(\lambda x+(1-\lambda )y) < (\text{resp. } \leq) \lambda f(x)+(1-\lambda )f(y)$
-
-  Pokud spojitá funkce není na intervalu konvexní (resp. ryze konvexní), je na něm \textbf{ryze konkávní} (resp. \textbf{konkávní}).
-\end{definition}
-
-\begin{definition}
-  \textbf{Primitivní funkce} k funkci $f$ na intervalu $(a,b)$ je taková funkce $F$, že pro každé $x\in (a,b)$ je $F'(x)=f(x)$.
-
-  Procesu hledání primitivní funkce se často říká \textbf{integrování} nebo \textbf{integrace} (od slova integrál).
-\end{definition}
+\begin{pozn}
+    Pro definici limity a funkce spojité viz kapitolu \ref{limita},
+    dále definici derivace \ref{derivace}, funkce konvexní a
+    konkávní \ref{konvkonk} a konečně definici definici integrálu \ref{integral}.
+\end{pozn}

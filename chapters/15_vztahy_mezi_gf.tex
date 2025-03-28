@@ -16,6 +16,8 @@
     Důkaz máme umět, ale nedělali jsme jej.
 \end{proof}
 
+
+
 \begin{veta}\label{dvojnas}
     $ \forall x \in \mathbb{R}:$
     \begin{align*}
@@ -31,7 +33,7 @@
     Následující vztahy stačí \uv{rychle odvodit}.
 \end{pozn}
 
-\begin{veta}[Vyjádření gon. funkce pomocí jiné gon. funkce]
+\begin{veta}[Vyjádření gon. funkce pomocí jiné gon. funkce]\label{vyjadrenigonf}
   \,\\
   \begin{tabular}{| c || c | c | c | c |}
     \hline
@@ -48,6 +50,22 @@
   \end{tabular}
 
 \end{veta}
+
+\begin{priklad}
+Určete hodnoty všech goniometrických funkcí, je-li dáno $\sin x=\frac{1}{3}, x \in \left ( \frac{\pi}{2},\pi \right ). $
+\end{priklad}
+
+\begin{reseni}
+Podle vztahů ve větě \ref{vyjadrenigonf}.
+\end{reseni}
+
+\begin{priklad}
+Vypočtěte hodnoty všech goniometrických funkcí v bodě $\alpha = 105^\circ$.
+\end{priklad}
+
+\begin{reseni}
+Využijeme toho, že $105=64+45,$ což jsou tabulkové hodnoty, a součtových vzorců.
+\end{reseni}
 
 \begin{proof}
     Pro druhý až čtvrtý kvadrant v tabulce plyne z definice. \\
@@ -119,3 +137,56 @@
     \end{align*}
   v ostatních případech analogicky
 \end{proof}
+
+\begin{priklad}
+Vyjádřete jako součin: $\sin 3y+\sin y.$
+\end{priklad}
+
+\begin{reseni}
+Platí
+$$\sin 3y+\sin y=2\sin \frac{3y+y}{2}\cdot \cos \frac{3y-y}{2}=2\sin 2y \cdot \cos y.$$
+\end{reseni}
+
+\begin{veta}[Sinová věta]
+    V každém trojúhelníku $ABC$ platí
+    $$\frac{a}{\sin \alpha} = \frac{b}{\sin \beta}=\frac{c}{\sin \gamma}=2R,$$
+    kde $R$ je poloměr kružnice opsané.
+\end{veta}
+
+\begin{veta}[Kosinová věta]
+ V každém trojúhelníku $ABC$ platí
+ \begin{align*}
+    a^2 &= b^2+c^2-2bc\cos \alpha, \\
+    b^2 &= a^2+c^2-2ac\cos \beta ,\\
+    c^2 &= a^2+b^2-2ab\cos \gamma.
+ \end{align*}
+\end{veta}
+
+\begin{veta}\label{obsahtroj}
+     V každém trojúhelníku $ABC$ platí
+     $$\frac{abc}{4R}=S=\rho S,$$
+     kde $R$ je poloměr kružnice opsané a $\rho$ poloměr kružnice vepsané.
+\end{veta}
+
+\begin{veta}[Heronův vzorec]
+    V každém trojúhelníku $ABC$ platí
+    $$S=\sqrt{s(s-a)(s-b)(s-c)}, $$
+    kde $s$ je polovina obvodu.
+\end{veta}
+
+\begin{priklad}
+Nalezněte vztah mezi poloměrem kružnice vepsané a opsané trojúhelníku $ABC$.
+\end{priklad}
+
+\begin{reseni}
+Zjistíme jednoduše z věty \ref{obsahtroj}.
+\end{reseni}
+
+\begin{priklad}
+Vrchol věžě stojící na rovině vidíme z místa $A$ pod výškovým úhlem $\alpha= 39^\circ 258^\prime$.
+Přijdeme-li o 50 metrů blíž, je vidět pod úhlem $\beta=58^\circ 42^\prime.$ Jak vysoká je věž?
+\end{priklad}
+
+\begin{reseni}
+Použitím sinové a kosinové věty.
+\end{reseni}

@@ -198,6 +198,181 @@ $$\det A = \begin{vmatrix}
 \end{vmatrix}=1$$
 \end{reseni}
 
+\begin{priklad}
+V $\mathbb R$ řešte  soustavu rovnic
+\begin{align*}
+    x_1+x_2+x_3 &=1,
+    x_1+x_2 &= 0,
+    x_1+x_3 &=.
+\end{align*}
+\end{priklad}
+
+\begin{reseni}
+Řešme Cramerovým pravidlem. Soustavu přepišme jako matici
+$$
+\begin{pmatrix}
+    1 & 1&1\\
+    1 &1 &0 \\
+    1 &0 &1
+\end{pmatrix}.
+$$
+Platí $x_i=\frac{\det A_i}{\det A},$ kde $A_i$ značí matici, kterou jsme získali
+z matice $A$ nahrazením $i$-tého sloupce za vektor \uv{pravé strany} soustavy rovnic.
+\end{reseni}
+
+\begin{priklad}
+V $\mathbb R$ řešte soustavu rovnic s parametrem $a \in \mathbb R:$
+\begin{align*}
+    x-y &=2,\\
+    ax+y &=4.
+\end{align*}
+\end{priklad}
+
+\begin{reseni}
+Buď Gaussovou eliminací (od druhého řádku odečteme $a$-násobek prvního řádku) nebo
+Cramerovým pravidlem (to však funguje jen tehdy, když $\det A \ne 0$, případ $a=0$ tedy
+musíme dořečit Gaussovou eliminací).
+\end{reseni}
+
+\begin{priklad}
+V $\mathbb R$ řešte soustavu rovnic s parametrem $a\in \mathbb R:$
+\begin{align*}
+    ax_1-+ax_2 &=0,\\
+    -a^2x_2+x_3 &=a,\\
+    ax_1 + x_3 &= a^2.
+\end{align*}
+\end{priklad}
+
+\begin{reseni}
+Buď Gaussovou eliminační metodou nebo Cramerovým pravidlem. Nesmíme zapomenout
+rozdělit na případy, kdy by některé výrazy nemusely být definovány.
+\end{reseni}
+
+\begin{priklad}
+V $\mathbb Z$ řešte $5x-13y=2.$
+\end{priklad}
+
+\begin{reseni}
+\begin{enumerate}[1.]
+\item způsob: uhodnutí jednoho kořene: $y_0=3, y_0=1.$ Pak další řešení je tvaru
+$x=x_0-\frac{b}{d}r, y=y_0+\frac{a}{d}r,$ kde $r \in \mathbb Z$ a $d$ značí
+největšího společného dělitele koeficientů u $x$ a $y$. Je tedy
+\begin{align*}
+    x&=3-\frac{-13}{1}r=3+13r, \\
+    y &= 1+\frac{5}{1}r = 1+5r,
+\end{align*}
+kde $r\in \mathbb Z.$
+\item způsob: modifikace Euklidova algoritmu: z rovnice osamostatníme tu neznámou,
+jejíž koeficient je v absolutní hodnotě menší.
+\begin{align*}
+    x &= \frac{13y+2}{5}=\frac{10y}{5}+\frac{3y+2}{5}=2y+\underbrace{\frac{3y+2}{5}}_{\in \mathbb Z}\\
+    \exists n \in \mathbb Z: u &= \frac{3y+2}{5}\implies 3y+2=5 \iff y=\frac{5u-2}{3}=u+\underbrace{\frac{2u-2}{2}}_{\in \mathbb Z} \\
+     & \dots \\
+     \exists w \in \mathbb Z: w &= \frac{v}{2}\implies v = 2w \implies \, | \, v.
+\end{align*}
+Nyní zpětně dosazujeme:
+\begin{align*}
+    u&= \frac{3(2w)+2}{2}=\frac{6w+2}{2}=3w+1\\
+    y&=\frac{5u-2}{3}=\frac{5 \frac{3w+1}{2}-2}{3}=5w+1 \\
+    x &= \frac{13 \frac{5w+1}{1}+2}{5}=13w+3
+\end{align*}
+\end{enumerate}
+\end{reseni}
+
+\begin{priklad}
+V $\mathbb R$ řešte rovnici $2x^4+3x^3-16x^2+3x+2=0.$
+\end{priklad}
+
+\begin{reseni}
+Reciproká rovnice. Vydělíme $x^2$, neboť 0 není kořen a zavedeme substituci
+$x+\frac{1}{x}=t$ (ostatní mocniny dopočteme). V rovnici vytkneme opakující se členy
+tak, abychom mohli  subsituci použít. Nezapomeneme zpětně dosadit.
+\end{reseni}
+
+\begin{priklad}
+Přibližně určete reálný kořen polynomu $x^3+x-3$.
+\end{priklad}
+
+\begin{reseni}
+Postupně dosazujeme nějaké hodnoty, dokud nezjistíme, že mezi nějakými dvěma
+musí graf funkce procházet nulou (jedna je záporná a jedna je kladná). Takto postupujeme
+dál.
+\end{reseni}
+
+\begin{priklad}
+V $\mathbb R$ řešte $\frac{1}{5^{2x-4}}=125.$
+\end{priklad}
+
+\begin{reseni}
+Převedeme na stejný základ: $5^{4-2x}=5^3$ a přesuneme se do rovnosti exponentů:
+$4-2x=3$.
+\end{reseni}
+
+\begin{priklad}
+V $\mathbb R$ řešte rovnici $4^x+2^x-6=0$.
+\end{priklad}
+
+\begin{reseni}
+Použijeme substituci $2^x=t.$
+\end{reseni}
+
+\begin{priklad}
+V $\mathbb R$ řešte $\log (4x+6)=1+\log(2x-1).$
+\end{priklad}
+
+\begin{reseni}
+Určíme podmínky pro argument (argument je větší než 0). Potom úpravou chceme dostat
+rovnost dvou logaritmů, abychom se mohli přesunou do rovnosti argumentů.
+\end{reseni}
+
+\begin{priklad}
+V $\mathbb R$ řešte rovnici $x^{3+2\log_5 x}=25x^{2+\log_5 x}$.
+\end{priklad}
+
+\begin{reseni}
+Upravíme a rovnici zlogaritmujeme.
+\end{reseni}
+
+\begin{priklad}
+V $\mathbb R$ řešte nerovnici $3^{2x+5}\leq 3^{x+2}+2.$
+\end{priklad}
+
+\begin{reseni}
+Užijeme výhodné substituce $a=3^{x+2}$.
+\end{reseni}
+
+\begin{priklad}
+V $\mathbb R$ řešte soustavu rovnic
+\begin{align*}
+    x^{\log y} &= 4\\
+    xy &= 40.
+\end{align*}
+\end{priklad}
+
+\begin{reseni}
+Druhou rovnici zlogaritmujeme a využijeme substituce $a=\log x, b=\log y.$
+\end{reseni}
+
+\begin{priklad}
+V $\mathbb R$ řešte rovnici $\sin x = \frac{1}{2}.$
+\end{priklad}
+
+\begin{reseni}
+Z náčrtku jednotkové kružnice zjistíme $x_1 = \frac{\pi}{6}+2k\pi$ a $x_2=\pi-\frac{\pi}{6}+2k\pi.$
+\end{reseni}
+
+\begin{priklad}
+V $\mathbb R$ řešte rovnici $\tg x = -\sqrt{3}. $
+\end{priklad}
+
+\begin{reseni}
+Z náčrtku zjistíme $x_1=-\frac{\pi}{3}+k\pi$ a $x_2=\frac{2\pi}{3}+k\pi.$
+\end{reseni}
+
+\begin{priklad}
+V $\mathbb R$ řešte nerovnici $\sin x \geq \frac{\sqrt{2} }{2}.$
+\end{priklad}
+
 \subsection{Mocniny a odmocniny}
 \begin{priklad}
 Odstraňte odmocniny ze jmenovatele: $\frac{1}{2 \sqrt{x} }.$
@@ -259,7 +434,7 @@ $$1+2+3+\dots+n=\frac{n(n+1)}{2}.$$
 \begin{reseni}
 Matematickou indukcí.
 \begin{enumerate}[1.]
-\item $n=1: 1=1$
+\item $n=1$: $1=1$
 \item Předpokládáme platnost pro $n$ a dokážeme, že pak platí i pro $n+1$.
 \end{enumerate}
 \end{reseni}
