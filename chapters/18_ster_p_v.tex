@@ -78,6 +78,12 @@
     \end{enumerate}
 \end{proof}
 
+
+\begin{priklad}
+Je dána krychle $ABCDEFGH$, na jejích hranách body $R,S,T$ podle obrázku. Určete
+průsečík přímky $DF$ a $RST$.
+\end{priklad}
+
 \begin{definition}\label{kolmeprimky}
     Přímky $p,q \subseteq \mathbb E_3$ se nazývají navzájem \textbf{kolmé}, právě když
     existují $p^\prime, q^\prime \subseteq \mathbb E_3$ takové, že
@@ -92,11 +98,28 @@
     Definice \ref{kolmeprimky} je i kritériem.
 \end{pozn}
 
-\begin{veta}
+\begin{veta}\label{kolmostprimekposun}
     Nechť $p,q \subseteq \mathbb E_3, p\perp q.$ Pak $\forall p^\prime, q^\prime
     \subseteq \mathbb E_3: p^\prime \parallel p, q^\prime \parallel q \implies
     p^\prime \perp q^\prime.$
 \end{veta}
+
+\begin{priklad}
+Je dána krychle $ABCDEFGH$. Bod $K$ je středem $EA$, $C$ je středem $FG$. Rozhodněte,
+zda následující dvojice přímek jsou kolmé:
+\begin{enumerate}[$a.$]
+\item $DH$ a $BC$,
+\item $CL$ a $KH$.
+\end{enumerate}
+\end{priklad}
+
+\begin{reseni}
+Využijeme věty \ref{kolmostprimekposun}.
+\begin{enumerate}[$a.$]
+\item Triviálně.
+\item Jednu z přímek posuneme do roviny té druhé. Pak plyne triviálně.
+\end{enumerate}
+\end{reseni}
 
 \begin{definition}
     Nechť $p\subseteq \mathbb E_3$ je přímka a $\alpha \subseteq \mathbb E_3$ je rovina.
@@ -109,6 +132,16 @@
     Pak  $p\perp \alpha \iff \exists q,r \subseteq \alpha: q \nparallel r: q\perp p\land
     r\perp p.$
 \end{veta}
+
+\begin{priklad}
+Nechť je dán pravidelný čtyřstěn $ABCD$. Dokažte, že $AB$ je kolmá k $CD$.
+\end{priklad}
+
+\begin{reseni}
+Jednou přímkou proložíme rovinu a dokážeme, že tato rovina je kolmá k druhé přímce.
+Konkrétně: přímkou $CD$ proložíme rovinu $\overleftrightarrow{SCD}$ ($S$ je střed
+$AB$). Pak plyne triviálně.
+\end{reseni}
 
 \begin{definition}\label{kolmeroviny}
     Řekneme, že \textbf{rovina} $\alpha$ \textbf{je kolmá k rovině} $\beta$, jestliže
@@ -231,3 +264,8 @@ jestliže existuje jeho osa souměrnosti.
    \end{enumerate}
    \end{enumerate}
 \end{definition}
+
+\begin{priklad}
+Sestrojte řez krychle rovinou $\rho=\overleftrightarrow{VWU}$, kde $V$ je střed
+úsečky $AE$, $W$ je střed úsečky $AB$ a $V$ je bod hrany $CG$ takový, že $|CU|:|UG|=2:1$.
+\end{priklad}

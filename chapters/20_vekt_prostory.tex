@@ -149,6 +149,15 @@ $u =\left  \{ \overrightarrow{XY} : \overrightarrow{XY} \, \varepsilon \, \overr
     obal} množiny $S$ a její prvky \textbf{generátory} $\left < S \right >$.
 \end{definition}
 
+\begin{priklad}
+Je dán aritmetický vektorový prostor $\mathbb R^{2}$ a jeho podmnožina $S=\left \{ (1,2), (4,3) \right \}. $
+Rozhodněte, zda věktor $\vec x = (7,4)$ patří do množiny generované $S$.
+\end{priklad}
+
+\begin{reseni}
+Vlastně řešíme rovnici $(7,4)=a(1,2)+b(4,3).$
+\end{reseni}
+
 \begin{definition}
     Nechť $S= \left \{ \vec u_1, \dots, u_k \right \} $ je množina vektorů vektorového prostoru $V$. Množina $S$ je
    	\begin{enumerate}[$i.$]
@@ -163,6 +172,21 @@ $u =\left  \{ \overrightarrow{XY} : \overrightarrow{XY} \, \varepsilon \, \overr
     Vektory jsou závislé, jestliže alespoň jeden z nich lze vyjádřit jako lineární
     kombinaci ostatních.
 \end{veta}
+
+\begin{priklad}
+V $\mathbb R^3$ jsou dány vektory $\vec a = (2,1,5), \vec b = (3,0,4), \vec c=(1,2,6),
+\vec c^\prime = (1,2,5).$ Rozhodněte, zda jsou vektory
+\begin{enumerate}[$a.$]
+\item $\vec a, \vec b,\vec c,$
+\item $\vec a, \vec b,\vec c^\prime$
+\end{enumerate}
+lineárně závislé.
+\end{priklad}
+
+\begin{reseni}
+Vlastně řešíme rovnici $p\vec a + q\vec b + r\vec c= \vec o.$ Existuje-li nenulové
+řešení, jsou lineárně závislé.
+\end{reseni}
 
 \begin{definition}
     Nechť je dán vektorový prostor $V$. Pak množina $\left < W \right >,$ kde $
@@ -180,9 +204,40 @@ $u =\left  \{ \overrightarrow{XY} : \overrightarrow{XY} \, \varepsilon \, \overr
 \end{definition}
 
 \begin{definition}
-Nechť $(\vec e_1,\dots, \vec e_k)$ je báse vektorového prostoru $V$. Pak číslo $k \in
+Nechť $(\vec e_1,\dots, \vec e_k)$ je báze vektorového prostoru $V$. Pak číslo $k \in
 \mathbb N_0$ je \textbf{dimenzí} vektorového prostoru $V$ a píšeme $\dim V=k$.
 \end{definition}
+
+\begin{priklad}
+Nalezněte dimenzi a bázi vektorového prostoru $\left < S \right > ,$
+$S \in \mathbb R^{5}, s = \left \{ \vec u_1,\vec u_2,\vec u_3,\vec u_4,\vec u_5 \right \}, $
+kde $\vec u_1=(2,3,5,-4,1),\vec u_2=(1,-1,2,3,5),\vec u_3=(3,7,8,-11,-3),\vec u_4=(1,-1,1,-2,3),\vec u_5=(1,4,3,-7,-4).$
+Dále vyjádřete vektory $\vec u_1$ až $\vec u_5$ jako lineární kombinaci vektorů báze.
+\end{priklad}
+
+\begin{reseni}
+Vlastně hledáme hodnost matice
+$$
+\begin{pmatrix}
+    \vec u_1\\
+   \vec u_2\\
+  \vec u_3\\
+ \vec u_4\\
+\vec u_5
+\end{pmatrix}.
+$$
+Gaussovou eliminací pokračujeme tak dlouho, dokud nedostaneme matici do schodovitého tvaru.
+Řádky takové matice jsou pak generátory $\left < S \right > .$
+Vyjadřujeme-li vektor jako lineární kombinaci báze, řešíme vlastně rovnici
+$\vec u_i = p_1\vec e_1 + p_2\vec e_2 +\dots + p_n\vec e_n.$
+\end{reseni}
+
+\begin{priklad}
+V pravidelném čtyřstěnu vyjádřete vektory $\overrightarrow{PS},\overrightarrow{PU}\overrightarrow{PT}$ jako
+lineární kombinaci vektorů $\overrightarrow{PB},\overrightarrow{PC},\overrightarrow{PD},$
+je-li $S$ střed strany $BC$, $U$ těžiště trojúhelníka $BCD$ a $T$ je těžiště trojúhelníka
+$PBCD$.
+\end{priklad}
 
 \begin{definition}\label{izom}
     Nechť $(\vec e_1,\dots, \vec e_k)$ je báze vektorového prostoru $V$. Zobrazení
@@ -204,6 +259,18 @@ Nechť $(\vec e_1,\dots, \vec e_k)$ je báse vektorového prostoru $V$. Pak čí
     $n$-tici $(x_1, x_2,\dots,x_n)$ nazýváme \textbf{souřadnice vektoru} $\vec x$ v
     bázi $(\vec e_1, \dots, \vec e_n)$.
 \end{definition}
+
+\begin{priklad}
+Ve vektorovém prostoru $\mathbb R^4$ je dána báze
+\begin{equation*}
+    \vec e_1=(1,1,1,1), \vec e_2 = (1,1,1,0), \vec e_3 = (1,1,0,0), \vec e_4 = (1,0,0,0).
+\end{equation*}
+Určete souřadnice vektoru $\vec x = (1,0,1,0)$ v této bázi.
+\end{priklad}
+
+\begin{reseni}
+Vlastně řešíme rovnici $\vec x= x_1\vec e_1 + x_2\vec e_2 + x_3\vec e_3 + x_4\vec e_4.$
+\end{reseni}
 
 \begin{definition}
     Nechť je dán bod $P\in \mathbb E_3$ a báze $(\vec e_1, \vec e_2, \vec e_3)$ vektorového
@@ -273,6 +340,36 @@ pro všechna $\vec u, \vec v, \vec w \in V.$
     \end{enumerate}
 \end{veta}
 
+\begin{priklad}
+Ve vektorovém prostoru $\mathbb R^5$ je dán systém generátorů $\vec eu_1,\dots,\vec u_4$:
+$$
+    \vec u_1 = (0,1,0,0,0), \vec u_2 = (1,1,1,2,1), \vec u_3 = (1,1,0,-1,0), \vec u_4 = (0,0,1,3,1).
+$$
+najděte ortogonální a ortonormální bázi tohoto vektorového prostoru.
+\end{priklad}
+
+\begin{reseni}
+Položme $\vec e_1=\vec u_1.$ Dále $\vec e_2 = p_1\vec u_1 + \vec u_2$. Po vynásobení
+této matice $\vec e_2$ (ten je kolmý na $\vec e_1$) dostáváme
+$$\underbrace{\vec e_2 \vec e_1}_{0}=p_1\vec u_1\vec e_1+\vec u_2\vec e_1,$$
+takže
+$$p_1=-\frac{\vec u_2\vec e_1}{\vec u_1\vec e_1} = -\frac{1}{1}=-1,$$
+a pak
+$$\vec e_2 = -1(0,1,0,0,0)+(1,1,1,2,1)=(1,0,1,2,1).$$
+Obdobně pak řešíme rovnici $\vec e_3=q_1\vec e_1 + q_2\vec e_2 + \vec u_3$. Vynásobíme
+ji postupně $\vec e_1$, $\vec e_2$, takže dostaneme dvě rovnice, na jejichž levé straně
+je součin dvou kolmých vektorů. Obdobně pokračujeme dál. ortonormální bázi
+dostaneme tak, že každý z vektorů ortogonální báze vydělíme jeho velikostí.
+\end{reseni}
+
+\begin{priklad}
+Rozhodněte, zda jsou tělesové úhlopříčky krychle navzájem kolmé.
+\end{priklad}
+
+\begin{reseni}
+Vyjádříme si je jako vektory a spočítáme skalární součin. Pokud je roven nule, jsou kolmé.
+\end{reseni}
+
 \begin{definition}
 \textbf{Vektorový součin} je zobrazení $V\times V\to  V$ (označené $\times$) s následujícími vlastnostmi:
 \begin{enumerate}[$i.$]
@@ -282,6 +379,16 @@ pro všechna $\vec u, \vec v, \vec w \in V.$
 \end{enumerate}
 pro všechna $\vec u, \vec v, \vec w \in V.$
 \end{definition}
+
+\begin{priklad}
+Vypočtěte obsah trojúhelníku $ABC$, je-li $A[-1,1], B[5,4], C[2,7].$
+\end{priklad}
+
+\begin{reseni}
+Abychom mohli spočítat vektorový součin (tady polovinu vektorového součinu), musíme
+mít trojrozměrné vektory. Doplňme ji tedy: $A[-1,1, 0], B[5,4, 0], C[2,7,0].$ Pak
+je obsah polovina velikost vektorového součinu dvou vektorů (třeba $\overrightarrow{AB}$ a $\overrightarrow{BC}$).
+\end{reseni}
 
 \begin{veta}
     Pro každé tři lineárně nezávislé vektory $\vec u, \vec v, \vec w \in V$ takové,

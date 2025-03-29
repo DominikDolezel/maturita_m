@@ -71,6 +71,15 @@
     \frac{\left ( \sum_{i=1}^d n_i \right )! }{\prod_{i=1}^d n_i!}.$$
 \end{veta}
 
+\begin{priklad}
+Kolik různých slov lze vytvořit z písmen ABRAKADABRA?
+\end{priklad}
+
+\begin{reseni}
+Máme $5\times$ A, $2\times $ B, $2\times$ R, $1\times$ D a $1\times $ K.
+Počítáme tedy $P(5,2,2,1,1)=\frac{11!}{5!\cdot 2!\cdot 2!}=83160.$
+\end{reseni}
+
 \begin{definition}
     Nechť $M$ je konečná $n$-prvková množina. Nechť $k \in \mathbb N_0, k\leq n.$
     \textbf{$k$-prvkovou variací} z prvků množiny $M$ nazveme libovolnou
@@ -108,7 +117,6 @@
     \begin{equation}\label{bc}
    K(k,n)=\frac{n!}{k!(n-k)!}.
     \end{equation}
-
 \end{veta}
 
 \begin{definition}
@@ -125,6 +133,19 @@
     \end{align*}
 \end{pozn}
 
+\begin{priklad}
+V noclehárně je padesát lůžek. Určete, kolika způsoby se na ně může uložit
+třicet pět nocležníků.
+\end{priklad}
+
+\begin{reseni}
+Dvě hlediska:
+\begin{enumerate}[1.]
+\item hledisko správce ubytovny: je mu jedno, s kým kdo spí $\implies$ kombinace $\binom{50}{35}$
+\item hledisko nocležníků: není jedno, s kým kdo spí $\implies \frac{50!}{15!}$
+\end{enumerate}
+\end{reseni}
+
 \begin{veta}\label{binomvztahy}
     $\forall k,n \in \mathbb N_0, k\leq n:$
     \begin{align*}
@@ -132,6 +153,15 @@
         \binom{n}{k} + \binom{n}{k+1} &= \binom{n+1}{k+1}
     \end{align*}
 \end{veta}
+
+\begin{priklad}
+Najděte všechna $x$, pro která platí
+$$\binom{x-1}{x-3}+\binom{x-2}{x-4}=9.$$
+\end{priklad}
+
+\begin{reseni}
+Řešíme podle věty \ref{binomvztahy} a podle definice kombinačního čísla.
+\end{reseni}
 
 \begin{definition}
     Nechť je dáno $n_1$ prvků prvního druhu, $n_2$ prvků druhého druhu, \dots,
@@ -145,6 +175,54 @@
     $\forall k,d \in \mathbb N:$
     $$K_o(k,d)=P_o(k,d-1)=\binom{k+d-1}{d-1}.$$
 \end{veta}
+
+\begin{priklad}
+V obchodě mají čtyři druhy kávy. Kolika způsoby lze pořídit nákup šesti balíčků?
+\end{priklad}
+
+\begin{reseni}
+Každý nákup \uv{zašifrujeme} pomocí uspořádané devítice (4+6-1) tak, že napíšeme
+tolik jedniček, kolik je prvního druhu a oddělíme nulou, tolik jedniček, kolik
+je prvků druhého druhu a oddělíme nulou atd., konečně tolik jedniček,
+kolik je prvků $d$-tého druhu. Např. $101100111$. Jde o bijekci šifry a nákupu.
+Platí tedy
+$$K_o(6,4)=P_o(6,3)=\frac{9!}{6!\cdot 3!}=\binom{9}{3}.$$
+\end{reseni}
+
+\begin{priklad}
+Třicet pět výletníků si vybralo z dvanácti druhů jídel. Kolik existuje
+různých druhů objednávek?
+\end{priklad}
+
+\begin{reseni}
+\begin{enumerate}[$i.$]
+\item hledisko kuchaře: je mu jedno, kdo si co objedná
+$$K_o(35,12)=P_o(35,11)=\binom{46}{11}.$$
+\item hledisko čišníka: záleží, kdo si co objedná
+$$V_o(35,12)=12^{35}.$$
+\end{enumerate}
+\end{reseni}
+
+\begin{priklad}
+Ve třídě je dvacet chlapců a patnáct dívek. Určete, kolika způsoby z nich lze vybrat
+šestičlennou delegaci, mají-li zde být
+\begin{enumerate}[$a.$]
+\item dvě dívky a čtyři chlapci,
+\item nejvýše dvě dívky,
+\item alespoň dvě dívky.
+\end{enumerate}
+\end{priklad}
+
+\begin{reseni}
+\begin{enumerate}[$a.$]
+\item Je to
+$$\underbrace{\binom{15}{2}}{\textrm{dívky}} \cdot \underbrace{\binom{20}{4}}{\textrm{chlapci}}.$$
+\item Spočítáme zvlášť případy, kdy jedou dvě, jedna nebo žádná dívka a tyto počty sečteme.
+\item Opět můžeme zvlášť počítat počty, kdy jede žádná, jedna, atd. dívek, ale jednodušší
+je vzít celkový počet možnostía odečíst počet možností, kdy nejede žádná anebo jede
+jedna dívka.
+\end{enumerate}
+\end{reseni}
 
 \begin{veta}[Binomická věta]
     Pro všechna $a \in \mathbb N, a,b \in \mathbb R$ platí
@@ -187,6 +265,37 @@
 
 \end{pozn}
 
+\begin{priklad}
+Sečtěte:
+\begin{enumerate}[$i$]
+\item $S_1 = \binom{n}{0}+\binom{n}{1}+\dots+\binom{n}{n}$
+\item $S_2= \binom{n}{0}-\binom{n}{1}+\binom{n}{2}+\dots+(-1)^n\binom{n}{n}$
+\item $S_3= \binom{n}{0}+\binom{n}{2}+\binom{n}{4}+\dots$
+\item $S_4= \binom{n}{1}+\binom{n}{3}+\dots$
+\end{enumerate}
+\end{priklad}
+
+\begin{reseni}
+\begin{enumerate}[$i.$]
+\item To je vlastně počet všech podmnožin dvouprvkové množiny, tedy $S_1=2^n$. Jiným
+způsobem: po dosazení do binomické věty pro $(1+1)^n$ dostaneme přesně rozvoj $S_1$,
+a proto $S_1=2^n.$
+\item Po dosazení do binomické věty pro $(1-1)^n$ dostáváme přesně rozvoj $S_2$,
+takže $S_2=0.$
+\item $S_3=\frac{S_1+S_2}{2}=\frac{(1+1)^n}{2}=2^{n-1}$
+\item $S_4=\frac{S_1-S_2}{2}=2^{n-1}$
+\end{enumerate}
+\end{reseni}
+
+\begin{priklad}
+Určete absolutní člen v rozvoji výrazu $(2x^2-\frac{3}{x})^6$.
+\end{priklad}
+
+\begin{reseni}
+Exponent u $2x^2$ označme $i$, exponent u $-\frac{3}{x}$ označme $j$. Absolutní člen má
+exponent roven nule, tedy $2i-j=0$. Navíc v binomické větě platí $i+j=6$. To je
+soustava dvou rovnic o dvou neznámých.
+\end{reseni}
 
 \begin{veta}
     Pro všechna $k,n \in \mathbb N$ platí
@@ -197,7 +306,7 @@
 \begin{veta}[Princip inkluze a exkluze]
     Nechť $M_1, M_2, M_2, \dots, M_k$ jsou konečné množiny. Pak platí
     \begin{align*}
-        \left | \bigcup_{i=1}^k  \right | &= \sum_{i=1}^k \left | M_i \right |
+        \left | \bigcup_{i=1}^k M_i \right | &= \sum_{i=1}^k \left | M_i \right |
         - \sum_{i=2}^k \left | M_1 \cap M_i \right | - \dots
         - \left | M_{k-1}\cap M_k \right | \\
         &+ \left | M_1\cap M_2 \cap M_3 \right | + \dots +
@@ -208,3 +317,37 @@
     kde se sčítá přes všechny neprázdné podmnožiny $\left \{ j_1, j_2, \dots,
    j_r \right \} $ množiny $\left \{ 1,2,\dots, r \right \}$.
 \end{veta}
+
+\begin{priklad}
+Určete počet všech pořadí prvků $m_1,m_2,\dots,m_n$ s vlastností, že
+pro každé $i\in \left \{ 1,2,\dots,n \right \} $ nestojí prvek $m_i$ na $i$-tém
+místě.
+\end{priklad}
+
+\begin{reseni}
+Označme hledaný počet jako $p_n$. Pak $p_n^\prime$ je počet všech pořadí,
+kdy alespoň jeden prvek stojí na svém místě. Platí tedy
+$$p_n+p_n^\prime = n! \implies p_n=n!-p_n^\prime.$$
+Nechť $M_i$ je množina všech pořadí, v nichž prvek $m_i$ stojí na svém místě
+$\forall i\in \left \{ 1,\dots,n \right \} $. Spočtěme počet těchto množin. Stojí-li
+na svém místě
+\begin{itemize}
+\item jeden prvek ($i$-tý prvek na $i$-tém místě), těchto množin
+je pro daný fixní prvek $|M_i|=(n-1)!$ a tento fixní prvek lze
+vybrat $\binom{n}{1}$ způsoby,
+\item dva prvky: těchto množin je pro dané dva fixní prvky $|M_i|=(n-2)!$ a tyto
+dva fixní prvky lze vybrat $\binom{n}{2}$ způsoby,
+\item $n$ prvků: tato množina je jedna a lze ji vybrat $\binom{n}{n}$ způsoby.
+\end{itemize}
+Celkově tedy máme
+\begin{align*}
+p_n^\prime & = |M_1\cup M_2\cup \dots \cup M_n|=\binom{n}{1}(n-1)!-\binom{n}{2}(n-2)!+\dots+(-1)^{n+1}(n-n)!\\
+ &= \sum_{r=1}^n (-1)^{r+1}\binom{n}{r}(n-r)!,
+\end{align*}
+takže
+\begin{align*}
+    p_n &= n!-n! \sum_{r=1}^n(-1)^{r+1}\cdot \frac{1}{r!}=n!\left ( 1+\sum_{r=1} ^n (-1)^r\cdot \frac{1}{r!}\right )\\
+   &= n!\sum_{r=0}^n (-1)^r \cdot \frac{1}{r!}=n!\left ( 1-\frac{1}{1!}+\frac{1}{2!}-\frac{1}{3!}+\dots + (-1)^n \frac{1}{n!}\right ).
+\end{align*}
+
+\end{reseni}

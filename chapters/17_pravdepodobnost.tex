@@ -64,6 +64,19 @@
     $$P(A)=\frac{|A|}{|\Omega|}.$$
 \end{definition}
 
+\begin{priklad}
+Hážeme dvěma mincemi. Určete pravděpodobnost následujících jevů:
+\begin{enumerate}[a.]
+\item na obou mincích padne hlava,
+\item aspoň na jedné minci padne orel,
+\item na obou mincích padne totéž.
+\end{enumerate}
+\end{priklad}
+
+\begin{reseni}
+Vypíšeme si všechny možnosti a podělíme ty, které vyhovují celkovým počtem.
+\end{reseni}
+
 \begin{veta}
     Nechť $A,B\subseteq \Omega$ jsou jevy. Pak
     $$P(A\cup B)=P(A)+P(B)-P(A\cap B).$$
@@ -74,6 +87,19 @@
     když $P(A\cap B)=P(A)\cdot P(B).$
 \end{definition}
 
+\begin{priklad}
+Zjistěte, zda jsou dané jevy nezávislé.
+\begin{enumerate}[a.]
+\item Na kostce padne sudé číslo. Na kostce padne 5 nebo 6.
+\item Na ksotce padne sudé číslo. Na kostce padne liché číslo.
+\end{enumerate}
+\end{priklad}
+
+\begin{reseni}
+Spořítáme pravděpodobnosti jednotlivých jevů a pravděpodobnost toho, že nastanou
+oba současně. Pokud je $P(A\cap B)=P(A)\cdot P(B)$, pak jsou nezávislé.
+\end{reseni}
+
 \begin{definition}
     Nechť $A,B\subseteq \Omega$ jsou jevy takové, že $P(B)>0.$ \textbf{Podmíněnou
     pravděpodobností} jevu $A$ za předpokladu nastoupení jevu $B$ nazýváme reálné
@@ -81,12 +107,44 @@
     $$P(A\, | \, B) = \frac{P(A\cap B)}{P(B)}.$$
 \end{definition}
 
+\begin{priklad}
+Házíme dvakrát kostkou. Nechť
+\begin{align*}
+    &A \textrm{ } \dots  \textrm{ součet obou čísel je dělitelný čtyřmi,}\\
+    &B \textrm{ } \dots  \textrm{ druhým hodem padne šestka}.
+\end{align*}
+Určete $P(A\, |\, B).$
+\end{priklad}
+
+\begin{reseni}
+Platí
+$$P(A\, |\, B)=\frac{P(A\cap B)}{P(B)}=\frac{\frac{2}{36}}{\frac{6}{36}}=\frac{1}{3}.$$
+\end{reseni}
+
 \begin{veta}[Formule úplné pravděpodobnosti]
     Nechť $A,B_i \subseteq \Omega, i \in \left \{ 1, 2, \dots, n \right \} $ jsou jevy
     takové, že $A\subseteq \bigcup_{i=1}^n B_i$ a $\forall i\ne j: B_i\cap B_j\ne
     \emptyset.$ Pak $P(A)=P(B_1)\cdot P(A\, |\, B_1) + P(B_2)\cdot P(A \, |\, B_2)+
     \dots + P(B_n)\cdot P(A \,|\, B_n)=\sum_{i=1}^n P(B_i)\cdot P(A\, |\, B_i).$
 \end{veta}
+
+\begin{priklad}
+V osudí $A$ jsou dvě černé a tři bílé kuličky. V osudí $B$ jsou dvě černé a jedna
+bílá kulička. Zvolíme náhodně jedno osudí a vyáthneme jednu kuličku. Jaká
+je pravděpodobnost, že je je bílá?
+\end{priklad}
+
+\begin{reseni}
+Označme jevy
+\begin{center}
+    $A$ \dots zvolíme osudí $A$,
+    $B$ \dots zvolíme osudí $B$,
+    $X$ \dots vytáhli jsme bílou kuličku.
+\end{center}
+Pak platí
+$P(X \, | \, A) = \frac{3}{5}, P(X \, | B)=\frac{1}{3}.$ Je tedy
+$$P(X)=P(A)\cdot P(X \, | A)+P(B)\cdot P(X\, | \, B)=\frac{7}{15}.$$
+\end{reseni}
 
 \begin{veta}[Bayesův vzorec]
     Nechť $A,B_i \subseteq \Omega, i \in \left \{ 1, 2, \dots, n \right \} $ jsou
@@ -97,8 +155,37 @@
     P(A\, |\, B_i)}. $$
 \end{veta}
 
+\begin{priklad}
+Na fakultě studuje 60 \% děvčat, z chlapců studuje matematiku 25 \%,
+z děvčat 10 \%. Náhodně vybereme studenta/ku studující matiku. Určete
+pravděpodobnost toho, že to bude dívka.
+\end{priklad}
+
+\begin{reseni}
+Platí
+\begin{align*}
+P(D)=0,6 & & P(H)=0,4 \\
+P(M \, | \, D)=0,1 & & P(M \, | \, H)=0,25.
+\end{align*}
+Hledáme $P(D \, | \, M).$ Počítejme
+\begin{align*}
+ P(D)\cdot P(M \, | \, D)&=P(M \cap D)=P(M)\cdot P(D \, | M)\\
+ P(D, \,|\, M) &= \frac{P(D)\cdot P(M \, | \, D)}{P(M)}=\frac{P(D)\cdot P(M \, | \, D)}{P(D)\cdot P(M\, | \, D)+P(H)\cdot P(M \, | \, H)}=\frac{3}{8}.
+\end{align*}
+\end{reseni}
+
 \begin{veta}[Bernoulliho věta]
     Provádíme-li sérii $n$ nezávislých pokusů, kdy pravděpodobnost příslušného
     pokusu je $p,$ pak pravděpodobnost toho, že právě $k$ pokusů bude úspěšných, platí
     $$P(k,n)=\binom{n}{k}\cdot p^k \cdot (1-p)^{n-k}.$$
 \end{veta}
+
+\begin{priklad}
+Uvažuje $n$ hodů mincí. Jev \uv{padne hlava} označme $Z$, \uv{padne orel} označme $N$.
+Určete pravděpodobnost toho, že v sérii sto hodů padne hlava právě padesátkrát.
+\end{priklad}
+
+\begin{reseni}
+Platí
+$$P=\binom{100}{50}\cdot \left ( \frac{1}{2} \right )^{50}\cdot \left ( \frac{1}{2} \right )^{50}.  $$
+\end{reseni}
