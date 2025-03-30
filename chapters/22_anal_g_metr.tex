@@ -20,6 +20,24 @@
     $AX,$ kde $X$ je nějaký bod na přímce $p$ a nalezením jejího minima.
 \end{pozn}
 
+\begin{priklad}
+Určete $\rho(A,p), A[1,0,1], p=\left \{ [2-t,t,0],t \in \mathbb R \right \} $.
+\end{priklad}
+
+\begin{reseni}
+Přímka $p=p(P,\vec u), $ kde $P[2,0,0],\vec u(-1,1,0).$
+\begin{enumerate}[1.]
+\item způsob: Nechť $A_0=[2-t^*,t^*,0]$. Pak $\vec n = \overrightarrow{AA_0}=A_0-A=(1-t^*,t^*,-1).$
+Platí $\vec u\vec n=0,$ tedy $t^*=-\frac{1}{2},$ odtud $A[1,5;0,5;0].$ Vzdálenost
+$\rho(A,p)$ je pak $|\overrightarrow{AA_0}|.$
+\item způsob: Najdeme takovou rovinu, která je kolmá na přímku $p$ a leží na ní bod $A$
+(normálový vektor roviny je tedy směrový vektor přímky). Dále najdeme průsečík přímky
+$p$ s hledanou rovinou -- vzdálenost dvou bodů už pořítat umíme.
+\item způsob: Libovolný bod $X$ na přímce $p$ má souřadnice $[2-t,t,0]$. Hledáme
+minimum velikosti vektoru $\overrightarrow{AX}.$
+\end{enumerate}
+\end{reseni}
+
 \begin{veta}\label{vzdbodrov}
     Nechť $A[a_1,a_2,a_3]\in \mathbb E_3$ je bod, $\alpha:ax+by+cz+d=0$ je rovina. Pak
     $$\rho(A,\alpha)=\frac{|aa_1+ba_2+ca_2+d|}{\sqrt{a^2+b^2+c^2} }.$$
@@ -51,6 +69,35 @@
     osy mimoběžek.
 \end{pozn}
 
+\begin{priklad}
+Určete vzdálenost mimoběžných přímek $p=\left \{ [9+4t,-2-3t,t],t \in \mathbb R \right \} ,q=\left \{ [-2r,-7+9r,2+2r],r \in \mathbb R \right \} $.
+\end{priklad}
+
+\begin{reseni}
+\begin{enumerate}[1.]
+\item způsob: Směrové vektory mimoběžek určují rovinu. Jedna obsahuje přímku $p$ a druhá,
+která je s ní rovnoběžná, obsahuje přímku $q$. Dále počítáme podle vzorce.
+\item způsob: Hledáme příčku mimoběžek, která je rovnoběžná s vektorem, který
+získáme jako vektorový součin směrových vektorů přímek $p,q$.
+\end{enumerate}
+\end{reseni}
+
+\begin{priklad}
+Určete rovnici přímky, která prochází bodem $A[-2,1]$ a od bodu $[3,1]$ má vzdálenost 4.
+\end{priklad}
+
+\begin{reseni}
+Hledáme přímku tvaru $ax+by+c=0$. Jistě platí $-2a+b+c=0$ a vzorec pro vzdálenost přímky a roviny.
+Máme tři neznámé, ale jen dvě rovnice. Proto jednu z nich zvolíme (musíme uvažovat
+nulové a nenulové řešení) a zbylé dvě dopočítáme.
+\end{reseni}
+
+\begin{priklad}
+Určete rovnici přímky, která prochází bodem $A[1,2]$ a má stejnou vzdálenost od bodů
+$B[3,3], C[5,2].$
+\end{priklad}
+
+
 \begin{definition}
     \textbf{Odchylka} vektorů je úhel, který dané vektory svírají. Značíme $|\sphericalangle \vec u, \vec v|.$
 \end{definition}
@@ -70,6 +117,15 @@
     $$|\sphericalangle p, q|=\arccos \frac{\vec u \cdot \vec v}{|\vec u|\cdot |\vec v|}.$$
 \end{veta}
 
+\begin{priklad}
+Určete odchylku přímek $\overleftrightarrow{AB}$ a $\overleftrightarrow{BC^\prime}$
+krychle $ABCDA^\prime B^\prime C^\prime D^\prime$.
+\end{priklad}
+
+\begin{reseni}
+Vyjádříme jako vektory a dosadíme do vzorce.
+\end{reseni}
+
 \begin{veta}
 Nechť jsou dány přímky $p(A,\vec u), q:ax+by+c=0, \vec n(a,b).$ Pak
 $$|\sphericalangle p, q|=\arcsin \frac{\vec u \cdot \vec n}{|\vec u|\cdot |\vec n|}.$$
@@ -85,3 +141,21 @@ $$|\sphericalangle p, q|=\arcsin \frac{\vec u \cdot \vec n}{|\vec u|\cdot |\vec 
     Pak
     $$|\sphericalangle \alpha, \beta|=\arcsin \frac{\vec m \cdot \vec n}{|\vec m|\cdot |\vec n|}.$$
 \end{veta}
+
+\begin{priklad}
+Určete rovnici přímiky, která má od přímky $p:x-2y+3=0$ odchylku $30^\circ$ a prochází
+jejím průsečíkem s osou $y$.
+\end{priklad}
+
+\begin{reseni}
+Dosadíme do vzorce a jednu proměnnou zvolíme.
+\end{reseni}
+
+\begin{priklad}
+Najděte parametrické vyjádření přímky, která prochází pořátkem a protíná přímku $p=\left \{ [4+t,3+4t,1-3t],t\in \mathbb R \right \} $
+a jejich odchylka je $30^\circ$.
+\end{priklad}
+
+\begin{reseni}
+Dosadíme do vzorce a jednu proměnnou zvolíme.
+\end{reseni}

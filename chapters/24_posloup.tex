@@ -16,6 +16,14 @@ Posloupnost, která má jednu z těchto vlastností, se nazývá \textbf{monotó
 Posloupnost rostoucí nebo klesající nazýváme \textbf{ryze monotónní}.
 \end{definition}
 
+\begin{priklad}
+Určete monotónnost posloupnosti $\left \{ \frac{2n}{n+1} \right \}_{n=1}^\infty $.
+\end{priklad}
+
+\begin{reseni}
+Spočítáme $a_{n+1}-a_n$.
+\end{reseni}
+
 \begin{definition}
     Nechť $\left \{ a_n \right \}_{n=1}^\infty $ je posloupnost reálných čísel. Pak je
     \begin{enumerate}[$i.$]
@@ -100,12 +108,32 @@ $$\forall n \in \mathbb N:S_n = \frac{1}{2}n(a_1+a_n).$$
 což jsme chtěli dokázat. \qedhere
 \end{proof}
 
+\begin{priklad}
+napište prvních pět členů aritmetické posloupnosti, kde platí
+\begin{align*}
+    a_1+a_4&=12,\\
+    a_2-a_6&=-8.
+\end{align*}
+\end{priklad}
+
+\begin{reseni}
+Vyjádříme pomocí $a_1$ a diference a vyřešíme.
+\end{reseni}
+
 \begin{definition}
 Posloupnost $\left \{ a_n \right \}_{n=1}^\infty $ je \textbf{geometrická} právě
 tehdy, když
 $$\exists q \in \mathbb R: \forall n \in \mathbb N: a_n=a_{n-1}\cdot q$$
 a číslo $q$ se nazývá \textbf{kvocient}.
 \end{definition}
+
+\begin{priklad}
+Určete, zda posloupnost $\left \{ \frac{2n-1}{3} \right \}_{n=1}^\infty $ je aritmetická, nebo geometrická.
+\end{priklad}
+
+\begin{reseni}
+Spočítáme $a_{n+1}/a_n$ a $a_{n+1}-a_n$. Je geometrická, je-li $a_{n+1}/a_n$ konstatní a naopak ($a_{n+1}/a_n$ nesmí záviset na $n$).
+\end{reseni}
 
 \begin{veta}
     Nechť $\left \{ a_n \right \}_{n=1}^\infty $ je geometrická posloupnost s kvocientem
@@ -160,6 +188,18 @@ $n$-členné geometrické poslouppnosti. Pak platí $\forall n \in \mathbb N$:
 což jsme chtěli dokázat. \qedhere
 \end{proof}
 
+\begin{priklad}
+Nalezněte geometrickou posloupnost, pro níž platí
+\begin{align*}
+    a_1+a_3 &=5,\\
+    a_2+a_4 &= 10.
+\end{align*}
+\end{priklad}
+
+\begin{reseni}
+Vyjádříme pomocí $a_1$ a kvocientu a vyřešíme
+\end{reseni}
+
 \begin{pozn}
     Rozlišujeme dva typy zadání posloupnosti, a to:
     \begin{enumerate}[$i.$]
@@ -174,6 +214,15 @@ což jsme chtěli dokázat. \qedhere
     \end{enumerate}
 \end{pozn}
 
+\begin{priklad}
+Nalezněte explicitní vyjádření posloupnosti zadané rekurentně: $a_{n+1}=3a_n+1,a_1=2.$
+\end{priklad}
+
+\begin{reseni}
+Napíšeme si pár prvních členů posloupnosti a nějak si z toho vycucáme vzorec. Ten
+pak dokázeme matematickou indukcí.
+\end{reseni}
+
 \begin{definition}
 Nechť $\left \{ a_n \right \}_{n=1}^\infty $ je posloupnost, $A\in \mathbb R$ číslo.
 Posloupnost $\left \{ a_n \right \}_{n=1}^\infty $ má \textbf{limitu} rovnu číslu
@@ -181,12 +230,28 @@ $A,$ jestliže
 $$\forall \varepsilon \in \mathbb R^+: \exists n_0 \in \mathbb N_0: \forall n \geq n_0,n \in \mathbb N: a_n\in(A-\varepsilon, A+\varepsilon).$$
 \end{definition}
 
+\begin{priklad}
+Vypočtěte limitu $\lim_{n\to\infty}\frac{n+1}{n}.$
+\end{priklad}
+
+\begin{reseni}
+Rozšíříme $\frac{1/n}{1/n}$. Limita $\lim_{n\to \infty}\frac{1}{n}$ je totiž rovna nule.
+\end{reseni}
+
 \begin{definition}
 Nechť $\left \{ a_n \right \}_{n=1}^\infty $ je posloupnost.
 Posloupnost $\left \{ a_n \right \}_{n=1}^\infty $ má \textbf{nevlastní limitu}
 $+\infty$ (resp. $-\infty$), jestliže
 $$\forall K \in \mathbb R: \exists n_0 \in \mathbb N_0: \forall n \geq n_0, n\in \mathbb N: a_n>K \,\, (\textrm{resp. } a_n<K).$$
 \end{definition}
+
+\begin{priklad}
+Určete $\lim_{n\to \infty}\frac{4-n^2}{2+n}.$
+\end{priklad}
+
+\begin{reseni}
+Rozložíme na součin.
+\end{reseni}
 
 \begin{definition}
     Má-li posloupnost vlastní limitu, je \textbf{konvergentní}. V opačném
@@ -311,13 +376,25 @@ Nechť $\exists \lim_{n\to\infty}\frac{a_n}{b_n}=c.$ Pak platí:
 \end{enumerate}
 \end{veta}
 
+\begin{priklad}
+Rozhodněte o chování řady $\sum_{n=1}^\infty \frac{n^2+n+1}{n^3+1}$.
+\end{priklad}
+
+\begin{reseni}
+Srovnáme s $\sum_{n=1}^\infty \frac{1}{n}$, která diverguje. Počítáme tedy
+$$
+\lim \frac{\frac{n^2+n+1}{n^3+1}}{\frac{1}{n}}.
+$$
+Je-li rozdílná od nuly a od nekonečna, chovají se řady stejně.
+\end{reseni}
+
 \begin{definition}
 Nekonečnou řadu $\sum_{n=1}^\infty a_n,$ kde $\left \{ a_n \right \}_{n=1}^\infty $
 je geometrická posloupnost s kvocientem $q$, nazveme \textbf{nekonečnou geometrickou
 řadou} a číslo $q$ nazveme jejím \textbf{kvocientem}.
 \end{definition}
 
-\begin{veta}
+\begin{veta}\label{konvergencerad}
     Nechť řada $\sum_{n=1}^\infty a_n$ je geometrická řada s kvocientem $q$, kde
     $|q|<1.$ Pak je tato řada konvergentní a má součet
     $$S=\frac{a_1}{1-q}.$$
@@ -331,3 +408,18 @@ Počítejme
     = & \frac{a_1}{q-1}\cdot (0-1)=-\frac{a_1}{q-1}=\frac{a_1}{1-q}\qedhere
 \end{align*}
 \end{proof}
+
+
+\begin{priklad}
+Určete součet řady $\sum_{n=1}^\infty 1/2^n.$
+\end{priklad}
+
+\begin{reseni}
+Je $a_1=\frac{1}{2},q=\frac{1}{2}$. Platí $|q|<1$, takže můžeme použít větu
+\ref{konvergencerad}.
+\end{reseni}
+
+\begin{priklad}
+Je dán čtverec o straně $a$, spojnice středů jeho stran tvoří stranu dalšího čtverce,
+\dots Určete součet obsahů a obvodů takto vzniklých čtverců.
+\end{priklad}

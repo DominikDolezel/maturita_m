@@ -155,3 +155,39 @@ To funguje,
 protože se vlastně díváme na $y$ jako na funkci $x$ ($y=f(x)$), takže
 derivace $y=f^\prime(x)\cdot (f(x))^\prime$ (např. $\left ( y^2 \right )^\prime =2yy^\prime$).
 \end{pozn}
+
+
+\begin{veta}[Cauchy-Bolzanova věta]
+Nechť je funkce $f$ spojitá na uzavřeném intervalu $\left < a,b \right > $ a platí
+$f(a)\cdot f(b)<0.$ Pak existuje alespoň jedno číslo $x_0\in (a,b)$ takové, že $f(x_0)=0.$
+\end{veta}
+
+\begin{veta}[Rolleho věta]
+Nechť funkce $f$ má následující vlastnosti:
+\begin{enumerate}[$i.$]
+\item je spojitá na uzavřeném ohraničeném intervalu $\left < a,b \right > $,
+\item má derivaci na otevřeném intervalu $(a,b)$,
+\item platí $f(a)=f(b)$.
+\end{enumerate}
+Pak existuje alespoň jedno číslo $x_0\in (a,b)$ takové, že $f^\prime(x_0)=0.$
+\end{veta}
+
+\begin{veta}[Lagrangeova věta]
+Nechť funkce $f$ má následující vlastnosti:
+\begin{enumerate}[$i.$]
+\item je spojitá na uzavřeném ohraničeném intervalu $\left < a,b \right > $,
+\item má derivaci na otevřeném intervalu $(a,b)$.
+\end{enumerate}
+Pak existuje alespoň jedno číslo $x_0\in (a,b)$ takové, že
+$$f^\prime(x_0)=\frac{f(b)-f(a)}{b-a}.$$
+\end{veta}
+
+\begin{veta}[Cauchyho věta]
+Nechť funkce $f$ a $g$ mají následující vlastnosti:
+\begin{enumerate}[$i.$]
+\item jsou spojité na uzavřeném ohraničeném intervalu $\left < a,b \right > $,
+\item mají derivaci na otevřeném intervalu $(a,b)$, přičemž $g^\prime(x)\ne 0$ na $\left < a,b \right > $.
+\end{enumerate}
+Pak existuje alespoň jedno číslo $x_0\in (a,b)$ takové, že
+$$f^\prime(x_0)=\frac{f(b)-f(a)}{g(b)-g(a)}.$$
+\end{veta}

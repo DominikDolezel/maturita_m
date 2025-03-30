@@ -22,6 +22,20 @@
     nazýváme \textbf{maticí kuželosečky} $k$.
 \end{definition}
 
+\begin{priklad}
+Napište matici kuželosečky $x^2-2xy+3y+1=0.$
+\end{priklad}
+\begin{reseni}
+Z definice je
+$$
+A = \begin{pmatrix}
+    1 &-1 &0\\
+    -1 &0 &\frac{3}{2}\\
+    0 &\frac{3}{2} &1
+\end{pmatrix}.
+$$
+\end{reseni}
+
 \begin{pozn}
     Rovnici kuželosečky lze zapsat pomocí její matice $A$ jako
     $$\begin{pmatrix}
@@ -50,6 +64,20 @@
     \end{enumerate}
 \end{definition}
 
+\begin{priklad}
+Je dána kuželosečka $4x^2+9y^2-16x+54y+61=0.$ Určete, jestli je to elipsa.
+\end{priklad}
+
+\begin{reseni}
+Doplněním na čtverec pro $x$ a pro $y$.
+\end{reseni}
+
+
+
+
+
+
+
 \begin{definition}
     Kuželosečka je \textbf{singulární}, jestliže determinant její matice je nulový.
     V opačném případě je \textbf{regulární}.
@@ -73,17 +101,43 @@
 které se nazývají \textbf{ohniska}, konstantní součet vzdálenosti.
 \end{definition}
 
+\begin{priklad}
+Určete středovou rovnici elipsy $5x^2+3y^2+20x-24y+38=0.$
+\end{priklad}
+
+\begin{reseni}
+Doplněním na čtverec.
+\end{reseni}
+
 \begin{definition}
 \textbf{Hyperbola} je množina všech bodů v rovině, které mají od dvou různých
 bodů v rovině, které se nazývají \textbf{ohniska}, konstantní absolutní
 hodnotu rozdílu vzdálenosti.
 \end{definition}
 
+\begin{priklad}
+Je dána hyperbola $k:9x^2-16y^2-36x+32y-124=0.$ Najděte její středovou rovnici,
+střed, poloosy, ohniska, vrcholy, rovnice asymptot a hyperbolu načrtněte.
+\end{priklad}
+
+\begin{reseni}
+Doplníme na čtverec a vydělíme, abychom na pravé straně rovnice měli jedničku.
+Zbytek vlastností hyperboly.
+\end{reseni}
+
 \begin{definition}
 \textbf{Parabola} je množina všech bodů v rovině, které mají od pevného bodu, který
 se nazývá \textbf{ohnisko} a pevné přímky, která se nazývá \textbf{řídící přímka},
 na níž tento bod neleží, stejnou vzdálenost.
 \end{definition}
+
+\begin{priklad}
+Určete vrchol, ohnisko, parametr a řídící přímku paraboly $k:y^2-7x-6y-19=0.$
+\end{priklad}
+
+\begin{reseni}
+Doplněním na čtverec.
+\end{reseni}
 
 \begin{pozn}
     Pro přehled s rovnicemi, obrázky a popisem všech prvků těchto kuželoseček
@@ -134,11 +188,41 @@ nazývá její \textbf{sečnou} a úsečka $TT^\prime$ \textbf{tětivou}.
     \end{enumerate}
 \end{veta}
 
+\begin{priklad}
+Napište rovnice tečen ke kuželosečce $x^2+y^2-6x-4y+3=0$ v průsečíku s přímkou $y=x+3$.
+\end{priklad}
+
+\begin{reseni}
+Nejprve najdeme průsečík $P[p_1,p_2]$ (vyřešíme soustavu těchto dvou rovnic).
+Potom má rovnice tečen tvar
+$$\begin{pmatrix}
+    0 & 3 & 1
+\end{pmatrix}\cdot \begin{pmatrix}
+    1 & 0 & -3\\
+    0 & 1 & -2 \\
+    -3 & -2 & 3
+\end{pmatrix}\cdot \begin{pmatrix}
+    x \\
+    y \\
+    1
+\end{pmatrix}=0.$$
+\end{reseni}
+
 \begin{definition}
     Směr v rovině určený vektorem $\vec u(u_1, u_2)\ne \vec o$ nazveme
     \textbf{asymptotickým směrem} kuželosečky o rovnici \ref{kuzelosec}, jestliže
     $$a_{11}u_1^2 + 2a_{12}u_1u_2+a_{22}u_2^2=0.$$
 \end{definition}
+
+\begin{priklad}
+Určete asymptotické směry kuželosečky $x^2+4xy+y^2-7x-7=0.$
+\end{priklad}
+
+\begin{reseni}
+Hledáme směr $\vec u(u_1,u_2).$ Po dosazení do rovnice kuželosečky (bereme jen
+členy, ve kterých je $x,y$ dvakrát) dostáváme $u_1^2+4u_1u_2+u_2^2=0.$ Zvolíme jednu
+z proměnných a rovnici vyřešíme.
+\end{reseni}
 
 \begin{definition}
     Bod $S$ je středem kuželosečky $k$ právě tehdy, když $\forall X\in k:\exists X^\prime\in k: S$ je středem $XX^\prime.$
@@ -155,6 +239,50 @@ nazývá její \textbf{sečnou} a úsečka $TT^\prime$ \textbf{tětivou}.
 \begin{definition}
     Jestliže střed kuželosečky na ní leží, pak je to \textbf{singulární bod}.
 \end{definition}
+
+\begin{priklad}
+určete střed a singulární body kuželosečky $x^2+y^2+2x=0.$
+\end{priklad}
+
+\begin{reseni}
+Střed kuželosečky vyhovuje rovnici
+$$A\cdot \begin{pmatrix}
+    s_1 \\
+    s_2\\
+    0
+\end{pmatrix}=0,
+$$
+kde $A$ je matice dané kuželosečky. Pokud daný bod navíc vyhovuje rovnici
+$$A\cdot \begin{pmatrix}
+    s_1 \\
+    s_2\\
+    1
+\end{pmatrix}=0,
+$$
+je to singulární bod.
+\end{reseni}
+
+\begin{priklad}
+Je dána kuželosečka $y^2-xy-5x+7y+10=0.$ Určete:
+\begin{enumerate}[$a.$]
+\item zda je regulární / singulární,
+\item asymptotické směry,
+\item středy,
+\item singulární body a
+\item druh kuželosečky.
+\end{enumerate}
+\end{priklad}
+
+\begin{reseni}
+Nechť $A$ je matice dané kuželosečky, $\bar{A}$ zmenšená matice kuželosečky, $\vec u=(u_1,u_2)^T, \vec s=(s_1,s_2,0)^T,\vec t=(s_1,s_2,0)^T$.
+\begin{enumerate}[$a.$]
+\item Spočtením determinantu $A$.
+\item Je řešením rovnice $A\vec u=0.$
+\item Je řešením rovnice $A\vec s=0.$
+\item je řešením rovnice $A\vec t = 0.$
+\item Doplněním na čtverec.
+\end{enumerate}
+\end{reseni}
 
 \begin{definition}
 \textbf{Kulová plocha} (resp. \textbf{koule}) se středem $S$ a poloměrem $r>0$ je množina všech bodů v prostoru,

@@ -90,6 +90,15 @@ Nechť $f(x)$ je spojitá na intervalu $\left < a,b \right > $. Pak $f(x)$ je na
 intervalu $\left < a,b \right > $ integrovatelná.
 \end{veta}
 
+\begin{priklad}
+Vypočtěte integrál $\int_0^{\frac{\pi}{4}}\cos x \, dx.$
+\end{priklad}
+
+\begin{reseni}
+Platí
+$$\int_0^{\frac{\pi}{4}}\cos x \, dx=\left [ \sin x  \right ]_0^{\frac{\pi}{4}}=\sin \frac{\pi}{4}-\sin 0=\frac{\sqrt{2} }{2}. $$
+\end{reseni}
+
 \begin{veta}
 Nechť $f(x), f_1(x),\dots,f_n(x), g(x)$ jsou integrovatelné funkce na intervalu $\left < a,b \right > $
 a $c; c_1,\dots,c\in \mathbb R.$ Pak
@@ -152,11 +161,42 @@ $$\int _a ^b f(x)\, dx = \int _\alpha ^\beta f \left [ \varphi(t) \right ]\cdot 
     Ve větě \ref{ppui} využíváme tzv \textbf{transofrmace mezí}.
 \end{pozn}
 
+\begin{priklad}
+Vypočtěte integrál $\int _1^2 \frac{x}{(1+x^2)}\, dx.$
+\end{priklad}
+
+\begin{reseni}
+Musíme provést transformaci mezí:
+\begin{align*}
+\int _1^2 \frac{x}{(1+x^2)}\, dx &= \left |\begin{array}{l l}
+    t=x^2+1 & x=2\implies t=5 \\
+    dt = 2x \, dx & x=1\implies t=2
+\end{array}\right | = \frac{1}{2}\int _2^5 \frac{1}{t^{\frac{3}{2}}}\, dt \\
+&= \frac{1}{2}\left [ \frac{t^{-\frac{1}{2}}}{-\frac{1}{2}} \right ] _2^5 = \frac{1}{2}\left ( \frac{5^{-\frac{1}{2}}}{-\frac{1}{2}}-\frac{2^{-\frac{1}{2}}}{-\frac{1}{2}} \right )=-\frac{1}{\sqrt{5} }+\frac{1}{\sqrt{2} }
+\end{align*}
+\end{reseni}
+
 \begin{veta}[O integraci \textit{per partes} pro určité integrály]
 Nechť funkce $u(x)$ a $v(x)$ mají na intervalu $\left < a,b \right > $ spojité derivace
 $u^\prime (x)$ a $v^\prime (x)$. Pak platí
 $$\int_a ^b u^\prime (x)v(x)\, dx = \left [ u(x)v(x) \right ]_a^b -\int _a^b u(x)v^\prime(x)\,dx.$$
 \end{veta}
+
+\begin{priklad}
+Vypočtěten integrál $\int _0^{\frac{\pi}{2}}x \cos \frac{x}{2}\, dx$.
+\end{priklad}
+
+\begin{reseni}
+Platí
+\begin{align*}
+\int _0^{\frac{\pi}{2}}x \cos \frac{x}{2}\, dx &= \left | \begin{array}{ll}
+    u=x & u^\prime = 1 \\
+    v^\prime = \cos \frac{x}{2} & v = 2\sin \frac{x}{2}
+\end{array}   \right | \\
+& =\left [ x\cdot2\sin \frac{x}{2} \right ]_0^{\frac{\pi}{2}}-\int_0^{\frac{\pi}{2}}2\sin \frac{x}{2}\, dx =\frac{\pi}{2}\cdot \frac{\sqrt{2} }{2}-0-\left [ -4\cos \frac{x}{2} \right ]_0^{\frac{\pi}{2}}\\
+&= \pi \cdot \frac{\sqrt{2} }{2}+4\cdot \frac{\sqrt{2} }{2}-4
+\end{align*}
+\end{reseni}
 
 \begin{pozn}
     Je-li $f(x)$ spojitá a nezáporná na intervalu $\left < a,b \right > ,$ je
@@ -165,9 +205,64 @@ $$\int_a ^b u^\prime (x)v(x)\, dx = \left [ u(x)v(x) \right ]_a^b -\int _a^b u(x
     $$S=\int_a^b f(x)\, dx.$$
 \end{pozn}
 
+\begin{priklad}
+Vypočtěte obsah plochy $M=\left \{ [x,y], y \geq  x^2 , y \leq 2x\right \} $.
+\end{priklad}
+
+\begin{reseni}
+nejprve určíme průsečíky funkcí $x^2$ a $2x$: $x_1=0,x_2=2$. Plochu spočítáme
+jako
+$$\int_0^2 2x\, dx - \int_0^2 x^2 \, dx.$$
+\end{reseni}
+
+\begin{priklad}
+Vypočtěte obsah kruhu o poloměru $r$.
+\end{priklad}
+
+\begin{reseni}
+Počítáme $2\int_{-r}^r \sqrt{r^2-x^2}\, dx  $.
+\end{reseni}
+
 \begin{pozn}
     Nechť je $f(x)$ spojitá a nezáporná na intervalu $\left < a,b \right > $ a
     $M=\left \{ \left [ x,y \right ], x \in \left < a,b \right >, y \in \left < y, f(x) \right >    \right \} .$
     Nechť $M$ rotuje kolem osy $x$. Dostaneme rotační těleso, jehož objem je
     $$V=\pi \int _a^b \left [ f(x) \right ]^2 \, dx. $$
 \end{pozn}
+
+\begin{priklad}
+Vypočtěte objem koule o poloměru $r$.
+\end{priklad}
+
+\begin{reseni}
+Počítáme $\pi\int _{-r}^r(\sqrt{r^2-x^2} )^2 \, dx=\pi\int_{-r}^r(r^2-x^2)\, dx$.
+\end{reseni}
+
+\begin{pozn}
+Nechť je $f(x)$ funkce se spojitou derivací na intervalu $\left < a,b \right > $. Délka
+grafu funkce $f(x)$ je
+$$L=\int_a^b \sqrt{1+(f(x))^2}\, dx. $$
+\end{pozn}
+
+\begin{priklad}
+SPočtěte délku kružnice o poloměru $r$.
+\end{priklad}
+
+\begin{reseni}
+Počítáme $2\int _{-r}^r \sqrt{1+\left ( \frac{-x}{\sqrt{r^2-x^2}} \right )^2 }\, dx.  $
+\end{reseni}
+
+\begin{pozn}
+    Nechť $f(x)$ je funkce se spojitou derivací na intervalu $\left < a,b \right > .$
+    Pak plíšť rotačního kužele, který vznikne rotací grafu $f(x)$ kolem osy $x$, má
+   povrch
+  $$S=2\pi\int_a^b f(x)\cdot \sqrt{1+(f^\prime(x))^2}\, dx. $$
+\end{pozn}
+
+\begin{priklad}
+Určete povrch koule o poloměru $r$.
+\end{priklad}
+
+\begin{reseni}
+Počítáme $S=2\pi\int_{-r}^r \sqrt{r^2-x^2}\cdot \sqrt{1+\left ( \frac{-x}{\sqrt{r^2-x^2} } \right )^2 } \, dx. $
+\end{reseni}

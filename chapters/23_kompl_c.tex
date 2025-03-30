@@ -90,7 +90,7 @@ poloosa reálné osy s polohovým vektorem daného bodu představujícím dané 
     Tato čísla jsou \textbf{polárními souřadnicemi} komplexního čísla $x$.
 \end{pozn}
 
-\begin{veta}[Moivreova]
+\begin{veta}[Moivreova věta]
     Nechť je dáno komplexní číslo $x=|x|(\cos \varphi + i \sin \varphi)$ a $n\in \mathbb N$
     je nenulové číslo. Pak platí
     $$x^n = |x|^n (\cos n\varphi + i \sin n \varphi).$$
@@ -102,11 +102,36 @@ poloosa reálné osy s polohovým vektorem daného bodu představujícím dané 
     reálné části tohoto komplexního čísla, osa $y$ imaginární části.
 \end{pozn}
 
+\begin{priklad}
+Jsou dána komplexní čísla $a=2+i,b=1-2i$. Zobrazte v gaussově rovině jejich součin a podíl.
+\end{priklad}
+
+\begin{reseni}
+Součin získáme vynásobením velikostí (stejnolehlostí) a sečtením úhlů. Podíl obdobně.
+\end{reseni}
+
 \begin{definition}
 \textbf{Binomickou rovnicí} s neznámou $x\in \mathbb C$ nazýváme každou rovnici
 tvaru $x^n=a$, kde $a\in \mathbb C,n\in \mathbb N, n\geq 2.$ Každý komplexní
 kořen binomické rovnice nazýváme \textbf{komplexní $n$-tou odmocninou} z čísla $a.$
 \end{definition}
+
+\begin{priklad}
+Vypočtěte $z=\sqrt{1+\sqrt{3}i }. $
+\end{priklad}
+
+\begin{reseni}
+Umocněním získáme $z^2=1+\sqrt{3}i. $ Platí $|z^2|=2,$ takže $z^2=2(\cos \frac{\pi}{3}+i\sin \frac{\pi}{3})=|z|^2(\cos 2x+i\sin 2x)$.
+Dále řečíme jako goniometrickou rovnici.
+\end{reseni}
+
+\begin{priklad}
+Řešte v $\mathbb C$: $z^3=i.$
+\end{priklad}
+
+\begin{reseni}
+Vyjádříme v goniometrickém tvaru a dále řešíme pomocí Moivreovy věty.
+\end{reseni}
 
 \begin{definition}
 \textbf{Kvadratickou rovnicí s} (komplexní) \textbf{neznámou} $x\in \mathbb C$ a
@@ -114,6 +139,19 @@ kořen binomické rovnice nazýváme \textbf{komplexní $n$-tou odmocninou} z č
 nazýváme každou rovnici tvaru
 $ax^2+bx+c=0,a,b,c\in \mathbb R,a\ne0$ (resp. $a,b,c \in \mathbb C,a\ne 0$).
 \end{definition}
+
+\begin{priklad}
+V $\mathbb C$ řešte $z^2+3z+10i=0.$
+\end{priklad}
+
+\begin{reseni}
+\begin{enumerate}[1.]
+\item způsob: Doplněním na čtverec dostáváme $\left ( z+\frac{3}{2} \right )^2=\frac{9}{4}-10i. $
+Substituujeme a dále řešíme jako binomickou rovnici.
+\item způsob: Pomocí diskriminantu.
+\item způsob: Vyjádřením neznámé v algebraickém tvaru ($z=a+bi$) a roznásobením.
+\end{enumerate}
+\end{reseni}
 
 \begin{definition}
 \textbf{Algebraická rovnice} $n$-tého stupně s jednou neznámou $x\in \mathbb C$ je každá
@@ -135,3 +173,13 @@ komplexními) koeficienty.
 \textbf{Trinomická rovnice} s neznámou $x\in \mathbb C$ a reálnými koeficienty $a,b,c \in \mathbb R$
 nazýváme rovnici tvaru $ax^p + bx^q + c = 0,$ kde $p,q\in \mathbb N, p>q, a,b\ne 0.$
 \end{definition}
+
+\begin{priklad}
+Užitím Moivreovy věty odvoďte vzorce pro $\sin 3x, \cos 3x.$
+\end{priklad}
+
+\begin{reseni}
+Platí $(\cos x + i\sin x)^3=\cos 3x+i\sin 3x.$ Z binomické věty máme
+$(\cos x+i\sin x)^3=\cos^3 x + 3i\cos^2 x\sin x - 3\cos x\sin^2 x-i\sin^3 x.$
+Metodou porovnání koeficientů u $i$ vzorce dostáváme.
+\end{reseni}

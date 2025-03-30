@@ -45,11 +45,49 @@ Platí:
 \end{align*}
 \end{pozn}
 
+\begin{priklad}
+Řešte integrál $\int x \, dx.$
+\end{priklad}
+
+\begin{reseni}
+Je $\int x \, dx=\frac{x^2}{2}+c.$
+\end{reseni}
+
 \begin{veta}[Integrační metoda \textit{per partes}]
 Nechť funkce $u(x) $ a $v(x)$ mají derivaci na intervalu $I$. Pak platí
 $$\int u(x)v^\prime (x) \, dx = u(x) v(x) - \int u^\prime (x) v(x) \, dx,$$
 pokud alespoň jeden z integrálů existuje.
 \end{veta}
+
+\begin{priklad}
+Řešte $\int x \sin x \, dx $.
+\end{priklad}
+
+\begin{reseni}
+Řešme \textit{per partes}:
+\begin{align*}
+\int x \sin x \, dx &=\left |\begin{array}{l l}
+    u=x & u^\prime= 1\\
+    v^\prime = \sin x & v=-\cos x
+\end{array} \right | = x(-\cos x)-\int 1\cdot(-\cos x)\, dx \\
+&= -x\cos x+\int \cos x \, dx=-x \cos x +\sin x+c
+\end{align*}
+\end{reseni}
+
+\begin{priklad}
+Řešte $\int (x^2+1)e^{-x}\, dx.$
+\end{priklad}
+
+\begin{reseni}
+Řešme \textit{per partes}:
+\begin{align*}
+    \int \left ( x^2+1 \right )e^{-x}\, dx &= \left |\begin{array}{l l}
+        u=x^2+1 & u^\prime= 2x\\
+        v^\prime = e^{-x} & v=-e^{-x}
+    \end{array} \right | \\
+    &= (x^2+1)(-e^{-x})-\int 2x(-e{-x})\, dx = \dots
+\end{align*}
+\end{reseni}
 
 \begin{pozn}[Substituční metoda]
     Označme si substituci $\varphi(x)=u.$ Tuto rovnost diferencujeme.
@@ -59,6 +97,37 @@ pokud alespoň jeden z integrálů existuje.
     \end{vmatrix}=\int f(u)\, du.$$
 \end{pozn}
 
+\begin{priklad}
+Řešte $\int \frac{(1+\ln x)^4}{x}\, dx.$
+\end{priklad}
+
+\begin{reseni}
+Metodou substituční:
+\begin{align*}
+    \int \frac{(1+\ln x)^4}{x}\, dx &= \begin{vmatrix}
+        1+\ln x=u \\
+        \frac{1}{x}\, dx=du
+    \end{vmatrix}=\int u^4\, du \\
+    \frac{u^5}{5}+c=\frac{(1+\ln x)^5}{5}+c
+\end{align*}
+\end{reseni}
+
+\begin{priklad}
+Řešte $\int e^{\sqrt{x} }\, dx$.
+\end{priklad}
+
+\begin{reseni}
+Substitucí $\sqrt{x}=t $.
+\end{reseni}
+
+\begin{priklad}
+Řešte $\sqrt{1-x^2}\, dx.$
+\end{priklad}
+
+\begin{reseni}
+Substitucí $x=\sin t$.
+\end{reseni}
+
 \begin{pozn}[Integrály typu $\frac{f^\prime(x)}{f(x)}$]
     Platí
     $$\int \frac{f^\prime(x)}{f(x)}\, dx=\begin{vmatrix}
@@ -66,6 +135,16 @@ pokud alespoň jeden z integrálů existuje.
         f^\prime(x) \, dx = dt
     \end{vmatrix}=\int \frac{dt}{t}=\ln |t|+c=\ln |f(x)|+c.$$
 \end{pozn}
+
+\begin{priklad}
+Řešte $\int \tg x\, dx.$
+\end{priklad}
+
+\begin{reseni}
+Platí
+$$\int \tg x\, dx=\int \frac{\sin x}{\cos x}\, dx.$$
+Řešíme substitucí $\cos x=t.$
+\end{reseni}
 
 \subsection*{Integrace racionálně lomených funkcí}
 \begin{pozn}
@@ -92,6 +171,14 @@ pokud alespoň jeden z integrálů existuje.
     \end{align*}
     \end{enumerate}
 \end{pozn}
+
+\begin{priklad}
+Řešte $\int \frac{3x+16}{x^2-x-6}\, dx$.
+\end{priklad}
+
+\begin{reseni}
+Rozkladem na parciální zlomky. Vede na $\ln$.
+\end{reseni}
 
 \begin{pozn}[Integrace parciálních zlomků s komplexními kořeny ve jmenovateli]
 Parciální zlomky $\frac{Mx+N}{(x^2+px+q)^n}$ integrujeme následovně:
@@ -161,6 +248,26 @@ x^2+px+q=u \\
 \end{enumerate}
 \end{pozn}
 
+\begin{priklad}
+Řešte $\int \frac{dx}{(x^2+2)^2}\, dx = J_2.$
+\end{priklad}
+
+\begin{reseni}
+Vyjádříme si \textit{per partes} $J_1$ tak, že derivujeme celý výraz $J_1$ a integrujeme
+1. Dostaneme rovnici v proměnné integrál. $J_1$ spočítáme snadno (vede na $\arctg$).
+\end{reseni}
+
+\begin{priklad}
+Řešte $\int \frac{5x+6}{x^2+28x+300}\, dx.$
+\end{priklad}
+
+\begin{reseni}
+Do čitatele dostaneme derivaci jmenovatele. Protože nevychází konstatní člen
+v čitateli, \uv{něco si půjčíme a vrátíme}. Zlomek se rozdělí na více sčítanců.
+Poslední z nich integrujeme tak, že ve jmenovateli doplníme na čtverec a vhodně vynásobíme
+tak, abychom dostali něco tvaru $x^2+1$.
+\end{reseni}
+
 
 \subsection*{Integrace goniometrických funkcí}
 \begin{pozn}
@@ -182,6 +289,15 @@ x^2+px+q=u \\
     $$dx = \frac{2}{t^2+1}\, dt.$$
 \end{pozn}
 
+\begin{priklad}
+Řešte $\int \frac{dx}{1-\cos x+\sin x}$.
+\end{priklad}
+
+\begin{reseni}
+Řešíme substitucí $\tg \frac{x}{2}=t$. Ostatní funkce popř. odvodíme ze vztahů
+v pravoúhlém trojúhelníku.
+\end{reseni}
+
 \begin{veta}
     Je-li funkce $R(\sin x, \cos x)$ lichá vzhledem k
     proměnné $\sin x$, používáme substituci $\cos x=t$.
@@ -197,6 +313,15 @@ x^2+px+q=u \\
     oběma proměnným, používáme substituci $\tg x=t$.
 \end{veta}
 
+\begin{priklad}
+Řešte $\int \frac{2\cos x - \sin x}{\cos x - 2\sin x}\, dx$.
+\end{priklad}
+
+\begin{reseni}
+Řešíme substitucí $\tg x = t \implies x=\arctg t$. Ostatní funkce popř.
+odvodíme ze vztahů v pravoúhlém trojúhelníku.
+\end{reseni}
+
 \begin{pozn}
     Integrály $\int \sin^2 x \, dx, \int \cos^2 x \, dx$ neřešíme substitucí
     $\tg x  = t,$ nýbrž ze vzorce pro poloviční argument:
@@ -205,6 +330,14 @@ x^2+px+q=u \\
         \int \cos^2 x \, dx &= \int \frac{1-\cos 2x}{2}\, dx = \frac{1}{2}x - \frac{1}{4} \sin 2x + c.
     \end{align*}
 \end{pozn}
+
+\begin{priklad}
+Řešte $\int \cos^2 x \, dx$.
+\end{priklad}
+
+\begin{reseni}
+Vyjádříme si ze vzorce pro dvojnásobný argument.
+\end{reseni}
 
 \subsection*{Integrace některých iracionálních funkcí}
 \begin{veta}
@@ -247,6 +380,26 @@ x^2+px+q=u \\
         &\int R(x, \sqrt{x^2-k^2} )\, dx & & \textrm{substitucí } x=\frac{k}{\sin t}.
     \end{align*}
 \end{veta}
+
+\begin{priklad}
+Řešte $\int \sqrt{a^2-x^2}\, dx. $
+\end{priklad}
+
+\begin{priklad}
+Řešte $\int \frac{dx}{x \sqrt{x^2+2} }.$
+\end{priklad}
+
+\begin{reseni}
+Řešíme substitucí $x=\sqrt{2}\tg t. $
+\end{reseni}
+
+\begin{priklad}
+Řešte $\int \frac{1}{x}\sqrt{x^2-1}\, dx, x \in (1,\infty). $
+\end{priklad}
+
+\begin{reseni}
+Řešíme substitucí $x=\frac{1}{\sin t}.$
+\end{reseni}
 
 \begin{pozn}
     Přehled všech základních tabulkových integrálů a substitucí, které musíme umět, je

@@ -141,12 +141,29 @@ Pak platí:
 \end{enumerate}
 \end{veta}
 
-\begin{veta}
+\begin{veta}[Věta o limitě funkcí shodujících se v prstencovém okolí bodu]
 Nechť jsou dány funkce $f,g$ a nechť existuje prstencové okolí
 $\mathscr P(x_0)$ takové, že $\forall x \in \mathscr P(x_0):f(x)=g(x).$
 Nechť $\lim_{x\to x_0}g(x)=A, A\in \mathbb R^*.$ Pak existuje $\lim_{x\to x_0}f(x)$
 a platí $\lim_{x\to x_0}f(x)=A.$
 \end{veta}
+
+\begin{priklad}
+Spočtěte $\lim_{x\to -1}\frac{x^2-1}{x+1}$.
+\end{priklad}
+
+\begin{reseni}
+ Platí
+ $$\lim_{x\to -1}\frac{x^2-1}{x+1}=\lim_{x\to -1}\frac{(x-1)(x+1)}{x+1}=\lim_{x\to -1}(x-1)=-2.$$
+\end{reseni}
+
+\begin{priklad}
+Spočtěte $\lim_{x\to-\infty}x(\sqrt{x^2+9}-\sqrt{x^2-9})$.
+\end{priklad}
+
+\begin{reseni}
+Rozšíříme $\sqrt{x^2+9}+\sqrt{x^2-9}.  $
+\end{reseni}
 
 \begin{veta}[Věta o sevření]
 Nechť $f,g,h$ jsou funkce a nechť existuje prstencové okolí $\mathscr P(x_0)$
@@ -161,6 +178,14 @@ okolí $\mathscr P(x_0), x_0\in \mathbb R^*$ bodu $x_0\in \mathbb R^*$ takové, 
 funkce $g$ je na tomto okolí ohraničená. Pak $\lim_{x\to x_0}f(x)g(x)=0.$
 \end{veta}
 
+\begin{priklad}
+Spočtěte $\lim_{x\to \infty}\left ( 4x^3-x^2+x+2 \right ) .$
+\end{priklad}
+
+\begin{reseni}
+Vytkneme $x^3$.
+\end{reseni}
+
 \begin{veta}[Věta o limitě složené funkce]\label{slozf}
 Nechť $f,g$ jsou funkce a $x_0\in \mathbb R^*, A \in \mathbb R$ a nechť platí
 \begin{enumerate}[$i.$]
@@ -171,12 +196,34 @@ Pak platí
 $$\lim_{x\to x_0}f \left ( g(x) \right ) =f \left ( \lim_{x\to x_0}g(x) \right ) =f(A).$$
 \end{veta}
 
+
 \begin{pozn}
     Důsledkem věty \ref{slozf} je fakt, že
     $$\lim_{x\to x_0}g(x)=A \implies \lim_{x\to x_0}e^{g(x)}=e^A.$$
     To využíváme při výpočetu limit exponenciálních výrazů. Platí totiž
     $$f(x)^{g(x)}=e^{g(x)\ln f(x)}.$$
 \end{pozn}
+
+\begin{priklad}
+Spočtěte $\lim_{x\to 0} \cos \left ( x^2\cdot \sin \frac{1}{x} \right ) $.
+\end{priklad}
+
+\begin{reseni}
+Je
+$$\lim_{x\to 0} \cos \left ( x^2\cdot \sin \frac{1}{x} \right ) =\cos 0 =1,$$
+neboť $\sin \frac{1}{x}$ je omezená a $x^2$ je spojitá v $\mathbb R$.
+\end{reseni}
+
+\begin{priklad}
+Spočtěte $\lim_{x\to 0^+}x^{\ln x}.$
+\end{priklad}
+
+\begin{reseni}
+Platí
+$$\lim_{x\to 0^+}x^{\ln x}=\lim_{x\to 0^+}e^{\ln x\ln x}.$$
+Protože je $e^x$ spojitá, je
+$$\lim_{x\to 0^+}e^{\ln x\ln x}=e^{\lim_{x\to 0^+}\ln x\ln x}.$$
+\end{reseni}
 
 \begin{veta}[Věta o limitě typu $1 / 0$]
 Nechť $f$ je funkce a nechť existuje pravé prstencové okolí $\mathscr P^+(x_0)$ bodu
@@ -185,6 +232,15 @@ $f(x)>0$ (resp. $f(x)<0$). Nechť $\lim_{x\to x_0^+}=0.$ Pak platí
 $$\lim_{x\to x_0^+} \frac{1}{f(x)}=\infty \,\,\, (\textrm{resp. } -\infty).$$
 Analogicky pro levé okolí bodu.
 \end{veta}
+
+\begin{priklad}
+Spočtěte $\lim_{x\to 2^+}\frac{x}{x-2}.$
+\end{priklad}
+
+\begin{reseni}
+Dosaďme:
+ $$\lim_{x\to 2^+}\frac{x}{x-2}=\frac{2}{0^+}=+\infty.$$
+\end{reseni}
 
 \begin{veta}[l`H\^ospitalovo pravidlo]
 Nechť $x_0\in \mathbb R^*$. Nechť je splněna jedna z podmínek
@@ -196,3 +252,29 @@ Existuje-li $\lim_{x\to x_0}\frac{f^\prime (x)}{g^\prime (x)},$ pak existuje tak
 $\lim_{x\to x_0}\frac{f(x)}{g(x)}$ a platí
 $$\lim_{x\to x_0}\frac{f(x)}{g(x)}=\lim_{x\to x_0}\frac{f^\prime (x)}{g^\prime(x)}.$$
 \end{veta}
+
+
+\begin{priklad}
+Spočtěte $\lim_{x\to 1} \left ( \frac{1}{\ln x}-\frac{1}{x-1} \right ) $.
+\end{priklad}
+
+\begin{reseni}
+Převedeme na společný jmenovatel a použijeme l'H\^{o}spitalovo pravidlo.
+\end{reseni}
+
+\begin{priklad}
+Spočtěte $\lim_{x\to \infty}\left ( \sqrt{x^2+x-1}-\sqrt{x^2-x+1}   \right ) $.
+\end{priklad}
+
+\begin{reseni}
+Rozšíříme $\sqrt{x^2+x-1}+\sqrt{x^2-x+1}$.
+\end{reseni}
+
+\begin{priklad}
+Spočtěte $\lim_{x\to 0^+}x^{\sin x}.$
+\end{priklad}
+
+\begin{reseni}
+Platí
+$$\lim_{x\to 0^+}x^{\sin x}=\lim_{x\to 0^+}e^{\sin x\ln x}=e^{\lim_{x\to 0^+}\sin x\ln x}.$$
+\end{reseni}
