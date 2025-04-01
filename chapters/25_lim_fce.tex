@@ -253,6 +253,16 @@ $\lim_{x\to x_0}\frac{f(x)}{g(x)}$ a platí
 $$\lim_{x\to x_0}\frac{f(x)}{g(x)}=\lim_{x\to x_0}\frac{f^\prime (x)}{g^\prime(x)}.$$
 \end{veta}
 
+\begin{priklad}
+  Spočtěte $\lim_{x\to 0}\frac{\sin x}{x}.$
+\end{priklad}
+
+\begin{reseni}
+  Řešíme l'H\^ospitalovým pravidlem.
+  Platí
+  $$\lim_{x\to 0}\frac{\sin x}{x}=\lim_{x\to 0}\frac{\cos x}{1}=1$$
+\end{reseni}
+
 
 \begin{priklad}
 Spočtěte $\lim_{x\to 1} \left ( \frac{1}{\ln x}-\frac{1}{x-1} \right ) $.
@@ -277,4 +287,13 @@ Spočtěte $\lim_{x\to 0^+}x^{\sin x}.$
 \begin{reseni}
 Platí
 $$\lim_{x\to 0^+}x^{\sin x}=\lim_{x\to 0^+}e^{\sin x\ln x}=e^{\lim_{x\to 0^+}\sin x\ln x}.$$
+\end{reseni}
+
+\begin{priklad}
+  Spočtěte $\lim_{x\to 0^+}x\ln x.$
+\end{priklad}
+
+\begin{reseni}
+  Převedeme do jmenovatele:
+  $$\lim_{x\to 0^+}x\ln x=\lim_{x\to 0^+}\frac{\ln x}{\frac{1}{x}}$$
 \end{reseni}

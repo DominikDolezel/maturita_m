@@ -75,6 +75,14 @@ Platí:
 \end{enumerate}
 \end{pozn}
 
+\begin{priklad}
+  Spočtěte derivaci funkce $f(x)=x.$
+\end{priklad}
+
+\begin{reseni}
+  Je $f^\prime(x)=1.$
+\end{reseni}
+
 \begin{veta}[Věta o derivaci součtu, rozdílu, součinu a podílu funkcí]
 Nechť existují derivace funkcí $f$ a $g$ v bodě $a\in \mathbb R.$ Pak
 také funkce $f\pm g, fg, f/g$ a $cf,$ kde $c\in \mathbb R$, mají v bodě $a$ derivaci a platí:
@@ -85,6 +93,14 @@ také funkce $f\pm g, fg, f/g$ a $cf,$ kde $c\in \mathbb R$, mají v bodě $a$ d
 \item $(cf)^\prime(a)=cf^\prime (a).$
 \end{enumerate}
 \end{veta}
+
+\begin{priklad}
+  Spočtěte derivaci funkce $f(x)=xe^x.$
+\end{priklad}
+
+\begin{reseni}
+  Je $f^\prime(x)=1e^x+xe^x=e^x(x+1)$.
+\end{reseni}
 
 \begin{veta}[Derivace inverzní funkce]
 Nechť funcke $f:x=f(y)$ je spojitá a ryze monotónní na intervalu $I.$ Nechť $y_0$
@@ -106,11 +122,29 @@ v bodě $a$ a platí
 $$F^\prime(a)=(f\circ g)^\prime (a) = f^\prime(b)\cdot g^\prime(a)=f^\prime(g(a))\cdot g^\prime(a).$$
 \end{veta}
 
+\begin{priklad}
+  Spočtěte derivaci funkce $f(x)=\left (x^3+2x^2+x-1\right )^8.$
+\end{priklad}
+
+\begin{reseni}
+  Zavedeme substituci $x^3+2x^2+x-1=u$. Pak $f^\prime(x)=8u^7u^\prime$. Dále $u^\prime=3x^2-4x+1.$
+  Je tedy $f^\prime(x)=8\left(x^3+2x^2+x-1\right)^7(3x^2-4x+1).$
+\end{reseni}
+
 \begin{pozn}
     Funkce tvaru $f(x)^{g(x)}$ derivujeme jako složenou funkci $e^{g(x)\ln f(x)},$
     protože $f(x)^{g(x)}=e^{g(x)\ln f(x)}$ a funkce $e^r, r \in \mathbb R$ je prostá
     a spojitá.
 \end{pozn}
+
+\begin{priklad}
+  Spočtěte derivaci funkce $f(x)=x^x.$
+\end{priklad}
+
+\begin{reseni}
+  Platí $f(x)=e^{x\ln x},$ takže $f^\prime(x)=\left (e^{x\ln x}\right)^\prime=e^{x\ln x}(x\ln x)^\prime=
+  x^x\left(\ln x+ x\cdot \frac{1}{x}\right).$
+\end{reseni}
 
 \begin{definition}
 Nechť $n \in \mathbb N$. Potom \textbf{$n$-tou derivací} funkce $f$ rozumíme funkci,
@@ -156,11 +190,22 @@ protože se vlastně díváme na $y$ jako na funkci $x$ ($y=f(x)$), takže
 derivace $y=f^\prime(x)\cdot (f(x))^\prime$ (např. $\left ( y^2 \right )^\prime =2yy^\prime$).
 \end{pozn}
 
+\begin{priklad}
+  Spočtěte derivaci funkce rovnice kružnice $x^2+y^2=1.$
+\end{priklad}
+
+\begin{reseni}
+  Derivujeme funkci danou implicitně: $f(x,y)^\prime: 2x+2yy^\prime=0.$
+\end{reseni}
 
 \begin{veta}[Cauchy-Bolzanova věta]
 Nechť je funkce $f$ spojitá na uzavřeném intervalu $\left < a,b \right > $ a platí
 $f(a)\cdot f(b)<0.$ Pak existuje alespoň jedno číslo $x_0\in (a,b)$ takové, že $f(x_0)=0.$
 \end{veta}
+
+\begin{priklad}
+  Určete znaménka funkce $f(x)=\frac{1-x^2}{x}.$
+\end{priklad}
 
 \begin{veta}[Rolleho věta]
 Nechť funkce $f$ má následující vlastnosti:
