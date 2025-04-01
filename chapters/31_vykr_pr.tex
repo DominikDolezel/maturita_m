@@ -93,10 +93,10 @@ V $\mathbb R$ řešte $$\frac{(x+1)(x-2)^2}{(3-x)^3(4+x)^4}\leq 0.$$
 V $\mathbb R$ řešte rovnici $|3x-5|=2x+10.$
 \end{priklad}
 
-\begin{priklad}
+\begin{reseni}
 Rozdělíme na případy, kdy je výraz v absolutní hodnotě menší / větší než 0
 a dále řešíme jako normálně.
-\end{priklad}
+\end{reseni}
 
 \begin{priklad}
 V $\mathbb R$ řešte $2|4+3x|\leq 6x+11.$
@@ -175,7 +175,7 @@ Převedeme na matici
 $$
 \left (
 \begin{array}{c c c | c }
-1 & 1 & & 1\\
+1 & 1 & 1 & 1\\
 1  & 0 &-1  &0
 \end{array}
 \right )
@@ -194,7 +194,7 @@ $$A=\begin{pmatrix}
 \end{priklad}
 
 \begin{reseni}
-Od druhého, třetího a řtvrtého řádku odečteme ten první (čímž se determinant nezmění)
+Od druhého, třetího a čtvrtého řádku odečteme ten první (čímž se determinant nezmění)
 a využijeme Laplaceův rozvoj podle prvního sloupce. Je tedy
 $$\det A = \begin{vmatrix}
     1 &1 &1 &1\\
@@ -211,9 +211,9 @@ $$\det A = \begin{vmatrix}
 \begin{priklad}
 V $\mathbb R$ řešte  soustavu rovnic
 \begin{align*}
-    x_1+x_2+x_3 &=1,
-    x_1+x_2 &= 0,
-    x_1+x_3 &=.
+    x_1+x_2+x_3 &=1,\\
+    x_1+x_2 &= 0,\\
+    x_1+x_3 &=-1.
 \end{align*}
 \end{priklad}
 
@@ -276,9 +276,9 @@ kde $r\in \mathbb Z.$
 jejíž koeficient je v absolutní hodnotě menší.
 \begin{align*}
     x &= \frac{13y+2}{5}=\frac{10y}{5}+\frac{3y+2}{5}=2y+\underbrace{\frac{3y+2}{5}}_{\in \mathbb Z}\\
-    \exists u \in \mathbb Z: u &= \frac{3y+2}{5}\implies 3y+2=5 \iff y=\frac{5u-2}{3}=u+\underbrace{\frac{2u-2}{2}}_{\in \mathbb Z} \\
+    \exists u \in \mathbb Z: u &= \frac{3y+2}{5}\implies 3y+2=5u \iff y=\frac{5u-2}{3}=u+\underbrace{\frac{2u-2}{2}}_{\in \mathbb Z} \\
      & \dots \\
-     \exists w \in \mathbb Z: w &= \frac{v}{2}\implies v = 2w \implies \, | \, v.
+     \exists w \in \mathbb Z: w &= \frac{v}{2}\implies v = 2w \implies 2 \, | \, v.
 \end{align*}
 Nyní zpětně dosazujeme:
 \begin{align*}
@@ -385,11 +385,11 @@ V $\mathbb R$ řešte nerovnici $\sin x \geq \frac{\sqrt{2} }{2}.$
 
 
 \subsection{Důkazy}
-\begin{priklad}
+\begin{priklad}\label{dkpr}
 Dokažte, že je-li $n$ sudé, pak i $n^2$ je sudé.
 \end{priklad}
 
-\begin{reseni}\label{dkpr}
+\begin{reseni}
 Přímým důkazem. Nechť $n$ je sudé přirozené číslo, tedy lze jej zapsat ve tvaru $2k, k \in \mathbb N.$
 Pak $n^2 = 4k^2 = 2\cdot 2l, 2l\in \mathbb N, $ tedy $n^2$ je sudé.
 \end{reseni}

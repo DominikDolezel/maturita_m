@@ -48,7 +48,7 @@
 
 \begin{definition}\label{vekt_prost}
     Nechť je dána množina $V$, těleso $T$ a dvě operace $\bigoplus: V\times V \to V$ a
-    $\bigotimes: T\times V \to V$ (jsou na $V$ uzavřené). Pak čtveřici $(V,T,\bigoplus,
+    $\bigotimes: T\times V \to V$ (jsou na $V$ uzavřené). Pak čtveřice $(V,T,\bigoplus,
     \bigotimes)$ je \textbf{vektorový prostor} nad tělesem $T$, jestliže $\forall p,q \in T, \vec u,
     \vec v, \vec w \in V$ platí:
     \begin{enumerate}[$i.$]
@@ -232,8 +232,7 @@ Vyjadřujeme-li vektor jako lineární kombinaci báze, řešíme vlastně rovni
 $\vec u_i = p_1\vec e_1 + p_2\vec e_2 +\dots + p_n\vec e_n.$
 \end{reseni}
 
-\begin{priklad}
-V pravidelném čtyřstěnu vyjádřete vektory $\overrightarrow{PS},\overrightarrow{PU}\overrightarrow{PT}$ jako
+\begin{priklad}V pravidelném čtyřstěnu vyjádřete vektory $\overrightarrow{PS},\overrightarrow{PU},\overrightarrow{PT}$ jako
 lineární kombinaci vektorů $\overrightarrow{PB},\overrightarrow{PC},\overrightarrow{PD},$
 je-li $S$ střed strany $BC$, $U$ těžiště trojúhelníka $BCD$ a $T$ je těžiště
 $PBCD$.
@@ -253,8 +252,8 @@ $PBCD$.
 
 \begin{definition}
     Nechť $(\vec e_1, \dots, \vec e_n)$ je báze vektorového prostoru $V$. Nechť
-    $\vec x \in V$ je libovolná vektor takový, že
-    $$\vec x = x_1\vec e:1 + x_2\vec e_2 + \dots + x_n\vec e_n,$$
+    $\vec x \in V$ je libovolný vektor takový, že
+    $$\vec x = x_1\vec e_1 + x_2\vec e_2 + \dots + x_n\vec e_n,$$
     kde $x_i \in \mathbb R, i\in \left \{ 1,\dots,n \right \} .$ Pak uspořádanou
     $n$-tici $(x_1, x_2,\dots,x_n)$ nazýváme \textbf{souřadnice vektoru} $\vec x$ v
     bázi $(\vec e_1, \dots, \vec e_n)$.
@@ -301,7 +300,7 @@ vektorem}.
 \begin{enumerate}[$i.$]
 \item $\vec u \cdot \vec v = \vec v \cdot \vec u,$
 \item $(\vec u+\vec v)\cdot \vec w = \vec u\cdot \vec w + \vec v\cdot \vec w,$
-\item $(p\cdot \vec u)\cdot v = p\cdot(\vec u \cdot \vec v),$
+\item $(p\cdot \vec u)\cdot \vec v = p\cdot(\vec u \cdot \vec v),$
 \item $\vec u\cdot \vec v \geq 0, \vec u \cdot \vec u = 0 \iff \vec u = \vec o$
 \end{enumerate}
 pro všechna $\vec u, \vec v, \vec w \in V.$
@@ -341,7 +340,7 @@ pro všechna $\vec u, \vec v, \vec w \in V.$
 \end{veta}
 
 \begin{priklad}
-Ve vektorovém prostoru $\mathbb R^5$ je dán systém generátorů $\vec eu_1,\dots,\vec u_4$:
+Ve vektorovém prostoru $\mathbb R^5$ je dán systém generátorů $\vec u_1,\dots,\vec u_4$:
 $$
     \vec u_1 = (0,1,0,0,0), \vec u_2 = (1,1,1,2,1), \vec u_3 = (1,1,0,-1,0), \vec u_4 = (0,0,1,3,1).
 $$
@@ -350,7 +349,7 @@ najděte ortogonální a ortonormální bázi tohoto vektorového prostoru.
 
 \begin{reseni}
 Položme $\vec e_1=\vec u_1.$ Dále $\vec e_2 = p_1\vec u_1 + \vec u_2$. Po vynásobení
-této matice $\vec e_2$ (ten je kolmý na $\vec e_1$) dostáváme
+této matice $\vec e_1$ (ten je kolmý na $\vec e_2$) dostáváme
 $$\underbrace{\vec e_2 \vec e_1}_{0}=p_1\vec u_1\vec e_1+\vec u_2\vec e_1,$$
 takže
 $$p_1=-\frac{\vec u_2\vec e_1}{\vec u_1\vec e_1} = -\frac{1}{1}=-1,$$
@@ -358,7 +357,7 @@ a pak
 $$\vec e_2 = -1(0,1,0,0,0)+(1,1,1,2,1)=(1,0,1,2,1).$$
 Obdobně pak řešíme rovnici $\vec e_3=q_1\vec e_1 + q_2\vec e_2 + \vec u_3$. Vynásobíme
 ji postupně $\vec e_1$, $\vec e_2$, takže dostaneme dvě rovnice, na jejichž levé straně
-je součin dvou kolmých vektorů. Obdobně pokračujeme dál. ortonormální bázi
+je součin dvou kolmých vektorů. Obdobně pokračujeme dál. Ortonormální bázi
 dostaneme tak, že každý z vektorů ortogonální báze vydělíme jeho velikostí.
 \end{reseni}
 
@@ -386,8 +385,8 @@ Vypočtěte obsah trojúhelníku $ABC$, je-li $A[-1,1], B[5,4], C[2,7].$
 
 \begin{reseni}
 Abychom mohli spočítat vektorový součin (tady polovinu vektorového součinu), musíme
-mít trojrozměrné vektory. Doplňme ji tedy: $A[-1,1, 0], B[5,4, 0], C[2,7,0].$ Pak
-je obsah polovina velikost vektorového součinu dvou vektorů (třeba $\overrightarrow{AB}$ a $\overrightarrow{BC}$).
+mít trojrozměrné vektory. Doplňme je tedy: $A[-1,1, 0], B[5,4, 0], C[2,7,0].$ Pak
+je obsah polovina velikosti vektorového součinu dvou vektorů (třeba $\overrightarrow{AB}$ a $\overrightarrow{BC}$).
 \end{reseni}
 
 \begin{veta}

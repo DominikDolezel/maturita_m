@@ -26,7 +26,7 @@ Napište rovnici přímky $p(A,\vec u),$ je-li $A[1,-1,2], \vec u = (0,1,2).$
     \begin{enumerate}[$a.$]
     \item 0 řešení, jsou přímky $p,q$ rovnoběžné různé.
    	\item 1 řešení, jsou přímky $p,q$ různoběžné.
-   	\item nekonečně množho řešení, přímky $p,q$ splývají.
+   	\item nekonečně mnoho řešení, přímky $p,q$ splývají.
     \end{enumerate}
    	\item Jestliže
     \begin{enumerate}[$a.$]
@@ -40,7 +40,7 @@ Napište rovnici přímky $p(A,\vec u),$ je-li $A[1,-1,2], \vec u = (0,1,2).$
     \end{enumerate}
 \end{veta}
 \begin{priklad}
-Určete vzájemnou polohu dvou přímek $AB, CD$, je-li $A[3,2], B[4,-1], C[-4,5],D[-1,-2].$
+Určete vzájemnou polohu dvou přímek $AB, CD$, je-li $A[3,2], B[4,-1],$\linebreak $C[-4,5],D[-1,-2]$.
 \end{priklad}
 
 \begin{reseni}
@@ -82,7 +82,7 @@ Zjišťujeme, zda jsou směrové vektory přímek lineárně závislé.
 \end{veta}
 
 \begin{priklad}
-Rozhodněte o vzájemné pooze přímek $p=\left \{ [1-4t,2+4t,3+t], t \in \mathbb R \right \},q=\left \{ [-4,8r,-5-8r,-2r],r \in \mathbb R \right \} . $
+Rozhodněte o vzájemné poloze přímek $p=\left \{ [1-4t,2+4t,3+t], t \in \mathbb R \right \},q=\left \{ [-4,8r,-5-8r,-2r],r \in \mathbb R \right \} . $
 \end{priklad}
 
 \begin{reseni}
@@ -93,14 +93,14 @@ Zjišťujeme, zda jsou směrové vektory přímek lineárně závislé.
     Nechť $p(A,\vec u), q(B, \vec v)$ jsou dvě přímky. Pak platí
     \begin{enumerate}[$i.$]
     \item $p\parallel q \land p=q \iff \dim(\vec u, \vec v, \overrightarrow{AB})=1,$
-   	\item $p\parallel q \land p\ne q \iff \dim(\vec u, \vec v, \overrightarrow{AB})=2 \land \dim ( u, \vec v) = 1$,
-    \item $p, q$ jsou různoběžné $ \iff \dim(\vec u, \vec v, \overrightarrow{AB})=2 \land \dim ( u, \vec v) = 2$,
+   	\item $p\parallel q \land p\ne q \iff \dim(\vec u, \vec v, \overrightarrow{AB})=2 \land \dim ( \vec u, \vec v) = 1$,
+    \item $p, q$ jsou různoběžné $ \iff \dim(\vec u, \vec v, \overrightarrow{AB})=2 \land \dim ( \vec u, \vec v) = 2$,
     \item $p, q$ jsou mimoběžné $\iff \dim(\vec u, \vec v, \overrightarrow{AB})=3.$
     \end{enumerate}
 \end{veta}
 
 \begin{priklad}
-Rozhodněte o vzájemné poloze dvou přímek $p=\left \{ [t,-1+2t,-2+2t], t \in \mathbb R \right \}, q=\left \{ [1+t,1,r]. r \in \mathbb R \right \}.  $
+Rozhodněte o vzájemné poloze dvou přímek $p=\left \{ [t,-1+2t,-2+2t], t \in \mathbb R \right \}, q=\left \{ [1+t,1,r], r \in \mathbb R \right \}.  $
 \end{priklad}
 
 \begin{reseni}
@@ -146,7 +146,7 @@ Rovnice $\frac{x}{q}+\frac{y}{p}=1$ se nazývá \textbf{úsekový tvar rovnice p
 
 \begin{definition}
 Nechť $\rho$ je rovina, $\vec u, \vec v$ lineárně nezávislé vektory a $\overrightarrow{AB},
-\overrightarrow{AC}, A,B,C\in \rho$ jejich umístění. Pak$\vec u, \vec v$ je
+\overrightarrow{AC}, A,B,C\in \rho$ jejich umístění. Pak $\vec u, \vec v$ je
 \textbf{zaměření} roviny $\rho.$
 \end{definition}
 
@@ -180,7 +180,7 @@ Pokud $y=r, z=s,$ pak $x-r+s-1=0,$ takže $x=1+r-s$, tedy $\rho = \left \{ [1+r-
 \end{reseni}
 
 \begin{veta}[Vzájemná poloha dvou rovin daných obecnými rovnicemi]
-    Nechť $\rho: ax+by+cz+d=0, \sigma: ex+fy+gz+h=0$ jsou roviny. Pak
+    Nechť $\rho: ax+by+cz\linebreak+ d=0, \sigma: ex+fy+gz+h=0$ jsou roviny. Pak
     \begin{enumerate}[$i.$]
     \item $\rho = \sigma \iff (a,b,c,d) = k(e,f,g,h), k\in \mathbb R,$
    	\item $\rho \parallel \sigma \land \rho \ne \sigma \iff (a,b,c) = k(e,f,g), k\in \mathbb R
@@ -190,19 +190,19 @@ Pokud $y=r, z=s,$ pak $x-r+s-1=0,$ takže $x=1+r-s$, tedy $\rho = \left \{ [1+r-
 \end{veta}
 
 \begin{priklad}
-Určete vzájemnou polohu roviny $\rho:2x+3y+4z+5=0, \sigma: x-y-z+1=0$.
+Určete vzájemnou polohu roviny $\rho:2x+3y+4z+5=0$, $\sigma: x-y-z+1=0$.
 \end{priklad}
 
 \begin{reseni}
 Normálové vektory jsou lineárně nezávislé. Průsečnice je řešení soustavy rovnic
 \begin{align*}
-    2x+3y+4z+5& =0\\
-    x-y-z+1=0
+    2x+3y+4z+5& =0,\\
+    x-y-z+1&=0.
 \end{align*}
 \end{reseni}
 
 \begin{veta}[Vzájemná poloha dvou rovin daných parametrickými rovnicemi]
-    Nechť $\rho(A,\vec u, \vec v), \sigma(B,\vec k, \vec l)$ jsou roviny. Pak
+    Nechť $\rho(A,\vec u, \vec v), \linebreak\sigma(B,\vec k, \vec l)$ jsou roviny. Pak
     \begin{enumerate}[$i.$]
     \item $\rho = \sigma \iff \dim (\vec u, \vec v, \vec k, \vec l) = 2 \land \dim (\vec u, \vec v, \vec k, \vec l, \overrightarrow{AB})=2,$
    	\item $\rho \parallel \sigma \land \rho \ne \sigma \iff \dim (\vec u, \vec v, \vec k, \vec l) = 2 \land \dim (\vec u, \vec v, \vec k, \vec l, \overrightarrow{AB})=3,$
@@ -211,7 +211,7 @@ Normálové vektory jsou lineárně nezávislé. Průsečnice je řešení soust
 \end{veta}
 
 \begin{priklad}
-Určete vzájemnou polohu rovin $\rho = \left \{ [4+t_1+2t_2,5+2t_1,3+2t_1+2t_2],t_1,t_2\in \mathbb R \right \} ,
+Určete vzájemnou polohu rovin $\rho = \left \{ [4+t_1+2t_2,5+2t_1,3+2t_1+2t_2],\linebreak t_1,t_2\in \mathbb R \right \} ,
 \sigma = \left \{ [1+2r_1+r_2,-2-2r_1-2r_2,1+r_1],r_1,r_2\in \mathbb R \right \}. $
 \end{priklad}
 
@@ -220,7 +220,7 @@ Hledáme dimenzi prostorů $\left < \vec u, \vec v, \vec k, \vec l \right >, \le
 \end{reseni}
 
 \begin{veta}[Vzájemná poloha přímky a roviny dané parametrickou rovnicí]
-    Nechť $p(A,\vec u), \rho(B,\vec v, \vec w)$ jsou přímka a rovina. Pak
+    Nechť $p(A,\vec u),\linebreak \rho(B,\vec v, \vec w)$ jsou přímka a rovina. Pak
     \begin{enumerate}[$i.$]
     \item $p\subseteq \rho \iff \dim (\vec v, \vec w, \vec u) = 2 \land \dim (\vec v, \vec w, \vec u, \vec l, \overrightarrow{AB})=2,$
    	\item $p \parallel \rho \land p \not\subset \rho \iff \dim (\vec v, \vec w, \vec u) = 2 \land \dim (\vec v, \vec w, \vec u, \vec l, \overrightarrow{AB})=3,$
@@ -274,7 +274,7 @@ sosutavu tří rovnic o třech neznámých.
 \end{reseni}
 
 \begin{priklad}
-Jsou dány mimoběžky $p(Am\vec u), q(B,\vec v)$ a bod $M$, přičemž
+Jsou dány mimoběžky $p(A,\vec u), q(B,\vec v)$ a bod $M$, přičemž
 $A[1,5,2],B[0,-1,1], \vec u=(1,2,1), \vec v = (3,1,0), M[0,1,-5].$  Nalezněte
 příčku $p,q$, která prochází bodem $M$.
 \end{priklad}

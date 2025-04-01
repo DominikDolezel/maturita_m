@@ -38,7 +38,7 @@
     Nechť $A,B$ jsou jevy.
     \begin{enumerate}[$i.$]
     \item \textbf{Opačným jevem} k jevu $A$ nazveme takový jev $\overline A,$ který
-    nastane právě tehdy, kdyý nenastane jev $A.$
+    nastane právě tehdy, když nenastane jev $A.$
    	\item \textbf{Rozdílem jevů} $A,B$ nazýváme jev $A-B,$ který nastane právě tehdy,
     když nastane jev $A$ a nenastane jev $B$.
     \end{enumerate}
@@ -74,7 +74,7 @@ Hážeme dvěma mincemi. Určete pravděpodobnost následujících jevů:
 \end{priklad}
 
 \begin{reseni}
-Vypíšeme si všechny možnosti a podělíme ty, které vyhovují celkovým počtem.
+Vypíšeme si všechny možnosti a podělíme ty, které vyhovují, celkovým počtem.
 \end{reseni}
 
 \begin{veta}
@@ -91,12 +91,12 @@ Vypíšeme si všechny možnosti a podělíme ty, které vyhovují celkovým po�
 Zjistěte, zda jsou dané jevy nezávislé.
 \begin{enumerate}[a.]
 \item Na kostce padne sudé číslo. Na kostce padne 5 nebo 6.
-\item Na ksotce padne sudé číslo. Na kostce padne liché číslo.
+\item Na kostce padne sudé číslo. Na kostce padne liché číslo.
 \end{enumerate}
 \end{priklad}
 
 \begin{reseni}
-Spořítáme pravděpodobnosti jednotlivých jevů a pravděpodobnost toho, že nastanou
+Spočítáme pravděpodobnosti jednotlivých jevů a pravděpodobnost toho, že nastanou
 oba současně. Pokud je $P(A\cap B)=P(A)\cdot P(B)$, pak jsou nezávislé.
 \end{reseni}
 
@@ -130,17 +130,17 @@ $$P(A\, |\, B)=\frac{P(A\cap B)}{P(B)}=\frac{\frac{2}{36}}{\frac{6}{36}}=\frac{1
 
 \begin{priklad}
 V osudí $A$ jsou dvě černé a tři bílé kuličky. V osudí $B$ jsou dvě černé a jedna
-bílá kulička. Zvolíme náhodně jedno osudí a vyáthneme jednu kuličku. Jaká
-je pravděpodobnost, že je je bílá?
+bílá kulička. Zvolíme náhodně jedno osudí a vytáhneme jednu kuličku. Jaká
+je pravděpodobnost, že je bílá?
 \end{priklad}
 
 \begin{reseni}
 Označme jevy
-\begin{center}
-    $A$ \dots zvolíme osudí $A$,
-    $B$ \dots zvolíme osudí $B$,
-    $X$ \dots vytáhli jsme bílou kuličku.
-\end{center}
+\begin{align*}
+    &A \,\dots  \textrm{ zvolíme osudí } A,\\
+    &B\,\dots  \textrm{ zvolíme osudí } B,\\
+    &X\,\dots  \textrm{ vytáhli jsme bílou kuličku}.
+\end{align*}
 Pak platí
 $P(X \, | \, A) = \frac{3}{5}, P(X \, | B)=\frac{1}{3}.$ Je tedy
 $$P(X)=P(A)\cdot P(X \, | A)+P(B)\cdot P(X\, | \, B)=\frac{7}{15}.$$
@@ -170,18 +170,18 @@ P(M \, | \, D)=0,1 & & P(M \, | \, H)=0,25.
 Hledáme $P(D \, | \, M).$ Počítejme
 \begin{align*}
  P(D)\cdot P(M \, | \, D)&=P(M \cap D)=P(M)\cdot P(D \, | M)\\
- P(D, \,|\, M) &= \frac{P(D)\cdot P(M \, | \, D)}{P(M)}=\frac{P(D)\cdot P(M \, | \, D)}{P(D)\cdot P(M\, | \, D)+P(H)\cdot P(M \, | \, H)}=\frac{3}{8}.
+ P(D \,|\, M) &= \frac{P(D)\cdot P(M \, | \, D)}{P(M)}=\frac{P(D)\cdot P(M \, | \, D)}{P(D)\cdot P(M\, | \, D)+P(H)\cdot P(M \, | \, H)}=\frac{3}{8}.
 \end{align*}
 \end{reseni}
 
 \begin{veta}[Bernoulliho věta]
     Provádíme-li sérii $n$ nezávislých pokusů, kdy pravděpodobnost příslušného
-    pokusu je $p,$ pak pravděpodobnost toho, že právě $k$ pokusů bude úspěšných, platí
+    pokusu je $p,$ pak pravděpodobnost toho, že právě $k$ pokusů bude úspěšných, je
     $$P(k,n)=\binom{n}{k}\cdot p^k \cdot (1-p)^{n-k}.$$
 \end{veta}
 
 \begin{priklad}
-Uvažuje $n$ hodů mincí. Jev \uv{padne hlava} označme $Z$, \uv{padne orel} označme $N$.
+Uvažujme $n$ hodů mincí. Jev \uv{padne hlava} označme $Z$, \uv{padne orel} označme $N$.
 Určete pravděpodobnost toho, že v sérii sto hodů padne hlava právě padesátkrát.
 \end{priklad}
 

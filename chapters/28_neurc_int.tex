@@ -105,10 +105,10 @@ pokud alespoň jeden z integrálů existuje.
 Metodou substituční:
 \begin{align*}
     \int \frac{(1+\ln x)^4}{x}\, dx &= \begin{vmatrix}
-        1+\ln x=u \\
+        1+\ln x&u \\
         \frac{1}{x}\, dx=du
     \end{vmatrix}=\int u^4\, du \\
-    \frac{u^5}{5}+c=\frac{(1+\ln x)^5}{5}+c
+    &=\frac{u^5}{5}+c=\frac{(1+\ln x)^5}{5}+c
 \end{align*}
 \end{reseni}
 
@@ -151,7 +151,7 @@ $$\int \tg x\, dx=\int \frac{\sin x}{\cos x}\, dx.$$
     Každou racionální lomenou funkci $\frac{P(x)}{Q(x)}$ lze vyjádřit ve tvaru
     $$\frac{P(x)}{Q(x)}=S(x)+R_1(x)+\dots+R_n(x),$$
     kde $S(x)$ je polynom a $R_1(x),\dots,R_n(x)$ jsou parciální zlomky.
-    na libovolném intervalu, který neobsahuje kořeny $Q(x)$ jsou tyto funkce spojité,
+    Na libovolném intervalu, který neobsahuje kořeny $Q(x)$ jsou tyto funkce spojité,
     takže k nim existuje primitivní funkce a platí
     $$\int \frac{P(x)}{Q(x)} \, dx=\int S(x)\, dx + \int R_1(x)\, dx + \dots + \int R_n(x)\, dx.$$
 \end{pozn}
@@ -188,7 +188,7 @@ Parciální zlomky $\frac{Mx+N}{(x^2+px+q)^n}$ integrujeme následovně:
     Pak
     $$\int \frac{Mx+N}{(x^2+a^2)^n}\, dx = M\underbrace{\int \frac{x}{(x^2+a^2)^n}\, dx}_{I.} + \underbrace{N\int \frac{1}{(x^2+a^2)^n}\, dx}_{II.}.$$
     \begin{enumerate}[$I.$]
-    \item Zlomky tvaru $\frac{x}{(a^2+a^2)^n}\, dx$ integrujeme následovně:
+    \item Zlomky tvaru $\frac{x}{(a^2+a^2)^n}$ integrujeme následovně:
     \begin{enumerate}[$i.$]
     \item je-li $n=1$, pak
     \begin{align*}
