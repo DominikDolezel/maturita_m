@@ -174,7 +174,7 @@ Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a
 
 \begin{definition}
   \textbf{Střední příčkou} trojúhelníku nazýváme úsečku spojující středy dvou stran trojúhelníka.
-  \textbf{Těžnicí} trojúhelníku nazýváme úsečku spojující vrchol trojúhelníku se středem protější strany. Průsečík těžnic nazýváme \textbf{těžíště}.
+  \textbf{Těžnicí} trojúhelníku nazýváme úsečku spojující vrchol trojúhelníku se středem protější strany.
   \textbf{Výškou} trojúhelníku nazýváme úsečku procházející vrcholem trojúhelníka, která je kolmá na přímku, na které leží protější strana trojúhelníku. Průsečík výšek nazýváme \textbf{ortocentrum}.
 \end{definition}
 
@@ -191,8 +191,20 @@ Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a
 \end{veta}
 
 \begin{proof}
-  Doslova nevim, ve skriptách to není.
+    V trojúhelníku $ABC$ jsou těžnice $t_a,t_b,t_c$. Sestrojme body $X,Y$ tak, aby
+    $ABXC$ a $ABCY$ byly rovnoběžníky. Jistě jsou $AX$, resp. $BY$ jejich úhlopříčky.
+    Zároveň je $|AB|=|CX|=|CY|$, takže $C$ je střed $XY$. Těžnice $t_c$ je tím pádem
+    osou souměrnosti lichoběžníka $ABXY$, a proto leží na průsečíku jeho úhlopříček
+    (tento lichoběžník je rovnoramenný).\\
+    V témže trojúhelníku označme středy stran $S_a,S_b,S_c$. Trojúhelník $S_aS_bS_c$ je
+    pak podobný s trojúhelníkem $ABC$ s koeficientem $1/2$ (jeho strany jsou středními
+    příčkami trojúhelníka $ABC$). Navíc těžnice \uv{menšího} trojúhelníka leží na
+    těžnicích toho \uv{většího}. Proto i $|AT|=2|S_{S_bS_c}T|$, což jsme chtěli ukázat.
 \end{proof}
+
+\begin{definition}
+Průsečík těžnic nazýváme \textbf{těžištěm}.
+\end{definition}
 
 \begin{veta}
   Nechť $\triangle ABC$ je rovnoramenný trojúhelník se základnou $AB$. Pak platí, že těžnice $t_c$ splývá s výškou $v_c$ a s osou úhlu $\sphericalangle ACB$.
