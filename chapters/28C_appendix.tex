@@ -1,4 +1,4 @@
-\section{Neurčitý integrál}\label{appint}
+\section{Integrály}\label{appint}
 \subsection*{Tabulkové integrály}
 \begin{align*}
 &\int \textcolor{blue}{0} \, dx = \textcolor{blue}{c} & & \int \textcolor{blue}{1}\,  dx = \textcolor{blue}{x}+c & & \int \textcolor{blue}{x^n} \, dx = \textcolor{blue}{\frac{x^{n+1}}{n+1}}+c \\
@@ -34,3 +34,15 @@
     &\int R(x,\sqrt{x^2+k^2})\, dx                    & & \int x \sqrt{x^2+4} \, dx                              & & \longrightarrow & & x=k\tg t \\
     &\int R(x,\sqrt{x^2-k^2} )\, dx                   & & \int \frac{1}{x}\sqrt{x^2-1}\, dx                      & & \longrightarrow & & x=\frac{k}{\sin t}
 \end{align*}
+
+\subsection*{Vzorce pro využití určitého integrálu}
+\begin{itemize}
+\item obsah pod grafem funkce $f(x)$ na intervalu $\left < a,b \right > $
+$$S=\int_a ^b f(x)\, dx$$
+\item objem rotačního tělesa vzniklého rotací grafu funkce $f(x)$ kolem osy $x$ na intervalu $\left < a,b \right > $
+$$V=\pi \int_a ^b \left [ f(x) \right ]^2 \, dx $$
+\item délka grafu funkce $f(x)$ na intervalu $\left < a,b \right > $
+$$l=\int_a^b \sqrt{1+\left ( f^\prime(x) \right )^2 } \, dx$$
+\item obsah pláště rotačního tělesa vzniklého rotací grafu funkce $f(x)$ kolem osy $x$ na intervalu $\left < a,b \right > $
+$$S=2\pi \int _a ^b f(x)\cdot \sqrt{1+\left ( f^\prime(x) \right )^2 }\, dx $$
+\end{itemize}
