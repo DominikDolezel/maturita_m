@@ -1,7 +1,66 @@
 \section{Základní pojmy z planimetrie, rovinné útvary, úhly v nich}
+
+\begin{pozn}
+  \textbf{Bod}, \textbf{přímka} a \textbf{rovina} jsou tzv. primitivními pojmy (základní), které nedefinujeme a vyslovujeme o nich nedokazatelná tvrzení (axiomy), které považujeme za platné. Budeme pracovat v rovině $\mathbb E_2$ (\textbf{euklidovský prostor dimenze 2}), což je základní množina, jejíž prvky jsou body. \textbf{Množinu všech přímek} značíme $\mathscr P$. V planimetrii dále pracujeme se základními vztahy (relacemi)
+  \begin{itemize}
+    \item \uv{ležet na} -- \textbf{relace incidence}: bod leží na přímce, přímka obsahuje bod: $A \in p$
+    \item \uv{ležet mezi} -- \textbf{relace uspořádání}: bod leží mezi body: $X \mu AB$
+  \end{itemize}
+\end{pozn}
+
+\begin{axiom}
+  Každými dvěma různými body prochází právě jedna přímka.
+  $$\forall A, B \in \mathbb E_2, A\neq B: \exists! p \in \mathscr P: A \in p \land B \in p$$
+\end{axiom}
+
+\begin{axiom}
+  Na každé přímce leží alespoň dva různé body.
+  $$\forall p \in \mathscr P:\exists A,B \in \mathbb E_2: A\neq B \land A \in p \land B \in p$$
+\end{axiom}
+
+\begin{axiom}
+  Existují alespoň tři po dvou různé body, které neleží na jedné přímce.
+  $$\exists A,B,C \in \mathbb E_2, A \neq B, B\neq C, C\neq A: \forall p \in \mathscr P: A \notin p \lor B \notin p \lor C \notin p$$
+\end{axiom}
+
+\begin{axiom}
+  \textbf{Euklidův axiom}: Každým bodem, který neleží na dané přímce, prochází právě jedna přímka, která s danou přímkou nemá žádný společný bod.
+  $$\forall A \in \mathbb E_2, \forall p \in \mathscr P: A \notin p \implies \exists! q \in \mathscr P: A \in q \land p \cap q = \emptyset$$
+\end{axiom}
+
 \begin{definition}
   Nechť $A,B,C\in \mathbb E_2$ jsou tři body. Jestliže všechny tři leží (resp. neleží) na jedné přímce, řekneme, že jsou \textbf{kolineární} (resp. \textbf{nekolineární}).
 \end{definition}
+
+\begin{axiom}
+  Pro každé tři body platí, že pokud jeden leží mezi druhými dvěma, tyto tři body jsou kolineární.
+  $$\forall A, B, C \in \mathbb E_2: C \mu AB \implies A, B, C \text{ jsou tři různé kolineární body.}$$
+\end{axiom}
+
+\begin{axiom}
+  Pro každou dvojici prvního a druhého bodu existuje třetí bod takový, že druhý bod leží mezi prvním a třetím bodem.
+  $$\forall A, B \in \mathbb E_2, A \neq B: \exists C \in \mathbb E_2: B \mu AC$$
+\end{axiom}
+
+\begin{axiom}
+  Pro každou dvojici prvního a druhého bodu existuje třetí bod takový, že třetí bod leží mezi prvním a druhým bodem.
+  $$\forall A, B \in \mathbb E_2, A \neq B: \exists D \in \mathbb E_2: D \mu AB$$
+\end{axiom}
+
+\begin{axiom}
+  Ze tří po dvou různých kolineárních bodů právě jeden leží mezi dvěma ostatními.
+  $$\forall A, B, C \in p \in \mathscr P \text{ kolineární}, A \neq B, B\neq C, C\neq A: A \overline{\mu} BC \land B \overline{\mu} AC \implies C \mu AB$$
+\end{axiom}
+
+\begin{axiom}
+  Pro každé čtyři body platí, že pokud druhý leží mezi prvním a třetím a třetí leží mezi druhým a čtvrtým, tak druhý leží mezi prvním a čtvrtým.
+  $$\forall A, B, C, D \in \mathbb E_2, B \mu AC \land C \mu BD \implies B \mu AD$$
+\end{axiom}
+
+\begin{axiom}
+  Pro každé čtyři body platí, že pokud druhý leží mezi prvním a čtvrtým a třetí leží mezi druhým a čtvrtým, tak třetí leží mezi prvním a čtvrtým.
+  $$\forall A, B, C, D \in \mathbb E_2, B \mu AC \land C \mu BD \implies B \mu AD$$
+\end{axiom}
 
 \begin{definition}
   Nechť $p,q\in \mathscr P$. Jestliže platí:
@@ -29,7 +88,7 @@
 \end{definition}
 
 \begin{definition}
-Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a$ \textbf{odděluje body} $A,B$ a zapisujeme $a\, \nu\, AB.$ V opčaném případě \textbf{přímka} $a$ \textbf{neodděluje body} $A,B$. Zapisujeme $a\, \overline \nu \,AB.$
+Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a$ \textbf{odděluje body} $A,B$, zapisujeme $a\, \nu\, AB.$, pokud $p \cap AB \neq \emptyset$. V opčaném případě \textbf{přímka} $a$ \textbf{neodděluje body} $A,B$. Zapisujeme $a\, \overline \nu \,AB.$
 \end{definition}
 
 \begin{definition}
@@ -377,11 +436,11 @@ blok čtyřúhelník a dál ---
 blok kružnice, kruh, tětiva atd. ---
 \begin{definition}
   Nechť $S \in \mathbb E_2, r \in \mathbb R^+.$\\
-  \textbf{Kružnicí} (resp. \textbf{kruhem}) se středem $S$ a poloměrem $R$ nazýváme množinu všech bodů $X\in \mathbb E_2, $ kde $|SX|=r$ (resp. $|SX|\leq r$).
+  \textbf{Kružnicí} (resp. \textbf{kruhem}) se středem $S$ a poloměrem $r$ nazýváme množinu všech bodů $X\in \mathbb E_2, $ kde $|SX|=r$ (resp. $|SX|\leq r$).
 \end{definition}
 
 \begin{definition}
-  Nechť $k(S,r)$ je kružnice, $X_1, X_2 \in km X_1\ne X_2.$ Úsečku (resp. přímku) $X_1X_2$ nazýváme \textbf{tětivou} (resp. \textbf{sečnou}) kružnice $k$.
+  Nechť $k(S,r)$ je kružnice, $X_1, X_2 \in k, X_1\ne X_2.$ Úsečku (resp. přímku) $X_1X_2$ nazýváme \textbf{tětivou} (resp. \textbf{sečnou}) kružnice $k$.
 \end{definition}
 
 
@@ -390,7 +449,7 @@ blok kružnice, kruh, tětiva atd. ---
 \end{definition}
 
 \begin{definition}
-  Nechť je dán oblouk $AB$ na kružnici $k(S,r).$ Polopřímky $\overrightarrow{SA}, \overrightarrow{SB}$ jso urameny dvou úhlů, z nichž právě jedno obsahuje oblouk $AB$. Tento úhel nazýváme \textbf{středovým úhlem} příslušným oblouku $AB$. Každý úhel $\sphericalangle AXB,$ kde $X\in k \land X\in AB,$ nazýváme \textbf{obvodovým úhlem} příslušným oblouku $AB$.
+  Nechť je dán oblouk $AB$ na kružnici $k(S,r).$ Polopřímky $\overrightarrow{SA}, \overrightarrow{SB}$ jsou rameny dvou úhlů, z nichž právě jedno obsahuje oblouk $AB$. Tento úhel nazýváme \textbf{středovým úhlem} příslušným oblouku $AB$. Každý úhel $\sphericalangle AXB,$ kde $X\in k \land X\in AB,$ nazýváme \textbf{obvodovým úhlem} příslušným oblouku $AB$.
 \end{definition}
 
 \begin{veta}
@@ -413,7 +472,7 @@ blok kružnice, kruh, tětiva atd. ---
 \end{veta}
 
 \begin{definition}
-  Nechť $AB$ je menší oblouk kružnice $k(S,r)$, $t$ tečna ke kružnici $k$ v bodě $A$, bod $C\in t$, $C\in o$, kde $o$ je polorovina k $overrightarrow{ABS}.$ Úhel $\sphericalangle CAB$ nazýváme \textbf{úsekovým úhlem} příslušným oblouku $AB$.
+  Nechť $AB$ je menší oblouk kružnice $k(S,r)$, $t$ tečna ke kružnici $k$ v bodě $A$, bod $C\in t$, $C\in o$, kde $o$ je polorovina k $\overrightarrow{ABS}.$ Úhel $\sphericalangle CAB$ nazýváme \textbf{úsekovým úhlem} příslušným oblouku $AB$.
 \end{definition}
 
 
