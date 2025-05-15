@@ -1,6 +1,6 @@
 \section{Výroková logika}
 \begin{definition}
-  \textbf{Výrokem} nazýváme každou oznamovací větu, která je buď pravdivá, nebo nepravdivá. \textbf{Pravdivostní hodnotou} výroku rozumíme jeho pravdivost / nepravdivost.
+  \textbf{Výrokem} nazýváme každou oznamovací větu, která je buď pravdivá, nebo nepravdivá. \textbf{Pravdivostní hodnotou} výroku rozumíme jeho pravdivost/nepravdivost.
 \end{definition}
 
 \begin{definition}
@@ -10,7 +10,7 @@
 \begin{pozn}
   \textbf{Kvantifikované výroky} jsou výroky, které uvádějí počet objektů. Pro to lze použít
   \begin{itemize}
-    \item obecný kvantifikátor $\forall$ (pro všechno platí),
+    \item obecný kvantifikátor $\forall$ (pro všechny / pro každý platí),
     \item existenční kvantifikátor $\exists$ (existuje alespoň jeden, že pro něj platí) a
     \item zesílený existenční kvantifikátor $\exists !$ (existuje právě jeden, že pro něj platí).
   \end{itemize}
@@ -51,7 +51,23 @@
 \end{priklad}
 
 \begin{reseni}
-    TODO
+Tabulka:
+
+  \begin{center}
+    \begin{tabular}{c c c | c c | c}
+      $A$ & $X$ & $Y$ & $A \land Y$ & $X \lor Y$ & $A\land Y \implies (X\lor Y)$ \\
+      \hline
+      0 & 0 & 0 & 0 & 0 & 1  \\
+      0 & 0 & 1 & 0 & 1 & 1  \\
+      0 & 1 & 0 & 0 & 1 & 1  \\
+      0 & 1 & 1 & 0 & 1 & 1  \\
+      1 & 0 & 0 & 0 & 0 & 1  \\
+      1 & 0 & 1 & 1 & 1 & 1  \\
+      1 & 1 & 0 & 0 & 1 & 1  \\
+      1 & 1 & 1 & 1 & 1 & 1  \\
+    \end{tabular}
+  \end{center}
+  Vidíme, že výroková formule je tautologií.
 \end{reseni}
 
 \begin{definition}
@@ -111,7 +127,7 @@
    	\item $A^\prime \implies C^\prime$.
     \end{itemize}
     Sestavme tabulku pravdivostních hodnot. Zjistíme, že vyhovují možnosti, kdy pracují
-    stroje $A,B,C; A,B,$ nebo jen stroj $B.$
+    stroje $A,B,C$; $A,B$; nebo jen stroj $B.$
 \end{reseni}
 
 \begin{priklad}

@@ -42,6 +42,30 @@
   \texttt{Konec algoritmu, v $u$ je uložen největší společný dělitel původních čísel.}
 \end{definition}
 
+\begin{priklad}
+  Spočítejte nevětšího společného dělitele čísel 40902 a 24140
+\end{priklad}
+
+\begin{reseni}
+  Euklidovým algoritmem: $u = 40902, w = 24140:$
+  \begin{center}
+    \begin{tabular}{c | c | c}
+      $u$ & $w$ & $u=w\cdot q+r$  \\
+      \hline
+      40902 & 24140 & $40902 = 24140\cdot1 + 16762$ \\
+      24140 & 16762 & $24140 = 16762\cdot1 + 7378$ \\
+      16762 & 7378 & $16762 = 7378\cdot2 + 2006$  \\
+      7378 & 2006 & $7378 = 2006\cdot3 + 1360$  \\
+      2006 & 1360 & $2006 = 1360\cdot1 + 646$  \\
+      1360 & 646 & $1360 = 646\cdot2 + 68$  \\
+      646 & 68 & $646 = 68\cdot9 + 34$  \\
+      68 & 34 & $7378 = 68 = 34\cdot2 + 0$  \\
+      34 & 0 & konec algoritmu  \\
+    \end{tabular}
+  \end{center}
+  $D(40902, 24140) = 34$
+\end{reseni}
+
 \begin{definition}
   Nechť $a,b\in \mathbb N.$ Tato čísla jsou \textbf{nesoudělná}, jestliže $D(a,b)=1$. V opačném případě jsou \textbf{soudělná}.
 \end{definition}
@@ -79,6 +103,10 @@
 \begin{veta}
   Prvočísel je nekonečně mnoho.
 \end{veta}
+
+\begin{proof}
+  sporem: Pokud by jich bylo konečně mnoho, mohli bychom je spolu všechny vynásobit a získat tak nějaké přirozené číslo. Když k němu pak přičteme 1 nebude dělitelné žádným z předchozích prvočísel -- každé číslo větší než 1 je ale prvočíslo, nebo číslo složené, toto nové číslo tak bude prvočíslo -- spor s tím, že jsme vynásobili všechna prvočísla.
+\end{proof}
 
 \begin{veta}[Základní věta aritmetiky]
   Každé přirozené číslo $n>1$ lze zapsat ve tvaru:

@@ -1,7 +1,66 @@
 \section{Základní pojmy z planimetrie, rovinné útvary, úhly v nich}
+
+\begin{pozn}
+  \textbf{Bod}, \textbf{přímka} a \textbf{rovina} jsou tzv. primitivními pojmy (základní), které nedefinujeme a vyslovujeme o nich nedokazatelná tvrzení (axiomy), které považujeme za platné. Budeme pracovat v rovině $\mathbb E_2$ (\textbf{euklidovský prostor dimenze 2}), což je základní množina, jejíž prvky jsou body. \textbf{Množinu všech přímek} značíme $\mathscr P$. V planimetrii dále pracujeme se základními vztahy (relacemi)
+  \begin{itemize}
+    \item \uv{ležet na} -- \textbf{relace incidence}: bod leží na přímce, přímka obsahuje bod: $A \in p$
+    \item \uv{ležet mezi} -- \textbf{relace uspořádání}: bod leží mezi body: $X \mu AB$
+  \end{itemize}
+\end{pozn}
+
+\begin{axiom}
+  Každými dvěma různými body prochází právě jedna přímka.
+  $$\forall A, B \in \mathbb E_2, A\neq B: \exists! p \in \mathscr P: A \in p \land B \in p$$
+\end{axiom}
+
+\begin{axiom}
+  Na každé přímce leží alespoň dva různé body.
+  $$\forall p \in \mathscr P:\exists A,B \in \mathbb E_2: A\neq B \land A \in p \land B \in p$$
+\end{axiom}
+
+\begin{axiom}
+  Existují alespoň tři po dvou různé body, které neleží na jedné přímce.
+  $$\exists A,B,C \in \mathbb E_2, A \neq B, B\neq C, C\neq A: \forall p \in \mathscr P: A \notin p \lor B \notin p \lor C \notin p$$
+\end{axiom}
+
+\begin{axiom}
+  \textbf{Euklidův axiom}: Každým bodem, který neleží na dané přímce, prochází právě jedna přímka, která s danou přímkou nemá žádný společný bod.
+  $$\forall A \in \mathbb E_2, \forall p \in \mathscr P: A \notin p \implies \exists! q \in \mathscr P: A \in q \land p \cap q = \emptyset$$
+\end{axiom}
+
 \begin{definition}
   Nechť $A,B,C\in \mathbb E_2$ jsou tři body. Jestliže všechny tři leží (resp. neleží) na jedné přímce, řekneme, že jsou \textbf{kolineární} (resp. \textbf{nekolineární}).
 \end{definition}
+
+\begin{axiom}
+  Pro každé tři body platí, že pokud jeden leží mezi druhými dvěma, tyto tři body jsou kolineární.
+  $$\forall A, B, C \in \mathbb E_2: C \mu AB \implies A, B, C \text{ jsou tři různé kolineární body.}$$
+\end{axiom}
+
+\begin{axiom}
+  Pro každou dvojici prvního a druhého bodu existuje třetí bod takový, že druhý bod leží mezi prvním a třetím bodem.
+  $$\forall A, B \in \mathbb E_2, A \neq B: \exists C \in \mathbb E_2: B \mu AC$$
+\end{axiom}
+
+\begin{axiom}
+  Pro každou dvojici prvního a druhého bodu existuje třetí bod takový, že třetí bod leží mezi prvním a druhým bodem.
+  $$\forall A, B \in \mathbb E_2, A \neq B: \exists D \in \mathbb E_2: D \mu AB$$
+\end{axiom}
+
+\begin{axiom}
+  Ze tří po dvou různých kolineárních bodů právě jeden leží mezi dvěma ostatními.
+  $$\forall A, B, C \in p \in \mathscr P \text{ kolineární}, A \neq B, B\neq C, C\neq A: A \overline{\mu} BC \land B \overline{\mu} AC \implies C \mu AB$$
+\end{axiom}
+
+\begin{axiom}
+  Pro každé čtyři body platí, že pokud druhý leží mezi prvním a třetím a třetí leží mezi druhým a čtvrtým, tak druhý leží mezi prvním a čtvrtým.
+  $$\forall A, B, C, D \in \mathbb E_2, B \mu AC \land C \mu BD \implies B \mu AD$$
+\end{axiom}
+
+\begin{axiom}
+  Pro každé čtyři body platí, že pokud druhý leží mezi prvním a čtvrtým a třetí leží mezi druhým a čtvrtým, tak třetí leží mezi prvním a čtvrtým.
+  $$\forall A, B, C, D \in \mathbb E_2, B \mu AC \land C \mu BD \implies B \mu AD$$
+\end{axiom}
 
 \begin{definition}
   Nechť $p,q\in \mathscr P$. Jestliže platí:
@@ -17,7 +76,7 @@
   \[
     P(A)=\left \{ X\in \mathbb E_2; X=B \lor X\,\mu\, AB \lor B\, \mu\, AX \right \}
   \]
-  (resp. množinu $P(A)\cup \{A\}$) nazýváme \textbf{otevřenou} (resp. \textbf{uzavřenou}) \textbf{polopřímkou} $AB$ s počátkem v bodě $A$. Množinu
+  (resp. množinu $P(A)\cup \{A\}$) nazýváme \textbf{otevřenou} (resp. \textbf{uzavřenou}) \textbf{polopřímkou} $AB$ s počátkem v bodě $A$. Značíme $\overrightarrow{AB}$ Množinu
   \[
     Q(A)=\left \{ X\in \mathbb E_2; A\,\mu\, BX \right \}
   \]
@@ -29,11 +88,11 @@
 \end{definition}
 
 \begin{definition}
-Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a$ \textbf{odděluje body} $A,B$ a zapisujeme $a\, \nu\, AB.$ V opčaném případě \textbf{přímka} $a$ \textbf{neodděluje body} $A,B$. Zapisujeme $a\, \overline \nu \,AB.$
+Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a$ \textbf{odděluje body} $A,B$, zapisujeme $a\, \nu\, AB$, pokud $p \cap AB \neq \emptyset$. V opčaném případě \textbf{přímka} $a$ \textbf{neodděluje body} $A,B$. Zapisujeme $a\, \overline \nu \,AB.$
 \end{definition}
 
 \begin{definition}
-  Nechť $a \in \mathscr P$. Pak všechny $X\in \mathbb E_2 - a$ lze rozdělit do dvou podmnožin $P(a), Q(a)$ tak, že:
+  Nechť $a \in \mathscr P$. Pak všechny $X\in \mathbb E_2 \smallsetminus a$ lze rozdělit do dvou podmnožin $P(a), Q(a)$ tak, že:
   \begin{enumerate}[$i.$]
     \item přímka $a$ odděluje každé dva body z různých podmnožin:
       \[
@@ -56,7 +115,7 @@ Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a
 \end{definition}
 
 \begin{definition}
-  Nechť $A,B\in \mathbb E_2.$ Přiřaďme uspořádané dvojici bodů $(A,B)$ reálné číslo označené $|AB|,$ pro něž platí:
+  Nechť $A,B\in \mathbb E_2.$ Přiřaďme uspořádané dvojici bodů $(A,B)$ reálné číslo označené $|AB|,$ které nazveme \textbf{délkou úsečky} AB, pro něž platí:
   \begin{enumerate}[$i.$]
     \item $|AB|\geq 0,$ přičemž $|AB|=0 \iff A=B,$
     \item $|AB|=|BA|,$
@@ -127,7 +186,12 @@ Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a
     \item \textbf{střídavé úhly}	-- dvojice úhlů, jejichž první ramena leží na jedné přímce a druhá ramena jsou rovnoběžná, přitom směr příslušných ramen je opačný
     \item \textbf{přilehlé úhly} -- dvojice úhlů, jejichž první ramena leží na jedné přímce a jdou do opačných směrů a druhá ramena jsou rovnoběžná
   \end{itemize}
+  \begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\linewidth]{dvojice_uhlu.png}
+  \end{figure}
 \end{definition}
+
 
 \begin{definition}
   Dvě polopřímky, ležící na téže přímce nazýváme \textbf{souhlasnými}, jestliže jedna z nich je podmnožinou druhé. V opačném případě je nazveme \textbf{nesouhlasnými}.
@@ -142,11 +206,12 @@ Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a
 \end{veta}
 
 \begin{proof}
-  $ $ \newline
-  \begin{center}
-   \includegraphics[width=0.5\linewidth]{trojuhelnik_1.png}
-  \end{center}
+  \begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.3\linewidth]{uhly.png}
+  \end{figure}
 \end{proof}
+
 
 \begin{veta}
   Součet libovolných dvou vnitřních úhlů v trojúhelníku je menší něž $180^\circ$.
@@ -230,6 +295,8 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
 \end{proof}
 
 \begin{veta}[Věty o shodnosti trojúhelníků]
+  \,
+
   \begin{itemize}
     \item \textbf{sss}: Shodují-li se dva trojúhelníky ve všech třech odpovídajících si stranách, pak jsou shodné.
     \item \textbf{sus}: Shodují-li se dva trojúhelníky ve dvou stranách a úhlu jimi sevřeném, jsou shodné.
@@ -247,6 +314,8 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
 \end{definition}
 
 \begin{veta}[Věty o podobnosti trojúhelníků]
+  \,
+
   \begin{itemize}
     \item \textbf{uu}: Shodují-li se dva trojúhelníky ve dvou úhlech, jsou podobné.
     \item \textbf{sus}: Shodují-li se dva trojúhelníky v poměru dvou stran a úhlu jimi sevřeném, jsou podobné.
@@ -286,7 +355,6 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
   \]
 \end{proof}
 
-blok čtyřúhelník a dál ---
 \begin{definition}
   Nechť $A_1,A_2, A_3, A_4 \in \mathbb E_2$ jsou čtyři body, z nichž žádné tři nejsou kolineární. Sjednocení úseček $A_1A_2\cup A_2A_3 \cup A_3A_4 \cup A_4A_1$ nazveme \textbf{uzavřenou lomenou čárou}.
 \end{definition}
