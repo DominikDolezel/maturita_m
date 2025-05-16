@@ -206,10 +206,11 @@ Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a
 \end{veta}
 
 \begin{proof}
-  \begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.3\linewidth]{uhly.png}
-  \end{figure}
+    \,
+    \begin{figure}[h!]
+      \centering
+      \includegraphics[width=0.2525\linewidth]{uhly_troju.png}
+    \end{figure}
 \end{proof}
 
 
@@ -329,6 +330,7 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
 
 \begin{proof}
   $\triangle ACC_0 \approx \triangle CBC_0$ (uu), neboť $\sphericalangle C_0 CB$ je otočením $\sphericalangle C_0 AC$
+
   $\frac{|CC_0|}{|AC_0|} = \frac{|BC_0|}{|CC_0|} \implies \frac{v_c}{c_b} = \frac{c_a}{v_c} \implies v_c^2 = c_a \cdot c_b$
 \end{proof}
 
@@ -339,6 +341,12 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
     a^2 = c \cdot c_a
   \end{align*}
 \end{veta}
+
+\begin{proof}
+  $\triangle ABC \approx \triangle CBC_0$ (uu), neboť $\sphericalangle C_0 BC$ je otočením $\sphericalangle CBA$
+
+  $\frac{|BC_0|}{|BC|} = \frac{|BC|}{|AB|} \implies \frac{c_a}{a} = \frac{a}{c} \implies a^2 = c_a \cdot c$
+\end{proof}
 
 \begin{veta}[Pythagorova]
   Nechť je dán pravoúhlý trojúhelník $ABC$ s přeponou $c$. Pak
@@ -368,10 +376,18 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
 \end{veta}
 
 \begin{proof}
-  --- insert obrázek //TODO % TODO
-  $\delta+ \beta_1+ \alpha_2 = 180^\circ$\\
-  $\gamma + \beta_2 + \alpha_1 = 180^\circ$\\
-  $\alpha+\beta+\gamma+\delta=360^\circ$
+  \,
+  \begin{minipage}{0.5\textwidth}
+    $\delta+ \beta_1+ \alpha_2 = 180^\circ$\\
+    $\gamma + \beta_2 + \alpha_1 = 180^\circ$\\
+    $\alpha+\beta+\gamma+\delta=360^\circ\qedhere$
+  \end{minipage}
+  \hfill
+  \noindent\begin{minipage}{0.5\textwidth}
+    \centering
+    \includegraphics[width=0.8\linewidth]{uhly_ctyru.png}
+  \end{minipage}
+
 \end{proof}
 
 \begin{definition}
@@ -418,7 +434,7 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
 \end{proof}
 
 \begin{definition}
-  Rovnoběžník $ABCD$ se nazývá \textbf{kosočtvercem} (resp. \textbf{kosodélníkem}), jestliže $|AB|=|BC|$ (resp. $|AB\ne BC|$) a žádný vnitřní úhel není pravý.
+  Rovnoběžník $ABCD$ se nazývá \textbf{kosočtvercem} (resp. \textbf{kosodélníkem}), jestliže $|AB|=|BC|$ (resp. $|AB| \neq |BC|$) a žádný vnitřní úhel není pravý.
 \end{definition}
 
 
@@ -442,10 +458,8 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
   Uzavřená lomená čára $A_1A_2\dots A_nA_1$, která leží v rovině a sama sebe nikdy neprotíná ohraničuje část roviny, která se nazývá \textbf{mnohoúhelník} nebo také \textbf{$n$-úhelník}.
 \end{definition}
 
-blok kružnice, kruh, tětiva atd. ---
 \begin{definition}
-  Nechť $S \in \mathbb E_2, r \in \mathbb R^+.$\\
-  \textbf{Kružnicí} (resp. \textbf{kruhem}) se středem $S$ a poloměrem $r$ nazýváme množinu všech bodů $X\in \mathbb E_2, $ kde $|SX|=r$ (resp. $|SX|\leq r$).
+  Nechť $S \in \mathbb E_2, r \in \mathbb R^+.$  \textbf{Kružnicí} (resp. \textbf{kruhem}) se středem $S$ a poloměrem $r$ nazýváme množinu všech bodů $X\in \mathbb E_2, $ kde $|SX|=r$ (resp. $|SX|\leq r$).
 \end{definition}
 
 \begin{definition}
@@ -467,7 +481,10 @@ blok kružnice, kruh, tětiva atd. ---
 
 
 \begin{proof}
-  insert důkaz nechce se mi je toho strašně moc
+  Rozdělíme na tři případy polohy ostrého obvodového úhlu vůči středu kružnice
+  \begin{enumerate}
+    \item střed kružnice ležící na rameni obvodového úhlu
+  \end{enumerate}
 \end{proof}
 
 
