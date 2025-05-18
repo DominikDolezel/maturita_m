@@ -81,9 +81,9 @@ Znázorněte graf relace $U=\left \{ \left [ x,y \right ]\in \mathbb R^2: x-y+1=
 \end{definition}
 
 \begin{definition}
-  Nechť $f:A\to B, g:B\to C$ jsou zobrazení. \textbf{Složeným zobrazením} ze zobrazení $f$ a $g$ nazveme relaci $h\subseteq A\times C$ takovou, že
+  Nechť $f:B\to C, g:A\to B$ jsou zobrazení. \textbf{Složeným zobrazením} ze zobrazení $f$ a $g$ nazveme zobrazení $h: A\to C$ takové, že
   \[
-    h=\left\{ (a,c)\in A\times C;\exists b\in B: f(a)=b \land g(b)=c \right\}.
+    h=\left\{ (a,c)\in A\times C;\exists b\in B: f(b)=c \land g(a)=b \right\}.
   \]
-  Značíme $c=g(f(a))$, $h=g\, \circ \, f $ (čteme \uv{$g$ po $f$}).
+  Značíme $c=f(g(a))$, $h=f\, \circ \, g $ (čteme \uv{$f$ po $g$}).
 \end{definition}
