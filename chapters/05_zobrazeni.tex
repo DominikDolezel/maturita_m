@@ -15,13 +15,13 @@
 \end{pozn}
 
 \begin{definition}
-  Nechť $A,B$ jsou dvě množiny. Pak každou podmnožinu $A\times B$ nazýváme \textbf{binární relací} mezi množinami $A,B$
+  Nechť $A,B$ jsou dvě množiny. Pak každou podmnožinu karézského součinu $A\times B$ nazýváme \textbf{binární relací} mezi množinami $A,B$
   (v tomto pořadí). Je-li speciálně $A=B$, pak hovoříme o \textbf{binární relaci v množině} $A$.
 \end{definition}
 
 \begin{definition}
 Nechť $\alpha\subseteq A\times B$ je binární relace. Je-li uspořádaná dvojice $(a,b), a \in A, b \in B$ prvkem množiny $\alpha$,
-říkáme, že $a$ \textbf{je v relaci} s $b$ a píšeme $a \sim b$.
+říkáme, že $a$ \textbf{je v relaci s} $b$ a píšeme $a \sim b$.
 \end{definition}
 
 \begin{priklad}
@@ -33,10 +33,10 @@ Znázorněte graf relace $U=\left \{ \left [ x,y \right ]\in \mathbb R^2: x-y+1=
 \end{reseni}
 
 \begin{definition}
-  Relace na množině $A$ je
+  Relaci na množině $A$ nazveme
   \begin{enumerate}[$i.$]
     \item \textbf{reflexivní}, pokud $\forall a\in A: a\sim a$,
-    \item \textbf{symetrická}, pokud $\forall a,b \in A: a\sim b \implies b\sim a,$
+    \item \textbf{symetrickou}, pokud $\forall a,b \in A: a\sim b \implies b\sim a,$
     \item \textbf{tranzitivní}, pokud $\forall a,b,c\in A: a\sim b \land b\sim c \implies a\sim c.$
   \end{enumerate}
 \end{definition}
@@ -46,7 +46,7 @@ Znázorněte graf relace $U=\left \{ \left [ x,y \right ]\in \mathbb R^2: x-y+1=
 \end{definition}
 
 \begin{pozn}
-  Každé relaci ekvivalence na množině $A$ přísluší \textbf{rozklad příslušný ekvivalenci} tak, že množinu $A$ rozdělíme na po dvou disjunktní podmnožiny, jejichž sjednocení dává množinu $A$ a navíc platí, že všechny prvky v jedné podmnožině jsou navzájem ekvivalentní a žádné dva prvky z jiných podmnožin ekvivalentní nejsou.
+  Každé relaci ekvivalence na množině $A$ přísluší \textbf{rozklad příslušný ekvivalenci} tak, že množinu $A$ rozdělíme na po dvou disjunktní podmnožiny, jejichž sjednocení dává množinu $A$ a navíc platí, že všechny prvky v jedné podmnožině jsou navzájem ekvivalentní a žádné dva prvky z jiných podmnožin ekvivalentní nejsou. Tyto podmnožiny potom nazveme \textbf{třídami rozkladu}.
 \end{pozn}
 
 \begin{definition}
@@ -55,20 +55,20 @@ Znázorněte graf relace $U=\left \{ \left [ x,y \right ]\in \mathbb R^2: x-y+1=
 
 \begin{definition}
   Nechť $f\subseteq A\times B$ je zobrazení. \textbf{Definičním oborem} (resp. \textbf{oborem hodnot}) zobrazení $f$ nazveme množinu $D(f)\subseteq A$
-  (resp. $H(f)\subseteq B$) všech prvků $a\in A$ (resp. $b\in B$) takových, že k nim existuje právě jedno $b\in B$ (resp. alespoň jedno $a\in A$) tak, že $b=f(a)$ (resp. $a=f(b)$).
+  (resp. $H(f)\subseteq B$) všech prvků $a\in A$ (resp. $b\in B$) takových, že k nim existuje právě jedno $b\in B$ (resp. alespoň jedno $a\in A$) tak, že $b=f(a)$.
 \end{definition}
 
 \begin{definition}
   Pokud $D(f) = A$ (resp. $D(f)\ne A$), hovoříme o \textbf{zobrazení množiny} (resp. \textbf{zobrazení z množiny}) $A$. Pokud $H(f)=B$ (resp. $H(f)\ne B$), hovoříme o \textbf{zobrazení na množinu} (resp. \textbf{zobrazení do množiny}) $B$.
-  Zobrazení na nazýváme \textbf{surjekcí}. Je-li $A=B$, hovoříme o \textbf{zobrazení v množině} $A$.
+  Zobrazení množiny na množinu nazýváme \textbf{surjekcí}. Je-li $A=B$ (resp. $A=B \land ( A = D(f) \lor B = H(f))$), hovoříme o \textbf{zobrazení v množině} (resp. \textbf{zobrazení na množině}) $A$.
 \end{definition}
 
 \begin{definition}
-  Nechť $f$ je zobrazení z $A$ do $B$. Zobrazení $f$ je \textbf{prosté}, jestliže ke každému $b\in B$ existuje nejvýše jedno $a \in A$ takové, že $b=f(a).$
+  Nechť $f$ je zobrazení z $A$ do $B$. Zobrazení $f$ je \textbf{prosté} neboli \textbf{injektivní}, jestliže ke každému $b\in B$ existuje nejvýše jedno $a \in A$ takové, že $b=f(a).$
 \end{definition}
 
 \begin{definition}
-  Zobrazení množiny do množiny, které je prosté, nazýváme \textbf{injekce}. Zobrazení, které je současně surjekcí a injekcí, nazýváme \textbf{bijekce}.
+  Zobrazení, které je současně surjekcí a injekcí, nazýváme \textbf{bijekce}.
 \end{definition}
 
 \begin{definition}
