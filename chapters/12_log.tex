@@ -1,12 +1,12 @@
 \section{Logaritmus, logaritmická funkce}
 \begin{definition}
-    Nechť $a \in \mathbb R^+ - \left \{ 1 \right \} $. Pak inverzní
+    Nechť $a \in \mathbb R^+ \smallsetminus\left \{ 1 \right \} $. Pak inverzní
     funkci k exponenciální funkci $f:y=a^x$ nazýváme \textbf{logaritmickou
     funkcí} o základu $a$. Zapisujeme $f^{-1}: y=\log_a x.$
 \end{definition}
 
 \begin{veta}
-    Nechť je dána logaritmická funkce $f:y=\log_a x$, $a \in \mathbb R^+ -
+    Nechť je dána logaritmická funkce $f:y=\log_a x$, $a \in \mathbb R^+ \smallsetminus
     \left \{ 1 \right \} $. Pak
     \begin{enumerate}[$i.$]
         \item $a>1: f$ je rostoucí,
@@ -15,7 +15,7 @@
 \end{veta}
 
 \begin{definition}
-    Nechť $f: y=\log_a x, a \in \mathbb R^+ - \left \{ 1 \right \}$ je
+    Nechť $f: y=\log_a x, a \in \mathbb R^+ \smallsetminus \left \{ 1 \right \}$ je
     logaritmická funkce a $x_0\in D(f).$ Pak číslo $f(x_0)$ nazýváme
     \textbf{logaritmem} čísla $x_0$ o základu $a.$
 \end{definition}
@@ -26,7 +26,7 @@
 
 \subsection*{Vlastnosti logaritmů}
 \begin{veta}
-    $\forall a \in \mathbb R^+ - \left \{ 1 \right \}:$
+    $\forall a \in \mathbb R^+ \smallsetminus \left \{ 1 \right \}:$
     \begin{enumerate}[$i.$]
         \item $\forall x \in \mathbb R^+: a^{\log_a x}=x$
        	\item $\forall x \in \mathbb R: \log_a a^x=x$
@@ -41,8 +41,8 @@
 \end{proof}
 
 \begin{veta}\label{zakl_reseni}
-    $\forall a \in \mathbb R^+ - \left \{ 1 \right \},
-    \forall x_1, x_2\in \mathbb R^+: \log_a x_1 = \log_a x_2 \iff x_1 = x_2$
+    $\forall a \in \mathbb R^+ \smallsetminus \left \{ 1 \right \},
+    \forall x_1, x_2\in \mathbb R^+: \log_a x_1 = \log_a x_2 \iff x_1 = x_2$.
 \end{veta}
 
 \begin{veta}
@@ -78,7 +78,7 @@
 \end{veta}
 
 \begin{veta}
-    $\forall a \in \mathbb R^+ - \left \{ 1 \right \}  , \forall x \in \mathbb R^+:$
+    $\forall a \in \mathbb R^+ \smallsetminus \left \{ 1 \right \}  , \forall x \in \mathbb R^+:$
     \begin{enumerate}[$i.$]
         \item $\log_{\frac{1}{a}} x = -\log_a x$
        	\item $\log_a \frac{1}{x} = -\log_a x$
@@ -97,7 +97,7 @@
 \end{proof}
 
 \begin{veta}
-    $\forall a \in \mathbb R^+ - \left \{ 1 \right \}, \forall x,y \in \mathbb R^+
+    $\forall a \in \mathbb R^+ \smallsetminus \left \{ 1 \right \}, \forall x,y \in \mathbb R^+
     ,\forall r \in \mathbb R:$
     \begin{enumerate}[$i.$]
         \item $\log_a (xy)=\log_a x + \log_a y$
@@ -116,7 +116,7 @@
         \left ( \frac{a^s}{a^t} \right ) =\log_a \left ( a^{s-t} \right ) =
         s-t $
        	\item $\log_a x^r = \log_a \left [ \left ( x^s \right )^r  \right ] =
-        \log_a a^{rs}=rs=r\cdot \log_a x$
+        \log_a a^{rs}=rs=r\cdot \log_a x$\qedhere
     \end{enumerate}
 \end{proof}
 
@@ -143,7 +143,7 @@
 \end{definition}
 
 \begin{definition}
-    Nechť $x \in \mathbb R-\left \{ 1 \right \}. $ \textbf{Přirozeným logaritmem} čísla $x$
+    Nechť $x \in \mathbb R\smallsetminus\left \{ 1 \right \}. $ \textbf{Přirozeným logaritmem} čísla $x$
     rozumíme logaritmus o základu $e$. Zapisujeme $\ln x.$
 \end{definition}
 
@@ -153,7 +153,7 @@
 \end{pozn}
 
 \begin{veta}
-    $\forall a \in \mathbb R^+ - \left \{ 1 \right \} , \forall x_1, x_2
+    $\forall a \in \mathbb R^+ \smallsetminus \left \{ 1 \right \} , \forall x_1, x_2
     \in \mathbb R:$
     \begin{enumerate}[$i.$]
         \item pro $a>1:a^{x_1}<a^{x_2}\iff x_1 < x_2,$
@@ -162,7 +162,7 @@
 \end{veta}
 
 \begin{veta}
-    $\forall a \in \mathbb R^+ - \left \{ 1 \right \} , \forall x_1, x_2
+    $\forall a \in \mathbb R^+ \smallsetminus \left \{ 1 \right \} , \forall x_1, x_2
     \in \mathbb R^+:$
     \begin{enumerate}[$i.$]
         \item pro $a>1:\log_a x_1 < \log_a x_2 \iff x_1 < x_2$,
