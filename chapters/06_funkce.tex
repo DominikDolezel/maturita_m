@@ -3,6 +3,10 @@
   \textbf{Funkcí} $f$ nazýváme každé zobrazení z $\mathbb R$ do $\mathbb R$.
 \end{definition}
 
+\begin{pozn}
+  Obecněji by se funkce dala definovat také jako zobrazení z $\mathbb C$ do $\mathbb C$.
+\end{pozn}
+
 \begin{definition}
   Nechť $f\subseteq \mathbb R \times \mathbb R$ je funkce. Množinu
   \[
@@ -41,12 +45,16 @@ Doplněním na čtverec, odkud jsou posuny jasně patrné.
 \end{reseni}
 
 \begin{definition}
-  Funkce $f$ se nazývá \textbf{sudá} (resp. \textbf{lichá}), jestliže platí
+  Funkce $f$ se nazývá \textbf{lichá} (resp. \textbf{sudá}), jestliže platí
   \begin{enumerate}[$i.$]
     \item $\forall x \in D(f): -x \in D(f)$ a
   	\item $\forall x \in D(f): f(-x)=-f(x)$, resp. $f(-x)=f(x)$.
   \end{enumerate}
 \end{definition}
+
+\begin{pozn}
+  Graf liché funkce je souměrný podle počátku, graf sudé funkce je souměrný podle souřadné osy $y$.
+\end{pozn}
 
 \begin{priklad}
 Určete paritu funkce $y=x^2$.
@@ -67,7 +75,7 @@ Určete paritu funkce $y=x^2$.
 \end{definition}
 
 \begin{definition}
-  Nechť $f$ je funkce a $M$ alespoň dvouprvková množina z $D(f)$. Řekneme, že funkce $f$ je v množině $M$
+  Nechť $f$ je funkce a $M$ alespoň dvouprvková množina z $D(f)$. Řekneme, že funkce $f$ je na množině $M$
   \begin{enumerate}[$i.$]
     \item \textbf{rostoucí} $\iff \forall x_1, x_2 \in M: x_1 < x_2 \implies f(x_1) < f(x_2),$
     \item \textbf{klesající} $\iff \forall x_1, x_2 \in M: x_1 < x_2 \implies f(x_1) > f(x_2),$
@@ -86,7 +94,7 @@ Celkem tedy $x_1^2<x_2^2 \implies f(x_1)<f(x_2),$ tedy $f$ je rostoucí v $\math
 \end{reseni}
 
 \begin{definition}
-  Nechť $f$ je funkce, $M\subseteq D(f)$. Řekneme, že funkce $f$ je v množině $M$
+  Nechť $f$ je funkce, $M\subseteq D(f)$. Řekneme, že funkce $f$ je na množině $M$
   \begin{enumerate}[$i.$]
     \item \textbf{shora omezená} $\iff \exists k \in \mathbb R: \forall x \in M: f(x)\leq k,$
     \item \textbf{zdola omezená} $\iff \exists k \in \mathbb R: \forall x \in M: f(x)\geq k,$
@@ -106,7 +114,7 @@ Celkem tedy $x_1^2<x_2^2 \implies f(x_1)<f(x_2),$ tedy $f$ je rostoucí v $\math
 \end{definition}
 
 \begin{definition}
-  Nechť $f$ je funkce. Funkce $f$ se nazývá \textbf{periodická}, pokud $\forall p \in \mathbb R^{+}: \forall x \in D(f):$
+  Nechť $f$ je funkce. Funkce $f$ se nazývá \textbf{periodická}, pokud $\exists p \in \mathbb R^{+}: \forall x \in D(f):$
   \begin{enumerate}
     \item $x \in D(f) \implies x \pm p \in D(f)$ a
     \item $f(x) = f(x \pm p)$.
@@ -115,7 +123,7 @@ Celkem tedy $x_1^2<x_2^2 \implies f(x_1)<f(x_2),$ tedy $f$ je rostoucí v $\math
 \end{definition}
 
 \begin{definition}
-  Máme funkci $f: y = f(u)$ s definičním oborem $D(f)$ a funkci $g: u=g(x)$ s oborem hodnot $H(g)$. Jestliže je $H(g) \subseteq D(f)$, pak funkci $h: y = f(g(x))$ nazveme \textbf{složenou funkcí} (někdy píšeme též $h=f \circ g$).
+  Nechť máme funkci $f: y = f(u)$ s definičním oborem $D(f)$ a funkci $g: u=g(x)$ s oborem hodnot $H(g)$. Jestliže je $H(g) \subseteq D(f)$, pak funkci $h: y = f(g(x))$ nazveme \textbf{složenou funkcí} (někdy píšeme též $h=f \circ g$).
 \end{definition}
 
 \begin{definition}
