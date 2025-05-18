@@ -42,13 +42,10 @@ Doplněním na čtverec, odkud jsou posuny jasně patrné.
 
 \begin{definition}
   Funkce $f$ se nazývá \textbf{sudá} (resp. \textbf{lichá}), jestliže platí
-\begin{itemize}
-  \item
-  $\forall x \in D(f):(-x) \in D(f)$
-\item
- $\forall x \in D(f): f(-x)=f(x)$, resp. $f(-x)=f(x)$.
-\end{itemize}
-
+  \begin{enumerate}[$i.$]
+    \item $\forall x \in D(f): -x \in D(f)$ a
+  	\item $\forall x \in D(f): f(-x)=-f(x)$, resp. $f(-x)=f(x)$.
+  \end{enumerate}
 \end{definition}
 
 \begin{priklad}
@@ -57,15 +54,15 @@ Určete paritu funkce $y=x^2$.
 
 \begin{reseni}
 \begin{enumerate}[1.]
-\item $D(f)=\mathbb R$ -- platí
-\item $f(-x)=(-x)^2=x^2=f(x)$ -- platí, tedy funkce je sudá
+\item $D(f)=\mathbb R$ -- platí,
+\item $f(-x)=(-x)^2=x^2=f(x)$ -- platí, tedy funkce je sudá.
 \end{enumerate}
 \end{reseni}
 
 \begin{definition}
-  Funkce $f$ se nazývá \textbf{prostá}, právě tehdy když platí
+  Funkce $f$ se nazývá \textbf{prostá}, právě tehdy když
   \[
-    \forall x_1,x_2\in D(f): x_1\ne x_2 \implies f(x_1)\ne f(x_2)
+    \forall x_1,x_2\in D(f): x_1\ne x_2 \implies f(x_1)\ne f(x_2).
   \]
 \end{definition}
 
@@ -99,20 +96,20 @@ Celkem tedy $x_1^2<x_2^2 \implies f(x_1)<f(x_2),$ tedy $f$ je rostoucí v $\math
 
 \begin{definition}
   Nechť $f$ je funkce, $M \subseteq D(f)$, v ní prvek $a \in M$.
-  Řekneme, že funkce f má v bodě $a$:
-  \begin{enumerate}[i.]
-    \item \textbf{ostré maximum} na množině $M$ právě tehdy, když $\forall x \in M; x \not = a: f(x) < f(a)$
-    \item \textbf{maximum} (neostré) na množině $M$ právě tehdy, když $\forall x \in M : f(x) \leq f(a)$
-    \item \textbf{ostré minimum} na množině $M$ právě tehdy, když $\forall x \in M; x > a: f(x) > f(a)$
-    \item \textbf{minimum} (neostré) na množině $M$ právě tehdy, když $\forall x \in M : f(x) \geq f(a)$
+  Řekneme, že funkce $f$ má v bodě $a$:
+  \begin{enumerate}[$i.$]
+    \item \textbf{ostré maximum} na množině $M$ právě tehdy, když $\forall x \in M\smallsetminus \left \{ a \right \}  : f(x) < f(a)$,
+    \item \textbf{maximum} (neostré) na množině $M$ právě tehdy, když $\forall x \in M \smallsetminus \left \{ a \right \}: f(x) \leq f(a)$,
+    \item \textbf{ostré minimum} na množině $M$ právě tehdy, když $\forall x \in M\smallsetminus \left \{ a \right \}: f(x) > f(a)$,
+    \item \textbf{minimum} (neostré) na množině $M$ právě tehdy, když $\forall x \in M\smallsetminus \left \{ a \right \} : f(x) \geq f(a)$.
   \end{enumerate}
 \end{definition}
 
 \begin{definition}
   Nechť $f$ je funkce. Funkce $f$ se nazývá \textbf{periodická}, pokud $\forall p \in \mathbb R^{+}: \forall x \in D(f):$
   \begin{enumerate}
-    \item $x \in D(f) \implies x \pm p \in D(f)$
-    \item $f(x) = f(x \pm p)$
+    \item $x \in D(f) \implies x \pm p \in D(f)$ a
+    \item $f(x) = f(x \pm p)$.
   \end{enumerate}
   Číslo $p$ se nazývá \textbf{periodou} této funkce. Periodu $p_0$ nazveme \textbf{nejmenší periodou} funkce, pokud pro všechny ostatní periody $p$ platí $p > p_0$. V opačném případě se funkce nazývá \textbf{neperiodická}.
 \end{definition}
@@ -124,7 +121,7 @@ Celkem tedy $x_1^2<x_2^2 \implies f(x_1)<f(x_2),$ tedy $f$ je rostoucí v $\math
 \begin{definition}
   \textbf{Dirichletova funkce} je definována následovně:
   $$\mathbf{D} (x) = \begin{cases}
-1, & \text{ pokud } x \in \mathbb Q, \\
+1, & \text{ je-li } x \in \mathbb Q, \\
 0 & \text{ jinak}.
   \end{cases}  $$
 \end{definition}
@@ -135,11 +132,11 @@ Celkem tedy $x_1^2<x_2^2 \implies f(x_1)<f(x_2),$ tedy $f$ je rostoucí v $\math
 
 \begin{definition}
   Nechť $x \in \mathbb{R}$ je libovolné číslo. Pak existuje právě jedna dvojice $z \in \mathbb{Z}, a \in \left \langle 0;1 \right) \text{ tak, že } x = z + a$.
-Číslo $z$ nazýváme \textbf{celou částí} čísla $x$ a zapisujeme $[x] = z$ $(\lfloor x \rfloor = z)$.
+Číslo $z$ nazýváme \textbf{celou částí} čísla $x$ a zapisujeme $[x] = z$, někdy taky $\lfloor x \rfloor = z$.
 \end{definition}
 
 \begin{pozn}
     Pro definici limity a funkce spojité viz kapitolu \ref{limita},
-    dále definici derivace \ref{derivace}, funkce konvexní a
-    konkávní \ref{konvkonk} a konečně definici definici integrálu \ref{integral}.
+    dále definici derivace def. \ref{derivace}, funkce konvexní a
+    konkávní def. \ref{konvkonk} a konečně definici integrálu def. \ref{integral}.
 \end{pozn}
