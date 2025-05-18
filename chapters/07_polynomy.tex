@@ -27,7 +27,7 @@
 \end{definition}
 
 \begin{definition}
-  Nechť $P(x)\in \mathbb R[x], P(x)=a_nx^n+a_{n-1}x^{n-1}+\dots +a_1x+a_0.$ Nechť $c\in \mathbb R$ je libovolné číslo. \textbf{Hodnotou polynomu} $P(x)$ \textbf{v čísle} (v bodě) $c$ nazýváme reálné číslo $P(c)$
+  Nechť $P(x)\in \mathbb R[x], P(x)=a_nx^n+a_{n-1}x^{n-1}+\dots +a_1x+a_0.$ Nechť $c\in \mathbb R$ je libovolné číslo. (\textbf{Funkční}) \textbf{hodnotou polynomu} $P(x)$ \textbf{v čísle} (v bodě) $c$ nazýváme reálné číslo $P(c)$
   \[
     P(c) = a_nc^n+a_{n-1}c^{n-1}+\dots+a_1c+a_0.
   \]
@@ -57,20 +57,19 @@
 \end{veta}
 
 \begin{pozn}
-  \textbf{Hornerovo schéma} je numerická metoda pro vyhodnocení funkční hodnoty polynomu $P(x) \in \mathbb R [x]$ v bodě $ x_0 \in \mathbb R$. Pro přehlednost vysvětlíme na příkladu:
+  \textbf{Hornerovo schéma} je numerická metoda pro vyhodnocení funkční hodnoty polynomu $P(x) \in \mathbb R [x]$ v bodě $ x_0 \in \mathbb R$. Vysvětlení na příkladu:
   \begin{center}
-  Vyhodnoťte $f_{1}(x)=2x^{3}-6x^{2}+2x-1$ v bodě $x=3$.
+  Vyhodnoťte $P(x)=2x^{3}-6x^{2}+2x-1$ v bodě $x=3$.
   \end{center}
-  Opakovaným vytknutím $x$ může být $f_{1}$ zapsáno jako $x(x(2x-6)+2)-1$. Pro větší přehlednost užijeme k zápisu průběhu výpočtu následující diagram.
+  K výpočtu použijeme následující diagram, kde v prvním řádku jsou koeficienty polynomu, samotné výpočty pak probíhají pod přepsanými koeficienty ve sloupcích, a to následovně:
+  Do prvního místa opíšeme $a_n$. Další čísla v řádku jsou součty koeficientu $a_k$ nad mezerou a součinu hodnoty $x$, v~níž polynom vyhodnocujeme (v tomto příkladě tedy $3$), s číslem v řádku o jeden sloupec vlevo (tedy pod $a_{k+1}$). Výsledek vyhodnocování je vpravo dole – v našem případě tedy $5$.
   \begin{center}
     \begin{tabular}{ c|c c c c }
-        $x_{0}$ & $x^{3}$ & $x^{2}$ & $x^{1}$ & $x^{0}$\\
+        $ $ & $2$ & $-6$ & $2$ & $-1$\\
         \hline
         $3$ & $2$ & $0$ & $2$ & $5$
     \end{tabular}
   \end{center}
-  Do prvního místa opíšeme $a_n$. Čísla v řádku jsou součty koeficientu $a_k$ součinu hodnoty $x$, v~níž polynom vyhodnocujeme (v tomto příkladě tedy $3$), s číslem v řádku o jeden sloupec vlevo (tedy pod $a_{k+1}$). Výsledek vyhodnocování je vpravo dole – v našem případě tedy $5$.
-
   Důsledkem věty o dělení polynomu polynomem je, že zbytek po vydělení $f_1$ polynomem $x-3$ je 5 a výsledkem tohoto dělení je polynom stupně 2 s koeficienty danými zbylými třemi čísly ve třetím řádku. Díky tomuto pozorování lze Hornerovo schéma použít i jako efektivní algoritmus k dělení polynomů.
 \end{pozn}
 
