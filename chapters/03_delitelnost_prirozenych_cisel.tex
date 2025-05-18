@@ -105,7 +105,9 @@
 \end{veta}
 
 \begin{proof}
-  sporem: Pokud by jich bylo konečně mnoho, mohli bychom je spolu všechny vynásobit a získat tak nějaké přirozené číslo. Když k němu pak přičteme 1 nebude dělitelné žádným z předchozích prvočísel -- každé číslo větší než 1 je ale prvočíslo, nebo číslo složené, toto nové číslo tak bude prvočíslo -- spor s tím, že jsme vynásobili všechna prvočísla.
+  Postupujme sporem. Nechť je jich konečně mnoho. Pak součin všech těchto prvočísel je přirozené číslo.
+  Přičteme-li k tomuto součinu 1, dostaneme číslo, které není dělitelné žádným prvočíslem (je dělitelné jen
+  jedničkou a samo sebou), jedná se tedy o prvočíslo. To je ovšem spor s předpokladem, že prvočísel je konečně mnoho.
 \end{proof}
 
 \begin{veta}[Základní věta aritmetiky]
@@ -219,7 +221,7 @@ Platí
         10b=10k+40a_0=10k+a_0+39a_0=n+39a_0
       \]
       \begin{enumerate}
-        \item $\implies: 13 \, | \, n \land 13 \, | \, 39a_0 \implies 13 \, | \, 10b \implies 13 \, | \, b \textrm{, neboť } D(7,10)=1$
+        \item $\implies: 13 \, | \, n \land 13 \, | \, 39a_0 \implies 13 \, | \, 10b \implies 13 \, | \, b \textrm{, neboť } D(13,10)=1$
         \item $\impliedby: 13 \, | \, b \implies  13 \, | \, 10 b \land 13 \, | \, 13a_0 \implies 13 \, | \, n$ \qedhere
       \end{enumerate}
   \end{enumerate}
@@ -234,7 +236,7 @@ Matematickou indukcí.
 \end{reseni}
 
 \begin{priklad}
-Dokažte, že $\forall a \in \mathbb Z: 3 \, \not | \, a \implies 3 \, | \, (a^2-1).$
+Dokažte, že $\forall a \in \mathbb Z: 3 \, \centernot | \, a \implies 3 \, | \, (a^2-1).$
 \end{priklad}
 
 \begin{reseni}

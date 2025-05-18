@@ -2,7 +2,7 @@
 \begin{definition}
   \textbf{Kartézským součinem množin} $A,B$ nazýváme množinu $A\times B$ všech uspořádaných dvojic $(a,b)$ takových, že $a\in A,b\in B$.
   \[
-    A \times B = \left \{ (a,b): a\in A,b\in B \right \}
+    A \times B = \left \{ (a,b); a\in A,b\in B \right \}.
   \]
 \end{definition}
 
@@ -15,7 +15,13 @@
 \end{pozn}
 
 \begin{definition}
-  Nechť $A,B$ jsou dvě množiny. Pak každou podmnožinu $A\times B$ nazýváme \textbf{binární relací} mezi množinami $A,B$ (v tomto pořadí). Je-li speciálně $A=B$, pak hovoříme o \textbf{binární relaci v množině} $A$.
+  Nechť $A,B$ jsou dvě množiny. Pak každou podmnožinu $A\times B$ nazýváme \textbf{binární relací} mezi množinami $A,B$
+  (v tomto pořadí). Je-li speciálně $A=B$, pak hovoříme o \textbf{binární relaci v množině} $A$.
+\end{definition}
+
+\begin{definition}
+Nechť $\alpha\subseteq A\times B$ je binární relace. Je-li uspořádaná dvojice $(a,b), a \in A, b \in B$ prvkem množiny $\alpha$,
+říkáme, že $a$ \textbf{je v relaci} s $b$ a píšeme $a \sim b$.
 \end{definition}
 
 \begin{priklad}
@@ -48,16 +54,17 @@ Znázorněte graf relace $U=\left \{ \left [ x,y \right ]\in \mathbb R^2: x-y+1=
 \end{definition}
 
 \begin{definition}
-  Nechť $f\subseteq A\times B$ je zobrazení. \textbf{Definičním oborem} (resp. \textbf{oborem hodnot}) zobrazení $f$ nazveme množinu $D(f)\subseteq A$ (resp. $H(f)\subseteq B$) všech prvků $a\in A$ (resp. $b\in B$) tak, že k nim existuje právě jedno $b\in B$ (resp. alespoň jedno $a\in A$) tak, že $b=f(a)$ (resp. $a=f(b)$).
+  Nechť $f\subseteq A\times B$ je zobrazení. \textbf{Definičním oborem} (resp. \textbf{oborem hodnot}) zobrazení $f$ nazveme množinu $D(f)\subseteq A$
+  (resp. $H(f)\subseteq B$) všech prvků $a\in A$ (resp. $b\in B$) takových, že k nim existuje právě jedno $b\in B$ (resp. alespoň jedno $a\in A$) tak, že $b=f(a)$ (resp. $a=f(b)$).
 \end{definition}
 
 \begin{definition}
   Pokud $D(f) = A$ (resp. $D(f)\ne A$), hovoříme o \textbf{zobrazení množiny} (resp. \textbf{zobrazení z množiny}) $A$. Pokud $H(f)=B$ (resp. $H(f)\ne B$), hovoříme o \textbf{zobrazení na množinu} (resp. \textbf{zobrazení do množiny}) $B$.
-  Zobrazení na nazýváme \textbf{surjekcí}. Je li $A=B$, hovoříme o \textbf{zobrazení v množině} $A$.
+  Zobrazení na nazýváme \textbf{surjekcí}. Je-li $A=B$, hovoříme o \textbf{zobrazení v množině} $A$.
 \end{definition}
 
 \begin{definition}
-  Nechť $f$ je zobrazení z $A$ do $B$. Zobrazení $f$ je \textbf{prosté}, jestliže ke každému $b\in B$ existuje nejvýše jedno $a \in A$ tak, že $b=f(a).$
+  Nechť $f$ je zobrazení z $A$ do $B$. Zobrazení $f$ je \textbf{prosté}, jestliže ke každému $b\in B$ existuje nejvýše jedno $a \in A$ takové, že $b=f(a).$
 \end{definition}
 
 \begin{definition}
