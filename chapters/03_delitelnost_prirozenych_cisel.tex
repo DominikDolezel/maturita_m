@@ -27,23 +27,31 @@
     \item $d\, | \, a \land d \, | \, b$ a
     \item $\forall c \in \mathbb N: c \, | \, a \land c \, | \, b \implies c \, | \, d.$
   \end{enumerate}
-  Takové číslo značíme $d=D(a,b)=(a,b).$
+  Takové číslo značíme $d=D(a,b)$, někdy taky jen $(a,b)$.
 \end{definition}
 
 \begin{definition}[Euklidův algoritmus]\label{eukliduvalg}
-  Je dán následující algoritmus.  \\
-  \texttt{Mějme dána dvě přirozená čísla, uložená v proměnných $u$ a $w$.} \\
-  \texttt{Dokud $w$ není nulové, opakuj:}
-  \begin{itemize}
-    \item \texttt{Do $r$ ulož zbytek po dělení čísla $u$ číslem $w$}
-    \item \texttt{Do $u$ ulož $w$}
-    \item \texttt{Do $w$ ulož $r$}
-  \end{itemize}
-  \texttt{Konec algoritmu, v $u$ je uložen největší společný dělitel původních čísel.}
+Nechť jsou dána $a,b \in \mathbb Z$, z nichž alespoň jedno je nenulové. Pak mohou nastat dvě možnosti:
+\begin{enumerate}[$i.$]
+  \item $a = 0 \implies D(a, b) = b$ nebo $b=0 \implies D(a,b)=a$ triviálně;
+  \item $a \ne 0 \ne b$.
+\end{enumerate}
+Dále se zabýváme případem $ii$. Je-li to nutné, přejmenujme $a,b$ tak, aby $|a|\geq |b|$.
+Proveďme následující posloupnost dělení se zbytkem. Toto dělení ukončíme, až bude zbytek nulový.
+Vzhledem k nerovnosti na pravé straně tento nulový zbytek existuje.
+\begin{align*}
+  a & = b \cdot q_1 + r_1,  & |r_1| & < |b| \\
+  b & = r_1 \cdot q_2 + r_2, & |r_2| & < |r_1| \\
+  r_1 & = r_2 \cdot q_3 + r_3, & |r_3| & < |r_2|\\
+  \dots & = \dots & \dots & < \dots\\
+  r_{n-2} & = r_{n-1} \cdot q_n + r_n, & |r_n| & < |r_{n-1}| \\
+  r_{n-1} & = r_{n} \cdot q_{n+1}, & r_{n+1} & = 0.
+\end{align*}
+Potom $D(a,b) = r_n$.
 \end{definition}
 
 \begin{priklad}
-  Spočítejte nevětšího společného dělitele čísel 40902 a 24140
+  Spočítejte nevětšího společného dělitele čísel 40902 a 24140.
 \end{priklad}
 
 \begin{reseni}
@@ -63,7 +71,7 @@
       34 & 0 & konec algoritmu  \\
     \end{tabular}
   \end{center}
-  $D(40902, 24140) = 34$
+  Je tedy $D(40902, 24140) = 34$.
 \end{reseni}
 
 \begin{definition}
@@ -85,7 +93,7 @@
     \item $a\, | \, n \land b \, | \, n$ a
     \item $\forall m \in \mathbb N: a \, | \, m \land b \, | \, m \implies n \, | \, m.$
   \end{enumerate}
-  Takové číslo značíme $n=n(a,b)=\left [ a,b\right ] .$
+  Takové číslo značíme $n=n(a,b), $ někdy taky jen $\left [ a,b\right ]$.
 \end{definition}
 
 \begin{veta}

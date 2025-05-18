@@ -166,12 +166,12 @@ neuvažujeme je tedy. V sudých mocninách se nemění znaménko.
 
 \begin{pozn}[Euklidův algoritmus pro polynomy]
   Obdobně jako u celých čísel v definici \ref{eukliduvalg} i u polynomů lze pro hledání největšího společného dělitele využít Euklidův algoritmus.\\
-  Nechť $A(x), B(x) \in \mathbb R [x]$. Pak mohou nastat dvě možnosti:
-  \begin{enumerate}[a.]
-    \item $A(x) = O(x) \implies D(A(x), B(x)) = B(x)$ triviálně;
-    \item $\text{st}(A(x)) \geq \text{st}(B(x)) \geq 0.$
+  Nechť $A(x), B(x) \in \mathbb R [x]$, z nichž alespoň jeden je různý od $O(x)$. Pak mohou nastat dvě možnosti:
+  \begin{enumerate}[$i.$]
+    \item $A(x) = O(x) \implies D(A(x), B(x)) = B(x)$ nebo $B(x) = O(x) \implies D(A(x), B(x)) = A(x)$ triviálně;
+    \item $A(x)\ne O(x)\ne B(x)$.
   \end{enumerate}
-  Dále se zabýváme případem b. Pokud je $\text{st}(A(x)) \le \text{st}(B(x)),$ polynomy přejmenujme.
+  Dále se zabýváme případem $ii$. Je-li to nutné, přejmenujme polynomy tak, aby $\text{st}(A(x)) \geq \text{st}(B(x)),$.
   Proveďme následující posloupnost dělení se zbytkem. Toto dělení ukončíme, až bude zbytek nulový polynom.
   Vzhledem k nerovnosti na pravé straně tento nulový zbytek existuje.
   \begin{align*}
@@ -180,9 +180,9 @@ neuvažujeme je tedy. V sudých mocninách se nemění znaménko.
     R_1(x) & = R_2(x) \cdot Q_3(x) + R_3(x), & \text{st}(R_3(x)) & < \text{st}(R_2(x))\\
     \dots & = \dots & \dots & < \dots\\
     R_{n-2}(x) & = R_{n-1}(x) \cdot Q_n(x) + R_n(x), & \text{st}(R_n(x)) & < \text{st}(R_{n-1}(x)) \\
-    R_{n-1}(x) & = R_{n}(x) \cdot Q_{n+1}(x), & R_{n}(x) & < O(x).
+    R_{n-1}(x) & = R_{n}(x) \cdot Q_{n+1}(x), & R_{n+1}(x) & = O(x).
   \end{align*}
-  Potom $(A(x), B(x)) = R_n(x)$ či libovolný násobek $R_n(x)$. \textbf{Normovaný největší společný dělitel polynomů}
+  Potom $D(A(x), B(x)) = R_n(x)$ či libovolný násobek $R_n(x)$. \textbf{Normovaný největší společný dělitel polynomů}
   ale existuje právě jeden, ten se označuje $(A(x), B(x))$.
 \end{pozn}
 
