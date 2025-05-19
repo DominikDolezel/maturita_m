@@ -65,7 +65,7 @@
 
 \begin{pozn}
     Výčet prvních čtyř podmínek z definice \ref{vekt_prost} lze zjednodušit jako:
-    $(V,+)$ je komutativní grupa.
+    $(V,\bigoplus)$ je komutativní grupa.
 \end{pozn}
 
 \begin{pozn}
@@ -89,7 +89,7 @@
 \begin{definition}
     Nechť $A,B,C,D \in \mathbb E_n$ jsou body. Řekneme, že orientované úsečky
     $\overrightarrow{AB}$ a $\overrightarrow{CD}$ jsou \textbf{ekvipolentní}, jestliže
-    střed úsečky $AD$ je i středem úsečky $BC$. Zapisujeme $\overrightarrow{AB}\varepsilon\overrightarrow{AB}.$
+    střed úsečky $AD$ je i středem úsečky $BC$. Zapisujeme $\overrightarrow{AB}\,\varepsilon\,\overrightarrow{AB}.$
 \end{definition}
 
 \begin{definition}
@@ -151,7 +151,7 @@ $u =\left  \{ \overrightarrow{XY} : \overrightarrow{XY} \, \varepsilon \, \overr
 
 \begin{priklad}
 Je dán aritmetický vektorový prostor $\mathbb R^{2}$ a jeho podmnožina $S=\left \{ (1,2), (4,3) \right \}. $
-Rozhodněte, zda věktor $\vec x = (7,4)$ patří do množiny generované $S$.
+Rozhodněte, zda vektor $\vec x = (7,4)$ patří do množiny generované $S$.
 \end{priklad}
 
 \begin{reseni}
@@ -335,7 +335,7 @@ pro všechna $\vec u, \vec v, \vec w \in V.$
     \end{equation}
     Dosazením do (\ref{gs}) dostaneme
     $$p_i = -\frac{\vec u_k\cdot \vec e_i}{\vec e_i\cdot \vec e_i}.$$
-    (Skalární součiny všech bázových vektorů jsou nula.)
+    (Skalární součiny každých dvou různých bázových vektorů jsou nula.)
     \end{enumerate}
 \end{veta}
 
@@ -348,11 +348,11 @@ najděte ortogonální a ortonormální bázi tohoto vektorového prostoru.
 \end{priklad}
 
 \begin{reseni}
-Položme $\vec e_1=\vec u_1.$ Dále $\vec e_2 = p_1\vec u_1 + \vec u_2$. Po vynásobení
+Položme $\vec e_1=\vec u_1.$ Dále $\vec e_2 = p_1\vec e_1 + \vec u_2$. Po vynásobení
 této matice $\vec e_1$ (ten je kolmý na $\vec e_2$) dostáváme
-$$\underbrace{\vec e_2 \vec e_1}_{0}=p_1\vec u_1\vec e_1+\vec u_2\vec e_1,$$
+$$\underbrace{\vec e_2\cdot \vec e_1}_{0}=p_1\vec e_1\cdot\vec e_1+\vec u_2\cdot\vec e_1,$$
 takže
-$$p_1=-\frac{\vec u_2\vec e_1}{\vec u_1\vec e_1} = -\frac{1}{1}=-1,$$
+$$p_1=-\frac{\vec u_2\cdot\vec e_1}{\vec e_1\cdot\vec e_1} = -\frac{1}{1}=-1,$$
 a pak
 $$\vec e_2 = -1(0,1,0,0,0)+(1,1,1,2,1)=(1,0,1,2,1).$$
 Obdobně pak řešíme rovnici $\vec e_3=q_1\vec e_1 + q_2\vec e_2 + \vec u_3$. Vynásobíme
