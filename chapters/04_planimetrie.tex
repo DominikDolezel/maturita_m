@@ -454,7 +454,7 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
   Pravoúhelník $ABCD$ nazýváme
   \begin{itemize}
     \item \textbf{čtvercem}, jestliže $|AB|=|BC|,$
-    \item \textbf{obdélníkem}, jestliže $|AB| \ne |BC|$
+    \item \textbf{obdélníkem}, jestliže $|AB| \ne |BC|$.
   \end{itemize}
 \end{definition}
 
@@ -605,14 +605,25 @@ poslední blok ---
 
 \begin{veta}
   Nechť přímka $p$ vedená bodem $M$ protne kružnici $k$ v bodech $A,B$. Pak platí
-  \[
+  $$
     p(M,k)=
     \begin{cases}
       |MA|\cdot |MB|, & \text{leží-li } $M$ \text{ vně } $k$, \\
       -|MA|\cdot |MB|, & \text{leží-li } $M$ \text{ uvnitř } $k$.
     \end{cases}
-  \]
+  $$
 \end{veta}
+
+\begin{proof}
+Nechť je dána kružnice $k(S,r)$ a bod $M$, který leží v její vnější oblasti. Bodem $M$ je dále
+vedena přímka, která protne kružnici $k$ v bodech $A,B$ tak, že $B\in \overrightarrow{AM}$.
+Veďme bodem $A$ průměr kružnice $k$ a jeho průsečík s kružnicí $k$ různý od $A$ označme $C$.
+Pak $|\sphericalangle ABC| = 90^\circ$, neboť je to obvodový úhel na Thaletově kružnici.
+Jenže pak i $\sphericalangle ACM$ je pravý, protože je to úsekový úhel příslušný polokružnici.
+Pro velikost úsečky $CM$ platí $|CM|=\sqrt{|OM|^2 - r^2}$. Z Euklidovy věty o odvěsně v
+trojúhelníku $\triangle AMC$ tedy víme $|MA|\cdot |MB|=\left(\sqrt{|OM|^2 - r^2}\right)^2=|OM|^2 - r^2=p(M,k)$,
+což jsme chtěli dokázat. Obdobně postupujeme i je-li $M$ ve vnitřní oblasti kružnice $k$.
+\end{proof}
 
 
 \begin{priklad}
@@ -628,7 +639,7 @@ $|T_1X|^2=|XB|\cdot |XA|=|XT_2|^2.$
 
 \begin{priklad}
 Je dána přímka $p$, kružnice $k_1, k_2$ v opačných polorovinách s hranicí $p.$
-Sestrojte úsečku $XY$ tak, aby $X\in k_1, Y\in k_2, \overleftrightarrow{AB} \perp p,$ a
+Sestrojte úsečku $XY$ tak, aby $X\in k_1, Y\in k_2, \overleftrightarrow{XY} \perp p,$ a
 střed úsečky $XY$ ležel na $p.$
 \end{priklad}
 
@@ -681,7 +692,7 @@ kružnice $k$ ve výše popsané stejnolehlosti). Proto je $Y$ průsečík $k\ca
 \end{reseni}
 
 \begin{priklad}
-Je dán konvexní úhel $AVB$ a vnitřní bod $M$ tohoto úhlu. Sestrojte kružnici $k,M\in k,$
+Je dán konvexní úhel $\sphericalangle AVB$ a vnitřní bod $M$ tohoto úhlu. Sestrojte kružnici $k,M\in k,$
 která se dotýká obou ramen úhlu.
 \end{priklad}
 
