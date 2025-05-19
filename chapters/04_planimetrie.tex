@@ -617,12 +617,16 @@ poslední blok ---
 \begin{proof}
 Nechť je dána kružnice $k(S,r)$ a bod $M$, který leží v její vnější oblasti. Bodem $M$ je dále
 vedena přímka, která protne kružnici $k$ v bodech $A,B$ tak, že $B\in \overrightarrow{AM}$.
-Veďme bodem $A$ průměr kružnice $k$ a jeho průsečík s kružnicí $k$ různý od $A$ označme $C$.
-Pak $|\sphericalangle ABC| = 90^\circ$, neboť je to obvodový úhel na Thaletově kružnici.
-Jenže pak i $\sphericalangle ACM$ je pravý, protože je to úsekový úhel příslušný polokružnici.
-Pro velikost úsečky $CM$ platí $|CM|=\sqrt{|OM|^2 - r^2}$. Z Euklidovy věty o odvěsně v
-trojúhelníku $\triangle AMC$ tedy víme $|MA|\cdot |MB|=\left(\sqrt{|OM|^2 - r^2}\right)^2=|OM|^2 - r^2=p(M,k)$,
-což jsme chtěli dokázat. Obdobně postupujeme i je-li $M$ ve vnitřní oblasti kružnice $k$.
+Konečně veďme bodem $M$ tečnu s bodem dotyku $T$ ke kružnici $k$ takovou, že přímka
+$\overleftrightarrow{AM}$ neodděluje body $O$ a $T$.\\
+Úhly $\sphericalangle MAT$ a $\sphericalangle BTM$ jsou shodné, protože jsou úhlem obvodovým, resp.
+úsekovým příslušným témuž oblouku $BT$. Pak jsou trojúhelníky $\triangle ATM$ a $\triangle TBM$ podobné.
+Platí tedy
+$$\frac{|MB|}{|MT|}=\frac{|MT|}{|MA|} \iff |MT|^2=|MA|\cdot |MB|.$$
+Jenže $MT$ je odvěsnou pravoúhlého trojúhelníka $\triangle OMT$ s přeponou $OM$. Je tedy
+$$p(M,r)=|OM|^2-r^2=|MT|^2=|MA|\cdot |MB|,$$
+což jsme chtěli dokázat.
+Obdobně postupujeme i je-li $M$ ve vnitřní oblasti kružnice $k$.
 \end{proof}
 
 
