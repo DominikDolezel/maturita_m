@@ -1,7 +1,7 @@
 \section{Racionální lomená funkce}
 \begin{definition}
     Nechť $k \in \mathbb R, k \ne 0.$ Pak funkcí $y=\frac{k}{x}$
-    nazýváme \textbf{nepřímou úměrností} s~koeficientem $k$.
+    nazýváme \textbf{nepřímou úměrností} s~koeficientem nepřímé úměrnosti $k$.
 \end{definition}
 
 \begin{definition}
@@ -19,12 +19,13 @@ Vydělením získáme přehled o posunech počátku.
 \end{reseni}
 
 \begin{pozn}
-    \begin{itemize}
-        \item $D(f)=\mathbb R - \left \{ -\frac{d}{c} \right \}$
-       	\item $H(f)=\mathbb R - \left \{ \frac{a}{c} \right \}$
-       	\item Grafem je rovnoosá hyperbola s asymptotami
-        $x=-\frac{d}{c}, y=\frac{a}{c}.$
-    \end{itemize}
+  Pro lineární lomenou funkci platí
+  \begin{itemize}
+      \item $D(f)=\mathbb R \smallsetminus \left \{ -\frac{d}{c} \right \},$
+    	\item $H(f)=\mathbb R \smallsetminus \left \{ \frac{a}{c} \right \},$
+     	\item grafem je rovnoosá hyperbola s asymptotami
+      $x=-\frac{d}{c}, y=\frac{a}{c}.$
+  \end{itemize}
 \end{pozn}
 
 \begin{veta}
@@ -63,8 +64,15 @@ Vydělením získáme přehled o posunech počátku.
     \end{enumerate}
 \end{definition}
 
+\begin{priklad}
+  Určete, pro která $x \in \mathbb R$ platí
+  $$P(x) = \frac{(x-1)^2(x+5)^3x^4(x^2-5x+6)(x^2+1)(x-5)^5}{(x-3)^3(x^2+7)} \geq 0.$$
+\end{priklad}
 
--- insert řešení rovnic a nerovnic v podílovém tvaru, nevim moc co to má být lol---
+\begin{reseni}
+  Rozložíme čitatele i jmenovatele v reálném oboru. Znaménko se obecně mění v kořenech čitatele nebo kořenech jmenovatele. Členy se záporným diskriminantem nemají reálný kořen,
+  neuvažujeme je tedy. V sudých mocninách se nemění znaménko. Zároveň musíme vyloučit samotné kořeny jmenovatele, protože je v nich výraz nedefinován. Toto vše vyneseme na číselnou osu.
+\end{reseni}
 
 \begin{veta}[Rozklad na parciální zlomky]
     Nechť $f: y=\frac{P(x)}{Q(x)}, Q(x) \ne O(x)$ je ryze lomená
