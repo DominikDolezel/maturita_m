@@ -57,24 +57,33 @@
 \end{veta}
 
 \begin{pozn}
-  \textbf{Hornerovo schéma} je numerická metoda pro vyhodnocení funkční hodnoty polynomu $P(x) \in \mathbb R [x]$ v bodě $ x_0 \in \mathbb R$. Vysvětlení na příkladu:
+  \textbf{Hornerovo schéma} je numerická metoda pro vyhodnocení funkční hodnoty polynomu $P(x) \in \mathbb R [x]$ v bodě $ x_0 \in \mathbb R$ (resp. ověření, zda je $x_0$ kořen $P(x)$). Vysvětlení na~příkladu:
   \begin{center}
-  Vyhodnoťte $P(x)=2x^{3}-6x^{2}+2x-1$ v bodě $x=3$.
+  Vyhodnoťte $P(x)=2x^{3}-6x^{2}+2x-1$ v bodě $x_0=3$.
   \end{center}
-  K výpočtu použijeme následující diagram, kde v prvním řádku jsou koeficienty polynomu, samotné výpočty pak probíhají pod přepsanými koeficienty ve sloupcích, a to následovně:
-  Do prvního místa opíšeme $a_n$. Další čísla v řádku jsou součty koeficientu $a_k$ nad mezerou a součinu hodnoty $x$, v~níž polynom vyhodnocujeme (v tomto příkladě tedy $3$), s číslem v řádku o jeden sloupec vlevo (tedy pod $a_{k+1}$). Výsledek vyhodnocování je vpravo dole – v našem případě tedy $5$.
+  K výpočtu použijeme následující diagram, kde v prvním řádku jsou koeficienty polynomu, samotné výpočty pak probíhají pod přepsanými koeficienty ve sloupcích, a~to~následovně:
+  Do prvního místa opíšeme $a_n$. Další čísla v~řádku jsou součty koeficientu $a_k$ nad mezerou a~součinu hodnoty $x$, v~níž polynom vyhodnocujeme (v tomto příkladě 3), s~číslem v~řádku o~jeden sloupec vlevo (tedy pod $a_{k+1}$). Výsledek vyhodnocování $P(x_0)$ je vpravo dole (v~tomto příkladě 5).
   \begin{center}
     \begin{tabular}{ c|c c c c }
         $ $ & $2$ & $-6$ & $2$ & $-1$\\
         \hline
         $3$ & $2$ & $0$ & $2$ & $5$
     \end{tabular}
+
+    $P(3) = 5.$
   \end{center}
-  Důsledkem věty o dělení polynomu polynomem je, že zbytek po vydělení $f_1$ polynomem $x-3$ je 5 a výsledkem tohoto dělení je polynom stupně 2 s koeficienty danými zbylými třemi čísly ve třetím řádku. Díky tomuto pozorování lze Hornerovo schéma použít i jako efektivní algoritmus k dělení polynomů.
+  Použitím Hornerova schématu jsme zároveň provedli dělení polynomu $P(x)$ se zbytkem lineárním polynomem $x - x_0$ (v tomto příkladě $x-3$), kde zbytkem je funkční hodnota $P(x_0)$ a podílem je polynom stupně o jedna menšího, jehož koeficienty jsou zbylá vypočtená čísla (v tomto příkladě $2x^2+2$).
+
+  V případě, že $P(x_0)=0$ je $x_0$ kořenem $P(x)$ a zároveň jsme z polynomu vytkli kořenový činitel $x-x_0$.
 \end{pozn}
 
+\begin{definition}
+(\textbf{Algebraická}) \textbf{rovnice v reálné neznámé} $n$-tého stupně s jednou neznámou $x\in \mathbb R$ je každá
+rovnice tvaru $P(x)=0,$ kde $P(x)$ je polynom $n$-tého stupně s reálnými koeficienty.
+\end{definition}
+
 \begin{veta}
-    Nechť je dána algebraická rovnice
+    Nechť je dána algebraická rovnice $a(x)=0$
     \begin{equation}\label{alg_rce}
         a_nx^n + a_{n-1}x^{n-1}+\dots + a_1x+a_0=0,
     \end{equation}
@@ -83,13 +92,12 @@
 \end{veta}
 
 \begin{veta}\label{odecitanivpolynomu}
-    Nechť $\frac{r}{s}$ je racionální kořen algebraické rovncie \ref{alg_rce} s celočíselnými koeficienty.
-    Nechť $m$ je pevné celé číslo. Pak platí:
-    $$(r-ms) \, |\, a(m),$$
-    kde $a(m)$ je hodnota polynomu $a(x)$ pro $x=m.$ Dále $r \, | \, a_0$ a $s\, |\, a(-1).$
+    Nechť $\frac{r}{s}$ je racionální kořen algebraické rovnice \ref{alg_rce} s celočíselnými koeficienty.
+    Pak platí:
+    $$\forall m \in \mathbb Z: (r-ms) \, |\, a(m),$$
+    kde $a(m)$ je hodnota polynomu $a(x)$ pro $x=m.$ Nejčastěji používáme $r + s \, | \, a(-1)$ a $r - s \, |\, a(1).$
 \end{veta}
 
-\begin{comment}
 \begin{veta}[Hledání racionálních kořenů polynomu s racionálními koeficienty]
   Mějme polynom $P(x) \in \mathbb Q [x]$. Potom najdeme jeho kořeny $\frac{r}{s} \in \mathbb Q$ takto:
   \begin{enumerate}[1.]
@@ -101,7 +109,6 @@
     \item U ostatních zlomků vyzkoušíme Hornerovým schématem, zda jsou kořeny daného polynomu.
   \end{enumerate}
 \end{veta}
-\end{comment}
 
 \begin{priklad}
 Najděte racionální kořeny polynomu $P(x)=\frac{3}{5}x^4+x^3+\frac{1}{5}x^2+x-\frac{2}{5}.$
@@ -144,7 +151,7 @@ Sestavíme všechny možnosti a vyzkoušíme. S výhodou taky můžeme využít 
 \end{veta}
 
 \begin{priklad}
-    Určete, pro která $x \in \mathbb R$ platí:
+    Určete, pro která $x \in \mathbb R$ platí
     $$P(x)=(x-1)^2(x+5)^3x^4(x^2-5x+6)(x^2+1)(x-5)^5 \geq 0.$$
 \end{priklad}
 

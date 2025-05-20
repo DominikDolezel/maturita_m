@@ -110,10 +110,10 @@ Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a
   Pak množinu $P(a)$ (resp. množinu $Q(a)$) nazveme \textbf{otevřenou polorovinou s hraniční přímkou} $a$ (resp. \textbf{otevřenou polorovinou s hraniční přímkou} $a$ \textbf{opačnou k} $P(a)$). Množinu $P(a)\cup a$ (resp. $Q(a) \cup a$) nazveme \textbf{uzavřenou polorovinou s hraniční přímkou} $a$ (resp. \textbf{uzavřenou polorovinou s hraniční přímkou} $a$ \textbf{opačnou k} $P(a)$).
 \end{definition}
 
-\begin{definition}
+\begin{definition}\label{uheldef}
   Nechť $A,B,V \in \mathbb E_2$ jsou tři různé nekolineární body. Průnik polorovin $\overrightarrow{VBA} \cap \overrightarrow{VAB}$ nazveme \textbf{konvexním úhlem}
-  (zapisujeme $\sphericalangle BVA$), $V$ jeho \textbf{vrcholem}, polopřímky $\overrightarrow{VA}, \overrightarrow{VB}$ jeho \textbf{rameny}.
-  \textbf{Nekonvexním úhlem} $\sphericalangle BVA$ nazveme sjednocení polorovin opačných k polorovinám $\overrightarrow{VBA},\overrightarrow{VAB}.$
+  (zapisujeme $\sphericalangle AVB$), $V$ jeho \textbf{vrcholem}, polopřímky $\overrightarrow{VA}, \overrightarrow{VB}$ jeho \textbf{rameny}.
+  \textbf{Nekonvexním úhlem} $\sphericalangle AVB$ nazveme sjednocení polorovin opačných k polorovinám $\overrightarrow{VBA},\overrightarrow{VAB}.$
 \end{definition}
 
 \begin{definition}
@@ -130,8 +130,8 @@ Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a
   \end{enumerate}
 \end{definition}
 
-\begin{definition}
-  Každému konvexnímu úhlu $\sphericalangle AVC$ přiřaďme \textbf{velikost úhlu} (označenou $|\sphericalangle AVC|$) ve stupních tak, že
+\begin{definition}\label{uhelvel}
+  Nechť máme konvexní úhel $\sphericalangle AVC$. Úhlu $\sphericalangle AVC$ přiřaďme číslo $a \in \langle 0, 180 \rangle$, které nazveme \textbf{velikostí úhlu} (značíme $|\sphericalangle AVC|$) \textbf{ve stupních} tak, že
   \begin{enumerate}[$i.$]
     \item nulový úhel má velikost $0^\circ$, přímý $180^\circ$,
     \item každý jiný konvexní úhel má velikost $n^\circ, $ kde $0^\circ< n ^\circ< 180^\circ, u \in \mathbb R,$
@@ -140,12 +140,25 @@ Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a
   \end{enumerate}
 \end{definition}
 
+\begin{definition}\label{raddef}
+    Nechť máme úhel $\sphericalangle AVB$. Úhlu $\sphericalangle AVB$ přiřaďme číslo $a\in \langle 0, 2\pi \rangle$,
+    které nazveme \textbf{velikostí úhlu} (značíme $|\sphericalangle AVB|$) \textbf{v radiánech} takto:\\
+    Nechť $k(V,r), X\in k\cap \overrightarrow{VA}, Y\in k\cap \overrightarrow{VB}.$
+    Označme $s$ velikost oblouku $XY.$ Velikost úhlu pak definujeme jako
+    $$|\sphericalangle AVB| = \frac{s}{r}.$$
+\end{definition}
+
 \begin{pozn}
-  \textbf{Radián} je středový úhel příslušný v jednotkové kružnici kruhovému oblouku délky 1. Z definice plyne:
-  \[
-    360^\circ = 2\pi.
-  \]
+    Je-li $s=r,$ má úhel $\sphericalangle AVB$ velikost 1 \textbf{radián}.
 \end{pozn}
+
+\begin{veta}
+    Nechť $\sphericalangle AVB$ je úhel, $\varphi$ jeho velikost v radiánech a $\alpha$
+    jeho velikost ve stupních. Pak platí:
+    \begin{align*}
+        \varphi = \alpha\cdot \frac{\pi}{180^\circ}, & & \alpha = \varphi\cdot \frac{180^\circ}{\pi}.
+    \end{align*}
+\end{veta}
 
 \begin{definition}
   Nechť $p,q\in \mathscr P$ jsou dvě různoběžky. Řekneme, že $p,q$ jsou na sebe \textbf{kolmé} (a~zapisujeme $p\perp q$), jestliže všechny čtyři úhly, které spolu svírají, jsou shodné (a tedy pravé).

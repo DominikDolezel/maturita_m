@@ -34,9 +34,10 @@
 \end{veta}
 
 \begin{proof}
+    \,
     \begin{enumerate}[$i.$]
-        \item $log_a x = r \iff a^r = x \iff a^{\log_a x}=x$
-       	\item $a^x = r \iff \log_a r=c \iff \log_a a^x = x$ \qedhere
+        \item $log_a x = r \iff a^r = x \iff a^{\log_a x}=x,$
+       	\item $a^x = r \iff \log_a r=c \iff \log_a a^x = x.$ \qedhere
     \end{enumerate}
 \end{proof}
 
@@ -48,44 +49,43 @@
 \begin{veta}
     $\forall a,b,c\in \mathbb R^+, a\ne 1, b\ne 1:$
     \begin{enumerate}[$i.$]
-        \item $\log_a b \cdot \log_b c = \log_a c$
-       	\item $\log_a b \cdot \log_b a = 1$
+        \item $\log_a b \cdot \log_b c = \log_a c,$
+       	\item $\log_a b \cdot \log_b a = 1.$
     \end{enumerate}
 \end{veta}
 
 \begin{proof}
+    \,
     \begin{enumerate}[$i.$]
-        \item \begin{align*}
-            \log_a b = r &\iff a^r = b \\
-            \log_b c = s &\iff b^s = c \\
-            \log_a c = t &\iff a^t = c
-        \end{align*}
-        \begin{align*}
-            c & =b^s=\left ( a^r \right )^s\\
-            c & = a^t\\
-            a^{rs} & = a^t \implies rs = t \implies \log_a b \cdot \log_b c = \log_a c
-        \end{align*}
-        \item $\log_a b\cdot \log_b a = \log_a a = 1$\qedhere
+        \item
+            $\log_a b = r \iff a^r = b,$ \\
+            $\log_b c = s \iff b^s = c,$ \\
+            $\log_a c = t \iff a^t = c,$ \\
+            $c =b^s=\left ( a^r \right )^s,$ \\
+            $c = a^t,$ \\
+            $a^{rs} = a^t \implies rs = t \implies \log_a b \cdot \log_b c = \log_a c,$
+        \item $\log_a b\cdot \log_b a = \log_a a = 1.$\qedhere
     \end{enumerate}
 \end{proof}
 
 \begin{veta}
     $\forall a,b,c\in \mathbb R^+, a\ne 1, b\ne 1:$
     \begin{enumerate}[$i.$]
-        \item $\log_b c = \frac{\log_a c}{\log_a b}$
-       	\item $\log_a b = \frac{1}{\log_b a}$
+        \item $\log_b c = \frac{\log_a c}{\log_a b},$
+       	\item $\log_a b = \frac{1}{\log_b a}.$
     \end{enumerate}
 \end{veta}
 
 \begin{veta}
     $\forall a \in \mathbb R^+ \smallsetminus \left \{ 1 \right \}  , \forall x \in \mathbb R^+:$
     \begin{enumerate}[$i.$]
-        \item $\log_{\frac{1}{a}} x = -\log_a x$
-       	\item $\log_a \frac{1}{x} = -\log_a x$
+        \item $\log_{\frac{1}{a}} x = -\log_a x,$
+       	\item $\log_a \frac{1}{x} = -\log_a x.$
     \end{enumerate}
 \end{veta}
 
 \begin{proof}
+    \,
     \begin{enumerate}[$i.$]
         \item Nechť $\log_{\frac{1}{a}} x = r, \log_a x = s.$ Pak
         $\left ( \frac{1}{a} \right )^r = a^s,$ tedy $a^{-r}=s,$ takže $r=-s$.
@@ -100,9 +100,9 @@
     $\forall a \in \mathbb R^+ \smallsetminus \left \{ 1 \right \}, \forall x,y \in \mathbb R^+
     ,\forall r \in \mathbb R:$
     \begin{enumerate}[$i.$]
-        \item $\log_a (xy)=\log_a x + \log_a y$
-       	\item $\log_a \left ( \frac{x}{y} \right ) = \log_a x - \log_a y $
-       	\item $\log_a x^r = r\cdot \log_a x$
+        \item $\log_a (xy)=\log_a x + \log_a y,$
+       	\item $\log_a \left ( \frac{x}{y} \right ) = \log_a x - \log_a y,$
+       	\item $\log_a x^r = r\cdot \log_a x.$
     \end{enumerate}
 \end{veta}
 
@@ -110,13 +110,13 @@
     Ve všech případech předpokládejme $\log_a x = s \iff x = a^s,
     \log_a y = t \iff y = a^t.$
     \begin{enumerate}[$i.$]
-        \item $xy = a^sa^t=a^{s+t}$\\
-        $\log_a (xy) = \log_a (a^{s+t}) = s+t=\log_a x + \log_a y$
+        \item $xy = a^sa^t=a^{s+t},$\\
+        $\log_a (xy) = \log_a (a^{s+t}) = s+t=\log_a x + \log_a y,$
        	\item $\log_a \left ( \frac{x}{y} \right )  = \log_a
         \left ( \frac{a^s}{a^t} \right ) =\log_a \left ( a^{s-t} \right ) =
-        s-t $
+        s-t,$
        	\item $\log_a x^r = \log_a \left [ \left ( x^s \right )^r  \right ] =
-        \log_a a^{rs}=rs=r\cdot \log_a x$\qedhere
+        \log_a a^{rs}=rs=r\cdot \log_a x.$\qedhere
     \end{enumerate}
 \end{proof}
 
@@ -147,10 +147,10 @@
     rozumíme logaritmus o základu $e$. Zapisujeme $\ln x.$
 \end{definition}
 
-\begin{pozn}
-    Logaritmická (ne)rovnice je taková (ne)rovnice, ve které se vyskytuje logaritmus.
+\begin{definition}
+    (Ne)rovnice, ve které se vyskytuje logaritmus, se nazývá \textbf{Logaritmická (ne)rovnice}.
     Řešíme je na základě věty \ref{zakl_reseni}.
-\end{pozn}
+\end{definition}
 
 \begin{veta}
     $\forall a \in \mathbb R^+ \smallsetminus \left \{ 1 \right \} , \forall x_1, x_2
