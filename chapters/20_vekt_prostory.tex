@@ -89,7 +89,7 @@
 \begin{definition}
     Nechť $A,B,C,D \in \mathbb E_n$ jsou body. Řekneme, že orientované úsečky
     $\overrightarrow{AB}$ a $\overrightarrow{CD}$ jsou \textbf{ekvipolentní}, jestliže
-    střed úsečky $AD$ je i středem úsečky $BC$. Zapisujeme $\overrightarrow{AB}\,\varepsilon\,\overrightarrow{AB}.$
+    střed úsečky $AD$ je i středem úsečky $BC$. Zapisujeme $\overrightarrow{AB}\,\varepsilon\,\overrightarrow{CD}.$
 \end{definition}
 
 \begin{definition}
@@ -232,10 +232,10 @@ Vyjadřujeme-li vektor jako lineární kombinaci báze, řešíme vlastně rovni
 $\vec u_i = p_1\vec e_1 + p_2\vec e_2 +\dots + p_n\vec e_n.$
 \end{reseni}
 
-\begin{priklad}V pravidelném čtyřstěnu vyjádřete vektory $\overrightarrow{PS},\overrightarrow{PU},\overrightarrow{PT}$ jako
-lineární kombinaci vektorů $\overrightarrow{PB},\overrightarrow{PC},\overrightarrow{PD},$
+\begin{priklad}V pravidelném čtyřstěnu $ABCD$ vyjádřete vektory $\overrightarrow{AS},\overrightarrow{AU},\overrightarrow{AT}$ jako
+lineární kombinaci vektorů $\overrightarrow{AB},\overrightarrow{AC},\overrightarrow{AD},$
 je-li $S$ střed strany $BC$, $U$ těžiště trojúhelníka $BCD$ a $T$ je těžiště
-$PBCD$.
+$ABCD$.
 \end{priklad}
 
 \begin{definition}\label{izom}
@@ -246,8 +246,12 @@ $PBCD$.
 \end{definition}
 
 \begin{pozn}
-    Dva vektorové prostory jsou izomorfní, jestliže vztah z \ref{izom} platí pro
-    operace sčítání i vnější násobení.
+    Dva vektorové prostory $V,W$ nad týmž tělesem $T$ jsou izomorfní, jestliže vztah pro zobrazení $\varphi:V\to W$ z def. \ref{izom} platí pro
+    operace sčítání i vnější násobení, tzn. platí:
+    \begin{enumerate}[$i.$]
+    \item $\forall x,y \in V: \varphi(\vec x+\vec y)=\varphi(\vec x)+\varphi(\vec y),$
+    	\item $\forall x \in V, \forall p \in T: \varphi(p\cdot \vec x) = p\cdot \varphi(\vec x).$
+    \end{enumerate}
 \end{pozn}
 
 \begin{definition}
@@ -372,7 +376,7 @@ Vyjádříme si je jako vektory a spočítáme skalární součin. Pokud je rove
 \textbf{Vektorový součin} je zobrazení $V\times V\to  V$ (označené $\times$) s následujícími vlastnostmi:
 \begin{enumerate}[$i.$]
 \item $\vec u\times \vec v = -(\vec v \times \vec u),$
-\item $(\vec u + \vec v)\times \vec w = \vec u \times \vec w + \vec v \times \vec w = \vec u\times (\vec v + \vec w),$
+\item $(\vec u + \vec v)\times \vec w = \vec u \times \vec w + \vec v \times \vec w \land \vec u\times (\vec v + \vec w) = \vec u \times \vec v+\vec u\times \vec w,$
 \item $(p\cdot \vec u)\times \vec v = p\cdot(\vec u \times \vec v) = \vec u \times (p\cdot \vec v)$
 \end{enumerate}
 pro všechna $\vec u, \vec v, \vec w \in V.$
