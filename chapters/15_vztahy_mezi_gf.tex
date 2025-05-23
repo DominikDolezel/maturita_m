@@ -7,16 +7,29 @@
 \begin{veta}\label{soucsc}
     $\forall x, y \in \mathbb{R}: $
     \begin{align*}
-        \sin \left(x\pm y\right) & = \sin x \cdot \cos y \pm \cos x \cdot \sin y \\
-        \cos \left(x\pm y\right) & = \cos x \cdot \cos y \mp \sin x \cdot \sin y
+        \sin \left(x\pm y\right) & = \sin x \cdot \cos y \pm \cos x \cdot \sin y, \\
+        \cos \left(x\pm y\right) & = \cos x \cdot \cos y \mp \sin x \cdot \sin y.
     \end{align*}
 \end{veta}
 
 \begin{proof}
-    Důkaz máme umět, ale nedělali jsme jej.
+    Nechť jsou dány dva vektory $\vec u=(\cos \alpha, \sin \alpha), \vec v = (\sin \beta, \cos \beta), \alpha, \beta \in \left( 0,\frac{\pi}{2} \right ) $,
+    tedy vektor $\vec u$ svírá s $x$-ovou osou úhel $\alpha$ a vektor $\vec v$ svírá s
+    $y$-ovou osou úhel $\beta$. Označme orientovaný úhel, který svírají vektory $\vec u,\vec v$
+    jako $\varphi$.
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.25\textwidth]{souctove_vzorce.png}
+    \end{figure}
+    Platí tedy $\alpha+\beta+\varphi=\frac{\pi}{2}\implies \varphi = \frac{\pi}{2}-(\alpha+\beta)$.
+    Obecně platí $\cos \theta = \sin \left ( \frac{\pi}{2}-\theta \right ) $, v našem
+    případě $\cos \varphi=\sin (\alpha+\beta).$ Úhel $\varphi$ lze spočítat pomocí
+    součinu
+    $$\cos \varphi = \frac{\vec u\cdot \vec v}{|\vec u|\cdot |\vec v|}=\cos \alpha \sin \beta + \sin \alpha \cos \beta, \textrm{ neboť } |\vec u| = |\vec v| = 1.$$
+    Celkem tedy máme
+    $$\sin (\alpha+\beta) = \cos \varphi = \sin \alpha \cos \beta+\cos \alpha \sin \beta,$$
+    což jsme chtěli dokázat. Pro ostatní případy analogicky.
 \end{proof}
-
-
 
 \begin{veta}\label{dvojnas}
     $ \forall x \in \mathbb{R}:$
@@ -79,20 +92,20 @@ Využijeme toho, že $105=60+45,$ což jsou tabulkové hodnoty, a součtových v
 \end{reseni}
 
 \begin{veta}
-  $\forall x,y\in\mathbb{R}-\bigcup\limits_{k\in\mathbb{Z}} \left\{\frac{(2k+1)\pi}{2}\right\}, \forall (x+y) \in \mathbb{R}-\bigcup\limits_{k\in\mathbb{Z}} \left\{\frac{(2k+1)\pi}{2}\right\}, \forall (x-y) \in \mathbb{R}-\bigcup\limits_{k\in\mathbb{Z}} \left\{\frac{(2k+1)\pi}{2}\right\}:$
+  $\forall x,y, (x\pm y)\in\mathbb{R}\smallsetminus\bigcup\limits_{k\in\mathbb{Z}} \left\{\frac{(2k+1)\pi}{2}\right\}:$
   $$\tg\left(x\pm y\right) = \frac{\tg x \pm \tg y}{1\mp\tg x \cdot \tg y}.$$
 \end{veta}
 \begin{proof}
     Počítejme:
     \begin{align*}
         \tg \left(x+y\right) & = \frac{\sin \left(x+y\right)}{\cos \left(x+y\right)}=\frac{\sin x\cdot  \cos y + \cos x\cdot  \sin y}{\cos x \cdot \cos y - \sin x\cdot  \sin y} \\
-        & = \frac{\frac{\sin x \cdot \cos y + \cos x\cdot  \sin y}{\cos x \cdot \cos y}}{\frac{\cos x\cdot  \cos y - \sin x \cdot \sin y}{\cos x\cdot  \cos y}}=\frac{\tg x + \tg y}{1-\tg x \cdot \tg y}\qedhere
+        & = \frac{\frac{\sin x \cdot \cos y + \cos x\cdot  \sin y}{\cos x \cdot \cos y}}{\frac{\cos x\cdot  \cos y - \sin x \cdot \sin y}{\cos x\cdot  \cos y}}=\frac{\tg x + \tg y}{1-\tg x \cdot \tg y}.\qedhere
     \end{align*}
 \end{proof}
 
 
 \begin{veta}
-  $\forall x,y\in\mathbb{R}-\bigcup\limits_{k\in\mathbb{Z}} \left\{\frac{k\pi}{2}\right\}, \forall (x+y) \in \mathbb{R}-\bigcup\limits_{k\in\mathbb{Z}} \left\{\frac{k\pi}{2}\right\}, \forall (x-y) \in \mathbb{R}-\bigcup\limits_{k\in\mathbb{Z}} \left\{\frac{k\pi}{2}\right\}:$
+  $\forall x,y,(x\pm y)\in\mathbb{R}\smallsetminus\bigcup\limits_{k\in\mathbb{Z}} \left\{\frac{k\pi}{2}\right\}:$
   $$\cotg\left(x\pm y\right) = \frac{\cotg x \cdot \cotg y \mp 1}{\cotg x \pm \cotg y}.$$
 \end{veta}
 
@@ -100,7 +113,7 @@ Využijeme toho, že $105=60+45,$ což jsou tabulkové hodnoty, a součtových v
     Počítejme:
     \begin{align*}
         \cotg \left(x+y\right) & = \frac{\cos \left(x+y\right)}{\sin \left(x+y\right)}=\frac{\cos x \cdot \cos y - \sin x\cdot  \sin y}{\sin x\cdot  \cos y + \cos x\cdot  \sin y}\\
-       &  = \frac{\frac{\cos x\cdot  \cos y - \sin x \cdot \sin y}{\sin x \cdot \sin y}}{\frac{\sin x \cdot \cos y + \cos x\cdot  \sin y}{\sin x\cdot  \sin y}}=\frac{\cotg x \cdot \cotg y-1}{\cotg x + \cotg y}\qedhere
+       &  = \frac{\frac{\cos x\cdot  \cos y - \sin x \cdot \sin y}{\sin x \cdot \sin y}}{\frac{\sin x \cdot \cos y + \cos x\cdot  \sin y}{\sin x\cdot  \sin y}}=\frac{\cotg x \cdot \cotg y-1}{\cotg x + \cotg y}.\qedhere
     \end{align*}
 \end{proof}
 
@@ -124,8 +137,8 @@ Využijeme toho, že $105=60+45,$ což jsou tabulkové hodnoty, a součtových v
 \begin{veta}
   $\forall x,y \in \mathbb{R}:$
   \begin{align*}
-    \sin x + \sin y &= 2\sin \frac{x+y}{2}\cdot \cos \frac{x-y}{2}& & \cos x + \cos y = 2 \cos \frac{x + y}{2}\cdot \cos \frac{x - y}{2}\\
-    \sin x - \sin y &= 2\cos \frac{x + y}{2}\cdot \sin \frac{x - y}{2}& & \cos x - \cos y =-2\sin \frac{x + y}{2}\cdot \sin \frac{x -y}{2}
+    \sin x + \sin y &= 2\sin \frac{x+y}{2}\cdot \cos \frac{x-y}{2},& & \cos x + \cos y = 2 \cos \frac{x + y}{2}\cdot \cos \frac{x - y}{2},\\
+    \sin x - \sin y &= 2\cos \frac{x + y}{2}\cdot \sin \frac{x - y}{2},& & \cos x - \cos y =-2\sin \frac{x + y}{2}\cdot \sin \frac{x -y}{2}.
   \end{align*}
 \end{veta}
 
@@ -135,9 +148,9 @@ Využijeme toho, že $105=60+45,$ což jsou tabulkové hodnoty, a součtových v
         \sin x + \sin y & = \sin \left(\frac{x+y}{2}+\frac{x-y}{2}\right)+ \sin \left(\frac{x+y}{2}-\frac{x-y}{2}\right ) \\
         & = \sin \frac{x+y}{2} \cos\frac{x-y}{2} + \cos\frac{x+y}{2} \sin \frac{x-y}{2} \\
         & + \sin \frac{x+y}{2} \cos\frac{x-y}{2} -  \cos\frac{x+y}{2} \sin \frac{x-y}{2}\\
-        & = 2\sin \frac{x+y}{2} \cos\frac{x-y}{2}
+        & = 2\sin \frac{x+y}{2} \cos\frac{x-y}{2}.
     \end{align*}
-  v ostatních případech analogicky
+  V ostatních případech analogicky.
 \end{proof}
 
 \begin{priklad}
@@ -146,7 +159,7 @@ Vyjádřete jako součin: $\sin 3y+\sin y.$
 
 \begin{reseni}
 Platí
-$$\sin 3y+\sin y=2\sin \frac{3y+y}{2}\cdot \cos \frac{3y-y}{2}=2\sin 2y \cdot \cos y.$$
+$\sin 3y+\sin y=2\sin \frac{3y+y}{2}\cdot \cos \frac{3y-y}{2}=2\sin 2y \cdot \cos y.$
 \end{reseni}
 
 \begin{veta}[Sinová věta]
@@ -185,7 +198,7 @@ Zjistíme jednoduše z věty \ref{obsahtroj}.
 \end{reseni}
 
 \begin{priklad}
-Vrchol věžě stojící na rovině vidíme z místa $A$ pod výškovým úhlem $\alpha= 39^\circ 258^\prime$.
+Vrchol věžě stojící na rovině vidíme z místa $A$ pod výškovým úhlem $\alpha= 39^\circ 28^\prime$.
 Přijdeme-li o 50 metrů blíž, je vidět pod úhlem $\beta=58^\circ 42^\prime.$ Jak vysoká je věž?
 \end{priklad}
 

@@ -20,7 +20,7 @@
     $AX,$ kde $X$ je nějaký bod na přímce $p$ a nalezením jejího minima.
 \end{pozn}
 
-\begin{priklad}
+\begin{priklad}\label{primkaabod}
 Určete $\rho(A,p), A[1,0,1], p=\left \{ [2-t,t,0],t \in \mathbb R \right \} $.
 \end{priklad}
 
@@ -28,11 +28,11 @@ Určete $\rho(A,p), A[1,0,1], p=\left \{ [2-t,t,0],t \in \mathbb R \right \} $.
 Přímka $p=p(P,\vec u), $ kde $P[2,0,0],\vec u(-1,1,0).$
 \begin{enumerate}[1.]
 \item způsob: Nechť $A_0=[2-t^*,t^*,0]$. Pak $\vec n = \overrightarrow{AA_0}=A_0-A=(1-t^*,t^*,-1).$
-Platí $\vec u\vec n=0,$ tedy $t^*=-\frac{1}{2},$ odtud $A[1,5;0,5;0].$ Vzdálenost
+Platí $\vec u\vec n=0,$ tedy $t^*=-\frac{1}{2},$ odtud $A_0[1,5;0,5;0].$ Vzdálenost
 $\rho(A,p)$ je pak $|\overrightarrow{AA_0}|.$
 \item způsob: Najdeme takovou rovinu, která je kolmá na přímku $p$ a leží na ní bod $A$
 (normálový vektor roviny je tedy směrový vektor přímky). Dále najdeme průsečík přímky
-$p$ s hledanou rovinou -- vzdálenost dvou bodů už pořítat umíme.
+$p$ s hledanou rovinou -- vzdálenost dvou bodů už počítat umíme.
 \item způsob: Libovolný bod $X$ na přímce $p$ má souřadnice $[2-t,t,0]$. Hledáme
 minimum velikosti vektoru $\overrightarrow{AX}.$
 \end{enumerate}
@@ -50,7 +50,7 @@ minimum velikosti vektoru $\overrightarrow{AX}.$
 
 \begin{pozn}
     Při hledání vzdálenosti dvou rovnoběžných přímek v $\mathbb E_3$ na jedné z nich zvolíme
-    libovolný bod a dále pokračujeme podle věty \ref{vzdpr}.
+    libovolný bod a dále pokračujeme podle příkladu \ref{primkaabod}.
 \end{pozn}
 
 \begin{pozn}
@@ -97,6 +97,13 @@ Určete rovnici přímky, která prochází bodem $A[1,2]$ a má stejnou vzdále
 $B[3,3], C[5,2].$
 \end{priklad}
 
+\begin{reseni}
+    Hledáme přímku $p: ax+by+c=0$. Protože $A\in p$, platí $a+2b+c=0$. Protože má stejnou vzdálenost od bodů $B$ a $C$, platí navíc
+    $$\frac{|3a+3b+c|}{\sqrt{a^2+b^2} }=\frac{|5a+2b+c|}{\sqrt{a^2+b^2} }.$$
+    S výhodou druhou rovnici upravíme za použití té první na
+    $|2a+b|=|4a|$. Dále už řešíme soustavu rovnic, přičemž jsou buď obě absolutní hodnoty kladné, nebo jedna z nich záporná (ostatní případy
+    nám dají stejný vektor o opačné orientaci). Jednu z proměnných zvolíme.
+\end{reseni}
 
 \begin{definition}
     \textbf{Odchylka} vektorů je úhel, který dané vektory svírají. Značíme $|\sphericalangle \vec u, \vec v|.$
@@ -104,7 +111,7 @@ $B[3,3], C[5,2].$
 
 \begin{veta}
     Nechť jsou dány vektory $\vec u, \vec v.$ Pak
-    $$|\sphericalangle \vec u, \vec v|=\arccos \frac{\vec u \cdot \vec v}{|\vec u|\cdot |\vec v|}.$$
+    $$|\sphericalangle \vec u, \vec v|=\arccos \frac{|\vec u \cdot \vec v|}{|\vec u|\cdot |\vec v|}.$$
 \end{veta}
 
 \begin{pozn}
@@ -114,7 +121,7 @@ $B[3,3], C[5,2].$
 
 \begin{veta}
     Nechť jsou dány přímky $p(A,\vec u), q(B, \vec v).$ Pak
-    $$|\sphericalangle p, q|=\arccos \frac{\vec u \cdot \vec v}{|\vec u|\cdot |\vec v|}.$$
+    $$|\sphericalangle p, q|=\arccos \frac{|\vec u \cdot \vec v|}{|\vec u|\cdot |\vec v|}.$$
 \end{veta}
 
 \begin{priklad}
@@ -128,18 +135,18 @@ Vyjádříme jako vektory a dosadíme do vzorce.
 
 \begin{veta}
 Nechť jsou dány přímky $p(A,\vec u), q:ax+by+c=0, \vec n(a,b).$ Pak
-$$|\sphericalangle p, q|=\arcsin \frac{\vec u \cdot \vec n}{|\vec u|\cdot |\vec n|}.$$
+$$|\sphericalangle p, q|=\arcsin \frac{|\vec u \cdot \vec n|}{|\vec u|\cdot |\vec n|}.$$
 \end{veta}
 
 \begin{veta}
     Nechť $p(A,\vec u)$ je přímka, $\alpha:ax+by+cz+d=0$ rovina, $\vec n(a,b,c)$. Pak
-    $$|\sphericalangle p, \alpha|=\arcsin \frac{\vec u \cdot \vec n}{|\vec u|\cdot |\vec n|}.$$
+    $$|\sphericalangle p, \alpha|=\arcsin \frac{|\vec u \cdot \vec n|}{|\vec u|\cdot |\vec n|}.$$
 \end{veta}
 
 \begin{veta}
     Nechť $\alpha:ax+by+cz+d=0, ex+fy+gz+h=0$ jsou dvě roviny a $\vec m(a,b,c), \vec n(e,f,g).$
     Pak
-    $$|\sphericalangle \alpha, \beta|=\arccos \frac{\vec m \cdot \vec n}{|\vec m|\cdot |\vec n|}.$$
+    $$|\sphericalangle \alpha, \beta|=\arccos \frac{|\vec m \cdot \vec n|}{|\vec m|\cdot |\vec n|}.$$
 \end{veta}
 
 \begin{priklad}
@@ -152,7 +159,7 @@ Dosadíme do vzorce a jednu proměnnou zvolíme.
 \end{reseni}
 
 \begin{priklad}
-Najděte parametrické vyjádření přímky, která prochází pořátkem a protíná přímku $p=\left \{ [4+t,3+4t,1-3t],t\in \mathbb R \right \} $
+Najděte parametrické vyjádření přímky, která prochází počátkem a protíná přímku $p=\left \{ [4+t,3+4t,1-3t],t\in \mathbb R \right \} $
 a jejich odchylka je $30^\circ$.
 \end{priklad}
 

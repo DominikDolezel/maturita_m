@@ -26,7 +26,7 @@
 
 \begin{definition}
     Nechť $M$ je neprázdná množina. \textbf{Rozklad množiny} $M$ značíme
-    $\mathscr R(M)$ a definujeme jako neprázdný systém neprázdných podmnožin
+    $\mathscr R(M)$ a~definujeme jako neprázdný systém neprázdných podmnožin
     $M_1, M_2, \dots, M_k, k\in \mathbb N$ množiny $M,$ pro které platí
     \begin{enumerate}[$i.$]
     \item $M_1\cup M_2 \cup \dots \cup M_k = M,$
@@ -95,8 +95,8 @@ Počítáme tedy $P(5,2,2,1,1)=\frac{11!}{5!\cdot 2!\cdot 2!}=83160.$
 \begin{definition}
     Nechť je dáno $n_1$ prvků prvního druhu, $n_2$ prvků druhého druhu, \dots,
     $n_d$ prvků $d$-tého druhu. Nechť $k\in \mathbb N, k \leq n_i, \forall
-    i \in \left \{ 1, 2, \dots, d \right \} .$ \textbf{$k$-prvkovou variací s
-    opakováním} z prvků daných $d$ druhů nazveme každou ušpořádanou $k$-tici
+    i \in \left \{ 1, 2, \dots, d \right \} .$ \textbf{$k$-prvkovou variací s~opakováním}
+    z~prvků daných $d$ druhů nazveme každou ušpořádanou $k$-tici
     vytvořenou z prvků těchto $d$ druhů. Počet těchto variací ozančme $V_o(k,d).$
 \end{definition}
 
@@ -139,18 +139,18 @@ třicet pět nocležníků.
 \end{priklad}
 
 \begin{reseni}
-Dvě hlediska:
+Rozlišujeme dvě hlediska:
 \begin{enumerate}[1.]
-\item hledisko správce ubytovny: je mu jedno, s kým kdo spí $\implies$ kombinace $\binom{50}{35}$
-\item hledisko nocležníků: není jedno, s kým kdo spí $\implies \frac{50!}{15!}$
+\item hledisko správce ubytovny: je mu jedno, s kým kdo spí $\implies$ kombinace $\binom{50}{35}$,
+\item hledisko nocležníků: není jedno, s kým kdo spí $\implies \frac{50!}{15!}$.
 \end{enumerate}
 \end{reseni}
 
 \begin{veta}\label{binomvztahy}
     $\forall k,n \in \mathbb N_0, k\leq n:$
     \begin{align*}
-        \binom{n}{k} &= \binom{n}{n-k} \\
-        \binom{n}{k} + \binom{n}{k+1} &= \binom{n+1}{k+1}
+        \binom{n}{k} &= \binom{n}{n-k}, \\
+        \binom{n}{k} + \binom{n}{k+1} &= \binom{n+1}{k+1}.
     \end{align*}
 \end{veta}
 
@@ -166,9 +166,9 @@ $$\binom{x-1}{x-3}+\binom{x-2}{x-4}=9.$$
 \begin{definition}
     Nechť je dáno $n_1$ prvků prvního druhu, $n_2$ prvků druhého druhu, \dots,
     $n_d$ prvků $d$-tého druhu. Nechť $k\in \mathbb N: k\leq n_i, \forall i
-    \in \left \{ 1,2,\dots,d \right \}$. \textbf{$k$-prvkovou kombinací s opakováním}
-    z prvku daných $d$ druhů nazveme každou neuspořádanou $k$-tici vytvořenou z
-    prvků těchto $d$ druhů. Počet všech těchto kombinací označme $K_o(k,d).$
+    \in \left \{ 1,2,\dots,d \right \}$. \textbf{$k$-prvkovou kombinací s~opakováním}
+    z~prvku daných $d$ druhů nazveme každou neuspořádanou $k$-tici vytvořenou z~prvků
+    těchto $d$ druhů. Počet všech těchto kombinací označme $K_o(k,d).$
 \end{definition}
 
 \begin{veta}
@@ -195,10 +195,11 @@ různých druhů objednávek?
 \end{priklad}
 
 \begin{reseni}
+Rozlišujeme dvě hlediska:
 \begin{enumerate}[$i.$]
-\item hledisko kuchaře: je mu jedno, kdo si co objedná
+\item hledisko kuchaře: je mu jedno, kdo si co objedná,
 $$K_o(35,12)=P_o(35,11)=\binom{46}{11}.$$
-\item hledisko čišníka: záleží, kdo si co objedná
+\item hledisko čišníka: záleží, kdo si co objedná.
 $$V_o(35,12)=12^{35}.$$
 \end{enumerate}
 \end{reseni}
