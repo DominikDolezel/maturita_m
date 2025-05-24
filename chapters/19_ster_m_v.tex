@@ -1,7 +1,7 @@
 \section{Stereometrie -- metrické vlastnosti}
 \begin{definition}
     Nechť $A, B \in \mathbb E_3.$ \textbf{Vzdálenost bodů} $A,B$ nazýváme délku
-    úsečky $AB$ a označujeme $\rho(A,B).$
+    úsečky $AB$ a~označujeme $\rho(A,B).$
 \end{definition}
 
 \begin{definition}
@@ -10,7 +10,7 @@
     splňující
     \begin{enumerate}[$i.$]
     \item $A\in \alpha \implies A_0=A,$
-   	\item $A\notin \alpha \implies A_0 \in p\cap \alpha, p \perp\alpha, a \in p.$
+   	\item $A\notin \alpha \implies A_0 \in p\cap \alpha, p \perp\alpha, A \in p.$
     \end{enumerate}
     \textbf{Vzdáleností bodu $A$ od roviny $\alpha$} nazýváme reálné číslo označené
     $\rho(A,\alpha) $ a definované
@@ -74,7 +74,7 @@ Určete vzdálenost bodu $F$ od roviny $\overleftrightarrow{BEG}$ v pravidelném
     p,q|$ a definované
     \begin{enumerate}[$i.$]
     \item je-li $p\parallel q, |\sphericalangle p,q|=0^\circ,$
-   	\item je-li $p\nparallel q$ odchylka $p,q$ je velikost ostrého nebo pravého úhlu,
+   	\item je-li $p\nparallel q$, odchylka $p,q$ je velikost ostrého nebo pravého úhlu,
         který $p,q$ svírají.
     \end{enumerate}
 \end{definition}
@@ -105,7 +105,7 @@ Určete odchylku přímek $p,q$, kde $p=\overleftrightarrow{AV}, q=\overleftrigh
     p,\alpha|$ a definované
     \begin{enumerate}[$i.$]
     \item je-li $p\parallel \alpha, |\sphericalangle p,\alpha|=0^\circ,$
-    \item je-li $p\nparallel \alpha$ odchylka $p,\alpha$ je velikost ostrého nebo
+    \item je-li $p\nparallel \alpha$, odchylka $p,\alpha$ je velikost ostrého nebo
         pravého úhlu,
         který svírají přímky $p,q$, kde $q$ je průsečnice rovin $\alpha, \beta$,
         přičemž $\beta \perp \alpha, p\in\beta.$
@@ -118,7 +118,7 @@ Určete odchylku přímek $p,q$, kde $p=\overleftrightarrow{AV}, q=\overleftrigh
     \alpha, \beta|$ a definované
     \begin{enumerate}[$i.$]
     \item je-li $\alpha\parallel \beta, |\sphericalangle \alpha,\beta|=0^\circ,$
-   	\item je-li $\alpha\nparallel \beta$ odchylka $\alpha,\beta$ je velikost
+   	\item je-li $\alpha\nparallel \beta$, odchylka $\alpha,\beta$ je velikost
         ostrého nebo pravého úhlu,
         který svírají přímky $p,q,$ kde $p\subseteq \alpha, q\subseteq \beta$ a obě
         přímky jsou kolmé k průsečnici rovin $\alpha, \beta.$
@@ -129,7 +129,6 @@ Určete odchylku přímek $p,q$, kde $p=\overleftrightarrow{AV}, q=\overleftrigh
     Nechť jsou dány nekomplanární body $A,B,C,D.$ Pak
   \textbf{čtyřstěn} je množina bodů ohraničená trojúhelníky $\triangle ABC, \triangle
   ABD, \triangle ACD, \triangle BCD.$
-
   \textbf{Pravidelný čtyřstěn} je tvořen čtyřmi stejnými rovnostrannými trojúhelníky.
 \end{definition}
 
@@ -139,13 +138,16 @@ Určete odchylku přímek $p,q$, kde $p=\overleftrightarrow{AV}, q=\overleftrigh
     \mathbb E_3$ je takové posunutí, že $A_1^\prime=T(A_1).$ Při tomto zobrazení se rovina
     $\rho$ zobrazí na rovinu $\rho^\prime,$ tyto dvě roviny jsou rovnoběžné. Množinu všech
     bodů $X$, všech úseček $BB^\prime$ takových, že $B\in A_1\dots A_n$ a $B^\prime$ je
-    obraz bodu $B$ v posunutí $T$, nazýváme \textbf{hranolem}.
+    obraz bodu $B$ v posunutí $T$, nazýváme \textbf{hranolem}. Mnohoúhelníky
+    $A_1A_2\dots A_n$ a $A^\prime_1A^\prime_2\dots A^\prime_n$ nazýváme \textbf{podstavami},
+    rovnoběžníky $A_iA_{i+1}A^\prime_{i+1}A_i^\prime, i=1,\dots,n$, nazýváme
+    \textbf{bočními stěnami hranolu}. Všechny boční stěny tvoří \textbf{plášť hranolu}.
+    Podstavy spolu s bočními stěnami tvoří \textbf{stěny hranolu}. Úsečky $A_iA^\prime_i$,
+    resp. $A_iA_{i+1}, A^\prime_iA^\prime_{i+1}$ se nazývají \textbf{boční}, resp. \textbf{podstavné hrany}
+    hranolu. Body $A_1,A_2,\dots,A_n$ a $A^\prime_1,A^\prime_2,\dots,A^\prime_n$ se
+    nazývají \textbf{vrcholy}. Je-li směr posunutí kolmý k~rovině podstavy, mluvíme
+    o \textbf{hranolu kolmém}, v opačném případě jde o \textbf{hranol kosý}.
 \end{definition}
-
-\begin{pozn}
-    -- ještě by se tam mohly dopsat: boční stěna, podstavy, plášť, stěna, vrcholy; kosý,
-    kolmý, n-boký
-\end{pozn}
 
 \begin{definition}
     Hranol, jehož podstavy jsou rovnoběžníky, nazýváme \textbf{rovnoběžnostěn}.
@@ -162,22 +164,24 @@ Určete odchylku přímek $p,q$, kde $p=\overleftrightarrow{AV}, q=\overleftrigh
     $A^\prime$ je bod, který v rovině $\rho$ neleží. Nechť $T: \mathbb E_3 \to
     \mathbb E_3$ je takové posunutí, že $A^\prime=T(A).$ Označme $T(\rho)=\rho^\prime,
     T(k)=k^\prime, T(K)=K^\prime.$ Všechny body všech úseček $XX^\prime$, kde $X\in K$
-    a $X^\prime$ je obraz bodu $X$, vytvoří \textbf{válec.}
+    a $X^\prime$ je obraz bodu $X$, vytvoří \textbf{válec.} Omezíme-li se pouze na
+    body $X$ ležící na kružnici $k$, dostaneme \textbf{plášť válce}. Kruhy $K,K^\prime$
+    tvoří \textbf{podstavy válce}. Je-li směr posunutí $T$ kolmý k rovině $\rho$,
+    mluvíme o \textbf{kolmém válci}, v opačném případě o \textbf{kosém válci}.
 \end{definition}
-
-\begin{pozn}
-    ---- mohly by se přidat: plášť, podstava, kolmý, kosý
-\end{pozn}
 
 \begin{definition}
 Mějme v prostoru rovinu $\rho,$ v ní konvexní mnohoúhelník $A_1\dots A_n$ a nechť
 $V$ je bod, který v rovině $\rho$ neleží. Úsečky $VX$, kde $X$ jsou všechny body
-mnohoúhelníka $A_1\dots A_n$, nazýváme \textbf{jehlanem}.
+mnohoúhelníka $A_1\dots A_n$, nazýváme \textbf{jehlanem}. Bod $V$ se nazývá
+\textbf{hlavním vrcholem} jehlanu, jeho další \textbf{vrcholy} jsou $A_1,\dots,A_n$.
+Mnohoúhelník $A_1\dots A_n$ je \textbf{podstava} jehlanu. Trojúhelníky
+$A_iA_{i+1}V, i=1,\dots,n-1$ jsou \textbf{bočními hranami} jehlanu.
+Úsečky $A_iA_{i+1}$ jsou \textbf{podstavnými hranami}. Boční stěny tvoří \textbf{plášť}
+jehlanu. \textbf{Jehlan} se nazývá \textbf{pravidelný}, jestliže je jeho podstavou
+pravidelný mnohoúhelník a~jeho hlavní vrchol má stejně velké vzdálenosti od
+všech vrcholů podstavy.
 \end{definition}
-
-\begin{pozn}
-    ---- add hlavní vrchol, vrcholy, podstava, boční stěny, hrany, podstavné hrany
-\end{pozn}
 
 \begin{definition}
     Nechť je dán jehlan s hlavním vrcholem $V$ a podstavou $A_1\dots A_n$ v rovině
@@ -190,6 +194,9 @@ mnohoúhelníka $A_1\dots A_n$, nazýváme \textbf{jehlanem}.
 \begin{definition}
     Nechť je dán vrchol $V$ a kruhová podstava $K$ v rovině
     $\rho.$ Množina všech bodů úseček $VX,$ kde $X\in K,$ se nazývá \textbf{kužel}.
+    Jestliže $Y\in k,$ tvoří body úseček $VY$ \textbf{plášť} kužele, kruh $K$ je
+    \textbf{podstavou kužele}, bod $V$ \textbf{vrcholem} kužele. Je-li
+    $\overleftrightarrow{SV}\perp \rho,$ nazývá se \textbf{kužel kolmý} (rotační).
 \end{definition}
 
 \begin{definition}
@@ -219,7 +226,8 @@ $\rho.$ Nechť $k \in \mathbb R, k \ne 1, k >0.$ Zaveďme $\mathscr H_{V,k}(K)
       kužel & $\frac{1}{3}\cdot S_{\rm podstavy}\cdot v$ & \, & \, \\
       komolý kužel & $\frac{1}{3}\pi(r_1^2 + r_1r_2 + r_2^2)\cdot v$ & \, & \,\\
       koule & $\frac{4}{3}\pi r^3$ & $4\pi r^2$ & \, \\
-      kulová úseč & $\frac{\pi v^2}{3}(3r-v)$ & $2\pi r v$ & \,
+      kulová úseč & $\frac{\pi v^2}{3}(3r-v)$ & $\pi v (4r-v)$ & \, \\
+      kulový vrchlík & \, & $2\pi r v$ & \,
     \end{tabularx}
   \end{center}
   \normalsize
@@ -270,7 +278,7 @@ podstavy $r$.
     tělesem}, jestliže se zobrazí samo na sebe při každém otočení kolem přímky $p.$
 \end{definition}
 
-\begin{pozn}
+\begin{pozn}\,
 \begin{itemize}
 \item \textbf{rotační válec} -- pravoúhelník otáčený kolem své strany,
 \item \textbf{rotační kužel} -- pravidelný trojúhelník otáčený kolem odvěsny,
@@ -278,5 +286,3 @@ podstavy $r$.
 \item \textbf{torus} -- kruh kolem osy, která leží mimo něj
 \end{itemize}
 \end{pozn}
-
---- doplnit kulovou úseč a kulový vrchlík, což teď nemůžu najít ---
