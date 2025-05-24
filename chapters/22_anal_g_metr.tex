@@ -28,8 +28,8 @@ Určete $\rho(A,p), A[1,0,1], p=\left \{ [2-t,t,0],t \in \mathbb R \right \} $.
 Přímka $p=p(P,\vec u), $ kde $P[2,0,0],\vec u(-1,1,0).$
 \begin{enumerate}[1.]
 \item způsob: Nechť $A_0=[2-t^*,t^*,0]$. Pak $\vec n = \overrightarrow{AA_0}=A_0-A=(1-t^*,t^*,-1).$
-Platí $\vec u\vec n=0,$ tedy $t^*=-\frac{1}{2},$ odtud $A_0[1,5;0,5;0].$ Vzdálenost
-$\rho(A,p)$ je pak $|\overrightarrow{AA_0}|.$
+Platí $\vec u\cdot\vec n=0,$ tedy $t^*=-\frac{1}{2},$ odtud $A_0[1,5;0,5;0].$ Vzdálenost
+$\rho(A,p)$ je pak $\left |\overrightarrow{AA_0}\right |.$
 \item způsob: Najdeme takovou rovinu, která je kolmá na přímku $p$ a leží na ní bod $A$
 (normálový vektor roviny je tedy směrový vektor přímky). Dále najdeme průsečík přímky
 $p$ s hledanou rovinou -- vzdálenost dvou bodů už počítat umíme.
@@ -64,18 +64,18 @@ minimum velikosti vektoru $\overrightarrow{AX}.$
 \end{veta}
 
 \begin{pozn}
-    Vzdálenost mimoběžných přímek určujeme buď pomocí normálového vektoru, rovin,
+    Vzdálenost mimoběžných přímek určujeme buď pomocí normálového vektoru rovin,
     ve kterých přímky leží a následně podle věty \ref{dverov}, nebo určením
     osy mimoběžek.
 \end{pozn}
 
 \begin{priklad}
-Určete vzdálenost mimoběžných přímek $p=\left \{ [9+4t,-2-3t,t],t \in \mathbb R \right \} ,q=\left \{ [-2r,-7+9r,2+2r],r \in \mathbb R \right \} $.
+Určete vzdálenost mimoběžných přímek $p=\left \{ [9+4t,-2-3t,t],t \in \mathbb R \right \},$ $q=\left \{ [-2r,-7+9r,2+2r],r \in \mathbb R \right \} $.
 \end{priklad}
 
 \begin{reseni}
 \begin{enumerate}[1.]
-\item způsob: Směrové vektory mimoběžek určují rovinu. Jedna obsahuje přímku $p$ a druhá,
+\item způsob: Směrové vektory mimoběžek určují rovinu. Jedna obsahuje přímku $p$ a~druhá,
 která je s ní rovnoběžná, obsahuje přímku $q$. Dále počítáme podle vzorce.
 \item způsob: Hledáme příčku mimoběžek, která je rovnoběžná s vektorem, který
 získáme jako vektorový součin směrových vektorů přímek $p,q$.
@@ -87,7 +87,7 @@ Určete rovnici přímky, která prochází bodem $A[-2,1]$ a od bodu $[3,1]$ m�
 \end{priklad}
 
 \begin{reseni}
-Hledáme přímku tvaru $ax+by+c=0$. Jistě platí $-2a+b+c=0$ a vzorec pro vzdálenost přímky a roviny.
+Hledáme přímku tvaru $ax+by+c=0$. Jistě platí $-2a+b+c=0$ a~vzorec pro vzdálenost přímky a roviny.
 Máme tři neznámé, ale jen dvě rovnice. Proto jednu z nich zvolíme (musíme uvažovat
 nulové a nenulové řešení) a zbylé dvě dopočítáme.
 \end{reseni}
@@ -144,13 +144,13 @@ $$|\sphericalangle p, q|=\arcsin \frac{|\vec u \cdot \vec n|}{|\vec u|\cdot |\ve
 \end{veta}
 
 \begin{veta}
-    Nechť $\alpha:ax+by+cz+d=0, ex+fy+gz+h=0$ jsou dvě roviny a $\vec m(a,b,c), \vec n(e,f,g).$
+    Nechť $\alpha:ax+by+cz+d=0, ex+fy+gz+h=0$ jsou dvě roviny a~$\vec m(a,b,c), \vec n(e,f,g).$
     Pak
     $$|\sphericalangle \alpha, \beta|=\arccos \frac{|\vec m \cdot \vec n|}{|\vec m|\cdot |\vec n|}.$$
 \end{veta}
 
 \begin{priklad}
-Určete rovnici přímky, která má od přímky $p:x-2y+3=0$ odchylku $30^\circ$ a prochází
+Určete rovnici přímky, která má od přímky $p:x-2y+3=0$ odchylku $30^\circ$ a~prochází
 jejím průsečíkem s osou $y$.
 \end{priklad}
 

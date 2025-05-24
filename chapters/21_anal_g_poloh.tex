@@ -1,8 +1,8 @@
 \section{Analytická geometrie lineárních útvarů -- polohové vlastnosti}
 \begin{definition}
     Nechť je dána přímka $p$ a vektor $\vec u\ne \vec o$
-    takový, že existuje polopřímka $\overrightarrow{AB}$ --
-    jeho umístění s vlastností $A\in p, B\in p.$ Pak $\vec u$
+    takový, že existuje orientovaná úsečka $\overrightarrow{AB}$ taková, že
+     $A\in p, B\in p.$ Pak $\vec u$
     je \textbf{směrový vektor} přímky $p.$
 \end{definition}
 
@@ -116,6 +116,10 @@ dimenzi prostorů $\left < \vec u, \vec v \right >, \left < \vec u, \vec v, \ove
     Vektor kolmý ke směrovému vektoru přímky se nazývá \textbf{normálový}.
 \end{definition}
 
+\begin{veta}
+    Normálový vektor přímky o rovnici $ax+by+c=0$ je $\vec n=(a,b)$.
+\end{veta}
+
 \begin{priklad}
 Napište obecnou rovnici přímky $p=\left \{ [1+t,2-t], t \in \mathbb R \right \} .$
 \end{priklad}
@@ -131,13 +135,13 @@ Napište parametrickou rovnici přímky $x-2y+1=0.$
 \end{priklad}
 
 \begin{reseni}
-Buď substitucí, např. $y=t$, pak $x-2t+1=0,$ takže $x=-1+2t$, tedy $p=\left \{ [-1+2t,t], t \in \mathbb R \right \}, $
+Buď substitucí, např. $y=t$, pak $x-2t+1=0,$ takže $x=-1+2t$, tedy $p=\left \{ [-1+2t,t], t \in \mathbb R \right \}$,
 nebo přes normálový vektor.
 \end{reseni}
 
 \begin{definition}
     Rovnice $y=kx+q$ se nazývá \textbf{směrnicový tvar rovnice přímky} v $\mathbb E_2$,
-    $k$ je \textbf{směrnice} přímky.
+    $k$~je \textbf{směrnice} přímky.
 \end{definition}
 
 \begin{definition}
@@ -211,8 +215,8 @@ Normálové vektory jsou lineárně nezávislé. Průsečnice je řešení soust
 \end{veta}
 
 \begin{priklad}
-Určete vzájemnou polohu rovin $\rho = \left \{ [4+t_1+2t_2,5+2t_1,3+2t_1+2t_2],\linebreak t_1,t_2\in \mathbb R \right \} ,
-\sigma = \left \{ [1+2r_1+r_2,-2-2r_1-2r_2,1+r_1],r_1,r_2\in \mathbb R \right \}. $
+Určete vzájemnou polohu rovin $\rho = \{ [4+t_1+2t_2,5+2t_1,3+2t_1+2t_2],$ $t_1,t_2\in \mathbb R \}$,
+$\sigma = \left \{ [1+2r_1+r_2,-2-2r_1-2r_2,1+r_1],r_1,r_2\in \mathbb R \right \}. $
 \end{priklad}
 
 \begin{reseni}
@@ -256,14 +260,14 @@ Počítáme skalární součin směrového vektoru přímky a normálového vekt
 \end{reseni}
 
 \begin{definition}
-Nechť $p,q$ jsou dvě mimoběžné přímky. Přímka $r$, která je různoběžná s přímkami
+Nechť $p,q$ jsou dvě mimoběžné přímky. Přímka $r$, která je různoběžná s~přímkami
 $p,q$ se nazývá \textbf{příčkou mimoběžek} $p,q$. Pokud je navíc $r$ kolmá na $p,q$,
 nazývá se \textbf{osou mimoběžek} $p,q$.
 \end{definition}
 
 \begin{priklad}\label{prmimob}
-Jsou dány mimoběžky  $p(A,\vec u), q(B,\vec v)$ a vektor $\vec w$, přičemž
-$A[1,-2,5],B[-1,1,-5], \vec u = (1,3,-1), \vec v=(1,1,2), \vec w = (1,1,4).$
+Jsou dány mimoběžky  $p(A,\vec u)$ $q(B,\vec v)$ a dále vektor $\vec w$, přičemž
+$A[1,-2,5],$ $B[-1,1,-5],$ $\vec u = (1,3,-1),$ $\vec v=(1,1,2),$ $\vec w = (1,1,4).$
 Nalezněte příčku $p,q$, která je rovnoběžná s vektorem $\vec w.$
 \end{priklad}
 
@@ -275,7 +279,7 @@ sosutavu tří rovnic o třech neznámých.
 
 \begin{priklad}
 Jsou dány mimoběžky $p(A,\vec u), q(B,\vec v)$ a bod $M$, přičemž
-$A[1,5,2],B[0,-1,1], \vec u=(1,2,1), \vec v = (3,1,0), M[0,1,-5].$  Nalezněte
+$A[1,5,2],B[0,-1,1],$ $\vec u=(1,2,1),$ $\vec v = (3,1,0),$ $M[0,1,-5].$  Nalezněte
 příčku $p,q$, která prochází bodem $M$.
 \end{priklad}
 
