@@ -47,8 +47,7 @@
 \end{definition}
 
 \begin{definition}\label{vekt_prost}
-    Nechť je dána množina $V$, těleso $T$ a dvě operace $\bigoplus: V\times V \to V$ a
-    $\bigotimes: T\times V \to V$ (jsou na $V$ uzavřené). Pak čtveřice $(V,T,\bigoplus,
+    Nechť je dána množina $V$, těleso $T$ a dvě operace $\bigoplus: V\times V \to V$ a~$\bigotimes: T\times V \to V$ (jsou na $V$ uzavřené). Pak čtveřice $(V,T,\bigoplus,
     \bigotimes)$ je \textbf{vektorový prostor} nad tělesem $T$, jestliže $\forall p,q \in T, \vec u,
     \vec v, \vec w \in V$ platí:
     \begin{enumerate}[$i.$]
@@ -57,9 +56,9 @@
    	\item $\exists \vec o\in V$ takové, že $\forall \vec u\in V:\vec u \bigoplus \vec o = \vec o \bigoplus \vec u = \vec u$ (existence nulového prvku),
    	\item $\forall \vec u \in V: \exists (-\vec u) \in V: \vec u \bigoplus (-\vec u) = (-\vec u) \bigoplus \vec u = \vec o$ (existence opačného prvku),
    	\item $p\bigotimes (\vec u \bigoplus \vec v)=p\bigotimes \vec u \bigoplus p\bigotimes \vec v$ (distributivita),
-   	\item $(p+q)\bigotimes \vec u=p\bigotimes \vec u \bigoplus p\bigotimes \vec v$ (distributivita),
+   	\item $(p+q)\bigotimes \vec u=p\bigotimes \vec u \bigoplus q\bigotimes \vec u$ (distributivita),
    	\item $(p\cdot q)\bigotimes \vec u = p\bigotimes (q\bigotimes \vec u)$ (asociativita vnějšího násobení),
-   	\item $\exists 1 \in T$ taková, že $\forall \vec u \in V: 1\bigotimes \vec u = \vec u$ (existence neutrálního prvku vzhledem k násobení).
+   	\item $\exists 1 \in T$ taková, že $\forall \vec u \in V: 1\bigotimes \vec u = \vec u$ (existence neutrálního prvku vzhledem k~násobení).
     \end{enumerate}
 \end{definition}
 
@@ -69,10 +68,15 @@
 \end{pozn}
 
 \begin{pozn}
-    Místo znaků $\bigoplus$ (resp. $\bigotimes$) používáme znaky $+$ (resp. $\cdot$).
+    Místo znaků $\bigoplus$ (resp. $\bigotimes$) píšeme znaky $+$ (resp. $\cdot$).
     Byly použity, aby bylo jednoznačně odlišeno sčítání vektorů a čísel (resp. násobení
     vektorů skalárem a násobení čísel). Z kontextu je však jasně zřejmé, kterou operaci
     použít. V dalším textu budeme již používat znaky $+$ (resp $\cdot$).
+\end{pozn}
+
+\begin{pozn}
+    V definici jsou skaláry obecně z tělesa (viz poznámku \ref{teleso}). V dalším textu
+    pro jednoduchost uvažujeme $T=\mathbb R$.
 \end{pozn}
 
 \begin{pozn}
@@ -92,20 +96,8 @@
     střed úsečky $AD$ je i středem úsečky $BC$. Zapisujeme $\overrightarrow{AB}\,\varepsilon\,\overrightarrow{CD}.$
 \end{definition}
 
-\begin{definition}
-    Nechť je dána relace $R$ na množině $M$. Pokud
-    \begin{enumerate}[$i.$]
-    \item $\forall a,\in M:[a,a] \in R$ (reflexivita),
-   	\item $\forall a,b\in M: [a,b]\in R \implies [b,a] \in R$ (symetričnost),
-   	\item $\forall a,b,c\in M: ([a,b]\in R \land [b,c] \in R) \implies [a,c] \in R$ (tranzitivita),
-    \end{enumerate}
-    je $R$ \textbf{relací ekvivalence}.
-\end{definition}
-
 \begin{pozn}
-    Ke každé relaci ekvivalence na množině $M$ existuje rozklad na
-    \textbf{třídy ekvivalence} tak, že každé dva prvky v rámci každé třídy jsou navzájem ekvivalentní,
-    třídy jsou po dvou disjunktní a sjednocením všech tříd dostaneme množinu $M$.
+    Pro definici relace ekvivalce viz def. \ref{reflsymtran}, \ref{ekvivalence} a poznámku \ref{rozkladprislusnyekvivalenci}.
 \end{pozn}
 
 \begin{definition}
@@ -209,9 +201,10 @@ Nechť $(\vec e_1,\dots, \vec e_k)$ je báze vektorového prostoru $V$. Pak čí
 \end{definition}
 
 \begin{priklad}
-Nalezněte dimenzi a bázi vektorového prostoru $\left < S \right > ,$
-$S \in \mathbb R^{5}, s = \left \{ \vec u_1,\vec u_2,\vec u_3,\vec u_4,\vec u_5 \right \}, $
-kde $\vec u_1=(2,3,5,-4,1),\vec u_2=(1,-1,2,3,5),\vec u_3=(3,7,8,-11,-3),\vec u_4=(1,-1,1,-2,3),\vec u_5=(1,4,3,-7,-4).$
+Nalezněte dimenzi a bázi vektorového prostoru $\left < S \right >, $ $S \in \mathbb R^{5},$ $s = \left
+\{ \vec u_1,\vec u_2,\vec u_3,\vec u_4,\vec u_5 \right \}, $
+kde
+$\vec u_1=(2,3,5,-4,1),$ $\vec u_2=(1,-1,2,3,5),$ $\vec u_3=(3,7,8,-11,-3),$ $\vec u_4=(1,-1,1,-2,3),$ $\vec u_5=(1,4,3,-7,-4).$
 Dále vyjádřete vektory $\vec u_1$ až $\vec u_5$ jako lineární kombinaci vektorů báze.
 \end{priklad}
 
@@ -279,7 +272,7 @@ Vlastně řešíme rovnici $\vec x= x_1\vec e_1 + x_2\vec e_2 + x_3\vec e_3 + x_
     Nechť je dán bod $P\in \mathbb E_3$ a báze $(\vec e_1, \vec e_2, \vec e_3)$ vektorového
     prostoru volných vektorů $\mathscr V_3$. Pak uspořádaná čtveřice
     $(P, \vec e_1, \vec e_2, \vec e_3)$ je
-    \textbf{afinní soustava souřadnic} v $\mathbb E_3$ s počátkem $P$.
+    \textbf{afinní soustava souřadnic} v $\mathbb E_3$ s~počátkem $P$.
 \end{definition}
 
 \begin{definition}
@@ -290,7 +283,7 @@ Vlastně řešíme rovnici $\vec x= x_1\vec e_1 + x_2\vec e_2 + x_3\vec e_3 + x_
     \overrightarrow{PZ}\in\vec e_3$, souřadné osy $\overrightarrow{PX},\overrightarrow{PY},
     \overrightarrow{PZ}$ jsou navzájem kolmé (tedy báze je ortogonální) a jejich velikost je jedna (tedy báze je navíc ortonormální),
     pak uspořádaná čtveřice $(P, \vec e_1, \vec e_2, \vec e_3)$ je \textbf{kartézská
-    soutava souřadnic} v $\mathbb E_3$ s počátkem $P$.
+    soutava souřadnic} v~$\mathbb E_3$ s počátkem $P$.
 \end{definition}
 
 \begin{definition}
@@ -397,7 +390,7 @@ je obsah polovina velikosti vektorového součinu dvou vektorů (třeba $\overri
    že $\vec u\times \vec v = \vec w,$ platí:
    \begin{enumerate}[$i.$]
    \item $|\vec w| = |\vec u|\cdot |\vec v|\cdot \sin \varphi,$ kde $\varphi$ je úhel, který svárají,
-  	\item $\vec w\perp u, \vec w \perp \vec v,$
+  	\item $\vec w\perp \vec u, \vec w \perp \vec v,$
   	\item $\vec u, \vec v, \vec w$ jsou kladně orientované (v pravotočivé bázi).
    \end{enumerate}
 \end{veta}
