@@ -6,3 +6,4 @@
 % Node styles
 
 % Edge styles
+\tikzstyle{new edge style 0}=[-, dashed]

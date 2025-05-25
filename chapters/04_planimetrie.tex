@@ -79,11 +79,11 @@ Pro každé dva různé body $A,B$ existuje bod $C$ takový, že bod $C$ leží 
   \[
     P(A)=\left \{ X\in \mathbb E_2; X=B \lor X\,\mu\, AB \lor B\, \mu\, AX \right \}
   \]
-  (resp. množinu $P(A)\cup \{A\}$) nazýváme \textbf{otevřenou} (resp. \textbf{uzavřenou}) \textbf{polopřímkou} $AB$ s počátkem v bodě $A$. Značíme $\overrightarrow{AB}$. Množinu
+  (resp. množinu $P(A)\,\cup\, \{A\}$) nazýváme \textbf{otevřenou} (resp. \textbf{uzavřenou}) \textbf{polopřímkou} $AB$ s~počátkem v bodě $A$. Značíme $\overrightarrow{AB}$. Množinu
   \[
     Q(A)=\left \{ X\in \mathbb E_2; A\,\mu\, BX \right \}
   \]
-  (resp. množinu $Q(A)\cup \{A\}$) nazýváme \textbf{otevřenou} (resp. \textbf{uzavřenou}) \textbf{polopřímku opačnou} k polopřímce $\overrightarrow{AB}$ s počátkem $A$.
+  (resp. množinu $Q(A)\,\cup\, \{A\}$) nazýváme \textbf{otevřenou} (resp. \textbf{uzavřenou}) \textbf{polopřímku opačnou} k polopřímce $\overrightarrow{AB}$ s počátkem $A$.
 \end{definition}
 
 \begin{definition}
@@ -203,11 +203,12 @@ Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a
     \item \textbf{vedlejší}, jestliže je jejich jedno rameno společné a zbylá dvě ramena jsou opačné polopřímky,
     \item \textbf{souhlasné}, jestliže jejich první ramena leží na jedné přímce a druhá ramena jsou rovnoběžná, přitom směr příslušných ramen je stejný,
     \item \textbf{střídavé}, jestliže jejich první ramena leží na jedné přímce a druhá ramena jsou rovnoběžná, přitom směr příslušných ramen je opačný,
-    \item \textbf{přilehlé}, jestliže jejich první ramena leží na jedné přímce a jdou do opačných směrů a druhá ramena jsou rovnoběžná.
+    \item \textbf{přilehlé}, jestliže jejich první ramena leží na jedné přímce a jdou do opačných směrů a~druhá ramena jsou rovnoběžná.
   \end{itemize}
   \begin{figure}[h!]
     \centering
     \includegraphics[width=0.5\linewidth]{dvojice_uhlu.png}
+    \caption{Dvojice úhlů}
   \end{figure}
 \end{definition}
 
@@ -220,6 +221,13 @@ Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a
   Nechť je dán trojúhelník $\triangle ABC$. \textbf{Vnitřním úhlem} $\triangle ABC$ při vrcholu $A$ (resp. $B$, resp. $C$)
   nazýváme úhly $\sphericalangle CAB$ (resp. $\sphericalangle ABC$, resp. $ \sphericalangle BCA$), \textbf{vnějším úhlem}
   $\triangle ABC$ při vrcholu $A$ (resp. $B$, resp. $C$) pak vedlejší úhel k úhlu $\sphericalangle CAB$ (resp. $\sphericalangle ABC$, resp. $\sphericalangle BCA$).
+  \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.4\textwidth]{trojuhelnik_uhly}
+    \caption{Trojúhelník s vnitřními ($\alpha$, $\beta$, $\gamma$) a
+    vnějšími ($\alpha^\prime$, $\beta ^\prime$, $\gamma^\prime$) úhly}
+    \label{}
+  \end{figure}
 \end{definition}
 
 \begin{veta}
@@ -403,7 +411,7 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
   $\beta_2 + \gamma + \delta_2 = 180^\circ$. Součet všech vnitřních úhlů
   čtyřúhelníka $ABCD$ je tedy $\alpha + \beta_1 + \beta_2 + \gamma + \delta_1
   + \delta_2 = 360^\circ$, což jsme chtěli dokázat.
-  \begin{figure}
+  \begin{figure}[ht!]
     \centering
     \scalebox{0.6}{\tikzfig{figures/ctyruhelnik}}
     \caption{Čtyřúhelník $ABCD$}
