@@ -26,7 +26,7 @@ je-li $x>0.$
     \end{enumerate}
 \end{priklad}
 
-\begin{reseni}
+\begin{reseni}\,
 \begin{enumerate}[$a.$]
 \item Z podobnosti trojúhelníků.
 \item Z Pythagorovy věty.
@@ -46,7 +46,11 @@ je-li $x>0.$
 \end{priklad}
 
 \begin{reseni}
- TODO
+ Platí
+ \begin{align*}
+   V(n+1) &= (n+1)^3 + 2(n+1) = n^3 + 3n^2 + 3n + 1+ 2n +2 \\
+   & = \underbrace{n^3+ 2n}_{V(n)} + 3n^2 + 3n + 3 = V(n) + 3(n^2+n+1).
+ \end{align*}
 \end{reseni}
 
 \begin{priklad}
@@ -140,10 +144,10 @@ K jednotlivým řádkům přičítáme násobky jiných, aby nám vyšel schodov
 \begin{priklad}
 V $\mathbb R$ řešte:
 \begin{align*}
-    2x_1+5x_2-8x_2 & =8 \\
-    4x_1 + 3x_2 - 9x_3 & =9\\
-    2x_1 + 3x_2 - 5x_3 & = 7 \\
-    x_1 + 8x_2 - 7x_3 & = 12
+    2x_1+5x_2-8x_2 & =8, \\
+    4x_1 + 3x_2 - 9x_3 & =9,\\
+    2x_1 + 3x_2 - 5x_3 & = 7, \\
+    x_1 + 8x_2 - 7x_3 & = 12.
 \end{align*}
 \end{priklad}
 
@@ -165,8 +169,8 @@ a řešíme Gaussovou eliminační metodou.
 \begin{priklad}
 V $\mathbb R$ řešte
 \begin{align*}
-    x_1+x_2+x_3&=1\\
-    x_1-x_3 &=0
+    x_1+x_2+x_3&=1,\\
+    x_1-x_3 &=0.
 \end{align*}
 \end{priklad}
 
@@ -264,15 +268,15 @@ V $\mathbb Z$ řešte $5x-13y=2.$
 
 \begin{reseni}
 \begin{enumerate}[1.]
-\item způsob: uhodnutí jednoho kořene: $x_0=3, y_0=1.$ Pak další řešení je tvaru
+\item způsob: Uhodnutí jednoho kořene: $x_0=3, y_0=1.$ Pak další řešení je tvaru
 $x=x_0-\frac{b}{d}r, y=y_0+\frac{a}{d}r,$ kde $r \in \mathbb Z$ a $d$ značí
-největšího společného dělitele koeficientů u $x$ a $y$. Je tedy
+největšího společného dělitele koeficientů u~$x$ a~$y$. Je tedy
 \begin{align*}
     x&=3-\frac{-13}{1}r=3+13r, \\
     y &= 1+\frac{5}{1}r = 1+5r,
 \end{align*}
 kde $r\in \mathbb Z.$
-\item způsob: modifikace Euklidova algoritmu: z rovnice osamostatníme tu neznámou,
+\item způsob: Modifikace Euklidova algoritmu: z rovnice osamostatníme tu neznámou,
 jejíž koeficient je v absolutní hodnotě menší.
 \begin{align*}
     x &= \frac{13y+2}{5}=\frac{10y}{5}+\frac{3y+2}{5}=2y+\underbrace{\frac{3y+2}{5}}_{\in \mathbb Z}\\
@@ -354,7 +358,7 @@ Užijeme výhodné substituce $a=3^{x+2}$.
 \begin{priklad}
 V $\mathbb R$ řešte soustavu rovnic
 \begin{align*}
-    x^{\log y} &= 4\\
+    x^{\log y} &= 4,\\
     xy &= 40.
 \end{align*}
 \end{priklad}

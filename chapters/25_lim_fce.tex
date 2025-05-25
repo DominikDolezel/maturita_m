@@ -14,7 +14,7 @@
     $$
     \forall \varepsilon \in \mathbb R^+:
         \exists \delta \in \mathbb R^+: \forall x \in
-        \left ( x_0-\delta,x_0+\delta \right )-\left \{ x_0 \right \}:
+        \left ( x_0-\delta,x_0+\delta \right )\smallsetminus\left \{ x_0 \right \}:
         f(x) \in \left ( A-\varepsilon, A+\varepsilon \right ).
     $$
 \end{pozn}
@@ -35,7 +35,7 @@ $$\lim_{x\to x_0}f(x)=\infty \,\,\,(\textrm{resp. } -\infty).$$
     $$
     \forall M \in \mathbb R:
         \exists \delta \in \mathbb R^+: \forall x \in
-        \left ( x_0-\delta,x_0+\delta \right )-\left \{ x_0 \right \}:
+        \left ( x_0-\delta,x_0+\delta \right )\smallsetminus\left \{ x_0 \right \}:
         f(x) > M\,\,\, (\textrm{resp. } f(x) < M) .
     $$
 \end{pozn}
@@ -76,7 +76,7 @@ $$
 
 \begin{pozn}
     Definici \ref{nlimn} lze taky zapsat symbolicky. Řekneme, že
-    $\lim_{x\to \pm\lim} f(x) =\pm\infty$ právě tehdy, když
+    $\lim_{x\to \pm\infty} f(x) =\pm\infty$ právě tehdy, když
     $$
     \forall M \in \mathbb R:
         \exists K \in \mathbb R: \forall x \in \mathbb R, x>K\,\,\, (\textrm{resp. }x<K):
@@ -92,7 +92,7 @@ $$
 \item $-\infty$ rozumíme množinu $(-\infty,k), k\in \mathbb R$
 \end{enumerate}
 a značíme $\mathscr O(x_0)$ (resp. $\mathscr O(\infty)$). \textbf{Prstencovým okolím
-bodu} $x$ je množina $\mathscr O(x)-\left \{ x \right \} $ a značíme $\mathscr P(x).$
+bodu} $x$ je množina $\mathscr O(x)\smallsetminus\left \{ x \right \} $, kterou značíme $\mathscr P(x).$
 Množinu $\mathbb R \cup \left \{ \pm \infty \right \} $ nazvěme \textbf{rozšířenou množinou
 reálných čísel} a označme $\mathbb R^*.$
 \end{definition}
@@ -120,7 +120,7 @@ $$\lim_{x\to x_0}f(x)=f(x_0).$$
 Funkce $f$ je \textbf{spojitá na intervalu} $J\subseteq \mathbb R,$ jestliže
 \begin{enumerate}[$i.$]
 \item $f$ je spojitá v každém vnitřním bodě intervalu $J,$
-\item patří-li počáteční (resp. koncový) bod $j$ k tomuto intervalu,
+\item patří-li počáteční (resp. koncový) bod $J$ k tomuto intervalu,
 je v něm funkce $f$ spojitá zprava (resp. zleva).
 \end{enumerate}
 \end{definition}
@@ -173,8 +173,8 @@ $\lim_{x\to x_0}f(x)$ a  platí $ \lim_{x\to x_0}f(x) = A.$
 \end{veta}
 
 \begin{veta}[Věta o součinu nulové a ohraničené funkce]
-Nechť $f,g$ jsou funkce a $\lim_{x\to x_0}f(x)=0.$ Nechť existuje prstencové
-okolí $\mathscr P(x_0), x_0\in \mathbb R^*$ bodu $x_0\in \mathbb R^*$ takové, že
+Nechť jsou dány dvě funkce $f,g$ a~$\lim_{x\to x_0}f(x)=0.$ Nechť existuje prstencové
+okolí $\mathscr P(x_0),$ bodu $x_0\in \mathbb R^*$ takové, že
 funkce $g$ je na tomto okolí ohraničená. Pak $\lim_{x\to x_0}f(x)g(x)=0.$
 \end{veta}
 
@@ -295,5 +295,5 @@ $$\lim_{x\to 0^+}x^{\sin x}=\lim_{x\to 0^+}e^{\sin x\ln x}=e^{\lim_{x\to 0^+}\si
 
 \begin{reseni}
   Převedeme do jmenovatele:
-  $$\lim_{x\to 0^+}x\ln x=\lim_{x\to 0^+}\frac{\ln x}{\frac{1}{x}}$$
+  $$\lim_{x\to 0^+}x\ln x=\lim_{x\to 0^+}\frac{\ln x}{\frac{1}{x}}.$$
 \end{reseni}

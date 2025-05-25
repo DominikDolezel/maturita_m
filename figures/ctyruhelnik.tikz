@@ -1,0 +1,41 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (-11.75, -3.75) {};
+		\node [style=none] (1) at (9.25, -5) {};
+		\node [style=none] (2) at (10.25, 7) {};
+		\node [style=none] (3) at (-5.75, 4) {};
+		\node [style=none] (4) at (-10.975, -2.75) {};
+		\node [style=none] (5) at (-10.35, -3.825) {};
+		\node [style=none] (6) at (7.925, -4.2) {};
+		\node [style=none] (7) at (7.725, -4.9) {};
+		\node [style=none] (8) at (9.4, -3.5) {};
+		\node [style=none] (9) at (8.975, 6.75) {};
+		\node [style=none] (10) at (10.15, 5.75) {};
+		\node [style=none] (11) at (-4.25, 4.275) {};
+		\node [style=none] (12) at (-4.45, 3.225) {};
+		\node [style=none] (13) at (-6.5, 3) {};
+		\node [style=none] (14) at (9.75, 6.425) {$\gamma$};
+		\node [style=none] (15) at (8.275, -3.075) {$\beta_2$};
+		\node [style=none] (16) at (7.125, -4.35) {$\beta_1$};
+		\node [style=none] (17) at (-5.475, 3.2) {$\delta_1$};
+		\node [style=none] (18) at (-3.7, 3.625) {$\delta_2$};
+		\node [style=none] (19) at (-10.925, -3.4) {$\alpha$};
+		\node [style=none] (20) at (-12.55, -4.15) {$A$};
+		\node [style=none] (21) at (-6.225, 4.5) {$D$};
+		\node [style=none] (22) at (10.825, 7.625) {$C$};
+		\node [style=none] (23) at (9.775, -5.525) {$B$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (1.center) to (0.center);
+		\draw (0.center) to (3.center);
+		\draw (3.center) to (2.center);
+		\draw (2.center) to (1.center);
+		\draw (3.center) to (1.center);
+		\draw [bend right=60] (13.center) to (12.center);
+		\draw [bend right=15, looseness=0.75] (12.center) to (11.center);
+		\draw [bend left=45, looseness=0.75] (4.center) to (5.center);
+		\draw [bend right=225, looseness=0.25] (7.center) to (6.center);
+		\draw [bend left, looseness=0.75] (6.center) to (8.center);
+		\draw [bend right=45, looseness=0.75] (9.center) to (10.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

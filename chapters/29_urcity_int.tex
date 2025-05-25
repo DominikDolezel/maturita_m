@@ -6,14 +6,20 @@
 \begin{definition}
 \textbf{Dělením} $D$ uzavřeného \textbf{intervalu} $\left < a,b \right > $
 rozumíme každou konečnou množinu čísel $x_0,\dots,x_n \in \mathbb R$ takových, že
-$a=x_0<x_1<\dots<x_n=b.$ Intervaly $\left < x_0, x_1 \right > ,
-\left < x_1, x_2 \right >, \dots,$ $\left < x_{n-1}, x_n \right >  $ nazýváme
+$a=x_0<x_1<\dots<x_n=b.$ Intervaly $\left < x_0, x_1 \right >$,
+$\left < x_1, x_2 \right >$, $\dots$, $\left < x_{n-1}, x_n \right >$ nazýváme
 \textbf{dělící intervaly}, které označíme $D=\left \{ x_0,x_1,\dots,x_n \right \} .$
 Body $x_0,\dots,x_n$ nazýváme \textbf{dělící body} dělení $D$. Číslo
 $\max \left ( x_i-x_{i-1} \right ), i=1,\dots,n $ nazýváme \textbf{normou dělení}
 $D$ a označujeme $\nu(D).$ Množinu všech dělení na intervalu $\left < a,b \right > $
 označme $\mathscr D(a,b).$
 \end{definition}
+
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=0.32\textwidth]{images/deleni.png}
+  \caption{Dělení $D=\left \{ x_0, x_1, x_2, x_3 \right\}$.}
+\end{figure}
 
 \begin{definition}
 Nechť $D_1, D_2 \in \mathscr D(a,b)$. Řekneme, že dělení $D_2$ je \textbf{zjemněním
@@ -34,6 +40,12 @@ Označme
 (resp. $s(D,f)=\sum_{i=1}^n m_i\cdot (x_i-x_{i-1})$) je \textbf{horní} (resp. \textbf{dolní}) \textbf{součet funkce}
 $f(x)$ příslušný dělení $D$.
 \end{definition}
+
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=0.6\textwidth]{images/riemannuv_int.png}
+  \caption{Horní (vlevo) a dolní (vpravo) součty funkce $f(x)$.}
+\end{figure}
 
 \begin{pozn}
     Platí $s(D,f)\leq S(D,f).$
@@ -79,7 +91,7 @@ $\int_{a} ^b f(x)\, dx$ nedefinujeme.
 \end{definition}
 
 \begin{veta}[Newton-Leibnitzova věta]
-Nechť $f(x)$ je integrovatelná na intervalu $\left < a,b \right > , F(x)$ je spojitá
+Nechť $f(x)$ je integrovatelná na intervalu $\left < a,b \right >$, $F(x)$ je spojitá
 na intervalu $\left < a,b \right > $. Buď $F(x)$ primitivní funkce k funkci $f(x)$
 na intervalu $\left ( a,b \right ) $. Pak platí:
 $$\int_{a} ^b f(x)\, dx=F(b)-F(a).$$
@@ -101,7 +113,7 @@ $$\int_0^{\frac{\pi}{4}}\cos x \, dx=\left [ \sin x  \right ]_0^{\frac{\pi}{4}}=
 
 \begin{veta}
 Nechť $f(x), f_1(x),\dots,f_n(x), g(x)$ jsou integrovatelné funkce na intervalu $\left < a,b \right > $
-a $c; c_1,\dots,c\in \mathbb R.$ Pak
+a~$c; c_1,\dots,c\in \mathbb R.$ Pak
 \begin{enumerate}[$i.$]
 \item funkce $f(x)+g(x)$ je integrovatelná na int. $\left < a,b \right > $ a platí
 $$\int _a^b \left [ f(x)+g(x) \right ] \, dx = \int_a ^b f(x)\, dx + \int_a ^b g(x) \, dx,$$
@@ -125,13 +137,13 @@ $$\int_a^b f(x) \, dx \leq \int_a^b g(x) \, dx.$$
 
 \begin{veta}
 Nechť $a<b<c$ jsou reálná čísla a $f(x)$ je integrovatelná na intervalech
-$\left < a,b \right >, \left < b,c \right > . $ Pak
+$\left < a,b \right >$, $\left < b,c \right >$. Pak
 $$\int_a^c f(x)\, dx = \int_a^b f(x)\, dx + \int_b^c f(x)\, dx.$$
 \end{veta}
 
 \begin{definition}\label{pocastechspoj}
 Funkce $f(x)$ se nazývá \textbf{po částech spojitá} na intervalu $\left < a,b \right > $,
-jestliže na intervalu $\left < a,b \right > $ spojitá s výjimkou konečného počtu
+jestliže je na intervalu $\left < a,b \right > $ spojitá s výjimkou konečného počtu
 bodů $c_1,\dots,c_n; a<c_1<\dots<c_n<b.$
 \end{definition}
 
@@ -144,21 +156,21 @@ $$\int_a^b f(x)\, dx = \int_a^{c_1}f(x)\, dx + \int_{c_1}^{c_2}f(x)\, dx + \dots
 \begin{definition}
 Je-li $f(x)$ definována v čísle $a \in \mathbb R,$ klademe
 $$\int _a ^a f(x)\, dx = 0.$$
-Je-li $f(x)$ integrovatelná na intervalu $\left < a,b \right > ,$ definujeme
+Je-li $f(x)$ integrovatelná na intervalu $\left < a,b \right >$, definujeme
 $$\int_b^a f(x)\, dx = -\int_a^b f(x)\, dx.$$
 \end{definition}
 
 
 \begin{veta}[O substituci pro určité integrály]\label{ppui}
-Nechť $\varphi (t)$ má na intervalu $\left < \alpha, \beta  \right > $ spojitou derivaci
-$\varphi^\prime (t)$, $f(x)$ je spojitá na intervalu $\left < a,b \right >;
-\varphi: \left < \alpha, \beta \right >\to \left < a,b \right >  $. Označme
+Nechť $\varphi (t)$, $\varphi: \left < \alpha, \beta \right >\to \left < a,b \right >  $ má na intervalu $\left < \alpha, \beta  \right > $ spojitou derivaci
+$\varphi^\prime (t)$ a~nechť $f(x)$ je spojitá na intervalu $\left < a,b \right >$.
+Označme
 $\varphi(\alpha)=a, \varphi(\beta)=b.$ Pak platí
 $$\int _a ^b f(x)\, dx = \int _\alpha ^\beta f \left [ \varphi(t) \right ]\cdot \varphi^\prime (t)\, dt. $$
 \end{veta}
 
 \begin{pozn}
-    Ve větě \ref{ppui} využíváme tzv \textbf{transformace mezí}.
+    Ve větě \ref{ppui} využíváme tzv. \textbf{transformace mezí}.
 \end{pozn}
 
 \begin{priklad}
@@ -172,7 +184,7 @@ Musíme provést transformaci mezí:
     t=x^2+1 & x=2\implies t=5 \\
     dt = 2x \, dx & x=1\implies t=2
 \end{array}\right | = \frac{1}{2}\int _2^5 \frac{1}{t^{\frac{3}{2}}}\, dt \\
-&= \frac{1}{2}\left [ \frac{t^{-\frac{1}{2}}}{-\frac{1}{2}} \right ] _2^5 = \frac{1}{2}\left ( \frac{5^{-\frac{1}{2}}}{-\frac{1}{2}}-\frac{2^{-\frac{1}{2}}}{-\frac{1}{2}} \right )=-\frac{1}{\sqrt{5} }+\frac{1}{\sqrt{2} }
+&= \frac{1}{2}\left [ \frac{t^{-\frac{1}{2}}}{-\frac{1}{2}} \right ] _2^5 = \frac{1}{2}\left ( \frac{5^{-\frac{1}{2}}}{-\frac{1}{2}}-\frac{2^{-\frac{1}{2}}}{-\frac{1}{2}} \right )=-\frac{1}{\sqrt{5} }+\frac{1}{\sqrt{2} }.
 \end{align*}
 \end{reseni}
 
@@ -199,14 +211,14 @@ Platí
 \end{reseni}
 
 \begin{pozn}
-    Je-li $f(x)$ spojitá a nezáporná na intervalu $\left < a,b \right > ,$ je
+    Je-li $f(x)$ spojitá a nezáporná na intervalu $\left < a,b \right >$, je
     $\int_a ^b f(x)\, dx$ obsah plochy omezené osou $x$, přímkami $x=a, x=b$ a
     grafem funkce $y=f(x)$. Platí tedy
     $$S=\int_a^b f(x)\, dx.$$
 \end{pozn}
 
 \begin{priklad}
-Vypočtěte obsah plochy $M=\left \{ [x,y], y \geq  x^2 , y \leq 2x\right \} $.
+Vypočtěte obsah plochy $M=\left \{ [x,y]; y \geq  x^2 , y \leq 2x\right \} $.
 \end{priklad}
 
 \begin{reseni}
@@ -224,8 +236,9 @@ Počítáme $2\int_{-r}^r \sqrt{r^2-x^2}\, dx  $.
 \end{reseni}
 
 \begin{pozn}
-    Nechť je $f(x)$ spojitá a nezáporná na intervalu $\left < a,b \right > $ a
-    $M=\left \{ \left [ x,y \right ], x \in \left < a,b \right >,\linebreak y \in \left < y, f(x) \right >    \right \} .$
+    Nechť je $f(x)$ spojitá a nezáporná na intervalu $\left < a,b \right >$ a je
+    dána množina bodů
+    $M=\left \{ \left [ x,y \right ]; x \in \left < a,b \right >,\linebreak y \in \left < y, f(x) \right >    \right \} .$
     Nechť $M$ rotuje kolem osy $x$. Dostaneme rotační těleso, jehož objem je
     $$V=\pi \int _a^b \left [ f(x) \right ]^2 \, dx. $$
 \end{pozn}

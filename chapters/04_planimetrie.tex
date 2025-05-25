@@ -248,9 +248,9 @@ Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a
 \end{veta}
 
 \begin{proof}
-  $$\alpha + \alpha^\prime = 180^\circ$$ (úhly vedlejší)
-  $$\alpha + \beta + \gamma = 180^\circ$$
-  $$\implies \alpha^\prime = \beta + \gamma\qedhere$$
+  Jistě platí $\alpha + \alpha^\prime = 180^\circ$, protože jsou to úhly
+  vedlejší. Zároveň platí $\alpha + \beta + \gamma = 180^\circ$. Celkem
+  tedy máme $\alpha^\prime = \beta + \gamma$, což jsme chtěli dokázat.
 \end{proof}
 
 \begin{definition}
@@ -397,18 +397,17 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
 \end{veta}
 
 \begin{proof}
-  \,
-  \begin{minipage}{0.5\textwidth}
-    $\delta+ \beta_1+ \alpha_2 = 180^\circ$\\
-    $\gamma + \beta_2 + \alpha_1 = 180^\circ$\\
-    $\alpha+\beta+\gamma+\delta=360^\circ\qedhere$
-  \end{minipage}
-  \hfill
-  \noindent\begin{minipage}{0.5\textwidth}
+  Čtyřúhelník $ABCD$ lze rozdělit na dva trojúhelníky
+  $\triangle ABD $ a $\triangle BCD$ jako na obrázku.
+  Pak jistě platí $\alpha + \beta_1 + \delta_1 = 180^\circ$ a
+  $\beta_2 + \gamma + \delta_2 = 180^\circ$. Součet všech vnitřních úhlů
+  čtyřúhelníka $ABCD$ je tedy $\alpha + \beta_1 + \beta_2 + \gamma + \delta_1
+  + \delta_2 = 360^\circ$, což jsme chtěli dokázat.
+  \begin{figure}
     \centering
-    \includegraphics[width=0.8\linewidth]{uhly_ctyru.png}
-  \end{minipage}
-
+    \scalebox{0.6}{\tikzfig{figures/ctyruhelnik}}
+    \caption{Čtyřúhelník $ABCD$}
+  \end{figure}
 \end{proof}
 
 \begin{definition}

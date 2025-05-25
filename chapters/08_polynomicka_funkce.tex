@@ -1,7 +1,7 @@
-\section{Polynomická funkce (především lineární a~kvadratická)}
+\section{Polynomická funkce}
 
 \begin{definition}\,
-\begin{enumerate}
+\begin{enumerate}[$i.$]
   \item Nechť $b \in \mathbb R$. Funkci $f:y = b$ nazveme \textbf{konstantní funkcí}.
   \item Nechť $a, b \in \mathbb R, a \neq 0$. Funkci $f:y= ax + b$ nazveme \textbf{lineární funkcí}.
 \end{enumerate}
@@ -54,7 +54,7 @@
 \end{pozn}
 
 \begin{veta}
-  Nechť $f:y = ax^2, a \neq 0$ je kvadratická funkce. Pak platí:\\
+  Nechť $f:y = ax^2, a \neq 0$ je kvadratická funkce. Pak platí:
   \begin{center}
     \begin{tabularx}{\textwidth}{ l | l  l }
         \, & $a>0$ & $a<0$ \\
@@ -73,19 +73,19 @@
 
 \begin{proof}
     Dokážeme jen paritu a monotonii. Ostatní plyne z grafu.
-    \begin{enumerate}[2.]
-        \item[2.] $D(f) = \mathbb R$ -- platí, $f(-x)=a(-x)^2=ax^2=f(x)$ -- $f$ je sudá
-        \item[3.] \begin{itemize}
+    \begin{enumerate}
+        \item[$i.$] parita: $D(f) = \mathbb R$ -- platí, $f(-x)=a(-x)^2=ax^2=f(x) \implies f$ je sudá
+        \item[$ii.$] monotonie: \begin{itemize}
         \item $a>0 \land x\in \left (-\infty,0\right >$: \\
-        $x_1<x_2:ax_1^2 > ax_2^2 \iff ax_1 <ax_2 \iff ax_1^2>ax_1x_2 \land ax_1x_2 > ax_2^2$ -- platí
+        Je-li $x_1<x_2$, pak $ax_1^2 > ax_2^2 \iff ax_1 <ax_2 \iff ax_1^2>ax_1x_2 \land ax_1x_2 > ax_2^2 \implies$ platí.
             \item $a>0 \land x\in \left <0,\infty\right )$: \\
-            $x_1<x_2:ax_1^2 > ax_2^2 \iff ax_1 <ax_2 \iff ax_1^2>ax_1x_2 \land ax_1x_2 > ax_2^2$ -- platí\qedhere
+            Je-li $x_1<x_2$, pak $ax_1^2 > ax_2^2 \iff ax_1 <ax_2 \iff ax_1^2>ax_1x_2 \land ax_1x_2 > ax_2^2 \implies$ platí.\qedhere
         \end{itemize}
     \end{enumerate}
 \end{proof}
 
 \begin{veta}
-  Nechť $f:y = ax^2+bx+c, a \neq 0$ je kvadratická funkce. Pak platí:\\
+  Nechť $f:y = ax^2+bx+c, a \neq 0$ je kvadratická funkce. Pak platí:
   \begin{center}
     \begin{tabularx}{\textwidth}{ l | l  l }
         \, & $a>0$ & $a<0$ \\

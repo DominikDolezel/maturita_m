@@ -8,7 +8,7 @@ $$\int f(x)\, dx= \left \{ F(x):F(x) \textrm{ je primitivní k } f(x) \textrm{ n
 \end{definition}
 
 \begin{veta}
-    Nechť $F(x)$ je primitivní funkce k $f(x)$ na intervalu $I$, je taky
+    Je-li $F(x)$ primitivní funkce k $f(x)$ na intervalu $I$, je taky
     $F(x)+c$ primitivní funkce k $f(x)$ na $I$. Má-li funkce $f(x)$ aspoň
     jednu primitivní funkci, má jich nekonečně mnoho.
 \end{veta}
@@ -19,9 +19,8 @@ primitivní funkce k funkci $f$.
 \end{veta}
 
 \begin{veta}[Pravidla pro integrování]
-Nechť na intervalu $I$ existují integrály $\int f(x) \, dx$ a $\int g(x)\, dx.$
-Pak na $I$ existují také integrály $\int(f(x)\pm g(x))\, dx$ a $\int \alpha f(x), \alpha \in \mathbb R.$
-Platí:
+Nechť na intervalu $I$ existují integrály $\int f(x) \, dx$ a~$\int g(x)\, dx.$
+Pak na $I$ existují také integrály $\int(f(x)\pm g(x))\, dx$ a $\int \alpha f(x), \alpha \in \mathbb R,$ přičemž platí:
 \begin{align*}
 \int (f(x)\pm g(x)) \, dx &= \int f(x)\, dx \pm \int g(x) \, dx,\\
 \int \alpha f(x)\, dx &= \alpha\int f(x)\, dx.
@@ -151,7 +150,7 @@ $$\int \tg x\, dx=\int \frac{\sin x}{\cos x}\, dx.$$
     Každou racionální lomenou funkci $\frac{P(x)}{Q(x)}$ lze vyjádřit ve tvaru
     $$\frac{P(x)}{Q(x)}=S(x)+R_1(x)+\dots+R_n(x),$$
     kde $S(x)$ je polynom a $R_1(x),\dots,R_n(x)$ jsou parciální zlomky.
-    Na libovolném intervalu, který neobsahuje kořeny $Q(x)$ jsou tyto funkce spojité,
+    Na libovolném intervalu, který neobsahuje kořeny $Q(x)$, jsou tyto funkce spojité,
     takže k nim existuje primitivní funkce a platí
     $$\int \frac{P(x)}{Q(x)} \, dx=\int S(x)\, dx + \int R_1(x)\, dx + \dots + \int R_n(x)\, dx.$$
 \end{pozn}
@@ -263,8 +262,8 @@ Vyjádříme si \textit{per partes} $J_1$ tak, že derivujeme celý výraz $J_1$
 
 \begin{reseni}
 Do čitatele dostaneme derivaci jmenovatele. Protože nevychází konstatní člen
-v čitateli, \uv{něco si půjčíme a vrátíme}. Zlomek se rozdělí na více sčítanců.
-Poslední z nich integrujeme tak, že ve jmenovateli doplníme na čtverec a vhodně vynásobíme
+v~čitateli, \uv{něco si půjčíme a vrátíme}. Zlomek se rozdělí na více sčítanců.
+Poslední z~nich integrujeme tak, že ve jmenovateli doplníme na čtverec a vhodně vynásobíme
 tak, abychom dostali něco tvaru $x^2+1$.
 \end{reseni}
 
@@ -326,8 +325,8 @@ odvodíme ze vztahů v pravoúhlém trojúhelníku.
     Integrály $\int \sin^2 x \, dx, \int \cos^2 x \, dx$ neřešíme substitucí
     $\tg x  = t,$ nýbrž ze vzorce pro poloviční argument:
     \begin{align*}
-        \int \sin^2 x \, dx &= \int \frac{1-\cos 2x}{2}\, dx = \frac{1}{2}x + \frac{1}{4} \sin 2x + c, \\
-        \int \cos^2 x \, dx &= \int \frac{1+\cos 2x}{2}\, dx = \frac{1}{2}x - \frac{1}{4} \sin 2x + c.
+        \int \sin^2 x \, dx &= \int \frac{1-\cos 2x}{2}\, dx = \frac{1}{2}x - \frac{1}{4} \sin 2x + c, \\
+        \int \cos^2 x \, dx &= \int \frac{1+\cos 2x}{2}\, dx = \frac{1}{2}x + \frac{1}{4} \sin 2x + c.
     \end{align*}
 \end{pozn}
 
@@ -369,8 +368,8 @@ Vyjádříme si ze vzorce pro dvojnásobný argument.
     $$\int R(x,\sqrt{ax^2+bx+c}) \, dx, \,\,\, \textrm{kde } a,b,c\in \mathbb R, a \ne 0$$
     řešíme substitucemi
     \begin{align*}
-    \sqrt{ax^2+bx+c} &= \sqrt{|a|}t(x-\alpha) & & \textrm{je-li }D >0,  \\
-    \sqrt{ax^2+bx+c} &= \pm\sqrt{|a|}x\pm t & & \textrm{je-li }D <0, a>0, \\
+    \sqrt{ax^2+bx+c} &= \sqrt{|a|}\cdot t(x-\alpha) & & \textrm{je-li }D >0,  \\
+    \sqrt{ax^2+bx+c} &= \pm\sqrt{|a|}\cdot x\pm t & & \textrm{je-li }D <0, a>0, \\
     \sqrt{ax^2+bx+c} &= \pm xt \pm \sqrt{c}  & & \textrm{je-li }c >0.
     \end{align*}
     Pokud $b=0$, řešíme integrály
