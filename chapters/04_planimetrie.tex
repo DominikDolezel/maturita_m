@@ -522,9 +522,15 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
 \end{veta}
 
 \begin{proof}
-  Rozdělíme na tři případy polohy ostrého obvodového úhlu vůči středu kružnice
-  \begin{enumerate}
-    \item střed kružnice ležící na rameni obvodového úhlu
+  Rozdělíme na tři případy polohy ostrého obvodového úhlu $\sphericalangle AXB$ vůči středu kružnice $S$.
+  \begin{enumerate}[$i.$]
+    \item střed kružnice leží na rameni obvodového úhlu\\
+    Trojúhelník $\triangle SXB$ je rovnoramenný se základnou $BX$, takže $|\sphericalangle SBX| = |\sphericalangle SXB|=\varphi$. Označme $|\sphericalangle ASB|=\omega$. Pak $2\varphi + (180^\circ - \omega)=180^\circ$, tedy $\omega = 2\varphi$, což jsme chtěli dokázat.
+    \item střed kružnice leží uvnitř obvodového úhlu\\
+    Označme průsečík přímky $XS$ s kružnicí $k$, který je různý od $X$ jako $C$. Pak protože $|\sphericalangle AXC|=2\cdot|\sphericalangle ASC|$ a
+    $|\sphericalangle BXC|=2\cdot|\sphericalangle BSC|$, což už jsme dokázali v $i.$, pak i~$|\sphericalangle AXB| = 2\cdot|\sphericalangle ASB|$.
+    \item střed kružnice leží vně obvodového úhlu\\
+    Označme průsečík přímky $XS$ s kružnicí $k$, který je různý od $X$ jako $C$. Pak $|\sphericalangle BXC| = 2\cdot|\sphericalangle BSC|$ a $|\sphericalangle AXC|=2\cdot|\sphericalangle ASC|$, což už jsme dokázali v $i.$. Pak i $|\sphericalangle AXB| = 2\cdot|\sphericalangle ASB|$.\qedhere
   \end{enumerate}
 \end{proof}
 
@@ -546,22 +552,19 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
   Nechť $AB$ je menší oblouk kružnice $k(S,r)$, $t$ tečna ke kružnici $k$ v bodě $A$, bod $C\in t$, $C\in o$, kde $o$ je polorovina k $\overrightarrow{ABS}.$ Úhel $\sphericalangle CAB$ nazýváme \textbf{úsekovým úhlem} příslušným oblouku $AB$.
 \end{definition}
 
-
 \begin{definition}
   Nechť $AB$ je úsečka. \textbf{Osou úsečky} $AB$ nezveme přímku $o$, která prochází středem úsečky $AB$ a je na ni kolmá.
 \end{definition}
 
-
-předposlední blok ---
 \begin{veta}\label{mbdv}
   Nechť $AB$ je úsečka. Množinou všech bodů $X\in \mathbb E_2,$ pro něž $|AX|=|BX|$, je \textbf{osa} $o$ \textbf{úsečky} $AB$.
 \end{veta}
 
 \begin{proof}
-  $U=\{ X\in \mathbb E_2: |AX|=|BX| \}$
+  Označme $U=\{ X\in \mathbb E_2: |AX|=|BX| \}$.
   \begin{enumerate}[$i.$]
     \item $o \subseteq U: X \in o$ lib. $\implies$ nechť $X\in AB \implies X=S$ -- střed $AB \implies |AS|=|BS| \implies X \in U.$ Nechť $X \notin AB \implies \triangle ASX \cong \triangle BSX$ (sus) $\implies |AX|=|BX| \implies X \in U$.
-    \item $U \subseteq o: X \in U$ lib. $\implies |AX|=|BX| \implies$ nechť $X \in AB \implies X=S \in o.$ Nechť $X \notin AB \implies \exists \triangle ABC$ -- rovnoramenný se základnou $AB$, kde $XS$ je těžnice, ale i výška $\implies XS \perp AB \implies X \in o.$ \qedhere
+    \item $U \subseteq o: X \in U$ lib. $\implies |AX|=|BX| \implies$ nechť $X \in AB \implies X=S \in o.$ Nechť $X \notin AB \implies \exists \triangle ABC$ -- rovnoramenný se základnou $AB$, kde $XS$ je těžnice, ale i~výška $\implies XS \perp AB \implies X \in o.$ \qedhere
   \end{enumerate}
 \end{proof}
 
@@ -573,7 +576,7 @@ předposlední blok ---
   \end{enumerate}
 \end{veta}
 
-\begin{proof}
+\begin{proof}\,
   \begin{enumerate}[$i.$]
     \item Nechť $X\in \overrightarrow{oA}$. Nechť $X\in o\implies$ platí podle věty \ref{mbdv}. Nechť $X\notin o$. Nechť $X\in AB$ -- zřejmé. Nechť $X\notin AB$. Označme $Y\in o \cap BX$, $|BX|=|BY|+|YX|=|AY|+|YX|>|AX|\implies |BX|>|AX|\implies$ platí vlastnost.
     \item Nechť $X\notin \overrightarrow{oA}$. Nechť $X\notin o \implies X\in \overrightarrow{oB}\implies |BX|<|AX|\implies$ neplatí vlastnost pro polorovinu $\overrightarrow{oA}.$ \qedhere
@@ -594,17 +597,17 @@ předposlední blok ---
 \end{veta}
 
 \begin{definition}
-  Nechť $p$ je přímka. Množinou všech bodů $X \in \mathbb E_2,$ které mají od přímky $p$ stejnou vzdálenost $a\in \mathbb R^+$, je sjednocení přímek $e_1\cup e_2,$ kde $e_1 \parallel e_2 \land \rho(e_1,p)=\rho(e_2,p)=a$. Tyto přímky nazveme
+  Nechť $p$ je přímka. Množinou všech bodů $X \in \mathbb E_2,$ které mají od přímky $p$~stejnou vzdálenost $a\in \mathbb R^+$, je sjednocení přímek $e_1\cup e_2,$ kde $e_1 \parallel e_2 \land \rho(e_1,p)=\rho(e_2,p)=a$. Tyto přímky nazveme
   \textbf{ekvidistantou přímky} $p$.
 \end{definition}
 
 \begin{definition}
-  Nechť $k(S,r)$ je kružnice. Množinou všech bodů $X\in \mathbb E_2,$ které mají od kružnice $k$ stejnou vzdálenost $a, a \in \mathbb R^+, a< r,$ je sjednocení kružnic $e_1, e_2,$ kde kružnice $k,e_1,e_2$ jsou soustředné a platí $\rho(e_1,k)= \rho(e_2,k)=a.$ Tyto kružnice nazveme
+  Nechť $k(S,r)$ je kružnice. Množinou všech bodů $X\in \mathbb E_2,$ které mají od kružnice $k$~stejnou vzdálenost $a, a \in \mathbb R^+, a< r,$ je sjednocení kružnic $e_1, e_2,$ kde kružnice $k,e_1,e_2$ jsou soustředné a~platí $\rho(e_1,k)= \rho(e_2,k)=a.$ Tyto kružnice nazveme
   \textbf{ekvidistantou kružnice} $k$.
 \end{definition}
 
 \begin{definition}
-  Nechť $AB$ je úsečka. Množinou všech vrcholů $C\in \mathbb E_2$ všech pravoúhlých trojúhelníků $\triangle ABC$ s přeponou $AB$ je množina $k-\{ A,B\}$, kde $k\left (S,\frac{|AB|}{2}\right )$ je kružnice, $S$ je střed $AB$. Tuto množinu budeme nazývat \textbf{Thaletovou kružnicí} nad přeponou $AB$ a označovat $k_T(AB).$
+  Nechť $AB$ je úsečka. Množinou všech vrcholů $C\in \mathbb E_2$ všech pravoúhlých trojúhelníků $\triangle ABC$ s přeponou $AB$ je množina $k\smallsetminus\{ A,B\}$, kde $k\left (S,\frac{|AB|}{2}\right )$ je kružnice, $S$~je střed $AB$. Tuto množinu budeme nazývat \textbf{Thaletovou kružnicí} nad přeponou $AB$ a~označovat $\tau (AB).$
 \end{definition}
 
 \begin{veta}
@@ -615,7 +618,6 @@ předposlední blok ---
   Pokud $\sphericalangle AXB = \alpha,$ pak říkáme, že úsečka $AB$ je vidět z bodu $X$ pod úhlem $\alpha$, resp. úhel $\alpha$ se nazývá \textbf{zorným úhlem úsečky} $AB.$
 \end{pozn}
 
-poslední blok ---
 \begin{definition}
   Nechť $\triangle ABC$ je trojúhelník. Kružnici, která prochází body $A,B,C$, nazveme \textbf{kružnicí opsanou} trojúhelníku $\triangle ABC.$ Kružnici, která se dotýká všech tří stran trojúhelníku $\triangle ABC,$ nazveme \textbf{kružnici vepsanou} trojúhelníku $\triangle ABC.$
 \end{definition}
@@ -746,7 +748,7 @@ kde $M^\prime$ je průsečík úsečky $VM$ a kružnice $k^\prime$.
 \begin{priklad}
 Je dána přímka $p$, kružnice $k$, která nemá s přímkou $p$ společný bod a bod $A$, který
 neleží ani na přímce $p$, ani ve vnitřní oblasti kružnice $k$. Sestrojte trojúhelník
-$ABC$ s úhlem $|\sphericalangle BAC|=60^\circ$ tak, aby $B\in p, C \in k, |AC|=2|AB|.$
+$ABC$ s~úhlem $|\sphericalangle BAC|=60^\circ$ tak, aby $B\in p, C \in k, |AC|=2|AB|.$
 \end{priklad}
 
 \begin{reseni}
