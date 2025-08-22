@@ -46,13 +46,21 @@
   \end{center}
 \end{pozn}
 
+\begin{definition}
+  Zápisy sestavené ze značek, výrokových proměnných, závorek a logických spojek nazýváme \textbf{výrokové formule}.
+\end{definition}
+
+\begin{definition}
+  Výroková formule, která nabývá pravdivostní hodnoty 1 bez ohledu na pravdivostní hodnoty elementárních výroků, se nazývá \textbf{tautologie}.
+\end{definition}
+
 \begin{priklad}
-    Napište tabulku pravdivostních hodnot výrokové formule $A\land Y \implies (X\lor Y).$
+    Napište tabulku pravdivostních hodnot výrokové formule $A\land Y \implies (X\lor Y)$ a~určete,
+    zda je tautologií.
 \end{priklad}
 
 \begin{reseni}
-Tabulka:
-
+Napíšeme tabulku:
   \begin{center}
     \begin{tabular}{c c c | c c | c}
       $A$ & $X$ & $Y$ & $A \land Y$ & $X \lor Y$ & $A\land Y \implies (X\lor Y)$ \\
@@ -70,13 +78,6 @@ Tabulka:
   Vidíme, že výroková formule je tautologií.
 \end{reseni}
 
-\begin{definition}
-  Zápisy sestavené ze značek, výrokových proměnných, závorek a logických spojek nazýváme \textbf{výrokové formule}.
-\end{definition}
-
-\begin{definition}
-  Výroková formule, která nabývá pravdivostní hodnoty 1 bez ohledu na pravdivostní hodnoty elementárních výroků, se nazývá \textbf{tautologie}.
-\end{definition}
 
 \begin{veta}
   Pro každé dva výroky $X,Y$ platí:
@@ -126,7 +127,22 @@ Tabulka:
    	\item $B\lor C$,
    	\item $A^\prime \implies C^\prime$.
     \end{itemize}
-    Sestavme tabulku pravdivostních hodnot. Zjistíme, že vyhovují možnosti, kdy pracují
+    Sestavme tabulku pravdivostních hodnot:
+    \begin{center}
+      \begin{tabular}{c c c | c c c }
+        $A$ & $B$ & $C$ & $A \implies B$ & $B \lor C$ & $A^\prime \implies C^\prime$ \\
+        \hline
+        0 & 0 & 0 & 1 & 0 & 1  \\
+        0 & 0 & 1 & 1 & 1 & 0  \\
+        0 & 1 & 0 & 1 & 1 & 1  \\
+        0 & 1 & 1 & 1 & 1 & 0  \\
+        1 & 0 & 0 & 0 & 0 & 1  \\
+        1 & 0 & 1 & 0 & 1 & 1  \\
+        1 & 1 & 0 & 1 & 1 & 1  \\
+        1 & 1 & 1 & 1 & 1 & 1  \\
+      \end{tabular}
+    \end{center}
+    Zjišťujeme, že vyhovují možnosti, kdy pracují
     stroje $A,B,C$; $A,B$; nebo jen stroj $B.$
 \end{reseni}
 

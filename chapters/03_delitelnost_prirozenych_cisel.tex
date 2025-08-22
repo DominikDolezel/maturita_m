@@ -139,19 +139,58 @@ Najděte všechny dvojice přirozených čísel, jejichž součin je 864 a jejic
 \end{priklad}
 
 \begin{reseni}
-Podle věty \ref{existencedeleninevim}.
+Označme hledaná čísla $a,b$ a $D(a,b)=d$. Pak podle věty \ref{existencedeleninevim} existují $q_1, q_2 \in \mathbb Z$ taková, že
+\begin{align*}
+	a &= dq_1,\\
+	b &= dq_2, \\
+	D(q_1,q_2) &= 1.
+\end{align*}
+Potom $864=ab=d^2q_1q_2=36q_1q_2,$ takže $q_1q_2=24$. Zapišme si všechny tyto možnosti do tabulky:
+\begin{center}
+	\begin{tabular}{c | c }
+	    $q_1$ & $q_2$ \\
+		\hline
+	    1 & 24 \\
+		2 & 12 \\
+		3 & 8 \\
+		4 & 6
+	\end{tabular}
+\end{center}
+Jsou tedy čtyři možnosti, ovšem nesmíme zapomenout na podmínku $D(q_1,q_2)=1$. Vyhovují tedy jen možnosti
+1, 24 a 3, 8. Pak $a=6\cdot 1=6$, $b=6\cdot 24=144$ nebo $a=6\cdot 3=18$, $b=6\cdot 8=48$ nebo v obráceném pořadí.
 \end{reseni}
 
 \begin{priklad}
 Dokažte přímo a úvahou přes rozklad: $\forall a \in \mathbb Z: 3\, | \, (a^3-a).$
 \end{priklad}
 
+\begin{reseni}
+    \begin{enumerate}[$i.$]
+    	\item přímo: Mohou nastat dvě situace:
+        \begin{enumerate}[$a.$]
+       	    \item $a=3k, k\in \mathbb Z $, pak $3\, | \, (a^3-a)$ triviálně; nebo
+            \item $a=3k\pm 1$, pak $a^3-a=27k^3\pm 3\cdot 9k^2\cdot 1 + 3\cdot 3k \pm 1-3k\mp 1=
+            3(9k^3\pm 9k^2 + 3k-k),$ což je dělitelné třemi.
+        \end{enumerate}
+        \item úvahou přes rozklad: Rozložme $a^3-a$:
+        \[
+            a^3-a = a(a^2-1)=(a-1)a(a+1),
+        \]
+        odkud vidíme, že tři musí dělit právě jednoho z činitelů, protože jsou to tři po sobě jdoucí čísla.
+    \end{enumerate}
+\end{reseni}
+
 \begin{priklad}
 Dokažte nepřímo a sporem: $\forall n \in \mathbb N: 5 \, | \, n^2 \implies 5 \, | \, n.$
 \end{priklad}
 
 \begin{reseni}
-Dokazujeme obměnu.
+\begin{enumerate}[$i.$]
+	\item nepřímo: Dokazujeme obměnu $5 \, \centernot | \, n \implies 5 \, \centernot | \, n^2$, což je zřejmé.
+	\item sporem: Předpokládejme, že výrok platí. Pak $n^2=5q, q \in \mathbb Z$. Protože je 5 prvočíslo a~$n$~je
+    celé, musí i~$5^2 \, | \, n^2,$ jinak by odmocnina byla iracionální. Pak tedy
+    $n^2=5^2\cdot r^2,$ a~proto $n=5r, r \in \mathbb Z,$ což jsme chtěli dokázat.
+\end{enumerate}
 \end{reseni}
 
 \subsection*{Kritéria dělitelnosti}
@@ -240,7 +279,15 @@ Dokažte, že  $\forall n \in \mathbb N: 24 \, | \, (25^n+23).$
 \end{priklad}
 
 \begin{reseni}
-Matematickou indukcí.
+    Označme $V(n)=25^n+23$. Matematickou indukcí:
+    \begin{enumerate}[1.]
+        \item $n=1: 24 \, | \, (25+23) = 48$, platí
+        \item Nechť $24 \, | \, V(n)$. Chceme dokázat, že $24 \, | \, V(n+1).$ Platí:
+        \[
+            V(n+1) = 25^{n+1}+ 23 = 25\cdot (25^n+23)-25\cdot 23+23=25V(n)-23(25-1),
+        \]
+        odkud vidíme, že $24\, | \, V(n+1),$ což jsme chtěli dokázat.
+    \end{enumerate}
 \end{reseni}
 
 \begin{priklad}
@@ -248,7 +295,9 @@ Dokažte, že $\forall a \in \mathbb Z: 3 \, \centernot | \, a \implies 3 \, | \
 \end{priklad}
 
 \begin{reseni}
-Dokazujeme přímo dosazením za $a=3k\pm 1.$
+Není-li $a$ dělitelné třemi, pak $a=3k\pm 1.$ Potom
+$$a^2-1=9k^2\pm 2\cdot 3k\cdot 1+1-1=3(3k^2\pm 2k),$$
+což je dělitelné třemi.
 \end{reseni}
 
 \begin{priklad}
@@ -257,8 +306,24 @@ Určete čísla $a,b$.
 \end{priklad}
 
 \begin{reseni}
+Označme jejich největšího společeného dělitele jako $d$ a jejich nejmenší společný násobek
+jako $n$. Pak existují nesoudělná $q_1, q_2 \in \mathbb Z$ taková, že $a=dq_1$, $b=dq_2$.
 Užitím věty \ref{existencedeleninevim} dostaneme $dq_1q_2=n,$ tedy $q_1q_2=60,$ přitom
-$D(q_1,q_2)=1.$ Dále dopočítáme.
+$D(q_1,q_2)=1.$ Zaznačíme si všechny možnosti do tabulky:
+\begin{center}
+	\begin{tabular}{c | c}
+		$q_1$ & $q_2$ \\
+		\hline
+		1 & 60 \\
+		2 & 30 \\
+		3 & 20 \\
+		4 & 15 \\
+		5 & 12 \\
+		6 & 10
+	\end{tabular}
+\end{center}
+Vyhovují možnosti 1 a 60, 3 a 20, 4 a 15 a 5 a 12. Odpovídající $a, b$ už jednoduše dopočítáme. Nezpomeneme,
+že nezáleží na pořadí.
 \end{reseni}
 
 \begin{veta}[Binomická věta]\label{bin_v}
