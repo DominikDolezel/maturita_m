@@ -25,7 +25,14 @@ Určete definiční obor a obor hodnot funkce $y=x^2+x+1.$
 
 \begin{reseni}
 Definiční obor je $\mathbb R$, obor hodnot (množinu všech vyhovujících $a$)
-získáme řešením rovnice $a=x^2+x+1.$
+získáme řešením rovnice $a=x^2+x+1$ v proměnné $x$:
+\begin{align*}
+	a &= x^2+x+1 \\
+	0 &= x^2+x+1-a \\
+	D&= 1-4(1-a)=4a-3.
+\end{align*}
+Aby rovnice měla řešení, musí být $D\geq 0$, tedy $4a-3\geq 0$, odkud dostáváme $a\geq 3/4$,
+obor hodnot je tedy $\left < 3/4, \infty \right ). $
 \end{reseni}
 
 \begin{pozn}
@@ -36,15 +43,78 @@ získáme řešením rovnice $a=x^2+x+1.$
 Nakreslete graf funkce $y=2-|x+1|.$
 \end{priklad}
 
+\begin{reseni}
+	Graf této funkce (lomená přímka) bude mít zlomy jen tam, kde má zlomy absolutní hodnota,
+	tj. v jejích nulových bodech. V tomto případě je to v bodě $x=-1$
+	(protože pak $x+1=0$, kde se mění znaménko). Stačí tedy určit funkční hodnotu v tomto bodě
+	a~v~libovolných dvou bodech nalevo a napravo od něj.
+	\begin{figure}[ht!]
+        \begin{center}
+        \begin{tikzpicture}
+        \begin{axis}[
+            axis lines = middle,
+            xlabel = \(x\),
+            ylabel = {\(y\)},
+            xmin=-4.5,
+            xmax=2.5,
+            ymin=-1.5,
+            ymax=2.5,
+            line width=1.5pt,
+        ]
+        %Below the red parabola is defined
+        \addplot [
+            domain=-4:2,
+            samples=500,
+            color=blue,
+        ]
+        {2-abs(x+1)};
+
+        \end{axis}
+        \end{tikzpicture}
+        \caption*{Graf $2- |x+1|$}
+        \end{center}
+        \end{figure}
+\end{reseni}
+
 \begin{priklad}
 Nakreslete graf funkce $y=-2x^2+x-1$.
 \end{priklad}
 
 \begin{reseni}
-Doplněním na čtverec, odkud jsou posuny jasně patrné.
+Doplněním na čtverec získáme:
+$$
+	-2x^2+x-1 = -2 \left( x^2-\frac{1}{2}x+\frac{1}{2} \right ) = -2 \underbrace{\left( x-\frac{1}{4} \right )^2}_{x-\frac{1}{2}x+\frac{1}{16}} -2\left(-\frac{1}{16}+\frac{1}{2}\right)=-2 \left( x- \frac{1}{4} \right )^2-\frac{7}{8},
+$$
+odkud vidíme, že parabola je rozevřená dolů, je posunutá o $1/4$ doprava a o $7/8$ dolů.
+\begin{figure}[ht!]
+       \begin{center}
+       \begin{tikzpicture}
+       \begin{axis}[
+           axis lines = middle,
+           xlabel = \(x\),
+           ylabel = {\(y\)},
+           xmin=-0.75,
+           xmax=1.25,
+           ymin=-3,
+           ymax=0.2,
+           line width=1.5pt,
+       ]
+       %Below the red parabola is defined
+       \addplot [
+           domain=-0.75:1.25,
+           samples=500,
+           color=blue,
+       ]
+       {-2*x*x+x-1};
+
+       \end{axis}
+       \end{tikzpicture}
+       \caption*{Graf $-2x^2+x-1$}
+       \end{center}
+       \end{figure}
 \end{reseni}
 
-\begin{definition}
+\begin{definition}\label{lichasuda}
   Funkce $f$ se nazývá \textbf{lichá} (resp. \textbf{sudá}), jestliže platí
   \begin{enumerate}[$i.$]
     \item $\forall x \in D(f): -x \in D(f)$ a
@@ -61,7 +131,8 @@ Určete paritu funkce $y=x^2$.
 \end{priklad}
 
 \begin{reseni}
-\begin{enumerate}[1.]
+Ověříme obě podmínky z definice \ref{lichasuda}:
+\begin{enumerate}[$i.$]
 \item $D(f)=\mathbb R$ -- platí,
 \item $f(-x)=(-x)^2=x^2=f(x)$ -- platí, tedy funkce je sudá.
 \end{enumerate}
