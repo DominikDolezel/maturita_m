@@ -118,7 +118,7 @@ Najděte racionální kořeny polynomu $P(x)=\frac{3}{5}x^4+x^3+\frac{1}{5}x^2+x
 \begin{reseni}
 Vynásobme polynom 5, abychom měli všechny koeficienty celé.
 $$P(x) = 3x^4+5x^3+x^2+5x-2.$$
-Pak $r \, | \, a_0 \implies r\, | \, -2 \implies r \in \left \{ \pm 2, \pm 1 \right \} $
+Pak $r \, | \, a_0 \implies r\, | \, (-2) \implies r \in \left \{ \pm 2, \pm 1 \right \} $
 a $s \, | \, a_n\implies s \, | \, 3 \implies s \in \left \{ 1, 3 \right \} $.
 Sestavíme všechny možnosti a vyzkoušíme. S výhodou taky můžeme využít věty
 \ref{odecitanivpolynomu}.
@@ -157,8 +157,14 @@ Sestavíme všechny možnosti a vyzkoušíme. S výhodou taky můžeme využít 
 \end{priklad}
 
 \begin{reseni}
-Rozložíme v reálném oboru. Členy se záporným diskriminantem nemají reálný kořen,
-neuvažujeme je tedy. V sudých mocninách se nemění znaménko.
+Rozložíme v reálném oboru:
+\begin{equation*}
+P(x)=(x-1)^2(x+5)^3x^4(x-3)(x-2)(x^2+1)(x-5)^5.
+\end{equation*}
+Členy se záporným diskriminantem (v tomto případě $x^2+1$) nemají reálný kořen,
+neuvažujeme je tedy. V sudých mocninách se nemění znaménko. Nulové body si zaneseme
+na číselnou osu a v každém, který je na lichou mocninu, změníme znaménko (dosadíme si nějaké
+krajní, třeba pro milion). Řešením je tedy $\left( -\infty,-5 \right >\cup \left < 2,3 \right > \cup \left < 5,\infty \right )  $.
 \end{reseni}
 
 \begin{definition}
@@ -204,6 +210,34 @@ neuvažujeme je tedy. V sudých mocninách se nemění znaménko.
 Euklidovým algoritmem. Dělíme tak dlouho, dokud nevyjde nulový zbytek.
 Mezi jednotlivými děleními můžeme polynomy vynásobit libovolnou konstantou (protože
 to nezmění kořeny polynomu).
+\setlength{\tabcolsep}{2pt}
+\begin{center}
+	\begin{tabular}{rrrrrrrrl}
+	    \,  & $(x^3$ & $+$ & $8x^2$ & $+$ & $17x$ & $+$ & $10)$ & $:(x^3+5x^2+2x+10)=1$ \\
+		$-$ & $x^3$  & $-$ & $5x^2$ & $-$ & $2x$  & $-$ & $10\phantom{)}$	& \, \\
+		\hline
+		\,  & \,     & \,  & $3x^2$ & $+$ & $15x$ & \,  & \,                & \,
+	\end{tabular}
+\end{center}
+Tento zbytek můžeme pro zjednodušení výpočtu vydělit třemi. Počítejme dále:
+\begin{center}
+	\begin{tabular}{rrrrrrrrl}
+	    \,  & $(x^3$ & $+$ & $5x^2$ & $+$ & $2x$ & $+$ & $10)$ & $:(x^2+5x)=x$ \\
+		$-$ & $x^3$  & $-$ & $5x^2$ & \,  & \,   & \,  & \,    & \, \\
+		\hline
+		\,  & \,     & \,  & \,     & \,  & $2x$ & $+$ & $10\phantom{)}$ & \,
+	\end{tabular}
+\end{center}
+Tento zbytek opět můžeme vydělit dvěma:
+\begin{center}
+	\begin{tabular}{rrrrrrrrl}
+	    \,  & $(x^2$ & $+$ & $5x)$ & $:(x+5)=x$ \\
+		$-$ & $x^2$  & $-$ & $5x)$ & \,  \\
+		\hline
+		\,  & \,     &   \,& $0\phantom{)}$     & \,
+	\end{tabular}
+\end{center}
+Největším společným dělitelem je poslední nenulový zbytek, tj. $x+5$.
 \end{reseni}
 
 \begin{definition}
@@ -228,11 +262,26 @@ to nezmění kořeny polynomu).
 
 
 \begin{priklad}
-Je dán polynom $x^3+3x-2$, který má dvojnásobný kořen.
+Je dán polynom $P(x)=x^3-3x-2$, který má dvojnásobný kořen.
 Určete všechny jeho kořeny.
 \end{priklad}
 
 \begin{reseni}
-Určíme první derivaci. Dvojnásobný kořen je kořenem první derivace, ale ne naopak.
-Vyzkoušíme tedy v Hornerovém schématu.
+Dvojnásobný kořen je kořenem první derivace (ale ne naopak). Určeme tedy nejprve první derivaci.
+\begin{equation*}
+	P^\prime(x)=3x^2-3,
+\end{equation*}
+kořeny jsou tedy $\pm 1$. Po zpětném dosazení do $P(x)$ ovšem zjišťujeme, že 1 není kořen $P(x)$
+(a $-1$ ano), proto je $-1$ dvojnásobným kořenem $P(x)$. Vydělme $P(x)$ polynomem $(x+1)^2$ v~Hornerově
+schématu:
+\begin{center}
+	\begin{tabular}{c | c c c c}
+		\, & $1$ & $0$ & $-3$ & $-2$\\
+		\hline
+		$-1$ & $1$ & $-1$ & $-2$ & $0$\\
+		\hline
+		$-1$ & $1$ & $-2$ & $0$ & \,\\
+	\end{tabular}
+\end{center}
+Odtud máme $P(x)=(x+1)^2(x-2)$, třetím kořenem je tedy $x=2$.
 \end{reseni}
