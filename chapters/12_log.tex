@@ -5,6 +5,61 @@
     funkcí} o základu $a$. Zapisujeme $f^{-1}: y=\log_a x.$
 \end{definition}
 
+\begin{figure}[ht!]
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+        axis lines = middle,
+        xlabel = \(x\),
+        ylabel = {\(y\)},
+        line width=1.5pt,
+        width=.8\textwidth,
+        height=.6\textwidth,
+        ymin=-2.5,
+        ymax=4.4,
+        xmin=-4.5,
+        xmax=4.5,
+        grid
+    ]
+    %Below the red parabola is defined
+    \addplot [
+        domain=-5:5,
+        samples=100,
+        color=red
+    ]
+    {2^x};
+    \addlegendentry{\(2^x\)}
+
+    \addplot [
+        domain=0.1:5,
+        samples=100,
+        color=blue
+        ]
+        {ln(x)/ln(2)};
+    \addlegendentry{\(\log_2 x\)}
+
+    \addplot [
+        domain=-0.1:5,
+        samples=100,
+        color=green
+        ]
+        {ln(x)/ln(0.5)};
+    \addlegendentry{\(\log_\frac{1}{2}x\)}
+
+    \addplot [
+        domain=-5:5,
+        samples=100,
+        color=gray,
+        dashed
+        ]
+        {x};
+    \addlegendentry{\(y=x\)}
+
+    \end{axis}
+    \end{tikzpicture}
+  \caption{Grafy funkcí $2x-1$ a $\frac{x+1}{2}$}
+\end{figure}
+
 \begin{veta}
     Nechť je dána logaritmická funkce $f:y=\log_a x$, $a \in \mathbb R^+ \smallsetminus
     \left \{ 1 \right \} $. Pak

@@ -114,6 +114,85 @@ odkud vidíme, že parabola je rozevřená dolů, je posunutá o $1/4$ doprava a
        \end{figure}
 \end{reseni}
 
+\begin{definition}
+  Funkce $f$ se nazývá \textbf{prostá}, právě tehdy když
+  \[
+    \forall x_1,x_2\in D(f): x_1\ne x_2 \implies f(x_1)\ne f(x_2).
+  \]
+\end{definition}
+
+\begin{definition}
+	Nechť $f:D(f)\to H(f)$ je prostá funkce. \textbf{Inverzní funkcí} k funkci $f$ nazveme funkci
+	$f^{-1}:H(f)\to D(f)$ takovou, že
+	$$
+	    f(x)=y\iff f^{-1}(y)=x.
+	$$
+\end{definition}
+
+\begin{pozn}
+	   Grafy funkce a funkce k ní inverzní jsou souměrné podle přímky $y=x$.
+\end{pozn}
+
+\begin{priklad}
+K funkci $f:y=2x-1$ určete $f^{-1}$ a načrtněte grafy obou funkcí.
+\end{priklad}
+
+\begin{reseni}
+Počítejme
+\begin{align*}
+    2x&=y+1\\
+    f^{-1}:y &= \frac{x+1}{2}.
+\end{align*}
+Grafy funkcí jsou souměrné podle přímky $y=x$ a mají stejnou monotónnost.
+
+\begin{figure}[ht!]
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+        axis lines = middle,
+        xlabel = \(x\),
+        ylabel = {\(y\)},
+        line width=1.5pt,
+        width=.8\textwidth,
+        height=.6\textwidth,
+        ymin=-2.5,
+        ymax=4.4,
+        xmin=-4.5,
+        xmax=4.5,
+        grid
+    ]
+    %Below the red parabola is defined
+    \addplot [
+        domain=-5:5,
+        samples=100,
+        color=red
+    ]
+    {2*x - 1};
+    \addlegendentry{\(2x-1\)}
+
+    \addplot [
+        domain=-5:5,
+        samples=100,
+        color=blue
+        ]
+        {(x+1) / 2};
+    \addlegendentry{\((x+1)/2\)}
+
+    \addplot [
+        domain=-5:5,
+        samples=100,
+        color=gray,
+        dashed
+        ]
+        {x};
+    \addlegendentry{\(y=x\)}
+
+    \end{axis}
+    \end{tikzpicture}
+  \caption{Grafy funkcí $2x-1$ a $\frac{x+1}{2}$}
+\end{figure}
+\end{reseni}
+
 \begin{definition}\label{lichasuda}
   Funkce $f$ se nazývá \textbf{lichá} (resp. \textbf{sudá}), jestliže platí
   \begin{enumerate}[$i.$]
@@ -137,13 +216,6 @@ Ověříme obě podmínky z definice \ref{lichasuda}:
 \item $f(-x)=(-x)^2=x^2=f(x)$ -- platí, tedy funkce je sudá.
 \end{enumerate}
 \end{reseni}
-
-\begin{definition}
-  Funkce $f$ se nazývá \textbf{prostá}, právě tehdy když
-  \[
-    \forall x_1,x_2\in D(f): x_1\ne x_2 \implies f(x_1)\ne f(x_2).
-  \]
-\end{definition}
 
 \begin{definition}
   Nechť $f$ je funkce a $M$ alespoň dvouprvková množina z $D(f)$. Řekneme, že funkce $f$ je na množině $M$

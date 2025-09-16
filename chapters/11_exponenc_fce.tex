@@ -5,6 +5,52 @@
     nazveme \textbf{přirozenou exponenciální funkcí}.
 \end{definition}
 
+\begin{figure}[ht!]
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+        axis lines = middle,
+        xlabel = \(x\),
+        ylabel = {\(y\)},
+        line width=1.5pt,
+        width=.8\textwidth,
+        height=.6\textwidth,
+        ymin=-2.5,
+        ymax=4.4,
+        xmin=-4.5,
+        xmax=4.5,
+        grid
+    ]
+    %Below the red parabola is defined
+    \addplot [
+        domain=-5:5,
+        samples=100,
+        color=red
+    ]
+    {2^x};
+    \addlegendentry{\(2^x\)}
+
+    \addplot [
+        domain=-5:5,
+        samples=100,
+        color=blue
+        ]
+        {0.5^x};
+    \addlegendentry{\((1/2)^x\)}
+
+    \addplot [
+        domain=-5:5,
+        samples=100,
+        color=green
+        ]
+        {e^x};
+    \addlegendentry{\(e^x\)}
+
+    \end{axis}
+    \end{tikzpicture}
+  \caption{Grafy některých exponenciálních funkcí}
+\end{figure}
+
 \begin{veta}
     Vlastnosti exponenciálních funkcí $y= a^x$, kde $a$ je přirozené číslo:
     \begin{enumerate}[$i.$]

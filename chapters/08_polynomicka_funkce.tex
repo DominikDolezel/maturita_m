@@ -7,6 +7,44 @@
 \end{enumerate}
 \end{definition}
 
+\begin{figure}[ht!]
+\begin{center}
+  \begin{tikzpicture}
+  \begin{axis}[
+      axis lines = middle,
+      xlabel = \(x\),
+      ylabel = {\(y\)},
+      xmin=-1.5,
+      xmax=2,
+      ymin=-0.2,
+      ymax=1.2,
+      xtick = \empty,
+      ytick = \empty,
+      line width=1.5pt,
+      width=.6\textwidth,
+      height=.4\textwidth,
+  ]
+  %Below the red parabola is defined
+  \addplot [
+      domain=-1.5:2,
+      samples=500,
+      color=blue,
+  ]
+  {1};
+
+  \addplot [
+      domain=-1.5:2,
+      samples=500,
+      color=red,
+  ]
+  {0.5*x+0.3};
+
+  \end{axis}
+  \end{tikzpicture}
+  \caption{Graf konstantní (modře) a lineární (červeně) funkce}
+\end{center}
+\end{figure}
+
 \begin{pozn}\,
   \begin{itemize}
     \item Definičním oborem konstantní i lineární funkce je $\mathbb R$. \\
@@ -45,6 +83,52 @@
 \begin{definition}
   Nechť $a,b,c \in \mathbb R, a \neq 0$. Pak funkci $f:y = ax^2 + bx+ c$ nazýváme \textbf{kvadratickou funkcí}.
 \end{definition}
+
+\begin{figure}[ht!]
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+        axis lines = middle,
+        xlabel = \(x\),
+        ylabel = {\(y\)},
+        line width=1.5pt,
+        width=.8\textwidth,
+        height=.6\textwidth,
+        ymin=-2.5,
+        ymax=4.4,
+        xmin=-4.5,
+        xmax=4.5,
+        grid
+    ]
+    %Below the red parabola is defined
+    \addplot [
+        domain=-4:4,
+        samples=500,
+        color=red,
+    ]
+    {x^2};
+    \addlegendentry{\(x^2\)}
+
+    \addplot [
+        domain=-4:4,
+        samples=500,
+        color=blue,
+        ]
+        {(x+1)^2-2};
+    \addlegendentry{\((x+1)^2-2\)}
+
+    \addplot [
+        domain=-4:4,
+        samples=500,
+        color=green,
+        ]
+        {-2*x^2+3};
+    \addlegendentry{\(-2x^2+3\)}
+
+    \end{axis}
+    \end{tikzpicture}
+  \caption{Grafy různých kvadratických funkcí}
+\end{figure}
 
 \begin{pozn}\,
   \begin{itemize}
@@ -105,6 +189,60 @@
 \begin{definition}
     Nechť $P(x)\in \mathbb R[x]$ je polynom. Pak funkci $f:y=P(x)$ nazveme \textbf{polynomickou funkcí}.
 \end{definition}
+
+\begin{figure}[ht!]
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+        axis lines = middle,
+        xlabel = \(x\),
+        ylabel = {\(y\)},
+        line width=1.5pt,
+        width=.8\textwidth,
+        height=.6\textwidth,
+        ymin=-3.5,
+        ymax=3.5,
+        xmin=-2.3,
+        xmax=2.3,
+        grid
+    ]
+    %Below the red parabola is defined
+    \addplot [
+        domain=-2:2,
+        samples=100,
+        color=red,
+    ]
+    {x^2};
+    \addlegendentry{\(x^2\)}
+
+    \addplot [
+        domain=-2:2,
+        samples=100,
+        color=blue,
+        ]
+        {x^3};
+    \addlegendentry{\(x^3\)}
+
+    \addplot [
+        domain=-2:2,
+        samples=100,
+        color=green,
+        ]
+        {x^4};
+    \addlegendentry{\(x^4\)}
+
+    \addplot [
+        domain=-2:2,
+        samples=100,
+        color=orange,
+        ]
+        {x^5};
+    \addlegendentry{\(x^5\)}
+
+    \end{axis}
+    \end{tikzpicture}
+  \caption{Grafy funkcí tvaru $x^n$}
+\end{figure}
 
 \begin{pozn}\,
     \begin{enumerate}[$i.$]

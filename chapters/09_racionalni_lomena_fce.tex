@@ -10,12 +10,69 @@
     funkcí}.
 \end{definition}
 
+\begin{figure}[ht!]
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+        axis lines = middle,
+        xlabel = \(x\),
+        ylabel = {\(y\)},
+        line width=1.5pt,
+        width=.8\textwidth,
+        height=.6\textwidth,
+        ymin=-2.5,
+        ymax=4.4,
+        xmin=-4.5,
+        xmax=4.5,
+        grid
+    ]
+    %Below the red parabola is defined
+    \addplot [
+        domain=-5:-0.1,
+        samples=100,
+        color=red
+    ]
+    {1/x};
+    \addplot [
+        domain=-5:-1.1,
+        samples=100,
+        color=blue
+        ]
+        {(2*x+3)/(x+1)};
+    \addplot [
+        domain=0.1:5,
+        samples=100,
+        color=red
+    ]
+    {1/x};
+    \addlegendentry{\(1/x\)}
+
+
+    \addlegendentry{\((2x+3)/(x+1)\)}
+    \addplot [
+        domain=-0.9:5,
+        samples=100,
+        color=blue
+        ]
+        {(2*x + 3) / (x+1)};
+
+
+    \end{axis}
+    \end{tikzpicture}
+\label{reseniobr}
+  \caption{Grafy různých lineárně lomených funkcí}
+\end{figure}
+
 \begin{priklad}
 Nakreslete graf funkce $f: y=\frac{2x+3}{x+1}.$
 \end{priklad}
 
 \begin{reseni}
-Vydělením získáme přehled o posunech počátku.
+Vydělením získáme přehled o posunech počátku:
+\begin{equation*}
+	(2x+3):(x+1)=2+\frac{1}{x+1}.
+\end{equation*}
+Hyperbola je tedy posunutá o dva nahoru a o jedna doleva. Přesvědčit se můžeme v obrázku \ref{reseniobr}.
 \end{reseni}
 
 \begin{pozn}
@@ -70,8 +127,8 @@ Vydělením získáme přehled o posunech počátku.
 \end{priklad}
 
 \begin{reseni}
-  Rozložíme čitatele i jmenovatele v reálném oboru. Znaménko se obecně mění v kořenech čitatele nebo kořenech jmenovatele. Členy se záporným diskriminantem nemají reálný kořen,
-  neuvažujeme je tedy. V sudých mocninách se nemění znaménko. Zároveň musíme vyloučit samotné kořeny jmenovatele, protože je v nich výraz nedefinován. Toto vše vyneseme na číselnou osu.
+  Rozložíme čitatele i jmenovatele v reálném oboru. Znaménko se obecně mění v~kořenech čitatele nebo kořenech jmenovatele. Členy se záporným diskriminantem nemají reálný kořen,
+  neuvažujeme je tedy. V~sudých mocninách se nemění znaménko. Zároveň musíme vyloučit samotné kořeny jmenovatele, protože je v nich výraz nedefinován. Toto vše vyneseme na číselnou osu.
 \end{reseni}
 
 \begin{veta}[Rozklad na parciální zlomky]
