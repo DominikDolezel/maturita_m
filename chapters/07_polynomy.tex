@@ -50,10 +50,10 @@
 \begin{veta}[Vi\`{e}tovy vztahy]
   Nechť $P(x)=a_nx^n+a_{n-1}x^{n-1}+\dots + a_1x+a_0$ je polynom stupně $n$, který má v množině $\mathbb R$ právě $n$ kořenů $x_1,x_2\dots,x_n$ (každý počítáme tolikrát, jaká je jeho násobnost). Pak platí:
   \begin{align*}
-    &\smashoperator[l]{\sum_{i=1}^n} \, x_i = -\frac{a_{n-1}}{a_n} \\
-    &\smashoperator[l]{\sum_{i,j=1; i<j}^{n}}\!\!\!\!\! x_ix_j= \frac{a_{n-2}}{a_n} \\
+    &\smashoperator[l]{\sum_{i=1}^n} \, x_i = -\frac{a_{n-1}}{a_n}, \\
+    &\smashoperator[l]{\sum_{i,j=1; i<j}^{n}}\!\!\!\!\! x_ix_j= \frac{a_{n-2}}{a_n}, \\
     & \hdots \\
-    &\smashoperator[l]{\prod_{i=1}^n}x_i=(-1)^n\frac{a_0}{a_n}
+    &\smashoperator[l]{\prod_{i=1}^n}x_i=(-1)^n\frac{a_0}{a_n}.
   \end{align*}
 \end{veta}
 
@@ -96,7 +96,7 @@ rovnice tvaru $P(x)=0,$ kde $P(x)$ je polynom $n$-tého stupně s reálnými koe
     Nechť $\frac{r}{s}$ je racionální kořen algebraické rovnice \ref{alg_rce} s celočíselnými koeficienty.
     Pak platí:
     $$\forall m \in \mathbb Z: (r-ms) \, |\, a(m),$$
-    kde $a(m)$ je hodnota polynomu $a(x)$ pro $x=m.$ Nejčastěji používáme $r + s \, | \, a(-1)$ a $r - s \, |\, a(1).$
+    kde $a(m)$ je hodnota polynomu $a(x)$ pro $x=m.$ Nejčastěji používáme $(r + s) \, | \, a(-1)$ a $(r - s) \, |\, a(1).$
 \end{veta}
 
 \begin{veta}[Hledání racionálních kořenů polynomu s racionálními koeficienty]
@@ -184,7 +184,7 @@ krajní, třeba pro milion). Řešením je tedy $\left( -\infty,-5 \right >\cup 
     \item $A(x) = O(x) \implies D(A(x), B(x)) = B(x)$ nebo $B(x) = O(x) \implies D(A(x), B(x)) = A(x)$ triviálně;
     \item $A(x)\ne O(x)\ne B(x)$.
   \end{enumerate}
-  Dále se zabýváme případem $ii$. Je-li to nutné, přejmenujme polynomy tak, aby $\text{st}(A(x)) \geq \text{st}(B(x)),$.
+  Dále se zabýváme případem $ii$. Je-li to nutné, přejmenujme polynomy tak, aby $\text{st}(A(x)) \geq \text{st}(B(x))$.
   Proveďme následující posloupnost dělení se zbytkem. Toto dělení ukončíme, až bude zbytek nulový polynom.
   Vzhledem k nerovnosti na pravé straně tento nulový zbytek existuje.
   \begin{align*}
