@@ -133,7 +133,7 @@
 %------------------------------------------------------------
 % HEADINGS: SECTIONS & SUBSECTIONS
 %------------------------------------------------------------
-\RequirePackage{titlesec}
+\RequirePackage[nobottomtitles*]{titlesec}
 \newcommand{\sectionbreak}{\clearpage}
 
 \renewcommand{\thesection}{\arabic{section}}
