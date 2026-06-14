@@ -21,11 +21,20 @@
 \usepackage{centernot}
 \usepackage{pgfplots}
 \usepackage{caption}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{angles, quotes, calc}
 \graphicspath{{images/}}
 \pgfplotsset{width=10cm,compat=1.9}
 
 \usepackage{tikzit}
 \input{default.tikzstyles}
+
+\definecolor{textcolor}{HTML}{1A3C4D}  % Tmavě modro-šedá pro text a čáry
+\definecolor{linecolor}{HTML}{1A3C4D}
+\definecolor{fillcolor}{HTML}{BCE0F4}  % Světle modrá výplň úhlů
+\definecolor{arccolor}{HTML}{1D8BCC}   % Tmavší modrá pro ohraničení úhlů
 
 
 \declaretheoremstyle[
@@ -64,6 +73,11 @@
   bodyfont=\color{black}\normalfont,
 ]{axiom}
 
+\declaretheoremstyle[
+  headfont=\color{orange}\normalfont\bfseries,
+  bodyfont=\color{black}\normalfont,
+]{algoritmus}
+
 \declaretheorem[
   style=def,
   name=Definice,
@@ -98,6 +112,11 @@
   style=axiom,
   name=Axiom,
 ]{axiom}
+
+\declaretheorem[
+  style=algoritmus,
+  name=Algoritmus,
+]{algoritmus}
 
 \DeclareMathOperator{\tg}{tg}
 \DeclareMathOperator{\cotg}{cotg}

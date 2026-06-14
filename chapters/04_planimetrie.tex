@@ -13,22 +13,22 @@
 
 \begin{axiom}
   Každými dvěma různými body prochází právě jedna přímka.
-  $$\forall A, B \in \mathbb E_2, A\neq B: \exists! p \in \mathscr P: A \in p \land B \in p.$$
+  $$\forall A, B \in \mathbb E_2, A\neq B\, \exists! p \in \mathscr P: A \in p \land B \in p.$$
 \end{axiom}
 
 \begin{axiom}
   Na každé přímce leží alespoň dva různé body.
-  $$\forall p \in \mathscr P:\exists A,B \in \mathbb E_2: A\neq B \land A \in p \land B \in p.$$
+  $$\forall p \in \mathscr P\,\exists A,B \in \mathbb E_2: A\neq B \land A \in p \land B \in p.$$
 \end{axiom}
 
 \begin{axiom}
   Existují alespoň tři po dvou různé body, které neleží na jedné přímce.
-  $$\exists A,B,C \in \mathbb E_2, A \neq B, B\neq C, C\neq A: \forall p \in \mathscr P: A \notin p \lor B \notin p \lor C \notin p.$$
+  $$\exists A,B,C \in \mathbb E_2, A \neq B, B\neq C, C\neq A\, \forall p \in \mathscr P: A \notin p \lor B \notin p \lor C \notin p.$$
 \end{axiom}
 
 \begin{axiom}[Euklidův axiom]
   Každým bodem, který neleží na dané přímce, prochází právě jedna přímka, která s danou přímkou nemá žádný společný bod.
-  $$\forall A \in \mathbb E_2, \forall p \in \mathscr P: A \notin p \implies \exists! q \in \mathscr P: A \in q \land p \cap q = \emptyset.$$
+  $$\forall A \in \mathbb E_2, \forall p \in \mathscr P\, A \notin p \implies \exists! q \in \mathscr P: A \in q \land p \cap q = \emptyset.$$
 \end{axiom}
 
 \begin{definition}
@@ -42,12 +42,12 @@
 
 \begin{axiom}
   Pro každé dva různé body $A,B$ existuje bod $C$ takový, že bod $B$ leží mezi body $A$ a $C$.
-  $$\forall A, B \in \mathbb E_2, A \neq B: \exists C \in \mathbb E_2: B\, \mu \,AC.$$
+  $$\forall A, B \in \mathbb E_2, A \neq B\, \exists C \in \mathbb E_2: B\, \mu \,AC.$$
 \end{axiom}
 
 \begin{axiom}
 Pro každé dva různé body $A,B$ existuje bod $C$ takový, že bod $C$ leží mezi body $A$ a $B$.
-  $$\forall A, B \in \mathbb E_2, A \neq B: \exists D \in \mathbb E_2: D\, \mu \,AB.$$
+  $$\forall A, B \in \mathbb E_2, A \neq B\, \exists D \in \mathbb E_2: D\, \mu \,AB.$$
 \end{axiom}
 
 \begin{axiom}
@@ -180,7 +180,64 @@ Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a
 
   \begin{figure}[ht!]
     \centering
-    \includegraphics[width=0.8\textwidth]{uhly_dle_velikosti}
+    \begin{tikzpicture}[
+        text=textcolor,
+        angle fill/.style={fill=fillcolor, draw=arccolor, thick, line join=round},
+        line/.style={draw=linecolor, thick, line cap=round}
+    ]
+
+    % 1. Ostrý
+    \begin{scope}[xshift=0cm]
+        \filldraw[angle fill] (0,0) -- (0.6,0) arc (0:45:0.6) -- cycle;
+        \draw[line] (0,0) -- (1.2,0);
+        \draw[line] (0,0) -- (45:1.2);
+        \node at (0.6, 1.4) {ostrý};
+    \end{scope}
+
+    % 2. Pravý
+    \begin{scope}[xshift=2.5cm]
+        \filldraw[angle fill] (0,0) -- (0.6,0) arc (0:90:0.6) -- cycle;
+        \draw[line] (0,0) -- (1.2,0);
+        \draw[line] (0,0) -- (90:1.1);
+        \node at (0.6, 1.4) {pravý};
+    \end{scope}
+
+    % 3. Tupý
+    \begin{scope}[xshift=5.2cm]
+        \filldraw[angle fill] (0,0) -- (0.6,0) arc (0:115:0.6) -- cycle;
+        \draw[line] (0,0) -- (1.2,0);
+        \draw[line] (0,0) -- (115:1.2);
+        \node at (0.3, 1.4) {tupý};
+    \end{scope}
+
+    % 4. Přímý
+    \begin{scope}[xshift=8.2cm]
+        \filldraw[angle fill] (0,0) -- (0.6,0) arc (0:180:0.6) -- cycle;
+        \draw[line] (-1,0) -- (1,0);
+        \draw[line] (0,-0.15) -- (0,0.15); % středová značka
+        \node at (0, 1.4) {přímý};
+    \end{scope}
+
+    % Svorka (brace) přes konvexní úhly
+    \draw[decorate, decoration={brace, amplitude=6pt, raise=2pt}, linecolor, thick]
+        (-0.2, 1.8) -- (9.4, 1.8) node[midway, above=8pt, font=\large] {konvexní};
+
+    % 5. Konkávní
+    \begin{scope}[xshift=11.2cm]
+        \filldraw[angle fill] (0,0) -- (0.6,0) arc (0:225:0.6) -- cycle;
+        \draw[line] (0,0) -- (1.2,0);
+        \draw[line] (0,0) -- (225:1.2);
+        \node at (0.3, 1.4) {konkávní};
+    \end{scope}
+
+    % 6. Plný
+    \begin{scope}[xshift=14.2cm]
+        \filldraw[angle fill] (0,0) circle (0.6);
+        \draw[line] (0,0) -- (1.2,0);
+        \node at (0, 1.4) {plný};
+    \end{scope}
+
+    \end{tikzpicture}
     \caption{Klasifikace úhlů podle velikosti}
   \end{figure}
 \end{pozn}

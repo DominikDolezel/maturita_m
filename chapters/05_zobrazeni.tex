@@ -29,8 +29,39 @@ Znázorněte graf relace $U=\left \{ \left [ x,y \right ]\in \mathbb R^2: x-y+1=
 \end{priklad}
 
 \begin{reseni}
-Řešením je přímka $y=x+1.$
+Řešením rovnice $x-y+1=0$ dostaneme tvar $y=x+1$. Graf je znázorněn v obrázku \ref{grafx+1}.
 \end{reseni}
+
+\begin{figure}[ht!]
+	\centering
+	\begin{tikzpicture}
+    \begin{axis}[
+        axis lines = middle,
+        xlabel = \(x\),
+        ylabel = {\(y\)},
+        line width=1.5pt,
+        width=.8\textwidth,
+        height=.6\textwidth,
+        ymin=-2.5,
+        ymax=4.4,
+        xmin=-4.5,
+        xmax=4.5,
+        grid
+    ]
+
+    \addplot [
+        domain=-5:5,
+        samples=100,
+        color=blue
+    ]
+    {x+1};
+    \addlegendentry{\(x+1\)}
+
+    \end{axis}
+    \end{tikzpicture}
+	\caption{Graf relace $U=\left \{ \left [ x,y \right ]\in \mathbb R^2: x-y+1=0  \right \} $}
+	\label{grafx+1}
+\end{figure}
 
 \begin{definition}\label{reflsymtran}
   Relaci na množině $A$ nazveme

@@ -10,11 +10,11 @@
 \begin{definition}
   Nechť $f\subseteq \mathbb R \times \mathbb R$ je funkce. Množinu
   \[
-    D(f) = \left  \{ x \in \mathbb R:\exists ! y \in \mathbb R:y=f(x) \right \}
+    \mathcal D(f) = \left  \{ x \in \mathbb R:\exists ! y \in \mathbb R:y=f(x) \right \}
   \]
   nazveme \textbf{definičním oborem} funkce $f$. Množinu
   \[
-    H(f) = \left  \{ y \in \mathbb R:\exists  x \in \mathbb R:y=f(x) \right \}
+    \mathcal H(f) = \left  \{ y \in \mathbb R:\exists  x \in \mathbb R:y=f(x) \right \}
   \]
   nazveme \textbf{oborem hodnot} funkce $f$.
 \end{definition}
@@ -36,7 +36,7 @@ obor hodnot je tedy $\left < 3/4, \infty \right ). $
 \end{reseni}
 
 \begin{pozn}
-  \textbf{Grafem funkce} rozumíme množinu všech bodů $[x,f(x)]$, kde $x\in D(f).$
+  \textbf{Grafem funkce} rozumíme množinu všech bodů $[x,f(x)]$, kde $x\in \mathcal D(f).$
 \end{pozn}
 
 \begin{priklad}
@@ -71,7 +71,7 @@ Nakreslete graf funkce $y=2-|x+1|.$
 
         \end{axis}
         \end{tikzpicture}
-        \caption{Graf $2- |x+1|$}
+        \caption{Graf funkce  $2- |x+1|$}
         \end{center}
         \end{figure}
 \end{reseni}
@@ -109,7 +109,7 @@ odkud vidíme, že parabola je rozevřená dolů, je posunutá o $1/4$ doprava a
 
        \end{axis}
        \end{tikzpicture}
-       \caption{Graf $-2x^2+x-1$}
+       \caption{Graf funkce $-2x^2+x-1$}
        \end{center}
        \end{figure}
 \end{reseni}
@@ -117,13 +117,13 @@ odkud vidíme, že parabola je rozevřená dolů, je posunutá o $1/4$ doprava a
 \begin{definition}
   Funkce $f$ se nazývá \textbf{prostá}, právě tehdy když
   \[
-    \forall x_1,x_2\in D(f): x_1\ne x_2 \implies f(x_1)\ne f(x_2).
+    \forall x_1,x_2\in \mathcal D(f): x_1\ne x_2 \implies f(x_1)\ne f(x_2).
   \]
 \end{definition}
 
 \begin{definition}
-	Nechť $f:D(f)\to H(f)$ je prostá funkce. \textbf{Inverzní funkcí} k funkci $f$ nazveme funkci
-	$f^{-1}:H(f)\to D(f)$ takovou, že
+	Nechť $f:\mathcal D(f)\to \mathcal H(f)$ je prostá funkce. \textbf{Inverzní funkcí} k funkci $f$ nazveme funkci
+	$f^{-1}:\mathcal H(f)\to \mathcal D(f)$ takovou, že
 	$$
 	    f(x)=y\iff f^{-1}(y)=x.
 	$$
@@ -196,8 +196,8 @@ Grafy funkcí jsou souměrné podle přímky $y=x$ a mají stejnou monotónnost.
 \begin{definition}\label{lichasuda}
   Funkce $f$ se nazývá \textbf{lichá} (resp. \textbf{sudá}), jestliže platí
   \begin{enumerate}[$i.$]
-    \item $\forall x \in D(f): -x \in D(f)$ a
-  	\item $\forall x \in D(f): f(-x)=-f(x)$, resp. $f(-x)=f(x)$.
+    \item $\forall x \in \mathcal D(f): -x \in \mathcal D(f)$ a
+  	\item $\forall x \in \mathcal D(f): f(-x)=-f(x)$, resp. $f(-x)=f(x)$.
   \end{enumerate}
 \end{definition}
 
@@ -212,13 +212,13 @@ Určete paritu funkce $y=x^2$.
 \begin{reseni}
 Ověříme obě podmínky z definice \ref{lichasuda}:
 \begin{enumerate}[$i.$]
-\item $D(f)=\mathbb R$ -- platí,
+\item $\mathcal D(f)=\mathbb R$ -- platí,
 \item $f(-x)=(-x)^2=x^2=f(x)$ -- platí, tedy funkce je sudá.
 \end{enumerate}
 \end{reseni}
 
 \begin{definition}
-  Nechť $f$ je funkce a $M$ alespoň dvouprvková množina z $D(f)$. Řekneme, že funkce $f$ je na množině $M$
+  Nechť $f$ je funkce a $M$ alespoň dvouprvková množina z $\mathcal D(f)$. Řekneme, že funkce $f$ je na množině $M$
   \begin{enumerate}[$i.$]
     \item \textbf{rostoucí} $\iff \forall x_1, x_2 \in M: x_1 < x_2 \implies f(x_1) < f(x_2),$
     \item \textbf{klesající} $\iff \forall x_1, x_2 \in M: x_1 < x_2 \implies f(x_1) > f(x_2),$
@@ -237,7 +237,7 @@ Celkem tedy $x_1^2<x_2^2 \implies f(x_1)<f(x_2),$ tedy $f$ je rostoucí v $\math
 \end{reseni}
 
 \begin{definition}
-  Nechť $f$ je funkce, $M\subseteq D(f)$. Řekneme, že funkce $f$ je na množině $M$
+  Nechť $f$ je funkce, $M\subseteq \mathcal D(f)$. Řekneme, že funkce $f$ je na množině $M$
   \begin{enumerate}[$i.$]
     \item \textbf{shora omezená} $\iff \exists k \in \mathbb R: \forall x \in M: f(x)\leq k,$
     \item \textbf{zdola omezená} $\iff \exists k \in \mathbb R: \forall x \in M: f(x)\geq k,$
@@ -246,7 +246,7 @@ Celkem tedy $x_1^2<x_2^2 \implies f(x_1)<f(x_2),$ tedy $f$ je rostoucí v $\math
 \end{definition}
 
 \begin{definition}
-  Nechť $f$ je funkce, $M \subseteq D(f)$, v ní prvek $a \in M$.
+  Nechť $f$ je funkce, $M \subseteq \mathcal D(f)$, v ní prvek $a \in M$.
   Řekneme, že funkce $f$ má v~bodě $a$:
   \begin{enumerate}[$i.$]
     \item \textbf{ostré maximum} na množině $M$ právě tehdy, když $\forall x \in M\smallsetminus \left \{ a \right \}  : f(x) < f(a)$,
@@ -257,16 +257,16 @@ Celkem tedy $x_1^2<x_2^2 \implies f(x_1)<f(x_2),$ tedy $f$ je rostoucí v $\math
 \end{definition}
 
 \begin{definition}
-  Nechť $f$ je funkce. Funkce $f$ se nazývá \textbf{periodická}, pokud $\exists p \in \mathbb R^{+}: \forall x \in D(f):$
+  Nechť $f$ je funkce. Funkce $f$ se nazývá \textbf{periodická}, pokud $\exists p \in \mathbb R^{+}: \forall x \in \mathcal D(f):$
   \begin{enumerate}
-    \item $x \in D(f) \implies x \pm p \in D(f)$ a
+    \item $x \in \mathcal D(f) \implies x \pm p \in \mathcal  D(f)$ a
     \item $f(x) = f(x \pm p)$.
   \end{enumerate}
   Číslo $p$ se nazývá \textbf{periodou} této funkce. Periodu $p_0$ nazveme \textbf{nejmenší periodou} funkce, pokud pro všechny ostatní periody $p$ platí $p > p_0$. V opačném případě se funkce nazývá \textbf{neperiodická}.
 \end{definition}
 
 \begin{definition}
-  Nechť máme funkci $f: y = f(u)$ s definičním oborem $D(f)$ a funkci $g: u=g(x)$ s oborem hodnot $H(g)$. Jestliže je $H(g) \subseteq D(f)$, pak funkci $h: y = f(g(x))$ nazveme \textbf{složenou funkcí} (někdy píšeme též $h=f \circ g$).
+  Nechť máme funkci $f: y = f(u)$ s definičním oborem $\mathcal D(f)$ a funkci $g: u=g(x)$ s oborem hodnot $\mathcal H(g)$. Jestliže je $\mathcal H(g) \subseteq \mathcal D(f)$, pak funkci $h: y = f(g(x))$ nazveme \textbf{složenou funkcí} (někdy píšeme též $h=f \circ g$).
 \end{definition}
 
 \begin{definition}

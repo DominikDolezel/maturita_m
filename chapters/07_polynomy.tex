@@ -1,4 +1,4 @@
-\section{Polynomy, kořeny polynomů}
+nsection{Polynomy, kořeny polynomů}
 \begin{definition}
   \textbf{Polynomem} nazýváme každý výraz $P(x)$ tvaru
   \[
@@ -57,8 +57,8 @@
   \end{align*}
 \end{veta}
 
-\begin{pozn}
-  \textbf{Hornerovo schéma} je numerická metoda pro vyhodnocení funkční hodnoty polynomu $P(x) \in \mathbb R [x]$ v bodě $ x_0 \in \mathbb R$ (resp. ověření, zda je $x_0$ kořen $P(x)$). Vysvětlení na~příkladu:
+\begin{algoritmus}
+  \textbf{Hornerovo schéma} je metoda pro vyhodnocení funkční hodnoty polynomu $P(x) \in \mathbb R [x]$ v bodě $ x_0 \in \mathbb R$ (resp. ověření, zda je $x_0$ kořen $P(x)$). Vysvětlení na~příkladu:
   \begin{center}
   Vyhodnoťte $P(x)=2x^{3}-6x^{2}+2x-1$ v bodě $x_0=3$.
   \end{center}
@@ -76,7 +76,7 @@
   Použitím Hornerova schématu jsme zároveň provedli dělení polynomu $P(x)$ se zbytkem lineárním polynomem $x - x_0$ (v tomto příkladě $x-3$), kde zbytkem je funkční hodnota $P(x_0)$ a podílem je polynom stupně o jedna menšího, jehož koeficienty jsou zbylá vypočtená čísla (v tomto příkladě $2x^2+2$).
 
   V případě, že $P(x_0)=0$ je $x_0$ kořenem $P(x)$ a zároveň jsme z polynomu vytkli kořenový činitel $x-x_0$.
-\end{pozn}
+\end{algoritmus}
 
 \begin{definition}
 (\textbf{Algebraická}) \textbf{rovnice v reálné neznámé} $n$-tého stupně s jednou neznámou $x\in \mathbb R$ je každá
@@ -99,7 +99,7 @@ rovnice tvaru $P(x)=0,$ kde $P(x)$ je polynom $n$-tého stupně s reálnými koe
     kde $a(m)$ je hodnota polynomu $a(x)$ pro $x=m.$ Nejčastěji používáme $(r + s) \, | \, a(-1)$ a $(r - s) \, |\, a(1).$
 \end{veta}
 
-\begin{veta}[Hledání racionálních kořenů polynomu s racionálními koeficienty]
+\begin{algoritmus}[Hledání racionálních kořenů polynomu s racionálními koeficienty]
   Mějme polynom $P(x) \in \mathbb Q [x]$. Potom najdeme jeho kořeny $\frac{r}{s} \in \mathbb Q$ takto:
   \begin{enumerate}[1.]
     \item Nalezneme všechny celočíselné dělitele $r$ absolutního členu polynomu $a_0$.
@@ -109,7 +109,7 @@ rovnice tvaru $P(x)=0,$ kde $P(x)$ je polynom $n$-tého stupně s reálnými koe
     \item Vyškrtáme ty zlomky $\frac{r}{s}$, které nesplňují podmínky $(r-s) \mid P(1) \land (r+s) \mid P(-1)$.
     \item U ostatních zlomků vyzkoušíme Hornerovým schématem, zda jsou kořeny daného polynomu.
   \end{enumerate}
-\end{veta}
+\end{algoritmus}
 
 \begin{priklad}
 Najděte racionální kořeny polynomu $P(x)=\frac{3}{5}x^4+x^3+\frac{1}{5}x^2+x-\frac{2}{5}.$
@@ -177,8 +177,8 @@ krajní, třeba pro milion). Řešením je tedy $\left( -\infty,-5 \right >\cup 
   \end{enumerate}
 \end{definition}
 
-\begin{pozn}[Euklidův algoritmus pro polynomy]
-  Obdobně jako u celých čísel v definici \ref{eukliduvalg} i u polynomů lze pro hledání největšího společného dělitele využít Euklidův algoritmus.\\
+\begin{algoritmus}[Euklidův algoritmus pro polynomy]
+  Obdobně jako u celých čísel v algoritmu \ref{eukliduvalg} i u polynomů lze pro hledání největšího společného dělitele využít Euklidův algoritmus.\\
   Nechť $A(x), B(x) \in \mathbb R [x]$, z nichž alespoň jeden je různý od $O(x)$. Pak mohou nastat dvě možnosti:
   \begin{enumerate}[$i.$]
     \item $A(x) = O(x) \implies D(A(x), B(x)) = B(x)$ nebo $B(x) = O(x) \implies D(A(x), B(x)) = A(x)$ triviálně;
@@ -197,7 +197,7 @@ krajní, třeba pro milion). Řešením je tedy $\left( -\infty,-5 \right >\cup 
   \end{align*}
   Potom $D(A(x), B(x)) = R_n(x)$ či libovolný násobek $R_n(x)$. \textbf{Normovaný největší společný dělitel polynomů}
   ale existuje právě jeden, ten se označuje $(A(x), B(x))$.
-\end{pozn}
+\end{algoritmus}
 
 \begin{priklad}
     Určete největšího společného dělitele polynomů

@@ -23,7 +23,7 @@
 \end{definition}
 
 \begin{definition}
-  $d\in \mathbb N$ je \textbf{největší společný dělitel} čísel $a,b \in \mathbb N,$ jestliže jsou splněny zároveň obě podmínky:
+  Číslo $d\in \mathbb N$ je \textbf{největší společný dělitel} čísel $a,b \in \mathbb N,$ jestliže jsou splněny zároveň obě podmínky:
   \begin{enumerate}[$i.$]
     \item $d\, | \, a \land d \, | \, b$ a
     \item $\forall c \in \mathbb N: c \, | \, a \land c \, | \, b \implies c \, | \, d.$
@@ -31,8 +31,9 @@
   Takové číslo značíme $d=D(a,b)$, někdy taky jen $(a,b)$.
 \end{definition}
 
-\begin{definition}[Euklidův algoritmus]\label{eukliduvalg}
-Nechť jsou dána $a,b \in \mathbb Z$, z nichž alespoň jedno je nenulové. Pak mohou nastat dvě možnosti:
+\begin{algoritmus}[Euklidův algoritmus]\label{eukliduvalg}
+Nechť jsou dána $a,b \in \mathbb Z$, z nichž alespoň jedno je nenulové. Jejich největšího společného
+dělitele najdeme následovně. Mohou nastat dvě možnosti:
 \begin{enumerate}[$i.$]
   \item $a = 0 \implies D(a, b) = b$ nebo $b=0 \implies D(a,b)=a$ triviálně;
   \item $a \ne 0 \ne b$.
@@ -49,7 +50,7 @@ Vzhledem k nerovnosti na pravé straně tento nulový zbytek existuje.
   r_{n-1} & = r_{n} \cdot q_{n+1}, & r_{n+1} & = 0.
 \end{align*}
 Potom $D(a,b) = r_n$.
-\end{definition}
+\end{algoritmus}
 
 \begin{priklad}
   Spočítejte největšího společného dělitele čísel 40902 a 24140.
@@ -89,7 +90,7 @@ Potom $D(a,b) = r_n$.
 \end{definition}
 
 \begin{definition}
-  $n\in \mathbb N$ je \textbf{nejmenší společný násobek} čísel $a,b \in \mathbb N,$ jestliže jsou splněny zároveň obě podmínky:
+  Číslo $n\in \mathbb N$ je \textbf{nejmenší společný násobek} čísel $a,b \in \mathbb N,$ jestliže jsou splněny zároveň obě podmínky:
   \begin{enumerate}[$i.$]
     \item $a\, | \, n \land b \, | \, n$ a
     \item $\forall m \in \mathbb N: a \, | \, m \land b \, | \, m \implies n \, | \, m.$
@@ -119,11 +120,19 @@ Potom $D(a,b) = r_n$.
   jedničkou a samo sebou), jedná se tedy o prvočíslo. To je ovšem spor s předpokladem, že prvočísel je konečně mnoho.
 \end{proof}
 
-\begin{veta}[Základní věta aritmetiky]
+\begin{veta}[Základní věta aritmetiky]\label{zaklvaritmetiky}
   Každé přirozené číslo $n>1$ lze zapsat ve tvaru:
-  $$n=p_1^{m_1}\cdot p_2^{m_2} \cdot p_3^{m_3}\cdot \hdots \cdot p_r^{m_r},$$
-  kde $p_i,i\in\{ 1, 2, \dots, r \}$ jsou navzájem různá prvočísla, $m_i\in \mathbb N_0$. Toto vyjádření je jednoznačné až na pořadí činitelů a říkáme mu \textbf{rozklad čísla} $n$ \textbf{na součin prvočinitelů}.
+  \begin{equation}\label{rozkladnprvoc}
+	n=p_1^{m_1}\cdot p_2^{m_2} \cdot p_3^{m_3}\cdot \hdots \cdot p_r^{m_r},
+  \end{equation}
+  kde $p_i,i\in\{ 1, 2, \dots, r \}$ jsou navzájem různá prvočísla, $m_i\in \mathbb N_0$. Toto vyjádření je jednoznačné
+  až na pořadí činitelů.
 \end{veta}
+
+\begin{definition}
+	Vyjádření (\ref{rozkladnprvoc}) z věty \ref{zaklvaritmetiky} říkáme
+	\textbf{rozklad čísla $n$ na součin prvočinitelů}.
+\end{definition}
 
 \begin{veta}[Věta o iraciálnosti odmocnin]
   Nechť $n\in \mathbb N.$ Pak platí: Pokud $n$ není druhou mocninou přirozeného čísla, pak odmocnina z $n$ je iracionální.
@@ -164,13 +173,13 @@ Jsou tedy čtyři možnosti, ovšem nesmíme zapomenout na podmínku $D(q_1,q_2)
 Dokažte přímo a úvahou přes rozklad: $\forall a \in \mathbb Z: 3\, | \, (a^3-a).$
 \end{priklad}
 
-\begin{reseni}
+\begin{reseni}\,
     \begin{enumerate}[$i.$]
     	\item přímo: Mohou nastat dvě situace:
         \begin{enumerate}[$a.$]
        	    \item $a=3k, k\in \mathbb Z $, pak $3\, | \, (a^3-a)$ triviálně; nebo
-            \item $a=3k\pm 1$, pak $a^3-a=27k^3\pm 3\cdot 9k^2\cdot 1 + 3\cdot 3k \pm 1-3k\mp 1=
-            3(9k^3\pm 9k^2 + 3k-k),$ což je dělitelné třemi.
+            \item $a=3k\pm 1$, pak $$a^3-a=27k^3\pm 3\cdot 9k^2\cdot 1 + 3\cdot 3k \pm 1-3k\mp 1=
+            3(9k^3\pm 9k^2 + 3k-k),$$ což je dělitelné třemi.
         \end{enumerate}
         \item úvahou přes rozklad: Rozložme $a^3-a$:
         \[
@@ -184,7 +193,7 @@ Dokažte přímo a úvahou přes rozklad: $\forall a \in \mathbb Z: 3\, | \, (a^
 Dokažte nepřímo a sporem: $\forall n \in \mathbb N: 5 \, | \, n^2 \implies 5 \, | \, n.$
 \end{priklad}
 
-\begin{reseni}
+\begin{reseni}\,
 \begin{enumerate}[$i.$]
 	\item nepřímo: Dokazujeme obměnu $5 \, \centernot | \, n \implies 5 \, \centernot | \, n^2$, což je zřejmé.
 	\item sporem: Předpokládejme, že výrok platí. Pak $n^2=5q, q \in \mathbb Z$. Protože je 5 prvočíslo a~$n$~je
@@ -253,23 +262,23 @@ Platí $n = 10(a_k\cdot 10^{k-1}+a_{k-1}\cdot 10 ^{k-2}+\dots+a_1)+a_0 = 10l+a_0
 \end{veta}
 
 \begin{proof}
-  $n=10k+a_0$
+  Označme $n=10k+a_0$.
   \begin{enumerate}[$i.$]
-    \item $b=k+5a_0$
+    \item Je-li $b=k+5a_0$, pak
       \[
         10b=10k+50a_0=10k+a_0+49a_0=n+49a_0
       \]
       \begin{enumerate}
-        \item $\implies: 7 \, | \, n \land 7 \, | \, 49a_0 \implies 7 \, | \, 10b \implies 7 \, | \, b \textrm{, neboť } D(7,10)=1$
-        \item $\impliedby: 7 \, | \, b \implies 7 \, | \, 10 b \land 7 \, | \, 49 a_0 \implies 7 \, | \, n$
+        \item $\implies: 7 \, | \, n \land 7 \, | \, 49a_0 \implies 7 \, | \, 10b \implies 7 \, | \, b \textrm{, neboť } D(7,10)=1$,
+        \item $\impliedby: 7 \, | \, b \implies 7 \, | \, 10 b \land 7 \, | \, 49 a_0 \implies 7 \, | \, n$.
       \end{enumerate}
-    \item $b=k+4a_0$
+    \item Je-li $b=k+4a_0$, pak
       \[
         10b=10k+40a_0=10k+a_0+39a_0=n+39a_0
       \]
       \begin{enumerate}
-        \item $\implies: 13 \, | \, n \land 13 \, | \, 39a_0 \implies 13 \, | \, 10b \implies 13 \, | \, b \textrm{, neboť } D(13,10)=1$
-        \item $\impliedby: 13 \, | \, b \implies  13 \, | \, 10 b \land 13 \, | \, 13a_0 \implies 13 \, | \, n$ \qedhere
+        \item $\implies: 13 \, | \, n \land 13 \, | \, 39a_0 \implies 13 \, | \, 10b \implies 13 \, | \, b \textrm{, neboť } D(13,10)=1$,
+        \item $\impliedby: 13 \, | \, b \implies  13 \, | \, 10 b \land 13 \, | \, 13a_0 \implies 13 \, | \, n$. \qedhere
       \end{enumerate}
   \end{enumerate}
 \end{proof}

@@ -46,12 +46,84 @@ Všechny ostatní její podmnožiny nazýváme \textbf{vlastní}.
 
 \begin{definition}
   \textbf{Vennův diagram} je grafické schematické znázornění všech možných vztahů (sjednocení, průnik, rozdíl, doplněk) několika podmnožin univerzální množiny, jež znázorňujeme pomocí uzavřených čar.
-  \begin{figure}[ht!]
-    \centering
-    \includegraphics[width=0.5\textwidth]{venndiag}
-    \caption{Vennovy diagramy pro dvě, tři a čtyři množiny}
-  \end{figure}
 \end{definition}
+
+\begin{figure}[ht!]
+  \centering
+  \begin{tikzpicture}[
+      scale=1.2,
+      set line/.style={draw=black, rounded corners=2.5mm, semithick},
+      box/.style={draw=black, semithick}
+  ]
+
+  % Vlevo nahoře (2 množiny)
+  \begin{scope}[shift={(0, 3)}]
+      \draw[box] (0,0) rectangle (4,2.5);
+      \node[anchor=north west, inner sep=3pt] at (0,2.5) {$U$};
+
+      % Nahrazeno z (1,0) |- (4,0.9)
+      \draw[set line] (1,0) -- (1,0.9) -- (4,0.9);
+      \node at (0.7, 0.9) {$A$};
+
+      % Nahrazeno z (2.8,0) |- (4,2.1)
+      \draw[set line] (2.8,0) -- (2.8,2.1) -- (4,2.1);
+      \node at (2.5, 2.1) {$B$};
+  \end{scope}
+
+  % Vpravo nahoře (3 množiny)
+  \begin{scope}[shift={(4.5, 3)}]
+      \draw[box] (0,0) rectangle (4,2.5);
+      \node[anchor=north west, inner sep=3pt] at (0,2.5) {$U$};
+
+      \draw[set line] (1,0) -- (1,0.9) -- (4,0.9);
+      \node at (0.7, 0.9) {$A$};
+
+      \draw[set line] (2.3,0) -- (2.3,1.7) -- (3.2,1.7) -- (3.2,0);
+      \node at (2.0, 1.7) {$B$};
+
+      \draw[set line] (2.8,0) -- (2.8,2.1) -- (4,2.1);
+      \node at (2.5, 2.1) {$C$};
+  \end{scope}
+
+  % Vlevo dole (4 množiny)
+  \begin{scope}[shift={(0, 0)}]
+      \draw[box] (0,0) rectangle (4,2.5);
+      \node[anchor=north west, inner sep=3pt] at (0,2.5) {$U$};
+
+      \draw[set line] (1,0) -- (1,0.9) -- (4,0.9);
+      \node at (0.7, 0.9) {$A$};
+
+      \draw[set line] (4,0.4) -- (1.5,0.4) -- (1.5,1.4) -- (4,1.4);
+      \node at (1.2, 1.4) {$B$};
+
+      \draw[set line] (2.5,0) -- (2.5,1.8) -- (3.3,1.8) -- (3.3,0);
+      \node at (2.2, 1.8) {$C$};
+
+      \draw[set line] (3.0,0) -- (3.0,2.2) -- (4,2.2);
+      \node at (2.7, 2.2) {$D$};
+  \end{scope}
+
+  % Vpravo dole (4 množiny - alternativní zobrazení)
+  \begin{scope}[shift={(4.5, 0)}]
+      \draw[box] (0,0) rectangle (4,2.5);
+      \node[anchor=north west, inner sep=3pt] at (0,2.5) {$U$};
+
+      \draw[set line] (1,0) -- (1,0.9) -- (4,0.9);
+      \node at (0.7, 0.9) {$A$};
+
+      \draw[set line] (1.5,0.3) rectangle (3.7,1.3);
+      \node at (1.2, 1.3) {$B$};
+
+      \draw[set line] (2.1,0.1) rectangle (3.2,1.7);
+      \node at (1.8, 1.7) {$C$};
+
+      \draw[set line] (2.8,0) -- (2.8,2.1) -- (4,2.1);
+      \node at (2.5, 2.1) {$D$};
+  \end{scope}
+
+  \end{tikzpicture}
+  \caption{Vennovy diagramy pro dvě, tři a čtyři množiny}
+\end{figure}
 
 \begin{veta}[De Morganova pravidla]
   Nechť $A, B$ jsou dvě množiny, $X^\prime$ značí doplněk množiny $X$. Potom platí
@@ -63,19 +135,79 @@ Všechny ostatní její podmnožiny nazýváme \textbf{vlastní}.
 
 \begin{proof}
   Důkaz prvního vztahu:
+  \begin{center}
+  \begin{tikzpicture}[
+      scale=0.9,
+      set/.style={thick, draw=black},
+      univ/.style={thick, draw=black},
+      fillcolor/.style={fill=green!50},
+      hatchcolor/.style={pattern=north west lines, pattern color=gray!80},
+      altfillcolor/.style={fill=yellow!30}
+  ]
 
-  \begin{minipage}{0.48\textwidth}
-    \centering
-        \includegraphics[width=0.5\linewidth]{vennsjed.png}
-        \includegraphics[width=0.5\linewidth]{venndoplsjed.png}
-  \end{minipage}
-  \hfill
-  \noindent\begin{minipage}{0.48\textwidth}
-  \centering
-        \includegraphics[width=0.5\linewidth]{venndoplAaB.png}
-        \includegraphics[width=0.5\linewidth]{venndoplsjed.png}
-  \end{minipage}
+  \def\universe{(-2.5,-1.5) rectangle (2.5,1.5)}
+  \def\setA{(-0.7,0) circle (1.1)}
+  \def\setB{(0.7,0) circle (1.1)}
 
+  % 1. Vlevo nahoře: A \cup B
+  \begin{scope}[shift={(0,0)}]
+      \fill[fillcolor] \setA;
+      \fill[fillcolor] \setB;
+      \draw[univ] \universe;
+      \node[above left] at (2.5,-1.5) {$U$};
+      \draw[set] \setA;
+      \node[above left] at (-1.3,0.7) {$A$};
+      \draw[set] \setB;
+      \node[above right] at (1.3,0.7) {$B$};
+      \node at (0,-2) {$(A \cup B)$};
+  \end{scope}
+
+  % 2. Vlevo dole: (A \cup B)'
+  \begin{scope}[shift={(0,-4.5)}]
+      \fill[fillcolor] \universe;
+      \fill[white] \setA;
+      \fill[white] \setB;
+      \draw[univ] \universe;
+      \node[above left] at (2.5,-1.5) {$U$};
+      \draw[set] \setA;
+      \node[above left] at (-1.3,0.7) {$A$};
+      \draw[set] \setB;
+      \node[above right] at (1.3,0.7) {$B$};
+      \node at (0,-2) {$(A \cup B)'$};
+  \end{scope}
+
+  % 3. Vpravo nahoře: Zobrazení A' a B'
+  \begin{scope}[shift={(6,0)}]
+      % A' je žlutě (vše mimo A)
+      \fill[altfillcolor, even odd rule] \setA \universe;
+      % B' je šedě šrafovaně (vše mimo B)
+      \fill[hatchcolor, even odd rule] \setB \universe;
+
+      \draw[univ] \universe;
+      \node[above left] at (2.5,-1.5) {$U$};
+      \draw[set] \setA;
+      \node[above left] at (-1.3,0.7) {$A$};
+      \draw[set] \setB;
+      \node[above right] at (1.3,0.7) {$B$};
+      \node at (0,-2) {$A'$ a $B'$};
+  \end{scope}
+
+  % 4. Vpravo dole: A' \cap B'
+  \begin{scope}[shift={(6,-4.5)}]
+      \fill[fillcolor] \universe;
+      \fill[white] \setA;
+      \fill[white] \setB;
+      \draw[univ] \universe;
+      \node[above left] at (2.5,-1.5) {$U$};
+      \draw[set] \setA;
+      \node[above left] at (-1.3,0.7) {$A$};
+      \draw[set] \setB;
+      \node[above right] at (1.3,0.7) {$B$};
+      \node at (0,-2) {$A' \cap B'$};
+  \end{scope}
+
+  \end{tikzpicture}
+  \end{center}
   Důkaz druhého analogicky.
 \end{proof}
 
