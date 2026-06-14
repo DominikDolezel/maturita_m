@@ -43,7 +43,7 @@
 \end{definition}
 
 \begin{veta}\label{vfakt}
-    $\forall n \in \mathbb N:$
+    Pro všechna $n \in \mathbb N$ platí
     \begin{equation}\label{fakt}
    P(n)=n(n-1)(n-2)\dots 1.
     \end{equation}
@@ -77,7 +77,7 @@ Kolik různých slov lze vytvořit z písmen ABRAKADABRA?
 
 \begin{reseni}
 Máme $5\times$ A, $2\times $ B, $2\times$ R, $1\times$ D a $1\times $ K.
-Počítáme tedy $P(5,2,2,1,1)=\frac{11!}{5!\cdot 2!\cdot 2!}=83160.$
+Počítáme tedy $$P(5,2,2,1,1)=\frac{11!}{5!\cdot 2!\cdot 2!}=83160.$$
 \end{reseni}
 
 \begin{definition}
@@ -97,11 +97,11 @@ Počítáme tedy $P(5,2,2,1,1)=\frac{11!}{5!\cdot 2!\cdot 2!}=83160.$
     $n_d$ prvků $d$-tého druhu. Nechť $k\in \mathbb N, k \leq n_i, \forall
     i \in \left \{ 1, 2, \dots, d \right \} .$ \textbf{$k$-prvkovou variací s~opakováním}
     z~prvků daných $d$ druhů nazveme každou ušpořádanou $k$-tici
-    vytvořenou z prvků těchto $d$ druhů. Počet těchto variací ozančme $V_o(k,d).$
+    vytvořenou z prvků těchto $d$ druhů. Počet těchto variací označme $V_o(k,d).$
 \end{definition}
 
 \begin{veta}
-    $\forall k, d \in \mathbb N$ platí:
+    Pro všechna $k, d \in \mathbb N$ platí
     $$V_o(k,d)=d^k.$$
 \end{veta}
 
@@ -147,7 +147,7 @@ Rozlišujeme dvě hlediska:
 \end{reseni}
 
 \begin{veta}\label{binomvztahy}
-    $\forall k,n \in \mathbb N_0, k\leq n:$
+    Pro všechna $ k,n \in \mathbb N_0, k\leq n$ platí
     \begin{align*}
         \binom{n}{k} &= \binom{n}{n-k}, \\
         \binom{n}{k} + \binom{n}{k+1} &= \binom{n+1}{k+1}.
@@ -172,7 +172,7 @@ $$\binom{x-1}{x-3}+\binom{x-2}{x-4}=9.$$
 \end{definition}
 
 \begin{veta}
-    $\forall k,d \in \mathbb N:$
+    Pro všechna $k,d \in \mathbb N$ platí
     $$K_o(k,d)=P_o(k,d-1)=\binom{k+d-1}{d-1}.$$
 \end{veta}
 

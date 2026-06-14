@@ -64,37 +64,37 @@ $\left \{ S(D,f); D\in \mathscr D(a,b) \right \} $ je zdola omezená.
 \begin{definition}
 Nechť $f(x)$ je omezená na intervalu $\left < a,b \right > .$ Označme
 \begin{align*}
-    \int_{\underline{a}} ^b f(x) \, dx & = \sup \left \{ s(D,f); D \in \mathscr D(a,b) \right \}, \\
-    \int_{a} ^{\underline{b}} f(x) \, dx & = \inf \left \{ S(D,f); D \in \mathscr D(a,b) \right \}.
+    \int_{\underline{a}} ^b f(x) \, \d x & = \sup \left \{ s(D,f); D \in \mathscr D(a,b) \right \}, \\
+    \int_{a} ^{\underline{b}} f(x) \, \d x & = \inf \left \{ S(D,f); D \in \mathscr D(a,b) \right \}.
 \end{align*}
-Číslo $\int_{\underline{a}} ^b f(x)\, dx$ (resp. $\int_{a} ^{\underline{b}} f(x) \, dx$)
+Číslo $\int_{\underline{a}} ^b f(x)\, \d x$ (resp. $\int_{a} ^{\underline{b}} f(x) \, \d x$)
 nazýváme \textbf{dolní} (resp. \textbf{horní}) \textbf{integrál} funkce $f(x)$ od
 $a$ do $b$.
 \end{definition}
 
 \begin{veta}
 Nechť $f(x)$ je omezená na intervalu $\left < a,b \right >. $ Pak
-$$\int_{\underline{a}} ^b f(x)\, dx \leq \int_{a} ^{\underline{b}} f(x) \, dx.$$
+$$\int_{\underline{a}} ^b f(x)\, \d x \leq \int_{a} ^{\underline{b}} f(x) \, \d x.$$
 \end{veta}
 
 \begin{definition}
 Nechť $f(x)$ je omezená na intervalu $\left < a,b \right > .$ Pak funkce
 $f(x)$ je na intervalu $\left < a,b \right > $ (Riemmanovsky) \textbf{integrovatelná}
 (integrace schopna), jestliže
-$$\int_{\underline{a}} ^b f(x)\, dx = \int_{a} ^{\underline{b}} f(x) \, dx.$$
+$$\int_{\underline{a}} ^b f(x)\, \d x = \int_{a} ^{\underline{b}} f(x) \, \d x.$$
 Je-li $f(x)$ na intervalu $\left < a,b \right > $ integrovatelná, klademe
-$$\int_{\underline{a}} ^b f(x)\, dx = \int_{a} ^{\underline{b}} f(x) \, dx = \int_{a} ^b f(x) \, dx.$$
-Číslo $\int_{a} ^b f(x)\, dx$ nazýváme \textbf{Riemannův integrál} funkce $f(x)$ od
-$a$ do $b$. Pokud $\int_{\underline{a}} ^b f(x)\, dx < \int_{a} ^{\underline{b}} f(x) \, dx$,
+$$\int_{\underline{a}} ^b f(x)\, \d x = \int_{a} ^{\underline{b}} f(x) \, \d x = \int_{a} ^b f(x) \, \d x.$$
+Číslo $\int_{a} ^b f(x)\, \d x$ nazýváme \textbf{Riemannův integrál} funkce $f(x)$ od
+$a$ do $b$. Pokud $\int_{\underline{a}} ^b f(x)\, \d x < \int_{a} ^{\underline{b}} f(x) \, \d x$,
 pak $f(x)$ není na intervalu $\left < a,b \right > $ integrovatelná a
-$\int_{a} ^b f(x)\, dx$ nedefinujeme.
+$\int_{a} ^b f(x)\, \d x$ nedefinujeme.
 \end{definition}
 
-\begin{veta}[Newton-Leibnitzova věta]
+\begin{veta}[Newtonova--Leibnitzova věta]
 Nechť $f(x)$ je integrovatelná na intervalu $\left < a,b \right >$, $F(x)$ je spojitá
 na intervalu $\left < a,b \right > $. Buď $F(x)$ primitivní funkce k funkci $f(x)$
 na intervalu $\left ( a,b \right ) $. Pak platí:
-$$\int_{a} ^b f(x)\, dx=F(b)-F(a).$$
+$$\int_{a} ^b f(x)\, \d x=F(b)-F(a).$$
 \end{veta}
 
 \begin{veta}
@@ -103,12 +103,12 @@ intervalu $\left < a,b \right > $ integrovatelná.
 \end{veta}
 
 \begin{priklad}
-Vypočtěte integrál $\int_0^{\frac{\pi}{4}}\cos x \, dx.$
+Vypočtěte integrál $\int_0^{\frac{\pi}{4}}\cos x \, \d x.$
 \end{priklad}
 
 \begin{reseni}
 Platí
-$$\int_0^{\frac{\pi}{4}}\cos x \, dx=\left [ \sin x  \right ]_0^{\frac{\pi}{4}}=\sin \frac{\pi}{4}-\sin 0=\frac{\sqrt{2} }{2}. $$
+$$\int_0^{\frac{\pi}{4}}\cos x \, \d x=\left [ \sin x  \right ]_0^{\frac{\pi}{4}}=\sin \frac{\pi}{4}-\sin 0=\frac{\sqrt{2} }{2}. $$
 \end{reseni}
 
 \begin{veta}
@@ -116,29 +116,29 @@ Nechť $f(x), f_1(x),\dots,f_n(x), g(x)$ jsou integrovatelné funkce na interval
 a~$c; c_1,\dots,c\in \mathbb R.$ Pak
 \begin{enumerate}[$i.$]
 \item funkce $f(x)+g(x)$ je integrovatelná na int. $\left < a,b \right > $ a platí
-$$\int _a^b \left [ f(x)+g(x) \right ] \, dx = \int_a ^b f(x)\, dx + \int_a ^b g(x) \, dx,$$
+$$\int _a^b \left [ f(x)+g(x) \right ] \, \d x = \int_a ^b f(x)\, \d x + \int_a ^b g(x) \, \d x,$$
 \item funkce $c\cdot f(x)$ je integrovatelná na int. $\left < a,b \right > $ a platí
-$$\int _a ^b c\cdot f(x) \, dx = c \int _a ^b f(x)\, dx,$$
+$$\int _a ^b c\cdot f(x) \, \d x = c \int _a ^b f(x)\, \d x,$$
 \item funkce $c_1\cdot f_1(x) + \dots + c_n \cdot f_n(x)$ je integrovatelná na int. $\left < a,b \right > $ a platí
-$$\int_a ^b \left [ c_1\cdot f_1(x) + \dots + c_n \cdot f_n (x) \right ]\, dx = c_1 \int _a ^b f_1(x)\, dx + \dots + c_n \int _a ^b f_n(x)\, dx. $$
+$$\int_a ^b \left [ c_1\cdot f_1(x) + \dots + c_n \cdot f_n (x) \right ]\, \d x = c_1 \int _a ^b f_1(x)\, \d x + \dots + c_n \int _a ^b f_n(x)\, \d x. $$
 \end{enumerate}
 \end{veta}
 
 \begin{veta}
 Nechť $f(x)$ je integrovatelná a nezáporná na intervalu $\left < a,b \right > $. Pak
-$$\int_a ^b f(x) \, dx \geq 0.$$
+$$\int_a ^b f(x) \, \d x \geq 0.$$
 \end{veta}
 
 \begin{veta}
 Nechť funkce $f(x),g(x)$ jsou integrovatelné na intervalu $\left < a,b \right > .$
 Nechť pro každé $x\in \left < a,b \right > :f(x)\leq g(x).$ Pak
-$$\int_a^b f(x) \, dx \leq \int_a^b g(x) \, dx.$$
+$$\int_a^b f(x) \, \d x \leq \int_a^b g(x) \, \d x.$$
 \end{veta}
 
 \begin{veta}
 Nechť $a<b<c$ jsou reálná čísla a $f(x)$ je integrovatelná na intervalech
 $\left < a,b \right >$, $\left < b,c \right >$. Pak
-$$\int_a^c f(x)\, dx = \int_a^b f(x)\, dx + \int_b^c f(x)\, dx.$$
+$$\int_a^c f(x)\, \d x = \int_a^b f(x)\, \d x + \int_b^c f(x)\, \d x.$$
 \end{veta}
 
 \begin{definition}\label{pocastechspoj}
@@ -150,14 +150,14 @@ bodů $c_1,\dots,c_n; a<c_1<\dots<c_n<b.$
 \begin{veta}
 Nechť funkce $f(x)$ je po částech spojitá na intervalu $\left < a,b \right > $, jako
 v definici \ref{pocastechspoj}. Pak
-$$\int_a^b f(x)\, dx = \int_a^{c_1}f(x)\, dx + \int_{c_1}^{c_2}f(x)\, dx + \dots + \int_{c_n}^b f(x)\, dx.$$
+$$\int_a^b f(x)\, \d x = \int_a^{c_1}f(x)\, \d x + \int_{c_1}^{c_2}f(x)\, \d x + \dots + \int_{c_n}^b f(x)\, \d x.$$
 \end{veta}
 
 \begin{definition}
 Je-li $f(x)$ definována v čísle $a \in \mathbb R,$ klademe
-$$\int _a ^a f(x)\, dx = 0.$$
+$$\int _a ^a f(x)\, \d x = 0.$$
 Je-li $f(x)$ integrovatelná na intervalu $\left < a,b \right >$, definujeme
-$$\int_b^a f(x)\, dx = -\int_a^b f(x)\, dx.$$
+$$\int_b^a f(x)\, \d x = -\int_a^b f(x)\, \d x.$$
 \end{definition}
 
 
@@ -166,7 +166,7 @@ Nechť $\varphi (t)$, $\varphi: \left < \alpha, \beta \right >\to \left < a,b \r
 $\varphi^\prime (t)$ a~nechť $f(x)$ je spojitá na intervalu $\left < a,b \right >$.
 Označme
 $\varphi(\alpha)=a, \varphi(\beta)=b.$ Pak platí
-$$\int _a ^b f(x)\, dx = \int _\alpha ^\beta f \left [ \varphi(t) \right ]\cdot \varphi^\prime (t)\, dt. $$
+$$\int _a ^b f(x)\, \d x = \int _\alpha ^\beta f \left [ \varphi(t) \right ]\cdot \varphi^\prime (t)\, dt. $$
 \end{veta}
 
 \begin{pozn}
@@ -174,15 +174,15 @@ $$\int _a ^b f(x)\, dx = \int _\alpha ^\beta f \left [ \varphi(t) \right ]\cdot 
 \end{pozn}
 
 \begin{priklad}
-Vypočtěte integrál $\int _1^2 \frac{x}{(1+x^2)}\, dx.$
+Vypočtěte integrál $\int _1^2 \frac{x}{(1+x^2)}\, \d x.$
 \end{priklad}
 
 \begin{reseni}
 Musíme provést transformaci mezí:
 \begin{align*}
-\int _1^2 \frac{x}{(1+x^2)}\, dx &= \left |\begin{array}{l l}
+\int _1^2 \frac{x}{(1+x^2)}\, \d x &= \left |\begin{array}{l l}
     t=x^2+1 & x=2\implies t=5 \\
-    dt = 2x \, dx & x=1\implies t=2
+    dt = 2x \, \d x & x=1\implies t=2
 \end{array}\right | = \frac{1}{2}\int _2^5 \frac{1}{t^{\frac{3}{2}}}\, dt \\
 &= \frac{1}{2}\left [ \frac{t^{-\frac{1}{2}}}{-\frac{1}{2}} \right ] _2^5 = \frac{1}{2}\left ( \frac{5^{-\frac{1}{2}}}{-\frac{1}{2}}-\frac{2^{-\frac{1}{2}}}{-\frac{1}{2}} \right )=-\frac{1}{\sqrt{5} }+\frac{1}{\sqrt{2} }.
 \end{align*}
@@ -191,30 +191,30 @@ Musíme provést transformaci mezí:
 \begin{veta}[O integraci \textit{per partes} pro určité integrály]
 Nechť funkce $u(x)$ a $v(x)$ mají na intervalu $\left < a,b \right > $ spojité derivace
 $u^\prime (x)$ a $v^\prime (x)$. Pak platí
-$$\int_a ^b u^\prime (x)v(x)\, dx = \left [ u(x)v(x) \right ]_a^b -\int _a^b u(x)v^\prime(x)\,dx.$$
+$$\int_a ^b u^\prime (x)v(x)\, \d x = \left [ u(x)v(x) \right ]_a^b -\int _a^b u(x)v^\prime(x)\,\d x.$$
 \end{veta}
 
 \begin{priklad}
-Vypočtěte integrál $\int _0^{\frac{\pi}{2}}x \cos \frac{x}{2}\, dx$.
+Vypočtěte integrál $\int _0^{\frac{\pi}{2}}x \cos \frac{x}{2}\, \d x$.
 \end{priklad}
 
 \begin{reseni}
 Platí
 \begin{align*}
-\int _0^{\frac{\pi}{2}}x \cos \frac{x}{2}\, dx &= \left | \begin{array}{ll}
+\int _0^{\frac{\pi}{2}}x \cos \frac{x}{2}\, \d x &= \left | \begin{array}{ll}
     u=x & u^\prime = 1 \\
     v^\prime = \cos \frac{x}{2} & v = 2\sin \frac{x}{2}
 \end{array}   \right | \\
-& =\left [ x\cdot2\sin \frac{x}{2} \right ]_0^{\frac{\pi}{2}}-\int_0^{\frac{\pi}{2}}2\sin \frac{x}{2}\, dx =\frac{\pi}{2}\cdot \frac{\sqrt{2} }{2}-0-\left [ -4\cos \frac{x}{2} \right ]_0^{\frac{\pi}{2}}\\
+& =\left [ x\cdot2\sin \frac{x}{2} \right ]_0^{\frac{\pi}{2}}-\int_0^{\frac{\pi}{2}}2\sin \frac{x}{2}\, \d x =\frac{\pi}{2}\cdot \frac{\sqrt{2} }{2}-0-\left [ -4\cos \frac{x}{2} \right ]_0^{\frac{\pi}{2}}\\
 &= \pi \cdot \frac{\sqrt{2} }{2}+4\cdot \frac{\sqrt{2} }{2}-4
 \end{align*}
 \end{reseni}
 
 \begin{pozn}
     Je-li $f(x)$ spojitá a nezáporná na intervalu $\left < a,b \right >$, je
-    $\int_a ^b f(x)\, dx$ obsah plochy omezené osou $x$, přímkami $x=a, x=b$ a
+    $\int_a ^b f(x)\, \d x$ obsah plochy omezené osou $x$, přímkami $x=a, x=b$ a
     grafem funkce $y=f(x)$. Platí tedy
-    $$S=\int_a^b f(x)\, dx.$$
+    $$S=\int_a^b f(x)\, \d x.$$
 \end{pozn}
 
 \begin{priklad}
@@ -224,7 +224,7 @@ Vypočtěte obsah plochy $M=\left \{ [x,y]; y \geq  x^2 , y \leq 2x\right \} $.
 \begin{reseni}
 Nejprve určíme průsečíky funkcí $x^2$ a $2x$: $x_1=0,x_2=2$. Plochu spočítáme
 jako
-$$\int_0^2 2x\, dx - \int_0^2 x^2 \, dx.$$
+$$\int_0^2 2x\, \d x - \int_0^2 x^2 \, \d x.$$
 \end{reseni}
 
 \begin{priklad}
@@ -232,7 +232,7 @@ Vypočtěte obsah kruhu o poloměru $r$.
 \end{priklad}
 
 \begin{reseni}
-Počítáme $2\int_{-r}^r \sqrt{r^2-x^2}\, dx  $.
+Počítáme $2\int_{-r}^r \sqrt{r^2-x^2}\, \d x  $.
 \end{reseni}
 
 \begin{pozn}
@@ -240,7 +240,7 @@ Počítáme $2\int_{-r}^r \sqrt{r^2-x^2}\, dx  $.
     dána množina bodů
     $M=\left \{ \left [ x,y \right ]; x \in \left < a,b \right >,\linebreak y \in \left < y, f(x) \right >    \right \} .$
     Nechť $M$ rotuje kolem osy $x$. Dostaneme rotační těleso, jehož objem je
-    $$V=\pi \int _a^b \left [ f(x) \right ]^2 \, dx. $$
+    $$V=\pi \int _a^b \left [ f(x) \right ]^2 \, \d x. $$
 \end{pozn}
 
 \begin{priklad}
@@ -248,13 +248,13 @@ Vypočtěte objem koule o poloměru $r$.
 \end{priklad}
 
 \begin{reseni}
-Počítáme $\pi\int _{-r}^r(\sqrt{r^2-x^2} )^2 \, dx=\pi\int_{-r}^r(r^2-x^2)\, dx$.
+Počítáme $\pi\int _{-r}^r(\sqrt{r^2-x^2} )^2 \, \d x=\pi\int_{-r}^r(r^2-x^2)\, \d x$.
 \end{reseni}
 
 \begin{pozn}
 Nechť je $f(x)$ funkce se spojitou derivací na intervalu $\left < a,b \right > $. Délka
 grafu funkce $f(x)$ je
-$$L=\int_a^b \sqrt{1+(f^\prime(x))^2}\, dx. $$
+$$L=\int_a^b \sqrt{1+(f^\prime(x))^2}\, \d x. $$
 \end{pozn}
 
 \begin{priklad}
@@ -262,14 +262,14 @@ Spočtěte délku kružnice o poloměru $r$.
 \end{priklad}
 
 \begin{reseni}
-Počítáme $2\int _{-r}^r \sqrt{1+\left ( \frac{-x}{\sqrt{r^2-x^2}} \right )^2 }\, dx.  $
+Počítáme $2\int _{-r}^r \sqrt{1+\left ( \frac{-x}{\sqrt{r^2-x^2}} \right )^2 }\, \d x.  $
 \end{reseni}
 
 \begin{pozn}
     Nechť $f(x)$ je funkce se spojitou derivací na intervalu $\left < a,b \right > .$
     Pak plášť rotačního kužele, který vznikne rotací grafu $f(x)$ kolem osy $x$, má
    povrch
-  $$S=2\pi\int_a^b f(x)\cdot \sqrt{1+(f^\prime(x))^2}\, dx. $$
+  $$S=2\pi\int_a^b f(x)\cdot \sqrt{1+(f^\prime(x))^2}\, \d x. $$
 \end{pozn}
 
 \begin{priklad}
@@ -277,5 +277,5 @@ Určete povrch koule o poloměru $r$.
 \end{priklad}
 
 \begin{reseni}
-Počítáme $S=2\pi\int_{-r}^r \sqrt{r^2-x^2}\cdot \sqrt{1+\left ( \frac{-x}{\sqrt{r^2-x^2} } \right )^2 } \, dx. $
+Počítáme $S=2\pi\int_{-r}^r \sqrt{r^2-x^2}\cdot \sqrt{1+\left ( \frac{-x}{\sqrt{r^2-x^2} } \right )^2 } \, \d x. $
 \end{reseni}
