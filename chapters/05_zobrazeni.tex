@@ -25,7 +25,7 @@ Nechť $\alpha\subseteq A\times B$ je binární relace. Je-li uspořádaná dvoj
 \end{definition}
 
 \begin{priklad}
-Znázorněte graf relace $U=\left \{ \left [ x,y \right ]\in \mathbb R^2: x-y+1=0  \right \}. $
+Znázorněte graf relace $U=\left \{ \left [ x,y \right ]\in \mathbb R^2\colon x-y+1=0  \right \}. $
 \end{priklad}
 
 \begin{reseni}
@@ -59,16 +59,16 @@ Znázorněte graf relace $U=\left \{ \left [ x,y \right ]\in \mathbb R^2: x-y+1=
 
     \end{axis}
     \end{tikzpicture}
-	\caption{Graf relace $U=\left \{ \left [ x,y \right ]\in \mathbb R^2: x-y+1=0  \right \} $}
+	\caption{Graf relace $U=\left \{ \left [ x,y \right ]\in \mathbb R^2\colon x-y+1=0  \right \} $}
 	\label{grafx+1}
 \end{figure}
 
 \begin{definition}\label{reflsymtran}
   Relaci na množině $A$ nazveme
   \begin{enumerate}[$i.$]
-    \item \textbf{reflexivní}, pokud $\forall a\in A: a\sim a$,
-    \item \textbf{symetrickou}, pokud $\forall a,b \in A: a\sim b \implies b\sim a,$
-    \item \textbf{tranzitivní}, pokud $\forall a,b,c\in A: a\sim b \land b\sim c \implies a\sim c.$
+    \item \textbf{reflexivní}, pokud $\forall a\in A\colon a\sim a$,
+    \item \textbf{symetrickou}, pokud $\forall a,b \in A\colon a\sim b \implies b\sim a,$
+    \item \textbf{tranzitivní}, pokud $\forall a,b,c\in A\colon a\sim b \land b\sim c \implies a\sim c.$
   \end{enumerate}
 \end{definition}
 
@@ -82,7 +82,7 @@ Znázorněte graf relace $U=\left \{ \left [ x,y \right ]\in \mathbb R^2: x-y+1=
 \end{pozn}
 
 \begin{definition}
-  Nechť $A,B$ jsou dvě množiny. \textbf{Zobrazením} $f$ \textbf{z množiny $A$ do množiny $B$} nazýváme relaci $f\subseteq A \times B,$ pro níž platí: $\forall x \in A: \exists \text{ max. 1 } y \in B: (x,y) \in f$. Prvek $x$ nazveme \textbf{vzorem} a $y$ \textbf{obrazem}.
+  Nechť $A,B$ jsou dvě množiny. \textbf{Zobrazením} $f$ \textbf{z množiny $A$ do množiny $B$} nazýváme relaci $f\subseteq A \times B,$ pro níž platí: $\forall x \in A\colon \exists \text{ max. 1 } y \in B\colon (x,y) \in f$. Prvek $x$ nazveme \textbf{vzorem} a prvek $y$ \textbf{obrazem}.
 \end{definition}
 
 \begin{definition}
@@ -108,13 +108,13 @@ Znázorněte graf relace $U=\left \{ \left [ x,y \right ]\in \mathbb R^2: x-y+1=
   \[
     \alpha^{-1}=\left\{ (b,a)\in B\times A;  (a,b)\in \alpha\right\}.
   \]
-  Je-li $\alpha^{-1}$ zobrazení, nazveme relaci $\alpha ^{-1}$ \textbf{inverzním zobrazením} k zobrazení $\alpha$.
+  Jsou-li $\alpha$ i $\alpha^{-1}$ zobrazení, nazveme relaci $\alpha ^{-1}$ \textbf{inverzním zobrazením} k zobrazení $\alpha$.
 \end{definition}
 
 \begin{definition}
-  Nechť $f:B\to C, g:A\to B$ jsou zobrazení. \textbf{Složeným zobrazením} ze zobrazení $f$ a $g$ nazveme zobrazení $h: A\to C$ takové, že
+  Nechť $f\colon B\to C, g\colon A\to B$ jsou zobrazení. \textbf{Složeným zobrazením} ze zobrazení $f$ a $g$ nazveme zobrazení $h\colon A\to C$ takové, že
   \[
-    h=\left\{ (a,c)\in A\times C;\exists b\in B: f(b)=c \land g(a)=b \right\}.
+    h=\left\{ (a,c)\in A\times C;\exists b\in B\colon f(b)=c \land g(a)=b \right\}.
   \]
-  Značíme $c=f(g(a))$, $h=f\, \circ \, g $ (čteme \uv{$f$ po $g$}).
+  Značíme $c=f(g(a))$, $h=f \circ g $ (čteme \uv{$f$ po $g$}).
 \end{definition}

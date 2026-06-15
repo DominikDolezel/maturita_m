@@ -10,11 +10,11 @@
 \begin{definition}
   Nechť $f\subseteq \mathbb R \times \mathbb R$ je funkce. Množinu
   \[
-    \mathcal D(f) = \left  \{ x \in \mathbb R:\exists ! y \in \mathbb R:y=f(x) \right \}
+    \mathcal D(f) = \left  \{ x \in \mathbb R;\exists ! y \in \mathbb R\colon y=f(x) \right \}
   \]
   nazveme \textbf{definičním oborem} funkce $f$. Množinu
   \[
-    \mathcal H(f) = \left  \{ y \in \mathbb R:\exists  x \in \mathbb R:y=f(x) \right \}
+    \mathcal H(f) = \left  \{ y \in \mathbb R;\exists  x \in \mathbb R\colon y=f(x) \right \}
   \]
   nazveme \textbf{oborem hodnot} funkce $f$.
 \end{definition}
@@ -117,13 +117,13 @@ odkud vidíme, že parabola je rozevřená dolů, je posunutá o $1/4$ doprava a
 \begin{definition}
   Funkce $f$ se nazývá \textbf{prostá}, právě tehdy když
   \[
-    \forall x_1,x_2\in \mathcal D(f): x_1\ne x_2 \implies f(x_1)\ne f(x_2).
+    \forall x_1,x_2\in \mathcal D(f)\colon x_1\ne x_2 \implies f(x_1)\ne f(x_2).
   \]
 \end{definition}
 
 \begin{definition}
-	Nechť $f:\mathcal D(f)\to \mathcal H(f)$ je prostá funkce. \textbf{Inverzní funkcí} k funkci $f$ nazveme funkci
-	$f^{-1}:\mathcal H(f)\to \mathcal D(f)$ takovou, že
+	Nechť $f\colon \mathcal D(f)\to \mathcal H(f)$ je prostá funkce. \textbf{Inverzní funkcí} k funkci $f$ nazveme funkci
+	$f^{-1}\colon \mathcal H(f)\to \mathcal D(f)$ takovou, že
 	$$
 	    f(x)=y\iff f^{-1}(y)=x.
 	$$
@@ -134,14 +134,14 @@ odkud vidíme, že parabola je rozevřená dolů, je posunutá o $1/4$ doprava a
 \end{pozn}
 
 \begin{priklad}
-K funkci $f:y=2x-1$ určete $f^{-1}$ a načrtněte grafy obou funkcí.
+K funkci $f\colon y=2x-1$ určete $f^{-1}$ a načrtněte grafy obou funkcí.
 \end{priklad}
 
 \begin{reseni}
 Počítejme
 \begin{align*}
     2x&=y+1\\
-    f^{-1}:y &= \frac{x+1}{2}.
+    f^{-1}\colon y &= \frac{x+1}{2}.
 \end{align*}
 Grafy funkcí jsou souměrné podle přímky $y=x$ a mají stejnou monotónnost.
 
@@ -196,8 +196,8 @@ Grafy funkcí jsou souměrné podle přímky $y=x$ a mají stejnou monotónnost.
 \begin{definition}\label{lichasuda}
   Funkce $f$ se nazývá \textbf{lichá} (resp. \textbf{sudá}), jestliže platí
   \begin{enumerate}[$i.$]
-    \item $\forall x \in \mathcal D(f): -x \in \mathcal D(f)$ a
-  	\item $\forall x \in \mathcal D(f): f(-x)=-f(x)$, resp. $f(-x)=f(x)$.
+    \item $\forall x \in \mathcal D(f)\colon -x \in \mathcal D(f)$ a
+  	\item $\forall x \in \mathcal D(f)\colon f(-x)=-f(x)$, resp. $f(-x)=f(x)$.
   \end{enumerate}
 \end{definition}
 
@@ -220,10 +220,10 @@ Ověříme obě podmínky z definice \ref{lichasuda}:
 \begin{definition}
   Nechť $f$ je funkce a $M$ alespoň dvouprvková množina z $\mathcal D(f)$. Řekneme, že funkce $f$ je na množině $M$
   \begin{enumerate}[$i.$]
-    \item \textbf{rostoucí} $\iff \forall x_1, x_2 \in M: x_1 < x_2 \implies f(x_1) < f(x_2),$
-    \item \textbf{klesající} $\iff \forall x_1, x_2 \in M: x_1 < x_2 \implies f(x_1) > f(x_2),$
-    \item \textbf{neklesající} $\iff \forall x_1, x_2 \in M: x_1 < x_2 \implies f(x_1) \leq f(x_2),$
-    \item \textbf{nerostoucí} $\iff \forall x_1, x_2 \in M: x_1 < x_2 \implies f(x_1) \geq f(x_2).$
+    \item \textbf{rostoucí} $\iff \forall x_1, x_2 \in M\colon x_1 < x_2 \implies f(x_1) < f(x_2),$
+    \item \textbf{klesající} $\iff \forall x_1, x_2 \in M\colon x_1 < x_2 \implies f(x_1) > f(x_2),$
+    \item \textbf{neklesající} $\iff \forall x_1, x_2 \in M\colon x_1 < x_2 \implies f(x_1) \leq f(x_2),$
+    \item \textbf{nerostoucí} $\iff \forall x_1, x_2 \in M\colon x_1 < x_2 \implies f(x_1) \geq f(x_2).$
   \end{enumerate}
   Je-li $f$ neklesající nebo nerostoucí, je \textbf{monotónní}. Pokud je klesající nebo rostoucí, je \textbf{ryze monotónní}.
 \end{definition}
@@ -239,8 +239,8 @@ Celkem tedy $x_1^2<x_2^2 \implies f(x_1)<f(x_2),$ tedy $f$ je rostoucí v $\math
 \begin{definition}
   Nechť $f$ je funkce, $M\subseteq \mathcal D(f)$. Řekneme, že funkce $f$ je na množině $M$
   \begin{enumerate}[$i.$]
-    \item \textbf{shora omezená} $\iff \exists k \in \mathbb R: \forall x \in M: f(x)\leq k,$
-    \item \textbf{zdola omezená} $\iff \exists k \in \mathbb R: \forall x \in M: f(x)\geq k,$
+    \item \textbf{shora omezená} $\iff \exists k \in \mathbb R\colon \forall x \in M\colon f(x)\leq k,$
+    \item \textbf{zdola omezená} $\iff \exists k \in \mathbb R\colon \forall x \in M\colon f(x)\geq k,$
     \item \textbf{omezená} $\iff $ je zdola i shora omezená.
   \end{enumerate}
 \end{definition}
@@ -249,15 +249,15 @@ Celkem tedy $x_1^2<x_2^2 \implies f(x_1)<f(x_2),$ tedy $f$ je rostoucí v $\math
   Nechť $f$ je funkce, $M \subseteq \mathcal D(f)$, v ní prvek $a \in M$.
   Řekneme, že funkce $f$ má v~bodě $a$:
   \begin{enumerate}[$i.$]
-    \item \textbf{ostré maximum} na množině $M$ právě tehdy, když $\forall x \in M\smallsetminus \left \{ a \right \}  : f(x) < f(a)$,
-    \item \textbf{maximum} (neostré) na množině $M$ právě tehdy, když $\forall x \in M \smallsetminus \left \{ a \right \}: f(x) \leq f(a)$,
-    \item \textbf{ostré minimum} na množině $M$ právě tehdy, když $\forall x \in M\smallsetminus \left \{ a \right \}: f(x) > f(a)$,
-    \item \textbf{minimum} (neostré) na množině $M$ právě tehdy, když $\forall x \in M\smallsetminus \left \{ a \right \} : f(x) \geq f(a)$.
+    \item \textbf{ostré maximum} na množině $M$ právě tehdy, když $\forall x \in M\smallsetminus \left \{ a \right \}  \colon f(x) < f(a)$,
+    \item \textbf{maximum} (neostré) na množině $M$ právě tehdy, když $\forall x \in M \smallsetminus \left \{ a \right \}\colon f(x) \leq f(a)$,
+    \item \textbf{ostré minimum} na množině $M$ právě tehdy, když $\forall x \in M\smallsetminus \left \{ a \right \}\colon f(x) > f(a)$,
+    \item \textbf{minimum} (neostré) na množině $M$ právě tehdy, když $\forall x \in M\smallsetminus \left \{ a \right \} \colon f(x) \geq f(a)$.
   \end{enumerate}
 \end{definition}
 
 \begin{definition}
-  Nechť $f$ je funkce. Funkce $f$ se nazývá \textbf{periodická}, pokud $\exists p \in \mathbb R^{+}: \forall x \in \mathcal D(f):$
+  Nechť $f$ je funkce. Funkce $f$ se nazývá \textbf{periodická}, pokud $\exists p \in \mathbb R^{+}\colon \forall x \in \mathcal D(f)\colon$
   \begin{enumerate}
     \item $x \in \mathcal D(f) \implies x \pm p \in \mathcal  D(f)$ a
     \item $f(x) = f(x \pm p)$.
@@ -266,7 +266,7 @@ Celkem tedy $x_1^2<x_2^2 \implies f(x_1)<f(x_2),$ tedy $f$ je rostoucí v $\math
 \end{definition}
 
 \begin{definition}
-  Nechť máme funkci $f: y = f(u)$ s definičním oborem $\mathcal D(f)$ a funkci $g: u=g(x)$ s oborem hodnot $\mathcal H(g)$. Jestliže je $\mathcal H(g) \subseteq \mathcal D(f)$, pak funkci $h: y = f(g(x))$ nazveme \textbf{složenou funkcí} (někdy píšeme též $h=f \circ g$).
+  Nechť máme funkci $f\colon y = f(u)$ s definičním oborem $\mathcal D(f)$ a funkci $g\colon u=g(x)$ s oborem hodnot $\mathcal H(g)$. Jestliže je $\mathcal H(g) \subseteq \mathcal D(f)$, pak funkci $h\colon y = f(g(x))$ nazveme \textbf{složenou funkcí} (někdy píšeme též $h=f \circ g$).
 \end{definition}
 
 \begin{definition}
