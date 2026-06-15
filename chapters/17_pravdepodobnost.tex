@@ -104,7 +104,7 @@ oba současně. Pokud je $P(A\cap B)=P(A)\cdot P(B)$, pak jsou nezávislé.
     Nechť $A,B\subseteq \Omega$ jsou jevy takové, že $P(B)>0.$ \textbf{Podmíněnou
     pravděpodobností} jevu $A$ za předpokladu nastoupení jevu $B$ nazýváme reálné
     číslo dané vzorcem
-    $$P(A\, | \, B) = \frac{P(A\cap B)}{P(B)}.$$
+    $$P(A\mid B) = \frac{P(A\cap B)}{P(B)}.$$
 \end{definition}
 
 \begin{priklad}
@@ -142,8 +142,8 @@ Označme jevy
     &X\,\dots  \textrm{ vytáhli jsme bílou kuličku}.
 \end{align*}
 Pak platí
-$P(X \, | \, A) = \frac{3}{5}, P(X \, | B)=\frac{1}{3}.$ Je tedy
-$$P(X)=P(A)\cdot P(X \, | A)+P(B)\cdot P(X\, | \, B)=\frac{7}{15}.$$
+$P(X \mid A) = \frac{3}{5}, P(X \, | B)=\frac{1}{3}.$ Je tedy
+$$P(X)=P(A)\cdot P(X \, | A)+P(B)\cdot P(X\mid B)=\frac{7}{15}.$$
 \end{reseni}
 
 \begin{veta}[Bayesův vzorec]
@@ -165,12 +165,12 @@ pravděpodobnost toho, že to bude dívka.
 Platí
 \begin{align*}
 P(D)=0,6 & & P(H)=0,4 \\
-P(M \, | \, D)=0,1 & & P(M \, | \, H)=0,25.
+P(M \mid D)=0,1 & & P(M \mid H)=0,25.
 \end{align*}
-Hledáme $P(D \, | \, M).$ Počítejme
+Hledáme $P(D \mid M).$ Počítejme
 \begin{align*}
- P(D)\cdot P(M \, | \, D)&=P(M \cap D)=P(M)\cdot P(D \, | M)\\
- P(D \,|\, M) &= \frac{P(D)\cdot P(M \, | \, D)}{P(M)}=\frac{P(D)\cdot P(M \, | \, D)}{P(D)\cdot P(M\, | \, D)+P(H)\cdot P(M \, | \, H)}=\frac{3}{8}.
+ P(D)\cdot P(M \mid D)&=P(M \cap D)=P(M)\cdot P(D \, | M)\\
+ P(D \,|\, M) &= \frac{P(D)\cdot P(M \mid D)}{P(M)}=\frac{P(D)\cdot P(M \mid D)}{P(D)\cdot P(M\mid D)+P(H)\cdot P(M \mid H)}=\frac{3}{8}.
 \end{align*}
 \end{reseni}
 

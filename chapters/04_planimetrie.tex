@@ -2,7 +2,7 @@
 
 \begin{pozn}
   \textbf{Bod}, \textbf{přímka} a \textbf{rovina} jsou tzv. primitivními pojmy (základní), které nedefinujeme a vyslovujeme o nich nedokazatelná tvrzení (axiomy),
-  které považujeme za platné. Budeme pracovat v rovině $\mathbb E_2$ (\textbf{euklidovský prostor dimenze 2}),
+  které považujeme za platné. Budeme pracovat v rovině $\mathbb E_2$ (\textbf{eukleidovský prostor dimenze 2}),
   což je základní množina, jejíž prvky jsou body. \textbf{Množinu všech přímek} značíme $\mathscr P$.
   V planimetrii dále pracujeme se základními vztahy (relacemi):
   \begin{itemize}
@@ -13,22 +13,22 @@
 
 \begin{axiom}
   Každými dvěma různými body prochází právě jedna přímka.
-  $$\forall A, B \in \mathbb E_2, A\neq B\, \exists! p \in \mathscr P: A \in p \land B \in p.$$
+  $$\forall A, B \in \mathbb E_2, A\neq B\, \exists! p \in \mathscr P\colon A \in p \land B \in p.$$
 \end{axiom}
 
 \begin{axiom}
   Na každé přímce leží alespoň dva různé body.
-  $$\forall p \in \mathscr P\,\exists A,B \in \mathbb E_2: A\neq B \land A \in p \land B \in p.$$
+  $$\forall p \in \mathscr P\,\exists A,B \in \mathbb E_2\colon A\neq B \land A \in p \land B \in p.$$
 \end{axiom}
 
 \begin{axiom}
   Existují alespoň tři po dvou různé body, které neleží na jedné přímce.
-  $$\exists A,B,C \in \mathbb E_2, A \neq B, B\neq C, C\neq A\, \forall p \in \mathscr P: A \notin p \lor B \notin p \lor C \notin p.$$
+  $$\exists A,B,C \in \mathbb E_2, A \neq B, B\neq C, C\neq A\, \forall p \in \mathscr P\colon A \notin p \lor B \notin p \lor C \notin p.$$
 \end{axiom}
 
-\begin{axiom}[Euklidův axiom]
+\begin{axiom}[Eukleidův axiom]
   Každým bodem, který neleží na dané přímce, prochází právě jedna přímka, která s danou přímkou nemá žádný společný bod.
-  $$\forall A \in \mathbb E_2, \forall p \in \mathscr P\, A \notin p \implies \exists! q \in \mathscr P: A \in q \land p \cap q = \emptyset.$$
+  $$\forall A \in \mathbb E_2, \forall p \in \mathscr P\, A \notin p \implies \exists! q \in \mathscr P\colon A \in q \land p \cap q = \emptyset.$$
 \end{axiom}
 
 \begin{definition}
@@ -37,22 +37,22 @@
 
 \begin{axiom}
   Pro každé tři body platí, že pokud jeden leží mezi druhými dvěma, tyto tři body jsou kolineární.
-  $$\forall A, B, C \in \mathbb E_2: C\, \mu\, AB \implies A, B, C \text{ jsou tři různé kolineární body.}$$
+  $$\forall A, B, C \in \mathbb E_2\colon C\, \mu\, AB \implies A, B, C \text{ jsou tři různé kolineární body.}$$
 \end{axiom}
 
 \begin{axiom}
   Pro každé dva různé body $A,B$ existuje bod $C$ takový, že bod $B$ leží mezi body $A$ a $C$.
-  $$\forall A, B \in \mathbb E_2, A \neq B\, \exists C \in \mathbb E_2: B\, \mu \,AC.$$
+  $$\forall A, B \in \mathbb E_2, A \neq B\, \exists C \in \mathbb E_2\colon B\, \mu \,AC.$$
 \end{axiom}
 
 \begin{axiom}
 Pro každé dva různé body $A,B$ existuje bod $C$ takový, že bod $C$ leží mezi body $A$ a $B$.
-  $$\forall A, B \in \mathbb E_2, A \neq B\, \exists D \in \mathbb E_2: D\, \mu \,AB.$$
+  $$\forall A, B \in \mathbb E_2, A \neq B\, \exists D \in \mathbb E_2\colon D\, \mu \,AB.$$
 \end{axiom}
 
 \begin{axiom}
   Ze tří po dvou různých kolineárních bodů právě jeden leží mezi dvěma ostatními.
-  $$\forall A, B, C \in p \in \mathscr P \text{ kolineární}, A \neq B, B\neq C, C\neq A: A \,\overline{\mu}\, BC \land B \,\overline{\mu}\, AC \implies C \,\mu \,AB.$$
+  $$\forall A, B, C \in p \in \mathscr P \text{ kolineární}, A \neq B, B\neq C, C\neq A\colon A \,\overline{\mu}\, BC \land B \,\overline{\mu}\, AC \implies C \,\mu \,AB.$$
 \end{axiom}
 
 \begin{axiom}
@@ -100,11 +100,11 @@ Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a
   \begin{enumerate}[$i.$]
     \item přímka $a$ odděluje každé dva body z různých podmnožin:
       \[
-        \forall x \in P(a), \forall Y \in Q(a): a \, \nu \, XY,
+        \forall x \in P(a), \forall Y \in Q(a)\colon a \, \nu \, XY,
       \]
     \item přímka $a$ neodděluje žádné dva body z jedné podmnožiny:
       \[
-        \forall X, Y \in P(a) \land \forall X,Y \in Q(a): a \,\overline \nu\, XY.
+        \forall X, Y \in P(a) \land \forall X,Y \in Q(a)\colon a \,\overline \nu\, XY.
       \]
   \end{enumerate}
   Pak množinu $P(a)$ (resp. množinu $Q(a)$) nazveme \textbf{otevřenou polorovinou s hraniční přímkou} $a$ (resp. \textbf{otevřenou polorovinou s hraniční přímkou} $a$ \textbf{opačnou k} $P(a)$). Množinu $P(a)\cup a$ (resp. $Q(a) \cup a$) nazveme \textbf{uzavřenou polorovinou s hraniční přímkou} $a$ (resp. \textbf{uzavřenou polorovinou s hraniční přímkou} $a$ \textbf{opačnou k} $P(a)$).
@@ -407,7 +407,7 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
 \end{proof}
 
 \begin{definition}
-  Trojúhelníky jsou \textbf{podobné}, zapisujeme $\triangle ABC \approx \triangle DEF$, jestliže $\exists k \in \R^+:k = \frac{|AB|}{|DE|}=\frac{|BC|}{|EF|}=\frac{|CA|}{|FD|}$. Číslo $k$ nazveme \textbf{koeficientem podobnosti}.
+  Trojúhelníky jsou \textbf{podobné}, zapisujeme $\triangle ABC \approx \triangle DEF$, jestliže $\exists k \in \R^+\colon k = \frac{|AB|}{|DE|}=\frac{|BC|}{|EF|}=\frac{|CA|}{|FD|}$. Číslo $k$ nazveme \textbf{koeficientem podobnosti}.
 \end{definition}
 
 \begin{veta}[Věty o podobnosti trojúhelníků]
@@ -418,13 +418,13 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
   \end{itemize}
 \end{veta}
 
-\begin{veta}[Euklidova věta o výšce]
+\begin{veta}[Eukleidova věta o výšce]
   Nechť je dán pravoúhlý trojúhelník ABC s přeponou AB. Pak
   $$v_c^2 = c_a \cdot c_b$$
   \begin{figure}[ht!]
     \centering
     \includegraphics[width=0.4\textwidth]{eukl_v_o_vysce}
-    \caption{Euklidova věta o výšce}
+    \caption{Eukleidova věta o výšce}
     \label{eukl_v_o_v}
   \end{figure}
 \end{veta}
@@ -433,11 +433,11 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
   Podle obrázku \ref{eukl_v_o_v} je $\triangle ACC_0 \approx \triangle CBC_0$, kde $C_0$ je kolmý průmět bodu $C$ na stranu $AB$ (dle věty uu), neboť $\sphericalangle C_0 CB$ je otočením $\sphericalangle C_0 AC$. Pak taky $\frac{|CC_0|}{|AC_0|} = \frac{|BC_0|}{|CC_0|} \implies \frac{v_c}{c_b} = \frac{c_a}{v_c}$ a tedy $v_c^2 = c_a \cdot c_b$, což jsme chtěli dokázat.
 \end{proof}
 
-\begin{veta}[Euklidovy věty o odvěsnách]
+\begin{veta}[Eukleidovy věty o odvěsnách]
   Nechť je dán pravoúhlý trojúhelník s přeponou AB. Pak
   \begin{align*}
-    b^2 = c \cdot c_b\\
-    a^2 = c \cdot c_a
+    b^2 = c \cdot c_b,\\
+    a^2 = c \cdot c_a.
   \end{align*}
 \end{veta}
 
@@ -455,7 +455,7 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
 
 
 \begin{proof}
-  Z Euklidovy věty o výšce platí $cc_a=a^2$, $cc_b=b^2$, po sečtení těchto dvou vztahů získáme
+  Z Eukleidovy věty o výšce platí $cc_a=a^2$, $cc_b=b^2$, po sečtení těchto dvou vztahů získáme
   \[
     cc_a+cc_b=a^2+b^2 \iff c(c_a+c_b)=a^2+b^2 \iff c^2=a^2+b^2. \qedhere
   \]
@@ -628,18 +628,18 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
 \end{veta}
 
 \begin{proof}
-  Označme $U=\{ X\in \mathbb E_2: |AX|=|BX| \}$.
+  Označme $U=\{ X\in \mathbb E_2\colon |AX|=|BX| \}$.
   \begin{enumerate}[$i.$]
-    \item $o \subseteq U: X \in o$ lib. $\implies$ nechť $X\in AB \implies X=S$ -- střed $AB \implies |AS|=|BS| \implies X \in U.$ Nechť $X \notin AB \implies \triangle ASX \cong \triangle BSX$ (sus) $\implies |AX|=|BX| \implies X \in U$.
-    \item $U \subseteq o: X \in U$ lib. $\implies |AX|=|BX| \implies$ nechť $X \in AB \implies X=S \in o.$ Nechť $X \notin AB \implies \exists \triangle ABC$ -- rovnoramenný se základnou $AB$, kde $XS$ je těžnice, ale i~výška $\implies XS \perp AB \implies X \in o.$ \qedhere
+    \item $o \subseteq U\colon X \in o$ lib. $\implies$ nechť $X\in AB \implies X=S$ -- střed $AB \implies |AS|=|BS| \implies X \in U.$ Nechť $X \notin AB \implies \triangle ASX \cong \triangle BSX$ (sus) $\implies |AX|=|BX| \implies X \in U$.
+    \item $U \subseteq o\colon X \in U$ lib. $\implies |AX|=|BX| \implies$ nechť $X \in AB \implies X=S \in o.$ Nechť $X \notin AB \implies \exists \triangle ABC$ -- rovnoramenný se základnou $AB$, kde $XS$ je těžnice, ale i~výška $\implies XS \perp AB \implies X \in o.$ \qedhere
   \end{enumerate}
 \end{proof}
 
 \begin{veta}
   Nechť $AB$ je úsečka, $o$ její osa. Pak platí:
   \begin{enumerate}[$i.$]
-    \item $\overrightarrow{oA}=\{ X\in \mathbb E_2:|AX|\leq |BX| \},$
-    \item $\overrightarrow{oB}=\{ X \in \mathbb E_2 : |AX| \geq |BX| \}.$
+    \item $\overrightarrow{oA}=\{ X\in \mathbb E_2\colon|AX|\leq |BX| \},$
+    \item $\overrightarrow{oB}=\{ X \in \mathbb E_2 \colon |AX| \geq |BX| \}.$
   \end{enumerate}
 \end{veta}
 

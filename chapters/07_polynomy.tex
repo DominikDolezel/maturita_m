@@ -23,8 +23,8 @@ nsection{Polynomy, kořeny polynomů}
   \[
     B(x) = A(x)\cdot C(x).
   \]
-  Zapisujeme $A(x) \, | \, B(x).$
-  V opačném případě říkáme, že $A(x)$ \textbf{nedělí} $B(x)$ a píšeme $A(x) \, \centernot | \, B(x)$.
+  Zapisujeme $A(x) \mid B(x).$
+  V opačném případě říkáme, že $A(x)$ \textbf{nedělí} $B(x)$ a píšeme $A(x) \nmid B(x)$.
 \end{definition}
 
 \begin{definition}
@@ -43,7 +43,7 @@ nsection{Polynomy, kořeny polynomů}
 \begin{definition}
   Nechť $P(x) \in \mathbb R [x], c \in \mathbb R$ je jeho kořen a $k \in \mathbb N$. Číslo $C \in \mathbb R$ nazýváme \textbf{$k$-násobným kořenem} polynomu $P(x)$ právě tehdy, když platí
   \[
-    (x-c)^k \, | \, P(x) \land (x-c)^{k+1} \,\centernot |\,  P(x).
+    (x-c)^k \mid P(x) \land (x-c)^{k+1} \,\centernot |\,  P(x).
   \]
 \end{definition}
 
@@ -89,14 +89,14 @@ rovnice tvaru $P(x)=0,$ kde $P(x)$ je polynom $n$-tého stupně s reálnými koe
         a_nx^n + a_{n-1}x^{n-1}+\dots + a_1x+a_0=0,
     \end{equation}
     $a_n \ne 0$ s celočíselnými koeficienty. Nechť $\frac{r}{s}, r\in \mathbb Z, s \in \mathbb N, D(r,s)=1$ je kořenem této rovnice.
-    Pak platí: $r \, | \, a_0 \land s \, |\, a_n.$
+    Pak platí: $r \mid a_0 \land s \, |\, a_n.$
 \end{veta}
 
 \begin{veta}\label{odecitanivpolynomu}
     Nechť $\frac{r}{s}$ je racionální kořen algebraické rovnice \ref{alg_rce} s celočíselnými koeficienty.
     Pak platí:
     $$\forall m \in \mathbb Z: (r-ms) \, |\, a(m),$$
-    kde $a(m)$ je hodnota polynomu $a(x)$ pro $x=m.$ Nejčastěji používáme $(r + s) \, | \, a(-1)$ a $(r - s) \, |\, a(1).$
+    kde $a(m)$ je hodnota polynomu $a(x)$ pro $x=m.$ Nejčastěji používáme $(r + s) \mid a(-1)$ a $(r - s) \, |\, a(1).$
 \end{veta}
 
 \begin{algoritmus}[Hledání racionálních kořenů polynomu s racionálními koeficienty]
@@ -118,8 +118,8 @@ Najděte racionální kořeny polynomu $P(x)=\frac{3}{5}x^4+x^3+\frac{1}{5}x^2+x
 \begin{reseni}
 Vynásobme polynom 5, abychom měli všechny koeficienty celé.
 $$P(x) = 3x^4+5x^3+x^2+5x-2.$$
-Pak $r \, | \, a_0 \implies r\, | \, (-2) \implies r \in \left \{ \pm 2, \pm 1 \right \} $
-a $s \, | \, a_n\implies s \, | \, 3 \implies s \in \left \{ 1, 3 \right \} $.
+Pak $r \mid a_0 \implies r\mid (-2) \implies r \in \left \{ \pm 2, \pm 1 \right \} $
+a $s \mid a_n\implies s \mid 3 \implies s \in \left \{ 1, 3 \right \} $.
 Sestavíme všechny možnosti a vyzkoušíme. S výhodou taky můžeme využít věty
 \ref{odecitanivpolynomu}.
 \end{reseni}
@@ -177,8 +177,8 @@ krajní, třeba pro milion). Řešením je tedy $\left( -\infty,-5 \right >\cup 
   \end{enumerate}
 \end{definition}
 
-\begin{algoritmus}[Euklidův algoritmus pro polynomy]
-  Obdobně jako u celých čísel v algoritmu \ref{eukliduvalg} i u polynomů lze pro hledání největšího společného dělitele využít Euklidův algoritmus.\\
+\begin{algoritmus}[Eukleidův algoritmus pro polynomy]
+  Obdobně jako u celých čísel v algoritmu \ref{eukleiduvalg} i u polynomů lze pro hledání největšího společného dělitele využít Eukleidův algoritmus.\\
   Nechť $A(x), B(x) \in \mathbb R [x]$, z nichž alespoň jeden je různý od $O(x)$. Pak mohou nastat dvě možnosti:
   \begin{enumerate}[$i.$]
     \item $A(x) = O(x) \implies D(A(x), B(x)) = B(x)$ nebo $B(x) = O(x) \implies D(A(x), B(x)) = A(x)$ triviálně;
@@ -207,7 +207,7 @@ krajní, třeba pro milion). Řešením je tedy $\left( -\infty,-5 \right >\cup 
 \end{priklad}
 
 \begin{reseni}
-Euklidovým algoritmem. Dělíme tak dlouho, dokud nevyjde nulový zbytek.
+Eukleidovým algoritmem. Dělíme tak dlouho, dokud nevyjde nulový zbytek.
 Mezi jednotlivými děleními můžeme polynomy vynásobit libovolnou konstantou (protože
 to nezmění kořeny polynomu).
 \setlength{\tabcolsep}{2pt}

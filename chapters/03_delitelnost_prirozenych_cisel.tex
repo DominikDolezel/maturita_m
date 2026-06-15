@@ -1,7 +1,7 @@
 \section{Dělitelnost přirozených čísel}
 \begin{definition}
-  Nechť $a,b\in\mathbb Z.$ Číslo $a$ \textbf{dělí} číslo $b$, jestliže $\exists c \in \mathbb Z: b=ac$. Zapisujeme $a\, | \, b$.
-  V opačném případě říkáme, že číslo $a$ \textbf{nedělí} číslo $b$ a zapisujeme $a \, \centernot | \, b$.
+  Nechť $a,b\in\mathbb Z.$ Číslo $a$ \textbf{dělí} číslo $b$, jestliže $\exists c \in \mathbb{Z}\colon b=ac$. Zapisujeme $a \mid b$.
+  V opačném případě říkáme, že číslo $a$ \textbf{nedělí} číslo $b$ a zapisujeme $a \nmid b$.
 \end{definition}
 
 \begin{definition}
@@ -14,24 +14,24 @@
 \end{definition}
 
 \begin{veta}[O dělení se zbytkem]
-  Nechť $a\in \mathbb Z, b\in \mathbb N.$ Pak $\exists ! q \in \mathbb Z, r\in \mathbb N_0:$
-  $$a=bq+r, 0 \leq r < b.$$
+  Nechť $a\in \mathbb Z, b\in \mathbb N.$ Pak $\exists ! q \in \mathbb Z, r\in \mathbb N_0\colon$
+  $$a=bq+r,\quad 0 \leq r < b.$$
 \end{veta}
 
 \begin{definition}
-  Nechť $a,b\in \mathbb N$. Pak $c$ je \textbf{společným dělitelem} čísel $a,b$, jestliže $c \, | \, a \land c\, | \, b.$
+  Nechť $a,b\in \mathbb N$. Pak $c$ je \textbf{společným dělitelem} čísel $a,b$, jestliže $c \mid a \land c\mid b.$
 \end{definition}
 
 \begin{definition}
-  Číslo $d\in \mathbb N$ je \textbf{největší společný dělitel} čísel $a,b \in \mathbb N,$ jestliže jsou splněny zároveň obě podmínky:
+  Číslo $d\in \mathbb N$ je \textbf{největší společný dělitel} čísel $a,b \in \mathbb N,$ jestliže zároveň
   \begin{enumerate}[$i.$]
-    \item $d\, | \, a \land d \, | \, b$ a
-    \item $\forall c \in \mathbb N: c \, | \, a \land c \, | \, b \implies c \, | \, d.$
+    \item $d\mid a \land d \mid b$ a
+    \item $\forall c \in \mathbb N\colon c \mid a \land c \mid b \implies c \mid d.$
   \end{enumerate}
-  Takové číslo značíme $d=D(a,b)$, někdy taky jen $(a,b)$.
+  Takové číslo značíme $d=D(a,b)$, někdy také jen $(a,b)$.
 \end{definition}
 
-\begin{algoritmus}[Euklidův algoritmus]\label{eukliduvalg}
+\begin{algoritmus}[Eukleidův algoritmus]\label{eukleiduvalg}
 Nechť jsou dána $a,b \in \mathbb Z$, z nichž alespoň jedno je nenulové. Jejich největšího společného
 dělitele najdeme následovně. Mohou nastat dvě možnosti:
 \begin{enumerate}[$i.$]
@@ -57,7 +57,7 @@ Potom $D(a,b) = r_n$.
 \end{priklad}
 
 \begin{reseni}
-  Euklidovým algoritmem: $u = 40902, w = 24140:$
+  Eukleidovým algoritmem: $u = 40902, w = 24140:$
   \begin{center}
     \begin{tabular}{c | c | c}
       $u$ & $w$ & $u=w\cdot q+r$  \\
@@ -77,33 +77,33 @@ Potom $D(a,b) = r_n$.
 \end{reseni}
 
 \begin{definition}
-  Nechť $a,b\in \mathbb N.$ Tato čísla jsou \textbf{nesoudělná}, jestliže $D(a,b)=1$. V opačném případě jsou \textbf{soudělná}.
+  Nechť $a,b\in \mathbb N.$ Čísla nazveme \textbf{nesoudělná}, jestliže $D(a,b)=1$. V opačném případě jsou \textbf{soudělná}.
 \end{definition}
 
 \begin{veta}[Fundamentální věta aritmetiky]
   Nechť $a_1,a_2,b\in \mathbb N, b>1.$ Pak
-  $$b \, | \, a_1a_2 \land D(a_1,b)=1\implies b\, | \, a_2.$$
+  $$b \mid a_1 \cdot a_2 \land D(a_1,b)=1\implies b\mid a_2.$$
 \end{veta}
 
 \begin{definition}
-  Nechť $a,b\in \mathbb N.$ Pak $c$ je \textbf{společným násobkem} čísel $a,b$, jestliže $a \, | \, c \land b\, | \, c.$
+  Nechť $a,b\in \mathbb N.$ Pak $c$ je \textbf{společným násobkem} čísel $a,b$, jestliže $a \mid c \land b\mid c.$
 \end{definition}
 
 \begin{definition}
   Číslo $n\in \mathbb N$ je \textbf{nejmenší společný násobek} čísel $a,b \in \mathbb N,$ jestliže jsou splněny zároveň obě podmínky:
   \begin{enumerate}[$i.$]
-    \item $a\, | \, n \land b \, | \, n$ a
-    \item $\forall m \in \mathbb N: a \, | \, m \land b \, | \, m \implies n \, | \, m.$
+    \item $a\mid n \land b \mid n$ a
+    \item $\forall m \in \mathbb N\colon a \mid m \land b \mid m \implies n \mid m.$
   \end{enumerate}
   Takové číslo značíme $n=n(a,b), $ někdy taky jen $\left [ a,b\right ]$.
 \end{definition}
 
 \begin{veta}
-  $\forall a,b \in \mathbb N: ab=D(a,b)\cdot n(a,b).$
+  $\forall a,b \in \mathbb N\colon ab=D(a,b)\cdot n(a,b).$
 \end{veta}
 
 \begin{definition}
-  Nechť $n\in \mathbb N, n>1.$ Má-li číslo $n$ pouze triviální dělitele ($1 \, | \, n, n \, | \, n$), nazýváme jej \textbf{prvočíslem}. V opačném případě hovoříme o \textbf{čísle složeném}.
+  Nechť $n\in \mathbb N, n>1.$ Má-li číslo $n$ pouze triviální dělitele ($1 \mid n$, $n \mid n$), nazýváme jej \textbf{prvočíslem}. V opačném případě hovoříme o \textbf{čísle složeném}.
 \end{definition}
 
 \begin{veta}
@@ -170,14 +170,14 @@ Jsou tedy čtyři možnosti, ovšem nesmíme zapomenout na podmínku $D(q_1,q_2)
 \end{reseni}
 
 \begin{priklad}
-Dokažte přímo a úvahou přes rozklad: $\forall a \in \mathbb Z: 3\, | \, (a^3-a).$
+Dokažte přímo a úvahou přes rozklad: $\forall a \in \mathbb Z\colon 3\mid (a^3-a).$
 \end{priklad}
 
 \begin{reseni}\,
     \begin{enumerate}[$i.$]
     	\item přímo: Mohou nastat dvě situace:
         \begin{enumerate}[$a.$]
-       	    \item $a=3k, k\in \mathbb Z $, pak $3\, | \, (a^3-a)$ triviálně; nebo
+       	    \item $a=3k, k\in \mathbb Z $, pak $3\mid (a^3-a)$ triviálně; nebo
             \item $a=3k\pm 1$, pak $$a^3-a=27k^3\pm 3\cdot 9k^2\cdot 1 + 3\cdot 3k \pm 1-3k\mp 1=
             3(9k^3\pm 9k^2 + 3k-k),$$ což je dělitelné třemi.
         \end{enumerate}
@@ -190,14 +190,14 @@ Dokažte přímo a úvahou přes rozklad: $\forall a \in \mathbb Z: 3\, | \, (a^
 \end{reseni}
 
 \begin{priklad}
-Dokažte nepřímo a sporem: $\forall n \in \mathbb N: 5 \, | \, n^2 \implies 5 \, | \, n.$
+Dokažte nepřímo a sporem: $\forall n \in \mathbb N\colon 5 \mid n^2 \implies 5 \mid n.$
 \end{priklad}
 
 \begin{reseni}\,
 \begin{enumerate}[$i.$]
-	\item nepřímo: Dokazujeme obměnu $5 \, \centernot | \, n \implies 5 \, \centernot | \, n^2$, což je zřejmé.
+	\item nepřímo: Dokazujeme obměnu $5 \nmid n \implies 5 \nmid n^2$, což je zřejmé.
 	\item sporem: Předpokládejme, že výrok platí. Pak $n^2=5q, q \in \mathbb Z$. Protože je 5 prvočíslo a~$n$~je
-    celé, musí i~$5^2 \, | \, n^2,$ jinak by odmocnina byla iracionální. Pak tedy
+    celé, musí i~$5^2 \mid n^2,$ jinak by odmocnina byla iracionální. Pak tedy
     $n^2=5^2\cdot r^2,$ a~proto $n=5r, r \in \mathbb Z,$ což jsme chtěli dokázat.
 \end{enumerate}
 \end{reseni}
@@ -206,11 +206,11 @@ Dokažte nepřímo a sporem: $\forall n \in \mathbb N: 5 \, | \, n^2 \implies 5 
 \begin{veta}
   Nechť $n\in \mathbb N, n=a_k\cdot 10^k+a_{k-1}\cdot 10^{k-1}+\dots + a_1\cdot 10 + a_0.$ Pak platí:
   \begin{enumerate}[$i.$]
-    \item $2 \, | \, n \iff 2 \, | \, a_0$,
-    \item $4 \, | \, n \iff 4 \, | \, (10a_1 + a_0)$,
-    \item $5 \, | \, n \iff 5 \, | \, a_0$,
-    \item $8 \, | \, n \iff 8 \, | \, (10^2a_2 + 10a_1 + a_0)$ a
-    \item $10 \, | \, n \iff a_0 = 0$.
+    \item $2 \mid n \iff 2 \mid a_0$,
+    \item $4 \mid n \iff 4 \mid (10a_1 + a_0)$,
+    \item $5 \mid n \iff 5 \mid a_0$,
+    \item $8 \mid n \iff 8 \mid (10^2a_2 + 10a_1 + a_0)$ a
+    \item $10 \mid n \iff a_0 = 0$.
   \end{enumerate}
 \end{veta}
 
@@ -227,8 +227,8 @@ Platí $n = 10(a_k\cdot 10^{k-1}+a_{k-1}\cdot 10 ^{k-2}+\dots+a_1)+a_0 = 10l+a_0
 \begin{veta}
   Nechť $n\in \mathbb N, n=a_k\cdot 10^k+a_{k-1}\cdot 10^{k-1}+\dots + a_1\cdot 10 + a_0,$ $S(n)$ je ciferný součet čísla $n$. Pak platí:
   \begin{enumerate}[$i.$]
-    \item $3\, | \, n \iff 3 \, | \, S(n)$ a
-    \item $9\, | \, n \iff 9 \, | \, S(n)$.
+    \item $3\mid n \iff 3 \mid S(n)$ a
+    \item $9\mid n \iff 9 \mid S(n)$.
   \end{enumerate}
 \end{veta}
 
@@ -241,23 +241,23 @@ Platí $n = 10(a_k\cdot 10^{k-1}+a_{k-1}\cdot 10 ^{k-2}+\dots+a_1)+a_0 = 10l+a_0
       & = 9m+S(n), m \in \mathbb N
   \end{align*}
   \begin{enumerate}
-    \item $\implies: 9 \, | \, n \land 9 \, | \, 9m \implies 9 \, | \, S(n)$,
-    \item $\impliedby: 9 \, | \, S(n) \land 9 \, | \, 9m \implies 9 \, | \, n.$ \qedhere
+    \item[$\implies$:] $9 \mid n \land 9 \mid 9m \implies 9 \mid S(n)$,
+    \item[$\impliedby$:] $9 \mid S(n) \land 9 \mid 9m \implies 9 \mid n.$ \qedhere
   \end{enumerate}
 \end{proof}
 
 \begin{veta}
   Nechť $n\in \mathbb N, n=a_k\cdot 10^k + a_{k-1}\cdot 10^{k-1}+\dots+a_1\cdot 10+ a_0$. Pak platí
   \[
-    11 \, | \, n \iff 11 \, | \, (a_0-a_1+a_2-a_3+\dots+(-1)^k a_k).
+    11 \mid n \iff 11 \mid (a_0-a_1+a_2-a_3+\dots+(-1)^k a_k).
   \]
 \end{veta}
 
 \begin{veta}
   Nechť $n\in \mathbb N, n=10k+a_0,k\in \mathbb N.$ Pak platí
   \begin{enumerate}[$i.$]
-    \item $7 \, | \, n \iff 7 \, | \, (k+5a_0),$
-    \item $13 \, | \, n \iff 13 \, | \, (k+4a_0) $.
+    \item $7 \mid n \iff 7 \mid (k+5a_0),$
+    \item $13 \mid n \iff 13 \mid (k+4a_0) $.
   \end{enumerate}
 \end{veta}
 
@@ -269,38 +269,38 @@ Platí $n = 10(a_k\cdot 10^{k-1}+a_{k-1}\cdot 10 ^{k-2}+\dots+a_1)+a_0 = 10l+a_0
         10b=10k+50a_0=10k+a_0+49a_0=n+49a_0
       \]
       \begin{enumerate}
-        \item $\implies: 7 \, | \, n \land 7 \, | \, 49a_0 \implies 7 \, | \, 10b \implies 7 \, | \, b \textrm{, neboť } D(7,10)=1$,
-        \item $\impliedby: 7 \, | \, b \implies 7 \, | \, 10 b \land 7 \, | \, 49 a_0 \implies 7 \, | \, n$.
+        \item $\implies: 7 \mid n \land 7 \mid 49a_0 \implies 7 \mid 10b \implies 7 \mid b \textrm{, neboť } D(7,10)=1$,
+        \item $\impliedby: 7 \mid b \implies 7 \mid 10 b \land 7 \mid 49 a_0 \implies 7 \mid n$.
       \end{enumerate}
     \item Je-li $b=k+4a_0$, pak
       \[
         10b=10k+40a_0=10k+a_0+39a_0=n+39a_0
       \]
       \begin{enumerate}
-        \item $\implies: 13 \, | \, n \land 13 \, | \, 39a_0 \implies 13 \, | \, 10b \implies 13 \, | \, b \textrm{, neboť } D(13,10)=1$,
-        \item $\impliedby: 13 \, | \, b \implies  13 \, | \, 10 b \land 13 \, | \, 13a_0 \implies 13 \, | \, n$. \qedhere
+        \item $\implies: 13 \mid n \land 13 \mid 39a_0 \implies 13 \mid 10b \implies 13 \mid b \textrm{, neboť } D(13,10)=1$,
+        \item $\impliedby: 13 \mid b \implies  13 \mid 10 b \land 13 \mid 13a_0 \implies 13 \mid n$. \qedhere
       \end{enumerate}
   \end{enumerate}
 \end{proof}
 
 \begin{priklad}
-Dokažte, že  $\forall n \in \mathbb N: 24 \, | \, (25^n+23).$
+Dokažte, že  $\forall n \in \mathbb N\colon 24 \mid (25^n+23).$
 \end{priklad}
 
 \begin{reseni}
     Označme $V(n)=25^n+23$. Matematickou indukcí:
     \begin{enumerate}[1.]
-        \item $n=1: 24 \, | \, (25+23) = 48$, platí
-        \item Nechť $24 \, | \, V(n)$. Chceme dokázat, že $24 \, | \, V(n+1).$ Platí:
+        \item $n=1: 24 \mid (25+23) = 48$, platí
+        \item Nechť $24 \mid V(n)$. Chceme dokázat, že $24 \mid V(n+1).$ Platí:
         \[
             V(n+1) = 25^{n+1}+ 23 = 25\cdot (25^n+23)-25\cdot 23+23=25V(n)-23(25-1),
         \]
-        odkud vidíme, že $24\, | \, V(n+1),$ což jsme chtěli dokázat.
+        odkud vidíme, že $24\mid V(n+1),$ což jsme chtěli dokázat.
     \end{enumerate}
 \end{reseni}
 
 \begin{priklad}
-Dokažte, že $\forall a \in \mathbb Z: 3 \, \centernot | \, a \implies 3 \, | \, (a^2-1).$
+Dokažte, že $\forall a \in \mathbb Z\colon 3 \nmid a \implies 3 \mid (a^2-1).$
 \end{priklad}
 
 \begin{reseni}
@@ -343,7 +343,7 @@ Vyhovují možnosti 1 a 60, 3 a 20, 4 a 15 a 5 a 12. Odpovídající $a, b$ už 
 \begin{dusledek}
   Důsledkem věty \ref{bin_v} je následující fakt:
   \[
-    (a+b)^n=a^n+kb=la+b^n,\,\,\, k,l\in \mathbb N.
+    (a+b)^n=a^n+kb=la+b^n,\quad k,l\in \mathbb N.
   \]
 \end{dusledek}
 
