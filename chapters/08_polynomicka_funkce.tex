@@ -2,8 +2,8 @@
 
 \begin{definition}\,
 \begin{enumerate}[$i.$]
-  \item Nechť $b \in \mathbb R$. Funkci $f:y = b$ nazveme \textbf{konstantní funkcí}.
-  \item Nechť $a, b \in \mathbb R, a \neq 0$. Funkci $f:y= ax + b$ nazveme \textbf{lineární funkcí}.
+  \item Nechť $b \in \mathbb R$. Funkci $f\colon y = b$ nazveme \textbf{konstantní funkcí}.
+  \item Nechť $a, b \in \mathbb R, a \neq 0$. Funkci $f\colon y= ax + b$ nazveme \textbf{lineární funkcí}.
 \end{enumerate}
 \end{definition}
 
@@ -56,7 +56,7 @@
 \end{pozn}
 
 \begin{veta}
-  Nechť $f: y = ax + b, a \neq 0$ je lineární funkce. Pak platí:
+  Nechť $f\colon y = ax + b, a \neq 0$ je lineární funkce. Pak platí:
   \begin{enumerate}[$i.$]
     \item $b=0 \implies f$ je lichá,\\
           $b \neq 0 \implies f$ není ani sudá, ani lichá;
@@ -70,8 +70,8 @@
 
 \begin{proof}\,
   \begin{enumerate}[$i.$]
-    \item $b=0 \implies f:y= ax = f(x) \land -ax = -f(x) \implies f$ je lichá\\
-          $b\neq 0 \implies f:y = ax + b = f(x) = -ax + b \implies f$ není sudá ani lichá
+    \item $b=0 \implies f\colon y= ax = f(x) \land -ax = -f(x) \implies f$ je lichá\\
+          $b\neq 0 \implies f\colon y = ax + b = f(x) = -ax + b \implies f$ není sudá ani lichá
     \item $a>0 \implies x_1 < x_2 \implies ax_1 < ax_2 \implies ax_1 + b < ax_2 + b \implies f$ je rostoucí\\
           $a<0 \implies x_1 < x_2 \implies ax_1 > ax_2 \implies ax_1 + b > ax_2 + b \implies f$ je klesající
     \item Obor hodnot je $\mathbb R \implies f$ není omezená.
@@ -81,7 +81,7 @@
 \end{proof}
 
 \begin{definition}
-  Nechť $a,b,c \in \mathbb R, a \neq 0$. Pak funkci $f:y = ax^2 + bx+ c$ nazýváme \textbf{kvadratickou funkcí}.
+  Nechť $a,b,c \in \mathbb R, a \neq 0$. Pak funkci $f\colon y = ax^2 + bx+ c$ nazýváme \textbf{kvadratickou funkcí}.
 \end{definition}
 
 \begin{figure}[ht!]
@@ -138,15 +138,15 @@
 \end{pozn}
 
 \begin{veta}
-  Nechť $f:y = ax^2, a \neq 0$ je kvadratická funkce. Pak platí:
+  Nechť $f\colon y = ax^2, a \neq 0$ je kvadratická funkce. Pak platí:
   \begin{center}
     \begin{tabularx}{\textwidth}{ l | l  l }
         \, & $a>0$ & $a<0$ \\
         \hline
         obor hodnot & $\mathcal H(f) = \mathbb R^{+}_0$ & $\mathcal H(f) = \mathbb R^{-}_0$ \\
         parita & sudá & sudá \\
-        monotónnost & $x \in (-\infty, 0\rangle$ -- klesající & $x \in (-\infty, 0\rangle$ -- rostoucí \\
-        \, & $x \in \langle 0, \infty)$ -- rostoucí & $x \in \langle 0, \infty)$ -- klesající \\
+        monotónnost & $x \in \left(-\infty, 0\right>$ -- klesající & $x \in \left(-\infty, 0\right>$ -- rostoucí \\
+        \, & $x \in \left<  0, \infty \right)$ -- rostoucí & $x \in \left<  0, \infty \right)$ -- klesající \\
         omezenost & zdola omezená & zdola neomezená \\
         \, & shora neomezená & shora omezená \\
         extrémy &  ostré minimum v bodě $x_0=0$ & ostré maximum v bodě $x_0=0$ \\
@@ -160,24 +160,24 @@
     \begin{enumerate}
         \item[$i.$] parita: $\mathcal D(f) = \mathbb R$ -- platí, $f(-x)=a(-x)^2=ax^2=f(x) \implies f$ je sudá
         \item[$ii.$] monotonie: \begin{itemize}
-        \item $a>0 \land x\in \left (-\infty,0\right >$: \\
+        \item $a>0 \land x\in \left(-\infty,0\right>$: \\
         Je-li $x_1<x_2$, pak $ax_1^2 > ax_2^2 \iff ax_1 <ax_2 \iff ax_1^2>ax_1x_2 \land ax_1x_2 > ax_2^2 \implies$ platí.
-            \item $a>0 \land x\in \left <0,\infty\right )$: \\
+            \item $a>0 \land x\in \left< 0,\infty\right )$: \\
             Je-li $x_1<x_2$, pak $ax_1^2 > ax_2^2 \iff ax_1 <ax_2 \iff ax_1^2>ax_1x_2 \land ax_1x_2 > ax_2^2 \implies$ platí.\qedhere
         \end{itemize}
     \end{enumerate}
 \end{proof}
 
 \begin{veta}
-  Nechť $f:y = ax^2+bx+c, a \neq 0$ je kvadratická funkce. Pak platí:
+  Nechť $f\colon y = ax^2+bx+c, a \neq 0$ je kvadratická funkce. Pak platí:
   \begin{center}
     \begin{tabularx}{\textwidth}{ l | l  l }
         \, & $a>0$ & $a<0$ \\
         \hline
-        obor hodnot & $\mathcal H(f) = \left <c-\frac{b^2}{4a}, \infty \right)$ & $\mathcal H(f) = \left (-\infty, c-\frac{b^2}{4a}\right >$ \\
-        parita & obecně není ani sudá, ani lichá & \, \\
-        monotónnost & $x \in \left (-\infty, -\frac{b}{2a} \right >$ -- klesající & $x \in \left (-\infty, -\frac{b}{2a} \right >$ -- rostoucí \\
-        \, & $x \in \left < -\frac{b}{2a}, \infty \right )$ -- rostoucí & $x \in \left < -\frac{b}{2a}, \infty \right )$ -- klesající \\
+        obor hodnot & $\mathcal H(f) = \left< c-\frac{b^2}{4a}, \infty \right)$ & $\mathcal H(f) = \left (-\infty, c-\frac{b^2}{4a}\right>$ \\
+        parita & \multicolumn{2}{ c }{obecně není ani sudá, ani lichá} \\
+        monotónnost & $x \in \left (-\infty, -\frac{b}{2a} \right>$ -- klesající & $x \in \left (-\infty, -\frac{b}{2a} \right>$ -- rostoucí \\
+        \, & $x \in \left<  -\frac{b}{2a}, \infty \right )$ -- rostoucí & $x \in \left<  -\frac{b}{2a}, \infty \right )$ -- klesající \\
         omezenost & zdola omezená & zdola neomezená \\
         \, & shora neomezená & shora omezená \\
         extrémy &  ostré minimum v bodě $x_0=-\frac{b}{2a}$ & ostré maximum v bodě $x_0=-\frac{b}{2a}$ \\
@@ -187,7 +187,7 @@
 \end{veta}
 
 \begin{definition}
-    Nechť $P(x)\in \mathbb R[x]$ je polynom. Pak funkci $f:y=P(x)$ nazveme \textbf{polynomickou funkcí}.
+    Nechť $P(x)\in \mathbb R[x]$ je polynom. Pak funkci $f\colon y=P(x)$ nazveme \textbf{polynomickou funkcí}.
 \end{definition}
 
 \begin{figure}[ht!]
@@ -247,8 +247,8 @@
 \begin{pozn}\,
     \begin{enumerate}[$i.$]
         \item Definičním oborem polynomické funkce je $\mathbb R.$
-        \item Jestliže je stupeň polynomu lichý, pak je obor hodnot $\mathbb R.$ Jestliže je sudý a $a_n > 0,$ je obor hodnot interval $\left <c,\infty \right )$,
-        v opačném případě je to interval $\left (-\infty, c\right >$, kde $c \in \mathbb R$.
+        \item Jestliže je stupeň polynomu lichý, pak je obor hodnot $\mathbb R.$ Jestliže je sudý a $a_n > 0,$ je obor hodnot interval $\left< c,\infty \right )$,
+        v opačném případě je to interval $\left (-\infty, c\right>$, kde $c \in \mathbb R$.
     \end{enumerate}
 \end{pozn}
 

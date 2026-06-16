@@ -51,7 +51,7 @@
 \end{proof}
 
 \begin{definition}
-    Přímku $a \subseteq \mathbb E_3$ nazveme s rovinou $\alpha \subseteq \mathbb E_3:$
+    Přímku $a \subseteq \mathbb E_3$ nazveme s rovinou $\alpha \subseteq \mathbb E_3\colon$
     \begin{enumerate}[$i.$]
         \item \textbf{rovnoběžnou}, jestliže $a\cap \alpha = \emptyset$;
         \item \textbf{různoběžnou}, jestliže $a\cap \alpha = \left \{ P \right \} $;
@@ -60,19 +60,19 @@
 \end{definition}
 
 \begin{veta}[Kritérium rovnoběžnosti přímky a roviny]
-    $\forall p \in \mathscr P, \forall \rho \subseteq \mathbb E_3: p \parallel \rho
-    \iff \exists q\subseteq \rho: p\parallel q.$
+    $\forall p \in \mathscr P, \forall \rho \subseteq \mathbb E_3\colon p \parallel \rho
+    \iff \exists q\subseteq \rho\colon p\parallel q.$
 \end{veta}
 
 \begin{proof}
     Pokud $p \subseteq \rho \implies q=p$ a tvrzení platí.\\
-    Nechť $p\not \subseteq \rho:$
-    \begin{enumerate}[$i.$]
-        \item \uv{$\implies$}: Nechť $p\parallel\rho\implies p\land \rho=\emptyset.$
+    Nechť $p\not \subseteq \rho\colon$
+    \begin{enumerate}
+        \item[\uv{$\implies$}:] Nechť $p\parallel\rho\implies p\land \rho=\emptyset.$
         Nechť $A\in\rho$ je lib. bod. Potom bodem $A$ a přímkou $p$ je jednoznačně
         určena rovina $\sigma.$ $A\in \rho\cap\sigma \implies \rho\cap\sigma=q,$
         $p,q$ jsou komplanární a~mají prázdný průnik $\implies p\parallel q.$
-        \item \uv{$\impliedby$}: Sporem: Předpokládejme, že $p\parallel q \land
+        \item[\uv{$\impliedby$}:] Sporem: Předpokládejme, že $p\parallel q \land
         p\nparallel \rho.$ $p\parallel q \implies p\cap q=\emptyset\land q\subseteq \rho,
         p,q$ leží v téže rovině a $p\ne q\implies p\cap q = \emptyset$, což je spor.\qedhere
     \end{enumerate}
@@ -105,7 +105,7 @@ průsečík přímky $DF$ a roviny $RST$.
 
 \begin{veta}\label{kolmostprimekposun}
     Nechť $p,q \subseteq \mathbb E_3, p\perp q.$ Pak $\forall p^\prime, q^\prime
-    \subseteq \mathbb E_3: p^\prime \parallel p, q^\prime \parallel q \implies
+    \subseteq \mathbb E_3\colon p^\prime \parallel p, q^\prime \parallel q \implies
     p^\prime \perp q^\prime.$
 \end{veta}
 
@@ -129,12 +129,12 @@ Využijeme věty \ref{kolmostprimekposun}.
 \begin{definition}
     Nechť $p\subseteq \mathbb E_3$ je přímka a $\alpha \subseteq \mathbb E_3$ je rovina.
     Řekneme, že \textbf{přímka} $p$ je \textbf{kolmá k rovině} $\alpha$ právě tehdy,
-    když $\forall q \subseteq \alpha: q \perp p.$
+    když $\forall q \subseteq \alpha\colon q \perp p.$
 \end{definition}
 
 \begin{veta}[Kritérium kolmosti přímky a roviny]
     Nechť $p\subseteq \mathbb E_3$ je přímka a $\alpha \subseteq \mathbb E_3$ je rovina.
-    Pak  $p\perp \alpha \iff \exists q,r \subseteq \alpha: q \nparallel r: q\perp p\land
+    Pak  $p\perp \alpha \iff \exists q,r \subseteq \alpha\colon q \nparallel r\colon q\perp p\land
     r\perp p.$
 \end{veta}
 
@@ -150,7 +150,7 @@ $AB$). Pak plyne triviálně.
 
 \begin{definition}\label{kolmeroviny}
     Řekneme, že \textbf{rovina} $\alpha$ \textbf{je kolmá k rovině} $\beta$, jestliže
-    $\exists a\subseteq\alpha: a \perp\beta.$
+    $\exists a\subseteq\alpha\colon a \perp\beta.$
 \end{definition}
 
 \begin{pozn}
@@ -164,10 +164,10 @@ $AB$). Pak plyne triviálně.
 
 \begin{definition}
 \textbf{Shodným} (resp. \textbf{podobným}) \textbf{zobrazením} v prostoru (shodností,
-resp. podobností) nazýváme zobrazení $\mathscr Z:
+resp. podobností) nazýváme zobrazení $\mathscr Z\colon
 \mathbb E_3 \to \mathbb E_3$, jestliže platí
 \begin{align*}
-    \forall X, Y \in \mathbb E_3: |\mathscr Z(X)\mathscr Z(Y)| =|XY|, & & \textrm{resp.} & & |\mathscr Z(X)\mathscr Z(Y)|=k|XY|, \quad k \in \mathbb R^+
+    \forall X, Y \in \mathbb E_3\colon |\mathscr Z(X)\mathscr Z(Y)| =|XY|, & & \textrm{resp.} & & |\mathscr Z(X)\mathscr Z(Y)|=k|XY|, \quad k \in \mathbb R^+
 \end{align*}
 a číslo $k$ \textbf{koeficientem podobnosti}.
 \end{definition}
@@ -177,7 +177,7 @@ a číslo $k$ \textbf{koeficientem podobnosti}.
 \end{pozn}
 
 \begin{definition}
-    Nechť $S\in \mathbb E_3$ je bod. Pak zobrazení $\mathscr S_S: \mathbb E_3 \to
+    Nechť $S\in \mathbb E_3$ je bod. Pak zobrazení $\mathscr S_S\colon \mathbb E_3 \to
     \mathbb E_3$ nazýváme \textbf{středovou souměrností} se středem $S$, jestliže
     \begin{enumerate}[$i.$]
     \item $X=S\implies X=\mathscr S_S(X),$
@@ -193,11 +193,11 @@ a číslo $k$ \textbf{koeficientem podobnosti}.
 \begin{definition}
     $S\in \mathbb E_3$ je \textbf{střed souměrnosti} útvaru $\mathscr U,$ jestliže
     $\exists \mathscr U = \mathscr S_S(\mathscr U).$ Útvar je středově souměrný,
-    pokud $\exists S:\exists\mathscr U = \mathscr S_S(\mathscr U).$
+    pokud $\exists S\colon\exists\mathscr U = \mathscr S_S(\mathscr U).$
 \end{definition}
 
 \begin{definition}
-    Nechť $\alpha$ je rovina. Pak zobrazení $\mathscr S_\alpha:\mathbb E_3 \to
+    Nechť $\alpha$ je rovina. Pak zobrazení $\mathscr S_\alpha\colon\mathbb E_3 \to
     \mathbb E_3$ je \textbf{rovinová}  souměrnost, jestliže
     \begin{enumerate}[$i.$]
     \item $X\in\alpha\implies \mathscr S_\alpha(X)=X,$
@@ -258,14 +258,14 @@ jestliže existuje jeho osa souměrnosti.
 
 \begin{definition}
     Nechť je dán bod $S\in \mathbb E_3$ a číslo $\lambda \in \mathbb R \smallsetminus \left \{ 0
-    \right \}. $ Pak zobrazení $\mathscr H_{S,\lambda}: \mathbb E_3 \to \mathbb E_3$
+    \right \}. $ Pak zobrazení $\mathscr H_{S,\lambda}\colon \mathbb E_3 \to \mathbb E_3$
    nazýváme \textbf{stejnolehlost}, jestliže $\forall X \in \mathbb E_3$ platí:
    \begin{enumerate}[$i.$]
    \item $X=S\implies X^\prime =X=S$,
   	\item $X\ne S\implies |SX^\prime| = |\lambda|\cdot |SX|,$ přičemž
    \begin{enumerate}[$a.$]
-   \item $\lambda > 0: X\in \overrightarrow{SX},$
-  	\item $\lambda < 0: X$ leží na opačné polopřímce k $\overrightarrow{SX}.$
+   \item $\lambda > 0\colon X\in \overrightarrow{SX},$
+  	\item $\lambda < 0\colon X$ leží na opačné polopřímce k $\overrightarrow{SX}.$
    \end{enumerate}
    \end{enumerate}
 \end{definition}

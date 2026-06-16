@@ -1,4 +1,4 @@
-nsection{Polynomy, kořeny polynomů}
+\section{Polynomy, kořeny polynomů}
 \begin{definition}
   \textbf{Polynomem} nazýváme každý výraz $P(x)$ tvaru
   \[
@@ -95,7 +95,7 @@ rovnice tvaru $P(x)=0,$ kde $P(x)$ je polynom $n$-tého stupně s reálnými koe
 \begin{veta}\label{odecitanivpolynomu}
     Nechť $\frac{r}{s}$ je racionální kořen algebraické rovnice \ref{alg_rce} s celočíselnými koeficienty.
     Pak platí:
-    $$\forall m \in \mathbb Z: (r-ms) \, |\, a(m),$$
+    $$\forall m \in \mathbb Z\colon (r-ms) \, |\, a(m),$$
     kde $a(m)$ je hodnota polynomu $a(x)$ pro $x=m.$ Nejčastěji používáme $(r + s) \mid a(-1)$ a $(r - s) \, |\, a(1).$
 \end{veta}
 
@@ -120,7 +120,7 @@ Vynásobme polynom 5, abychom měli všechny koeficienty celé.
 $$P(x) = 3x^4+5x^3+x^2+5x-2.$$
 Pak $r \mid a_0 \implies r\mid (-2) \implies r \in \left \{ \pm 2, \pm 1 \right \} $
 a $s \mid a_n\implies s \mid 3 \implies s \in \left \{ 1, 3 \right \} $.
-Sestavíme všechny možnosti a vyzkoušíme. S výhodou taky můžeme využít věty
+Sestavíme všechny možnosti a vyzkoušíme. S výhodou také můžeme využít věty
 \ref{odecitanivpolynomu}.
 \end{reseni}
 
@@ -164,16 +164,17 @@ P(x)=(x-1)^2(x+5)^3x^4(x-3)(x-2)(x^2+1)(x-5)^5.
 Členy se záporným diskriminantem (v tomto případě $x^2+1$) nemají reálný kořen,
 neuvažujeme je tedy. V sudých mocninách se nemění znaménko. Nulové body si zaneseme
 na číselnou osu a v každém, který je na lichou mocninu, změníme znaménko (dosadíme si nějaké
-krajní, třeba pro milion). Řešením je tedy $\left( -\infty,-5 \right >\cup \left < 2,3 \right > \cup \left < 5,\infty \right )  $.
+krajní, třeba pro milion). Řešením je tedy $\left( -\infty,-5 \right>\cup \left<  2,3 \right> \cup \left<  5,\infty \right )  $.
 \end{reseni}
 
 \begin{definition}
   Nechť $A(x), B(x) \in \mathbb R [x]$. Polynom $C(x) \in \mathbb R [x]$ se nazývá \textbf{společný dělitel polynomů} $A(x), B(x)$
   právě tehdy, když platí: $C(x) \mid A(x) \land C(x) \mid B(x)$.
+
   Polynom $D(x) \in \mathbb R [x]$ se nazývá \textbf{největší společný dělitel polynomů} $A(x), B(x)$, který označujeme $D(A(x), B(x))$ nebo $(A(x), B(x))$, právě tehdy, když platí:
   \begin{enumerate}[i.]
     \item $D(x) \mid A(x) \land D(x) \mid B(x)$ a
-    \item $\forall C(x) \in \mathbb R [x]: C(x) \mid A(x) \land C(x) \mid B(x) \implies C(x) \mid D(x).$
+    \item $\forall C(x) \in \mathbb R [x]\colon C(x) \mid A(x) \land C(x) \mid B(x) \implies C(x) \mid D(x).$
   \end{enumerate}
 \end{definition}
 
@@ -182,7 +183,7 @@ krajní, třeba pro milion). Řešením je tedy $\left( -\infty,-5 \right >\cup 
   Nechť $A(x), B(x) \in \mathbb R [x]$, z nichž alespoň jeden je různý od $O(x)$. Pak mohou nastat dvě možnosti:
   \begin{enumerate}[$i.$]
     \item $A(x) = O(x) \implies D(A(x), B(x)) = B(x)$ nebo $B(x) = O(x) \implies D(A(x), B(x)) = A(x)$ triviálně;
-    \item $A(x)\ne O(x)\ne B(x)$.
+    \item $A(x)\ne O(x)$, $B(x) \ne 0(x)$.
   \end{enumerate}
   Dále se zabýváme případem $ii$. Je-li to nutné, přejmenujme polynomy tak, aby $\text{st}(A(x)) \geq \text{st}(B(x))$.
   Proveďme následující posloupnost dělení se zbytkem. Toto dělení ukončíme, až bude zbytek nulový polynom.

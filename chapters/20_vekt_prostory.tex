@@ -10,7 +10,7 @@
     Na množině $\mathscr U$ všech orientovaných úseček s pevným počátečním bodem
     $P\in \mathbb E_3$
     definujeme operaci sčítání takto:
-    $$\forall \overrightarrow{PX}, \overrightarrow{PY} \in \mathscr U:
+    $$\forall \overrightarrow{PX}, \overrightarrow{PY} \in \mathscr U\colon
         \overrightarrow{PX} +  \overrightarrow{PY} = \overrightarrow{PQ},$$
     je-li bod $Q\in \mathbb E_3$
     vrcholem zobecněného rovnoběžníku $PXQY$.
@@ -32,33 +32,33 @@
 \end{definition}
 
 \begin{definition}
-    Nechť je dána množina $G$ s operací $*:G\times G \to G$ (je na $G$ uzavřená).
+    Nechť je dána množina $G$ s operací $*\colon G\times G \to G$ (je na $G$ uzavřená).
     Pak dvojice $(G,*)$ je \textbf{grupa}, jestliže platí:
     \begin{enumerate}[$i.$]
-        \item $\forall a,b,c, \in G: a*(b*c) = (a*b)*c$ (asociativita),
-       	\item $\exists e \in G$ takové, že $\forall a\in G: a*e=e*a=a$ (existence neutrálního prvku),
-       	\item $\forall a\in G: \exists a^{-1}\in G$ takové, že $a*a^{-1}=a^{-1}a=e$ (existence inverzního prvku).
+        \item $\forall a,b,c, \in G\colon a*(b*c) = (a*b)*c$ (asociativita),
+       	\item $\exists e \in G$ takové, že $\forall a\in G\colon a*e=e*a=a$ (existence neutrálního prvku),
+       	\item $\forall a\in G\colon \exists a^{-1}\in G$ takové, že $a*a^{-1}=a^{-1}a=e$ (existence inverzního prvku).
     \end{enumerate}
     Pokud navíc
     \begin{enumerate}[$iv.$]
-        \item $\forall a,b \in G: a*b=b*a$ (komutativita),
+        \item $\forall a,b \in G\colon a*b=b*a$ (komutativita),
     \end{enumerate}
     je $(G,*)$ \textbf{komutativní} (též \textbf{Abelovská}) \textbf{grupa}.
 \end{definition}
 
 \begin{definition}\label{vekt_prost}
-    Nechť je dána množina $V$, těleso $T$ a dvě operace $\bigoplus: V\times V \to V$ a~$\bigotimes: T\times V \to V$ (jsou na $V$ uzavřené). Pak čtveřice $(V,T,\bigoplus,
+    Nechť je dána množina $V$, těleso $T$ a dvě operace $\bigoplus\colon V\times V \to V$ a~$\bigotimes\colon T\times V \to V$ (jsou na $V$ uzavřené). Pak čtveřice $(V,T,\bigoplus,
     \bigotimes)$ je \textbf{vektorový prostor} nad tělesem $T$, jestliže $\forall p,q \in T, \vec u,
     \vec v, \vec w \in V$ platí:
     \begin{enumerate}[$i.$]
     \item $\vec u \bigoplus \vec v = \vec v \bigoplus \vec u$ (komutativita sčítání),
    	\item $(\vec u \bigoplus \vec v)\bigoplus \vec w = \vec u \bigoplus (\vec v \bigoplus \vec w)$ (asociativita sčítání),
-   	\item $\exists \vec o\in V$ takové, že $\forall \vec u\in V:\vec u \bigoplus \vec o = \vec o \bigoplus \vec u = \vec u$ (existence nulového prvku),
-   	\item $\forall \vec u \in V: \exists (-\vec u) \in V: \vec u \bigoplus (-\vec u) = (-\vec u) \bigoplus \vec u = \vec o$ (existence opačného prvku),
+   	\item $\exists \vec o\in V$ takové, že $\forall \vec u\in V\colon\vec u \bigoplus \vec o = \vec o \bigoplus \vec u = \vec u$ (existence nulového prvku),
+   	\item $\forall \vec u \in V\colon \exists (-\vec u) \in V\colon \vec u \bigoplus (-\vec u) = (-\vec u) \bigoplus \vec u = \vec o$ (existence opačného prvku),
    	\item $p\bigotimes (\vec u \bigoplus \vec v)=p\bigotimes \vec u \bigoplus p\bigotimes \vec v$ (distributivita),
    	\item $(p+q)\bigotimes \vec u=p\bigotimes \vec u \bigoplus q\bigotimes \vec u$ (distributivita),
    	\item $(p\cdot q)\bigotimes \vec u = p\bigotimes (q\bigotimes \vec u)$ (asociativita vnějšího násobení),
-   	\item $\exists 1 \in T$ taková, že $\forall \vec u \in V: 1\bigotimes \vec u = \vec u$ (existence neutrálního prvku vzhledem k~násobení).
+   	\item $\exists 1 \in T$ taková, že $\forall \vec u \in V\colon 1\bigotimes \vec u = \vec u$ (existence neutrálního prvku vzhledem k~násobení).
     \end{enumerate}
 \end{definition}
 
@@ -110,14 +110,14 @@
     Nechť $V$ je množina všech volných vektorů v $\mathbb E_n$. Pak na množině $V$ definujeme
     operace sčítání a vnější násobení takto:
     \begin{enumerate}[$i.$]
-    \item $\forall \vec u, \vec v \in V: \vec u + \vec v = \vec w,$ kde $\vec w = \left \{ \overrightarrow{XY}; \overrightarrow{XY} \, \varepsilon \, \overrightarrow{PC} \right \} $, kde $\overrightarrow{PA}\in\vec u, \overrightarrow{PB}\in \vec v$ a $\overrightarrow{PC}=\overrightarrow{PA}+\overrightarrow{PB}$ je součet orientovaných úseček $\overrightarrow{PA},\overrightarrow{PB}.$
-   	\item $\forall p \in \mathbb R, \forall \vec u \in V: p\cdot \vec u = \vec z, \vec z = \left \{ \overrightarrow{XY}; \overrightarrow{XY} \, \varepsilon \, \overrightarrow{PC} \right \} $, přitom $\overrightarrow{PE}\in \vec u$ a $\overrightarrow{PF} = p\cdot \overrightarrow{PE}$ je vnější součin orientované úsečky $\overrightarrow{PE}$ a čísla $p$ (tj. pomocí stejnolehlosti).
+    \item $\forall \vec u, \vec v \in V\colon \vec u + \vec v = \vec w,$ kde $\vec w = \left \{ \overrightarrow{XY}; \overrightarrow{XY} \, \varepsilon \, \overrightarrow{PC} \right \} $, kde $\overrightarrow{PA}\in\vec u, \overrightarrow{PB}\in \vec v$ a $\overrightarrow{PC}=\overrightarrow{PA}+\overrightarrow{PB}$ je součet orientovaných úseček $\overrightarrow{PA},\overrightarrow{PB}.$
+   	\item $\forall p \in \mathbb R, \forall \vec u \in V\colon p\cdot \vec u = \vec z, \vec z = \left \{ \overrightarrow{XY}; \overrightarrow{XY} \, \varepsilon \, \overrightarrow{PC} \right \} $, přitom $\overrightarrow{PE}\in \vec u$ a $\overrightarrow{PF} = p\cdot \overrightarrow{PE}$ je vnější součin orientované úsečky $\overrightarrow{PE}$ a čísla $p$ (tj. pomocí stejnolehlosti).
     \end{enumerate}
 \end{definition}
 
 \begin{definition}
 Nechť $\vec u \subseteq M$ je libovolný volný vektor a $\overrightarrow{AB}\subseteq \vec u$ orientovaná úsečka, tedy
-$u =\left  \{ \overrightarrow{XY} : \overrightarrow{XY} \, \varepsilon \, \overrightarrow{AB} \right \}$. Pak orientovanou úsečku $\overrightarrow{AB}$ nazveme \textbf{umístěním} vektoru $\vec u$.
+$u =\left  \{ \overrightarrow{XY}; \overrightarrow{XY} \, \varepsilon \, \overrightarrow{AB} \right \}$. Pak orientovanou úsečku $\overrightarrow{AB}$ nazveme \textbf{umístěním} vektoru $\vec u$.
 \end{definition}
 
 \begin{definition}
@@ -137,8 +137,8 @@ $u =\left  \{ \overrightarrow{XY} : \overrightarrow{XY} \, \varepsilon \, \overr
 \end{definition}
 
 \begin{definition}
-    Množina všech lineárních kombinací vektorů množiny $S$ označená $\left < S \right >$ se nazývá \textbf{lineární
-    obal} množiny $S$ a její prvky \textbf{generátory} $\left < S \right >$.
+    Množina všech lineárních kombinací vektorů množiny $S$ označená $\left<  S \right>$ se nazývá \textbf{lineární
+    obal} množiny $S$ a její prvky \textbf{generátory} $\left<  S \right>$.
 \end{definition}
 
 \begin{priklad}
@@ -181,7 +181,7 @@ Vlastně řešíme rovnici $p\vec a + q\vec b + r\vec c= \vec o.$ Existuje-li ne
 \end{reseni}
 
 \begin{definition}
-    Nechť je dán vektorový prostor $V$. Pak množina $\left < W \right >,$ kde $
+    Nechť je dán vektorový prostor $V$. Pak množina $\left<  W \right>,$ kde $
     W\subseteq V$, se nazývá \textbf{podprostor} prostoru $V$ \textbf{generovaný}
     množinou $W$ a prvky množiny $W$ \textbf{generátory} tohoto podprostoru.
 \end{definition}
@@ -201,7 +201,7 @@ Nechť $(\vec e_1,\dots, \vec e_k)$ je báze vektorového prostoru $V$. Pak čí
 \end{definition}
 
 \begin{priklad}
-Nalezněte dimenzi a bázi vektorového prostoru $\left < S \right >$ (tj. generovaného množinou $S$), je-li $S = \left
+Nalezněte dimenzi a bázi vektorového prostoru $\left<  S \right>$ (tj. generovaného množinou $S$), je-li $S = \left
 \{ \vec u_1,\vec u_2,\vec u_3,\vec u_4,\vec u_5 \right \}, $
 kde
 $\vec u_1=(2,3,5,-4,1),$ $\vec u_2=(1,-1,2,3,5),$ $\vec u_3=(3,7,8,-11,-3),$ $\vec u_4=(1,-1,1,-2,3),$ $\vec u_5=(1,4,3,-7,-4).$
@@ -220,7 +220,7 @@ $$
 \end{pmatrix}.
 $$
 Gaussovou eliminací pokračujeme tak dlouho, dokud nedostaneme matici do schodovitého tvaru.
-Řádky takové matice jsou pak generátory $\left < S \right > .$
+Řádky takové matice jsou pak generátory $\left<  S \right> .$
 Vyjadřujeme-li vektor jako lineární kombinaci báze, řešíme vlastně rovnici
 $\vec u_i = p_1\vec e_1 + p_2\vec e_2 +\dots + p_n\vec e_n.$
 \end{reseni}
@@ -233,17 +233,17 @@ $ABCD$.
 
 \begin{definition}\label{izom}
     Nechť $(\vec e_1,\dots, \vec e_k)$ je báze vektorového prostoru $V$. Zobrazení
-    $\varphi: A\to B$ se nazývá \textbf{homomorfismus} vzhledem k operaci $*$, jestliže
-    $$\forall x,y \in A:\varphi(x*y)=\varphi(x)*\varphi(y).$$
+    $\varphi\colon A\to B$ se nazývá \textbf{homomorfismus} vzhledem k operaci $*$, jestliže
+    $$\forall x,y \in A\colon\varphi(x*y)=\varphi(x)*\varphi(y).$$
     Pokud je $\varphi$ navíc bijektivní, nazývá se \textbf{izomorfismus}.
 \end{definition}
 
 \begin{pozn}
-    Dva vektorové prostory $V,W$ nad týmž tělesem $T$ jsou izomorfní, jestliže vztah pro zobrazení $\varphi:V\to W$ z def. \ref{izom} platí pro
+    Dva vektorové prostory $V,W$ nad týmž tělesem $T$ jsou izomorfní, jestliže vztah pro zobrazení $\varphi\colon V\to W$ z def. \ref{izom} platí pro
     operace sčítání i vnější násobení, tzn. platí:
     \begin{enumerate}[$i.$]
-    \item $\forall x,y \in V: \varphi(\vec x+\vec y)=\varphi(\vec x)+\varphi(\vec y),$
-    	\item $\forall x \in V, \forall p \in T: \varphi(p\cdot \vec x) = p\cdot \varphi(\vec x).$
+    \item $\forall x,y \in V\colon \varphi(\vec x+\vec y)=\varphi(\vec x)+\varphi(\vec y),$
+    	\item $\forall x \in V, \forall p \in T\colon \varphi(p\cdot \vec x) = p\cdot \varphi(\vec x).$
     \end{enumerate}
 \end{pozn}
 
@@ -319,10 +319,10 @@ pro všechna $\vec u, \vec v, \vec w \in V.$
     velikost 1.
 \end{definition}
 
-\begin{algoritmus}[Grammův--Schmidtův ortogonalizační proces]
+\begin{algoritmus}[Gramův--Schmidtův ortogonalizační proces]
     Je dána množina vektorů $M=\left \{ \vec u_1,\dots, \vec u_n \right \}$.
     Hledáme ortogonální bázi $\left \{ \vec e_1, \dots, \vec e_n \right \}$
-    generující $\left < M \right >.$
+    generující $\left<  M \right>.$
     \begin{enumerate}[1.]
     \item Položme $\vec e_1 = \vec u_1.$
    	\item $k$-tý vektor volíme tak, aby

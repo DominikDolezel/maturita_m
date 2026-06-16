@@ -50,8 +50,8 @@ Má-li funkce $f$ v bodě $a$ vlastní derivaci, je v tomto bodě spojitá.
 \end{veta}
 
 \begin{pozn}
-    Má-li funkce $f:M\to \mathbb R$ na množině $M\subset \mathbb R$ vlastní derivaci
-    v každém bodě $x\in M,$ pak zobrazení $f^\prime:M\to \mathbb R,$ které přiřadí
+    Má-li funkce $f\colon M\to \mathbb R$ na množině $M\subset \mathbb R$ vlastní derivaci
+    v každém bodě $x\in M,$ pak zobrazení $f^\prime\colon M\to \mathbb R,$ které přiřadí
     bodu $x\in M$ hodnotu $f^\prime(x),$ je reálnou funkcí definovanou na množině $M$.
 \end{pozn}
 
@@ -103,9 +103,9 @@ také funkce $f\pm g, fg, f/g$ a $cf,$ kde $c\in \mathbb R$, mají v bodě $a$ d
 \end{reseni}
 
 \begin{veta}[Derivace inverzní funkce]
-Nechť funkce $f:x=f(y)$ je spojitá a ryze monotónní na intervalu $I.$ Nechť $y_0$
+Nechť funkce $f\colon x=f(y)$ je spojitá a ryze monotónní na intervalu $I.$ Nechť $y_0$
 je vnitřní bod intervalu $I$ a nechť má $f$ v $y_0$ derivaci $f^\prime(y_0).$
-Pak inverzní funkce $f^{-1}:y=f^{-1}(x)$ má v bodě $x_0=f(y_0)$ derivaci a platí
+Pak inverzní funkce $f^{-1}\colon y=f^{-1}(x)$ má v bodě $x_0=f(y_0)$ derivaci a platí
 $$
 \left ( f^{-1} \right )^\prime(x_0)= \begin{cases}
 \frac{1}{f^\prime(y_0)}, & \textrm{je-li } f^\prime(y_0)\ne 0,\\
@@ -195,11 +195,11 @@ derivace $y=f^\prime(x)\cdot (f(x))^\prime$ (např. $\left ( y^2 \right )^\prime
 \end{priklad}
 
 \begin{reseni}
-  Derivujeme funkci danou implicitně: $f(x,y)^\prime: 2x+2yy^\prime=0.$
+  Derivujeme funkci danou implicitně: $f(x,y)^\prime\colon 2x+2yy^\prime=0.$
 \end{reseni}
 
 \begin{veta}[Cauchy--Bolzanova věta]
-Nechť je funkce $f$ spojitá na uzavřeném intervalu $\left < a,b \right > $ a platí
+Nechť je funkce $f$ spojitá na uzavřeném intervalu $\left<  a,b \right> $ a platí
 $f(a)\cdot f(b)<0.$ Pak existuje alespoň jedno číslo $x_0\in (a,b)$ takové, že $f(x_0)=0.$
 \end{veta}
 
@@ -210,7 +210,7 @@ $f(a)\cdot f(b)<0.$ Pak existuje alespoň jedno číslo $x_0\in (a,b)$ takové, 
 \begin{veta}[Rolleho věta]
 Nechť funkce $f$ má následující vlastnosti:
 \begin{enumerate}[$i.$]
-\item je spojitá na uzavřeném ohraničeném intervalu $\left < a,b \right > $,
+\item je spojitá na uzavřeném ohraničeném intervalu $\left<  a,b \right> $,
 \item má derivaci na otevřeném intervalu $(a,b)$,
 \item platí $f(a)=f(b)$.
 \end{enumerate}
@@ -220,7 +220,7 @@ Pak existuje alespoň jedno číslo $x_0\in (a,b)$ takové, že $f^\prime(x_0)=0
 \begin{veta}[Lagrangeova věta]
 Nechť funkce $f$ má následující vlastnosti:
 \begin{enumerate}[$i.$]
-\item je spojitá na uzavřeném ohraničeném intervalu $\left < a,b \right > $,
+\item je spojitá na uzavřeném ohraničeném intervalu $\left<  a,b \right> $,
 \item má derivaci na otevřeném intervalu $(a,b)$.
 \end{enumerate}
 Pak existuje alespoň jedno číslo $x_0\in (a,b)$ takové, že
@@ -230,8 +230,8 @@ $$f^\prime(x_0)=\frac{f(b)-f(a)}{b-a}.$$
 \begin{veta}[Cauchyho věta]
 Nechť funkce $f$ a $g$ mají následující vlastnosti:
 \begin{enumerate}[$i.$]
-\item jsou spojité na uzavřeném ohraničeném intervalu $\left < a,b \right > $,
-\item mají derivaci na otevřeném intervalu $(a,b)$, přičemž $g^\prime(x)\ne 0$ na $\left < a,b \right > $.
+\item jsou spojité na uzavřeném ohraničeném intervalu $\left<  a,b \right> $,
+\item mají derivaci na otevřeném intervalu $(a,b)$, přičemž $g^\prime(x)\ne 0$ na $\left<  a,b \right> $.
 \end{enumerate}
 Pak existuje alespoň jedno číslo $x_0\in (a,b)$ takové, že
 $$\frac{f^\prime(x_0)}{g^\prime(x_0)}=\frac{f(b)-f(a)}{g(b)-g(a)}.$$

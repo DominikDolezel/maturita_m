@@ -1,16 +1,16 @@
 \section{Posloupnosti}
 \begin{definition}
-Nechť $A$ je množina. Zobrazení $a:\mathbb N\to A$ (nebo $a:\left \{ 1,2,...,k \right \} \to A$)
+Nechť $A$ je množina. Zobrazení $a\colon\mathbb N\to A$ (nebo $a\colon\left \{ 1,2,...,k \right \} \to A$)
 se nazývá \textbf{posloupnost} prvků množiny $A$, $k\in \mathbb N.$
 \end{definition}
 
 \begin{definition}
 Nechť $\left \{ a_n \right \}_{n=1}^\infty $ je posloupnost reálných čísel. Pak je
 \begin{enumerate}[$i.$]
-\item \textbf{rostoucí} právě tehdy, když $\forall n \in \mathbb N: a_n< a_{n+1},$
-\item \textbf{klesající} právě tehdy, když $\forall n \in \mathbb N: a_n> a_{n+1},$
-\item \textbf{nerostoucí} právě tehdy, když $\forall n \in \mathbb N: a_n\geq a_{n+1},$
-\item \textbf{neklesající} právě tehdy, když $\forall n \in \mathbb N: a_n\leq a_{n+1}.$
+\item \textbf{rostoucí} právě tehdy, když $\forall n \in \mathbb N\colon a_n< a_{n+1},$
+\item \textbf{klesající} právě tehdy, když $\forall n \in \mathbb N\colon a_n> a_{n+1},$
+\item \textbf{nerostoucí} právě tehdy, když $\forall n \in \mathbb N\colon a_n\geq a_{n+1},$
+\item \textbf{neklesající} právě tehdy, když $\forall n \in \mathbb N\colon a_n\leq a_{n+1}.$
 \end{enumerate}
 Posloupnost, která má jednu z těchto vlastností, se nazývá \textbf{monotónní}.
 Posloupnost rostoucí nebo klesající nazýváme \textbf{ryze monotónní}.
@@ -27,8 +27,8 @@ Spočítáme $a_{n+1}-a_n$.
 \begin{definition}
     Nechť $\left \{ a_n \right \}_{n=1}^\infty $ je posloupnost reálných čísel. Pak je
     \begin{enumerate}[$i.$]
-    \item \textbf{prostá} právě tehdy, když $\forall m,n\in \mathbb N: m\ne n \implies a_m\ne a_n,$
-   	\item \textbf{stacionární} (konstantní) právě tehdy, když $\forall n \in \mathbb N:a_n = a_{n+1}.$
+    \item \textbf{prostá} právě tehdy, když $\forall m,n\in \mathbb N\colon m\ne n \implies a_m\ne a_n,$
+   	\item \textbf{stacionární} (konstantní) právě tehdy, když $\forall n \in \mathbb N\colon a_n = a_{n+1}.$
     \end{enumerate}
 \end{definition}
 
@@ -36,9 +36,9 @@ Spočítáme $a_{n+1}-a_n$.
     Nechť $\left \{ a_n \right \}_{n=1}^\infty $ je posloupnost reálných čísel. Pak je
     \begin{enumerate}[$i.$]
     \item \textbf{zdola omezená}, pokud existuje $k\in \mathbb R$ takové, že
-    $\forall n \in \mathbb N: a_n \geq k,$
+    $\forall n \in \mathbb N\colon a_n \geq k,$
    	\item \textbf{shora omezená}, pokud existuje $k\in \mathbb R$ takové, že
-    $\forall n \in \mathbb N: a_n \leq k.$
+    $\forall n \in \mathbb N\colon a_n \leq k.$
     \end{enumerate}
     Posloupnost je \textbf{omezená}, pokud je omezená shora i zdola.
     Pokud není omezená ani shora, ani zdola, je \textbf{neomezená}.
@@ -54,7 +54,7 @@ je \textbf{posloupnost vybraná z posloupnosti} $\left \{ a_n \right \}_{n=1}^\i
 \begin{definition}
 Posloupnost $\left \{ a_n \right \}_{n=1}^\infty $ je \textbf{aritmetická} právě
 tehdy, když
-$$\exists d \in \mathbb R: \forall n \in \mathbb N: a_n=a_{n-1}+d$$
+$$\exists d \in \mathbb R\colon \forall n \in \mathbb N\colon a_n=a_{n-1}+d$$
 a číslo $d$ se nazývá \textbf{diference}.
 \end{definition}
 
@@ -62,8 +62,8 @@ a číslo $d$ se nazývá \textbf{diference}.
     Nechť $\left \{ a_n \right \}_{n=1}^\infty $ je aritmetická posloupnost s diferencí
     $d$. Pak platí:
     \begin{enumerate}[$i.$]
-    \item $\forall n\in \mathbb N: a_n = a_1 + (n-1)d,$
-   	\item $\forall r,s \in \mathbb N: a_s = a_r + (s-r)d.$
+    \item $\forall n\in \mathbb N\colon a_n = a_1 + (n-1)d,$
+   	\item $\forall r,s \in \mathbb N\colon a_s = a_r + (s-r)d.$
     \end{enumerate}
 \end{veta}
 
@@ -71,7 +71,7 @@ a číslo $d$ se nazývá \textbf{diference}.
 \begin{enumerate}[$i.$]
 \item Matematickou indukcí:
 \begin{enumerate}[1.]
-\item $n=1: a_1 = a_1+(1-1)d$ platí
+\item $n=1\colon a_1 = a_1+(1-1)d$ platí
 \item $a_n = a_1+(n-1)d \implies a_{n+1}=a_1+nd,$ takže $a_{n+1}=a_n+d=a_1+(n-1)d+d=a_1+nd$
 \end{enumerate}
 \item Užitím již dokázeného vztahu:
@@ -93,7 +93,7 @@ $d$. Nechť
 $$S_n=a_1+a_2+\dots+a_n$$
 je součet prvních $n$ členů nekonečné aritmetické posloupnosti nebo součet
 $n$-členné aritmetické posloupnosti. Pak platí:
-$$\forall n \in \mathbb N:S_n = \frac{1}{2}n(a_1+a_n).$$
+$$\forall n \in \mathbb N\colon S_n = \frac{1}{2}n(a_1+a_n).$$
 \end{veta}
 
 \begin{proof}
@@ -123,7 +123,7 @@ Vyjádříme pomocí $a_1$ a diference a vyřešíme.
 \begin{definition}
 Posloupnost $\left \{ a_n \right \}_{n=1}^\infty $ je \textbf{geometrická} právě
 tehdy, když
-$$\exists q \in \mathbb R: \forall n \in \mathbb N: a_n=a_{n-1}\cdot q$$
+$$\exists q \in \mathbb R\colon \forall n \in \mathbb N\colon a_n=a_{n-1}\cdot q$$
 a číslo $q$ se nazývá \textbf{kvocient}.
 \end{definition}
 
@@ -139,8 +139,8 @@ Spočítáme $a_{n+1}/a_n$ a $a_{n+1}-a_n$. Je geometrická, je-li $a_{n+1}/a_n$
     Nechť $\left \{ a_n \right \}_{n=1}^\infty $ je geometrická posloupnost s kvocientem
     $q$. Pak platí:
     \begin{enumerate}[$i.$]
-    \item $\forall n\in \mathbb N: a_n = a_1 \cdot q^{n-1},$
-   	\item $\forall r,s \in \mathbb N: a_s = a_r \cdot q^{s-r}.$
+    \item $\forall n\in \mathbb N\colon a_n = a_1 \cdot q^{n-1},$
+   	\item $\forall r,s \in \mathbb N\colon a_s = a_r \cdot q^{s-r}.$
     \end{enumerate}
 \end{veta}
 
@@ -148,7 +148,7 @@ Spočítáme $a_{n+1}/a_n$ a $a_{n+1}-a_n$. Je geometrická, je-li $a_{n+1}/a_n$
 \begin{enumerate}[$i.$]
 \item Matematickou indukcí:
 \begin{enumerate}[1.]
-\item $n=1: a_1 = a_1\cdot q^0$ platí
+\item $n=1\colon a_1 = a_1\cdot q^0$ platí
 \item $a_n = a_1\cdot q^{n-1}\implies a_{n+1}=a_1\cdot q^n,$ takže $a_{n+1}=a_n\cdot q=a_1\cdot q^{n-1}\cdot q=a_1\cdot q^n$
 \end{enumerate}
 \item Užitím již dokázeného vztahu:
@@ -171,8 +171,8 @@ $$S_n=a_1+a_2+\dots+a_n$$
 je součet prvních $n$ členů nekonečné geometrické posloupnosti nebo součet
 $n$-členné geometrické posloupnosti. Pak platí $\forall n \in \mathbb N$:
 \begin{enumerate}[$i.$]
-\item $q=1: S_n=na_1,$
-\item $q\ne 1: S_n = a_1\cdot \frac{q^n-1}{q-1}.$
+\item $q=1\colon S_n=na_1,$
+\item $q\ne 1\colon S_n = a_1\cdot \frac{q^n-1}{q-1}.$
 \end{enumerate}
 \end{veta}
 
@@ -227,7 +227,7 @@ pak dokážeme matematickou indukcí.
 Nechť $\left \{ a_n \right \}_{n=1}^\infty $ je posloupnost, $A\in \mathbb R$ číslo.
 Posloupnost $\left \{ a_n \right \}_{n=1}^\infty $ má \textbf{limitu} rovnu číslu
 $A,$ jestliže
-$$\forall \varepsilon \in \mathbb R^+: \exists n_0 \in \mathbb N_0: \forall n \geq n_0,n \in \mathbb N: a_n\in(A-\varepsilon, A+\varepsilon).$$
+$$\forall \varepsilon \in \mathbb R^+\colon \exists n_0 \in \mathbb N_0\colon \forall n \geq n_0,n \in \mathbb N\colon a_n\in(A-\varepsilon, A+\varepsilon).$$
 \end{definition}
 
 \begin{priklad}
@@ -242,7 +242,7 @@ Rozšíříme $\frac{1}{n}$. Limita $\lim_{n\to \infty}\frac{1}{n}$ je totiž ro
 Nechť $\left \{ a_n \right \}_{n=1}^\infty $ je posloupnost.
 Posloupnost $\left \{ a_n \right \}_{n=1}^\infty $ má \textbf{nevlastní limitu}
 $+\infty$ (resp. $-\infty$), jestliže
-$$\forall K \in \mathbb R: \exists n_0 \in \mathbb N_0: \forall n \geq n_0, n\in \mathbb N: a_n>K \,\, (\textrm{resp. } a_n<K).$$
+$$\forall K \in \mathbb R\colon \exists n_0 \in \mathbb N_0\colon \forall n \geq n_0, n\in \mathbb N\colon a_n>K \,\, (\textrm{resp. } a_n<K).$$
 \end{definition}
 
 \begin{priklad}
@@ -274,7 +274,7 @@ Rozložíme na součin.
 \begin{veta}[Věta o třech limitách]
     Nechť $\left \{ a_n \right \}_{n=1}^\infty $, $\left \{ b_n \right \}_{n=1}^\infty $,
     $\left \{ c_n \right \}_{n=1}^\infty $ jsou tři posloupnosti takové, že
-    $$\exists m\in \mathbb N: \forall n \geq m:a_n \leq b_n \leq c_n \land \lim_{n\to \infty}a_n=\lim_{n\to \infty}c_n=A.$$
+    $$\exists m\in \mathbb N\colon \forall n \geq m\colon a_n \leq b_n \leq c_n \land \lim_{n\to \infty}a_n=\lim_{n\to \infty}c_n=A.$$
     Pak $\lim_{n\to\infty}b_n=A.$
 \end{veta}
 
@@ -299,7 +299,7 @@ a $c\in \mathbb R$ je libovolné číslo. Pak platí:
 Nechť $M$ je podmnožina množiny reálných čísel. Číslo $a\in \mathbb R$ (pokud existuje)
 nazveme \textbf{horní} (resp. \textbf{dolní}) \textbf{závorou} množiny $M$ právě tehdy,
 když
-$$\forall x \in M:x\leq a \,\, (\textrm{resp. }x\geq a).$$
+$$\forall x \in M\colon x\leq a \,\, (\textrm{resp. }x\geq a).$$
 \end{definition}
 
 \begin{definition}\label{supinf}
@@ -307,8 +307,8 @@ Nechť $M$ je podmnožina množiny reálných čísel. Číslo $c\in \mathbb R$ 
 nazveme \textbf{supremem} (resp. \textbf{infimem}) množiny $M$, jestliže je její
 nejmenší horní závorou (resp. největší dolní závorou), tzn. že platí:
 \begin{enumerate}[$i.$]
-\item $\forall x\in M:x\leq c \,\, (\textrm{resp. } x\geq c),$
-\item $\forall t\in \mathbb R: \forall x\in  M:x\leq t \implies t\geq c \,\, (\textrm{resp. }x\geq t \implies t\leq c).$
+\item $\forall x\in M\colon x\leq c \,\, (\textrm{resp. } x\geq c),$
+\item $\forall t\in \mathbb R\colon \forall x\in  M\colon x\leq t \implies t\geq c \,\, (\textrm{resp. }x\geq t \implies t\leq c).$
 \end{enumerate}
 Značíme $c=\sup M$ (resp. $c=\inf M$).
 \end{definition}
@@ -347,11 +347,11 @@ a číslo $S$ nazveme jejím součtem. V opačném případě \textbf{diverguje}
 \begin{veta}[Srovnávací kritérium konvergence]
 Nechť $\sum_{n=1}^\infty a_n, \sum_{n=1}^\infty b_n$ jsou řady s nezápornými členy
 s vlastností
-$$\forall n \in \mathbb N: a_n \leq b_n.$$
+$$\forall n \in \mathbb N\colon a_n \leq b_n.$$
 Pak platí:
 \begin{enumerate}[$i.$]
-\item konverguje-li řada $\sum_{n=1}^\infty b_n,$ konverguje taky $\sum_{n=1}^\infty a_n.$
-\item diverguje-li řada $\sum_{n=1}^\infty a_n,$ diverguje taky $\sum_{n=1}^\infty b_n.$
+\item konverguje-li řada $\sum_{n=1}^\infty b_n,$ konverguje také $\sum_{n=1}^\infty a_n.$
+\item diverguje-li řada $\sum_{n=1}^\infty a_n,$ diverguje také $\sum_{n=1}^\infty b_n.$
 \end{enumerate}
 \end{veta}
 

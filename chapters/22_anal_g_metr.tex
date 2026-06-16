@@ -2,7 +2,7 @@
 \begin{definition}
     Nechť $A,B\subseteq \mathbb E_3$ jsou dva podprostory $\mathbb E_3$. \textbf{Vzdáleností
     podprostorů} $A,B$ nazveme nezáporné reálné číslo $\rho(A,B)$ definovené takto:
-    $$\rho(A,B) = \min \{ |XY|: X\in A, Y\in B \},$$
+    $$\rho(A,B) = \min \{ |XY|; X\in A, Y\in B \},$$
     kde $|XY|$ je délka úsečky $XY.$
 \end{definition}
 
@@ -11,7 +11,7 @@
 \end{veta}
 
 \begin{veta}
-    Nechť $A[a_1,a_2]\in \mathbb E_2$ je bod, $p:ax+by+c=0$ je přímka. Pak
+    Nechť $A[a_1,a_2]\in \mathbb E_2$ je bod, $p\colon ax+by+c=0$ je přímka. Pak
     $$\rho(A,p)=\frac{|aa_1+ba_2+c|}{\sqrt{a^2+b^2} }.$$
 \end{veta}
 
@@ -39,12 +39,12 @@ minimum velikosti vektoru $\overrightarrow{AX}.$
 \end{reseni}
 
 \begin{veta}\label{vzdbodrov}
-    Nechť $A[a_1,a_2,a_3]\in \mathbb E_3$ je bod, $\alpha:ax+by+cz+d=0$ je rovina. Pak
+    Nechť $A[a_1,a_2,a_3]\in \mathbb E_3$ je bod, $\alpha\colon ax+by+cz+d=0$ je rovina. Pak
     $$\rho(A,\alpha)=\frac{|aa_1+ba_2+ca_2+d|}{\sqrt{a^2+b^2+c^2} }.$$
 \end{veta}
 
 \begin{veta}\label{vzdpr}
-    Nechť $p:ax+by+c=0,q:ax+by+d=0$ jsou dvě rovnoběžné přímky. Pak
+    Nechť $p\colon ax+by+c=0,q\colon ax+by+d=0$ jsou dvě rovnoběžné přímky. Pak
     $$\rho(p,q)=\frac{|d-c|}{\sqrt{a^2+b^2} }.$$
 \end{veta}
 
@@ -59,7 +59,7 @@ minimum velikosti vektoru $\overrightarrow{AX}.$
 \end{pozn}
 
 \begin{veta}\label{dverov}
-    Nechť $\alpha:ax+by+cz+d=0,\beta:ax+by+cz+e=0$ jsou dvě rovnoběžné roviny. Pak
+    Nechť $\alpha\colon ax+by+cz+d=0,\beta\colon ax+by+cz+e=0$ jsou dvě rovnoběžné roviny. Pak
     $$\rho(\alpha,\beta)=\frac{|e-d|}{\sqrt{a^2+b^2+c^2} }.$$
 \end{veta}
 
@@ -98,7 +98,7 @@ $B[3,3], C[5,2].$
 \end{priklad}
 
 \begin{reseni}
-    Hledáme přímku $p: ax+by+c=0$. Protože $A\in p$, platí $a+2b+c=0$. Protože má stejnou vzdálenost od bodů $B$ a $C$, platí navíc
+    Hledáme přímku $p\colon ax+by+c=0$. Protože $A\in p$, platí $a+2b+c=0$. Protože má stejnou vzdálenost od bodů $B$ a $C$, platí navíc
     $$\frac{|3a+3b+c|}{\sqrt{a^2+b^2} }=\frac{|5a+2b+c|}{\sqrt{a^2+b^2} }.$$
     S výhodou druhou rovnici upravíme za použití té první na
     $|2a+b|=|4a|$. Dále už řešíme soustavu rovnic, přičemž jsou buď obě absolutní hodnoty kladné, nebo jedna z nich záporná (ostatní případy
@@ -134,23 +134,23 @@ Vyjádříme jako vektory a dosadíme do vzorce.
 \end{reseni}
 
 \begin{veta}
-Nechť jsou dány přímky $p(A,\vec u), q:ax+by+c=0, \vec n(a,b).$ Pak
+Nechť jsou dány přímky $p(A,\vec u), q\colon ax+by+c=0, \vec n(a,b).$ Pak
 $$|\sphericalangle p, q|=\arcsin \frac{|\vec u \cdot \vec n|}{|\vec u|\cdot |\vec n|}.$$
 \end{veta}
 
 \begin{veta}
-    Nechť $p(A,\vec u)$ je přímka, $\alpha:ax+by+cz+d=0$ rovina, $\vec n(a,b,c)$. Pak
+    Nechť $p(A,\vec u)$ je přímka, $\alpha\colon ax+by+cz+d=0$ rovina, $\vec n(a,b,c)$. Pak
     $$|\sphericalangle p, \alpha|=\arcsin \frac{|\vec u \cdot \vec n|}{|\vec u|\cdot |\vec n|}.$$
 \end{veta}
 
 \begin{veta}
-    Nechť $\alpha:ax+by+cz+d=0, ex+fy+gz+h=0$ jsou dvě roviny a~$\vec m(a,b,c), \vec n(e,f,g).$
+    Nechť $\alpha\colon ax+by+cz+d=0, ex+fy+gz+h=0$ jsou dvě roviny a~$\vec m(a,b,c), \vec n(e,f,g).$
     Pak
     $$|\sphericalangle \alpha, \beta|=\arccos \frac{|\vec m \cdot \vec n|}{|\vec m|\cdot |\vec n|}.$$
 \end{veta}
 
 \begin{priklad}
-Určete rovnici přímky, která má od přímky $p:x-2y+3=0$ odchylku $30^\circ$ a~prochází
+Určete rovnici přímky, která má od přímky $p\colon x-2y+3=0$ odchylku $30^\circ$ a~prochází
 jejím průsečíkem s osou $y$.
 \end{priklad}
 

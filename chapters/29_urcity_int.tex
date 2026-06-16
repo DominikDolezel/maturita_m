@@ -4,14 +4,14 @@
 \end{pozn}
 
 \begin{definition}
-\textbf{Dělením} $D$ uzavřeného \textbf{intervalu} $\left < a,b \right > $
+\textbf{Dělením} $D$ uzavřeného \textbf{intervalu} $\left<  a,b \right> $
 rozumíme každou konečnou množinu čísel $x_0,\dots,x_n \in \mathbb R$ takových, že
-$a=x_0<x_1<\dots<x_n=b.$ Intervaly $\left < x_0, x_1 \right >$,
-$\left < x_1, x_2 \right >$, $\dots$, $\left < x_{n-1}, x_n \right >$ nazýváme
+$a=x_0<x_1<\dots<x_n=b.$ Intervaly $\left<  x_0, x_1 \right>$,
+$\left<  x_1, x_2 \right>$, $\dots$, $\left<  x_{n-1}, x_n \right>$ nazýváme
 \textbf{dělící intervaly}, které označíme $D=\left \{ x_0,x_1,\dots,x_n \right \} .$
 Body $x_0,\dots,x_n$ nazýváme \textbf{dělící body} dělení $D$. Číslo
 $\max \left ( x_i-x_{i-1} \right ), i=1,\dots,n $ nazýváme \textbf{normou dělení}
-$D$ a označujeme $\nu(D).$ Množinu všech dělení na intervalu $\left < a,b \right > $
+$D$ a označujeme $\nu(D).$ Množinu všech dělení na intervalu $\left<  a,b \right> $
 označme $\mathscr D(a,b).$
 \end{definition}
 
@@ -27,14 +27,14 @@ dělení} $D_1,$ jestliže $D_1 \subset D_2.$
 \end{definition}
 
 \begin{definition}
-Nechť $f(x)$ je omezená na $\left < a,b \right > , D\in \mathscr D(a,b),
+Nechť $f(x)$ je omezená na $\left<  a,b \right> , D\in \mathscr D(a,b),
 D=\left \{ x_0,\dots,x_n \right \}. $ Pak množina $\left \{ f(x),
-x \in \left < x_{i-1},x_i \right >  \right \} $ je pro všechna $i \in \left \{
+x \in \left<  x_{i-1},x_i \right>  \right \} $ je pro všechna $i \in \left \{
 1,\dots,n\right \} $ neprázdná a omezená a tedy má supremum a infimum.
 Označme
 \begin{align*}
-    m_i &= \inf \left \{ f(x), x \in \left < x_{i-1},x_i \right >  \right \} \textrm{ pro } D=\left \{ x_0,\dots,x_n \right \},\\
-    M_i &=   \sup \left \{ f(x), x \in \left < x_{i-1},x_i \right >  \right \} \textrm{ pro } D=\left \{ x_0,\dots,x_n \right \}.
+    m_i &= \inf \left \{ f(x), x \in \left<  x_{i-1},x_i \right>  \right \} \textrm{ pro } D=\left \{ x_0,\dots,x_n \right \},\\
+    M_i &=   \sup \left \{ f(x), x \in \left<  x_{i-1},x_i \right>  \right \} \textrm{ pro } D=\left \{ x_0,\dots,x_n \right \}.
 \end{align*}
 Číslo $S(D,f)=\sum_{i=1}^n M_i\cdot (x_i-x_{i-1})$
 (resp. $s(D,f)=\sum_{i=1}^n m_i\cdot (x_i-x_{i-1})$) je \textbf{horní} (resp. \textbf{dolní}) \textbf{součet funkce}
@@ -52,7 +52,7 @@ $f(x)$ příslušný dělení $D$.
 \end{pozn}
 
 \begin{veta}
-Nechť $f(x)$ je omezená na intervalu $\left < a,b \right >. $ Pak
+Nechť $f(x)$ je omezená na intervalu $\left<  a,b \right>. $ Pak
 $\left \{ s(D,f); D\in \mathscr D(a,b) \right \} $ je shora omezená a množina
 $\left \{ S(D,f); D\in \mathscr D(a,b) \right \} $ je zdola omezená.
 \end{veta}
@@ -62,7 +62,7 @@ $\left \{ S(D,f); D\in \mathscr D(a,b) \right \} $ je zdola omezená.
 \end{pozn}
 
 \begin{definition}
-Nechť $f(x)$ je omezená na intervalu $\left < a,b \right > .$ Označme
+Nechť $f(x)$ je omezená na intervalu $\left<  a,b \right> .$ Označme
 \begin{align*}
     \int_{\underline{a}} ^b f(x) \, \d x & = \sup \left \{ s(D,f); D \in \mathscr D(a,b) \right \}, \\
     \int_{a} ^{\underline{b}} f(x) \, \d x & = \inf \left \{ S(D,f); D \in \mathscr D(a,b) \right \}.
@@ -73,33 +73,33 @@ $a$ do $b$.
 \end{definition}
 
 \begin{veta}
-Nechť $f(x)$ je omezená na intervalu $\left < a,b \right >. $ Pak
+Nechť $f(x)$ je omezená na intervalu $\left<  a,b \right>. $ Pak
 $$\int_{\underline{a}} ^b f(x)\, \d x \leq \int_{a} ^{\underline{b}} f(x) \, \d x.$$
 \end{veta}
 
 \begin{definition}
-Nechť $f(x)$ je omezená na intervalu $\left < a,b \right > .$ Pak funkce
-$f(x)$ je na intervalu $\left < a,b \right > $ (Riemmanovsky) \textbf{integrovatelná}
+Nechť $f(x)$ je omezená na intervalu $\left<  a,b \right> .$ Pak funkce
+$f(x)$ je na intervalu $\left<  a,b \right> $ (Riemmanovsky) \textbf{integrovatelná}
 (integrace schopna), jestliže
 $$\int_{\underline{a}} ^b f(x)\, \d x = \int_{a} ^{\underline{b}} f(x) \, \d x.$$
-Je-li $f(x)$ na intervalu $\left < a,b \right > $ integrovatelná, klademe
+Je-li $f(x)$ na intervalu $\left<  a,b \right> $ integrovatelná, klademe
 $$\int_{\underline{a}} ^b f(x)\, \d x = \int_{a} ^{\underline{b}} f(x) \, \d x = \int_{a} ^b f(x) \, \d x.$$
 Číslo $\int_{a} ^b f(x)\, \d x$ nazýváme \textbf{Riemannův integrál} funkce $f(x)$ od
 $a$ do $b$. Pokud $\int_{\underline{a}} ^b f(x)\, \d x < \int_{a} ^{\underline{b}} f(x) \, \d x$,
-pak $f(x)$ není na intervalu $\left < a,b \right > $ integrovatelná a
+pak $f(x)$ není na intervalu $\left<  a,b \right> $ integrovatelná a
 $\int_{a} ^b f(x)\, \d x$ nedefinujeme.
 \end{definition}
 
 \begin{veta}[Newtonova--Leibnitzova věta]
-Nechť $f(x)$ je integrovatelná na intervalu $\left < a,b \right >$, $F(x)$ je spojitá
-na intervalu $\left < a,b \right > $. Buď $F(x)$ primitivní funkce k funkci $f(x)$
+Nechť $f(x)$ je integrovatelná na intervalu $\left<  a,b \right>$, $F(x)$ je spojitá
+na intervalu $\left<  a,b \right> $. Buď $F(x)$ primitivní funkce k funkci $f(x)$
 na intervalu $\left ( a,b \right ) $. Pak platí:
 $$\int_{a} ^b f(x)\, \d x=F(b)-F(a).$$
 \end{veta}
 
 \begin{veta}
-Nechť $f(x)$ je spojitá na intervalu $\left < a,b \right > $. Pak $f(x)$ je na
-intervalu $\left < a,b \right > $ integrovatelná.
+Nechť $f(x)$ je spojitá na intervalu $\left<  a,b \right> $. Pak $f(x)$ je na
+intervalu $\left<  a,b \right> $ integrovatelná.
 \end{veta}
 
 \begin{priklad}
@@ -112,43 +112,43 @@ $$\int_0^{\frac{\pi}{4}}\cos x \, \d x=\left [ \sin x  \right ]_0^{\frac{\pi}{4}
 \end{reseni}
 
 \begin{veta}
-Nechť $f(x), f_1(x),\dots,f_n(x), g(x)$ jsou integrovatelné funkce na intervalu $\left < a,b \right > $
+Nechť $f(x), f_1(x),\dots,f_n(x), g(x)$ jsou integrovatelné funkce na intervalu $\left<  a,b \right> $
 a~$c; c_1,\dots,c\in \mathbb R.$ Pak
 \begin{enumerate}[$i.$]
-\item funkce $f(x)+g(x)$ je integrovatelná na int. $\left < a,b \right > $ a platí
+\item funkce $f(x)+g(x)$ je integrovatelná na int. $\left<  a,b \right> $ a platí
 $$\int _a^b \left [ f(x)+g(x) \right ] \, \d x = \int_a ^b f(x)\, \d x + \int_a ^b g(x) \, \d x,$$
-\item funkce $c\cdot f(x)$ je integrovatelná na int. $\left < a,b \right > $ a platí
+\item funkce $c\cdot f(x)$ je integrovatelná na int. $\left<  a,b \right> $ a platí
 $$\int _a ^b c\cdot f(x) \, \d x = c \int _a ^b f(x)\, \d x,$$
-\item funkce $c_1\cdot f_1(x) + \dots + c_n \cdot f_n(x)$ je integrovatelná na int. $\left < a,b \right > $ a platí
+\item funkce $c_1\cdot f_1(x) + \dots + c_n \cdot f_n(x)$ je integrovatelná na int. $\left<  a,b \right> $ a platí
 $$\int_a ^b \left [ c_1\cdot f_1(x) + \dots + c_n \cdot f_n (x) \right ]\, \d x = c_1 \int _a ^b f_1(x)\, \d x + \dots + c_n \int _a ^b f_n(x)\, \d x. $$
 \end{enumerate}
 \end{veta}
 
 \begin{veta}
-Nechť $f(x)$ je integrovatelná a nezáporná na intervalu $\left < a,b \right > $. Pak
+Nechť $f(x)$ je integrovatelná a nezáporná na intervalu $\left<  a,b \right> $. Pak
 $$\int_a ^b f(x) \, \d x \geq 0.$$
 \end{veta}
 
 \begin{veta}
-Nechť funkce $f(x),g(x)$ jsou integrovatelné na intervalu $\left < a,b \right > .$
-Nechť pro každé $x\in \left < a,b \right > :f(x)\leq g(x).$ Pak
+Nechť funkce $f(x),g(x)$ jsou integrovatelné na intervalu $\left<  a,b \right> .$
+Nechť pro každé $x\in \left<  a,b \right> \colon f(x)\leq g(x).$ Pak
 $$\int_a^b f(x) \, \d x \leq \int_a^b g(x) \, \d x.$$
 \end{veta}
 
 \begin{veta}
 Nechť $a<b<c$ jsou reálná čísla a $f(x)$ je integrovatelná na intervalech
-$\left < a,b \right >$, $\left < b,c \right >$. Pak
+$\left<  a,b \right>$, $\left<  b,c \right>$. Pak
 $$\int_a^c f(x)\, \d x = \int_a^b f(x)\, \d x + \int_b^c f(x)\, \d x.$$
 \end{veta}
 
 \begin{definition}\label{pocastechspoj}
-Funkce $f(x)$ se nazývá \textbf{po částech spojitá} na intervalu $\left < a,b \right > $,
-jestliže je na intervalu $\left < a,b \right > $ spojitá s výjimkou konečného počtu
+Funkce $f(x)$ se nazývá \textbf{po částech spojitá} na intervalu $\left<  a,b \right> $,
+jestliže je na intervalu $\left<  a,b \right> $ spojitá s výjimkou konečného počtu
 bodů $c_1,\dots,c_n; a<c_1<\dots<c_n<b.$
 \end{definition}
 
 \begin{veta}
-Nechť funkce $f(x)$ je po částech spojitá na intervalu $\left < a,b \right > $, jako
+Nechť funkce $f(x)$ je po částech spojitá na intervalu $\left<  a,b \right> $, jako
 v definici \ref{pocastechspoj}. Pak
 $$\int_a^b f(x)\, \d x = \int_a^{c_1}f(x)\, \d x + \int_{c_1}^{c_2}f(x)\, \d x + \dots + \int_{c_n}^b f(x)\, \d x.$$
 \end{veta}
@@ -156,14 +156,14 @@ $$\int_a^b f(x)\, \d x = \int_a^{c_1}f(x)\, \d x + \int_{c_1}^{c_2}f(x)\, \d x +
 \begin{definition}
 Je-li $f(x)$ definována v čísle $a \in \mathbb R,$ klademe
 $$\int _a ^a f(x)\, \d x = 0.$$
-Je-li $f(x)$ integrovatelná na intervalu $\left < a,b \right >$, definujeme
+Je-li $f(x)$ integrovatelná na intervalu $\left<  a,b \right>$, definujeme
 $$\int_b^a f(x)\, \d x = -\int_a^b f(x)\, \d x.$$
 \end{definition}
 
 
 \begin{veta}[O substituci pro určité integrály]\label{ppui}
-Nechť $\varphi (t)$, $\varphi: \left < \alpha, \beta \right >\to \left < a,b \right >  $ má na intervalu $\left < \alpha, \beta  \right > $ spojitou derivaci
-$\varphi^\prime (t)$ a~nechť $f(x)$ je spojitá na intervalu $\left < a,b \right >$.
+Nechť $\varphi (t)$, $\varphi\colon  \left<  \alpha, \beta \right>\to \left<  a,b \right>  $ má na intervalu $\left<  \alpha, \beta  \right> $ spojitou derivaci
+$\varphi^\prime (t)$ a~nechť $f(x)$ je spojitá na intervalu $\left<  a,b \right>$.
 Označme
 $\varphi(\alpha)=a, \varphi(\beta)=b.$ Pak platí
 $$\int _a ^b f(x)\, \d x = \int _\alpha ^\beta f \left [ \varphi(t) \right ]\cdot \varphi^\prime (t)\, dt. $$
@@ -189,7 +189,7 @@ Musíme provést transformaci mezí:
 \end{reseni}
 
 \begin{veta}[O integraci \textit{per partes} pro určité integrály]
-Nechť funkce $u(x)$ a $v(x)$ mají na intervalu $\left < a,b \right > $ spojité derivace
+Nechť funkce $u(x)$ a $v(x)$ mají na intervalu $\left<  a,b \right> $ spojité derivace
 $u^\prime (x)$ a $v^\prime (x)$. Pak platí
 $$\int_a ^b u^\prime (x)v(x)\, \d x = \left [ u(x)v(x) \right ]_a^b -\int _a^b u(x)v^\prime(x)\,\d x.$$
 \end{veta}
@@ -211,7 +211,7 @@ Platí
 \end{reseni}
 
 \begin{pozn}
-    Je-li $f(x)$ spojitá a nezáporná na intervalu $\left < a,b \right >$, je
+    Je-li $f(x)$ spojitá a nezáporná na intervalu $\left<  a,b \right>$, je
     $\int_a ^b f(x)\, \d x$ obsah plochy omezené osou $x$, přímkami $x=a, x=b$ a
     grafem funkce $y=f(x)$. Platí tedy
     $$S=\int_a^b f(x)\, \d x.$$
@@ -236,9 +236,9 @@ Počítáme $2\int_{-r}^r \sqrt{r^2-x^2}\, \d x  $.
 \end{reseni}
 
 \begin{pozn}
-    Nechť je $f(x)$ spojitá a nezáporná na intervalu $\left < a,b \right >$ a je
+    Nechť je $f(x)$ spojitá a nezáporná na intervalu $\left<  a,b \right>$ a je
     dána množina bodů
-    $M=\left \{ \left [ x,y \right ]; x \in \left < a,b \right >,\linebreak y \in \left < y, f(x) \right >    \right \} .$
+    $M=\left \{ \left [ x,y \right ]; x \in \left<  a,b \right>,\linebreak y \in \left<  y, f(x) \right>    \right \} .$
     Nechť $M$ rotuje kolem osy $x$. Dostaneme rotační těleso, jehož objem je
     $$V=\pi \int _a^b \left [ f(x) \right ]^2 \, \d x. $$
 \end{pozn}
@@ -252,7 +252,7 @@ Počítáme $\pi\int _{-r}^r(\sqrt{r^2-x^2} )^2 \, \d x=\pi\int_{-r}^r(r^2-x^2)\
 \end{reseni}
 
 \begin{pozn}
-Nechť je $f(x)$ funkce se spojitou derivací na intervalu $\left < a,b \right > $. Délka
+Nechť je $f(x)$ funkce se spojitou derivací na intervalu $\left<  a,b \right> $. Délka
 grafu funkce $f(x)$ je
 $$L=\int_a^b \sqrt{1+(f^\prime(x))^2}\, \d x. $$
 \end{pozn}
@@ -266,7 +266,7 @@ Počítáme $2\int _{-r}^r \sqrt{1+\left ( \frac{-x}{\sqrt{r^2-x^2}} \right )^2 
 \end{reseni}
 
 \begin{pozn}
-    Nechť $f(x)$ je funkce se spojitou derivací na intervalu $\left < a,b \right > .$
+    Nechť $f(x)$ je funkce se spojitou derivací na intervalu $\left<  a,b \right> .$
     Pak plášť rotačního kužele, který vznikne rotací grafu $f(x)$ kolem osy $x$, má
    povrch
   $$S=2\pi\int_a^b f(x)\cdot \sqrt{1+(f^\prime(x))^2}\, \d x. $$

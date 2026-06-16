@@ -9,12 +9,12 @@
 \end{definition}
 
 \begin{pozn}
-    Definici \ref{vlimv} lze taky zapsat symbolicky. Řekneme, že
+    Definici \ref{vlimv} lze také zapsat symbolicky. Řekneme, že
     $\lim_{x\to x_0} f(x) =A$ právě tehdy, když
     $$
     \forall \varepsilon \in \mathbb R^+\,
         \exists \delta \in \mathbb R^+\, \forall x \in
-        \left ( x_0-\delta,x_0+\delta \right )\smallsetminus\left \{ x_0 \right \}:
+        \left ( x_0-\delta,x_0+\delta \right )\smallsetminus\left \{ x_0 \right \}\colon
         f(x) \in \left ( A-\varepsilon, A+\varepsilon \right ).
     $$
 \end{pozn}
@@ -30,14 +30,9 @@ $$\lim_{x\to x_0}f(x)=\infty \quad(\textrm{resp. } -\infty).$$
 \end{definition}
 
 \begin{pozn}
-    Definici \ref{nlimv} lze taky zapsat symbolicky. Řekneme, že
+    Definici \ref{nlimv} lze také zapsat symbolicky. Řekneme, že
     $\lim_{x\to x_0} f(x) =\infty$ (resp. $-\infty$) právě tehdy, když
-    $$
-    \forall M \in \mathbb R\,
-        \exists \delta \in \mathbb R^+\, \forall x \in
-        \left ( x_0-\delta,x_0+\delta \right )\smallsetminus\left \{ x_0 \right \}:
-        f(x) > M\quad (\textrm{resp. } f(x) < M) .
-    $$
+    $$\forall M \in \mathbb R\, \exists \delta \in \mathbb R^+\, \forall x \in \left ( x_0-\delta,x_0+\delta \right )\smallsetminus\left \{ x_0 \right \}\colon f(x) > M \quad (\textrm{resp. } f(x) < M).$$
 \end{pozn}
 
 \begin{definition}[Vlastní limita v nevlastním bodě]\label{vlimn}
@@ -51,11 +46,11 @@ platí $f(x)\in \left ( A-\varepsilon,A+\varepsilon \right ). $ Píšeme
 \end{definition}
 
 \begin{pozn}
-Definici \ref{vlimn} lze taky zapsat symbolicky. Řekneme, že
+Definici \ref{vlimn} lze také zapsat symbolicky. Řekneme, že
 $\lim_{x\to \infty} f(x) =A$ (resp. $\lim_{x\to -\infty} f(x) =A$) právě tehdy, když
 $$
 \forall \varepsilon \in \mathbb R^+\,
-    \exists K \in \mathbb R\, \forall x \in \mathbb R, x > K \quad (\textrm{resp. } x< K):
+    \exists K \in \mathbb R\, \forall x \in \mathbb R, x > K \quad (\textrm{resp. } x< K)\colon
     f(x) \in \left ( A-\varepsilon, A+\varepsilon \right ).
 $$
 \end{pozn}
@@ -75,11 +70,11 @@ $$
 \end{definition}
 
 \begin{pozn}
-    Definici \ref{nlimn} lze taky zapsat symbolicky. Řekneme, že
+    Definici \ref{nlimn} lze také zapsat symbolicky. Řekneme, že
     $\lim_{x\to \pm\infty} f(x) =\pm\infty$ právě tehdy, když
     $$
     \forall M \in \mathbb R\,
-        \exists K \in \mathbb R\, \forall x \in \mathbb R, x>K\quad (\textrm{resp. }x<K):
+        \exists K \in \mathbb R\, \forall x \in \mathbb R, x>K\quad (\textrm{resp. }x<K)\colon
         f(x) > M \quad (\textrm{resp. } f(x)<M).
     $$
 \end{pozn}
@@ -143,7 +138,7 @@ Pak platí:
 
 \begin{veta}[Věta o limitě funkcí shodujících se v prstencovém okolí bodu]
 Nechť jsou dány funkce $f,g$ a nechť existuje prstencové okolí
-$\mathscr P(x_0)$ takové, že $\forall x \in \mathscr P(x_0):f(x)=g(x).$
+$\mathscr P(x_0)$ takové, že $\forall x \in \mathscr P(x_0)\colon f(x)=g(x).$
 Nechť $\lim_{x\to x_0}g(x)=A, A\in \mathbb R^*.$ Pak existuje $\lim_{x\to x_0}f(x)$
 a platí $\lim_{x\to x_0}f(x)=A.$
 \end{veta}
@@ -167,7 +162,7 @@ Rozšíříme $\sqrt{x^2+9}+\sqrt{x^2-9}.  $
 
 \begin{veta}[Věta o sevření]
 Nechť $f,g,h$ jsou funkce a nechť existuje prstencové okolí $\mathscr P(x_0)$
-bodu $x_0\in \mathbb R^*$ takové, že $\forall x \in \mathscr P(x_0):g(x)\leq f(x)\leq h(x).$
+bodu $x_0\in \mathbb R^*$ takové, že $\forall x \in \mathscr P(x_0)\colon g(x)\leq f(x)\leq h(x).$
 Nechť $\lim_{x\to x_0}g(x)=\lim_{x\to x_0}h(x)=A, A \in \mathbb R^*.$ Pak existuje
 $\lim_{x\to x_0}f(x)$ a  platí $ \lim_{x\to x_0}f(x) = A.$
 \end{veta}
