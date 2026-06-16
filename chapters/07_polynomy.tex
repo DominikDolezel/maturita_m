@@ -157,14 +157,64 @@ Sestavíme všechny možnosti a vyzkoušíme. S výhodou také můžeme využít
 \end{priklad}
 
 \begin{reseni}
-Rozložíme v reálném oboru:
-\begin{equation*}
-P(x)=(x-1)^2(x+5)^3x^4(x-3)(x-2)(x^2+1)(x-5)^5.
-\end{equation*}
-Členy se záporným diskriminantem (v tomto případě $x^2+1$) nemají reálný kořen,
-neuvažujeme je tedy. V sudých mocninách se nemění znaménko. Nulové body si zaneseme
-na číselnou osu a v každém, který je na lichou mocninu, změníme znaménko (dosadíme si nějaké
-krajní, třeba pro milion). Řešením je tedy $\left( -\infty,-5 \right>\cup \left<  2,3 \right> \cup \left<  5,\infty \right )  $.
+Rozložíme v reálném oboru. Je
+\begin{align*}
+P(x)&=(x-1)^2(x+5)^3x^4(x-3)(x-2)(x^2+1)(x-5)^5 \\
+&= (x-1)^2(x+5)^3x^4(x-3)(x-2){\color{gray}(x^2+1)}(x-5)^5 \geq 0.
+\end{align*}
+Šedý člen nemá reálný kořen, neuvažujeme jej proto. Všechny kořeny si zaneseme na číselnou osu na obrázku
+\ref{fig:cis_osa}. V sudých mocninách se nemění znaménko. Jedno znaménko
+určíme třeba dosazením za $x= 1\, 000\, 000$ a zbytek již určíme jednoduše.
+\begin{figure}[!ht]
+\centering
+\resizebox{1\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\fontsize{18.2pt}{23.7pt}\selectfont]
+\draw (2.5,7) to[short] (17.5,7);
+\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (3.75,6.375) {$-5$};
+\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (10,6.375) {(0)};
+\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (11.25,6.375) {(1)};
+\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (12.5,6.375) {2};
+\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (13.75,6.375) {3};
+\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (16.25,6.375) {5};
+\begin{scope}[transparency group, opacity=1]
+\node at (3.75,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+\end{scope}
+\begin{scope}[transparency group, opacity=1]
+\node at (10,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+\end{scope}
+\begin{scope}[transparency group, opacity=1]
+\node at (11.25,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+\end{scope}
+\begin{scope}[transparency group, opacity=1]
+\node at (12.5,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+\end{scope}
+\begin{scope}[transparency group, opacity=1]
+\node at (16.25,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+\end{scope}
+\draw (13.75,7) to[short, -o] (13.75,7) ;
+\draw (13.75,7) to[short, -o] (13.75,7) ;
+\draw (13.75,7) to[short, -o] (13.75,7) ;
+\draw (13.75,7) to[short, -o] (13.75,7) ;
+\begin{scope}[transparency group, opacity=1]
+\node at (13.75,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+\end{scope}
+\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.010cm] at (16.875,7.5) {$+$};
+\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (15,7.5) {$-$};
+\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.010cm] at (13.125,7.5) {$+$};
+\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (11.875,7.5) {$-$};
+\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (10.625,7.5) {$-$};
+\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (6.875,7.5) {$-$};
+\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.010cm] at (3.125,7.5) {$+$};
+\end{circuitikz}
+}%
+\caption{Chování $P(x)$ na číselné ose}
+\label{fig:cis_osa}
+\end{figure}
+Odtud vidíme, že $P(x)$ je větší nebo roven nule na intervalech
+$$
+\left (-\infty, -5 \right > \cup \left < 2,3 \right > \cup \left < 5,\infty \right ).
+$$
 \end{reseni}
 
 \begin{definition}
