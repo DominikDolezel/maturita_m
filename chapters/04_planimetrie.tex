@@ -7,7 +7,7 @@
   V planimetrii dále pracujeme se základními vztahy (relacemi):
   \begin{itemize}
     \item \uv{ležet na} -- \textbf{relace incidence}: bod leží na přímce, zapisujeme $A \in p$,
-    \item \uv{ležet mezi} -- \textbf{relace uspořádání}: bod leží mezi body, zapisujeme $X \, \mu \, AB$.
+    \item \uv{ležet mezi} -- \textbf{relace uspořádání}: bod leží mezi body, zapisujeme $X \mezi AB$.
   \end{itemize}
 \end{pozn}
 
@@ -37,32 +37,32 @@
 
 \begin{axiom}
   Pro každé tři body platí, že pokud jeden leží mezi druhými dvěma, tyto tři body jsou kolineární.
-  $$\forall A, B, C \in \mathbb E_2\colon C\, \mu\, AB \implies A, B, C \text{ jsou tři různé kolineární body.}$$
+  $$\forall A, B, C \in \mathbb E_2\colon C \mezi AB \implies A, B, C \text{ jsou tři různé kolineární body.}$$
 \end{axiom}
 
 \begin{axiom}
   Pro každé dva různé body $A,B$ existuje bod $C$ takový, že bod $B$ leží mezi body $A$ a $C$.
-  $$\forall A, B \in \mathbb E_2, A \neq B\, \exists C \in \mathbb E_2\colon B\, \mu \,AC.$$
+  $$\forall A, B \in \mathbb E_2, A \neq B\, \exists C \in \mathbb E_2\colon B \mezi AC.$$
 \end{axiom}
 
 \begin{axiom}
 Pro každé dva různé body $A,B$ existuje bod $C$ takový, že bod $C$ leží mezi body $A$ a $B$.
-  $$\forall A, B \in \mathbb E_2, A \neq B\, \exists D \in \mathbb E_2\colon D\, \mu \,AB.$$
+  $$\forall A, B \in \mathbb E_2, A \neq B\, \exists D \in \mathbb E_2\colon D \mezi AB.$$
 \end{axiom}
 
 \begin{axiom}
   Ze tří po dvou různých kolineárních bodů právě jeden leží mezi dvěma ostatními.
-  $$\forall A, B, C \in p \in \mathscr P \text{ kolineární}, A \neq B, B\neq C, C\neq A\colon A \,\overline{\mu}\, BC \land B \,\overline{\mu}\, AC \implies C \,\mu \,AB.$$
+  $$\forall A, B, C \in p \in \mathscr P \text{ kolineární}, A \neq B, B\neq C, C\neq A\colon A \nemezi BC \land B \nemezi AC \implies C \mezi AB.$$
 \end{axiom}
 
 \begin{axiom}
   Pro každé čtyři různé body $A,B,C,D$ platí, že pokud bod $B$ leží mezi body $A$ a $C$ a bod $C$ leží mezi body $B$ a $D$, pak bod $B$ leží mezi body $A$ a $D$.
-  $$\forall A, B, C, D \in \mathbb E_2, B\, \mu\, AC \land C\, \mu\, BD \implies B\, \mu\, AD.$$
+  $$\forall A, B, C, D \in \mathbb E_2, B \mezi AC \land C\mezi BD \implies B \mezi AD.$$
 \end{axiom}
 
 \begin{axiom}
   Pro každé čtyři různé body $A,B,C,D$ platí, že pokud bod $B$ leží mezi body $A$ a $D$ a bod $C$ leží mezi body $B$ a $D$, pak bod $C$ leží mezi body $A$ a $D$.
-  $$\forall A, B, C, D \in \mathbb E_2, B\, \mu \,AC \land C\, \mu\, BD \implies B \,\mu\, AD.$$
+  $$\forall A, B, C, D \in \mathbb E_2, B \mezi AC \land C\mezi BD \implies B \mezi AD.$$
 \end{axiom}
 
 \begin{definition}
@@ -77,22 +77,22 @@ Pro každé dva různé body $A,B$ existuje bod $C$ takový, že bod $C$ leží 
 \begin{definition}
   Nechť $p\in \mathscr P,A \in p, B \in p, A \ne B.$ Množinu
   \[
-    P(A)=\left \{ X\in \mathbb E_2; X=B \lor X\,\mu\, AB \lor B\, \mu\, AX \right \}
+    P(A)=\left \{ X\in \mathbb E_2; X=B \lor X \mezi AB \lor B \mezi AX \right \}
   \]
   (resp. množinu $P(A)\,\cup\, \{A\}$) nazýváme \textbf{otevřenou} (resp. \textbf{uzavřenou}) \textbf{polopřímkou} $AB$ s~počátkem v bodě $A$. Značíme $\overrightarrow{AB}$. Množinu
   \[
-    Q(A)=\left \{ X\in \mathbb E_2; A\,\mu\, BX \right \}
+    Q(A)=\left \{ X\in \mathbb E_2; A \mezi BX \right \}
   \]
-  (resp. množinu $Q(A)\,\cup\, \{A\}$) nazýváme \textbf{otevřenou} (resp. \textbf{uzavřenou}) \textbf{polopřímku opačnou} k polopřímce $\overrightarrow{AB}$ s počátkem $A$.
+  (resp. množinu $Q(A)\,\cup\, \{A\}$) nazýváme \textbf{otevřenou} (resp. \textbf{uzavřenou}) \textbf{polopřímkou opačnou} k polopřímce $\overrightarrow{AB}$ s počátkem $A$.
 \end{definition}
 
 \begin{definition}
   Nechť body $A,B\in \mathbb E_2, A\ne B$. Průnik uzavřených polopřímek $\overrightarrow{AB}$ a $\overrightarrow{BA}$ nazveme \textbf{úsečkou} $AB$.
-  Body $A,B$ se nazývají \textbf{krajní body úsečky} $AB$, jakýkoliv bod $X\,\mu \, AB$ se nazývá \textbf{vnitřní bod} úsečky $AB$.
+  Body $A,B$ se nazývají \textbf{krajní body úsečky} $AB$, jakýkoliv bod $X \mezi AB$ se nazývá \textbf{vnitřní bod} úsečky $AB$.
 \end{definition}
 
 \begin{definition}
-Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a$ \textbf{odděluje body} $A,B$, zapisujeme $a\, \nu\, AB$, pokud $a \cap AB \neq \emptyset$. V opčaném případě \textbf{přímka} $a$ \textbf{neodděluje body} $A,B$. Zapisujeme $a\, \overline \nu \,AB.$
+Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a$ \textbf{odděluje body} $A,B$, zapisujeme $a \oddeluje AB$, pokud $a \cap AB \neq \emptyset$. V opčaném případě \textbf{přímka} $a$ \textbf{neodděluje body} $A,B$. Zapisujeme $a \neoddeluje AB.$
 \end{definition}
 
 \begin{definition}
@@ -100,11 +100,11 @@ Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a
   \begin{enumerate}[$i.$]
     \item přímka $a$ odděluje každé dva body z různých podmnožin:
       \[
-        \forall x \in P(a), \forall Y \in Q(a)\colon a \, \nu \, XY,
+        \forall x \in P(a), \forall Y \in Q(a)\colon a \oddeluje XY,
       \]
     \item přímka $a$ neodděluje žádné dva body z jedné podmnožiny:
       \[
-        \forall X, Y \in P(a) \land \forall X,Y \in Q(a)\colon a \,\overline \nu\, XY.
+        \forall X, Y \in P(a) \land \forall X,Y \in Q(a)\colon a \neoddeluje XY.
       \]
   \end{enumerate}
   Pak množinu $P(a)$ (resp. množinu $Q(a)$) nazveme \textbf{otevřenou polorovinou s hraniční přímkou} $a$ (resp. \textbf{otevřenou polorovinou s hraniční přímkou} $a$ \textbf{opačnou k} $P(a)$). Množinu $P(a)\cup a$ (resp. $Q(a) \cup a$) nazveme \textbf{uzavřenou polorovinou s hraniční přímkou} $a$ (resp. \textbf{uzavřenou polorovinou s hraniční přímkou} $a$ \textbf{opačnou k} $P(a)$).
@@ -125,7 +125,7 @@ Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a
   \begin{enumerate}[$i.$]
     \item $|AB|\geq 0,$ přičemž $|AB|=0 \iff A=B,$
     \item $|AB|=|BA|,$
-    \item $C\, \mu \, AB \implies |AB|=|CB|+|AC|,$
+    \item $C \mezi  AB \implies |AB|=|CB|+|AC|,$
     \item Nechť $\overrightarrow{AB}$ je polopřímka, $m\in \mathbb R^+_0.$ Pak $\exists ! C\in \overrightarrow{AB}$ tak, že $|AC|=m.$
   \end{enumerate}
 \end{definition}
@@ -386,8 +386,8 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
 \end{veta}
 
 \begin{proof}
-  Ukážeme, že $|AC| < |AB| + |BC|$. Sestrojme na $\overrightarrow{AB}$ bod $D$ tak, že $|BD| = |BC| \land B\, \mu\, AD$. $\triangle BCD$ je rovnoramenný s hlavním vrcholem B $\implies \omega_1 = \delta$
-  $B\, \mu\, AD \implies \omega_1 < \omega$
+  Ukážeme, že $|AC| < |AB| + |BC|$. Sestrojme na $\overrightarrow{AB}$ bod $D$ tak, že $|BD| = |BC| \land B\mezi AD$. $\triangle BCD$ je rovnoramenný s hlavním vrcholem B $\implies \omega_1 = \delta$
+  $B \mezi AD \implies \omega_1 < \omega$
   $\implies \delta < \omega \implies |AC| < |AD| = |AB| + |BD| = |AB| + |BC| \implies |AC| < |AB| + |BC|$.
 \end{proof}
 
