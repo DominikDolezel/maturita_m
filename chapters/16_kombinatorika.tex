@@ -11,6 +11,10 @@
     symbolem $|A|$ značíme počet prvků množiny $A$.
 \end{veta}
 
+\begin{pozn}[Kombinatorický význam pravidla součtu]
+	Když si rozdělíme jev na případy, které nemohou nastat zaráz (tj. pro nástup jevu se musí stát buď to, nebo ono), četnost jevu se rovná součtu četností jednotlivých případů.
+\end{pozn}
+
 \begin{veta}[Pravidlo součinu]
     Nechť $M_1, M_2, \dots, M_k, k\in \mathbb N$ jsou konečné množiny takové,
     že $|M_1| = m_1, |M_2|=m_2, \dots, |M_k| = m_k.$ Pak platí
@@ -18,6 +22,10 @@
     kde  $M_1\times M_2\times \dots \times M_k= \left \{ \left [ a_1, a_2, \dots, a_k \right ]  \right \}
     , a_1\in M_1, a_2 \in M_2, \dots, a_k \in M_k.$
 \end{veta}
+
+\begin{pozn}[Kombinatorický význam pravidla součinu]
+	Když si jev rozdělíme na podmínky, které musí nastat zaráz (tj. pro nástup jevu se musí stát to a zároveň ono), četnost jevu se rovná součinu četností splění jednotlivých podmínek.
+\end{pozn}
 
 \begin{veta}[Dirichletův princip]
     Má-li být alespoň $nk+1$ předmětů rozděleno do $k$ přihrádek, pak
@@ -45,13 +53,13 @@
 \begin{veta}\label{vfakt}
     Pro všechna $n \in \mathbb N$ platí
     \begin{equation}\label{fakt}
-   P(n)=n(n-1)(n-2)\dots 1.
+   P(n)=n\cdot(n-1)\cdot(n-2)\cdot\hdots\cdot1.
     \end{equation}
 \end{veta}
 
 \begin{definition}
     Výraz \ref{fakt} z věty \ref{vfakt} značíme
-    $$n(n-1)(n-2)\dots 1=n!$$
+    $$n\cdot(n-1)\cdot(n-2)\cdot\hdots\cdot1=n!$$
     a nazýváme \textbf{$n$-faktoriál}. Pro $n=0$ položme $0! =1.$
 \end{definition}
 
@@ -66,8 +74,8 @@
 \end{definition}
 
 \begin{veta}
-    Nechť $n_1, n_2, \dots, n_d \in \mathbb N, n, n_1, n_2, \dots, n_d=n.$ Pak platí:
-    $$P_o(n_1, n_1, \dots, n_d)=\frac{n!}{n_1!n_2!\dots n_d!}=
+    Nechť $n_1, n_2, \dots, n_d \in \mathbb N, n, n_1, n_2, \dots, n_d=n.$ Pak platí
+    $$P_o(n_1, n_1, \dots, n_d)=\frac{n!}{n_1!\cdot n_2!\cdot\hdots \cdot n_d!}=
     \frac{\left ( \sum_{i=1}^d n_i \right )! }{\prod_{i=1}^d n_i!}.$$
 \end{veta}
 
@@ -171,10 +179,14 @@ $$\binom{x-1}{x-3}+\binom{x-2}{x-4}=9.$$
     těchto $d$ druhů. Počet všech těchto kombinací označme $K_o(k,d).$
 \end{definition}
 
-\begin{veta}
+\begin{veta}\label{sifra}
     Pro všechna $k,d \in \mathbb N$ platí
     $$K_o(k,d)=P_o(k,d-1)=\binom{k+d-1}{d-1}.$$
 \end{veta}
+
+\begin{pozn}
+    Význam věty \ref{sifra} je vysvětlen v následujícím příkladu.
+\end{pozn}
 
 \begin{priklad}
 V obchodě mají čtyři druhy kávy. Kolika způsoby lze pořídit nákup šesti balíčků?
@@ -198,7 +210,7 @@ různých druhů objednávek?
 Rozlišujeme dvě hlediska:
 \begin{enumerate}[$i.$]
 \item hledisko kuchaře: je mu jedno, kdo si co objedná,
-$$K_o(35,12)=P_o(35,11)=\binom{46}{11}.$$
+$$K_o(35,12)=P_o(35,11)=\binom{46}{11},$$
 \item hledisko čišníka: záleží, kdo si co objedná.
 $$V_o(35,12)=12^{35}.$$
 \end{enumerate}

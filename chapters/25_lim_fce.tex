@@ -12,8 +12,8 @@
     Definici \ref{vlimv} lze také zapsat symbolicky. Řekneme, že
     $\lim_{x\to x_0} f(x) =A$ právě tehdy, když
     $$
-    \forall \varepsilon \in \mathbb R^+\,
-        \exists \delta \in \mathbb R^+\, \forall x \in
+    \forall \varepsilon \in \mathbb R^+\;
+        \exists \delta \in \mathbb R^+\; \forall x \in
         \left ( x_0-\delta,x_0+\delta \right )\smallsetminus\left \{ x_0 \right \}\colon
         f(x) \in \left ( A-\varepsilon, A+\varepsilon \right ).
     $$
@@ -32,7 +32,7 @@ $$\lim_{x\to x_0}f(x)=\infty \quad(\textrm{resp. } -\infty).$$
 \begin{pozn}
     Definici \ref{nlimv} lze také zapsat symbolicky. Řekneme, že
     $\lim_{x\to x_0} f(x) =\infty$ (resp. $-\infty$) právě tehdy, když
-    $$\forall M \in \mathbb R\, \exists \delta \in \mathbb R^+\, \forall x \in \left ( x_0-\delta,x_0+\delta \right )\smallsetminus\left \{ x_0 \right \}\colon f(x) > M \quad (\textrm{resp. } f(x) < M).$$
+    $$\forall M \in \mathbb R\; \exists \delta \in \mathbb R^+\; \forall x \in \left ( x_0-\delta,x_0+\delta \right )\smallsetminus\left \{ x_0 \right \}\colon f(x) > M \,\, (\textrm{resp. } f(x) < M).$$
 \end{pozn}
 
 \begin{definition}[Vlastní limita v nevlastním bodě]\label{vlimn}
@@ -49,8 +49,8 @@ platí $f(x)\in \left ( A-\varepsilon,A+\varepsilon \right ). $ Píšeme
 Definici \ref{vlimn} lze také zapsat symbolicky. Řekneme, že
 $\lim_{x\to \infty} f(x) =A$ (resp. $\lim_{x\to -\infty} f(x) =A$) právě tehdy, když
 $$
-\forall \varepsilon \in \mathbb R^+\,
-    \exists K \in \mathbb R\, \forall x \in \mathbb R, x > K \quad (\textrm{resp. } x< K)\colon
+\forall \varepsilon \in \mathbb R^+\;
+    \exists K \in \mathbb R\; \forall x \in \mathbb R, x > K \,\, (\textrm{resp. } x< K)\colon
     f(x) \in \left ( A-\varepsilon, A+\varepsilon \right ).
 $$
 \end{pozn}
@@ -73,9 +73,9 @@ $$
     Definici \ref{nlimn} lze také zapsat symbolicky. Řekneme, že
     $\lim_{x\to \pm\infty} f(x) =\pm\infty$ právě tehdy, když
     $$
-    \forall M \in \mathbb R\,
-        \exists K \in \mathbb R\, \forall x \in \mathbb R, x>K\quad (\textrm{resp. }x<K)\colon
-        f(x) > M \quad (\textrm{resp. } f(x)<M).
+    \forall M \in \mathbb R\;
+        \exists K \in \mathbb R\; \forall x \in \mathbb R, x>K \,\, (\textrm{resp. }x<K)\colon
+        f(x) > M \,\, (\textrm{resp. } f(x)<M).
     $$
 \end{pozn}
 
@@ -112,7 +112,7 @@ $$\lim_{x\to x_0}f(x)=f(x_0).$$
 \end{definition}
 
 \begin{definition}
-Funkce $f$ je \textbf{spojitá na intervalu} $J\subseteq \mathbb R,$ jestliže
+Funkce $f$ je \textbf{spojitá na intervalu} $J \subseteq \mathbb R,$ jestliže
 \begin{enumerate}[$i.$]
 \item $f$ je spojitá v každém vnitřním bodě intervalu $J,$
 \item patří-li počáteční (resp. koncový) bod $J$ k tomuto intervalu,
@@ -127,7 +127,7 @@ $$\frac{0}{0},  \quad \frac{\infty}{\infty}, \quad 0\cdot \infty, \quad \infty -
 
 \begin{veta}
 Nechť $x_0\in \mathbb R^*$ a nechť existuje $\lim_{x\to x_0}f(x)$ a $\lim_{x\to x_0}g(x)$.
-Pak platí:
+Pak platí
 \begin{enumerate}[$i.$]
 \item $\lim_{x\to x_0} \left \{ f(x)\pm g(x) \right \}= \lim_{x\to x_0}f(x) \pm \lim_{x\to x_0}g(x),$
 \item $\lim_{x\to x_0}f(x)g(x)=\lim_{x\to x_0}f(x)\cdot \lim_{x\to x_0}g(x),$
@@ -237,7 +237,7 @@ Dosaďme:
  $$\lim_{x\to 2^+}\frac{x}{x-2}=\frac{2}{0^+}=+\infty.$$
 \end{reseni}
 
-\begin{veta}[l`H\^ospitalovo pravidlo]
+\begin{veta}[l'Hospitalovo pravidlo]
 Nechť $x_0\in \mathbb R^*$. Nechť je splněna jedna z podmínek
 \begin{enumerate}[$i.$]
 \item $\lim_{x\to x_0}f(x)=\lim_{x\to x_0}g(x)=0,$
@@ -253,7 +253,7 @@ $$\lim_{x\to x_0}\frac{f(x)}{g(x)}=\lim_{x\to x_0}\frac{f^\prime (x)}{g^\prime(x
 \end{priklad}
 
 \begin{reseni}
-  Řešíme l'H\^ospitalovým pravidlem.
+  Řešíme l'Hospitalovým pravidlem.
   Platí
   $$\lim_{x\to 0}\frac{\sin x}{x}=\lim_{x\to 0}\frac{\cos x}{1}=1$$
 \end{reseni}
@@ -264,7 +264,7 @@ Spočtěte $\lim_{x\to 1} \left ( \frac{1}{\ln x}-\frac{1}{x-1} \right ) $.
 \end{priklad}
 
 \begin{reseni}
-Převedeme na společný jmenovatel a použijeme l'H\^{o}spitalovo pravidlo.
+Převedeme na společný jmenovatel a použijeme l'Hospitalovo pravidlo.
 \end{reseni}
 
 \begin{priklad}

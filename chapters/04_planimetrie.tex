@@ -13,22 +13,22 @@
 
 \begin{axiom}
   Každými dvěma různými body prochází právě jedna přímka.
-  $$\forall A, B \in \mathbb E_2, A\neq B\, \exists! p \in \mathscr P\colon A \in p \land B \in p.$$
+  $$\forall A, B \in \mathbb E_2, A\neq B\; \exists! p \in \mathscr P\colon A \in p \land B \in p.$$
 \end{axiom}
 
 \begin{axiom}
   Na každé přímce leží alespoň dva různé body.
-  $$\forall p \in \mathscr P\,\exists A,B \in \mathbb E_2\colon A\neq B \land A \in p \land B \in p.$$
+  $$\forall p \in \mathscr P\;\exists A,B \in \mathbb E_2\colon A\neq B \land A \in p \land B \in p.$$
 \end{axiom}
 
 \begin{axiom}
   Existují alespoň tři po dvou různé body, které neleží na jedné přímce.
-  $$\exists A,B,C \in \mathbb E_2, A \neq B, B\neq C, C\neq A\, \forall p \in \mathscr P\colon A \notin p \lor B \notin p \lor C \notin p.$$
+  $$\exists A,B,C \in \mathbb E_2, A \neq B, B\neq C, C\neq A\; \forall p \in \mathscr P\colon A \notin p \lor B \notin p \lor C \notin p.$$
 \end{axiom}
 
-\begin{axiom}[Eukleidův axiom]
+\begin{axiom}[Eukleidův axiom rovnoběžnosti]\label{eukl_ax}
   Každým bodem, který neleží na dané přímce, prochází právě jedna přímka, která s danou přímkou nemá žádný společný bod.
-  $$\forall A \in \mathbb E_2, \forall p \in \mathscr P\, A \notin p \implies \exists! q \in \mathscr P\colon A \in q \land p \cap q = \emptyset.$$
+  $$\forall A \in \mathbb E_2\; \forall p \in \mathscr P, A \notin p \implies \exists! q \in \mathscr P\colon A \in q \land p \cap q = \emptyset.$$
 \end{axiom}
 
 \begin{definition}
@@ -42,12 +42,12 @@
 
 \begin{axiom}
   Pro každé dva různé body $A,B$ existuje bod $C$ takový, že bod $B$ leží mezi body $A$ a $C$.
-  $$\forall A, B \in \mathbb E_2, A \neq B\, \exists C \in \mathbb E_2\colon B \mezi AC.$$
+  $$\forall A, B \in \mathbb E_2, A \neq B\; \exists C \in \mathbb E_2\colon B \mezi AC.$$
 \end{axiom}
 
 \begin{axiom}
 Pro každé dva různé body $A,B$ existuje bod $C$ takový, že bod $C$ leží mezi body $A$ a $B$.
-  $$\forall A, B \in \mathbb E_2, A \neq B\, \exists D \in \mathbb E_2\colon D \mezi AB.$$
+  $$\forall A, B \in \mathbb E_2, A \neq B\; \exists D \in \mathbb E_2\colon D \mezi AB.$$
 \end{axiom}
 
 \begin{axiom}
@@ -79,11 +79,11 @@ Pro každé dva různé body $A,B$ existuje bod $C$ takový, že bod $C$ leží 
   \[
     P(A)=\left \{ X\in \mathbb E_2; X=B \lor X \mezi AB \lor B \mezi AX \right \}
   \]
-  (resp. množinu $P(A)\,\cup\, \{A\}$) nazýváme \textbf{otevřenou} (resp. \textbf{uzavřenou}) \textbf{polopřímkou} $AB$ s~počátkem v bodě $A$. Značíme $\overrightarrow{AB}$. Množinu
+  (resp. množinu $P(A) \cup \{A\}$) nazýváme \textbf{otevřenou} (resp. \textbf{uzavřenou}) \textbf{polopřímkou} $AB$ s~počátkem v bodě $A$. Značíme $\overrightarrow{AB}$. Množinu
   \[
     Q(A)=\left \{ X\in \mathbb E_2; A \mezi BX \right \}
   \]
-  (resp. množinu $Q(A)\,\cup\, \{A\}$) nazýváme \textbf{otevřenou} (resp. \textbf{uzavřenou}) \textbf{polopřímkou opačnou} k polopřímce $\overrightarrow{AB}$ s počátkem $A$.
+  (resp. množinu $Q(A) \cup \{A\}$) nazýváme \textbf{otevřenou} (resp. \textbf{uzavřenou}) \textbf{polopřímkou opačnou} k polopřímce $\overrightarrow{AB}$ s počátkem $A$.
 \end{definition}
 
 \begin{definition}
@@ -100,7 +100,7 @@ Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a
   \begin{enumerate}[$i.$]
     \item přímka $a$ odděluje každé dva body z různých podmnožin:
       \[
-        \forall x \in P(a), \forall Y \in Q(a)\colon a \oddeluje XY,
+        \forall X \in P(a), \forall Y \in Q(a)\colon a \oddeluje XY,
       \]
     \item přímka $a$ neodděluje žádné dva body z jedné podmnožiny:
       \[
@@ -126,7 +126,7 @@ Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a
     \item $|AB|\geq 0,$ přičemž $|AB|=0 \iff A=B,$
     \item $|AB|=|BA|,$
     \item $C \mezi  AB \implies |AB|=|CB|+|AC|,$
-    \item Nechť $\overrightarrow{AB}$ je polopřímka, $m\in \mathbb R^+_0.$ Pak $\exists ! C\in \overrightarrow{AB}$ tak, že $|AC|=m.$
+    \item nechť $\overrightarrow{AB}$ je polopřímka, $m\in \mathbb R^+_0$, pak $\exists ! C\in \overrightarrow{AB}$ tak, že $|AC|=m.$
   \end{enumerate}
 \end{definition}
 
@@ -135,7 +135,7 @@ Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a
   \begin{enumerate}[$i.$]
     \item nulový úhel má velikost $0^\circ$, přímý $180^\circ$,
     \item každý jiný konvexní úhel má velikost $n^\circ, $ kde $0^\circ< n ^\circ< 180^\circ, u \in \mathbb R,$
-    \item jestliže polopřímka $\overrightarrow{VB}$ prochází mezi rameny konvexního úhlu $\sphericalangle AVC$, pak $|\sphericalangle AVC|=|\sphericalangle AVB|+ |\sphericalangle BVC|$ a
+    \item jestliže polopřímka $\overrightarrow{VB}$ prochází mezi rameny konvexního úhlu $\sphericalangle AVC$, pak $|\sphericalangle AVC|=|\sphericalangle AVB|+ |\sphericalangle BVC|$,
     \item je-li $\overrightarrow{VA}$ je polopřímka, $u \in \mathbb R, u \in \left<  0 ^\circ,180^\circ \right>$, pak existuje polopřímka $\overrightarrow{VB}$ taková, že $|\sphericalangle AVB|=u^\circ.$
   \end{enumerate}
 \end{definition}
@@ -154,7 +154,7 @@ Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a
 
 \begin{veta}
     Nechť $\sphericalangle AVB$ je úhel, $\varphi$ jeho velikost v radiánech a $\alpha$
-    jeho velikost ve stupních. Pak platí:
+    jeho velikost ve stupních. Pak platí
     \begin{align*}
         \varphi = \alpha\cdot \frac{\pi}{180^\circ}, & & \alpha = \varphi\cdot \frac{180^\circ}{\pi}.
     \end{align*}
@@ -252,7 +252,7 @@ Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a
 \end{definition}
 
 \begin{definition}
-  Nechť $a,b \in \mathscr P, a \parallel b.$ \textbf{Vzdáleností dvou přímek} $a,b$ nazveme reálné číslo označené $\rho(a,b)$ takové, že $\rho(a,b)=\rho(A,b),$ kde $A\in a$ je libovolný bod.
+  Nechť $a,b \in \mathscr P, a \parallel b.$ \textbf{Vzdáleností dvou rovnoběžek} $a,b$ nazveme reálné číslo označené $\rho(a,b)$ takové, že $\rho(a,b)=\rho(A,b),$ kde $A\in a$ je libovolný bod. Vzdálenost dvou různoběžek klademe nulovou.
 \end{definition}
 
 \begin{definition}
@@ -281,7 +281,7 @@ Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a
 \end{definition}
 
 \begin{definition}
-  Nechť je dán trojúhelník $\triangle ABC$. \textbf{Vnitřním úhlem} $\triangle ABC$ při vrcholu $A$~(resp. $B$, resp. $C$)
+  Nechť je dán trojúhelník $ABC$. \textbf{Vnitřním úhlem} $\triangle ABC$ při vrcholu $A$~(resp. $B$, resp. $C$)
   nazýváme úhly $\sphericalangle CAB$ (resp. $\sphericalangle ABC$, resp. $ \sphericalangle BCA$), \textbf{vnějším úhlem}
   $\triangle ABC$ při vrcholu $A$ (resp. $B$, resp. $C$) pak vedlejší úhel k úhlu $\sphericalangle CAB$ (resp. $\sphericalangle ABC$, resp. $\sphericalangle BCA$).
   \begin{figure}[ht!]
@@ -386,8 +386,7 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
 \end{veta}
 
 \begin{proof}
-  Ukážeme, že $|AC| < |AB| + |BC|$. Sestrojme na $\overrightarrow{AB}$ bod $D$ tak, že $|BD| = |BC| \land B\mezi AD$. $\triangle BCD$ je rovnoramenný s hlavním vrcholem B $\implies \omega_1 = \delta$
-  $B \mezi AD \implies \omega_1 < \omega$
+  Ukážeme, že $|AC| < |AB| + |BC|$. Sestrojme na $\overrightarrow{AB}$ bod $D$ tak, že $|BD| = |BC| \land B\mezi AD$. $\triangle BCD$ je rovnoramenný s hlavním vrcholem $B \implies \omega_1 = \delta$, $B \mezi AD \implies \omega_1 < \omega$
   $\implies \delta < \omega \implies |AC| < |AD| = |AB| + |BD| = |AB| + |BC| \implies |AC| < |AB| + |BC|$.
 \end{proof}
 
@@ -420,7 +419,7 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
 
 \begin{veta}[Eukleidova věta o výšce]
   Nechť je dán pravoúhlý trojúhelník $ABC$ s přeponou $AB$. Pak
-  $$v_c^2 = c_a \cdot c_b$$
+  $$v_c^2 = c_a \cdot c_b.$$
   \begin{figure}[ht!]
     \centering
     \includegraphics[width=0.4\textwidth]{eukl_v_o_vysce}
@@ -500,7 +499,7 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
 \end{veta}
 
 \begin{proof}
-  Plyne ze shodnosti trojúhelníků $\triangle ABD$ a $\triangle CDB.$
+  Plyne ze shodnosti trojúhelníků $ABD$ a $CDB.$
 \end{proof}
 
 \begin{veta}
@@ -509,7 +508,7 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
 
 
 \begin{proof}
-  Plyne ze shodnosti trojúhelníků $\triangle ASD$ a $\triangle CSB$, kde $S$ je průsečík úhlopříček.
+  Plyne ze shodnosti trojúhelníků $ASD$ a $CSB$, kde $S$ je průsečík úhlopříček.
 \end{proof}
 
 \begin{definition}
@@ -624,11 +623,11 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
 \end{definition}
 
 \begin{veta}\label{mbdv}
-  Nechť je dána úsečka $AB$. Množinou všech bodů $X\in \mathbb E_2,$ pro něž $|AX|=|BX|$, je \textbf{osa} $o$ \textbf{úsečky} $AB$.
+  Nechť je dána úsečka $AB$. Množinou všech bodů $X\in \mathbb E_2,$ pro něž $|AX|=|BX|$, je osa $o$ úsečky $AB$.
 \end{veta}
 
 \begin{proof}
-  Označme $U=\{ X\in \mathbb E_2\colon |AX|=|BX| \}$.
+  Označme $U=\{ X\in \mathbb E_2; |AX|=|BX| \}$.
   \begin{enumerate}[$i.$]
     \item $o \subseteq U\colon X \in o$ lib. $\implies$ nechť $X\in AB \implies X=S$ -- střed $AB \implies |AS|=|BS| \implies X \in U.$ Nechť $X \notin AB \implies \triangle ASX \cong \triangle BSX$ (sus) $\implies |AX|=|BX| \implies X \in U$.
     \item $U \subseteq o\colon X \in U$ lib. $\implies |AX|=|BX| \implies$ nechť $X \in AB \implies X=S \in o.$ Nechť $X \notin AB \implies \exists \triangle ABC$ -- rovnoramenný se základnou $AB$, kde $XS$ je těžnice, ale i~výška $\implies XS \perp AB \implies X \in o.$ \qedhere
@@ -636,10 +635,10 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
 \end{proof}
 
 \begin{veta}
-  Nechť je dána úsečka $AB$, $o$ její osa. Pak platí:
+  Nechť je dána úsečka $AB$, $o$ její osa. Pak platí
   \begin{enumerate}[$i.$]
-    \item $\overrightarrow{oA}=\{ X\in \mathbb E_2\colon|AX|\leq |BX| \},$
-    \item $\overrightarrow{oB}=\{ X \in \mathbb E_2 \colon |AX| \geq |BX| \}.$
+    \item $\overrightarrow{oA}=\{ X\in \mathbb E_2; |AX|\leq |BX| \},$
+    \item $\overrightarrow{oB}=\{ X \in \mathbb E_2; |AX| \geq |BX| \}.$
   \end{enumerate}
 \end{veta}
 
@@ -651,7 +650,7 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
 \end{proof}
 
 \begin{veta}
-  Nechť $a,b$ jsou dvě různoběžky, $a\cap b = \{P\}.$ Množinou všech bodů $X\in \mathbb E_2$, pro něž platí $\rho(X,a)=\rho(X,b)$, je sjednocení přímek $o_1\cap o_2,$ kde  $o_1$, $o_2$ jsou osy úhlů, které přímky $a,b$ svírají.
+  Nechť $a,b$ jsou dvě různoběžky, $a\cap b = \{P\}.$ Množinou všech bodů $X\in \mathbb E_2$, pro něž platí $\rho(X,a)=\rho(X,b)$, je sjednocení přímek $o_1 \cup o_2,$ kde  $o_1$, $o_2$ jsou osy úhlů, které přímky $a,b$ svírají.
 \end{veta}
 
 
@@ -664,7 +663,7 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
 \end{veta}
 
 \begin{definition}
-  Nechť $p$ je přímka. Množinou všech bodů $X \in \mathbb E_2,$ které mají od přímky $p$~stejnou vzdálenost $a\in \mathbb R^+$, je sjednocení přímek $e_1\cup e_2,$ kde $e_1 \parallel e_2 \land \rho(e_1,p)=\rho(e_2,p)=a$. Tyto přímky nazveme
+  Nechť $p$ je přímka. Množinou všech bodů $X \in \mathbb E_2,$ které mají od přímky $p$~stejnou vzdálenost $a\in \mathbb R^+$, je sjednocení přímek $e_1 \cup e_2,$ kde $e_1 \parallel e_2 \land \rho(e_1,p)=\rho(e_2,p)=a$. Tyto přímky nazveme
   \textbf{ekvidistantou přímky} $p$.
 \end{definition}
 
@@ -674,7 +673,7 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
 \end{definition}
 
 \begin{definition}
-  Nechť je dána úsečka $AB$. Množinou všech vrcholů $C\in \mathbb E_2$ všech pravoúhlých trojúhelníků $\triangle ABC$ s přeponou $AB$ je množina $k\smallsetminus\{ A,B\}$, kde $k\left (S,\frac{|AB|}{2}\right )$ je kružnice, $S$~je střed $AB$. Tuto množinu budeme nazývat \textbf{Thaletovou kružnicí} nad přeponou $AB$ a~označovat $\tau (AB).$
+  Nechť je dána úsečka $AB$. Množinou všech vrcholů $C\in \mathbb E_2$ všech pravoúhlých trojúhelníků $ABC$ s přeponou $AB$ je množina $k\smallsetminus\{ A,B\}$, kde $k\left (S,\frac{|AB|}{2}\right )$ je kružnice, $S$~je střed $AB$. Tuto množinu budeme nazývat \textbf{Thaletovou kružnicí} nad přeponou $AB$ a~označovat $\tau (AB).$
 \end{definition}
 
 \begin{veta}
@@ -686,7 +685,7 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
 \end{pozn}
 
 \begin{definition}
-  Nechť $\triangle ABC$ je trojúhelník. Kružnici, která prochází body $A,B,C$, nazveme \textbf{kružnicí opsanou} trojúhelníku $\triangle ABC.$ Kružnici, která se dotýká všech tří stran trojúhelníku $\triangle ABC,$ nazveme \textbf{kružnici vepsanou} trojúhelníku $\triangle ABC.$
+  Nechť $\triangle ABC$ je trojúhelník. Kružnici, která prochází body $A,B,C$, nazveme \textbf{kružnicí opsanou} trojúhelníku $ABC$. Kružnici, která se dotýká všech tří stran trojúhelníku $ABC$, nazveme \textbf{kružnici vepsanou} trojúhelníku $\triangle ABC.$
 \end{definition}
 
 \begin{veta}
@@ -698,7 +697,7 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
 \end{definition}
 
 \begin{veta}
-  Nechť je dán čtyřúhelník $ABCD$ se stranami $a,b,c,d$ a úhly $\alpha, \beta, \gamma, \delta.$ Pak platí:
+  Nechť je dán čtyřúhelník $ABCD$ se stranami $a,b,c,d$ a úhly $\alpha, \beta, \gamma, \delta.$ Pak platí
   \begin{itemize}
     \item $ABCD$ je tětivový $\iff \alpha + \gamma=\beta+\delta=180^\circ,$
     \item $ABCD$ je tečnový $\iff a+c=b+d.$

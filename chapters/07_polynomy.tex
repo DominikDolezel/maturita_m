@@ -32,28 +32,28 @@
   \[
     P(c) = a_nc^n+a_{n-1}c^{n-1}+\dots+a_1c+a_0.
   \]
-  Číslo $c\in \mathbb R$ nazveme \textbf{kořenem polynomu} $P(x) \iff P(c) = 0$.
+  Číslo $c\in \mathbb R$ nazveme \textbf{kořenem polynomu} $P(x)$, pokud $P(c) = 0$.
 \end{definition}
 
 
 \begin{definition}
-  Nechť $P(x) \in \mathbb R [x]$ a $c\in \mathbb R$ je jeho kořen. Lineární polynom $x-c$ nazveme \textbf{kořenovým činitelem}.
+  Nechť $P(x) \in \mathbb R [x]$ a $c\in \mathbb R$ je jeho kořen. Lineární polynom $x-c$ nazveme \textbf{kořenovým činitelem} polynomu $P(x)$.
 \end{definition}
 
 \begin{definition}
-  Nechť $P(x) \in \mathbb R [x], c \in \mathbb R$ je jeho kořen a $k \in \mathbb N$. Číslo $C \in \mathbb R$ nazýváme \textbf{$k$-násobným kořenem} polynomu $P(x)$ právě tehdy, když platí
+  Nechť $P(x) \in \mathbb R [x], c \in \mathbb R$ je jeho kořen a $k \in \mathbb N$. Číslo $c \in \mathbb R$ nazýváme \textbf{$k$-násobným kořenem} polynomu $P(x)$, pokud
   \[
-    (x-c)^k \mid P(x) \land (x-c)^{k+1} \,\centernot |\,  P(x).
+    (x-c)^k \mid P(x) \land (x-c)^{k+1} \nmid  P(x).
   \]
 \end{definition}
 
 \begin{veta}[Vi\`{e}tovy vztahy]
-  Nechť $P(x)=a_nx^n+a_{n-1}x^{n-1}+\dots + a_1x+a_0$ je polynom stupně $n$, který má v množině $\mathbb R$ právě $n$ kořenů $x_1,x_2\dots,x_n$ (každý počítáme tolikrát, jaká je jeho násobnost). Pak platí:
+  Nechť $P(x)=a_nx^n+a_{n-1}x^{n-1}+\dots + a_1x+a_0$ je polynom stupně $n$, který má v množině $\mathbb R$ právě $n$ kořenů $x_1,x_2\dots,x_n$ (každý počítáme tolikrát, jaká je jeho násobnost). Pak platí
   \begin{align*}
     &\smashoperator[l]{\sum_{i=1}^n} \, x_i = -\frac{a_{n-1}}{a_n}, \\
-    &\smashoperator[l]{\sum_{i,j=1; i<j}^{n}}\!\!\!\!\! x_ix_j= \frac{a_{n-2}}{a_n}, \\
-    & \hdots \\
-    &\smashoperator[l]{\prod_{i=1}^n}x_i=(-1)^n\frac{a_0}{a_n}.
+    &\smashoperator[l]{\sum_{i,j=1; i<j}^{n}}\!\!\!\!\! x_ix_j = \frac{a_{n-2}}{a_n}, \\
+    &\phantom{\sum_x^d x_ix_j} \hdots\\
+    &\smashoperator[l]{\prod_{i=1}^n}x_i =(-1)^n\frac{a_0}{a_n}.
   \end{align*}
 \end{veta}
 
@@ -89,14 +89,14 @@ rovnice tvaru $P(x)=0,$ kde $P(x)$ je polynom $n$-tého stupně s reálnými koe
         a_nx^n + a_{n-1}x^{n-1}+\dots + a_1x+a_0=0,
     \end{equation}
     $a_n \ne 0$ s celočíselnými koeficienty. Nechť $\frac{r}{s}, r\in \mathbb Z, s \in \mathbb N, D(r,s)=1$ je kořenem této rovnice.
-    Pak platí: $r \mid a_0 \land s \, |\, a_n.$
+    Pak platí, že $r \mid a_0 \land s \mid a_n.$
 \end{veta}
 
 \begin{veta}\label{odecitanivpolynomu}
     Nechť $\frac{r}{s}$ je racionální kořen algebraické rovnice \ref{alg_rce} s celočíselnými koeficienty.
-    Pak platí:
-    $$\forall m \in \mathbb Z\colon (r-ms) \, |\, a(m),$$
-    kde $a(m)$ je hodnota polynomu $a(x)$ pro $x=m.$ Nejčastěji používáme $(r + s) \mid a(-1)$ a $(r - s) \, |\, a(1).$
+    Pak platí
+    $$\forall m \in \mathbb Z\colon (r-ms) \mid a(m),$$
+    kde $a(m)$ je hodnota polynomu $a(x)$ pro $x=m.$ Nejčastěji používáme $(r + s) \mid a(-1)$ a $(r - s) \mid a(1).$
 \end{veta}
 
 \begin{algoritmus}[Hledání racionálních kořenů polynomu s racionálními koeficienty]
@@ -218,12 +218,11 @@ $$
 \end{reseni}
 
 \begin{definition}
-  Nechť $A(x), B(x) \in \mathbb R [x]$. Polynom $C(x) \in \mathbb R [x]$ se nazývá \textbf{společný dělitel polynomů} $A(x), B(x)$
-  právě tehdy, když platí: $C(x) \mid A(x) \land C(x) \mid B(x)$.
+  Nechť $A(x), B(x) \in \mathbb R [x]$. Polynom $C(x) \in \mathbb R [x]$ se nazývá \textbf{společný dělitel polynomů} $A(x), B(x)$, pokud $C(x) \mid A(x) \land C(x) \mid B(x)$.
 
-  Polynom $D(x) \in \mathbb R [x]$ se nazývá \textbf{největší společný dělitel polynomů} $A(x), B(x)$, který označujeme $D(A(x), B(x))$ nebo $(A(x), B(x))$, právě tehdy, když platí:
+  Polynom $D(x) \in \mathbb R [x]$ se nazývá \textbf{největší společný dělitel polynomů} $A(x), B(x)$, který označujeme $D(A(x), B(x))$ nebo $(A(x), B(x))$, pokud zároveň platí
   \begin{enumerate}[i.]
-    \item $D(x) \mid A(x) \land D(x) \mid B(x)$ a
+    \item $D(x) \mid A(x) \land D(x) \mid B(x)$,
     \item $\forall C(x) \in \mathbb R [x]\colon C(x) \mid A(x) \land C(x) \mid B(x) \implies C(x) \mid D(x).$
   \end{enumerate}
 \end{definition}

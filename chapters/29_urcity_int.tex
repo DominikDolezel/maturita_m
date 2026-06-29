@@ -90,10 +90,10 @@ pak $f(x)$ není na intervalu $\left<  a,b \right> $ integrovatelná a
 $\int_{a} ^b f(x)\, \d x$ nedefinujeme.
 \end{definition}
 
-\begin{veta}[Newtonova--Leibnitzova věta]
+\begin{veta}[Newtonova--Leibnizova věta]
 Nechť $f(x)$ je integrovatelná na intervalu $\left<  a,b \right>$, $F(x)$ je spojitá
 na intervalu $\left<  a,b \right> $. Buď $F(x)$ primitivní funkce k funkci $f(x)$
-na intervalu $\left ( a,b \right ) $. Pak platí:
+na intervalu $\left ( a,b \right ) $. Pak platí
 $$\int_{a} ^b f(x)\, \d x=F(b)-F(a).$$
 \end{veta}
 
@@ -166,7 +166,7 @@ Nechť $\varphi (t)$, $\varphi\colon  \left<  \alpha, \beta \right>\to \left<  a
 $\varphi^\prime (t)$ a~nechť $f(x)$ je spojitá na intervalu $\left<  a,b \right>$.
 Označme
 $\varphi(\alpha)=a, \varphi(\beta)=b.$ Pak platí
-$$\int _a ^b f(x)\, \d x = \int _\alpha ^\beta f \left [ \varphi(t) \right ]\cdot \varphi^\prime (t)\, dt. $$
+$$\int _a ^b f(x)\, \d x = \int _\alpha ^\beta f \left [ \varphi(t) \right ]\cdot \varphi^\prime (t)\, \d t. $$
 \end{veta}
 
 \begin{pozn}
@@ -182,8 +182,8 @@ Musíme provést transformaci mezí:
 \begin{align*}
 \int _1^2 \frac{x}{(1+x^2)}\, \d x &= \left |\begin{array}{l l}
     t=x^2+1 & x=2\implies t=5 \\
-    dt = 2x \, \d x & x=1\implies t=2
-\end{array}\right | = \frac{1}{2}\int _2^5 \frac{1}{t^{\frac{3}{2}}}\, dt \\
+    \d t = 2x \, \d x & x=1\implies t=2
+\end{array}\right | = \frac{1}{2}\int _2^5 \frac{1}{t^{\frac{3}{2}}}\, \d t \\
 &= \frac{1}{2}\left [ \frac{t^{-\frac{1}{2}}}{-\frac{1}{2}} \right ] _2^5 = \frac{1}{2}\left ( \frac{5^{-\frac{1}{2}}}{-\frac{1}{2}}-\frac{2^{-\frac{1}{2}}}{-\frac{1}{2}} \right )=-\frac{1}{\sqrt{5} }+\frac{1}{\sqrt{2} }.
 \end{align*}
 \end{reseni}
@@ -191,7 +191,7 @@ Musíme provést transformaci mezí:
 \begin{veta}[O integraci \textit{per partes} pro určité integrály]
 Nechť funkce $u(x)$ a $v(x)$ mají na intervalu $\left<  a,b \right> $ spojité derivace
 $u^\prime (x)$ a $v^\prime (x)$. Pak platí
-$$\int_a ^b u^\prime (x)v(x)\, \d x = \left [ u(x)v(x) \right ]_a^b -\int _a^b u(x)v^\prime(x)\,\d x.$$
+$$\int_a ^b u^\prime (x)v(x)\, \d x = \left [ u(x)v(x) \right ]_a^b -\int _a^b u(x)v^\prime(x)\, \d x.$$
 \end{veta}
 
 \begin{priklad}

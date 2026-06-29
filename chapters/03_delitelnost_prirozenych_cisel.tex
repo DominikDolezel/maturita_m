@@ -23,9 +23,9 @@
 \end{definition}
 
 \begin{definition}
-  Číslo $d\in \mathbb N$ je \textbf{největší společný dělitel} čísel $a,b \in \mathbb N,$ jestliže zároveň
+  Číslo $d\in \mathbb N$ je \textbf{největší společný dělitel} čísel $a,b \in \mathbb N,$ jestliže zároveň platí
   \begin{enumerate}[$i.$]
-    \item $d\mid a \land d \mid b$ a
+    \item $d\mid a \land d \mid b$,
     \item $\forall c \in \mathbb N\colon c \mid a \land c \mid b \implies c \mid d.$
   \end{enumerate}
   Takové číslo značíme $d=D(a,b)$, někdy také jen $(a,b)$.
@@ -90,9 +90,9 @@ Potom $D(a,b) = r_n$.
 \end{definition}
 
 \begin{definition}
-  Číslo $n\in \mathbb N$ je \textbf{nejmenší společný násobek} čísel $a,b \in \mathbb N,$ jestliže jsou splněny zároveň obě podmínky:
+  Číslo $n\in \mathbb N$ je \textbf{nejmenší společný násobek} čísel $a,b \in \mathbb N,$ jestliže zároveň platí
   \begin{enumerate}[$i.$]
-    \item $a\mid n \land b \mid n$ a
+    \item $a\mid n \land b \mid n$,
     \item $\forall m \in \mathbb N\colon a \mid m \land b \mid m \implies n \mid m.$
   \end{enumerate}
   Takové číslo značíme $n=n(a,b), $ někdy také jen $\left [ a,b\right ]$.
@@ -204,12 +204,12 @@ Dokažte nepřímo a sporem: $\forall n \in \mathbb N\colon 5 \mid n^2 \implies 
 
 \subsection*{Kritéria dělitelnosti}
 \begin{veta}
-  Nechť $n\in \mathbb N, n=a_k\cdot 10^k+a_{k-1}\cdot 10^{k-1}+\dots + a_1\cdot 10 + a_0.$ Pak platí:
+  Nechť $n\in \mathbb N, n=a_k\cdot 10^k+a_{k-1}\cdot 10^{k-1}+\dots + a_1\cdot 10 + a_0.$ Pak platí
   \begin{enumerate}[$i.$]
     \item $2 \mid n \iff 2 \mid a_0$,
     \item $4 \mid n \iff 4 \mid (10a_1 + a_0)$,
     \item $5 \mid n \iff 5 \mid a_0$,
-    \item $8 \mid n \iff 8 \mid (10^2a_2 + 10a_1 + a_0)$ a
+    \item $8 \mid n \iff 8 \mid (10^2a_2 + 10a_1 + a_0)$,
     \item $10 \mid n \iff a_0 = 0$.
   \end{enumerate}
 \end{veta}
@@ -225,9 +225,9 @@ Platí $n = 10(a_k\cdot 10^{k-1}+a_{k-1}\cdot 10 ^{k-2}+\dots+a_1)+a_0 = 10l+a_0
 \end{definition}
 
 \begin{veta}
-  Nechť $n\in \mathbb N, n=a_k\cdot 10^k+a_{k-1}\cdot 10^{k-1}+\dots + a_1\cdot 10 + a_0,$ $S(n)$ je ciferný součet čísla $n$. Pak platí:
+  Nechť $n\in \mathbb N, n=a_k\cdot 10^k+a_{k-1}\cdot 10^{k-1}+\dots + a_1\cdot 10 + a_0,$ $S(n)$ je ciferný součet čísla $n$. Pak platí
   \begin{enumerate}[$i.$]
-    \item $3\mid n \iff 3 \mid S(n)$ a
+    \item $3\mid n \iff 3 \mid S(n)$,
     \item $9\mid n \iff 9 \mid S(n)$.
   \end{enumerate}
 \end{veta}

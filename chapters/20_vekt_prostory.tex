@@ -23,8 +23,7 @@
     (tzv. vnější násobení) takto: je-li $p\in \mathbb R$ a $\overrightarrow{PX}\in \mathscr U$,
     pak $p$-násobkem orientované
     úsečky $\overrightarrow{PX}$ nazveme orientovanou úsečku $\overrightarrow{PY}$
-    (a zapisujeme $\overrightarrow{PY}=p \cdot \overrightarrow{PX}$), přičemž
-    platí:
+    (a zapisujeme $\overrightarrow{PY}=p \cdot \overrightarrow{PX}$), přičemž platí
     \begin{enumerate}[$i.$]
     \item $p=0 \implies Y=P,$
    	\item $p\ne 0 \implies Y = \mathscr H_{P,p}(X).$
@@ -33,7 +32,7 @@
 
 \begin{definition}
     Nechť je dána množina $G$ s operací $*\colon G\times G \to G$ (je na $G$ uzavřená).
-    Pak dvojice $(G,*)$ je \textbf{grupa}, jestliže platí:
+    Pak dvojice $(G,*)$ je \textbf{grupa}, jestliže platí
     \begin{enumerate}[$i.$]
         \item $\forall a,b,c, \in G\colon a*(b*c) = (a*b)*c$ (asociativita),
        	\item $\exists e \in G$ takové, že $\forall a\in G\colon a*e=e*a=a$ (existence neutrálního prvku),
@@ -48,8 +47,8 @@
 
 \begin{definition}\label{vekt_prost}
     Nechť je dána množina $V$, těleso $T$ a dvě operace $\bigoplus\colon V\times V \to V$ a~$\bigotimes\colon T\times V \to V$ (jsou na $V$ uzavřené). Pak čtveřice $(V,T,\bigoplus,
-    \bigotimes)$ je \textbf{vektorový prostor} nad tělesem $T$, jestliže $\forall p,q \in T, \vec u,
-    \vec v, \vec w \in V$ platí:
+    \bigotimes)$ je \textbf{vektorový prostor} nad tělesem $T$, jestliže $\forall p,q \in T, \forall \vec u,
+    \vec v, \vec w \in V$ platí
     \begin{enumerate}[$i.$]
     \item $\vec u \bigoplus \vec v = \vec v \bigoplus \vec u$ (komutativita sčítání),
    	\item $(\vec u \bigoplus \vec v)\bigoplus \vec w = \vec u \bigoplus (\vec v \bigoplus \vec w)$ (asociativita sčítání),
@@ -86,18 +85,18 @@
 \end{pozn}
 
 \begin{pozn}
-    Množina $\mathbb R^{(n)}$ všech uspořádaných $n$-tic tvoří \textbf{aritmetický}
+    Množina $\mathbb R^{n}$ všech uspořádaných $n$-tic tvoří \textbf{aritmetický}
     vektorový prostor.
 \end{pozn}
 
 \begin{definition}
     Nechť $A,B,C,D \in \mathbb E_n$ jsou body. Řekneme, že orientované úsečky
     $\overrightarrow{AB}$ a $\overrightarrow{CD}$ jsou \textbf{ekvipolentní}, jestliže
-    střed úsečky $AD$ je i středem úsečky $BC$. Zapisujeme $\overrightarrow{AB}\,\varepsilon\,\overrightarrow{CD}.$
+    střed úsečky $AD$ je i středem úsečky $BC$. Zapisujeme $\overrightarrow{AB} \ekvipol \overrightarrow{CD}.$
 \end{definition}
 
 \begin{pozn}
-    Pro definici relace ekvivalce viz def. \ref{reflsymtran}, \ref{ekvivalence} a poznámku \ref{rozkladprislusnyekvivalenci}.
+    Pro definici relace ekvivalence viz def. \ref{reflsymtran}, \ref{ekvivalence} a poznámku \ref{rozkladprislusnyekvivalenci}.
 \end{pozn}
 
 \begin{definition}
@@ -110,14 +109,14 @@
     Nechť $V$ je množina všech volných vektorů v $\mathbb E_n$. Pak na množině $V$ definujeme
     operace sčítání a vnější násobení takto:
     \begin{enumerate}[$i.$]
-    \item $\forall \vec u, \vec v \in V\colon \vec u + \vec v = \vec w,$ kde $\vec w = \left \{ \overrightarrow{XY}; \overrightarrow{XY} \, \varepsilon \, \overrightarrow{PC} \right \} $, kde $\overrightarrow{PA}\in\vec u, \overrightarrow{PB}\in \vec v$ a $\overrightarrow{PC}=\overrightarrow{PA}+\overrightarrow{PB}$ je součet orientovaných úseček $\overrightarrow{PA},\overrightarrow{PB}.$
-   	\item $\forall p \in \mathbb R, \forall \vec u \in V\colon p\cdot \vec u = \vec z, \vec z = \left \{ \overrightarrow{XY}; \overrightarrow{XY} \, \varepsilon \, \overrightarrow{PC} \right \} $, přitom $\overrightarrow{PE}\in \vec u$ a $\overrightarrow{PF} = p\cdot \overrightarrow{PE}$ je vnější součin orientované úsečky $\overrightarrow{PE}$ a čísla $p$ (tj. pomocí stejnolehlosti).
+    \item $\forall \vec u, \vec v \in V\colon \vec u + \vec v = \vec w,$ kde $\vec w = \left \{ \overrightarrow{XY}; \overrightarrow{XY} \ekvipol \overrightarrow{PC} \right \} $, kde $\overrightarrow{PA}\in\vec u, \overrightarrow{PB}\in \vec v$ a $\overrightarrow{PC}=\overrightarrow{PA}+\overrightarrow{PB}$ je součet orientovaných úseček $\overrightarrow{PA},\overrightarrow{PB}$,
+   	\item $\forall p \in \mathbb R, \forall \vec u \in V\colon p\cdot \vec u = \vec z, \vec z = \left \{ \overrightarrow{XY}; \overrightarrow{XY} \ekvipol \overrightarrow{PC} \right \} $, přitom $\overrightarrow{PE}\in \vec u$ a $\overrightarrow{PF} = p\cdot \overrightarrow{PE}$ je vnější součin orientované úsečky $\overrightarrow{PE}$ a čísla $p$ (tj. pomocí stejnolehlosti).
     \end{enumerate}
 \end{definition}
 
 \begin{definition}
-Nechť $\vec u \subseteq M$ je libovolný volný vektor a $\overrightarrow{AB}\subseteq \vec u$ orientovaná úsečka, tedy
-$u =\left  \{ \overrightarrow{XY}; \overrightarrow{XY} \, \varepsilon \, \overrightarrow{AB} \right \}$. Pak orientovanou úsečku $\overrightarrow{AB}$ nazveme \textbf{umístěním} vektoru $\vec u$.
+Nechť je dán volný vektor $\vec u \subseteq M$ a libovolná orientovaná úsečka $\overrightarrow{AB} \in \vec u$, tedy
+$u =\left  \{ \overrightarrow{XY}; \overrightarrow{XY} \ekvipol \overrightarrow{AB} \right \}$. Pak orientovanou úsečku $\overrightarrow{AB}$ nazveme \textbf{umístěním} vektoru $\vec u$.
 \end{definition}
 
 \begin{definition}
@@ -151,7 +150,7 @@ Vlastně řešíme rovnici $(7,4)=a(1,2)+b(4,3).$
 \end{reseni}
 
 \begin{definition}
-    Nechť $S= \left \{ \vec u_1, \dots, u_k \right \} $ je množina vektorů vektorového prostoru $V$. Množina $S$ je
+    Nechť $S= \left \{ \vec u_1, \dots, \vec u_k \right \} $ je množina vektorů vektorového prostoru $V$. Množina $S$ je
    	\begin{enumerate}[$i.$]
     \item \textbf{lineární nezávislá}, jestliže
     $$p_1\vec u_1 + p_2\vec u_2 + \dots + p_k\vec u_k = \vec o \iff p_1 = p_2 = \dots = p_k = 0;$$
@@ -182,7 +181,7 @@ Vlastně řešíme rovnici $p\vec a + q\vec b + r\vec c= \vec o.$ Existuje-li ne
 
 \begin{definition}
     Nechť je dán vektorový prostor $V$. Pak množina $\left<  W \right>,$ kde $
-    W\subseteq V$, se nazývá \textbf{podprostor} prostoru $V$ \textbf{generovaný}
+    W \subseteq V$, se nazývá \textbf{podprostor} prostoru $V$ \textbf{generovaný}
     množinou $W$ a prvky množiny $W$ \textbf{generátory} tohoto podprostoru.
 \end{definition}
 
@@ -277,8 +276,7 @@ Vlastně řešíme rovnici $\vec x= x_1\vec e_1 + x_2\vec e_2 + x_3\vec e_3 + x_
 
 \begin{definition}
     Nechť je dán bod $P\in \mathbb E_3$ a báze $(\vec e_1, \vec e_2, \vec e_3)$ vektorového
-    prostoru volných vektorů $\mathscr V_n$ taková, že platí:\\
-    Jsou-li $X,Y,Z\in \mathbb E_3$ takové body, že
+    prostoru volných vektorů $\mathscr V_n$ taková, že existují body $X,Y,Z\in \mathbb E_3$ takové, že
     $\overrightarrow{PX}\in\vec e_1,\overrightarrow{PY}\in\vec e_2,
     \overrightarrow{PZ}\in\vec e_3$, souřadné osy $\overrightarrow{PX},\overrightarrow{PY},
     \overrightarrow{PZ}$ jsou navzájem kolmé (tedy báze je ortogonální) a jejich velikost je jedna (tedy báze je navíc ortonormální),
