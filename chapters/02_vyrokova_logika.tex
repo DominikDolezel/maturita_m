@@ -10,27 +10,26 @@
 \begin{pozn}
   \textbf{Kvantifikované výroky} jsou výroky, které uvádějí počet objektů. Pro to lze použít
   \begin{itemize}
-    \item obecný kvantifikátor $\forall$ (pro všechny / pro každý platí),
-    \item existenční kvantifikátor $\exists$ (existuje alespoň jeden, že pro něj platí),
-    \item zesílený existenční kvantifikátor $\exists !$ (existuje právě jeden, že pro něj platí).
+    \item \textbf{obecný kvantifikátor} $\forall$ (pro všechny / pro každý platí),
+    \item \textbf{existenční kvantifikátor} $\exists$ (existuje alespoň jeden, že pro něj platí),
+    \item \textbf{zesílený existenční kvantifikátor} $\exists !$ (existuje právě jeden, že pro něj platí).
   \end{itemize}
 \end{pozn}
 
 \begin{definition}
-  \textbf{Složeným výrokem} rozumíme více výroků spojených logickými spojkami:
-  \begin{center}
-    \begin{tabular}{l | c c}
-      název & zápis & význam \\
-      \hline
-      negace & $X^\prime$ & není pravda, že $X$ \\
-      konjunkce & $X\land Y$ & $X$ a $Y$ platí současně \\
-      alternativa & $X\lor Y$ & platí alespoň jedno z $X,Y$\\
-      implikace & $X\implies Y$ & jestliže $X$, pak $Y$\\
-      ekvivalence & $X\iff Y$ & $X$ platí právě tehdy, když platí $Y$
-    \end{tabular}
-  \end{center}
-\end{definition}
+  \textbf{Složeným výrokem} rozumíme více výroků spojených logickými spojkami. Základními logickými spojkami jsou
+  \begin{itemize}
+	\item \textbf{negace} $X^\prime$ (není pravda, že $X$),
+	\item \textbf{konjunkce} $X \land Y$ ($X$ a $Y$ platí současně),
+	\item \textbf{alternativa} $X \lor Y$ (platí alespoň jedno z $X, Y$),
+	\item \textbf{implikace} $X \implies Y$ (jestliže $X$, pak $Y$),
+	\item \textbf{ekvivalence} $X \iff Y$ ($X$ právě tehdy, když $Y$).
+  \end{itemize}
+  \end{definition}
 
+  \begin{definition}
+    Zápisy sestavené ze značek, výrokových proměnných, závorek a logických spojek nazýváme \textbf{výrokové formule}.
+  \end{definition}
 
 \begin{pozn}
   Pravdivostní hodnoty výrokových formulí s logickou spojkou:
@@ -45,10 +44,6 @@
     \end{tabular}
   \end{center}
 \end{pozn}
-
-\begin{definition}
-  Zápisy sestavené ze značek, výrokových proměnných, závorek a logických spojek nazýváme \textbf{výrokové formule}.
-\end{definition}
 
 \begin{definition}
   Výroková formule, která je pravdivá bez ohledu na pravdivostní hodnoty elementárních výroků, se nazývá \textbf{tautologie}.
@@ -99,11 +94,11 @@ Napíšeme tabulku:
 \end{definition}
 
 \begin{veta}
-  Implikace a její obměna mají touž pravdivostní hodnotu.
+  Implikace a její obměna mají tutéž pravdivostní hodnotu.
 \end{veta}
 
 \begin{pozn}
-  Implikace a její obrácení nemusí vždy mít touž pravdivostní hodnotu.
+  Implikace a její obrácení nemusí vždy mít tutéž pravdivostní hodnotu.
 \end{pozn}
 
 \begin{definition}
