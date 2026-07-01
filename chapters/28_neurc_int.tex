@@ -2,14 +2,13 @@
 \begin{definition}\label{integral}
 Nechť $f(x)$ je definována na intervalu $I$. Funkce $F(x)$ se nazývá \textbf{primitivní}
 k funkci $f(x)$ na $I$, jestliže platí $F^\prime(x)=f(x)$ pro každé $x\in I.$
-Množina všech primitivních funkcí k funkci $f(x)$ na $I$ se nazývá \textbf{neurčitý
-integrál} z funkce $f(x)$ a značí se $\int f(x)\, \d x.$ Tedy
-$$\int f(x)\, \d x= \left \{ F(x); F(x) \textrm{ je primitivní k } f(x) \textrm{ na } I \right \}. $$
+Množina všech primitivních funkcí k funkci $f(x)$ na $I$ se nazývá \textbf{neurčitý integrál} funkce $f(x)$ a značí se $\int f(x)\, \d x$.
+$$\int f(x)\, \d x= \left \{ F(x); F^\prime(x) = f(x), \forall x \in I\right \}. $$
 \end{definition}
 
 \begin{veta}
     Je-li $F(x)$ primitivní funkce k $f(x)$ na intervalu $I$, je také
-    $F(x)+c$ primitivní funkce k $f(x)$ na $I$. Má-li funkce $f(x)$ aspoň
+    $F(x)+c$ primitivní funkce k $f(x)$ na $I$. Má-li funkce $f(x)$ alespoň
     jednu primitivní funkci, má jich nekonečně mnoho.
 \end{veta}
 
@@ -323,7 +322,7 @@ odvodíme ze vztahů v pravoúhlém trojúhelníku.
 
 \begin{pozn}
     Integrály $\int \sin^2 x \, \d x, \int \cos^2 x \, \d x$ neřešíme substitucí
-    $\tg x  = t,$ nýbrž ze vzorce pro poloviční argument:
+    $\tg x  = t,$ nýbrž pomocí vzorců pro poloviční argument, tedy
     \begin{align*}
         \int \sin^2 x \, \d x &= \int \frac{1-\cos 2x}{2}\, \d x = \frac{1}{2}x - \frac{1}{4} \sin 2x + c, \\
         \int \cos^2 x \, \d x &= \int \frac{1+\cos 2x}{2}\, \d x = \frac{1}{2}x + \frac{1}{4} \sin 2x + c.
@@ -347,8 +346,8 @@ Vyjádříme si ze vzorce pro dvojnásobný argument.
 
 \begin{veta}
     Integrály tvaru
-    $$\int S(x, \sqrt[s_1]{x}, \dots, \sqrt[s_k]{x}  ) \, \d x ,\quad \textrm{kde } k \in \mathbb N, s_i \geq 2$$
-    řešíme substitucí $x=t^s,$ kde $s$ je nejmenší společný násobek $s_1,\dots, s_k.$
+    $$\int S(x, \sqrt[s_1]{x}, \dots, \sqrt[s_k]{x}  ) \, \d x ,$$
+    kde $k \in \mathbb N, s_i \geq 2$, řešíme substitucí $x=t^s,$ kde $s$ je nejmenší společný násobek $s_1,\dots, s_k$.
 \end{veta}
 
 \begin{veta}
