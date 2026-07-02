@@ -63,8 +63,8 @@ Platí
 \item $(\sin x)^\prime = \cos x, x \in \mathbb R$;
 \item $(\cos x) ^\prime = -\sin x, x \in \mathbb R$;
 \item $(e^x)^\prime = e^x,x \in \mathbb R$;
-\item $(\tg x)^\prime = \frac{1}{\cos^2 x}, x \in \mathbb R \smallsetminus \left \{ \frac{\pi}{2}+k\pi; k\in \mathbb Z \right \}$;
-\item $(\cotg x)^\prime = -\frac{1}{\sin^2 x}, x \in \mathbb R \smallsetminus \left \{ k\pi; k \in \mathbb Z \right \}$;
+\item $(\tg x)^\prime = \frac{1}{\cos^2 x}, x \in \mathbb R \smallsetminus \bigcup\limits_{k\in \mathbb Z}\left \{ \frac{\pi}{2}+k\pi \right \}$;
+\item $(\cotg x)^\prime = -\frac{1}{\sin^2 x}, x \in \mathbb R \smallsetminus \bigcup\limits_{k \in \mathbb Z}\left \{ k\pi \right \}$;
 \item $(\ln x)^\prime = \frac{1}{x}, x \in \mathbb R^+$;
 \item $(\arcsin x)^\prime = \frac{1}{\sqrt{1-x^2}}, x \in(-1,1)$;
 \item $(\arccos x)^\prime=-\frac{1}{\sqrt{1-x^2} }, x \in (-1,1)$;
@@ -177,7 +177,7 @@ ke grafu funkce} $f$ v bodě $T.$
 
 \begin{veta}[Derivace funkce dané implicitně]\label{implfce}
 Nechť máme funkci danou implicitně rovnicí $F(x,y)=0$. Pak
-$$F^\prime (x,y)=\frac{\partial F(x,y)}{\partial x} + \frac{\partial F(x,y)}{\partial y}\cdot y^\prime.$$
+$$F^\prime (x,y)=\frac{\partial F}{\partial x}(x, y) + \frac{\partial F}{\partial y}(x, y)\cdot y^\prime.$$
 \end{veta}
 
 \begin{pozn}
@@ -199,8 +199,12 @@ derivace $y=f^\prime(x)\cdot (f(x))^\prime$ (např. $\left ( y^2 \right )^\prime
 \end{reseni}
 
 \begin{veta}[Cauchyho--Bolzanova věta]
-Nechť je funkce $f$ spojitá na uzavřeném intervalu $\left<  a,b \right> $ a platí
-$f(a)\cdot f(b)<0.$ Pak existuje alespoň jedno číslo $x_0\in (a,b)$ takové, že $f(x_0)=0.$
+Nechť funkce $f$ má následující vlastnosti:
+\begin{enumerate}[i.]
+\item je spojitá na uzavřeném intervalu $\left<  a,b \right> $,
+\item platí $f(a)\cdot f(b)<0$.
+\end{enumerate}
+Pak existuje alespoň jedno číslo $x_0\in (a,b)$ takové, že $f(x_0)=0$.
 \end{veta}
 
 \begin{priklad}

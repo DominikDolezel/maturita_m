@@ -16,10 +16,9 @@
     Nechť $A,B$ jsou jevy.
     \begin{enumerate}[$i.$]
     \item Řekneme, že \textbf{jev $A$ má za důsledek jev $B$} a zapisujeme
-    $A \subseteq B$ nebo $A \implies B$ právě tehdy, když jev $B$ nastane vždy, když
+    $A \subseteq B$ nebo $A \implies B$, pokud jev $B$ nastane vždy, když
     nastane jev $A.$
-   	\item Řekneme, že jevy $A$ a $B$ \textbf{jsou si rovny} a zapisujeme $A=B$ právě
-    tehdy, když $A\subseteq B \land B\subseteq A$, tedy $B$ nastane právě tehdy,
+   	\item Řekneme, že jevy $A$ a $B$ \textbf{jsou si rovny} a zapisujeme $A=B$, pokud $A\subseteq B \land B\subseteq A$, tedy $B$ nastane právě tehdy,
     když nastane $A.$
    	\item Jev, který nastane při každé realizaci pokusu nazveme jevem \textbf{jistým}
     a označíme $\Omega.$ Jev, který nemůže nikdy nastat nazveme jevem \textbf{nemožným}
@@ -29,8 +28,7 @@
 
 \begin{definition}
     Nechť $A_1, A_2, \dots, A_n$ jsou jevy. Pak \textbf{sjednocením} (resp. \textbf{průnikem})
-    jevů $A_1, A_2, \dots, A_n$ rozumíme takový jev $A$, který nastane
-    právě tehdy, když nastane alespoň jeden (resp. všechny z) jevů $A_1, A_2,
+    jevů $A_1, A_2, \dots, A_n$ rozumíme takový jev $A$, který nastane, pokud nastane alespoň jeden (resp. všechny z) jevů $A_1, A_2,
     \dots, A_n$.
 \end{definition}
 
@@ -123,7 +121,7 @@ $$P(A\mid B)=\frac{P(A\cap B)}{P(B)}=\frac{\frac{2}{36}}{\frac{6}{36}}=\frac{1}{
 
 \begin{veta}[Formule úplné pravděpodobnosti]
     Nechť $A,B_i \subseteq \Omega, i \in \left \{ 1, 2, \dots, n \right \} $ jsou jevy
-    takové, že $A \subseteq \bigcup_{i=1}^n B_i$ a pro všechna $i\ne j$ platí $B_i\cap B_j=
+    takové, že $A \subseteq \bigcup\limits_{i=1}^n B_i$ a pro všechna $i\ne j$ platí $B_i\cap B_j=
     \emptyset.$ Pak $P(A)=P(B_1)\cdot P(A\mid B_1) + P(B_2)\cdot P(A \mid B_2)+
     \dots + P(B_n)\cdot P(A \mid B_n)=\sum_{i=1}^n P(B_i)\cdot P(A\mid B_i).$
 \end{veta}
@@ -148,7 +146,7 @@ $$P(X)=P(A)\cdot P(X \, | A)+P(B)\cdot P(X\mid B)=\frac{7}{15}.$$
 
 \begin{veta}[Bayesův vzorec]
     Nechť $A,B_i \subseteq \Omega, i \in \left \{ 1, 2, \dots, n \right \} $ jsou
-    takové jevy, že $A \subseteq \bigcup_{i=1} B_i$ pro všechny $i,j, i\ne j\colon B_i\cap B_j=
+    takové jevy, že $A \subseteq \bigcup\limits_{i=1} B_i$ pro všechny $i,j, i\ne j\colon B_i\cap B_j=
     \emptyset.$ Nechť existuje $i \in \left \{ 1, 2, \dots, n \right \}$ takové, že $P(B_i) >0.$
     Pak pro všechna $k\in \left \{ 1, 2, \dots, n \right \}$ platí
     $$P(B_k \mid A)=\frac{P(B_k)\cdot P(A\mid B_k)}{\sum_{i=1}^n P(B_i)\cdot
@@ -164,8 +162,8 @@ pravděpodobnost toho, že to bude dívka.
 \begin{reseni}
 Platí
 \begin{align*}
-P(D)=0,6 & & P(H)=0,4 \\
-P(M \mid D)=0,1 & & P(M \mid H)=0,25.
+P(D)=0{,}6 & & P(H)=0{,}4 \\
+P(M \mid D)=0{,}1 & & P(M \mid H)=0{,}25.
 \end{align*}
 Hledáme $P(D \mid M).$ Počítejme
 \begin{align*}

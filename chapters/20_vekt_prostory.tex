@@ -9,21 +9,20 @@
 \begin{definition}
     Na množině $\mathscr U$ všech orientovaných úseček s pevným počátečním bodem
     $P\in \mathbb E_3$
-    definujeme operaci sčítání takto:
+    definujeme operaci \textbf{sčítání orientovaných úseček} takto:
     $$\forall \overrightarrow{PX}, \overrightarrow{PY} \in \mathscr U\colon
         \overrightarrow{PX} +  \overrightarrow{PY} = \overrightarrow{PQ},$$
-    je-li bod $Q\in \mathbb E_3$
-    vrcholem zobecněného rovnoběžníku $PXQY$.
+    kde bod $Q\in \mathbb E_3$
+    je vrcholem zobecněného rovnoběžníku $PXQY$.
 \end{definition}
 
 \begin{definition}
     Na množině $\mathscr U$ všech orientovaných úseček s pevným počátečním bodem
     $P\in \mathbb E_3$
     definujeme operaci \textbf{násobení orientovaných úseček reálným číslem}
-    (tzv. vnější násobení) takto: je-li $p\in \mathbb R$ a $\overrightarrow{PX}\in \mathscr U$,
-    pak $p$-násobkem orientované
-    úsečky $\overrightarrow{PX}$ nazveme orientovanou úsečku $\overrightarrow{PY}$
-    (a zapisujeme $\overrightarrow{PY}=p \cdot \overrightarrow{PX}$), přičemž platí
+    (tzv. vnější násobení) takto:
+    $$\forall p\in \mathbb R, \forall \overrightarrow{PX}\in \mathscr U\colon p\cdot \overrightarrow{PX} = \overrightarrow{PY},$$
+     přičemž platí
     \begin{enumerate}[$i.$]
     \item $p=0 \implies Y=P,$
    	\item $p\ne 0 \implies Y = \mathscr H_{P,p}(X).$
@@ -62,15 +61,14 @@
 \end{definition}
 
 \begin{pozn}
-    Výčet prvních čtyř podmínek z definice \ref{vekt_prost} lze zjednodušit jako:
-    $(V,\bigoplus)$ je komutativní grupa.
+    Výčet prvních čtyř podmínek z definice \ref{vekt_prost} jinými slovy znamená, že $(V,\bigoplus)$ je komutativní grupa.
 \end{pozn}
 
 \begin{pozn}
-    Místo znaků $\bigoplus$ (resp. $\bigotimes$) píšeme znaky $+$ (resp. $\cdot$).
+    Místo znaků $\bigoplus$ (resp. $\bigotimes$) píšeme znaky $+$ (resp. $\cdot \,$).
     Byly použity, aby bylo jednoznačně odlišeno sčítání vektorů a čísel (resp. násobení
     vektorů skalárem a násobení čísel). Z kontextu je však jasně zřejmé, kterou operaci
-    použít. V dalším textu budeme již používat znaky $+$ (resp $\cdot$).
+    použít. V dalším textu budeme již používat znaky $+$ (resp $\cdot \,$).
 \end{pozn}
 
 \begin{pozn}
@@ -110,7 +108,7 @@
     operace sčítání a vnější násobení takto:
     \begin{enumerate}[$i.$]
     \item $\forall \vec u, \vec v \in V\colon \vec u + \vec v = \vec w,$ kde $\vec w = \left \{ \overrightarrow{XY}; \overrightarrow{XY} \ekvipol \overrightarrow{PC} \right \} $, kde $\overrightarrow{PA}\in\vec u, \overrightarrow{PB}\in \vec v$ a $\overrightarrow{PC}=\overrightarrow{PA}+\overrightarrow{PB}$ je součet orientovaných úseček $\overrightarrow{PA},\overrightarrow{PB}$,
-   	\item $\forall p \in \mathbb R, \forall \vec u \in V\colon p\cdot \vec u = \vec z, \vec z = \left \{ \overrightarrow{XY}; \overrightarrow{XY} \ekvipol \overrightarrow{PC} \right \} $, přitom $\overrightarrow{PE}\in \vec u$ a $\overrightarrow{PF} = p\cdot \overrightarrow{PE}$ je vnější součin orientované úsečky $\overrightarrow{PE}$ a čísla $p$ (tj. pomocí stejnolehlosti).
+   	\item $\forall p \in \mathbb R, \forall \vec u \in V\colon p\cdot \vec u = \vec z, \vec z = \left \{ \overrightarrow{XY}; \overrightarrow{XY} \ekvipol \overrightarrow{PC} \right \} $, přitom $\overrightarrow{PE}\in \vec u$ a $\overrightarrow{PF} = p\cdot \overrightarrow{PE}$ je vnější součin čísla $p$ a orientované úsečky $\overrightarrow{PE}$ (tj. pomocí stejnolehlosti).
     \end{enumerate}
 \end{definition}
 
