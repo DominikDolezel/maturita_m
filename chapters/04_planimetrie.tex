@@ -1,9 +1,9 @@
 \section{Planimetrie}
 
 \begin{pozn}
-  \textbf{Bod}, \textbf{přímka} a \textbf{rovina} jsou tzv. primitivními pojmy (základní), které nedefinujeme a vyslovujeme o nich nedokazatelná tvrzení (axiomy),
-  které považujeme za platné. Budeme pracovat v rovině $\mathbb E_2$ (\textbf{eukleidovský prostor dimenze 2}),
-  což je základní množina, jejíž prvky jsou body. \textbf{Množinu všech přímek} značíme $\mathscr P$.
+  \textbf{Bod}, \textbf{přímka} a \textbf{rovina} jsou tzv. primitivními pojmy, které nedefinujeme a vyslovujeme o nich nedokazatelná tvrzení (axiomy),
+  které považujeme za platné. Budeme pracovat v~tzv. Euklidovském prostoru dimenze 2, značíme $\mathbb E_2$,
+  což je množina všech bodů v rovině. \textbf{Množinu všech přímek} v této rovině značíme $\mathscr P$.
   V planimetrii dále pracujeme se základními vztahy (relacemi):
   \begin{itemize}
     \item \uv{ležet na} -- \textbf{relace incidence}: bod leží na přímce, zapisujeme $A \in p$,
@@ -13,22 +13,18 @@
 
 \begin{axiom}
   Každými dvěma různými body prochází právě jedna přímka.
-  $$\forall A, B \in \mathbb E_2, A\neq B\; \exists! p \in \mathscr P\colon A \in p \land B \in p.$$
 \end{axiom}
 
 \begin{axiom}
   Na každé přímce leží alespoň dva různé body.
-  $$\forall p \in \mathscr P\;\exists A,B \in \mathbb E_2\colon A\neq B \land A \in p \land B \in p.$$
 \end{axiom}
 
 \begin{axiom}
   Existují alespoň tři po dvou různé body, které neleží na jedné přímce.
-  $$\exists A,B,C \in \mathbb E_2, A \neq B, B\neq C, C\neq A\; \forall p \in \mathscr P\colon A \notin p \lor B \notin p \lor C \notin p.$$
 \end{axiom}
 
 \begin{axiom}[Eukleidův axiom rovnoběžnosti]\label{eukl_ax}
   Každým bodem, který neleží na dané přímce, prochází právě jedna přímka, která s danou přímkou nemá žádný společný bod.
-  $$\forall A \in \mathbb E_2\; \forall p \in \mathscr P\colon A \notin p \implies \exists! q \in \mathscr P\colon A \in q \land p \cap q = \emptyset.$$
 \end{axiom}
 
 \begin{definition}
@@ -36,33 +32,27 @@
 \end{definition}
 
 \begin{axiom}
-  Pro každé tři body platí, že pokud jeden leží mezi druhými dvěma, tyto tři body jsou kolineární.
-  $$\forall A, B, C \in \mathbb E_2\colon C \mezi AB \implies A, B, C \text{ jsou tři různé kolineární body.}$$
+  Pro každé tři body $A,B,C \in \mathbb E_2$ platí, že pokud bod $B$ leží mezi body $A$ a $C$, pak jsou body $A,B,C$ kolineární.
 \end{axiom}
 
 \begin{axiom}
-  Pro každé dva různé body $A,B$ existuje bod $C$ takový, že bod $B$ leží mezi body $A$ a $C$.
-  $$\forall A, B \in \mathbb E_2, A \neq B\; \exists C \in \mathbb E_2\colon B \mezi AC.$$
+  Pro každé dva různé body $A,B \in \mathbb E_2$ existuje bod $C$ takový, že bod $B$ leží mezi body $A$ a $C$.
 \end{axiom}
 
 \begin{axiom}
-Pro každé dva různé body $A,B$ existuje bod $C$ takový, že bod $C$ leží mezi body $A$ a $B$.
-  $$\forall A, B \in \mathbb E_2, A \neq B\; \exists D \in \mathbb E_2\colon D \mezi AB.$$
+Pro každé dva různé body $A,B\in \mathbb E_2$ existuje bod $C$ takový, že bod $C$ leží mezi body $A$ a $B$.
 \end{axiom}
 
 \begin{axiom}
   Ze tří po dvou různých kolineárních bodů právě jeden leží mezi dvěma ostatními.
-  $$\forall A, B, C \in p \in \mathscr P \text{ kolineární}, A \neq B, B\neq C, C\neq A\colon A \nemezi BC \land B \nemezi AC \implies C \mezi AB.$$
 \end{axiom}
 
 \begin{axiom}
-  Pro každé čtyři různé body $A,B,C,D$ platí, že pokud bod $B$ leží mezi body $A$ a $C$ a bod $C$ leží mezi body $B$ a $D$, pak bod $B$ leží mezi body $A$ a $D$.
-  $$\forall A, B, C, D \in \mathbb E_2, B \mezi AC \land C\mezi BD \implies B \mezi AD.$$
+  Pro každé čtyři různé body $A,B,C,D\in \mathbb E_2$ platí, že pokud bod $B$ leží mezi body $A$ a $C$ a bod $C$ leží mezi body $B$ a $D$, pak bod $B$ leží mezi body $A$ a $D$.
 \end{axiom}
 
 \begin{axiom}
-  Pro každé čtyři různé body $A,B,C,D$ platí, že pokud bod $B$ leží mezi body $A$ a $D$ a bod $C$ leží mezi body $B$ a $D$, pak bod $C$ leží mezi body $A$ a $D$.
-  $$\forall A, B, C, D \in \mathbb E_2, B \mezi AC \land C\mezi BD \implies B \mezi AD.$$
+  Pro každé čtyři různé body $A,B,C,D\in \mathbb E_2$ platí, že pokud bod $B$ leží mezi body $A$ a $D$ a bod $C$ leží mezi body $B$ a $D$, pak bod $C$ leží mezi body $A$ a $D$.
 \end{axiom}
 
 \begin{definition}
@@ -87,22 +77,23 @@ Pro každé dva různé body $A,B$ existuje bod $C$ takový, že bod $C$ leží 
 \end{definition}
 
 \begin{definition}
-  Nechť body $A,B\in \mathbb E_2, A\ne B$. Průnik uzavřených polopřímek $\overrightarrow{AB}$ a $\overrightarrow{BA}$ nazveme \textbf{úsečkou} $AB$.
+  Nechť $A,B\in \mathbb E_2$, $A\ne B$ jsou body. Průnik uzavřených polopřímek $\overrightarrow{AB}$ a $\overrightarrow{BA}$ nazveme \textbf{úsečkou} $AB$.
   Body $A,B$ se nazývají \textbf{krajní body úsečky} $AB$, jakýkoliv bod $X \mezi AB$ se nazývá \textbf{vnitřní bod} úsečky $AB$.
 \end{definition}
 
 \begin{definition}
-Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a$ \textbf{odděluje body} $A,B$, zapisujeme $a \oddeluje AB$, pokud $a \cap AB \neq \emptyset$. V opčaném případě \textbf{přímka} $a$ \textbf{neodděluje body} $A,B$. Zapisujeme $a \neoddeluje AB.$
+Nechť $a\in \mathscr P$, $A\notin a$, $B\notin a$, $A\ne B$. Pak \textbf{přímka} $a$ \textbf{odděluje body} $A,B$, zapisujeme $a \oddeluje AB$, pokud $a \cap AB \neq \emptyset$. V opačném případě \textbf{přímka} $a$ \textbf{neodděluje body} $A,B$. Zapisujeme $a \neoddeluje AB.$
 \end{definition}
 
 \begin{definition}
-  Nechť $a \in \mathscr P$. Pak všechny $X\in \mathbb E_2 \smallsetminus a$ lze rozdělit do dvou podmnožin $P(a), Q(a)$ tak, že
+  Nechť $a \in \mathscr P$. Pak všechny body $X\in \mathbb E_2 \smallsetminus a$ lze rozdělit do dvou
+  podmnožin $P(a)$, $Q(a)$ tak, že
   \begin{enumerate}[$i.$]
-    \item přímka $a$ odděluje každé dva body z různých podmnožin:
+    \item přímka $a$ odděluje každé dva body z různých podmnožin, tj.
       \[
         \forall X \in P(a), \forall Y \in Q(a)\colon a \oddeluje XY,
       \]
-    \item přímka $a$ neodděluje žádné dva body z jedné podmnožiny:
+    \item přímka $a$ neodděluje žádné dva body z jedné podmnožiny, tj.
       \[
         \forall X, Y \in P(a) \land \forall X,Y \in Q(a)\colon a \neoddeluje XY.
       \]
@@ -268,9 +259,143 @@ Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a
     \item \textbf{střídavé}, jestliže jejich první ramena leží na jedné přímce a druhá ramena jsou rovnoběžná, přitom směr příslušných ramen je opačný,
     \item \textbf{přilehlé}, jestliže jejich první ramena leží na jedné přímce a jdou do opačných směrů a~druhá ramena jsou rovnoběžná.
   \end{itemize}
+  \definecolor{myblue}{HTML}{153243}
+  \definecolor{myred}{HTML}{C1121F}
   \begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.5\linewidth]{dvojice_uhlu.png}
+  \centering
+  \begin{tikzpicture}[x=1cm, y=1cm, scale=0.8, transform shape]
+
+    % Styl pro nadpisy a rovnice
+    \tikzset{
+      title/.style={
+        font=\boldmath\bfseries\Large,
+        anchor=center,          % Zarovnání názvu na střed
+        text=myblue,
+        inner sep=0pt
+      },
+      eq/.style={
+        font=\boldmath\bfseries\LARGE,
+        text=myblue,
+        inner sep=0pt
+      }
+    }
+
+    % =========================================================================
+    % HORNÍ ŘÁDEK
+    % =========================================================================
+
+    % 1. VRCHOLOVÉ
+    \begin{scope}[shift={(0,0)}]
+      \node[title] at (2.5, 3.9) {vrcholové};
+      \draw[gray, thick] (0.5, 0.4) -- (4.5, 2.0);
+      \draw[gray, thick] (0.5, 2.0) -- (4.5, 0.4);
+      % Oblouky
+      \draw[myblue, very thick] (2.5, 1.2) ++(-21.8:0.8) arc (-21.8:21.8:0.8);
+      \draw[myblue, very thick] (2.5, 1.2) ++(158.2:0.8) arc (158.2:201.8:0.8);
+      % Popisky (posunuty dál od čar a oblouků)
+      \node[myblue, font=\LARGE] at (2.5, 1.2) [shift={(0:1.3)}] {$\alpha$};
+      \node[myblue, font=\LARGE] at (2.5, 1.2) [shift={(180:1.3)}] {$\beta$};
+      % Rovnice
+      \node[eq] at (2.5, -0.6) {$\alpha = \beta$};
+    \end{scope}
+
+    % 2. DOPLŇKOVÉ
+    \begin{scope}[shift={(6,0)}]
+      \node[title] at (2.5, 3.9) {doplňkové};
+      \draw[gray, thick] (1.0, 0.5) -- (4.0, 0.5);
+      \draw[gray, thick] (1.0, 0.5) -- (1.0, 3.5);
+      \draw[gray, thick] (1.0, 0.5) -- (3.5, 3.0);
+      % Značka pravého úhlu
+      \draw[gray, thin] (1.3, 0.5) -- (1.3, 0.8) -- (1.0, 0.8);
+      \fill[gray] (1.15, 0.65) circle (1.5pt);
+      % Oblouky
+      \draw[myblue, very thick] (1.0, 0.5) ++(0:1.2) arc (0:45:1.2);
+      \draw[myred, very thick] (1.0, 0.5) ++(45:1.2) arc (45:90:1.2);
+      % Popisky (posunuty dál od čar a oblouků)
+      \node[myblue, font=\LARGE] at (1.0, 0.5) [shift={(22.5:1.8)}] {$\alpha$};
+      \node[myred, font=\LARGE] at (1.0, 0.5) [shift={(67.5:1.8)}] {$\beta$};
+      % Rovnice
+      \node[eq] at (2.5, -0.6) {$\alpha + \beta = 90^\circ$};
+    \end{scope}
+
+    % 3. VEDLEJŠÍ
+    \begin{scope}[shift={(12,0)}]
+      \node[title] at (2.5, 3.9) {vedlejší};
+      \draw[gray, thick] (0.5, 0.5) -- (4.5, 0.5);
+      \draw[gray, thick] (2.5, 0.5) -- (3.5, 3.0);
+      % Oblouky
+      \draw[myblue, very thick] (2.5, 0.5) ++(0:1.0) arc (0:68.2:1.0);
+      \draw[myred, very thick] (2.5, 0.5) ++(68.2:1.0) arc (68.2:180:1.0);
+      % Popisky (posunuty dál od čar a oblouků)
+      \node[myblue, font=\LARGE] at (2.5, 0.5) [shift={(34.1:1.6)}] {$\alpha$};
+      \node[myred, font=\LARGE] at (2.5, 0.5) [shift={(124.1:1.6)}] {$\beta$};
+      % Rovnice
+      \node[eq] at (2.5, -0.6) {$\alpha + \beta = 180^\circ$};
+    \end{scope}
+
+
+    % =========================================================================
+    % SPODNÍ ŘÁDEK
+    % =========================================================================
+
+    % 4. SOUHLASNÉ
+    \begin{scope}[shift={(0,-6.5)}]
+      \node[title] at (2.5, 3.9) {souhlasné};
+      \draw[gray, thick] (0.5, 0.5) -- (4.5, 0.5);
+      \draw[gray, thick] (0.5, 2.5) -- (4.5, 2.5);
+      \draw[gray, thick] (1.5, -0.5) -- (3.5, 3.5);
+      % Značky rovnoběžek (||)
+      \draw[gray, thick] (0.92, 0.35) -- (0.92, 0.65); \draw[gray, thick] (1.08, 0.35) -- (1.08, 0.65);
+      \draw[gray, thick] (0.92, 2.35) -- (0.92, 2.65); \draw[gray, thick] (1.08, 2.35) -- (1.08, 2.65);
+      % Oblouky
+      \draw[myblue, very thick] (2.0, 0.5) ++(0:0.9) arc (0:63.4:0.9);
+      \draw[myblue, very thick] (3.0, 2.5) ++(0:0.9) arc (0:63.4:0.9);
+      % Popisky (posunuty dál od čar a oblouků)
+      \node[myblue, font=\LARGE] at (2.0, 0.5) [shift={(31.7:1.5)}] {$\alpha$};
+      \node[myblue, font=\LARGE] at (3.0, 2.5) [shift={(31.7:1.5)}] {$\beta$};
+      % Rovnice
+      \node[eq] at (2.5, -1.3) {$\alpha = \beta$};
+    \end{scope}
+
+    % 5. STŘÍDAVÉ
+    \begin{scope}[shift={(6,-6.5)}]
+      \node[title] at (2.5, 3.9) {střídavé};
+      \draw[gray, thick] (0.5, 0.5) -- (4.5, 0.5);
+      \draw[gray, thick] (0.5, 2.5) -- (4.5, 2.5);
+      \draw[gray, thick] (1.5, -0.5) -- (3.5, 3.5);
+      % Značky rovnoběžek (||)
+      \draw[gray, thick] (0.92, 0.35) -- (0.92, 0.65); \draw[gray, thick] (1.08, 0.35) -- (1.08, 0.65);
+      \draw[gray, thick] (0.92, 2.35) -- (0.92, 2.65); \draw[gray, thick] (1.08, 2.35) -- (1.08, 2.65);
+      % Oblouky
+      \draw[myblue, very thick] (2.0, 0.5) ++(0:0.9) arc (0:63.4:0.9);
+      \draw[myblue, very thick] (3.0, 2.5) ++(180:0.9) arc (180:243.4:0.9);
+      % Popisky (posunuty dál od čar a oblouků)
+      \node[myblue, font=\LARGE] at (2.0, 0.5) [shift={(31.7:1.5)}] {$\alpha$};
+      \node[myblue, font=\LARGE] at (3.0, 2.5) [shift={(211.7:1.5)}] {$\beta$};
+      % Rovnice
+      \node[eq] at (2.5, -1.3) {$\alpha = \beta$};
+    \end{scope}
+
+    % 6. PŘILEHLÉ
+    \begin{scope}[shift={(12,-6.5)}]
+      \node[title] at (2.5, 3.9) {přilehlé};
+      \draw[gray, thick] (0.5, 0.5) -- (4.5, 0.5);
+      \draw[gray, thick] (0.5, 2.5) -- (4.5, 2.5);
+      \draw[gray, thick] (1.5, -0.5) -- (3.5, 3.5);
+      % Značky rovnoběžek (||)
+      \draw[gray, thick] (0.92, 0.35) -- (0.92, 0.65); \draw[gray, thick] (1.08, 0.35) -- (1.08, 0.65);
+      \draw[gray, thick] (0.92, 2.35) -- (0.92, 2.65); \draw[gray, thick] (1.08, 2.35) -- (1.08, 2.65);
+      % Oblouky
+      \draw[myblue, very thick] (2.0, 0.5) ++(0:0.9) arc (0:63.4:0.9);
+      \draw[myred, very thick] (3.0, 2.5) ++(243.4:0.9) arc (243.4:360:0.9);
+      % Popisky (posunuty dál od čar a oblouků)
+      \node[myblue, font=\LARGE] at (2.0, 0.5) [shift={(31.7:1.5)}] {$\alpha$};
+      \node[myred, font=\LARGE] at (3.0, 2.5) [shift={(301.7:1.5)}] {$\beta$};
+      % Rovnice
+      \node[eq] at (2.5, -1.3) {$\alpha + \beta = 180^\circ$};
+    \end{scope}
+
+  \end{tikzpicture}
     \caption{Dvojice úhlů}
   \end{figure}
 \end{definition}
@@ -285,10 +410,61 @@ Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a
   nazýváme úhly $\sphericalangle CAB$ (resp. $\sphericalangle ABC$, resp. $ \sphericalangle BCA$), \textbf{vnějším úhlem}
   $\triangle ABC$ při vrcholu $A$ (resp. $B$, resp. $C$) pak vedlejší úhel k úhlu $\sphericalangle CAB$ (resp. $\sphericalangle ABC$, resp. $\sphericalangle BCA$).
   \begin{figure}[ht!]
+  % Definice jasných barev pro úhly
+  \definecolor{innerred}{HTML}{D90429}  % Výrazná červená pro vnitřní úhly
+  \definecolor{outerblue}{HTML}{0077B6} % Výrazná modrá pro vnější úhly
     \centering
-    \includegraphics[width=0.3\textwidth]{trojuhelnik_uhly}
-    \caption{Trojúhelník s vnitřními ($\alpha$, $\beta$, $\gamma$) a
-    vnějšími ($\alpha^\prime$, $\beta ^\prime$, $\gamma^\prime$) úhly}
+    \begin{tikzpicture}[x=1cm, y=1cm, scale=1.2]
+
+      % =========================================================================
+      % DEFINICE VRCHOLŮ
+      % =========================================================================
+      \coordinate (A) at (2, 4);
+      \coordinate (B) at (0, 0);
+      \coordinate (C) at (5, 0);
+
+
+      % =========================================================================
+      % VYKRESLENÍ ČERNÝCH PŘÍMEK
+      % =========================================================================
+      \draw[black, line width=1.3pt] (-1.5, 0) -- (6.5, 0);
+      \draw[black, line width=1.3pt] (-0.45, -0.9) -- (2.45, 4.9);
+      \draw[black, line width=1.3pt] (5.6, -0.8) -- (1.4, 4.8);
+
+
+      % =========================================================================
+      % BAREVNÉ OBLOUKY ÚHLŮ
+      % =========================================================================
+
+      % --- VRCHOL A (HORNÍ) ---
+      % Vnitřní úhel (červený)
+      \draw[innerred, line width=2pt] (A) ++(243.4:0.8) arc (243.4:306.9:0.8);
+
+      % Vnější úhly (modré)
+      \draw[outerblue, line width=2pt] (A) ++(126.9:0.6) arc (126.9:243.4:0.6);
+      \draw[outerblue, line width=2pt] (A) ++(-53.1:0.6) arc (-53.1:63.4:0.6);
+
+
+      % --- VRCHOL B (LEVÝ DOLNÍ) ---
+      % Vnitřní úhel (červený)
+      \draw[innerred, line width=2pt] (B) ++(0:0.8) arc (0:63.4:0.8);
+
+      % Vnější úhly (modré)
+      \draw[outerblue, line width=2pt] (B) ++(63.4:0.6) arc (63.4:180:0.6);
+      \draw[outerblue, line width=2pt] (B) ++(-116.6:0.6) arc (-116.6:0:0.6);
+
+
+      % --- VRCHOL C (PRAVÝ DOLNÍ) ---
+      % Vnitřní úhel (červený)
+      \draw[innerred, line width=2pt] (C) ++(126.9:0.8) arc (126.9:180:0.8);
+
+      % Vnější úhly (modré)
+      \draw[outerblue, line width=2pt] (C) ++(0:0.6) arc (0:126.9:0.6);
+      \draw[outerblue, line width=2pt] (C) ++(180:0.6) arc (180:306.9:0.6);
+
+    \end{tikzpicture}
+    \caption{Trojúhelník s vnitřními (červené) a
+    vnějšími (modré) úhly}
     \label{}
   \end{figure}
 \end{definition}
@@ -301,10 +477,73 @@ Nechť $a\in \mathscr P, A\notin a, B\notin a, A\ne B.$ Pak \textbf{přímka} $a
     Bez újmy na obecnosti veďme bodem $A$ rovnobežku se stranou $a$.
     Odtud lze jasně vidět, že zbylé dva úhly k úhlu $\alpha$ jsou střídavé s
     úhly $\beta$, $\gamma$, a tedy i shodné. Celkem dávají přímý úhel,
-    t.j. jejich součet je $180^\circ$, což jsme chtěli dokázat.
+    tj. jejich součet je $180^\circ$, což jsme chtěli dokázat.
     \begin{figure}[ht!]
+    \definecolor{angleblue}{HTML}{B8D0EB}   % Jemná tlumená modrá
+    \definecolor{anglered}{HTML}{F2B5B5}    % Jemná tlumená červená/růžová
+    \definecolor{angleyellow}{HTML}{FCEEA7} % Jemná pastelová žlutá
       \centering
-      \includegraphics[width=0.3\linewidth]{soucet_uhlu_v_troj.png}
+      \begin{tikzpicture}[x=1cm, y=1cm, scale=1.3]
+
+        % =========================================================================
+        % SOUŘADNICE VRCHOLŮ TROJÚHELNÍKU
+        % =========================================================================
+        \coordinate (B) at (0, 0);
+        \coordinate (C) at (5, -0.8);
+        \coordinate (A) at (1.5, 2.5);
+
+
+        % =========================================================================
+        % BAREVNÉ VÝSEČE ÚHLŮ (vykresleny jako první pod čarami)
+        % =========================================================================
+
+        % 1. Úhel u vrcholu B (Jemná modrá, r = 0.5)
+        \draw[fill=angleblue, draw=black, semithick] (B) -- ++(-9.09:0.5) arc (-9.09:59.04:0.5) -- cycle;
+
+        % 2. Úhel u vrcholu C (Jemná červená, r = 0.4)
+        \draw[fill=anglered, draw=black, semithick] (C) -- ++(136.69:0.4) arc (136.69:170.91:0.4) -- cycle;
+
+        % 3. Úhly u společného vrcholu A:
+        % - Levý střídavý úhel k B (Jemná modrá, r = 0.5)
+        \draw[fill=angleblue, draw=black, semithick] (A) -- ++(170.91:0.5) arc (170.91:239.04:0.5) -- cycle;
+
+        % - Vnitřní úhel alfa (Jemná žlutá, r = 0.5)
+        \draw[fill=angleyellow, draw=black, semithick] (A) -- ++(239.04:0.5) arc (239.04:316.69:0.5) -- cycle;
+
+        % - Pravý střídavý úhel k C (Jemná červená, r = 0.4)
+        \draw[fill=anglered, draw=black, semithick] (A) -- ++(316.69:0.4) arc (316.69:350.91:0.4) -- cycle;
+
+
+        % =========================================================================
+        % GEOMETRICKÉ ČÁRY
+        % =========================================================================
+
+        % Strany trojúhelníku
+        \draw[black, thick] (B) -- (A);
+        \draw[black, thick] (A) -- (C);
+        \draw[black, thick] (B) -- (C);
+
+        % Rovnoběžka "x" procházející bodem A
+        \draw[black, thick] (A) ++(170.91:1.5) -- ++(-9.09:4.5);
+
+
+        % =========================================================================
+        % POPISKY (v klasickém matematickém fontu)
+        % =========================================================================
+
+        % Vrchol A
+        \node[above, yshift=3pt] at (A) {$A$};
+
+        % Vrchol B
+        \node[left, xshift=-3pt, yshift=-1pt] at (B) {$B$};
+
+        % Vrchol C
+        \node[right, xshift=3pt, yshift=-1pt] at (C) {$C$};
+
+        % Název přímky x
+        \node[above] at (4.0, 2.2) {$x$};
+
+      \end{tikzpicture}
       \caption{Součet úhlů v trojúhelníku}
     \end{figure}
 \end{proof}
