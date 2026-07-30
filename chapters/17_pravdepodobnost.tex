@@ -72,7 +72,15 @@ Hážeme dvěma mincemi. Určete pravděpodobnost následujících jevů:
 \end{priklad}
 
 \begin{reseni}
-Vypíšeme si všechny možnosti a podělíme ty, které vyhovují, celkovým počtem.
+\begin{enumerate}[a.]
+	\item Na každé minci může padnout buď hlava ($H$), nebo orel ($O$). Celkem tedy mohou nastat čtyři možnosti. Padne
+	$$
+	    OO, \quad OH, \quad HO, \quad HH.
+	$$
+	Z těchto je vyhovující jen poslední možnost, pravděpodobnost tohoto jevu je tedy $\frac{1}{4}$.
+	\item Tentokrát jsou vyhovující možnosti první tři, a tedy pravděpodobnost tohoto jevu je $\frac{3}{4}$.
+	\item Vyhovují možnosti $OO$ a $HH$, tedy pravděpodobnost je $\frac{2}{4}=\frac{1}{2}$.
+\end{enumerate}
 \end{reseni}
 
 \begin{veta}
@@ -94,8 +102,15 @@ Zjistěte, zda jsou dané jevy nezávislé.
 \end{priklad}
 
 \begin{reseni}
-Spočítáme pravděpodobnosti jednotlivých jevů a pravděpodobnost toho, že nastanou
-oba současně. Pokud je $P(A\cap B)=P(A)\cdot P(B)$, pak jsou nezávislé.
+\begin{enumerate}[a.]
+	\item Pravděpodobnost, že na kostce padne sudé číslo je $\frac{3}{6}=\frac{1}{2}$. Pavděpodobnost,
+	že na kostce padnou čísla 5 nebo 6 je $\frac{2}{6} = \frac{1}{3}$. Pravděpodobnost, že padne sudé číslo
+	a že toto číslo je 5 nebo 6, je $\frac{1}{6}$. Taky $\frac{1}{2} \cdot \frac{1}{3}=\frac{1}{6}$, je tedy
+	splněna podmínka z definice a jevy jsou nezávislé.
+	\item Pravděpodobnost, že na kostce padne liché číslo je také $\frac{1}{2}$. Pravděpodobnost, že na kostce
+	padne sudé a liché číslo zároveň je nulová. Protože je $\frac{1}{2}\cdot \frac{1}{2} = \frac{1}{4} \ne 0$,
+	jevy nejsou nezávislé.
+\end{enumerate}
 \end{reseni}
 
 \begin{definition}
