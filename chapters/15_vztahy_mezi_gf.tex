@@ -78,7 +78,15 @@ Určete hodnoty všech goniometrických funkcí, je-li dáno $\sin x=\frac{1}{3}
 \end{priklad}
 
 \begin{reseni}
-Podle vztahů ve větě \ref{vyjadrenigonf}.
+Nacházíme se ve druhém kvadrantu, funkce kosinus je tedy záporná. Podle vztahů ve větě \ref{vyjadrenigonf} máme, že
+$$
+    \cos x = -\sqrt{1-\sin^2 x} = -\sqrt{1-\frac{1}{9}} = -\sqrt{\frac{8}{9}} = -\frac{2 \sqrt{2}}{3}.
+$$
+Hodnoty funkcí tangens a kotangens už pak určíme jednoduše z definice. Je
+\begin{align*}
+\tg x &= \frac{\sin x }{\cos x} = \frac{\frac{1}{3}}{-\frac{2 \sqrt{2}}{3}} = \frac{-1}{2 \sqrt{2}},\\
+\cotg x &= -2 \sqrt{2}.
+\end{align*}
 \end{reseni}
 
 \begin{priklad}
@@ -86,7 +94,12 @@ Vypočtěte hodnoty všech goniometrických funkcí v bodě $\alpha = 105^\circ$
 \end{priklad}
 
 \begin{reseni}
-Využijeme toho, že $105=60+45,$ což jsou tabulkové hodnoty, a součtových vzorců.
+Protože je $105=60+45,$ můžeme s váhodou využít součtových vzorců. Je
+$$
+    \sin (60^\circ + 45 ^ \circ) = \sin (60^\circ) \cos(45 ^ \circ) + \cos (60^\circ) \sin(45 ^ \circ ) = \frac{1}{2} \cdot \frac{\sqrt{2}}{2} + \frac{\sqrt{3}}{2} \frac{\sqrt{2}}{2} = \frac{1+\sqrt{3}}{2 \sqrt{2}}.
+$$
+Obdobně dostaneme  $\cos (105^\circ) = \frac{1-\sqrt{3}}{2 \sqrt{2}}$. Hodnoty funkcí tangens a kotangens
+pak spočítáme jednoduše z definice jako podíl funkcí sinus a kosinus.
 \end{reseni}
 
 \begin{veta}
@@ -123,12 +136,16 @@ Využijeme toho, že $105=60+45,$ což jsou tabulkové hodnoty, a součtových v
 \end{veta}
 
 \begin{proof}
-  $\cos^2 \frac{x}{2} - \sin^2 \frac{x}{2} = \cos x$ a
-  $\cos^2 \frac{x}{2} + \sin^2 \frac{x}{2} =1 $
+  Vyjdeme ze vztahů
+  \begin{align*}
+  \cos^2 \frac{x}{2} - \sin^2 \frac{x}{2} &= \cos x,\\
+  \cos^2 \frac{x}{2} + \sin^2 \frac{x}{2} &=1.
+  \end{align*}
+  Přičtením druhé rovnice k první dostaneme, resp. naopak dostaneme
   \begin{align*}
     2\cos^2 \frac{x}{2}&=\cos x +1 & 2\sin^2 \frac{x}{2} & =1-\cos x \\
     \cos^2 \frac{x}{2}&=\frac{\cos x +1}{2} & \sin^2 \frac{x}{2} & =\frac{1-\cos x }{2} \\
-    \left| \cos \frac{x}{2} \right| &= \sqrt{\frac{\cos x +1}{2}} & \left| \sin \frac{x}{2} \right | & = \sqrt{\frac{1-\cos x}{2}}\qedhere
+    \left| \cos \frac{x}{2} \right| &= \sqrt{\frac{\cos x +1}{2}} & \left| \sin \frac{x}{2} \right | & = \sqrt{\frac{1-\cos x}{2}}.\qedhere
   \end{align*}
 \end{proof}
 
@@ -156,8 +173,10 @@ Vyjádřete jako součin: $\sin 3y+\sin y.$
 \end{priklad}
 
 \begin{reseni}
-Platí
-$\sin 3y+\sin y=2\sin \frac{3y+y}{2}\cdot \cos \frac{3y-y}{2}=2\sin 2y \cdot \cos y.$
+Počítejme
+$$
+\sin 3y+\sin y=2\sin \frac{3y+y}{2}\cdot \cos \frac{3y-y}{2}=2\sin 2y \cdot \cos y.
+$$
 \end{reseni}
 
 \begin{veta}[Sinová věta]
@@ -177,8 +196,8 @@ $\sin 3y+\sin y=2\sin \frac{3y+y}{2}\cdot \cos \frac{3y-y}{2}=2\sin 2y \cdot \co
 
 \begin{veta}\label{obsahtroj}
      V každém trojúhelníku $ABC$ platí
-     $$\frac{abc}{4R}=S=\rho s,$$
-     kde $R$ je poloměr kružnice opsané, $S$ je obsah trojúhelníku, $s$ je polovina obvodu trojúhelníku a $\rho$ poloměr kružnice vepsané.
+     $$\frac{abc}{4R}=S=\varrho s,$$
+     kde $R$ je poloměr kružnice opsané, $S$ je obsah trojúhelníku, $s$ je polovina obvodu trojúhelníku a $\varrho$ poloměr kružnice vepsané.
 \end{veta}
 
 \begin{veta}[Heronův vzorec]
@@ -192,14 +211,94 @@ Nalezněte vztah mezi poloměrem kružnice vepsané a opsané trojúhelníku $AB
 \end{priklad}
 
 \begin{reseni}
-Zjistíme jednoduše z věty \ref{obsahtroj}.
+Označme poloměr kružnice vepsané jako $\varrho$ a poloměr kružnice opsané jako $R$. Z věty \ref{obsahtroj}
+máme, že
+$$
+\frac{abc}{4R} = \varrho \cdot \frac{a+b+c}{2},
+$$
+jednoduchou úpravou tedy dostaneme
+$$
+\varrho = \frac{abc}{2(a+b+c)}.
+$$
 \end{reseni}
 
 \begin{priklad}
-Vrchol věžě stojící na rovině vidíme z místa $A$ pod výškovým úhlem $\alpha= 39^\circ 28^\prime$.
+Vrchol věže stojící na rovině vidíme z místa $A$ pod výškovým úhlem $\alpha= 39^\circ 28^\prime$.
 Přijdeme-li o 50 metrů blíž, je vidět pod úhlem $\beta=58^\circ 42^\prime.$ Jak vysoká je věž?
 \end{priklad}
 
 \begin{reseni}
-Použitím sinové a kosinové věty.
+Jednoduše vidíme, že $|\sphericalangle ABV| = 180^\circ - \beta$ a dále
+$$
+|\sphericalangle AVB| = 180^\circ - \alpha - (180^\circ - \beta) = \beta - \alpha.
+$$
+Podle sinové věty máme, že
+$$
+\frac{50}{\sin(\beta - \alpha)} = \frac{|AV|}{\sin(180^\circ - \beta)},
+$$
+odtud
+$$
+|AV| = \frac{50 \sin(180^\circ - \beta)}{\sin(\beta - \alpha)}.
+$$
+Nyní podle sinové věty v pravoúhlém trojúhelníku $APV$ máme
+$$
+\frac{|AV|}{\sin (90^\circ)} = \frac{v}{\sin\alpha},
+$$
+a tedy
+$$
+    v=\frac{\alpha \cdot |AV|}{1} = \sin(\alpha) \cdot \frac{50 \sin(180^\circ - \beta)}{\sin(\beta - \alpha)}.
+$$
+Po dosazení za hodnoty ze zadání dostaneme, že věž je vysoká asi 82 metrů.
+\begin{figure}
+	\centering
+	\begin{tikzpicture}[scale=1, >=stealth]
+    % --- KOOORDINÁTY ---
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (3.5,0);
+    \coordinate (P) at (6,0);
+    \coordinate (V) at (6,4);
+
+    % --- ZEMĚ (VODOVROVNÁ ROVINA) ---
+    \draw[thick] (-0.5,0) -- (7,0);
+    \fill[pattern=north east lines, pattern color=gray!60] (-0.5,-0.2) rectangle (7,0);
+
+    % --- VĚŽ (SCHEMATICKY) ---
+    \draw[fill=gray!25, thick] (5.85,0) rectangle (6.15,4);
+    % Popisek vrcholu V byl odstraněn podle požadavku.
+
+    % --- ZORNÉ PAPRSKY ---
+    \draw[thick, blue!80!black] (A) -- (V);
+    \draw[thick, red!80!black] (B) -- (V);
+
+    % --- BODY A POPISKY ---
+    \fill (A) circle (2pt) node[below left] {$A$};
+    \fill (B) circle (2pt) node[below left] {$B$};
+    \fill (P) circle (2pt) node[below right] {$P$};
+    \fill (V) circle (2pt) node[above] {$V$};
+
+    % --- ÚHLY (pouze obloučky a symboly) ---
+    % Úhel alpha (čistý oblouček bez šipky a hodnoty)
+    \draw[thick, blue!80!black] (0.9,0) arc (0:33.7:0.9);
+    % Upravená pozice pro samotný symbol alpha
+    \node[blue!80!black] at (1.2,0.3) {$\alpha$};
+
+    % Úhel beta (čistý oblouček bez šipky a hodnoty)
+    \draw[thick, red!80!black] (4.2,0) arc (0:58:0.7);
+    % Upravená pozice pro samotný symbol beta
+    \node[red!80!black] at (4.4,0.4) {$\beta$};
+
+    % --- KÓTA VZDÁLENOSTI 50 m ---
+    \draw[<->, thick] (0,-0.6) -- (3.5,-0.6) node[midway, fill=white] {$50\text{ m}$};
+    \draw[dotted] (A) -- (0,-0.7);
+    \draw[dotted] (B) -- (3.5,-0.7);
+
+    % --- KÓTA VÝŠKY VĚŽE (v) ---
+    \draw[<->, thick] (6.7,0) -- (6.7,4) node[midway, fill=white] {$v = ?$};
+    \draw[dotted] (V) -- (6.8,4);
+    \draw[dotted] (P) -- (6.8,0);
+
+\end{tikzpicture}
+	\caption{Pohledy na věž}
+	\label{fig:vez}
+\end{figure}
 \end{reseni}

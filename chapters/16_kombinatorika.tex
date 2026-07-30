@@ -168,7 +168,16 @@ $$\binom{x-1}{x-3}+\binom{x-2}{x-4}=9.$$
 \end{priklad}
 
 \begin{reseni}
-Řešíme podle věty \ref{binomvztahy} a podle definice kombinačního čísla.
+    Podle definice kombinačního čísla máme rovnici
+    $$
+    \frac{(x-1)!}{2!(x-3)!} + \frac{(x-2)!}{2!(x-4)!} = 9.
+    $$
+    Členy s faktoriálem se ale vykrátí. Dostáváme
+    $$
+    \frac{(x-1)(x-2)}{2} + \frac{(x-2)(x-3)}{2} = 9.
+    $$
+    Tuto rovnici vyřešíme standardním způsobem, dostaneme řešení $x = 5$ a $x=-1$. Druhé zmíněné ale není definované.
+    Řešením je tedy $x=5$.
 \end{reseni}
 
 \begin{definition}
@@ -231,9 +240,16 @@ Ve třídě je dvacet chlapců a patnáct dívek. Určete, kolika způsoby z nic
 \item Je to
 $$\underbrace{\binom{15}{2}}_{\textrm{dívky}} \cdot \underbrace{\binom{20}{4}}_{\textrm{chlapci}}.$$
 \item Spočítáme zvlášť případy, kdy jedou dvě, jedna nebo žádná dívka a tyto počty sečteme.
+Vyjde
+$$
+\binom{15}{2} \cdot \binom{20}{4} + \binom{15}{1} \cdot \binom{20}{5} + \binom{15}{0} \cdot \binom{20}{6}=  780045.
+$$
 \item Opět můžeme zvlášť počítat počty, kdy jede žádná, jedna, atd. dívek, ale jednodušší
 je vzít celkový počet možností a odečíst počet možností, kdy nejede žádná anebo jede
-jedna dívka.
+jedna dívka. Vyjde
+$$
+    \binom{35}{6} - \binom{15}{1} \cdot \binom{20}{5} - \binom{15}{0} \cdot \binom{20}{6} =1351840.
+$$
 \end{enumerate}
 \end{reseni}
 

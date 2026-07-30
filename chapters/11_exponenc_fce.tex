@@ -82,9 +82,25 @@ rostoucí a pro která klesající.
 \end{priklad}
 
 \begin{reseni}
-Je rostoucí, pokud základ je větší než 1 a klesající, pokud základ je menší než 1.
-Řešíme tedy
+Funkce $f$ je rostoucí, pokud základ je větší než 1 a klesající, pokud základ je menší než 1.
+Vyřešíme tedy standardním způsobem
 \begin{align*}
 \frac{b}{b-1}>1, & & \textrm{resp.} & & \frac{b}{b-1}<1.
 \end{align*}
+Vyřešíme první nerovnost, druhá se řeší obdobně.
+Rozdělíme na dva případy:
+\begin{enumerate}[$i.$]
+	\item $b-1 > 0$, pak po vynásobení nerovnice jmenovatelem dostaneme
+	$$
+	    b > b-1,
+	$$
+	tedy v tomto případě je rovnice splněna pro celý interval $(1,\infty)$. V bodě 1 je funkce nedefinovaná.
+	\item $b-1<0$, pak opět po vynásobení jmenovatelem dostaneme
+	$$
+	    b < b-1,
+	$$
+	tedy v tomto případě rovnici nesplňuje žádné řešení.
+\end{enumerate}
+Celkově tedy pro první nerovnost dostáváme řešení $(1,\infty)$. Druhou nerovnici vyřešíme obdobně. Funkce $f$
+je tedy rostoucí pro $b \in (1,\infty)$ a klesající pro $b \in (-\infty, 1)$.
 \end{reseni}
