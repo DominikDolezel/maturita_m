@@ -57,25 +57,31 @@
   \end{align*}
 \end{veta}
 
-\begin{algoritmus}
-  \textbf{Hornerovo schéma} je metoda pro vyhodnocení funkční hodnoty polynomu $P(x) \in \mathbb R [x]$ v bodě $ x_0 \in \mathbb R$ (resp. ověření, zda je $x_0$ kořen $P(x)$). Vysvětlení na~příkladu:
-  \begin{center}
-  Vyhodnoťte $P(x)=2x^{3}-6x^{2}+2x-1$ v bodě $x_0=3$.
-  \end{center}
-  K výpočtu použijeme následující diagram, kde v prvním řádku jsou koeficienty polynomu, samotné výpočty pak probíhají pod přepsanými koeficienty ve sloupcích, a~to~následovně:
-  Do prvního místa opíšeme $a_n$. Další čísla v~řádku jsou součty koeficientu $a_k$ nad mezerou a~součinu hodnoty $x$, v~níž polynom vyhodnocujeme (v tomto příkladě 3), s~číslem v~řádku o~jeden sloupec vlevo (tedy pod $a_{k+1}$). Výsledek vyhodnocování $P(x_0)$ je vpravo dole (v~tomto příkladě 5).
-  \begin{center}
-    \begin{tabular}{ c|c c c c }
-        $ $ & $2$ & $-6$ & $2$ & $-1$\\
-        \hline
-        $3$ & $2$ & $0$ & $2$ & $5$
-    \end{tabular}
-
-    $P(3) = 5.$
-  \end{center}
-  Použitím Hornerova schématu jsme zároveň provedli dělení polynomu $P(x)$ se zbytkem lineárním polynomem $x - x_0$ (v tomto příkladě $x-3$), kde zbytkem je funkční hodnota $P(x_0)$ a podílem je polynom stupně o jedna menšího, jehož koeficienty jsou zbylá vypočtená čísla (v tomto příkladě $2x^2+2$).
-
-  V případě, že $P(x_0)=0$ je $x_0$ kořenem $P(x)$ a zároveň jsme z polynomu vytkli kořenový činitel $x-x_0$.
+\begin{algoritmus}[Hornerovo schéma]
+    Uvažujme polynom
+    $$
+        P(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0.
+    $$
+    Hornerovo schéma je algoritmus pro vyhodnocení funkční hodnoty polynomu $P(c)$ v bodě $c \in \mathbb R $.
+    \par Sestavme si tabulku, kde na první řádek napíšeme postupně koeficienty $a_n, \dots, a_0$. Dále budeme tabulku
+    vyplňovat následovně.
+    \begin{enumerate}
+	\item Do prvního pole opíšeme hodnotu $a_n$.
+	\item Do každého dalšího pole napíšeme hodnotu $c \ \cdot $ \texttt{poslední vyplněné pole} $ + \ a_i$,
+	jako v tabulce \ref{fig:horner}.
+    \end{enumerate}
+    Hodnota $P(c)$ je v tabulce na místě otazníku. Pokud je tato hodnota nulová, zároveň jsou v tomto řádku koeficienty
+    polynomu, který získáme po vydělení $P(x)$ polynomem $(x-c)$.
+    \begin{figure}[h]
+	\centering
+	\begin{tabular}{c | c c c c c}
+		\, & $a_n$ & $a_{n-1}$ & $a_{n-2}$ & \dots & $a_0$ \\
+			\hline
+		$c$  & $a_n$ & $c\cdot a_n + a_{n-1}$ & $c\cdot (c\cdot a_n + a_{n-2}) + a_{n-1}$ & \dots & $\boxed{?}$
+	\end{tabular}
+	\caption{Caption}
+	\label{fig:horner}
+    \end{figure}
 \end{algoritmus}
 
 \begin{definition}

@@ -317,7 +317,7 @@ takže $S_2=0.$
 \end{reseni}
 
 \begin{priklad}
-Určete absolutní člen v rozvoji výrazu $(2x^2-\frac{3}{x})^6$.
+Určete absolutní člen v rozvoji výrazu $\left(2x^2-\frac{3}{x}\right)^6$.
 \end{priklad}
 
 \begin{reseni}
@@ -340,17 +340,10 @@ $$
 
 \begin{veta}[Princip inkluze a exkluze]
     Nechť $M_1, M_2, M_2, \dots, M_k$ jsou konečné množiny. Pak platí
-    \begin{align*}
-        \left | \bigcup\limits_{i=1}^k M_i \right | &= \sum_{i=1}^k \left | M_i \right |
-        - \sum_{i=2}^k \left | M_1 \cap M_i \right | - \dots
-        - \left | M_{k-1}\cap M_k \right | \\
-        &+ \left | M_1\cap M_2 \cap M_3 \right | + \dots +
-        \left | M_{k-2}\cap M_{k-1} \cap M_k \right | - \dots \\
-        & + (-1)^{k+1} \left | M_1\cap M_2 \cap \dots \cap M_k \right |\\
-        &= \sum (-1)^{r+1} \left | M_{j_1}\cap M_{j_2} \cap \dots \cap M_{j_r} \right |,
-    \end{align*}
-    kde se sčítá přes všechny neprázdné podmnožiny $\left \{ j_1, j_2, \dots,
-   j_r \right \} $ množiny $\left \{ 1,2,\dots, r \right \}$.
+    $$
+        \left | \bigcup\limits_{i=1}^k M_i \right | = \sum_{j=1}^k (-1)^{j+1} \sum_{I \in \binom{[n]}{j}} \left |\bigcap_{i \in I} A_i \right|,
+    $$
+    kde $\binom{[n]}{j}$ značí všechny možné $j$-tice z prvků $1$ až $n$.
 \end{veta}
 
 \begin{priklad}

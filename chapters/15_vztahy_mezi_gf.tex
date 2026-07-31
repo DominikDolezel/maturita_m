@@ -46,7 +46,7 @@
     Následující vztahy stačí \uv{rychle odvodit}.
 \end{pozn}
 
-\begin{veta}[Vyjádření gon. funkce pomocí jiné gon. funkce]\label{vyjadrenigonf}
+\begin{veta}[Vyjádření goniometrické funkce pomocí jiné goniometrické funkce]\label{vyjadrenigonf}
   \,\\
   \begin{tabular}{| c || c | c | c | c |}
     \hline
@@ -61,16 +61,18 @@
     $\cotg x$ & $\frac{\sqrt{1-\sin^2 x}}{\sin x}$ & $\frac{\cos x}{\sqrt{1-\cos^2 x}}$ & $\frac{1}{\tg x}$ & --\\
     \hline
   \end{tabular}
-
 \end{veta}
 
 \begin{proof}
-    Pro druhý až čtvrtý kvadrant v tabulce plyne z definice a trigonometrické jedničky. \\
-    Vyjádření sinu nebo kosinu pomocí funkce tangens nebo kotangens nalezneme
-    jednoduše ze vztahů v pravoúhlém trojúhelníku. Nechť je dán pravoúhlý trojúhelník ABC
-    s přeponou $AC$. Pak $\tg \alpha = \frac{a}{c},$ položme tedy $a = \tg \alpha$ a $c=1. $
-    Potom z Pythagorovy věty plyne $b=\sqrt{1+\tg^2 \alpha}. $ Pak $\sin\alpha = \frac{\tg x}{\sqrt{\tg^2 x+1} }$ a
-    $\cos \alpha = \frac{1}{\sqrt{\tg^2 \alpha + 1} }.$ Obdobně i pro kotangens.
+    Uvažujme nejprve, že známe $\sin x$. V pravoúhlém trojúhelníku s jednotkovou přeponou a jedním úhlem o velikosti
+   $x$ má protilehlá strana velikost $\sin x$ a přilehlá $\cos x$. Z Pythagorovy věty tedy plyne, že
+   $\cos x = \pm\sqrt{1-\sin^2 x}$. Hodnoty funkcí tangens a kotangens získáme z definice.
+   \par Obdobně postupujeme, známe-li $\cos x$.
+   \par Předpokládejme, že známe $\tg x$. Uvažujme pravoúhlý trojúhelník, jehož jeden úhel má velikost $x$.
+   Zvolme přilehlou odvěsnu tak, aby byla jednotková. Potom má protilehlá odvěsna velikost $\tg x$ a přepona
+   $\sqrt{1+\tg^2 x}$. Pak je $\sin x = \frac{\tg x}{\sqrt{1+\tg^2 x}}$ a $\cos x = \frac{1}{\sqrt{1+\tg^2 x}}$.
+   Hodnotu funkce kotangnes získáme z definice.
+   \par Obdobně postupujeme, známe-li $\cotg x$.
 \end{proof}
 
 \begin{priklad}
