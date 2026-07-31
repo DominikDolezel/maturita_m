@@ -18,10 +18,103 @@
     kde $A_0$ je kolmý průmět bodu $A$ do roviny $\alpha.$
 \end{definition}
 
-\begin{priklad}
+\begin{priklad}\label{prkvadr}
 Určete vzdálenost bodu $F$ od roviny $\overleftrightarrow{BEG}$ v pravidelném
 čtyřbokém hranolu $ABCDEFGH$, kde $|AB|=|BC|=a, |AE|=b$.
 \end{priklad}
+
+\begin{reseni}
+Musíme najít kolmici na rovinu $\overleftrightarrow{BEG}$, která prochází bodem $F$. Rovina $\overleftrightarrow{BDF}$
+je kolmá na $\overleftrightarrow{BEG}$, neboť má kvádr podstavu čtverce. Řez touto rovinou je na obrázku
+\ref{prrez}. Z Pythagorovy věty je $|BD| = \sqrt{2}a$ a $|BF|=b$. Bod $X$ leží uprostřed úsečky $FH$,
+proto má úsečka $FX$ délku $\frac{\sqrt{2}a }{2}$. Dále víme, že úhel $\sphericalangle FXB$ má velikost
+$\arctg \frac{b}{\frac{\sqrt{2}a }{2}}$. Nyní už ze sinové věty máme, že
+$$
+\frac{\frac{\sqrt{2}a }{2}}{\sin 90^\circ} = \frac{x}{\arctg \frac{2b}{\sqrt{2}a}}.
+$$
+Odtud máme, že vzdálenost bodu $F$ od roviny $\overleftrightarrow{BEG}$
+$$
+x= \frac{\sqrt{2}a }{2} \cdot \arctg \frac{2b}{\sqrt{2}a}.
+$$
+\begin{figure}[h]
+\begin{subfigure}{.5\textwidth}
+\centering
+	\begin{tikzpicture}[scale=1, line cap=round, line join=round]
+   % Definice vrcholů kvádru ABCDEFGH
+   % Dolní podstava ABCD
+   \coordinate (A) at (0,0);
+   \coordinate (B) at (4,0);
+   \coordinate (C) at (5.5,2);
+   \coordinate (D) at (1.5,2);
+
+   % Horní podstava EFGH (posunutá svisle nahoru)
+   \coordinate (E) at (0,2.5);
+   \coordinate (F) at (4,2.5);
+   \coordinate (G) at (5.5,4.5);
+   \coordinate (H) at (1.5,4.5);
+
+   \coordinate (X) at (2.75,3.5);
+
+   % Neviditelné hrany (čárkovaně)
+   \draw[dashed] (D) -- (A);
+   \draw[dashed] (D) -- (C);
+   \draw[dashed] (D) -- (H);
+
+   % Viditelné hrany dolní podstavy a svislé hrany
+   \draw (A) -- (B);
+   \draw (B) -- (C);
+   \draw (A) -- (E);
+   \draw (B) -- (F);
+   \draw (C) -- (G);
+
+   \draw[dashed] (H) -- (F);
+   \draw[dashed] (B) -- (D);
+   \draw[dashed, blue] (X) -- (B);
+
+   % Horní podstava
+   \draw (E) -- (F) -- (G) -- (H) -- cycle;
+
+   % Zvýraznění roviny BEG (trojúhelník BEG) modrou barvou
+   \draw[thick, blue] (B) -- (E) -- (G) -- cycle;
+
+   % Popisky vrcholů
+   \node[below left] at (A) {$A$};
+   \node[below] at (B) {$B$};
+   \node[right] at (C) {$C$};
+   \node[above left] at (D) {$D$};
+   \node[left] at (E) {$E$};
+   \node[below right] at (F) {$F$};
+   \node[above right] at (G) {$G$};
+   \node[above left] at (H) {$H$};
+   \node[above] at (X) {$X$};
+	\end{tikzpicture}
+	\caption{Kvádr $A$--$H$}
+	\label{fig:label}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+	\centering
+	\begin{tikzpicture}[scale=1.5]
+		\coordinate (D) at (0,0);
+		\coordinate (B) at (3,0);
+		\coordinate (F) at (3,1.5);
+		\coordinate (H) at (0, 1.5);
+		\coordinate (X) at (1.5,1.5);
+
+		\draw (D) -- (B) -- (F) -- (H) -- cycle;
+		\draw[dashed] (X) -- (B);
+
+		\node[below left] at (D) {$D$};
+		\node[below right] at (B) {$B$};
+		\node[above right] at (F) {$F$};
+		\node[above left] at (H) {$H$};
+		\node[above] at (X) {$X$};
+	\end{tikzpicture}
+	\caption{Řez rovinou $\overleftrightarrow{BDF}$}
+	\label{prrez}
+\end{subfigure}
+\caption{Řešení příkladu \ref{prkvadr}}
+\end{figure}
+\end{reseni}
 
 \begin{definition}
     Nechť $A\in \mathbb E_3$ je bod a $p \subset \mathbb E_3$ je přímka.
@@ -89,6 +182,75 @@ Určete vzdálenost bodu $F$ od roviny $\overleftrightarrow{BEG}$ v pravidelném
 Je dán pravidelný čtyřboký jehlan $ABCDV$ s podstavnou hranou $a$ a výškou $v$.
 Určete odchylku přímek $p,q$, kde $p=\overleftrightarrow{AV}, q=\overleftrightarrow{CD}.$
 \end{priklad}
+
+\begin{reseni}
+Protože jsou přímky $CD$ a $AB$ rovnoběžné, stačí počítat odchylku přímek $\overleftrightarrow{AV}$ a
+$\overleftrightarrow{AB}$.
+Z Pythagorovy věty je délka úsečky $AC$ rovna $\sqrt{2}a$, a tedy délka úsečky $AS$ je $\frac{\sqrt{2}a }{2}$.
+Délky úseček $AX$ a $SX$ jsou shodně $\frac{a }{2}$. Opět z Pythagorovy věty je délka úsečky $VX$
+rovna
+$$\sqrt{\left(\frac{a }{2}\right)^2 + v^2}.$$
+Odchylka přímek $\overleftrightarrow{AV}$ a
+$\overleftrightarrow{AB}$ je pak rovna velikosti úhlu $\sphericalangle VAX$, což je
+$$
+    \arctg \left( \frac{\sqrt{\left(\frac{a }{2}\right)^2 + v^2}}{\frac{a }{2}} \right ) .
+$$
+\begin{figure}[h]
+	\begin{subfigure}{.5\textwidth}
+	\centering
+	\begin{tikzpicture}[tdplot_main_coords, scale=1.4]
+		\coordinate (A) at (0, 0, 0);
+		\coordinate (B) at (2, 0, 0);
+		\coordinate (C) at (2,2,0);
+		\coordinate (D) at (0, 2, 0);
+		\coordinate (V) at (1,1, 3);
+		\coordinate (S) at (1,1, 0);
+		\coordinate (X) at (1,0,0);
+
+		\draw[thick] (A) -- (B) -- (C);
+		\draw[thick, dashed, blue] (C) -- (D);
+	    \draw[thick, dashed] (D) -- (A);
+		\draw[blue, thick] (A) -- (V);
+		\draw[thick] (B) --(V);
+		\draw[thick] (C) -- (V);
+		\draw[thick] (D) -- (V);
+		\draw[dashed] (S) -- (V);
+		\draw[dashed] (A) -- (S);
+		\draw[dashed] (S)--(X)--(V);
+
+		\node[below left] at (A) {$A$};
+		\node[below right] at (B) {$B$};
+		\node[right] at (C) {$C$};
+		\node[left] at (D) {$D$};
+		\node[above] at (V) {$V$};
+		\node[below right] at (S) {$S$};
+		\node[below left] at (X) {$X$};
+	\end{tikzpicture}
+	\caption{Pravidelný čtyřboký hranol $ABCDV$}
+	\end{subfigure}
+	\begin{subfigure}{.5\textwidth}
+	\centering
+	\begin{tikzpicture}[scale=1.5]
+		\coordinate (A) at (0,0);
+		\coordinate (B) at (2, 0);
+		\coordinate (V) at (1, 3);
+		\coordinate (S) at (1,0);
+
+		\draw [thick] (A)--(B)--(V) --cycle;
+		\draw [dashed] (S)--(V);
+
+		\node[below left] at (A) {$A$};
+		\node[below right] at (B) {$B$};
+		\node[above] at (V) {$V$};
+		\node[below] at (S) {$X$};
+	\end{tikzpicture}
+	\caption{Trojúhelník $ABV$}
+	\end{subfigure}
+
+
+	\caption{Caption}
+\end{figure}
+\end{reseni}
 
 \begin{definition}
     Nechť $p,q \subset \mathbb E_3$ jsou dvě mimoběžné přímky. \textbf{Odchylkou
@@ -273,6 +435,81 @@ mnohoúhelníků.
 Odvoďte vztah pro povrch pláště rotačního kužele o výšce $v$ a poloměru
 podstavy $r$.
 \end{priklad}
+
+\begin{reseni}
+Plášť rotačního kužele tvoří kruhovou výseč o poloměru $s=\sqrt{v^2 + r^2}$ a obvodu (bez vyseknuté části)
+$2\pi r$. I s vyseknutou částí by měl plášť obsah $\pi s^2$, ale ve skutečnosti je jeho obsah jen
+$\frac{2\pi r}{2 \pi s}$-násobek tohoto čísla, tedy $\frac{2 \pi r }{2\pi s } \cdot \pi s^2=\pi r s = \pi r \sqrt{v^2 + r^2}$.
+\begin{figure}[h]
+\begin{subfigure}{.5\textwidth}
+	\centering
+	\begin{tikzpicture}[scale=1.2, line cap=round, line join=round]
+    % Definice hlavních bodů
+    \coordinate (V) at (0, 3.5);  % Vrchol kužele
+    \coordinate (S) at (0, 0);    % Střed podstavy
+
+    % Zadní část elipsy podstavy (čárkovaně)
+    \draw[dashed, gray] (2,0) arc (0:180:2 and 0.6);
+    % Přední část elipsy podstavy (plná čára)
+    \draw (-2,0) arc (180:360:2 and 0.6);
+
+    % Plášť kužele (stranové přímky)
+    \draw (-2,0) -- (V) -- (2,0);
+
+    % Vnitřní konstrukce (výška v a poloměr r)
+    \draw[dashed, blue] (V) -- (S);
+    \draw[dashed, blue] (S) -- (2,0);
+
+    % Značka pravého úhlu u středu podstavy
+    \draw[blue] (0, 0.2) -- (0.2, 0.2) -- (0.2, 0);
+
+    % Popisky vrcholů a rozměrů
+    \node[above] at (V) {$V$};
+    \node[below] at (S) {$S$};
+    \node[right] at (1, 1.75) {$s$};
+    \node[above] at (1, 0) {$r$};
+    \node[left] at (0, 1.75) {$v$};
+
+    % Bod na obvodu podstavy (např. A)
+    \coordinate (A) at (2,0);
+    \node[right] at (A) {$A$};
+    \draw[fill] (A) circle (1pt);
+    \draw[fill] (V) circle (1pt);
+    \draw[fill] (S) circle (1pt);
+	\end{tikzpicture}
+	\caption{Rotační kužel}
+\end{subfigure}
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\begin{tikzpicture}[scale=1, line cap=round, line join=round]
+    % Parametry pro kreslení (strana s a úhel α ve stupních)
+    \def\s{2.5}       % Poloměr výseče (strana kužele s)
+    \def\alpha{300} % Úhel výseče (zde zvolen pro názornost jako půlkruh 180°, lze upravit)
+
+    % Vrchol výseče (odpovídá vrcholu kužele V)
+    \coordinate (V) at (0,0);
+
+    % Vybarvení plochy pláště
+    \draw[fill=gray!15, draw=none] (V) -- (0:\s) arc (0:\alpha:\s) -- cycle;
+
+    % Obvodové hrany výseče
+    \draw[thick] (V) -- (0:\s);
+    \draw[thick] (V) -- (\alpha:\s);
+    \draw[thick] (0:\s) arc (0:\alpha:\s);
+
+    % Popisky
+    \node[above] at (V) {$V$};
+
+    % Kóty a popisy stran
+    \node[above] at ({0.5*\s}, 0) {$s$};
+
+    \draw[fill] (V) circle (1.5pt);
+		\end{tikzpicture}
+		\caption{Rozvinutý plášť rotačního kužele}
+	\end{subfigure}
+	\caption{Odvození vzorce pro obsah pláště rotačního kužele}
+\end{figure}
+\end{reseni}
 
 \begin{definition}
     O tělesu $M$ v prostoru říkáme, že má $p$ za osu rotace a že je \textbf{rotačním

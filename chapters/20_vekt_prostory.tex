@@ -144,7 +144,11 @@ Rozhodněte, zda vektor $\vec x = (7,4)$ patří do množiny generované $S$.
 \end{priklad}
 
 \begin{reseni}
-Vlastně řešíme rovnici $(7,4)=a(1,2)+b(4,3).$
+Vlastně řešíme rovnici $(7,4)=a(1,2)+b(4,3).$ Jednoduše zjistíme, že řešením je
+$$
+    (7,4) = -(1,2) + 2\cdot (4,3),
+$$
+a tedy vektor $\vec x$ patří do množiny generované $S$.
 \end{reseni}
 
 \begin{definition}
@@ -175,6 +179,42 @@ lineárně závislé.
 \begin{reseni}
 Vlastně řešíme rovnici $p\vec a + q\vec b + r\vec c= \vec o.$ Existuje-li nenulové
 řešení, jsou lineárně závislé.
+\begin{enumerate}[$a.$]
+	\item Rovnici si můžeme přepsat do matice
+	$$
+ \begin{pmatrix}
+		2 & 3 & 1 \\
+		1 & 0 & 2 \\
+		5 & 4 & 6
+ \end{pmatrix} \sim \begin{pmatrix}
+	1 & 0 & 2 \\
+	0 & 3 & -3 \\
+	0 & 1 & -1
+ \end{pmatrix} \sim \begin{pmatrix}
+	1 & 0 & 2 \\
+	0 & 1 & -1
+ \end{pmatrix},
+	$$
+	odkud vidíme, že existuje nenulové řešení, třeba
+	$$
+	    -2(2,1,5) + (3,0,4) + (1,2,6) = \vec o.
+	$$
+	Vektory $\vec a, \vec b, \vec c$ jsou tedy lineárně závislé.
+	\item Opět přepíšeme rovnici do matice
+	$$
+ \begin{pmatrix}
+ 2 & 3 & 1 \\
+		1 & 0 & 2 \\
+		1 & 2&  6
+ \end{pmatrix} \sim \begin{pmatrix}
+	1 & 0 & 2 \\
+	0 & 1 & 2 \\
+	0 & 1 & 11
+ \end{pmatrix},
+	$$
+	odkud hned vidíme, že jediné řešení je to nulové. Vektory $\vec a, \vec b, \vec c^\prime$ jsou tedy lineárně
+	nezávislé.
+\end{enumerate}
 \end{reseni}
 
 \begin{definition}
