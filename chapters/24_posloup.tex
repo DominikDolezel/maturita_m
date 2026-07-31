@@ -130,7 +130,16 @@ Určete, zda posloupnost $\left \{ \frac{2n-1}{3} \right \}_{n=1}^\infty $ je ar
 \end{priklad}
 
 \begin{reseni}
-Spočítáme $a_{n+1}/a_n$ a $a_{n+1}-a_n$. Je geometrická, je-li $a_{n+1}/a_n$ konstatní a naopak ($a_{n+1}/a_n$ nesmí záviset na $n$).
+Je-li posloupnost aritmetická, platí $a_{n+1} = a_n + d$. Ověříme tuto podmínku. Je
+$$
+    a_{n+1} = \frac{2(n+1)-1}{3} = \frac{2n+1}{3},
+$$
+tedy
+$$
+    a_{n+1}-a_n = \frac{2n+1}{3}-\frac{2n-1}{3}=\frac{2}{3},
+$$
+a proto je posloupnost $a_n$ aritmetická s diferencí $\frac{2}{3}$. To, jestli je geometrická, bychom ověřovali podobně,
+počítali bychom $\frac{a_{n+1}}{a_n}$.
 \end{reseni}
 
 \begin{veta}
