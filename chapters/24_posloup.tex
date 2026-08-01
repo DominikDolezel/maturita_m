@@ -21,7 +21,11 @@ Určete monotónnost posloupnosti $\left \{ \frac{2n}{n+1} \right \}_{n=1}^\inft
 \end{priklad}
 
 \begin{reseni}
-Spočítáme $a_{n+1}-a_n$.
+Spočítáme $a_{n+1}-a_n$. Je
+$$
+    a_{n+1}-a_n = \frac{2(n+1)}{n+2} - \frac{2n}{n+1} = \frac{2}{(n+2)(n+1)},
+$$
+což je kladné číslo pro všechna $n \in \mathbb N $, a tedy posloupnost je rostoucí.
 \end{reseni}
 
 \begin{definition}
@@ -116,7 +120,21 @@ Napište prvních pět členů aritmetické posloupnosti, kde platí
 \end{priklad}
 
 \begin{reseni}
-Vyjádříme pomocí $a_1$ a diference a vyřešíme.
+Uvažujme aritemtickou posloupnost s prvním členem $a_1$ a diferencí $d$. Pak je $a_4 = a_1 + 3d$,
+$a_2 = a_1 + d$ a $a_6 = a_1 + 5d$. Soustavu tedy můžeme přespat jako
+\begin{align*}
+	a_1 + a_1 + 3d &= 12, \\
+	a_1 + d - a_1 - 5d &= -8.
+\end{align*}
+Po úpravě máme
+\begin{align*}
+	2a_1 + 3d &= 12, \\
+	- 4d  &= -8,
+\end{align*}
+odkud vidíme, že $d= 2$. Dosazením do první rovnice pak dostaneme $a_1=3$. Hledaná posloupnost tedy začíná
+$$
+    3, \quad 5, \quad 7, \quad 9, \quad 11, \quad \dots
+$$
 \end{reseni}
 
 \begin{definition}
@@ -204,7 +222,20 @@ Nalezněte geometrickou posloupnost, pro níž platí
 \end{priklad}
 
 \begin{reseni}
-Vyjádříme pomocí $a_1$ a kvocientu a vyřešíme.
+Uvažujme geometrickou posloupnost s prvním prvkem $a_1$ a kvocientem $q$. Pak je $a_3 = a_1 q^2$, $a_2 = a_1q$ a
+$a_4 = a_1 q^3$. Soustavu můžeme přepsat jako
+\begin{align*}
+	a_1 + a_1q^2 &= 5, \\
+	a_1q + a_1q^3 &= 10.
+\end{align*}
+Vidíme, že druhá rovnice je $q$-násobkem první rovnice, a tedy $q=2$. Dosazením do první rovnice dostaneme
+$$
+    a_1 + 4a_1 = 5a_1 = 5,
+$$
+tedy $a_1 = 1$. Hledaná posloupnost tedy začíná prvky
+$$
+ 1, \quad 2, \quad 4, \quad 8, \quad 16, \quad \dots
+$$
 \end{reseni}
 
 \begin{pozn}
@@ -222,12 +253,26 @@ Vyjádříme pomocí $a_1$ a kvocientu a vyřešíme.
 \end{pozn}
 
 \begin{priklad}
-Nalezněte explicitní vyjádření posloupnosti zadané rekurentně: $a_{n+1}=3a_n+1,a_1=2.$
+Nalezněte explicitní vyjádření posloupnosti zadané rekurentně: $$a_{n+1}=3a_n+1, \quad a_1=2.$$
 \end{priklad}
 
 \begin{reseni}
-Napíšeme si pár prvních členů posloupnosti a nějak si z toho vycucáme vzorec. Ten
-pak dokážeme matematickou indukcí.
+Napišme si prvních pár členů této posloupnosti:
+\begin{align*}
+	a_1 &= 2, \\
+	a_2 &= 3 \cdot 2 + 1, \\
+	a_3 &= 3(3\cdot 2 + 1)+1 = 2 \cdot 3^2 + 3+1, \\
+	a_4 &= 3(3 (3\cdot 2 + 1)+1)+1 = 2\cdot 3^3 + 3^2+3+1.
+\end{align*}
+Odsud usoudíme, že $a_n = 2\cdot 3^{n-1}+\sum_{i=0}^{n-2}3^i$. Tuto hypotézu nyní dokážeme matematickou indukcí.
+\begin{itemize}
+	\item Pro $n = 1$ vzorec platí.
+	\item Předpokládejme, že pro $n$ vzorec platí. Ukážeme, že platí i pro $n+1$. Prvek $a_{n+1}$ je
+	$$
+	    3\cdot \left( 2\cdot 3^{n-1}+\sum_{i=0}^{n-2}3^i \right ) +1 = 2\cdot 3^n + \sum_{i=1}^{n-1} 3^i + 1 = 2\cdot 3^n + \sum_{i=0}^{n-1} 3^i,
+	$$
+	tedy vzorec platí i pro $n+1$. Tím je důkaz u konce.
+\end{itemize}
 \end{reseni}
 
 \begin{definition}
@@ -242,7 +287,11 @@ Vypočtěte limitu $\lim_{n\to\infty}\frac{n+1}{n}.$
 \end{priklad}
 
 \begin{reseni}
-Rozšíříme $\frac{1}{n}$. Limita $\lim_{n\to \infty}\frac{1}{n}$ je totiž rovna nule.
+Počítejme
+$$
+    \lim_{n\to\infty}\frac{n+1}{n} = \lim_{n \to \infty} \frac{n+1}{n} \cdot \frac{\frac{1}{n }}{\frac{1}{n}} = \lim_{n \to \infty} \frac{1+\frac{1}{n }}{1},
+$$
+ale $\lim_{n \to \infty} \frac{1}{n} = 0$, a tedy podle věty o aritmetice limit je limita ze zadání rovna 1.
 \end{reseni}
 
 \begin{definition}
@@ -257,7 +306,10 @@ Určete $\lim_{n\to \infty}\frac{4-n^2}{2+n}.$
 \end{priklad}
 
 \begin{reseni}
-Rozložíme na součin.
+Počítejme
+$$
+\lim_{n \to \infty} \frac{4-n^2}{2+n} = \lim_{n \to \infty} \frac{(2-n)(2+n)}{2+n} = \lim_{n \to \infty} 2-n = -\infty.
+$$
 \end{reseni}
 
 \begin{definition}
@@ -388,9 +440,9 @@ Rozhodněte o chování řady $\sum_{n=1}^\infty \frac{n^2+n+1}{n^3+1}$.
 \begin{reseni}
 Srovnáme s $\sum_{n=1}^\infty \frac{1}{n}$, která diverguje. Počítáme tedy
 $$
-\lim_{n\to\infty}\frac{\frac{n^2+n+1}{n^3+1}}{\frac{1}{n}}.
+\lim_{n\to\infty}\frac{\frac{n^2+n+1}{n^3+1}}{\frac{1}{n}} = \lim_{n \to \infty}{ \frac{n^3 +n^2+n }{n^3+1}} = \lim_{n\to \infty}{\frac{1+\frac{1}{n}+\frac{1}{n^2}}{1+\frac{1}{n^2}}} = 1,
 $$
-Je-li rozdílná od nuly a od nekonečna, chovají se řady stejně.
+tedy podle limitního srovnávacího kritéria řada $\sum_{n=1}^\infty \frac{n^2+n+1}{n^3+1}$ také diverguje.
 \end{reseni}
 
 \begin{definition}
@@ -421,10 +473,29 @@ Určete součet řady $\sum_{n=1}^\infty 1/2^n.$
 
 \begin{reseni}
 Je $a_1=\frac{1}{2},q=\frac{1}{2}$. Platí $|q|<1$, takže můžeme použít větu
-\ref{konvergencerad}.
+\ref{konvergencerad}. Je tedy
+$$
+    S = \frac{\frac{1}{2}}{1-\frac{1}{2}} = 1.
+$$
 \end{reseni}
 
 \begin{priklad}
 Je dán čtverec o straně $a$, spojnice středů jeho stran tvoří stranu dalšího čtverce,
 \dots Určete součet obsahů a obvodů takto vzniklých čtverců.
 \end{priklad}
+
+\begin{reseni}
+	Označme délku strany prvního čtverce $a_1=a$, druhého $a_2$, \dots Z Pythagorovy věty máme, že
+	$a_{n+1}=\sqrt{2} \frac{a_n}{2} = \frac{a_n}{\sqrt{2}}$. Součet obvodů těchto čtverců je tedy
+	$\sum_{n=0} ^\infty \frac{a}{\left( \sqrt{2} \right )^{n-1} }$. To je geometrická řada s prvním členem
+	$a$ a kvocientem $\left |\frac{1}{\sqrt{2}}\right | < 1$, můžeme tedy použít větu \ref{konvergencerad}.
+	Pak je
+	$$
+	    O = \frac{a}{1- \frac{1}{\sqrt{2}}}.
+	$$
+	Obdobně součet obsahů je řada $\sum_{n=0}^\infty \left( \frac{a }{\sqrt{2}} \right )^2 $, což je geometrická
+	řada s prvním prvkem $a^2$ koeficientem $\frac{1}{2}$. Součet je tedy podle věty \ref {konvergencerad}
+	$$
+	 S = \frac{a^2}{1- \frac{1}{2}} = 2a^2.
+	$$
+\end{reseni}

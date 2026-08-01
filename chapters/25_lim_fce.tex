@@ -157,7 +157,13 @@ Spočtěte $\lim_{x\to-\infty}x(\sqrt{x^2+9}-\sqrt{x^2-9})$.
 \end{priklad}
 
 \begin{reseni}
-Rozšíříme $\sqrt{x^2+9}+\sqrt{x^2-9}.  $
+Počítejme
+\begin{align*}
+	\lim_{x\to-\infty}x(\sqrt{x^2+9}-\sqrt{x^2-9}) &= \lim_{x \to -\infty} x(\sqrt{x^2+9}-\sqrt{x^2-9}) \cdot \frac{\sqrt{x^2+9}+\sqrt{x^2-9}}{\sqrt{x^2+9}+\sqrt{x^2-9}}\\
+	&= \lim_{x \to -\infty} x \cdot \frac{(x^2 + 9) - (x^2 - 9)}{\sqrt{x^2+9}+\sqrt{x^2-9}} \\
+	&= \lim_{x \to -\infty} \frac{x}{\sqrt{x^2+9}+\sqrt{x^2-9}} \cdot \frac{\frac{1}{x}}{\frac{1}{x}} \\
+	&= \lim_{x \to -\infty} \frac{1}{\sqrt{1+\frac{9}{x^2}}+\sqrt{1-\frac{9}{x^2}}} = \frac{1}{2}.
+\end{align*}
 \end{reseni}
 
 \begin{veta}[Věta o sevření]
@@ -178,7 +184,11 @@ Spočtěte $\lim_{x\to \infty}\left ( 4x^3-x^2+x+2 \right ) .$
 \end{priklad}
 
 \begin{reseni}
-Vytkneme $x^3$.
+Počítejme
+$$
+    \lim_{x\to \infty}\left ( 4x^3-x^2+x+2 \right ) = \lim_{x \to \infty}  x^3 \left( 4 - \frac{1}{x} + \frac{1}{x^2} + \frac{2}{x^3} \right ) = 4
+$$
+podle věty o aritmetice limit.
 \end{reseni}
 
 \begin{veta}[Věta o limitě složené funkce]\label{slozf}
@@ -218,6 +228,11 @@ Platí
 $$\lim_{x\to 0^+}x^{\ln x}=\lim_{x\to 0^+}e^{\ln x\ln x}.$$
 Protože je $e^x$ spojitá, je
 $$\lim_{x\to 0^+}e^{\ln x\ln x}=e^{\lim_{x\to 0^+}\ln x\ln x}.$$
+Limita
+$$
+    \lim_{x\to 0^+}\ln x\ln x = \infty,
+$$
+a tedy i $\lim_{x\to 0^+}x^{\ln x} = \infty$ podle věty o limitě složené funkce.
 \end{reseni}
 
 \begin{veta}[Věta o limitě typu $1 / 0$]
@@ -264,7 +279,11 @@ Spočtěte $\lim_{x\to 1} \left ( \frac{1}{\ln x}-\frac{1}{x-1} \right ) $.
 \end{priklad}
 
 \begin{reseni}
-Převedeme na společný jmenovatel a použijeme l'Hospitalovo pravidlo.
+Převedeme na společný jmenovatel a použijeme l'Hospitalovo pravidlo. Je
+\begin{align*}
+\lim_{x\to 1} \left ( \frac{1}{\ln x}-\frac{1}{x-1} \right ) &= \lim_{x \to 1} \frac{x-1-\ln x}{(x-1)\ln x} \stackrel{\text{LP}}{=} \lim_{x \to 1} \frac{1 - \frac{1}{x}}{\ln x + (x-1) \frac{1}{x}}\\
+& \stackrel{\text{LP}}{=}\lim_{x \to 1} \frac{\frac{1}{x^2}}{\frac{1}{x} + \frac{1}{x} - (x-1) \frac{1}{x^2}} = \frac{1}{2}.
+\end{align*}
 \end{reseni}
 
 \begin{priklad}
@@ -272,7 +291,11 @@ Spočtěte $\lim_{x\to \infty}\left ( \sqrt{x^2+x-1}-\sqrt{x^2-x+1}   \right ) $
 \end{priklad}
 
 \begin{reseni}
-Rozšíříme $\sqrt{x^2+x-1}+\sqrt{x^2-x+1}$.
+Rozšíříme $\sqrt{x^2+x-1}+\sqrt{x^2-x+1}$. Je
+\begin{align*}
+&= \lim_{x\to \infty}\left ( \sqrt{x^2+x-1}-\sqrt{x^2-x+1}   \right ) \cdot \frac{\sqrt{x^2+x-1}+\sqrt{x^2-x+1}}{\sqrt{x^2+x-1}+\sqrt{x^2-x+1}}\\
+&= \lim_{x\to \infty} \frac{(x^2+x-1)-(x^2-x+1) }{\sqrt{x^2+x-1}+\sqrt{x^2-x+1}} = \lim_{x\to \infty} \frac{-2}{\sqrt{x^2+x-1}+\sqrt{x^2-x+1}} = 0.
+\end{align*}
 \end{reseni}
 
 \begin{priklad}
@@ -281,7 +304,12 @@ Spočtěte $\lim_{x\to 0^+}x^{\sin x}.$
 
 \begin{reseni}
 Platí
-$$\lim_{x\to 0^+}x^{\sin x}=\lim_{x\to 0^+}e^{\sin x\ln x}=e^{\lim_{x\to 0^+}\sin x\ln x}.$$
+$$\lim_{x\to 0^+}x^{\sin x}=\lim_{x\to 0^+}e^{\sin x\ln x}=e^{\lim_{x\to 0^+}\sin x\ln x}$$
+podle věty o limitě složené funkce. Je
+$$
+\lim_{x\to 0^+}\sin x\ln x = \lim_{x\to 0^+} \frac{\sin x }{x} \cdot x \cdot \ln x = \lim_{x\to 0^+}x \ln x = \lim_{x\to 0^+}\frac{\ln x }{\frac{1}{x}} \stackrel{\text{LP}}{=} \lim_{x\to 0^+} \frac{\frac{1}{x}}{-\frac{1}{x^2}} = \lim_{x\to 0^+}-x = 0,
+$$
+a tedy celkově je limita rovna $e^0 = 1$.
 \end{reseni}
 
 \begin{priklad}
@@ -290,5 +318,5 @@ $$\lim_{x\to 0^+}x^{\sin x}=\lim_{x\to 0^+}e^{\sin x\ln x}=e^{\lim_{x\to 0^+}\si
 
 \begin{reseni}
   Převedeme do jmenovatele:
-  $$\lim_{x\to 0^+}x\ln x=\lim_{x\to 0^+}\frac{\ln x}{\frac{1}{x}}.$$
+  $$\lim_{x\to 0^+}x\ln x=\lim_{x\to 0^+}\frac{\ln x}{\frac{1}{x}} = \dots = 0.$$
 \end{reseni}
