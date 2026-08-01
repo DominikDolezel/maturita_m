@@ -245,7 +245,7 @@ $\vec u_1=(2,3,5,-4,1),$ $\vec u_2=(1,-1,2,3,5),$ $\vec u_3=(3,7,8,-11,-3),$ $\v
 Dále vyjádřete vektory $\vec u_1$ až $\vec u_5$ jako lineární kombinaci vektorů báze.
 \end{priklad}
 
-\begin{reseni}
+\begin{navod}
 Vlastně hledáme hodnost matice
 $$
 \begin{pmatrix}
@@ -260,13 +260,80 @@ Gaussovou eliminací pokračujeme tak dlouho, dokud nedostaneme matici do schodo
 Řádky takové matice jsou pak generátory $\left<  S \right> .$
 Vyjadřujeme-li vektor jako lineární kombinaci báze, řešíme vlastně rovnici
 $\vec u_i = p_1\vec e_1 + p_2\vec e_2 +\dots + p_n\vec e_n.$
-\end{reseni}
+\end{navod}
 
-\begin{priklad}V pravidelném čtyřstěnu $ABCD$ vyjádřete vektory $\overrightarrow{AS},\overrightarrow{AU},\overrightarrow{AT}$ jako
+\begin{priklad}\label{prctyrsten}
+V pravidelném čtyřstěnu $ABCD$ vyjádřete vektory $\overrightarrow{AS},\overrightarrow{AU},\overrightarrow{AT}$ jako
 lineární kombinaci vektorů $\overrightarrow{AB},\overrightarrow{AC},\overrightarrow{AD},$
 je-li $S$ střed strany $BC$, $U$ těžiště trojúhelníku $BCD$ a $T$ je těžiště
 $ABCD$.
 \end{priklad}
+
+\begin{reseni}
+Vektor $\overrightarrow{AS}$ je polovina úhlopříčky kosočtverce $ABA^\prime C$, a proto je $\overrightarrow{AS} = \frac{1}{2} \left( \overrightarrow{AB} + \overrightarrow{AC} \right ) $.
+Vektor $\overrightarrow{CU}$ je $\frac{2}{3}$-násobek vektoru $\overrightarrow{CS_{BD}}$, jenže vektor
+$$\overrightarrow{CS_{BD}} = \frac{1}{2}\left( \overrightarrow{CB} + \overrightarrow{CD} \right ) = \frac{\overrightarrow{AB}-\overrightarrow{AC} + \overrightarrow{AD}-\overrightarrow{AC}}{2} = \frac{\overrightarrow{AB}+\overrightarrow{AD}-2\overrightarrow{AC}}{2}.$$
+Vektor $\overrightarrow{AU}$ je pak roven $\overrightarrow{AC} + \overrightarrow{CU}$, tedy
+$$
+    \overrightarrow{AU} = \overrightarrow{AC} + \frac{2}{3}\cdot  \frac{\overrightarrow{AB}+\overrightarrow{AD}-2\overrightarrow{AC}}{2} = \frac{\overrightarrow{AB}+\overrightarrow{AC}+\overrightarrow{AD}}{3}.
+$$
+Vektor $\overrightarrow{AT}$ je pak $\frac{2}{3}$-násobek vektoru $\overrightarrow{AU}$, tedy
+$$
+    \overrightarrow{AT} = \frac{2}{3}\cdot \frac{\overrightarrow{AB}+\overrightarrow{AC}+\overrightarrow{AD}}{3}.
+$$
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}[scale=1, line cap=round, line join=round]
+    % Definice souřadnic vrcholů (podstava ABC je dole, vrchol D je nahoře)
+    \coordinate (A) at (1,0);
+    \coordinate (B) at (7,0);
+    \coordinate (C) at (4,2.5);
+    \coordinate (D) at (4,6);
+    \coordinate (Ap) at (10,2.5);
+
+    % Definice bodů ze zadání
+    \coordinate (S) at (5.5, 1.25);   % střed strany BC
+    \coordinate (U) at (5, 2.833);    % těžiště trojúhelníku BCD
+    \coordinate (T) at (4, 2.125);    % těžiště čtyřstěnu ABCD
+
+    % Vykreslení hran podstavy ABC (všechny viditelné, protože podstava je dole)
+    \draw[thick] (A) -- (B);
+    \draw[thick] (B) -- (C);
+    \draw[thick] (A) -- (C);
+
+    % Vykreslení bočních hran k vrcholu D
+    \draw[thick] (A) -- (D);
+    \draw[thick] (B) -- (D);
+    \draw[thick] (C) -- (D);
+
+    % Pomocné úsečky / vektory vycházející z A (dle zadání příkladu)
+    \draw[blue, thick, densely dashed] (A) -- (S);
+    \draw[blue, thick, densely dashed] (A) -- (U);
+    \draw[blue, thick, densely dashed] (A) -- (T);
+    \draw[gray, densely dashed] (D) -- (S);
+    \draw[gray, densely dashed] (C) -- (Ap) -- (B);
+    \draw[gray, densely dashed] (S) -- (Ap);
+
+    % Popisky vrcholů
+    \node[below left] at (A) {$A$};
+    \node[below right] at (B) {$B$};
+    \node[above left] at (C) {$C$};
+    \node[above] at (D) {$D$};
+
+    % Popisky bodů S, U, T
+    \node[right] at (S) {$S$};
+    \node[right] at (U) {$U$};
+    \node[below right] at (T) {$T$};
+    \node[above right] at (Ap) {$A^\prime$};
+
+    % Zvýraznění bodů
+    \foreach \p/\col in {S/red, U/red, T/red}
+        \fill[\col] (\p) circle (1.8pt);
+
+	\end{tikzpicture}
+	\caption{Řešení příkladu \ref{prctyrsten}}
+\end{figure}
+\end{reseni}
 
 \begin{definition}\label{izom}
     Nechť $(\vec e_1,\dots, \vec e_k)$ je báze vektorového prostoru $V$. Zobrazení
@@ -303,6 +370,25 @@ Určete souřadnice vektoru $\vec x = (1,0,1,0)$ v této bázi.
 
 \begin{reseni}
 Vlastně řešíme rovnici $\vec x= x_1\vec e_1 + x_2\vec e_2 + x_3\vec e_3 + x_4\vec e_4.$
+Tuto soustavu si zapíšeme do matice a vyřešíme. Je
+$$
+\left (
+\begin{array}{c c c c | c }
+    1 & 1 & 1 & 1 & 1 \\
+	1 & 1 & 1 & 0 & 0 \\
+	1 & 1 & 0 & 0 & 1\\
+	1 & 0 & 0 & 0 & 0
+\end{array}
+\right ) \sim \left (
+\begin{array}{c c c c | c }
+    1 & 0 & 0 & 0 & 0\\
+    0 & 1 & 0 & 0 & 1\\
+    0 & 0 & 1 & 0 & -1 \\
+    0 & 0 & 0 & 1 & 1
+\end{array}
+\right )
+$$
+Je tedy $[\vec x]_B = (0,1,-1,1)$.
 \end{reseni}
 
 \begin{definition}
@@ -417,6 +503,10 @@ Vypočtěte obsah trojúhelníku $ABC$, je-li $A[-1,1], B[5,4], C[2,7].$
 Abychom mohli spočítat vektorový součin (tady polovinu vektorového součinu), musíme
 mít trojrozměrné vektory. Doplňme je tedy: $A[-1,1, 0], B[5,4, 0], C[2,7,0].$ Pak
 je obsah polovina velikosti vektorového součinu dvou vektorů (třeba $\overrightarrow{AB}$ a $\overrightarrow{BC}$).
+Je $\overrightarrow{AB} = (6,3,0)$ a $\overrightarrow{BC} = (-3,3,0)$. Obsah trojúhelníku $ABC$ je pak
+$$
+\frac{1}{2} \left | \overrightarrow{AB} \times \overrightarrow{BC}\right | = \frac{1}{2} \left | (0,0,27) \right | = \frac{27}{2}.
+$$
 \end{reseni}
 
 \begin{veta}

@@ -7,13 +7,20 @@
 \end{definition}
 
 \begin{definition}
-    Rovnici $X = A+t\vec u, t\in \mathbb R, \vec u \ne  \vec o,$ nazveme
+    Rovnici $X = \left \{ A+t\vec u, t\in \mathbb R \right \},  \vec u \ne  \vec o,$ nazveme
     \textbf{parametrickou rovnicí přímky} v $\mathbb E_2,$ resp. $\mathbb E_3.$
 \end{definition}
 
 \begin{priklad}
 Napište rovnici přímky $p(A,\vec u),$ je-li $A[1,-1,2], \vec u = (0,1,2).$
 \end{priklad}
+
+\begin{reseni}
+	Rovnice přímky je
+	$$
+	    X = \left \{ [1,-1 + t,2+ 2t], t \in \mathbb R \right \}  .
+	$$
+\end{reseni}
 
 \begin{veta}[Určení vzájemné polohy dvou přímek v $\mathbb E_2$]
     Jsou dány přímky $p(A,\vec u), q(B,\vec v).$ Pak
@@ -44,7 +51,8 @@ Určete vzájemnou polohu dvou přímek $AB$, $CD$, je-li $A[3,2]$, $B[4,-1]$, $
 \end{priklad}
 
 \begin{reseni}
-Zjišťujeme, zda jsou směrové vektory přímek lineárně závislé.
+Směrový vektor přímky $AB$, tj. vektor $\overrightarrow{AB} = (1,-3)$ a směrový vektor přímky $CD$, tj.
+vektor $\overrightarrow{CD} = (3, -7)$ jsou lineárně nezávislé, a proto jsou přímky různoběžné.
 \end{reseni}
 
 \begin{veta}[Určení vzájemné polohy dvou přímek v $\mathbb E_3$]
@@ -82,11 +90,14 @@ Zjišťujeme, zda jsou směrové vektory přímek lineárně závislé.
 \end{veta}
 
 \begin{priklad}
-Rozhodněte o vzájemné poloze přímek $p=\left \{ [1-4t,2+4t,3+t]; t \in \mathbb R \right \}$, $q=\left \{ [-4,8r,-5-8r,-2r]; r \in \mathbb R \right \} . $
+Rozhodněte o vzájemné poloze přímek $p=\left \{ [1-4t,2+4t,3+t]; t \in \mathbb R \right \}$, $q=\left \{ [-4+8r,-5-8r,-2r]; r \in \mathbb R \right \} . $
 \end{priklad}
 
 \begin{reseni}
-Zjišťujeme, zda jsou směrové vektory přímek lineárně závislé.
+Přímky mají směrové vektory $\vec u = (-4,4,1)$ a $\vec v = (8,-8,-2)$. Ty jsou lineárně závislé, a proto jsou přímky
+rovnoběžné. Zbývá rozhodnout, jestli splývají. Na přímce $p$ určitě leží bod $[1,2,3]$. Aby ležel na přímce $q$, muselo by pro
+první souřadnici být rovno $r=\frac{6}{8}$. Druhá souřadnice by ale byla rovna $11$, a proto tento bod na přímce $q$ neleží.
+Přímky jsou tedy rovnoběžné různé.
 \end{reseni}
 
 \begin{veta}[Vzájemná poloha dvou přímek]
@@ -105,7 +116,21 @@ Rozhodněte o vzájemné poloze dvou přímek $p=\left \{ [t,-1+2t,-2+2t]; t \in
 
 \begin{reseni}
 Je $\vec u = (1,2,2), \vec v = (1,0,1), \overrightarrow{AB}=(1,2,2).$ Hledáme tedy
-dimenzi prostorů $\left<  \vec u, \vec v \right>, \left<  \vec u, \vec v, \overrightarrow{AB} \right>.  $
+dimenzi prostorů $\left<  \vec u, \vec v \right>, \left<  \vec (u, \vec v, \overrightarrow{AB} \right>.  $
+Dimenze prostoru $\left < \vec u, \vec v \right > $ je jistě 2 (vektory jsou lineárně nezávislé). Pro prostor
+$\left < \vec u, \vec v, \overrightarrow{AB} \right > $
+si nypišme  tyto vektory do matice a upravujme ji do schodovitého tvaru. Je
+$$
+\begin{pmatrix}
+	1 & 2 & 2 \\
+	1 & 0 & 1 \\
+	1 & 2 & 2
+\end{pmatrix} \sim \begin{pmatrix}
+	1 & 2 & 2 \\
+	0 & 2 & 1
+\end{pmatrix},
+$$
+tedy dimenze tohoto prostoru je také dva a přímky jsou různoběžné.
 \end{reseni}
 
 \begin{definition}
@@ -159,7 +184,7 @@ Nechť $\rho$ je rovina, $\vec u, \vec v$ lineárně nezávislé vektory a $\ove
 \end{definition}
 
 \begin{definition}
-    $ax+by+cz+d=0, (a,b,c)\ne(0,0,0)$ se nazývá \textbf{obecná rovnice roviny}.
+    Rovnice $ax+by+cz+d=0, (a,b,c)\ne(0,0,0)$ se nazývá \textbf{obecná rovnice roviny}.
 \end{definition}
 
 \begin{definition}
@@ -171,8 +196,21 @@ Napište obecnou rovnici roviny $\rho = \overleftrightarrow{ABC}, A[1,1,1], B[2,
 \end{priklad}
 
 \begin{reseni}
-Opět buď vyloučením parametrů, nebo přes normálový vektor: spočítáme dva libovolné vektory
-mezi body $A,B,C$ a $\vec n = \vec u \times \vec v$, posun dopočteme.
+Rovina $\varrho$ je určena vektory $\overrightarrow{AB}=(1,-1,-2)$ a $\overrightarrow{AC}=(0,-1,-1)$.
+Normálový vektor roviny $\varrho$ je pak vektor, který získáme jako vektorový součin vektorů
+$\overrightarrow{AB}$ a $\overrightarrow{AC}$. Je
+$$
+  \overrightarrow{AB}\times \overrightarrow{AC} = (-1,1,-1),
+$$
+a proto je rovnice roviny $\varrho$
+$$
+    -x+y-z + d =0,
+$$
+kde $d$ získáme snadno, totiž třeba bod $A$ na rovině $\varrho$ leží. Dosadíme tedy do rovnice
+$$
+    -1+1-1 + d = 0,
+$$
+odkud máme, že $d=1$.
 \end{reseni}
 
 \begin{priklad}
@@ -180,7 +218,8 @@ Napište parametrickou rovnici roviny $\rho\colon x-y+z-1=0.$
 \end{priklad}
 
 \begin{reseni}
-Pokud $y=r, z=s,$ pak $x-r+s-1=0,$ takže $x=1+r-s$, tedy $\rho = \left \{ [1+r-s,r,s]; r,s\in \mathbb R \right \}. $
+Pokud $y=r, z=s,$ pak $x-r+s-1=0,$ takže $x=1+r-s$, tedy
+$$\rho = \left \{ [1+r-s,r,s]; r,s\in \mathbb R \right \}. $$
 \end{reseni}
 
 \begin{veta}[Vzájemná poloha dvou rovin daných obecnými rovnicemi]
@@ -198,7 +237,8 @@ Určete vzájemnou polohu roviny $\rho\colon 2x+3y+4z+5=0$, $\sigma\colon x-y-z+
 \end{priklad}
 
 \begin{reseni}
-Normálové vektory jsou lineárně nezávislé. Průsečnice je řešení soustavy rovnic
+Roviny mají normálové vektory $\vec u = (2,3,4)$ a $\vec v = (1,-1,-1)$. Ty jsou lineárně nezávislé.
+Proto jsou roviny různoběžné. Průsečnice je řešením soustavy rovnic
 \begin{align*}
     2x+3y+4z+5& =0,\\
     x-y-z+1&=0.
@@ -220,7 +260,28 @@ $\sigma = \left \{ [1+2r_1+r_2,-2-2r_1-2r_2,1+r_1]; r_1,r_2\in \mathbb R \right 
 \end{priklad}
 
 \begin{reseni}
+Rovina $\varrho$ je určena vektory $\vec u = (1,1,1)$ a $\vec v = (2,0,2)$ a rovina $\sigma$ vektory
+$\vec k=(2,-2,1)$ a $\vec l=(1,-2,0)$.
 Hledáme dimenzi prostorů $\left<  \vec u, \vec v, \vec k, \vec l \right>, \left<  \vec u, \vec v, \vec k, \vec l, \overrightarrow{AB} \right> .$
+Napišme si tyto vektory do matice a provádějme Gaussovu eliminaci. Je
+$$
+\begin{pmatrix}
+	1 & 1 & 1 \\
+	2 & 0 & 2 \\
+	2 & -2 & 1 \\
+	1 & -2 & 0
+\end{pmatrix} \sim \begin{pmatrix}
+	1 & 1 & 1 \\
+	0 & -2 & 0 \\
+	0 & -4 & -1 \\
+	0 & -3 & -1
+\end{pmatrix}\sim \begin{pmatrix}
+    1 & 1 & 1 \\
+	0 & 1 & 0 \\
+	0 & 0 & 1
+\end{pmatrix}.
+$$
+Prostor $\left<  \vec u, \vec v, \vec k, \vec l \right>$ má tedy dimenzi 3. Roviny jsou proto různoběžné.
 \end{reseni}
 
 \begin{veta}[Vzájemná poloha přímky a roviny dané parametrickou rovnicí]
