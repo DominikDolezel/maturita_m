@@ -1,11 +1,127 @@
-\section{Nezařazené vykřičníkové příklady}
-\subsection{Algebraické výrazy}
+\section{Základní poznatky, úpravy výrazů, metody řešení rovnic}
+\subsection*{Metody důkazů}
+Rozlišujeme několik základních důkazových metod.
+\begin{itemize}
+\item Přímý důkaz: chceme $A\implies B$, k tomu dojdeme přes jednotlivé implikace $A\implies C_1 \implies \dots \implies C_n \implies B$.
+\item Nepřímý důkaz: chceme $A\implies B$, dokazujeme $B^\prime \implies A^\prime$.
+\item Důkaz sporem: chceme $A\implies B$, předpokládáme negaci a dojdeme ke sporu.
+\item Důkaz rozborem případů: chceme $(A\lor B)\implies C$, dokazujeme $A\implies C\land B\implies C$.
+\item Důkaz matematickou indukcí: Nechť $V$ je výroková forma s jednou proměnnou. Chceme dokázat, že $\forall n\in \mathbb N :V(n)$.
+Stačí dokázat
+\begin{enumerate}
+	\item $V(1)$,
+	\item $\forall n\in \mathbb N : (V(n)\implies V(n+1))$.
+\end{enumerate}
+\end{itemize}
+
+Metody si demonstrujeme na příkladech.
+
+\begin{priklad}\label{dkpr}
+Dokažte, že je-li $n$ sudé, pak i $n^2$ je sudé.
+\end{priklad}
+
+\begin{reseni}
+Přímým důkazem. Nechť $n$ je sudé přirozené číslo, tedy lze jej zapsat ve tvaru $2k, k \in \mathbb N.$
+Pak $n^2 = 4k^2 = 2\cdot 2l, 2l\in \mathbb N, $ tedy $n^2$ je sudé. \qed
+\end{reseni}
+
+\begin{priklad}
+Dokažte, že pro všechna $n \in \mathbb N$ platí, že je-li $n^2$ sudé, je i $n$ sudé.
+\end{priklad}
+
+\begin{reseni}
+Nepřímým důkazem. Obměna tohoto výroku zní: Je-i $n$ liché, pak i $n^2$ je liché.
+Předpokládejme, že $n$ je liché. Lze jej tedy zapsat ve tvaru $2k+1, k \in \mathbb N $.
+Pak je $n^2 = (2k+1)^2 = 4k^2+4k + 1$, což je liché číslo. \qed
+\end{reseni}
+
+\begin{priklad}
+Dokažte, že pro všechna $n\in N$ platí, že $n$ je sudé právě tehdy, když $n^3$ je sudé.
+\end{priklad}
+
+\begin{reseni}
+Jedná se o ekvilalenci, musíme tedy dokázat obě implikace zvlášť.
+\begin{enumerate}
+	\item[$\implies$] Dokazujeme: Je-li $n$ sudé, pak je i $n^3$ sudé.
+	\par Předpokládejme, že $n$ je sudé. Pak existuje takové $k \in \mathbb N $, že
+	$n=2k$. Pak je $n^3 = 8k^3$, a tedy $n^3$ je sudé.
+	\item[$\impliedby$] Dokazujeme: Je-li $n^3$ sudé, pak je i $n$ sudé.
+	\par Postupujeme nepřímo. Budeme dokazovat obměnu: Je-li $n$ liché, pak je i $n^3$ liché.
+	Předpokládejme, že $n$ je liché. Pak existuje takové $k \in \mathbb N $, že
+	$n=2k+1$. Pak je $n^3 = (2k+1)^3 = 8k^3+ 12 k ^2 + 6k + 1$, což je liché číslo. \qed
+\end{enumerate}
+\end{reseni}
+
+\begin{priklad}
+Dokažte, že každým bodem roviny lze vést k dané přímce nejvýše jednu kolmici.
+\end{priklad}
+
+\begin{reseni}
+Sporem. Předpokládejme, že existuje bod, kterým lze k dané přímky vést dvě kolmice. Pak trojúhelník,
+který je určen těmito kolmicemi a touto přímkou, má součet vnitřních úhlů větší než $180^\circ$,
+což je spor. Musí proto platit původní výrok.\qed
+\end{reseni}
+
+\begin{priklad}
+Dokažte, že $\sqrt{2} $ je iracionální.
+\end{priklad}
+
+\begin{reseni}
+Sporem. Předpokládejme, že je racionální. Pak existují taková $k,l \in \mathbb Z $, že $D(k,l)=1$ a
+$\frac{k}{l} = \sqrt{2}$. Umocníme-li tuto rovnost na druhou, doustaneme
+$$
+\frac{k^2}{l^2} =2.
+$$
+Z již dříve dokázaného proto musí nutně 2 dělit $k^2$, a tedy i $k$. Najdeme tedy takové $m \in \mathbb Z $,
+že $k = 2m$. Pak máme
+$$
+\frac{2m}{l} = \sqrt{2}.
+$$
+Po dalším umocnění dostaneme
+$$
+\frac{4m^2}{l^2} = 2.
+$$
+Protože 4 nedělí pravou stranu, musí být i $l^2$, a tedy i $l$ dělitelné dvěma. To je ovšem ve sporu
+s předpokladem, že $D(k,l)=1$. \qed
+\end{reseni}
+
+\begin{priklad}
+Dokažte pro všechna $n\in \mathbb N\colon $
+$$1+2+3+\dots+n=\frac{n(n+1)}{2}.$$
+\end{priklad}
+
+\begin{reseni}
+Matematickou indukcí.
+\begin{enumerate}[1.]
+\item $n=1$: $1=1$
+\item Předpokládejme, že $1+2+3+\dots+n=\frac{n(n+1)}{2}$. Chceme ukázat, že
+$$
+1+2+3+\dots+n+ (n+1)=\frac{(n+1)(n+2)}{2}.
+$$
+Protože je $1+2+3+\dots+n=\frac{n(n+1)}{2}$, můžeme psát
+\begin{align*}
+	1+2+3+\dots+n+ (n+1) &= (n+1) + \frac{n(n+1)}{2} = \frac{n^2+ n + 2n + 2}{2}\\
+& = \frac{n^2 + 3n + 2}{2} = \frac{(n+1)(n+2)}{2},
+\end{align*}
+což jsme chtěli ukázat.\qed
+\end{enumerate}
+\end{reseni}
+
+\subsection*{Úpravy výrazů}
 \begin{priklad}
     Rozložte $2x^2 - 3x+1.$
 \end{priklad}
 
 \begin{reseni}
-Doplněním na čtverec.
+Doplněním na čtverec. Počítejme
+$$
+    2x^2 - 3x+1 = 2 \left( x^2 -\frac{3}{2}x + \frac{1}{2} \right ) = 2 \left( x-\frac{3}{4} \right )^2 - 2 \cdot \frac{9}{16} + 1 = 2 \left( x-\frac{3}{4} \right )^2 - \frac{1}{8}.
+$$
+Dále můžeme využít vzorce $a^2-b^2 = (a-b)(a+b)$. Je
+\begin{align*}
+	2 \left( x-\frac{3}{4} \right )^2 - \frac{1}{8} &= 2 \left( \left( x-\frac{3}{4} \right )^2 - \frac{1}{16}  \right ) \\
+	&=2 \left( x-\frac{3}{4} - \frac{1}{16}\right )  \left( x-\frac{3}{4} + \frac{1}{16}\right ) = 2  \left( x-\frac{13}{16}\right )  \left( x-\frac{11}{16}\right ).
+\end{align*}
 \end{reseni}
 
 \begin{priklad}
@@ -79,7 +195,7 @@ Doplněním na čtverec. Minimum nastane tehdy, když je čtverec nulový.
 \end{reseni}
 
 
-\subsection{Rovnice a nerovnice, matice}
+\subsection*{Zákadní metody řešení soustav rovnic a nerovnic, matice}
 \begin{priklad}
     V $\mathbb R$ řešte $x^2-5x \geq 0.$
 \end{priklad}
@@ -386,93 +502,3 @@ Z náčrtku zjistíme $x_1=-\frac{\pi}{3}+k\pi$ a $x_2=\frac{2\pi}{3}+k\pi.$
 \begin{priklad}
 V $\mathbb R$ řešte nerovnici $\sin x \geq \frac{\sqrt{2} }{2}.$
 \end{priklad}
-
-
-\subsection{Důkazy}
-\begin{priklad}\label{dkpr}
-Dokažte, že je-li $n$ sudé, pak i $n^2$ je sudé.
-\end{priklad}
-
-\begin{reseni}
-Přímým důkazem. Nechť $n$ je sudé přirozené číslo, tedy lze jej zapsat ve tvaru $2k, k \in \mathbb N.$
-Pak $n^2 = 4k^2 = 2\cdot 2l, 2l\in \mathbb N, $ tedy $n^2$ je sudé.
-\end{reseni}
-
-\begin{priklad}
-Dokažte, že pro všechna $n \in \mathbb N$ platí, že je-li $n^2$ sudé, je i $n$ sudé.
-\end{priklad}
-
-\begin{reseni}
-Nepřímým důkazem. Obměna: Je-li $n$ liché, je i $n^2$ liché. Obdobně jako v příkladu \ref{dkpr}.
-\end{reseni}
-
-\begin{priklad}
-Dokažte, že pro všechna $n\in N$ platí, že $n$ je sudé právě tehdy, když $n^3$ je sudé.
-\end{priklad}
-
-\begin{reseni}
-Musíme dokázat oba směry implikace zvlášť.
-\end{reseni}
-
-\begin{priklad}
-Dokažte, že každým bodem roviny lze vést k dané přímce nejvýše jednu kolmici.
-\end{priklad}
-
-\begin{reseni}
-Sporem. Předpokládáme platnost negace a dojdeme ke sporu. Musí tedy platit původní výrok.
-\end{reseni}
-
-\begin{priklad}
-Dokažte, že $\sqrt{2} $ je iracionální.
-\end{priklad}
-
-\begin{reseni}
-Sporem.
-\end{reseni}
-
-\begin{priklad}
-Dokažte pro všechna $n\in \mathbb N\colon $
-$$1+2+3+\dots+n=\frac{n(n+1)}{2}.$$
-\end{priklad}
-
-\begin{reseni}
-Matematickou indukcí.
-\begin{enumerate}[1.]
-\item $n=1$: $1=1$
-\item Předpokládáme platnost pro $n$ a dokážeme, že pak platí i pro $n+1$.
-\end{enumerate}
-\end{reseni}
-
-\subsection{Kombinatorická geometrie}
-\begin{priklad}
-Odvoďte vztah pro počet úhlopříček v konvexním $n$-úhelníku.
-\end{priklad}
-
-\begin{reseni}
-Odvodíme rekurentní vztah. Je dán $n$-úhelník a zjistíme, kolik přibude
-úhlopříček, přidáme-li jeden vrchol. Přibude $n-3$ úhlopříček a z jedné strany
-se stane úhlopříčka. Celkem tedy přibude $n+1-3+1=n-1$ úhlopříček. Nyní odvodíme
-explicitní vztah:
-\begin{align*}
-    u_3 &= 0,\\
-    u_4 &= 2=u_3+2,\\
-    u_5 &= 5=u_4+3. \\
-    u_6&=9=u_5+4,\\
-    &\dots \\
-    u_{n-1}&=u_{n-2}+(n-3),\\
-    u_n &= u_{n-1}+(n-2).
-\end{align*}
-Sečtením všech řádků a úpravou dostaneme $u_n=\frac{n(n-3)}{2}.$
-\end{reseni}
-
-\begin{priklad}
-V rovině je dáno $n$ přímek tak, že žádné dvě nejsou rovnoběžné a žádné tři neprochází
-jedním bodem. Určete, na kolik částí rozdělují
-rovinu.
-\end{priklad}
-
-\begin{reseni}
-Přidáme-li $n+1.$ přímku, protne $n$ přímek v $n$ bodech. Je rozdělena na
-$n+1$ částí, takže přibude $n+1$ částí. Opět odvodíme
-rekurentní a explicitní vzorec.
-\end{reseni}
