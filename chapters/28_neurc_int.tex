@@ -553,12 +553,23 @@ $$
     \end{align*}
 \end{pozn}
 
-\begin{priklad}
+\begin{priklad}\label{prcos}
 Řešte $\int \cos^2 x \d x$.
 \end{priklad}
 
 \begin{reseni}
-Vyjádříme si ze vzorce pro dvojnásobný argument.
+Vyjdeme ze vzorce $\cos 2x = \cos^2 x  - \sin^2 x$ a trigonometrické jedničky $\sin^2 x + \cos^2 x =1$. Máme
+$$
+    \cos 2 x = \cos ^2 x  - \underbrace{\left( 1 - \cos ^2 x \right )}_{\sin^2 x} ,
+$$
+a tedy
+$$
+    \cos^2 x  = \frac{1+ \cos 2x}{2}.
+$$
+Můžeme tedy počítat
+$$
+    \int \cos^2 x \d x =\frac{x}{2} +\frac{1}{2}\int \cos 2 x \d x = \frac{x }{2} + \frac{1}{4} \sin 2x  + c .
+$$
 \end{reseni}
 
 \subsection*{Integrace některých iracionálních funkcí}
@@ -603,16 +614,46 @@ Vyjádříme si ze vzorce pro dvojnásobný argument.
     \end{align*}
 \end{veta}
 
-\begin{priklad}
+\begin{priklad}\label{probsah}
 Řešte $\int \sqrt{a^2-x^2}\d x. $
 \end{priklad}
+
+\begin{reseni}
+	Použijeme substituci $x=a\sin t$. Počítejme
+	$$
+	    \int \sqrt{a^2-x^2}\d x = \begin{vmatrix}
+						x=a\sin t\\
+						\d x = a \cos t \d t
+					\end{vmatrix} = \int \sqrt{a^2 - a^2 \sin^2 t} \cdot a \cos t \d t = a^2 \int \cos^2 t \d t.
+	$$
+	Tento integrál už jsme řešili v příkladu \ref{prcos}. Dostaneme
+	$$
+	    \int \sqrt{a^2-x^2}\d x = a^2 \left( \frac{t }{2} + \frac{1}{4} \sin 2t \right )   + c.
+	$$
+	Po zpětné substituci $t=\arcsin \left( \frac{x}{a} \right ) $ máme výsledek
+	$$
+	    \int \sqrt{a^2-x^2}\d x = a^2 \left( \frac{\arcsin \left( \frac{x}{a} \right ) }{2} + \frac{1}{4} \sin 2 \left( \arcsin \left( \frac{x}{a} \right ) \right )  \right )   + c.
+	$$
+\end{reseni}
 
 \begin{priklad}
 Řešte $\int \frac{\d x}{x \sqrt{x^2+2} }$.
 \end{priklad}
 
 \begin{reseni}
-Řešíme substitucí $x=\sqrt{2}\tg t. $
+Řešíme substitucí $x=\sqrt{2}\tg t. $ Počítejme
+\begin{align*}\int \frac{\d x}{x \sqrt{x^2+2} } &= \begin{vmatrix}
+	x = \sqrt{2}\tg t \\
+	\d x = \sqrt{2}\cdot \frac{1}{\cos^2 t} \d t
+\end{vmatrix} = \int \frac{\sqrt{2}\cdot \frac{1}{\cos^2 t} \d t}{\sqrt{2} \tg t \cdot \sqrt{2 \tg^2 t + 2}} \\
+&= \int \frac{\d t }{\cos^2 t \cdot \frac{\sin^2 t }{\cos^2 t } \cdot \sqrt{2 \left( \tg ^2 t +1 \right ) }}\\
+&= \int \frac{\d t }{\sqrt{2}  \cdot \sqrt{\frac{\sin^2 t + \cos ^2 t }{\cos^2 t }}} = \frac{1}{\sqrt{2}} \int \cos t \d t \\
+&= \frac{1 }{\sqrt{2}} \sin t + c.
+\end{align*}
+Nakonec provedeme zpětnou substituci. Je totiž $t=\arctg \frac{x }{\sqrt{2}}$. Celkem máme
+$$
+    \int \frac{\d x}{x \sqrt{x^2+2} } = \frac{1}{\sqrt{2}} \sin \left( \arctg \frac{x }{\sqrt{2}} \right ) +c.
+$$
 \end{reseni}
 
 \begin{priklad}
@@ -620,7 +661,36 @@ Vyjádříme si ze vzorce pro dvojnásobný argument.
 \end{priklad}
 
 \begin{reseni}
-Řešíme substitucí $x=\frac{1}{\sin t}.$
+Řešíme substitucí $x=\frac{1}{\sin t}.$ Dostaneme
+\begin{align*}
+\int \frac{1}{x}\sqrt{x^2-1}\d x &= \begin{vmatrix}
+	x = \frac{1}{\sin t} \\
+	\d x = \frac{-1}{\sin^2 t}\cos t \d t
+\end{vmatrix} = \int \sin t \cdot \sqrt{\frac{1}{\sin^2 t } - 1} \cdot \frac{-1 }{\sin^2 t} \cos t \d t\\
+&= \int \sqrt{\frac{1-\sin^2 t }{\sin^2 t}} \cdot \frac{-1}{\sin t} \cdot \cos t \d t \\
+&= \int \sqrt{\frac{\cos^2 t }{\sin^2 t}} \cdot \frac{-1}{\sin t } \cdot \cos t \d t \\
+&= -\int \tg^2 t \d t.
+\end{align*}
+Tento integrál vyřešíme pomocí substituce $\tg t = u$. Máme
+$$
+    \int \tg^2 t \d t = \begin{vmatrix}
+	\tg t = u\\
+	\frac{1}{\cos^2 t} \d t = \d u
+    \end{vmatrix}=\int u^2 \frac{1}{u^2 + 1} \d u = \int \frac{u^2 + 1}{u^2 + 1} \d u - \int \frac{1}{u^2 +1} \d u.
+$$
+První integrál je triviálně roven $u+ c$, druhý je podle vzorce roven $\arctg |u|+c$.
+Celkem tedy máme, že
+$$
+    \int \frac{1}{x}\sqrt{x^2-1}\d x = -u + \arctg |u|+c.
+$$
+Po dosazení za $t$ máme
+$$
+    \int \frac{1}{x}\sqrt{x^2-1}\d x = -\tg t + \arctg |\tg t|+c
+$$
+a konečně po dosazení za $x$
+$$
+    \int \frac{1}{x}\sqrt{x^2-1}\d x = -\tg \arcsin \left( \frac{1}{x} \right )  + \arctg \left |\tg \arcsin\left( \frac{1}{x} \right ) \right|+c
+$$
 \end{reseni}
 
 \begin{pozn}
