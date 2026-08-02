@@ -335,21 +335,19 @@ $$
 \end{figure}
 \end{reseni}
 
-\begin{definition}\label{izom}
-    Nechť $(\vec e_1,\dots, \vec e_k)$ je báze vektorového prostoru $V$. Zobrazení
-    $\varphi\colon A\to B$ se nazývá \textbf{homomorfismus} vzhledem k operaci $*$, jestliže
-    $$\forall x,y \in A\colon\varphi(x*y)=\varphi(x)*\varphi(y).$$
-    Pokud je $\varphi$ navíc bijektivní, nazývá se \textbf{izomorfismus}.
-\end{definition}
-
-\begin{pozn}
-    Dva vektorové prostory $V,W$ nad týmž tělesem $T$ jsou izomorfní, jestliže vztah pro zobrazení $\varphi\colon V\to W$ z def. \ref{izom} platí pro
-    operace sčítání i vnější násobení, tzn. platí:
-    \begin{enumerate}[$i.$]
+\begin{definition}
+	Nechť $V, W$ jsou dva vektorové prostory nad stejným tělesem T. Zobrazení $\varphi :V\to W$ nazveme \textbf{izomorfismem},
+	jestliže
+	\begin{enumerate}[$i.$]
     \item $\forall x,y \in V\colon \varphi(\vec x+\vec y)=\varphi(\vec x)+\varphi(\vec y),$
     	\item $\forall x \in V, \forall p \in T\colon \varphi(p\cdot \vec x) = p\cdot \varphi(\vec x).$
     \end{enumerate}
-\end{pozn}
+\end{definition}
+
+\begin{definition}
+    Dva vektorové prostory $V,W$ nad týmž tělesem $T$ jsou \textbf{izomorfní}, jestliže existuje zobrazení
+    $\varphi: V\to W$, které je izomorfismem.
+\end{definition}
 
 \begin{definition}
     Nechť $(\vec e_1, \dots, \vec e_n)$ je báze vektorového prostoru $V$. Nechť

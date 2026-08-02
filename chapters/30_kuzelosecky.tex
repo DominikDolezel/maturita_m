@@ -91,16 +91,16 @@ jedná se tak o elipsu.
 \end{definition}
 
 \begin{definition}
+\textbf{Elipsa} je množina všech bodů v rovině, které mají od dvou různých bodů v~rovině,
+které se nazývají \textbf{ohniska}, konstantní součet vzdálenosti.
+\end{definition}
+
+\begin{definition}
     Elipsa, jejíž poloosy mají stejnou velikost, se nazývá \textbf{kružnice}.
 \end{definition}
 
 \begin{definition}
     Přímka, podle níž je kuželosečka souměrná, se nazývá její \textbf{osou}.
-\end{definition}
-
-\begin{definition}
-\textbf{Elipsa} je množina všech bodů v rovině, které mají od dvou různých bodů v~rovině,
-které se nazývají \textbf{ohniska}, konstantní součet vzdálenosti.
 \end{definition}
 
 \begin{priklad}
@@ -279,16 +279,64 @@ $$A\cdot \begin{pmatrix}
     s_1 \\
     s_2\\
     0
-\end{pmatrix}=0,
+\end{pmatrix}=\vec o,
 $$
 kde $A$ je matice dané kuželosečky. Pokud daný bod navíc vyhovuje rovnici
 $$A\cdot \begin{pmatrix}
     s_1 \\
     s_2\\
     1
-\end{pmatrix}=0,
+\end{pmatrix}=\vec o,
 $$
-je to singulární bod.
+je to singulární bod. V našem případě je
+$$
+    A = \begin{pmatrix}
+	1 & 0 & 1\\
+	0 & 1 & 0 \\
+	1 & 0 & 0
+    \end{pmatrix},
+$$
+řešíme tedy rovnici
+$$
+\begin{pmatrix}
+	1 & 0 & 1\\
+	0 & 1 & 0 \\
+	1 & 0 & 0
+\end{pmatrix} \begin{pmatrix}
+	s_1 \\
+	s_2 \\
+	0
+\end{pmatrix} = \vec o.
+$$
+Po úpravě máme
+$$
+\begin{pmatrix}
+	s_1 \\
+	s_2 \\
+	s_1
+\end{pmatrix}.
+$$
+Střed kuželosečky je tedy bod $[0,0]$. Rovnice pro singulární bod by byla
+$$
+\begin{pmatrix}
+	1 & 0 & 1\\
+	0 & 1 & 0 \\
+	1 & 0 & 0
+\end{pmatrix} \begin{pmatrix}
+	s_1 \\
+	s_2 \\
+	1
+\end{pmatrix} = \vec o.
+$$
+Po úpravě dostaneme
+$$
+\begin{pmatrix}
+	s_1 +1\\
+	s_2 \\
+	s_1
+\end{pmatrix} = \vec o,
+$$
+jenže tato rovnice splněna není, a proto $[0,0]$ není singulární bod této kuželosečky.
 \end{reseni}
 
 \begin{priklad}
@@ -302,7 +350,7 @@ Je dána kuželosečka $y^2-xy-5x+7y+10=0.$ Určete
 \end{enumerate}
 \end{priklad}
 
-\begin{reseni}
+\begin{navod}
 Nechť $A$ je matice dané kuželosečky, $\bar{A}$ zmenšená matice kuželosečky, $\vec u=(u_1,u_2)^T$, $\vec s=(s_1,s_2,0)^T$, $\vec t=(s_1,s_2,0)^T$.
 \begin{enumerate}[$a.$]
 \item Spočtením determinantu $A$.
@@ -311,7 +359,7 @@ Nechť $A$ je matice dané kuželosečky, $\bar{A}$ zmenšená matice kuželose�
 \item je řešením rovnice $A\vec t = 0.$
 \item Doplněním na čtverec.
 \end{enumerate}
-\end{reseni}
+\end{navod}
 
 \begin{definition}
 \textbf{Kulová plocha} (resp. \textbf{koule}) se středem $S$ a poloměrem $r>0$ je množina všech bodů v prostoru,
