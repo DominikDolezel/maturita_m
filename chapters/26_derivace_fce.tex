@@ -201,6 +201,39 @@ Pak existuje alespoň jedno číslo $x_0\in (a,b)$ takové, že $f(x_0)=0$.
   Určete znaménka funkce $f(x)=\frac{1-x^2}{x}.$
 \end{priklad}
 
+\begin{reseni}
+	Zlomek rozložíme na součin
+	$$
+	    f(x) = \frac{(1-x)(1+x)}{x},
+	$$
+	určíme nulové body a zaneseme je na číselnou osu. V nulových bodech se mění znaménko.
+	Dále funkce není definovaná v bodě 0.
+	\begin{figure}[!ht]
+	\centering
+	\begin{circuitikz}
+	\tikzstyle{every node}=[font=\fontsize{13.1pt}{17.0pt}\selectfont]
+	\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (10,6.375) {0};
+	\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (11.25,6.375) {1};
+	\begin{scope}[transparency group, opacity=1]
+	\node at (11.25,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+	\end{scope}
+	\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (11.875,7.5) {$-$};
+	\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.010cm] at (10.625,7.5) {$+$};
+	\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (8.125,7.5) {$+$};
+	\draw (12.5,7) to[short] (7.5,7);
+	\begin{scope}[transparency group, opacity=1]
+	\node at (8.75,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+	\end{scope}
+	\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (8.75,6.375) {$-1$};
+	\draw (10,7) to[short, -o] (10,7) ;
+	\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (9.375,7.5) {$-$};
+	\end{circuitikz}
+	\caption{Znaménka $f(x)$ na číselné ose}
+	\end{figure}
+	\par Funkce $f(x)$ je tedy kladná na intervalech $\left (-\infty, -1 \right >$ a $\left( 0, 1 \right > $
+	a záporná na intervalech $\left < -1, 0 \right ) $ a $\left < 1, \infty \right ) $.
+\end{reseni}
+
 \begin{veta}[Rolleho věta]
 Nechť funkce $f$ má následující vlastnosti:
 \begin{enumerate}[$i.$]

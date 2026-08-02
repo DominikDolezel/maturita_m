@@ -23,8 +23,46 @@ Určete monotónnost a lokální extrémy funkce $f(x)=\frac{x^4}{4-x^2}$.
 \end{priklad}
 
 \begin{reseni}
-Určíme, kdy je derivace kladná (tam funkce roste), resp. záporná (tam funkce klesá),
-resp. nulová (tam je stacionární bod).
+Spočteme první derivaci funkce $f(x)$. Je
+$$
+    f^\prime (x) = \frac{4x^3 \left( 4-x^2 \right ) - x^4 \left( -2x \right )  }{\left( 4-x^2 \right )^2 } = \frac{2x^3 \left( 8-x^2 \right ) }{\left( 4-x^2 \right )^2 } = \frac{2x^3 \left( 2 \sqrt{2} -x  \right ) \left( 2 \sqrt{2} + x \right )  }{\left( 2-x \right )^2 \left( 2+x \right )^2 }.
+$$
+Dále znaménka funkce $f^\prime (x)$ a zaneseme je na číselnou osu.
+\begin{figure}[!ht]
+\centering
+\begin{circuitikz}[scale=1.2]
+\tikzstyle{every node}=[font=\fontsize{15pt}{20pt}\selectfont]
+\draw (6.25,8.25) to[short] (16.25,8.25);
+\begin{scope}[transparency group, opacity=1]
+\node at (11.25,8.25) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+\end{scope}
+\draw (8.75,8.25) to[short, -o] (8.75,8.25) ;
+\draw (8.5,8.25) to[short, -o] (8.75,8.25) ;
+\draw (13.5,8.25) to[short, -o] (13.75,8.25) ;
+\begin{scope}[transparency group, opacity=1]
+\node at (7.625,8.25) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+\end{scope}
+\begin{scope}[transparency group, opacity=1]
+\node at (14.875,8.25) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+\end{scope}
+\node [inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (13.75,7.625) {(2)};
+\node [inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (14.875,7.625) {$2\sqrt{2}$};
+\node [inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (8.75,7.625) {$(-2)$};
+\node [inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (7.25,7.625) {$-2\sqrt{2}$};
+\node [inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (11.25,7.625) {0};
+\node [inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (15.625,8.75) {$-$};
+\node [inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (14.375,8.75) {$+$};
+\node [inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (12.5,8.75) {$+$};
+\node [inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (10,8.75) {$-$};
+\node [inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (8.125,8.75) {$-$};
+\node [inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (6.875,8.75) {$+$};
+\end{circuitikz}
+\caption{Znaménka funkce $f^\prime (x)$ na číselné ose}
+\end{figure}
+\par Odsud vidíme, že funkce $f(x)$ je rostoucí na intervalech $\left < -\infty, -2 \sqrt{2}\right > $,
+$\left < 0, 2 \right ) $ a $\left ( 2, 2 \sqrt{2} \right > $ a klesající na intervalech
+$\left < -2 \sqrt{2}, -2 \right ) $, $\left ( -2, 0 \right > $ a $\left < 2 \sqrt{2}, \infty \right ) $.
+Lokální maximum je pak v bodě $-2 \sqrt{2}$ a $2 \sqrt{2}$ a lokální minimum v bodě $0$.
 \end{reseni}
 
 \begin{definition}
@@ -106,13 +144,26 @@ funkce $f$ v $+\infty$ (resp. $-\infty$), jestliže
 \end{veta}
 
 \begin{priklad}
-Najděte asymptoty grafu funkce $y=\frac{x^2-2x}{x-1}.$
+Najděte asymptoty grafu funkce $f(x)=\frac{x^2-2x}{x-1}.$
 \end{priklad}
 
 \begin{reseni}
-Asymptoty bez směrnice: řešíme levé a pravé limity v bodech nespojitosti.
-Asymptoty se směrnicí: hledáme přímku $y=ax+b$, kde $a=\lim_{x\to \pm \infty}\frac{f(x)}{x}$ a
-$b=\lim_{x\to \pm \infty}(f(x)-ax).$
+Asymptoty bez směrnice nalezneme počítáním jednostranných limit v bodech nespojitosti. Funkce $f(x)$ má jediný
+bod nespojitosti, a to $x = 1$. Pak je
+$$
+\lim_{x \to 1 +} \frac{x^2-2x}{x-1} = \frac{1-2}{0+} = \frac{-1}{0+} = -\infty.
+$$
+Obdobně $\lim_{x \to 1 -}f(x) = \infty$. U asymptot se směrnicí hledáme přímku $y=ax+b$,
+kde $a=\lim_{x\to \pm \infty}\frac{f(x)}{x}$ a
+$b=\lim_{x\to \pm \infty}(f(x)-ax).$ Je tedy
+$$
+    a = \lim_{x\to \pm \infty} \frac{x-2}{x-1} \cdot \frac{\frac{1}{x}}{\frac{1}{x}} = \lim_{x\to \pm \infty} \frac{1 - \frac{2}{x}}{1 - \frac{1}{x}} = 1.
+$$
+Potom
+$$
+    b= \lim_{x\to \pm \infty} \frac{x^2 - 2x - x(x-1)}{x-1} = \lim_{x\to \pm \infty} \frac{-x}{x-1} \cdot \frac{\frac{1}{x}}{\frac{1}{x}} = \lim_{x\to \pm \infty} \frac{-1}{1 - \frac{1}{x}} = -1.
+$$
+Asymptota se směrnicí do $\pm \infty$ je tedy přímka $x-1$.
 \end{reseni}
 
 \begin{pozn}
