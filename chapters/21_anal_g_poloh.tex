@@ -395,7 +395,47 @@ příčku $p,q$, která prochází bodem $M$.
 \end{priklad}
 
 \begin{reseni}
-Obdobně jako v příkladu \ref{prmimob} dostaneme $\overrightarrow{MA}=x\overrightarrow{MB}+m\vec v-k\vec u$,
-tedy $A-M=x(B-M)+m\vec v - k\vec u$. Máme tedy
-sosutavu tří rovnic o třech neznámých.
+Obdobně jako v příkladu \ref{prmimob} položme $P=A+k\vec u$ a $Q = B+l\vec v$. Potom má platit
+$$
+Q-M = X\cdot \left( P-M \right ) ,
+$$
+ po dosazení máme
+ $$
+    B + l\vec v - M = x + \underbrace{xk}_{m} \vec u - xM.
+ $$
+Po úpravě
+$$
+    \overrightarrow{MB} = x \overrightarrow{MA} + m \vec u - l\vec v.
+$$
+Máme tedy soustavu tří rovnic o třech neznámých, kterou si zapíšeme do matice a vyřešíme. Je
+$$
+\left (
+\begin{array}{c c c | c }
+\overrightarrow{MA} & \vec u & -\vec v & \overrightarrow{MB}\\
+\hline
+1 & 1 & -3 & 0 \\
+4 & 2 & -1 & 2 \\
+7 & 1 & 0 & -6
+\end{array}
+\right ) \sim \left (
+\begin{array}{c c c | c }
+1 & 1 & -3 & 0 \\
+0 & -2 & 13 & 2 \\
+0 & -6 & 21 & -6
+\end{array}
+\right ) \sim \left (
+\begin{array}{c c c | c }
+1 & 1 & -3 & 0 \\
+0 & -2 & 13 & 2 \\
+0 & 0 & 1 & \frac{2}{3}
+\end{array}
+\right ) ,
+$$
+po dopočtení dostaneme $x = -\frac{4}{3}$, $m = \frac{10}{3}$ a $l = \frac{2}{3}$. Příčkou je tedy přímka
+$Q + t \cdot \overrightarrow{MQ}$, $t \in \mathbb R $, kde
+$$Q = B + \frac{2}{3} (3,1,0) = [0,-1,1] + \left( 2, \frac{2}{3}, 0 \right ) =\left [2,-\frac{1}{3}, 1\right], $$
+pak je
+$$
+    \overrightarrow{MQ} = [0,1,-5] - \left [2,-\frac{1}{3}, 1\right] = \left( -2, \frac{2}{3}, -6 \right ).
+$$
 \end{reseni}
