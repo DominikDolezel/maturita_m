@@ -16,42 +16,197 @@
 {\large\itshape{a kolektiv}\par}
 
 
-\vspace{10em}
-\begin{figure}[ht!]
-\begin{center}
-  \begin{tikzpicture}
-  \begin{axis}[
-      axis lines = middle,
-      xlabel = \(x\),
-      ylabel = {\(y\)},
-      xmin=-1.1,
-      xmax=1.1,
-      ymin=-1.1,
-      ymax=1.6,
-      xtick = \empty,
-      ytick = \empty,
-      line width=2pt,
-  ]
-  %Below the red parabola is defined
-  \addplot [
-      domain=-1:1,
-      samples=500,
-      color=red,
-  ]
-  {abs(x)^(2/3)+sqrt(1 - x^2)};
+\vspace{12em}
+\noindent\makebox[\textwidth][c]{
+\begin{tikzpicture}
+\definecolor{c1}{HTML}{292f56}
+\definecolor{c2}{HTML}{27345e}
+\definecolor{c3}{HTML}{223a65}
+\definecolor{c4}{HTML}{1b406c}
+\definecolor{c5}{HTML}{0e4773}
+\definecolor{c6}{HTML}{004e78}
+\definecolor{c7}{HTML}{00557c}
+\definecolor{c8}{HTML}{005c7e}
+\definecolor{c9}{HTML}{00627d}
+\definecolor{c10}{HTML}{00687c}
+\definecolor{c11}{HTML}{006f7b}
+\definecolor{c12}{HTML}{00757a}
+\definecolor{c13}{HTML}{007c78}
+\definecolor{c14}{HTML}{008275}
+\definecolor{c15}{HTML}{008971}
+\definecolor{c16}{HTML}{008f6b}
+\definecolor{c17}{HTML}{009662}
+\definecolor{c18}{HTML}{009d55}
+\definecolor{c19}{HTML}{00a147}
+\definecolor{c20}{HTML}{39a434}
+\definecolor{c21}{HTML}{57a716}
+\begin{axis}[
+    width=1.5\textwidth,
+    height=14cm,
+    axis lines=none,
+    grid=both,
+    major grid style={color=black!25, line width=0.6pt},
+    minor grid style={color=black!10, line width=0.3pt},
+    xmin=-7, xmax=7,
+    ymin=-7, ymax=9.5,
+    minor x tick num=4,
+    minor y tick num=4,
+    ticks=none
+]
 
-  \addplot [
-      domain=-1:1,
-      samples=500,
-      color=red,
-      ]
-      {abs(x)^(2/3)-sqrt(1 - x^2)};
+    % Top bold blue curve (maximum amplitude)
+    \addplot[
+        domain=-7:7,
+        samples=100,
+        c21,
+        thick
+    ] { -7 * sin(pi/(2*3.05) *(deg(x) +2.36))+2 };
 
-  \end{axis}
-  \end{tikzpicture}
-  \caption*{Graf $x^2+ \left [ y- x^\frac{2}{3} \right ]^2 = 1$}
-\end{center}
-\end{figure}
+    % Bottom black reference curve
+    \addplot[
+        domain=-7:7,
+        samples=100,
+        thick,
+        c1
+    ] { sin(deg(x)) };
+
+    % mezičáry
+    \addplot[
+        domain=-7:7,
+        samples=100,
+        c2,
+        thick
+    ] { (1/20) *  (-7 * sin(pi/(2*3.05) *(deg(x) +2.36))+2) + (19/20) * sin(deg(x))};
+
+    % mezičáry
+    \addplot[
+        domain=-7:7,
+        samples=100,
+        c3,
+        thick
+    ] { (2/20) *  (-7 * sin(pi/(2*3.05) *(deg(x) +2.36))+2) + (18/20) * sin(deg(x))};
+    % mezičáry
+    \addplot[
+        domain=-7:7,
+        samples=100,
+        c4,
+        thick
+    ] { (3/20) *  (-7 * sin(pi/(2*3.05) *(deg(x) +2.36))+2) + (17/20) * sin(deg(x))};
+    % mezičáry
+    \addplot[
+        domain=-7:7,
+        samples=100,
+        c5,
+        thick
+    ] { (4/20) *  (-7 * sin(pi/(2*3.05) *(deg(x) +2.36))+2) + (16/20) * sin(deg(x))};
+    % mezičáry
+    \addplot[
+        domain=-7:7,
+        samples=100,
+        c6,
+        thick
+    ] { (5/20) *  (-7 * sin(pi/(2*3.05) *(deg(x) +2.36))+2) + (15/20) * sin(deg(x))};
+    % mezičáry
+    \addplot[
+        domain=-7:7,
+        samples=100,
+        c7,
+        thick
+    ] { (6/20) *  (-7 * sin(pi/(2*3.05) *(deg(x) +2.36))+2) + (14/20) * sin(deg(x))};
+    % mezičáry
+    \addplot[
+        domain=-7:7,
+        samples=100,
+        c8,
+        thick
+    ] { (7/20) *  (-7 * sin(pi/(2*3.05) *(deg(x) +2.36))+2) + (13/20) * sin(deg(x))};
+    % mezičáry
+    \addplot[
+        domain=-7:7,
+        samples=100,
+        c9,
+        thick
+    ] { (8/20) *  (-7 * sin(pi/(2*3.05) *(deg(x) +2.36))+2) + (12/20) * sin(deg(x))};
+    % mezičáry
+    \addplot[
+        domain=-7:7,
+        samples=100,
+        c10,
+        thick
+    ] { (9/20) *  (-7 * sin(pi/(2*3.05) *(deg(x) +2.36))+2) + (11/20) * sin(deg(x))};
+    % mezičáry
+    \addplot[
+        domain=-7:7,
+        samples=100,
+        c11,
+        thick
+    ] { (10/20) *  (-7 * sin(pi/(2*3.05) *(deg(x) +2.36))+2) + (10/20) * sin(deg(x))};
+    % mezičáry
+    \addplot[
+        domain=-7:7,
+        samples=100,
+        c12,
+        thick
+    ] { (11/20) *  (-7 * sin(pi/(2*3.05) *(deg(x) +2.36))+2) + (9/20) * sin(deg(x))};
+    % mezičáry
+    \addplot[
+        domain=-7:7,
+        samples=100,
+        c13,
+        thick
+    ] { (12/20) *  (-7 * sin(pi/(2*3.05) *(deg(x) +2.36))+2) + (8/20) * sin(deg(x))};
+    % mezičáry
+    \addplot[
+        domain=-7:7,
+        samples=100,
+        c14,
+        thick
+    ] { (13/20) *  (-7 * sin(pi/(2*3.05) *(deg(x) +2.36))+2) + (7/20) * sin(deg(x))};
+    % mezičáry
+    \addplot[
+        domain=-7:7,
+        samples=100,
+        c15,
+        thick
+    ] { (14/20) *  (-7 * sin(pi/(2*3.05) *(deg(x) +2.36))+2) + (6/20) * sin(deg(x))};
+    % mezičáry
+    \addplot[
+        domain=-7:7,
+        samples=100,
+        c16,
+        thick
+    ] { (15/20) *  (-7 * sin(pi/(2*3.05) *(deg(x) +2.36))+2) + (5/20) * sin(deg(x))};
+    % mezičáry
+    \addplot[
+        domain=-7:7,
+        samples=100,
+        c17,
+        thick
+    ] { (16/20) *  (-7 * sin(pi/(2*3.05) *(deg(x) +2.36))+2) + (4/20) * sin(deg(x))};
+    % mezičáry
+    \addplot[
+        domain=-7:7,
+        samples=100,
+        c18,
+        thick
+    ] { (17/20) *  (-7 * sin(pi/(2*3.05) *(deg(x) +2.36))+2) + (3/20) * sin(deg(x))};
+    % mezičáry
+    \addplot[
+        domain=-7:7,
+        samples=100,
+        c19,
+        thick
+    ] { (18/20) *  (-7 * sin(pi/(2*3.05) *(deg(x) +2.36))+2) + (2/20) * sin(deg(x))};
+    % mezičáry
+    \addplot[
+        domain=-7:7,
+        samples=100,
+        c20,
+        thick
+    ] { (19/20) *  (-7 * sin(pi/(2*3.05) *(deg(x) +2.36))+2) + (1/20) * sin(deg(x))};
+\end{axis}
+\end{tikzpicture}%
+}
 \vfill
 {\large \par}
 \endgroup
