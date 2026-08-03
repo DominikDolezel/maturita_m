@@ -1,8 +1,8 @@
 \section{Analytická geometrie lineárních útvarů -- metrické vlastnosti}
 \begin{definition}
     Nechť $A,B \subseteq \mathbb E_3$ jsou dva podprostory $\mathbb E_3$. \textbf{Vzdáleností
-    podprostorů} $A,B$ nazveme nezáporné reálné číslo $\varrho(A,B)$ definované jako
-    $$\varrho(A,B) = \min \{ |XY|; X\in A, Y\in B \},$$
+    podprostorů} $A,B$ nazveme nezáporné reálné číslo $\rho(A,B)$ definované jako
+    $$\rho(A,B) = \min \{ |XY|; X\in A, Y\in B \},$$
     kde $|XY|$ je délka úsečky $XY.$
 \end{definition}
 
@@ -12,7 +12,7 @@
 
 \begin{veta}
     Nechť $A[a_1,a_2]\in \mathbb E_2$ je bod, $p\colon ax+by+c=0$ je přímka. Pak
-    $$\varrho(A,p)=\frac{|aa_1+ba_2+c|}{\sqrt{a^2+b^2} }.$$
+    $$\rho(A,p)=\frac{|aa_1+ba_2+c|}{\sqrt{a^2+b^2} }.$$
 \end{veta}
 
 \begin{pozn}
@@ -21,7 +21,7 @@
 \end{pozn}
 
 \begin{priklad}\label{primkaabod}
-Určete $\varrho(A,p), A[1,0,1], p=\left \{ [2-t,t,0]; t \in \mathbb R \right \} $.
+Určete $\rho(A,p), A[1,0,1], p=\left \{ [2-t,t,0]; t \in \mathbb R \right \} $.
 \end{priklad}
 
 \begin{reseni}
@@ -29,7 +29,7 @@ Přímka $p=p(P,\vec u), $ kde $P[2,0,0],\vec u(-1,1,0).$
 \begin{enumerate}[1.]
 \item způsob: Nechť $A_0=[2-t^*,t^*,0]$. Pak $\vec n = \overrightarrow{AA_0}=A_0-A=(1-t^*,t^*,-1).$
 Platí $\vec u\cdot\vec n=0,$ tedy $t^*=-\frac{1}{2},$ odtud $A_0[1{,}5;0{,}5;0].$ Vzdálenost
-$\varrho(A,p)$ je pak $\left |\overrightarrow{AA_0}\right |.$
+$\rho(A,p)$ je pak $\left |\overrightarrow{AA_0}\right |.$
 \item způsob: Najdeme takovou rovinu, která je kolmá na přímku $p$ a leží na ní bod $A$
 (normálový vektor roviny je tedy směrový vektor přímky). Dále najdeme průsečík přímky
 $p$ s hledanou rovinou -- vzdálenost dvou bodů už počítat umíme.
@@ -40,12 +40,12 @@ minimum velikosti vektoru $\overrightarrow{AX}.$
 
 \begin{veta}\label{vzdbodrov}
     Nechť $A[a_1,a_2,a_3]\in \mathbb E_3$ je bod, $\alpha\colon ax+by+cz+d=0$ je rovina. Pak
-    $$\varrho(A,\alpha)=\frac{|aa_1+ba_2+ca_2+d|}{\sqrt{a^2+b^2+c^2} }.$$
+    $$\rho(A,\alpha)=\frac{|aa_1+ba_2+ca_2+d|}{\sqrt{a^2+b^2+c^2} }.$$
 \end{veta}
 
 \begin{veta}\label{vzdpr}
     Nechť $p\colon ax+by+c=0,q\colon ax+by+d=0$ jsou dvě rovnoběžné přímky. Pak
-    $$\varrho(p,q)=\frac{|d-c|}{\sqrt{a^2+b^2} }.$$
+    $$\rho(p,q)=\frac{|d-c|}{\sqrt{a^2+b^2} }.$$
 \end{veta}
 
 \begin{pozn}
@@ -60,7 +60,7 @@ minimum velikosti vektoru $\overrightarrow{AX}.$
 
 \begin{veta}\label{dverov}
     Nechť $\alpha\colon ax+by+cz+d=0,\beta\colon ax+by+cz+e=0$ jsou dvě rovnoběžné roviny. Pak
-    $$\varrho(\alpha,\beta)=\frac{|e-d|}{\sqrt{a^2+b^2+c^2} }.$$
+    $$\rho(\alpha,\beta)=\frac{|e-d|}{\sqrt{a^2+b^2+c^2} }.$$
 \end{veta}
 
 \begin{pozn}
