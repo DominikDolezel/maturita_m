@@ -64,37 +64,37 @@ $\left \{ S(D,f); D\in \mathscr D(a,b) \right \} $ je zdola omezená.
 \begin{definition}
 Nechť $f(x)$ je omezená na intervalu $\left<  a,b \right> .$ Označme
 \begin{align*}
-    \int_{\underline{a}} ^b f(x) \d x & = \sup \left \{ s(D,f); D \in \mathscr D(a,b) \right \}, \\
-    \int_{a} ^{\underline{b}} f(x) \d x & = \inf \left \{ S(D,f); D \in \mathscr D(a,b) \right \}.
+    \int_{\underline{a}} ^b f(x) \, \d x & = \sup \left \{ s(D,f); D \in \mathscr D(a,b) \right \}, \\
+    \int_{a} ^{\underline{b}} f(x) \, \d x & = \inf \left \{ S(D,f); D \in \mathscr D(a,b) \right \}.
 \end{align*}
-Číslo $\int_{\underline{a}} ^b f(x)\d x$ (resp. $\int_{a} ^{\underline{b}} f(x) \d x$)
+Číslo $\int_{\underline{a}} ^b f(x)\, \d x$ (resp. $\int_{a} ^{\underline{b}} f(x) \, \d x$)
 nazýváme \textbf{dolní} (resp. \textbf{horní}) \textbf{integrál} funkce $f(x)$ od
 $a$ do $b$.
 \end{definition}
 
 \begin{veta}
 Nechť $f(x)$ je omezená na intervalu $\left<  a,b \right>. $ Pak
-$$\int_{\underline{a}} ^b f(x)\d x \leq \int_{a} ^{\underline{b}} f(x) \d x.$$
+$$\int_{\underline{a}} ^b f(x)\, \d x \leq \int_{a} ^{\underline{b}} f(x) \, \d x.$$
 \end{veta}
 
 \begin{definition}
 Nechť $f(x)$ je omezená na intervalu $\left<  a,b \right> .$ Pak funkce
 $f(x)$ je na intervalu $\left<  a,b \right> $ (Riemmanovsky) \textbf{integrovatelná}
 (integrace schopna), jestliže
-$$\int_{\underline{a}} ^b f(x)\d x = \int_{a} ^{\underline{b}} f(x) \d x.$$
+$$\int_{\underline{a}} ^b f(x)\, \d x = \int_{a} ^{\underline{b}} f(x) \, \d x.$$
 Je-li $f(x)$ na intervalu $\left<  a,b \right> $ integrovatelná, klademe
-$$\int_{\underline{a}} ^b f(x)\d x = \int_{a} ^{\underline{b}} f(x) \d x = \int_{a} ^b f(x) \d x.$$
-Číslo $\int_{a} ^b f(x)\d x$ nazýváme \textbf{Riemannův integrál} funkce $f(x)$ od
-$a$ do $b$. Pokud $\int_{\underline{a}} ^b f(x)\d x < \int_{a} ^{\underline{b}} f(x) \d x$,
+$$\int_{\underline{a}} ^b f(x)\, \d x = \int_{a} ^{\underline{b}} f(x) \, \d x = \int_{a} ^b f(x) \, \d x.$$
+Číslo $\int_{a} ^b f(x)\, \d x$ nazýváme \textbf{Riemannův integrál} funkce $f(x)$ od
+$a$ do $b$. Pokud $\int_{\underline{a}} ^b f(x)\, \d x < \int_{a} ^{\underline{b}} f(x) \, \d x$,
 pak $f(x)$ není na intervalu $\left<  a,b \right> $ integrovatelná a
-$\int_{a} ^b f(x)\d x$ nedefinujeme.
+$\int_{a} ^b f(x)\, \d x$ nedefinujeme.
 \end{definition}
 
 \begin{veta}[Newtonova--Leibnizova věta]
 Nechť $f(x)$ je integrovatelná na intervalu $\left<  a,b \right>$, $F(x)$ je spojitá
 na intervalu $\left<  a,b \right> $. Buď $F(x)$ primitivní funkce k funkci $f(x)$
 na intervalu $\left ( a,b \right ) $. Pak platí
-$$\int_{a} ^b f(x)\d x=F(b)-F(a).$$
+$$\int_{a} ^b f(x)\, \d x=F(b)-F(a).$$
 \end{veta}
 
 \begin{veta}
@@ -103,42 +103,42 @@ intervalu $\left<  a,b \right> $ integrovatelná.
 \end{veta}
 
 \begin{priklad}
-Vypočtěte integrál $\int_0^{\frac{\pi}{4}}\cos x \d x.$
+Vypočtěte integrál $\int_0^{\frac{\pi}{4}}\cos x \, \d x.$
 \end{priklad}
 
 \begin{reseni}
 Platí
-$$\int_0^{\frac{\pi}{4}}\cos x \d x=\left [ \sin x  \right ]_0^{\frac{\pi}{4}}=\sin \frac{\pi}{4}-\sin 0=\frac{\sqrt{2} }{2}. $$
+$$\int_0^{\frac{\pi}{4}}\cos x \, \d x=\left [ \sin x  \right ]_0^{\frac{\pi}{4}}=\sin \frac{\pi}{4}-\sin 0=\frac{\sqrt{2} }{2}. $$
 \end{reseni}
 
 \begin{veta}
 Nechť $f(x), f_1(x),\dots,f_n(x), g(x)$ jsou integrovatelné funkce na intervalu $\left<  a,b \right> $
 a~$c; c_1,\dots,c\in \mathbb R.$ Pak
 \begin{enumerate}[$i.$]
-\item funkce $f(x)+g(x)$ je integrovatelná na int. $\left<  a,b \right> $ a platí
-$$\int _a^b \left [ f(x)+g(x) \right ] \d x = \int_a ^b f(x)\d x + \int_a ^b g(x) \d x,$$
-\item funkce $c\cdot f(x)$ je integrovatelná na int. $\left<  a,b \right> $ a platí
-$$\int _a ^b c\cdot f(x) \d x = c \int _a ^b f(x)\d x,$$
-\item funkce $c_1\cdot f_1(x) + \dots + c_n \cdot f_n(x)$ je integrovatelná na int. $\left<  a,b \right> $ a platí
-$$\int_a ^b \left [ c_1\cdot f_1(x) + \dots + c_n \cdot f_n (x) \right ]\d x = c_1 \int _a ^b f_1(x)\d x + \dots + c_n \int _a ^b f_n(x)\d x. $$
+\item funkce $f(x)+g(x)$ je integrovatelná na intervalu $\left<  a,b \right> $ a platí
+$$\int _a^b \left [ f(x)+g(x) \right ] \, \d x = \int_a ^b f(x)\, \d x + \int_a ^b g(x) \, \d x,$$
+\item funkce $c\cdot f(x)$ je integrovatelná na intervalu $\left<  a,b \right> $ a platí
+$$\int _a ^b c\cdot f(x) \, \d x = c \int _a ^b f(x)\, \d x,$$
+\item funkce $c_1\cdot f_1(x) + \dots + c_n \cdot f_n(x)$ je integrovatelná na intervalu $\left<  a,b \right> $ a platí
+$$\int_a ^b \left [ c_1\cdot f_1(x) + \dots + c_n \cdot f_n (x) \right ]\, \d x = c_1 \int _a ^b f_1(x)\, \d x + \dots + c_n \int _a ^b f_n(x)\, \d x. $$
 \end{enumerate}
 \end{veta}
 
 \begin{veta}
 Nechť $f(x)$ je integrovatelná a nezáporná na intervalu $\left<  a,b \right> $. Pak
-$$\int_a ^b f(x) \d x \geq 0.$$
+$$\int_a ^b f(x) \, \d x \geq 0.$$
 \end{veta}
 
 \begin{veta}
 Nechť funkce $f(x),g(x)$ jsou integrovatelné na intervalu $\left<  a,b \right> .$
 Nechť pro každé $x\in \left<  a,b \right> \colon f(x)\leq g(x).$ Pak
-$$\int_a^b f(x) \d x \leq \int_a^b g(x) \d x.$$
+$$\int_a^b f(x) \, \d x \leq \int_a^b g(x) \, \d x.$$
 \end{veta}
 
 \begin{veta}
 Nechť $a<b<c$ jsou reálná čísla a $f(x)$ je integrovatelná na intervalech
 $\left<  a,b \right>$, $\left<  b,c \right>$. Pak
-$$\int_a^c f(x)\d x = \int_a^b f(x)\d x + \int_b^c f(x)\d x.$$
+$$\int_a^c f(x)\, \d x = \int_a^b f(x)\, \d x + \int_b^c f(x)\, \d x.$$
 \end{veta}
 
 \begin{definition}\label{pocastechspoj}
@@ -150,14 +150,14 @@ bodů $c_1,\dots,c_n; a<c_1<\dots<c_n<b.$
 \begin{veta}
 Nechť funkce $f(x)$ je po částech spojitá na intervalu $\left<  a,b \right> $, jako
 v definici \ref{pocastechspoj}. Pak
-$$\int_a^b f(x)\d x = \int_a^{c_1}f(x)\d x + \int_{c_1}^{c_2}f(x)\d x + \dots + \int_{c_n}^b f(x)\d x.$$
+$$\int_a^b f(x)\, \d x = \int_a^{c_1}f(x)\, \d x + \int_{c_1}^{c_2}f(x)\, \d x + \dots + \int_{c_n}^b f(x)\, \d x.$$
 \end{veta}
 
 \begin{definition}
 Je-li $f(x)$ definována v čísle $a \in \mathbb R,$ klademe
-$$\int _a ^a f(x)\d x = 0.$$
+$$\int _a ^a f(x)\, \d x = 0.$$
 Je-li $f(x)$ integrovatelná na intervalu $\left<  a,b \right>$, definujeme
-$$\int_b^a f(x)\d x = -\int_a^b f(x)\d x.$$
+$$\int_b^a f(x)\, \d x = -\int_a^b f(x)\, \d x.$$
 \end{definition}
 
 
@@ -166,7 +166,7 @@ Nechť $\varphi (t)$, $\varphi\colon  \left<  \alpha, \beta \right>\to \left<  a
 $\varphi^\prime (t)$ a~nechť $f(x)$ je spojitá na intervalu $\left<  a,b \right>$.
 Označme
 $\varphi(\alpha)=a, \varphi(\beta)=b.$ Pak platí
-$$\int _a ^b f(x)\d x = \int _\alpha ^\beta f \left [ \varphi(t) \right ]\cdot \varphi^\prime (t)\d t. $$
+$$\int _a ^b f(x)\, \d x = \int _\alpha ^\beta f \left [ \varphi(t) \right ]\cdot \varphi^\prime (t)\, \d t. $$
 \end{veta}
 
 \begin{pozn}
@@ -174,16 +174,16 @@ $$\int _a ^b f(x)\d x = \int _\alpha ^\beta f \left [ \varphi(t) \right ]\cdot \
 \end{pozn}
 
 \begin{priklad}
-Vypočtěte integrál $\int _1^2 \frac{x}{(1+x^2)}\d x.$
+Vypočtěte integrál $\int _1^2 \frac{x}{(1+x^2)}\, \d x.$
 \end{priklad}
 
 \begin{reseni}
 Musíme provést transformaci mezí:
 \begin{align*}
-\int _1^2 \frac{x}{(1+x^2)}\d x &= \left |\begin{array}{l l}
+\int _1^2 \frac{x}{(1+x^2)}\, \d x &= \left |\begin{array}{l l}
     t=x^2+1 & x=2\implies t=5 \\
-    \d t = 2x \d x & x=1\implies t=2
-\end{array}\right | = \frac{1}{2}\int _2^5 \frac{1}{t^{\frac{3}{2}}}\d t \\
+    \d t = 2x \, \d x & x=1\implies t=2
+\end{array}\right | = \frac{1}{2}\int _2^5 \frac{1}{t^{\frac{3}{2}}}\, \d t \\
 &= \frac{1}{2}\left [ \frac{t^{-\frac{1}{2}}}{-\frac{1}{2}} \right ] _2^5 = \frac{1}{2}\left ( \frac{5^{-\frac{1}{2}}}{-\frac{1}{2}}-\frac{2^{-\frac{1}{2}}}{-\frac{1}{2}} \right )=-\frac{1}{\sqrt{5} }+\frac{1}{\sqrt{2} }.
 \end{align*}
 \end{reseni}
@@ -191,30 +191,30 @@ Musíme provést transformaci mezí:
 \begin{veta}[O integraci \textit{per partes} pro určité integrály]
 Nechť funkce $u(x)$ a $v(x)$ mají na intervalu $\left<  a,b \right> $ spojité derivace
 $u^\prime (x)$ a $v^\prime (x)$. Pak platí
-$$\int_a ^b u^\prime (x)v(x)\d x = \left [ u(x)v(x) \right ]_a^b -\int _a^b u(x)v^\prime(x)\d x.$$
+$$\int_a ^b u^\prime (x)v(x)\, \d x = \left [ u(x)v(x) \right ]_a^b -\int _a^b u(x)v^\prime(x)\, \d x.$$
 \end{veta}
 
 \begin{priklad}
-Vypočtěte integrál $\int _0^{\frac{\pi}{2}}x \cos \frac{x}{2}\d x$.
+Vypočtěte integrál $\int _0^{\frac{\pi}{2}}x \cos \frac{x}{2}\, \d x$.
 \end{priklad}
 
 \begin{reseni}
 Platí
 \begin{align*}
-\int _0^{\frac{\pi}{2}}x \cos \frac{x}{2}\d x &= \left | \begin{array}{ll}
+\int _0^{\frac{\pi}{2}}x \cos \frac{x}{2}\, \d x &= \left | \begin{array}{ll}
     u=x & u^\prime = 1 \\
     v^\prime = \cos \frac{x}{2} & v = 2\sin \frac{x}{2}
 \end{array}   \right | \\
-& =\left [ x\cdot2\sin \frac{x}{2} \right ]_0^{\frac{\pi}{2}}-\int_0^{\frac{\pi}{2}}2\sin \frac{x}{2}\d x =\frac{\pi}{2}\cdot \frac{\sqrt{2} }{2}-0-\left [ -4\cos \frac{x}{2} \right ]_0^{\frac{\pi}{2}}\\
+& =\left [ x\cdot2\sin \frac{x}{2} \right ]_0^{\frac{\pi}{2}}-\int_0^{\frac{\pi}{2}}2\sin \frac{x}{2}\, \d x =\frac{\pi}{2}\cdot \frac{\sqrt{2} }{2}-0-\left [ -4\cos \frac{x}{2} \right ]_0^{\frac{\pi}{2}}\\
 &= \pi \cdot \frac{\sqrt{2} }{2}+4\cdot \frac{\sqrt{2} }{2}+4.
 \end{align*}
 \end{reseni}
 
 \begin{pozn}
     Je-li $f(x)$ spojitá a nezáporná na intervalu $\left<  a,b \right>$, je
-    $\int_a ^b f(x)\d x$ obsah plochy omezené osou $x$, přímkami $x=a, x=b$ a
+    $\int_a ^b f(x)\, \d x$ obsah plochy omezené osou $x$, přímkami $x=a, x=b$ a
     grafem funkce $y=f(x)$. Platí tedy
-    $$S=\int_a^b f(x)\d x.$$
+    $$S=\int_a^b f(x)\, \d x.$$
 \end{pozn}
 
 \begin{priklad}
@@ -224,7 +224,7 @@ Vypočtěte obsah plochy $M=\left \{ [x,y]; y \geq  x^2 , y \leq 2x\right \} $.
 \begin{reseni}
 Půsečíky funkcí $x^2$ a $2x$ jsou v bodech $x_1=0,x_2=2$. Plochu pak spočítáme
 jako
-$$\int_0^2 2x\d x - \int_0^2 x^2 \d x.$$
+$$\int_0^2 2x\, \d x - \int_0^2 x^2 \, \d x.$$
 Dostaneme tedy
 $$
     S = \left [ 2 \cdot \frac{x^2}{2} \right ]_0^2 - \left [ \frac{x^3}{3} \right ]_0^2 = 4 - \frac{8}{3} = \frac{4}{3}.
@@ -236,11 +236,11 @@ Vypočtěte obsah kruhu o poloměru $r$.
 \end{priklad}
 
 \begin{reseni}
-Obsah horního půlkruhu dostaneme jako $S_1 = \int_{-r}^r \sqrt{r^2-x^2}\d x$, neboť
+Obsah horního půlkruhu dostaneme jako $S_1 = \int_{-r}^r \sqrt{r^2-x^2}\, \d x$, neboť
 $y = \sqrt{r^2-x^2}$ je rovnice kružnice o poloměru $r$. Tento integrál jsme již počítali v příkladě \ref{probsah},
 vyšlo
 $$
-    \int \sqrt{r^2-x^2}\d x = r^2 \left( \frac{\arcsin \left( \frac{x}{r} \right ) }{2} + \frac{1}{4} \sin 2 \left( \arcsin \left( \frac{x}{r} \right ) \right )  \right )   + c.
+    \int \sqrt{r^2-x^2}\, \d x = r^2 \left( \frac{\arcsin \left( \frac{x}{r} \right ) }{2} + \frac{1}{4} \sin 2 \left( \arcsin \left( \frac{x}{r} \right ) \right )  \right )   + c.
 $$
 Máme tedy
 \begin{align*}
@@ -260,7 +260,7 @@ $$
     dána množina bodů
     $M=\left \{ \left [ x,y \right ]; x \in \left<  a,b \right>,\linebreak y \in \left<  y, f(x) \right>    \right \} .$
     Nechť $M$ rotuje kolem osy $x$. Dostaneme rotační těleso, jehož objem je
-    $$V=\pi \int _a^b \left [ f(x) \right ]^2 \d x. $$
+    $$V=\pi \int _a^b \left [ f(x) \right ]^2 \, \d x. $$
 \end{pozn}
 
 \begin{priklad}
@@ -268,19 +268,19 @@ Vypočtěte objem koule o poloměru $r$.
 \end{priklad}
 
 \begin{reseni}
-Počítáme $\pi\int _{-r}^r(\sqrt{r^2-x^2} )^2 \d x=\pi\int_{-r}^r(r^2-x^2)\d x$. Je
+Počítáme $\pi\int _{-r}^r(\sqrt{r^2-x^2} )^2 \, \d x=\pi\int_{-r}^r(r^2-x^2)\, \d x$. Je
 \begin{align*}
-	\int_{-r}^r (r^2-x^2)\d x &= \int_{-r}^r r^2 \d x - \int_{-r}^r x^2 \d x = \left [ r^2 x \right ]_{-r}^r - \left [ \frac{x^3}{3} \right ]_{-r}^r \\
+	\int_{-r}^r (r^2-x^2)\, \d x &= \int_{-r}^r r^2 \, \d x - \int_{-r}^r x^2 \, \d x = \left [ r^2 x \right ]_{-r}^r - \left [ \frac{x^3}{3} \right ]_{-r}^r \\
 	&= r^2 \cdot r + r^2 \cdot r -\left( \frac{r^3}{3} + \frac{r^3 }{3} \right ) = 2r^3 - \frac{2}{3} r^3 = \frac{6-2}{3} r^3 = \frac{4}{3 }r^3.
 \end{align*}
 Celkem je tedy
-$$V = \pi \int_{-r}^r (r^2-x^2)\d x = \frac{4}{3}\pi r^3.$$
+$$V = \pi \int_{-r}^r (r^2-x^2)\, \d x = \frac{4}{3}\pi r^3.$$
 \end{reseni}
 
 \begin{pozn}
 Nechť je $f(x)$ funkce se spojitou derivací na intervalu $\left<  a,b \right> $. Délka
 grafu funkce $f(x)$ je
-$$L=\int_a^b \sqrt{1+(f^\prime(x))^2}\d x. $$
+$$L=\int_a^b \sqrt{1+(f^\prime(x))^2}\, \d x. $$
 \end{pozn}
 
 \begin{priklad}
@@ -298,23 +298,23 @@ $$
 $$
 Počítáme tedy
 $$
-    L_1 = \int _{-r}^{r} \sqrt{1+\left(\frac{-2x}{2 \sqrt{r^2 - x^2}}\right)^2}\d x = \int _{-r}^{r} \sqrt{1+\left (\frac{-x}{\sqrt{r^2 - x^2}}\right)^2}\d x,
+    L_1 = \int _{-r}^{r} \sqrt{1+\left(\frac{-2x}{2 \sqrt{r^2 - x^2}}\right)^2}\, \d x = \int _{-r}^{r} \sqrt{1+\left (\frac{-x}{\sqrt{r^2 - x^2}}\right)^2}\, \d x,
 $$
 což je obvod horní půlkružnice.
 Po úpravě dostaneme
 $$
-    L_1 = \int _{-r}^{r} \sqrt{1+\frac{x^2}{r^2-x^2}}\d x = \int _{-r}^{r} \sqrt{\frac{r^2 - x^2 + x^2}{r^2-x^2}}\d x = \int _{-r}^{r} \sqrt{\frac{r^2}{r^2-x^2}}\d x.
+    L_1 = \int _{-r}^{r} \sqrt{1+\frac{x^2}{r^2-x^2}}\, \d x = \int _{-r}^{r} \sqrt{\frac{r^2 - x^2 + x^2}{r^2-x^2}}\, \d x = \int _{-r}^{r} \sqrt{\frac{r^2}{r^2-x^2}}\, \d x.
 $$
 Nyní můžeme použít třeba substituci $x=r\sin t$. Pak je
 $$
     L_1 = \begin{vmatrix}
 	x=r\sin t \\
-	\d x = r \cos t \d t
-    \end{vmatrix} = \int_{-\frac{\pi}{2}}^\frac{\pi }{2} \sqrt{\frac{r^2}{r^2-r^2\sin^2 t}}\cdot r\cdot \cos t \d t,
+	\d x = r \cos t \, \d t
+    \end{vmatrix} = \int_{-\frac{\pi}{2}}^\frac{\pi }{2} \sqrt{\frac{r^2}{r^2-r^2\sin^2 t}}\cdot r\cdot \cos t \, \d t,
 $$
 kde jsme využili toho, že když $r=r \sin t$, pak $t = \frac{\pi}{2}$, obdobně pro $-r$. Dotáváme
 $$
-    L_1 = \int_{-\frac{\pi}{2}}^\frac{\pi }{2}r \cdot \frac{1}{ \cos t} \cdot \cos t \d t = \int_{-\frac{\pi}{2}}^\frac{\pi }{2} r \d t = \left [ rt \right ]_{-\frac{\pi }{2}}^\frac{\pi }{2} = \frac{\pi}{2} \cdot r + \frac{\pi }{2}\cdot r =\pi r.
+    L_1 = \int_{-\frac{\pi}{2}}^\frac{\pi }{2}r \cdot \frac{1}{ \cos t} \cdot \cos t \, \d t = \int_{-\frac{\pi}{2}}^\frac{\pi }{2} r \, \d t = \left [ rt \right ]_{-\frac{\pi }{2}}^\frac{\pi }{2} = \frac{\pi}{2} \cdot r + \frac{\pi }{2}\cdot r =\pi r.
 $$
 Celkový obvod je dvojnásobný, tedy
 $$
@@ -326,7 +326,7 @@ $$
     Nechť $f(x)$ je funkce se spojitou derivací na intervalu $\left<  a,b \right> .$
     Pak plášť rotačního kužele, který vznikne rotací grafu $f(x)$ kolem osy $x$, má
    povrch
-  $$S=2\pi\int_a^b f(x)\cdot \sqrt{1+(f^\prime(x))^2}\d x. $$
+  $$S=2\pi\int_a^b f(x)\cdot \sqrt{1+(f^\prime(x))^2}\, \d x. $$
 \end{pozn}
 
 \begin{priklad}
@@ -336,18 +336,18 @@ Určete povrch koule o poloměru $r$.
 \begin{reseni}
 Podle předchozích výpočtů můžeme přistoupit k počítání integrálu
 $$
-S=2\pi\int_{-r}^r \sqrt{r^2-x^2}\cdot \sqrt{1+\left ( \frac{-x}{\sqrt{r^2-x^2} } \right )^2 } \d x.
+S=2\pi\int_{-r}^r \sqrt{r^2-x^2}\cdot \sqrt{1+\left ( \frac{-x}{\sqrt{r^2-x^2} } \right )^2 } \, \d x.
 $$
 Nyní použijeme třeba substituci $x=r\sin t$. Dostaneme
 \begin{align*}
 L &= \begin{vmatrix}
 	x=r\sin t \\
-	\d x = r \cos t \d t
-\end{vmatrix} = 2 \pi \int _{-\frac{\pi }{2}}^{\frac{\pi }{2}} \sqrt{r^2-r^2 \sin^2 t} \cdot \sqrt{1 + \left( \frac{r^2 \sin^2 t }{\sqrt{r^2 - r^2 \sin^2 t}} \right )^2 } \cdot r \cos t \d t \\
-&=2 \pi \int _{-\frac{\pi }{2}}^{\frac{\pi }{2}}r \sqrt{1 - \sin^2 t} \cdot \sqrt{1 + \frac{r^2 \sin^2 t}{r^2-r^2\sin^2 t}}\cdot r \cos t \d t \\
-&= 2 \pi \int _{-\frac{\pi }{2}}^{\frac{\pi }{2}} r \cos t \cdot \sqrt{\frac{\sin^2 t}{\cos^2 t}} \cdot r \cos t \d t \\
-&= 2 \pi \int _{-\frac{\pi }{2}}^{\frac{\pi }{2}}r^2 \sin t \cos t \d t \\
-&= 2 \pi \int _{-\frac{\pi }{2}}^{\frac{\pi }{2}}r^2 \sin 2 t \d t \\
+	\d x = r \cos t \, \d t
+\end{vmatrix} = 2 \pi \int _{-\frac{\pi }{2}}^{\frac{\pi }{2}} \sqrt{r^2-r^2 \sin^2 t} \cdot \sqrt{1 + \left( \frac{r^2 \sin^2 t }{\sqrt{r^2 - r^2 \sin^2 t}} \right )^2 } \cdot r \cos t \, \d t \\
+&=2 \pi \int _{-\frac{\pi }{2}}^{\frac{\pi }{2}}r \sqrt{1 - \sin^2 t} \cdot \sqrt{1 + \frac{r^2 \sin^2 t}{r^2-r^2\sin^2 t}}\cdot r \cos t \, \d t \\
+&= 2 \pi \int _{-\frac{\pi }{2}}^{\frac{\pi }{2}} r \cos t \cdot \sqrt{\frac{\sin^2 t}{\cos^2 t}} \cdot r \cos t \, \d t \\
+&= 2 \pi \int _{-\frac{\pi }{2}}^{\frac{\pi }{2}}r^2 \sin t \cos t \, \d t \\
+&= 2 \pi \int _{-\frac{\pi }{2}}^{\frac{\pi }{2}}r^2 \sin 2 t \, \d t \\
 &= 2 \pi \left [ r^2 \cdot \frac{-\cos 2 t}{2} \right ]_{-\frac{\pi }{2}}^\frac{\pi }{2} \\
 &= 2 \pi \left( \left( \frac{1}{2}+\frac{1}{2} \right ) + \left( \frac{1}{2} + \frac{1}{2} \right )   \right ) \\
 &= 4\pi r^2.
