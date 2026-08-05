@@ -1,0 +1,59 @@
+    \begin{tikzpicture}[
+        scale=1.8,
+        text=textcolor,
+        angle fill/.style={fill=fillcolor, draw=arccolor, thick, line join=round},
+        line/.style={draw=linecolor, thick, line cap=round}
+    ]
+
+    % 1. Ostrý
+    \begin{scope}[xshift=0cm]
+        \filldraw[angle fill] (0,0) -- (0.6,0) arc (0:45:0.6) -- cycle;
+        \draw[line] (0,0) -- (1.2,0);
+        \draw[line] (0,0) -- (45:1.2);
+        \node at (0.6, 1.4) {ostrý};
+    \end{scope}
+
+    % 2. Pravý
+    \begin{scope}[xshift=2.5cm]
+        \filldraw[angle fill] (0,0) -- (0.6,0) arc (0:90:0.6) -- cycle;
+        \draw[line] (0,0) -- (1.2,0);
+        \draw[line] (0,0) -- (90:1.1);
+        \node at (0.6, 1.4) {pravý};
+    \end{scope}
+
+    % 3. Tupý
+    \begin{scope}[xshift=5.2cm]
+        \filldraw[angle fill] (0,0) -- (0.6,0) arc (0:115:0.6) -- cycle;
+        \draw[line] (0,0) -- (1.2,0);
+        \draw[line] (0,0) -- (115:1.2);
+        \node at (0.3, 1.4) {tupý};
+    \end{scope}
+
+    % 4. Přímý
+    \begin{scope}[xshift=8.2cm]
+        \filldraw[angle fill] (0,0) -- (0.6,0) arc (0:180:0.6) -- cycle;
+        \draw[line] (-1,0) -- (1,0);
+        \draw[line] (0,-0.15) -- (0,0.15); % středová značka
+        \node at (0, 1.4) {přímý};
+    \end{scope}
+
+    % Svorka (brace) přes konvexní úhly
+    \draw[decorate, decoration={brace, amplitude=6pt, raise=2pt}, linecolor, thick]
+        (-0.2, 1.8) -- (9.4, 1.8) node[midway, above=8pt, font=\large] {konvexní};
+
+    % 5. Konkávní
+    \begin{scope}[xshift=11.2cm]
+        \filldraw[angle fill] (0,0) -- (0.6,0) arc (0:225:0.6) -- cycle;
+        \draw[line] (0,0) -- (1.2,0);
+        \draw[line] (0,0) -- (225:1.2);
+        \node at (0.3, 1.4) {konkávní};
+    \end{scope}
+
+    % 6. Plný
+    \begin{scope}[xshift=14.2cm]
+        \filldraw[angle fill] (0,0) circle (0.6);
+        \draw[line] (0,0) -- (1.2,0);
+        \node at (0, 1.4) {plný};
+    \end{scope}
+
+    \end{tikzpicture}

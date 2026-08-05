@@ -171,64 +171,7 @@ Nechť $a\in \mathscr P$, $A\notin a$, $B\notin a$, $A\ne B$. Pak \textbf{přím
 
   \begin{figure}[ht!]
     \centering
-    \begin{tikzpicture}[
-        text=textcolor,
-        angle fill/.style={fill=fillcolor, draw=arccolor, thick, line join=round},
-        line/.style={draw=linecolor, thick, line cap=round}
-    ]
-
-    % 1. Ostrý
-    \begin{scope}[xshift=0cm]
-        \filldraw[angle fill] (0,0) -- (0.6,0) arc (0:45:0.6) -- cycle;
-        \draw[line] (0,0) -- (1.2,0);
-        \draw[line] (0,0) -- (45:1.2);
-        \node at (0.6, 1.4) {ostrý};
-    \end{scope}
-
-    % 2. Pravý
-    \begin{scope}[xshift=2.5cm]
-        \filldraw[angle fill] (0,0) -- (0.6,0) arc (0:90:0.6) -- cycle;
-        \draw[line] (0,0) -- (1.2,0);
-        \draw[line] (0,0) -- (90:1.1);
-        \node at (0.6, 1.4) {pravý};
-    \end{scope}
-
-    % 3. Tupý
-    \begin{scope}[xshift=5.2cm]
-        \filldraw[angle fill] (0,0) -- (0.6,0) arc (0:115:0.6) -- cycle;
-        \draw[line] (0,0) -- (1.2,0);
-        \draw[line] (0,0) -- (115:1.2);
-        \node at (0.3, 1.4) {tupý};
-    \end{scope}
-
-    % 4. Přímý
-    \begin{scope}[xshift=8.2cm]
-        \filldraw[angle fill] (0,0) -- (0.6,0) arc (0:180:0.6) -- cycle;
-        \draw[line] (-1,0) -- (1,0);
-        \draw[line] (0,-0.15) -- (0,0.15); % středová značka
-        \node at (0, 1.4) {přímý};
-    \end{scope}
-
-    % Svorka (brace) přes konvexní úhly
-    \draw[decorate, decoration={brace, amplitude=6pt, raise=2pt}, linecolor, thick]
-        (-0.2, 1.8) -- (9.4, 1.8) node[midway, above=8pt, font=\large] {konvexní};
-
-    % 5. Konkávní
-    \begin{scope}[xshift=11.2cm]
-        \filldraw[angle fill] (0,0) -- (0.6,0) arc (0:225:0.6) -- cycle;
-        \draw[line] (0,0) -- (1.2,0);
-        \draw[line] (0,0) -- (225:1.2);
-        \node at (0.3, 1.4) {konkávní};
-    \end{scope}
-
-    % 6. Plný
-    \begin{scope}[xshift=14.2cm]
-        \filldraw[angle fill] (0,0) circle (0.6);
-        \draw[line] (0,0) -- (1.2,0);
-        \node at (0, 1.4) {plný};
-    \end{scope}
-
-    \end{tikzpicture}
+    \tikzfig{klasifikace_uhlu}
     \caption{Klasifikace úhlů podle velikosti}
   \end{figure}
 \end{pozn}
@@ -263,140 +206,8 @@ Nechť $a\in \mathscr P$, $A\notin a$, $B\notin a$, $A\ne B$. Pak \textbf{přím
   \definecolor{myred}{HTML}{C1121F}
   \begin{figure}[h!]
   \centering
-  \begin{tikzpicture}[x=1cm, y=1cm, scale=0.8, transform shape]
-
-    % Styl pro nadpisy a rovnice
-    \tikzset{
-      title/.style={
-        font=\boldmath\bfseries\Large,
-        anchor=center,          % Zarovnání názvu na střed
-        text=myblue,
-        inner sep=0pt
-      },
-      eq/.style={
-        font=\boldmath\bfseries\LARGE,
-        text=myblue,
-        inner sep=0pt
-      }
-    }
-
-    % =========================================================================
-    % HORNÍ ŘÁDEK
-    % =========================================================================
-
-    % 1. VRCHOLOVÉ
-    \begin{scope}[shift={(0,0)}]
-      \node[title] at (2.5, 3.9) {vrcholové};
-      \draw[gray, thick] (0.5, 0.4) -- (4.5, 2.0);
-      \draw[gray, thick] (0.5, 2.0) -- (4.5, 0.4);
-      % Oblouky
-      \draw[myblue, very thick] (2.5, 1.2) ++(-21.8:0.8) arc (-21.8:21.8:0.8);
-      \draw[myblue, very thick] (2.5, 1.2) ++(158.2:0.8) arc (158.2:201.8:0.8);
-      % Popisky (posunuty dál od čar a oblouků)
-      \node[myblue, font=\LARGE] at (2.5, 1.2) [shift={(0:1.3)}] {$\alpha$};
-      \node[myblue, font=\LARGE] at (2.5, 1.2) [shift={(180:1.3)}] {$\beta$};
-      % Rovnice
-      \node[eq] at (2.5, -0.6) {$\alpha = \beta$};
-    \end{scope}
-
-    % 2. DOPLŇKOVÉ
-    \begin{scope}[shift={(6,0)}]
-      \node[title] at (2.5, 3.9) {doplňkové};
-      \draw[gray, thick] (1.0, 0.5) -- (4.0, 0.5);
-      \draw[gray, thick] (1.0, 0.5) -- (1.0, 3.5);
-      \draw[gray, thick] (1.0, 0.5) -- (3.5, 3.0);
-      % Značka pravého úhlu
-      \draw[gray, thin] (1.3, 0.5) -- (1.3, 0.8) -- (1.0, 0.8);
-      \fill[gray] (1.15, 0.65) circle (1.5pt);
-      % Oblouky
-      \draw[myblue, very thick] (1.0, 0.5) ++(0:1.2) arc (0:45:1.2);
-      \draw[myred, very thick] (1.0, 0.5) ++(45:1.2) arc (45:90:1.2);
-      % Popisky (posunuty dál od čar a oblouků)
-      \node[myblue, font=\LARGE] at (1.0, 0.5) [shift={(22.5:1.8)}] {$\alpha$};
-      \node[myred, font=\LARGE] at (1.0, 0.5) [shift={(67.5:1.8)}] {$\beta$};
-      % Rovnice
-      \node[eq] at (2.5, -0.6) {$\alpha + \beta = 90^\circ$};
-    \end{scope}
-
-    % 3. VEDLEJŠÍ
-    \begin{scope}[shift={(12,0)}]
-      \node[title] at (2.5, 3.9) {vedlejší};
-      \draw[gray, thick] (0.5, 0.5) -- (4.5, 0.5);
-      \draw[gray, thick] (2.5, 0.5) -- (3.5, 3.0);
-      % Oblouky
-      \draw[myblue, very thick] (2.5, 0.5) ++(0:1.0) arc (0:68.2:1.0);
-      \draw[myred, very thick] (2.5, 0.5) ++(68.2:1.0) arc (68.2:180:1.0);
-      % Popisky (posunuty dál od čar a oblouků)
-      \node[myblue, font=\LARGE] at (2.5, 0.5) [shift={(34.1:1.6)}] {$\alpha$};
-      \node[myred, font=\LARGE] at (2.5, 0.5) [shift={(124.1:1.6)}] {$\beta$};
-      % Rovnice
-      \node[eq] at (2.5, -0.6) {$\alpha + \beta = 180^\circ$};
-    \end{scope}
-
-
-    % =========================================================================
-    % SPODNÍ ŘÁDEK
-    % =========================================================================
-
-    % 4. SOUHLASNÉ
-    \begin{scope}[shift={(0,-6.5)}]
-      \node[title] at (2.5, 3.9) {souhlasné};
-      \draw[gray, thick] (0.5, 0.5) -- (4.5, 0.5);
-      \draw[gray, thick] (0.5, 2.5) -- (4.5, 2.5);
-      \draw[gray, thick] (1.5, -0.5) -- (3.5, 3.5);
-      % Značky rovnoběžek (||)
-      \draw[gray, thick] (0.92, 0.35) -- (0.92, 0.65); \draw[gray, thick] (1.08, 0.35) -- (1.08, 0.65);
-      \draw[gray, thick] (0.92, 2.35) -- (0.92, 2.65); \draw[gray, thick] (1.08, 2.35) -- (1.08, 2.65);
-      % Oblouky
-      \draw[myblue, very thick] (2.0, 0.5) ++(0:0.9) arc (0:63.4:0.9);
-      \draw[myblue, very thick] (3.0, 2.5) ++(0:0.9) arc (0:63.4:0.9);
-      % Popisky (posunuty dál od čar a oblouků)
-      \node[myblue, font=\LARGE] at (2.0, 0.5) [shift={(31.7:1.5)}] {$\alpha$};
-      \node[myblue, font=\LARGE] at (3.0, 2.5) [shift={(31.7:1.5)}] {$\beta$};
-      % Rovnice
-      \node[eq] at (2.5, -1.3) {$\alpha = \beta$};
-    \end{scope}
-
-    % 5. STŘÍDAVÉ
-    \begin{scope}[shift={(6,-6.5)}]
-      \node[title] at (2.5, 3.9) {střídavé};
-      \draw[gray, thick] (0.5, 0.5) -- (4.5, 0.5);
-      \draw[gray, thick] (0.5, 2.5) -- (4.5, 2.5);
-      \draw[gray, thick] (1.5, -0.5) -- (3.5, 3.5);
-      % Značky rovnoběžek (||)
-      \draw[gray, thick] (0.92, 0.35) -- (0.92, 0.65); \draw[gray, thick] (1.08, 0.35) -- (1.08, 0.65);
-      \draw[gray, thick] (0.92, 2.35) -- (0.92, 2.65); \draw[gray, thick] (1.08, 2.35) -- (1.08, 2.65);
-      % Oblouky
-      \draw[myblue, very thick] (2.0, 0.5) ++(0:0.9) arc (0:63.4:0.9);
-      \draw[myblue, very thick] (3.0, 2.5) ++(180:0.9) arc (180:243.4:0.9);
-      % Popisky (posunuty dál od čar a oblouků)
-      \node[myblue, font=\LARGE] at (2.0, 0.5) [shift={(31.7:1.5)}] {$\alpha$};
-      \node[myblue, font=\LARGE] at (3.0, 2.5) [shift={(211.7:1.5)}] {$\beta$};
-      % Rovnice
-      \node[eq] at (2.5, -1.3) {$\alpha = \beta$};
-    \end{scope}
-
-    % 6. PŘILEHLÉ
-    \begin{scope}[shift={(12,-6.5)}]
-      \node[title] at (2.5, 3.9) {přilehlé};
-      \draw[gray, thick] (0.5, 0.5) -- (4.5, 0.5);
-      \draw[gray, thick] (0.5, 2.5) -- (4.5, 2.5);
-      \draw[gray, thick] (1.5, -0.5) -- (3.5, 3.5);
-      % Značky rovnoběžek (||)
-      \draw[gray, thick] (0.92, 0.35) -- (0.92, 0.65); \draw[gray, thick] (1.08, 0.35) -- (1.08, 0.65);
-      \draw[gray, thick] (0.92, 2.35) -- (0.92, 2.65); \draw[gray, thick] (1.08, 2.35) -- (1.08, 2.65);
-      % Oblouky
-      \draw[myblue, very thick] (2.0, 0.5) ++(0:0.9) arc (0:63.4:0.9);
-      \draw[myred, very thick] (3.0, 2.5) ++(243.4:0.9) arc (243.4:360:0.9);
-      % Popisky (posunuty dál od čar a oblouků)
-      \node[myblue, font=\LARGE] at (2.0, 0.5) [shift={(31.7:1.5)}] {$\alpha$};
-      \node[myred, font=\LARGE] at (3.0, 2.5) [shift={(301.7:1.5)}] {$\beta$};
-      % Rovnice
-      \node[eq] at (2.5, -1.3) {$\alpha + \beta = 180^\circ$};
-    \end{scope}
-
-  \end{tikzpicture}
-    \caption{Dvojice úhlů}
+  \tikzfig{dvojice_uhlu}
+  \caption{Dvojice úhlů}
   \end{figure}
 \end{definition}
 
@@ -410,62 +221,10 @@ Nechť $a\in \mathscr P$, $A\notin a$, $B\notin a$, $A\ne B$. Pak \textbf{přím
   nazýváme úhly $\sphericalangle CAB$ (resp. $\sphericalangle ABC$, resp. $ \sphericalangle BCA$), \textbf{vnějším úhlem}
   $\triangle ABC$ při vrcholu $A$ (resp. $B$, resp. $C$) pak vedlejší úhel k úhlu $\sphericalangle CAB$ (resp. $\sphericalangle ABC$, resp. $\sphericalangle BCA$).
   \begin{figure}[ht!]
-  % Definice jasných barev pro úhly
-  \definecolor{innerred}{HTML}{D90429}  % Výrazná červená pro vnitřní úhly
-  \definecolor{outerblue}{HTML}{0077B6} % Výrazná modrá pro vnější úhly
     \centering
-    \begin{tikzpicture}[x=1cm, y=1cm, scale=1.2]
-
-      % =========================================================================
-      % DEFINICE VRCHOLŮ
-      % =========================================================================
-      \coordinate (A) at (2, 4);
-      \coordinate (B) at (0, 0);
-      \coordinate (C) at (5, 0);
-
-
-      % =========================================================================
-      % VYKRESLENÍ ČERNÝCH PŘÍMEK
-      % =========================================================================
-      \draw[black, line width=1.3pt] (-1.5, 0) -- (6.5, 0);
-      \draw[black, line width=1.3pt] (-0.45, -0.9) -- (2.45, 4.9);
-      \draw[black, line width=1.3pt] (5.6, -0.8) -- (1.4, 4.8);
-
-
-      % =========================================================================
-      % BAREVNÉ OBLOUKY ÚHLŮ
-      % =========================================================================
-
-      % --- VRCHOL A (HORNÍ) ---
-      % Vnitřní úhel (červený)
-      \draw[innerred, line width=2pt] (A) ++(243.4:0.8) arc (243.4:306.9:0.8);
-
-      % Vnější úhly (modré)
-      \draw[outerblue, line width=2pt] (A) ++(126.9:0.6) arc (126.9:243.4:0.6);
-      \draw[outerblue, line width=2pt] (A) ++(-53.1:0.6) arc (-53.1:63.4:0.6);
-
-
-      % --- VRCHOL B (LEVÝ DOLNÍ) ---
-      % Vnitřní úhel (červený)
-      \draw[innerred, line width=2pt] (B) ++(0:0.8) arc (0:63.4:0.8);
-
-      % Vnější úhly (modré)
-      \draw[outerblue, line width=2pt] (B) ++(63.4:0.6) arc (63.4:180:0.6);
-      \draw[outerblue, line width=2pt] (B) ++(-116.6:0.6) arc (-116.6:0:0.6);
-
-
-      % --- VRCHOL C (PRAVÝ DOLNÍ) ---
-      % Vnitřní úhel (červený)
-      \draw[innerred, line width=2pt] (C) ++(126.9:0.8) arc (126.9:180:0.8);
-
-      % Vnější úhly (modré)
-      \draw[outerblue, line width=2pt] (C) ++(0:0.6) arc (0:126.9:0.6);
-      \draw[outerblue, line width=2pt] (C) ++(180:0.6) arc (180:306.9:0.6);
-
-    \end{tikzpicture}
+    \tikzfig{trojuhelnik_uhly}
     \caption{Trojúhelník s vnitřními (červené) a
     vnějšími (modré) úhly}
-    \label{}
   \end{figure}
 \end{definition}
 
@@ -479,71 +238,8 @@ Nechť $a\in \mathscr P$, $A\notin a$, $B\notin a$, $A\ne B$. Pak \textbf{přím
     úhly $\beta$, $\gamma$, a tedy i shodné. Celkem dávají přímý úhel,
     tj. jejich součet je $180^\circ$, což jsme chtěli dokázat.
     \begin{figure}[ht!]
-    \definecolor{angleblue}{HTML}{B8D0EB}   % Jemná tlumená modrá
-    \definecolor{anglered}{HTML}{F2B5B5}    % Jemná tlumená červená/růžová
-    \definecolor{angleyellow}{HTML}{FCEEA7} % Jemná pastelová žlutá
       \centering
-      \begin{tikzpicture}[x=1cm, y=1cm, scale=1.3]
-
-        % =========================================================================
-        % SOUŘADNICE VRCHOLŮ TROJÚHELNÍKU
-        % =========================================================================
-        \coordinate (B) at (0, 0);
-        \coordinate (C) at (5, -0.8);
-        \coordinate (A) at (1.5, 2.5);
-
-
-        % =========================================================================
-        % BAREVNÉ VÝSEČE ÚHLŮ (vykresleny jako první pod čarami)
-        % =========================================================================
-
-        % 1. Úhel u vrcholu B (Jemná modrá, r = 0.5)
-        \draw[fill=angleblue, draw=black, semithick] (B) -- ++(-9.09:0.5) arc (-9.09:59.04:0.5) -- cycle;
-
-        % 2. Úhel u vrcholu C (Jemná červená, r = 0.4)
-        \draw[fill=anglered, draw=black, semithick] (C) -- ++(136.69:0.4) arc (136.69:170.91:0.4) -- cycle;
-
-        % 3. Úhly u společného vrcholu A:
-        % - Levý střídavý úhel k B (Jemná modrá, r = 0.5)
-        \draw[fill=angleblue, draw=black, semithick] (A) -- ++(170.91:0.5) arc (170.91:239.04:0.5) -- cycle;
-
-        % - Vnitřní úhel alfa (Jemná žlutá, r = 0.5)
-        \draw[fill=angleyellow, draw=black, semithick] (A) -- ++(239.04:0.5) arc (239.04:316.69:0.5) -- cycle;
-
-        % - Pravý střídavý úhel k C (Jemná červená, r = 0.4)
-        \draw[fill=anglered, draw=black, semithick] (A) -- ++(316.69:0.4) arc (316.69:350.91:0.4) -- cycle;
-
-
-        % =========================================================================
-        % GEOMETRICKÉ ČÁRY
-        % =========================================================================
-
-        % Strany trojúhelníku
-        \draw[black, thick] (B) -- (A);
-        \draw[black, thick] (A) -- (C);
-        \draw[black, thick] (B) -- (C);
-
-        % Rovnoběžka "x" procházející bodem A
-        \draw[black, thick] (A) ++(170.91:1.5) -- ++(-9.09:4.5);
-
-
-        % =========================================================================
-        % POPISKY (v klasickém matematickém fontu)
-        % =========================================================================
-
-        % Vrchol A
-        \node[above, yshift=3pt] at (A) {$A$};
-
-        % Vrchol B
-        \node[left, xshift=-3pt, yshift=-1pt] at (B) {$B$};
-
-        % Vrchol C
-        \node[right, xshift=3pt, yshift=-1pt] at (C) {$C$};
-
-        % Název přímky x
-        \node[above] at (4.0, 2.2) {$x$};
-
-      \end{tikzpicture}
+      \tikzfig{trojuhelnik_soucet}
       \caption{Součet úhlů v trojúhelníku}
     \end{figure}
 \end{proof}

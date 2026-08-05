@@ -1,0 +1,52 @@
+% Definice jasných barev pro úhly
+  \definecolor{innerred}{HTML}{D90429}  % Výrazná červená pro vnitřní úhly
+  \definecolor{outerblue}{HTML}{0077B6} % Výrazná modrá pro vnější úhly
+    \begin{tikzpicture}[x=1cm, y=1cm, scale=2.2]
+
+      % =========================================================================
+      % DEFINICE VRCHOLŮ
+      % =========================================================================
+      \coordinate (A) at (2, 4);
+      \coordinate (B) at (0, 0);
+      \coordinate (C) at (5, 0);
+
+
+      % =========================================================================
+      % VYKRESLENÍ ČERNÝCH PŘÍMEK
+      % =========================================================================
+      \draw[black, line width=1.3pt] (-1.5, 0) -- (6.5, 0);
+      \draw[black, line width=1.3pt] (-0.45, -0.9) -- (2.45, 4.9);
+      \draw[black, line width=1.3pt] (5.6, -0.8) -- (1.4, 4.8);
+
+
+      % =========================================================================
+      % BAREVNÉ OBLOUKY ÚHLŮ
+      % =========================================================================
+
+      % --- VRCHOL A (HORNÍ) ---
+      % Vnitřní úhel (červený)
+      \draw[innerred, line width=2pt] (A) ++(243.4:0.8) arc (243.4:306.9:0.8);
+
+      % Vnější úhly (modré)
+      \draw[outerblue, line width=2pt] (A) ++(126.9:0.6) arc (126.9:243.4:0.6);
+      \draw[outerblue, line width=2pt] (A) ++(-53.1:0.6) arc (-53.1:63.4:0.6);
+
+
+      % --- VRCHOL B (LEVÝ DOLNÍ) ---
+      % Vnitřní úhel (červený)
+      \draw[innerred, line width=2pt] (B) ++(0:0.8) arc (0:63.4:0.8);
+
+      % Vnější úhly (modré)
+      \draw[outerblue, line width=2pt] (B) ++(63.4:0.6) arc (63.4:180:0.6);
+      \draw[outerblue, line width=2pt] (B) ++(-116.6:0.6) arc (-116.6:0:0.6);
+
+
+      % --- VRCHOL C (PRAVÝ DOLNÍ) ---
+      % Vnitřní úhel (červený)
+      \draw[innerred, line width=2pt] (C) ++(126.9:0.8) arc (126.9:180:0.8);
+
+      % Vnější úhly (modré)
+      \draw[outerblue, line width=2pt] (C) ++(0:0.6) arc (0:126.9:0.6);
+      \draw[outerblue, line width=2pt] (C) ++(180:0.6) arc (180:306.9:0.6);
+
+    \end{tikzpicture}

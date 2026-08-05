@@ -1,0 +1,65 @@
+
+    \definecolor{angleblue}{HTML}{B8D0EB}   % Jemná tlumená modrá
+    \definecolor{anglered}{HTML}{F2B5B5}    % Jemná tlumená červená/růžová
+    \definecolor{angleyellow}{HTML}{FCEEA7} % Jemná pastelová žlutá
+      \begin{tikzpicture}[x=1cm, y=1cm, scale=2.6]
+
+        % =========================================================================
+        % SOUŘADNICE VRCHOLŮ TROJÚHELNÍKU
+        % =========================================================================
+        \coordinate (B) at (0, 0);
+        \coordinate (C) at (5, -0.8);
+        \coordinate (A) at (1.5, 2.5);
+
+
+        % =========================================================================
+        % BAREVNÉ VÝSEČE ÚHLŮ (vykresleny jako první pod čarami)
+        % =========================================================================
+
+        % 1. Úhel u vrcholu B (Jemná modrá, r = 0.5)
+        \draw[fill=angleblue, draw=black, semithick] (B) -- ++(-9.09:0.5) arc (-9.09:59.04:0.5) -- cycle;
+
+        % 2. Úhel u vrcholu C (Jemná červená, r = 0.4)
+        \draw[fill=anglered, draw=black, semithick] (C) -- ++(136.69:0.4) arc (136.69:170.91:0.4) -- cycle;
+
+        % 3. Úhly u společného vrcholu A:
+        % - Levý střídavý úhel k B (Jemná modrá, r = 0.5)
+        \draw[fill=angleblue, draw=black, semithick] (A) -- ++(170.91:0.5) arc (170.91:239.04:0.5) -- cycle;
+
+        % - Vnitřní úhel alfa (Jemná žlutá, r = 0.5)
+        \draw[fill=angleyellow, draw=black, semithick] (A) -- ++(239.04:0.5) arc (239.04:316.69:0.5) -- cycle;
+
+        % - Pravý střídavý úhel k C (Jemná červená, r = 0.4)
+        \draw[fill=anglered, draw=black, semithick] (A) -- ++(316.69:0.4) arc (316.69:350.91:0.4) -- cycle;
+
+
+        % =========================================================================
+        % GEOMETRICKÉ ČÁRY
+        % =========================================================================
+
+        % Strany trojúhelníku
+        \draw[black, thick] (B) -- (A);
+        \draw[black, thick] (A) -- (C);
+        \draw[black, thick] (B) -- (C);
+
+        % Rovnoběžka "x" procházející bodem A
+        \draw[black, thick] (A) ++(170.91:1.5) -- ++(-9.09:4.5);
+
+
+        % =========================================================================
+        % POPISKY (v klasickém matematickém fontu)
+        % =========================================================================
+
+        % Vrchol A
+        \node[above, yshift=3pt] at (A) {$A$};
+
+        % Vrchol B
+        \node[left, xshift=-3pt, yshift=-1pt] at (B) {$B$};
+
+        % Vrchol C
+        \node[right, xshift=3pt, yshift=-1pt] at (C) {$C$};
+
+        % Název přímky x
+        \node[above] at (4.0, 2.2) {$x$};
+
+      \end{tikzpicture}
