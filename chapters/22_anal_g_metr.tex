@@ -10,7 +10,7 @@
     Vzdálenost dvou bodů $A,B$ je délka úsečky $AB.$
 \end{veta}
 
-\begin{veta}
+\begin{veta}\label{bodpr}
     Nechť $A[a_1,a_2]\in \mathbb E_2$ je bod, $p\colon ax+by+c=0$ je přímka. Pak
     $$\rho(A,p)=\frac{|aa_1+ba_2+c|}{\sqrt{a^2+b^2} }.$$
 \end{veta}
@@ -74,12 +74,32 @@ Určete vzdálenost mimoběžných přímek $p=\left \{ [9+4t,-2-3t,t]; t \in \m
 \end{priklad}
 
 \begin{reseni}
-\begin{enumerate}[1.]
-\item způsob: Směrové vektory mimoběžek určují rovinu. Jedna obsahuje přímku $p$ a~druhá,
-která je s ní rovnoběžná, obsahuje přímku $q$. Dále počítáme podle vzorce.
-\item způsob: Hledáme příčku mimoběžek, která je rovnoběžná s vektorem, který
-získáme jako vektorový součin směrových vektorů přímek $p,q$.
-\end{enumerate}
+Přepišme si přímky pomocí vektorů. Ať je $p=A+ k\vec u$ a $q=B+l\vec $. Pak $A = [9,-2,0]$, $\vec u = (4,-3,1)$,
+$B=[0,-7,2]$ a $\vec v = (-2,9,2)$. Vektory $\vec u, \vec v$ určují rovinu s normálovým vektorem
+$$
+    \vec n = \vec u \times \vec v = (-15,-10,30)=(-3,-2,6).
+$$
+Přímka $p$ leží v rovině
+$$
+    \alpha\colon -3x -2y +6z + d_1 = 0,
+$$
+v této rovině tedy leží i bod $A$. Po dossazení dostaneme rovnici
+$$
+    -3 \cdot 9 -2 \cdot(-2) + 6\cdot 0 + d_1 = 0,
+$$
+jejímž řešením je $d_1 = 23$.
+Rovina $\alpha$ má tedy rovnici
+$$
+    -3x -2y +6z + 23 = 0.
+$$
+Obdobně přímka $q$ leží v rovině $\beta$, která má rovnici
+$$
+    \beta\colon -3x -2y +6z - 46 = 0.
+$$
+Nyní jejich vzdálenost spočteme podle věty \ref{dverov}. Je
+$$
+    \rho(\alpha, \beta) = \frac{|-46-23|}{\sqrt{(-3)^2+(-2)^2+10^2}} = \frac{69}{113}.
+$$
 \end{reseni}
 
 \begin{priklad}
@@ -87,9 +107,33 @@ Určete rovnici přímky, která prochází bodem $A[-2,1]$ a od bodu $[3,1]$ m�
 \end{priklad}
 
 \begin{reseni}
-Hledáme přímku tvaru $ax+by+c=0$. Jistě platí $-2a+b+c=0$ a~vzorec pro vzdálenost přímky a roviny.
-Máme tři neznámé, ale jen dvě rovnice. Proto jednu z nich zvolíme (musíme uvažovat
-nulové a nenulové řešení) a zbylé dvě dopočítáme.
+Hledáme přímku tvaru $ax+by+c=0$. Protože na ní leží bod $A$, platí $-2a+b+c=0$. Dále
+můžeme využít větu \ref{bodpr}. Dostaneme
+$$
+\rho([3,1],p) = \frac{|3a+b+c|}{\sqrt{3^2 + 1^2}} = 4.
+$$
+Po úpravě máme
+$$
+    4 = \frac{|3a+b+c|}{\sqrt{10}}.
+$$
+Protože $-2a+b+c=0$, můžeme v čitateli tento výraz odečíst. Dostaneme
+$$
+    4 = \frac{|5a|}{\sqrt{10}},
+$$
+a tedy
+$$
+    a = \pm \frac{4 \sqrt{10}}{5}.
+$$
+\begin{enumerate}[$i.$]
+	\item Když $a = \frac{4 \sqrt{10}}{5}$, pak můžeme zvolit $c=1$, a tedy
+	$$
+	    b= -1 + \frac{8 \sqrt{10}}{5}.
+	$$
+	\item Když $a = -\frac{4 \sqrt{10}}{5}$, pak můžeme zvolit $c=1$, a tedy
+	$$
+	    b= -1 - \frac{8 \sqrt{10}}{5}.
+	$$
+\end{enumerate}
 \end{reseni}
 
 \begin{priklad}
@@ -119,7 +163,7 @@ $B[3,3], C[5,2].$
     jejich normálové vektory.)
 \end{pozn}
 
-\begin{veta}
+\begin{veta}\label{dvepr}
     Nechť jsou dány přímky $p(A,\vec u), q(B, \vec v).$ Pak
     $$|\sphericalangle p, q|=\arccos \frac{|\vec u \cdot \vec v|}{|\vec u|\cdot |\vec v|}.$$
 \end{veta}
@@ -130,10 +174,22 @@ krychle $ABCDA^\prime B^\prime C^\prime D^\prime$.
 \end{priklad}
 
 \begin{reseni}
-Vyjádříme jako vektory a dosadíme do vzorce.
+Bez újmy na obecnosti předpokládejme, že krychle má všechny hrany délky 1 a bod $A$ je v počátku se stejnou orientací
+jako soustava souřadnic. Pak mají body souřadnice
+$$
+    B = [1,0,0],\quad C^\prime = [1,1,1].
+$$
+Přímkám $\overleftrightarrow{AB}$ a $\overleftrightarrow{BC^\prime}$ tedy odpovídají směrové vektory
+$$
+\vec u = [1,0,0] - [0,0,0] = (1,0,0), \quad \vec v=[1,1,1] - [1,0,0] = (0,-1,-1).
+$$
+Nyní můžeme využít větu \ref{dvepr}. Je
+$$
+    |\sphericalangle \overleftrightarrow{AB}, \overleftrightarrow{BC^\prime}| = \arccos \frac{|\vec u \cdot \vec v|}{|\vec u| \cdot |\vec v|} = \frac{0}{\sqrt{3}\cdot 1} = 90^\circ.
+$$
 \end{reseni}
 
-\begin{veta}
+\begin{veta}\label{odchdveprjinak}
 Nechť jsou dány přímky $p(A,\vec u), q\colon ax+by+c=0, \vec n(a,b).$ Pak
 $$|\sphericalangle p, q|=\arcsin \frac{|\vec u \cdot \vec n|}{|\vec u|\cdot |\vec n|}.$$
 \end{veta}
@@ -143,7 +199,7 @@ $$|\sphericalangle p, q|=\arcsin \frac{|\vec u \cdot \vec n|}{|\vec u|\cdot |\ve
     $$|\sphericalangle p, \alpha|=\arcsin \frac{|\vec u \cdot \vec n|}{|\vec u|\cdot |\vec n|}.$$
 \end{veta}
 
-\begin{veta}
+\begin{veta}\label{odchdvepr}
     Nechť $\alpha\colon ax+by+cz+d=0, ex+fy+gz+h=0$ jsou dvě roviny a~$\vec m(a,b,c), \vec n(e,f,g).$
     Pak
     $$|\sphericalangle \alpha, \beta|=\arccos \frac{|\vec m \cdot \vec n|}{|\vec m|\cdot |\vec n|}.$$
@@ -155,7 +211,41 @@ jejím průsečíkem s osou $y$.
 \end{priklad}
 
 \begin{reseni}
-Dosadíme do vzorce a jednu proměnnou zvolíme.
+Průsečík přímky $p$ s osou $x$ je v bodě $x=0$ a
+$$
+    0-2y+3=0,
+$$
+tedy $y=\frac{3}{2}$. Hledáme tedy přímku ve tvaru $ax+by+c=0$, která prochází bodem $\left [ 0,\frac{2}{3} \right ] $,
+tj.\ platí
+$$
+    0x + \frac{3}{2}y+c=0
+$$
+a zároveň má od přímky $p$ odchylku $30^\circ$, tj. podle věty \ref{odchdvepr} je
+$$
+\frac{\pi}{6}=\arccos \frac{|(1,-2)\cdot (a,b)|}{\sqrt{1+2^2} \cdot \sqrt{a^2 + b^2}},
+$$
+po úpravě
+$$
+\frac{\pi}{6} = \arccos \frac{|a-2b|}{\sqrt{5}\cdot \sqrt{a^2+b^2}}.
+$$
+Zvolme $a=1$. Dostaneme rovnici
+$$
+\frac{\pi}{6} = \arccos \frac{|1-2b|}{\sqrt{5} \sqrt{1+b^2}},
+$$
+která má řešení
+$$
+    b_{1,2} = \frac{16\pm 10 \sqrt{3}}{2} = 8 \pm 5 \sqrt{3}.
+$$
+Máme tedy dvě řešení $q_1$ a $q_2$. Zbývá dopočíst $c$. Využijeme toho, že na $q_1$ i $q_2$ leží bod $\left [ 0, \frac{2}{3} \right ] $.
+Je
+$$
+    p_1 \colon x + (8 + 5 \sqrt{3}) y +c=0.
+$$
+Po dosazení za $\left [ 0, \frac{2}{3} \right ] $ dostaneme
+$$
+    (8 + 5 \sqrt{3}) \cdot \frac{2}{3} + c = 0,
+$$
+a tedy $c = - \frac{2}{3} \cdot (8 + 5 \sqrt{3})$. Obdobně i pro $p_2$ je $c= \frac{2}{3} \cdot (8 + 5 \sqrt{3})$.
 \end{reseni}
 
 \begin{priklad}
@@ -164,5 +254,13 @@ a jejich odchylka je $30^\circ$.
 \end{priklad}
 
 \begin{reseni}
-Dosadíme do vzorce a jednu proměnnou zvolíme.
+Hledáme přímku tvaru $ax+by+c=0$. Protože prochází počátkem, víme, že $c=0$. Přímka $p$ má směrový vektor
+$\vec u = (1,4)$. Můžeme tedy použít větu \ref{odchdveprjinak}. Dostaneme
+$$
+\frac{\pi}{6} = \arcsin \frac{|(1,4)\cdot (a,b)|}{|(1,4)|\cdot |(a,b)|}.
+$$
+Vyjde
+$$
+    b= \frac{16 \pm \sqrt{292}}{6}.
+$$
 \end{reseni}
