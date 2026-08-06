@@ -1,0 +1,35 @@
+
+	\begin{tikzpicture}[x={(-0.6cm,-0.3cm)}, y={(0.6cm,-0.3cm)}, z={(0cm,1cm)}, scale=2.6]
+    % --- Coordinates ---
+    \coordinate (D) at (0, 0, 2);
+    \coordinate (A) at (-2, -1.2, 0);
+    \coordinate (B) at (2, -1.2, 0);
+    \coordinate (C) at (0.8, 1.8, 0);
+    \coordinate (S) at (0, -1.2, 0); % Midpoint of AB
+
+    % --- Shading and Plane ---
+    % Shade the plane SCD to visualize it
+    \fill[blue, opacity=0.1] (S)--(C)--(D)--cycle;
+
+    % --- Hidden Edges (Dashed) ---
+    % Base back edges
+    \draw[thick, black!60] (A)--(C)--(B);
+    % Tetrahedron back edge
+    \draw[thick, black!60] (D)--(C);
+
+    % --- Solid Edges and Interior Lines ---
+    % Main tetrahedron edges (in front)
+    \draw[dashed, thick, black] (A)--(B);
+    \draw[thick, black] (D)--(A);
+    \draw[thick, black] (D)--(B);
+
+    % Lines forming the plane SCD (interior lines, light grey)
+    \draw[dashed, black!70, thin] (S)--(C);
+    \draw[dashed, black!70, thin] (S)--(D);
+
+    % --- Points and Labels ---
+    \foreach \p/\l/\pos in {A/A/right, B/B/below left, C/C/right, D/D/above, S/S/below} {
+        \fill[black] (\p) circle (1.5pt);
+        \node[\pos, font=\small, inner sep=5pt] at (\p) {$\l$};
+    }
+	\end{tikzpicture}

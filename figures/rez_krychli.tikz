@@ -1,0 +1,79 @@
+
+	\begin{tikzpicture}[scale=2.4] % Měřítko je zmenšené, aby se do obrázku vešly i vzdálené body X a Y
+
+    % Definice rozměrů krychle
+    \def\a{3}      % Délka hrany krychle
+    \def\dx{1}     % Posun do hloubky v ose x
+    \def\dy{1.2}   % Posun do hloubky v ose y
+
+    % 1. Definice vrcholů krychle
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (\a,0);
+    \coordinate (C) at ({\a+\dx},\dy);
+    \coordinate (D) at (\dx,\dy);
+    \coordinate (E) at (0,\a);
+    \coordinate (F) at (\a,\a);
+    \coordinate (G) at ({\a+\dx},{\a+\dy});
+    \coordinate (H) at (\dx,{\a+\dy});
+
+    % 2. Definice zadaných bodů
+    \coordinate (V) at ($(A)!0.5!(E)$);
+    \coordinate (W) at ($(A)!0.5!(B)$);
+    \coordinate (U) at ($(C)!2/3!(G)$);
+
+    % 3. Výpočet průsečíků a konstrukčních bodů
+    % X = průsečík přímky VU a úhlopříčky AC (v rovině podstavy)
+    \coordinate (X) at ($(A)!-3!(C)$);
+
+    % Y = průsečík přímky VU a úhlopříčky EG (v rovině stropu)
+    \coordinate (Y) at ($(E)!3!(G)$);
+
+    % Z = průsečík přímky VW a hrany EF (v přední stěně)
+    \coordinate (Z) at ($(E)!-0.5!(F)$);
+
+    \coordinate (I) at ($(B)!-0.5!(F)$);
+    \coordinate (J) at ($(G)!-0.26!(F)$);
+
+    % P1, P2, P3 = další vrcholy řezu
+    \coordinate (P1) at ($(B)!3/7!(C)$); % Průsečík XW s BC
+    \coordinate (P2) at ($(H)!2/3!(G)$); % Průsečík YZ s GH
+    \coordinate (P3) at ($(E)!3/7!(H)$); % Průsečík YZ s EH
+
+    % --- VYKRESLOVÁNÍ ---
+
+    % Neviditelné hrany krychle
+    \draw[dashed, thick] (A) -- (D) (C) -- (D) (H) -- (D);
+
+    % Přímka v přední stěně (Z-V-W)
+    \draw[gray, thin, dashed] (Z) -- (I) -- (J) -- (Z);
+    \draw[gray, thin] (Z) -- (E);
+    \draw[gray, thin] (B) -- (I);
+    \draw[gray, thin] (G) -- (J);
+
+    % VÝPLŇ ŘEZU
+    \fill[orange, opacity=0.3] (V) -- (W) -- (P1) -- (U) -- (P2) -- (P3) -- cycle;
+
+    % HRANY ŘEZU (silně oranžově, neviditelné jsou čárkované)
+    \draw[orange, very thick] (V) -- (W);
+    \draw[orange, very thick, dashed] (W) -- (P1);
+    \draw[orange, very thick] (P1) -- (U);
+    \draw[orange, very thick, dashed] (U) -- (P2);
+    \draw[orange, very thick] (P2) -- (P3);
+    \draw[orange, very thick, dashed] (P3) -- (V);
+
+    % Viditelné hrany krychle (vykresleny na závěr, aby byly přes barevný řez)
+    \draw[thick] (A) -- (B) -- (C) -- (G) -- (F) -- (E) -- cycle;
+    \draw[thick] (B) -- (F);
+    \draw[thick] (E) -- (H) -- (G);
+    \draw[thick] (A) -- (E);
+
+    \filldraw[gray] (Z) circle (1.5pt) node[left] {};
+    \filldraw[gray] (I) circle (1.5pt) node[left] {};
+    \filldraw[gray] (J) circle (1.5pt) node[left] {};
+
+    % Vykreslení zadaných bodů V, W, U
+    \filldraw[blue] (V) circle (2pt) node[left] {$V$};
+    \filldraw[blue] (W) circle (2pt) node[below left] {$W$};
+    \filldraw[blue] (U) circle (2pt) node[right] {$U$};
+
+	\end{tikzpicture}

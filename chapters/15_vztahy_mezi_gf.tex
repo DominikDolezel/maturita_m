@@ -19,38 +19,8 @@
     jako $\varphi$.
     \begin{figure}[h!]
         \centering
-        \begin{tikzpicture}[scale=1]
-            % Kružnice
-            \draw (0,0) circle (2.5cm);
-
-            % Souřadnicové osy
-            \draw[->] (-3,0) -- (3.2,0) node[below] {$x$};
-            \draw[->] (0,-3) -- (0,3.2) node[left] {$y$};
-
-            % Počátek
-            \node[below right] at (0,0) {$O$};
-
-            % Úhly a jejich výplně
-            % Úhel alpha (červený, 0° až 25°)
-            \filldraw[red!15, draw=red] (0,0) -- (0:0.8) arc (0:25:0.8) -- cycle;
-            \node[red] at (12.5:1.05) {$\alpha$};
-
-            % Úhel beta (modrý, 90° až 60°)
-            \filldraw[blue!15, draw=blue] (0,0) -- (90:0.8) arc (90:60:0.8) -- cycle;
-            \node[blue] at (75:1.05) {$\beta$};
-
-            % Úhel phi (šedý, 25° až 60°)
-            \filldraw[gray!30, draw=black] (0,0) -- (25:0.8) arc (25:60:0.8) -- cycle;
-            \node at (42.5:1.05) {$\varphi$};
-
-            % Vektory a tečkovaná prodloužení
-            \draw[->, thick, red] (0,0) -- (25:2.5) node[below right] {$\vec{u}$};
-            \draw[dotted] (25:2.5) -- (25:3.2);
-
-            \draw[->, thick, blue] (0,0) -- (60:2.5) node[right] {$\vec{v}$};
-            \draw[dotted] (60:2.5) -- (60:3.2);
-        \end{tikzpicture}
-       \caption{Jednotková kružnice}
+        \tikzfig{jednot_kruz}
+        \caption{Jednotková kružnice}
     \end{figure}
     Platí tedy $\alpha+\beta+\varphi=\frac{\pi}{2}\implies \varphi = \frac{\pi}{2}-(\alpha+\beta)$.
     Obecně platí $\cos \theta = \sin \left ( \frac{\pi}{2}-\theta \right ) $, v našem
@@ -284,53 +254,7 @@ $$
 Po dosazení za hodnoty ze zadání dostaneme, že věž je vysoká asi 82 metrů.
 \begin{figure}
 	\centering
-	\begin{tikzpicture}[scale=1, >=stealth]
-    % --- KOOORDINÁTY ---
-    \coordinate (A) at (0,0);
-    \coordinate (B) at (3.5,0);
-    \coordinate (P) at (6,0);
-    \coordinate (V) at (6,4);
-
-    % --- ZEMĚ (VODOVROVNÁ ROVINA) ---
-    \draw[thick] (-0.5,0) -- (7,0);
-    \fill[pattern=north east lines, pattern color=gray!60] (-0.5,-0.2) rectangle (7,0);
-
-    % --- VĚŽ (SCHEMATICKY) ---
-    \draw[fill=gray!25, thick] (5.85,0) rectangle (6.15,4);
-    % Popisek vrcholu V byl odstraněn podle požadavku.
-
-    % --- ZORNÉ PAPRSKY ---
-    \draw[thick, blue!80!black] (A) -- (V);
-    \draw[thick, red!80!black] (B) -- (V);
-
-    % --- BODY A POPISKY ---
-    \fill (A) circle (2pt) node[below left] {$A$};
-    \fill (B) circle (2pt) node[below left] {$B$};
-    \fill (P) circle (2pt) node[below right] {$P$};
-    \fill (V) circle (2pt) node[above] {$V$};
-
-    % --- ÚHLY (pouze obloučky a symboly) ---
-    % Úhel alpha (čistý oblouček bez šipky a hodnoty)
-    \draw[thick, blue!80!black] (0.9,0) arc (0:33.7:0.9);
-    % Upravená pozice pro samotný symbol alpha
-    \node[blue!80!black] at (1.2,0.3) {$\alpha$};
-
-    % Úhel beta (čistý oblouček bez šipky a hodnoty)
-    \draw[thick, red!80!black] (4.2,0) arc (0:58:0.7);
-    % Upravená pozice pro samotný symbol beta
-    \node[red!80!black] at (4.4,0.4) {$\beta$};
-
-    % --- KÓTA VZDÁLENOSTI 50 m ---
-    \draw[<->, thick] (0,-0.6) -- (3.5,-0.6) node[midway, fill=white] {$50\text{ m}$};
-    \draw[dotted] (A) -- (0,-0.7);
-    \draw[dotted] (B) -- (3.5,-0.7);
-
-    % --- KÓTA VÝŠKY VĚŽE (v) ---
-    \draw[<->, thick] (6.7,0) -- (6.7,4) node[midway, fill=white] {$v = ?$};
-    \draw[dotted] (V) -- (6.8,4);
-    \draw[dotted] (P) -- (6.8,0);
-
-\end{tikzpicture}
+	\tikzfig{vez}
 	\caption{Pohledy na věž}
 	\label{fig:vez}
 \end{figure}

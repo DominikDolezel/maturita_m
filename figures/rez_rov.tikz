@@ -1,0 +1,17 @@
+
+	\begin{tikzpicture}[scale=3]
+		\coordinate (D) at (0,0);
+		\coordinate (B) at (3,0);
+		\coordinate (F) at (3,1.5);
+		\coordinate (H) at (0, 1.5);
+		\coordinate (X) at (1.5,1.5);
+
+		\draw (D) -- (B) -- (F) -- (H) -- cycle;
+		\draw[dashed] (X) -- (B);
+
+		\node[below left] at (D) {$D$};
+		\node[below right] at (B) {$B$};
+		\node[above right] at (F) {$F$};
+		\node[above left] at (H) {$H$};
+		\node[above] at (X) {$X$};
+	\end{tikzpicture}

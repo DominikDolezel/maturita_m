@@ -389,27 +389,7 @@ $$
 $$
 \begin{figure}[h]
 	\centering
-	\begin{tikzpicture}[scale=1.3]
-    % Definice vrcholů
-    \coordinate (A) at (0,0);
-    \coordinate (B) at (4,0);
-    \coordinate (C) at (4,3);
-
-    % Vykreslení trojúhelníku
-    \draw[thick] (A) -- (B) -- (C) -- cycle;
-
-    % Značka pravého úhlu
-    \draw (3.7,0) -- (3.7,0.3) -- (4,0.3);
-
-    % Popisy stran
-    \node[below] at (2,0) {$1$};
-    \node[right] at (4,1.5) {$t$};
-    \node[above left] at (2,1.5) {$\sqrt{1+t^2}$};
-
-    % Vyznačení úhlu x/2
-    \draw (0.8,0) arc[start angle=0, end angle=36.87, radius=0.8];
-    \node at (1.1,0.35) {$\frac{x}{2}$};
-	\end{tikzpicture}
+	\tikzfig{subs_tg_x_pul}
 	\caption{Substituce $\tg \frac{x}{2} = t$}
 	\label{subs}
 \end{figure}
@@ -478,27 +458,7 @@ $$
 $$
 \begin{figure}[h]
 	\centering
-	\begin{tikzpicture}[scale=1.3]
-    % Definice vrcholů
-    \coordinate (A) at (0,0);
-    \coordinate (B) at (4,0);
-    \coordinate (C) at (4,3);
-
-    % Vykreslení trojúhelníku
-    \draw[thick] (A) -- (B) -- (C) -- cycle;
-
-    % Značka pravého úhlu
-    \draw (3.7,0) -- (3.7,0.3) -- (4,0.3);
-
-    % Popisy stran
-    \node[below] at (2,0) {$1$};
-    \node[right] at (4,1.5) {$t$};
-    \node[above left] at (2,1.5) {$\sqrt{1+t^2}$};
-
-    % Vyznačení úhlu x/2
-    \draw (0.8,0) arc[start angle=0, end angle=36.87, radius=0.8];
-    \node at (1.1,0.35) {$x$};
-	\end{tikzpicture}
+	\tikzfig{subs_tg_x}
 	\caption{Substituce $\tg x = t$}
 	\label{subs x}
 \end{figure}

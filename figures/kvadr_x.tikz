@@ -1,0 +1,50 @@
+
+	\begin{tikzpicture}[scale=2, line cap=round, line join=round]
+   % Definice vrcholů kvádru ABCDEFGH
+   % Dolní podstava ABCD
+   \coordinate (A) at (0,0);
+   \coordinate (B) at (4,0);
+   \coordinate (C) at (5.5,2);
+   \coordinate (D) at (1.5,2);
+
+   % Horní podstava EFGH (posunutá svisle nahoru)
+   \coordinate (E) at (0,2.5);
+   \coordinate (F) at (4,2.5);
+   \coordinate (G) at (5.5,4.5);
+   \coordinate (H) at (1.5,4.5);
+
+   \coordinate (X) at (2.75,3.5);
+
+   % Neviditelné hrany (čárkovaně)
+   \draw[dashed] (D) -- (A);
+   \draw[dashed] (D) -- (C);
+   \draw[dashed] (D) -- (H);
+
+   % Viditelné hrany dolní podstavy a svislé hrany
+   \draw (A) -- (B);
+   \draw (B) -- (C);
+   \draw (A) -- (E);
+   \draw (B) -- (F);
+   \draw (C) -- (G);
+
+   \draw[dashed] (H) -- (F);
+   \draw[dashed] (B) -- (D);
+   \draw[dashed, blue] (X) -- (B);
+
+   % Horní podstava
+   \draw (E) -- (F) -- (G) -- (H) -- cycle;
+
+   % Zvýraznění roviny BEG (trojúhelník BEG) modrou barvou
+   \draw[thick, blue] (B) -- (E) -- (G) -- cycle;
+
+   % Popisky vrcholů
+   \node[below left] at (A) {$A$};
+   \node[below] at (B) {$B$};
+   \node[right] at (C) {$C$};
+   \node[above left] at (D) {$D$};
+   \node[left] at (E) {$E$};
+   \node[below right] at (F) {$F$};
+   \node[above right] at (G) {$G$};
+   \node[above left] at (H) {$H$};
+   \node[above] at (X) {$X$};
+	\end{tikzpicture}

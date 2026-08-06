@@ -1,5 +1,5 @@
 \begin{tikzpicture}[
-      scale=2.2,
+      scale=2.4,
       set line/.style={draw=black, rounded corners=2.5mm, semithick},
       box/.style={draw=black, semithick}
   ]

@@ -1,0 +1,32 @@
+
+        \begin{tikzpicture}[scale=2]
+            % Kružnice
+            \draw (0,0) circle (2.5cm);
+
+            % Souřadnicové osy
+            \draw[->] (-3,0) -- (3.2,0) node[below] {$x$};
+            \draw[->] (0,-3) -- (0,3.2) node[left] {$y$};
+
+            % Počátek
+            \node[below right] at (0,0) {$O$};
+
+            % Úhly a jejich výplně
+            % Úhel alpha (červený, 0° až 25°)
+            \filldraw[red!15, draw=red] (0,0) -- (0:0.8) arc (0:25:0.8) -- cycle;
+            \node[red] at (12.5:1.05) {$\alpha$};
+
+            % Úhel beta (modrý, 90° až 60°)
+            \filldraw[blue!15, draw=blue] (0,0) -- (90:0.8) arc (90:60:0.8) -- cycle;
+            \node[blue] at (75:1.05) {$\beta$};
+
+            % Úhel phi (šedý, 25° až 60°)
+            \filldraw[gray!30, draw=black] (0,0) -- (25:0.8) arc (25:60:0.8) -- cycle;
+            \node at (42.5:1.05) {$\varphi$};
+
+            % Vektory a tečkovaná prodloužení
+            \draw[->, thick, red] (0,0) -- (25:2.5) node[below right] {$\vec{u}$};
+            \draw[dotted] (25:2.5) -- (25:3.2);
+
+            \draw[->, thick, blue] (0,0) -- (60:2.5) node[right] {$\vec{v}$};
+            \draw[dotted] (60:2.5) -- (60:3.2);
+        \end{tikzpicture}

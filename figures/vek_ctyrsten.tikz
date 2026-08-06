@@ -1,0 +1,49 @@
+
+	\begin{tikzpicture}[scale=2, line cap=round, line join=round]
+    % Definice souřadnic vrcholů (podstava ABC je dole, vrchol D je nahoře)
+    \coordinate (A) at (1,0);
+    \coordinate (B) at (7,0);
+    \coordinate (C) at (4,2.5);
+    \coordinate (D) at (4,6);
+    \coordinate (Ap) at (10,2.5);
+
+    % Definice bodů ze zadání
+    \coordinate (S) at (5.5, 1.25);   % střed strany BC
+    \coordinate (U) at (5, 2.833);    % těžiště trojúhelníku BCD
+    \coordinate (T) at (4, 2.125);    % těžiště čtyřstěnu ABCD
+
+    % Vykreslení hran podstavy ABC (všechny viditelné, protože podstava je dole)
+    \draw[thick] (A) -- (B);
+    \draw[thick] (B) -- (C);
+    \draw[thick] (A) -- (C);
+
+    % Vykreslení bočních hran k vrcholu D
+    \draw[thick] (A) -- (D);
+    \draw[thick] (B) -- (D);
+    \draw[thick] (C) -- (D);
+
+    % Pomocné úsečky / vektory vycházející z A (dle zadání příkladu)
+    \draw[blue, thick, densely dashed] (A) -- (S);
+    \draw[blue, thick, densely dashed] (A) -- (U);
+    \draw[blue, thick, densely dashed] (A) -- (T);
+    \draw[gray, densely dashed] (D) -- (S);
+    \draw[gray, densely dashed] (C) -- (Ap) -- (B);
+    \draw[gray, densely dashed] (S) -- (Ap);
+
+    % Popisky vrcholů
+    \node[below left] at (A) {$A$};
+    \node[below right] at (B) {$B$};
+    \node[above left] at (C) {$C$};
+    \node[above] at (D) {$D$};
+
+    % Popisky bodů S, U, T
+    \node[right] at (S) {$S$};
+    \node[right] at (U) {$U$};
+    \node[below right] at (T) {$T$};
+    \node[above right] at (Ap) {$A^\prime$};
+
+    % Zvýraznění bodů
+    \foreach \p/\col in {S/red, U/red, T/red}
+        \fill[\col] (\p) circle (1.8pt);
+
+	\end{tikzpicture}

@@ -1,0 +1,25 @@
+
+		\begin{tikzpicture}[scale=2, line cap=round, line join=round]
+    % Parametry pro kreslení (strana s a úhel α ve stupních)
+    \def\s{2.5}       % Poloměr výseče (strana kužele s)
+    \def\alpha{300} % Úhel výseče (zde zvolen pro názornost jako půlkruh 180°, lze upravit)
+
+    % Vrchol výseče (odpovídá vrcholu kužele V)
+    \coordinate (V) at (0,0);
+
+    % Vybarvení plochy pláště
+    \draw[fill=gray!15, draw=none] (V) -- (0:\s) arc (0:\alpha:\s) -- cycle;
+
+    % Obvodové hrany výseče
+    \draw[thick] (V) -- (0:\s);
+    \draw[thick] (V) -- (\alpha:\s);
+    \draw[thick] (0:\s) arc (0:\alpha:\s);
+
+    % Popisky
+    \node[above] at (V) {$V$};
+
+    % Kóty a popisy stran
+    \node[above] at ({0.5*\s}, 0) {$s$};
+
+    \draw[fill] (V) circle (1.5pt);
+		\end{tikzpicture}

@@ -1,0 +1,35 @@
+
+	\begin{tikzpicture}[scale=2.4, line cap=round, line join=round]
+    % Definice hlavních bodů
+    \coordinate (V) at (0, 3.5);  % Vrchol kužele
+    \coordinate (S) at (0, 0);    % Střed podstavy
+
+    % Zadní část elipsy podstavy (čárkovaně)
+    \draw[dashed, gray] (2,0) arc (0:180:2 and 0.6);
+    % Přední část elipsy podstavy (plná čára)
+    \draw (-2,0) arc (180:360:2 and 0.6);
+
+    % Plášť kužele (stranové přímky)
+    \draw (-2,0) -- (V) -- (2,0);
+
+    % Vnitřní konstrukce (výška v a poloměr r)
+    \draw[dashed, blue] (V) -- (S);
+    \draw[dashed, blue] (S) -- (2,0);
+
+    % Značka pravého úhlu u středu podstavy
+    \draw[blue] (0, 0.2) -- (0.2, 0.2) -- (0.2, 0);
+
+    % Popisky vrcholů a rozměrů
+    \node[above] at (V) {$V$};
+    \node[below] at (S) {$S$};
+    \node[right] at (1, 1.75) {$s$};
+    \node[above] at (1, 0) {$r$};
+    \node[left] at (0, 1.75) {$v$};
+
+    % Bod na obvodu podstavy (např. A)
+    \coordinate (A) at (2,0);
+    \node[right] at (A) {$A$};
+    \draw[fill] (A) circle (1pt);
+    \draw[fill] (V) circle (1pt);
+    \draw[fill] (S) circle (1pt);
+	\end{tikzpicture}

@@ -1,0 +1,10 @@
+- nepoužívat právě tehdy když v definicích, používat třeba pokud apod.
+- figures (třeba tikz věci - tvary, tělesa) dávat do samostatných souborů a volat pomocí tikzfig
+- tikz grafy nedávat do sepárátních souborů protože se rozbíjí scaling
+- rozlišovat v mathmodu ":" jako dělení a "\colon" jako dvojtečku
+- rozlišovat "." tečka s mezerou a ".\" tečka bez mezery (např. u zkratek)
+- v desetinných číslech "{,}" místo "," (dělá mezeru)
+- pokud děláš nějakou magii s nějakýma spacing commandama ("v/hspace", "\," apod.) asi děláš něco špatně a měl by sis defnout nějakej command na začátku (viz \ekvipol)
+- diferenciál se píše jako "\, \d x" pokud před ním něco je (tohle je zrovna něco co by se asi mělo defnout jako command)
+- když někde refuju je to s malým "dle věty 123"
+- v definici množiny podmínkou je ";"
