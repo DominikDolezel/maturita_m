@@ -103,12 +103,54 @@ poloosa reálné osy s polohovým vektorem daného bodu představujícím dané 
 \end{pozn}
 
 \begin{priklad}
-Jsou dána komplexní čísla $a=2+i,b=1-2i$. Zobrazte v Gaussově rovině jejich součin a podíl.
+Jsou dána komplexní čísla $a=2+i$, $b=1-2i$. Zobrazte v Gaussově rovině jejich součin a podíl.
 \end{priklad}
 
-\begin{navod}
-Součin získáme vynásobením velikostí (stejnolehlostí) a sečtením úhlů. Podíl obdobně.
-\end{navod}
+\begin{reseni}
+Je
+$$
+    a \cdot b = (2+i) \cdot (1-2i) = 4-3i.
+$$
+U podílu využejeme následujícího triku:
+$$
+\frac{a }{b} = \frac{2+i}{1-2i}\cdot \frac{1+2i}{1+2i} = \frac{5i}{5} = i.
+$$
+Body jsou zobrazeny v Gaussově rovině na obrázku \ref{komplcpr}.
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+ % Osy
+    \draw[->, thick] (-1.5,0) -- (5,0) node[right] {$\text{Re}$};
+    \draw[->, thick] (0,-4) -- (0,2) node[above] {$\text{Im}$};
+
+    % Popisky os a mřížka
+    \foreach \x in {-1,1,2,3,4}
+        \draw[gray!30, dashed] (\x,-3.5) -- (\x,1.5);
+    \foreach \y in {-3,-2,-1,1}
+        \draw[gray!30, dashed] (-1,\y) -- (4.5,\y);
+
+    % Souřadnice bodů
+    \coordinate (A) at (2,1);
+    \coordinate (B) at (1,-2);
+    \coordinate (P) at (4,-3); % Součin a*b
+    \coordinate (Q) at (0,1); % Podíl a/b
+
+    % Vykreslení vektorů / bodů
+    \draw[blue, thick, -stealth] (0,0) -- (A) node[above right] {$a = 2+i$};
+    \draw[blue, thick, -stealth] (0,0) -- (B) node[below right] {$b = 1-2i$};
+    \draw[red, thick, -stealth] (0,0) -- (P) node[right] {$ab = 4-3i$};
+    \draw[red, thick, -stealth] (0,0) -- (Q) node[above left] {$\frac{a}{b} = i$};
+
+    % Zvýraznění bodů
+    \fill[blue] (A) circle (2pt);
+    \fill[blue] (B) circle (2pt);
+    \fill[red] (P) circle (2pt);
+    \fill[red] (Q) circle (2pt);
+	\end{tikzpicture}
+	\caption{Zobrazení $a$, $b$ a jejich součinu a podílu v Gaussově rovině}
+	\label{komplcpr}
+\end{figure}
+\end{reseni}
 
 \begin{definition}
 (\textbf{Algebraická}) \textbf{rovnice v komplexní neznámé} $n$-tého stupně s~jednou neznámou $x\in \mathbb C$ je každá
@@ -137,8 +179,29 @@ Vypočtěte $z=\sqrt{1+\sqrt{3}i }. $
 \end{priklad}
 
 \begin{reseni}
-Umocněním získáme $z^2=1+\sqrt{3}i. $ Platí $|z^2|=2,$ takže $z^2=2(\cos \frac{\pi}{3}+i\sin \frac{\pi}{3})=|z|^2(\cos 2x+i\sin 2x)$.
-Dále řešíme jako goniometrickou rovnici.
+Umocněním získáme $z^2=1+\sqrt{3}i. $ Platí $|z^2|=2,$ takže
+$$z^2=|z|^2(\cos 2x+i\sin 2x)=2\left (\cos \frac{\pi}{3}+i\sin \frac{\pi}{3}\right).$$
+Metodou porovnání koeficientů dostaneme
+\begin{align*}
+	\cos 2x = \cos \frac{\pi}{3}, && \sin 2x = \sin \frac{\pi}{3}.
+\end{align*}
+Řešením první rovnice je množina
+$$
+\left \{ \pm \frac{\pi}{6} + k\pi, k \in \mathbb Z  \right \},
+$$
+řešením druhé rovnice pak
+$$
+\left \{ \frac{\pi}{6} + k\pi, k \in \mathbb Z  \right \} \cup \left \{ \frac{\pi}{3} + l\pi, l \in \mathbb Z  \right \} ,
+$$
+odkud dostáváme, že
+$$
+    x \in \left \{ \frac{\pi}{6} + k\pi, k \in \mathbb Z \right \}.
+$$
+Je tedy
+\begin{align*}
+z = |z|\left( \cos x + i\sin x \right ) &= \sqrt{2} \left( \cos \frac{\pi}{6} + i \sin \frac{\pi}{6} \right ) = \sqrt{2}\left (\frac{\sqrt{3}}{2} + i\frac{1}{2}\right), \\
+&= \sqrt{2} \left( \cos \frac{7\pi}{6} + i \sin \frac{7\pi}{6} \right ) =  \sqrt{2} \left( -\frac{1}{2} + i \frac{\sqrt{3}}{2} \right ).
+\end{align*}
 \end{reseni}
 
 \begin{priklad}
@@ -146,7 +209,32 @@ Dále řešíme jako goniometrickou rovnici.
 \end{priklad}
 
 \begin{reseni}
-Vyjádříme v goniometrickém tvaru a dále řešíme pomocí Moivreovy věty.
+Vyjádříme $i$ v goniometrickém tvaru. Je
+$$
+    z^3 = i = \cos \frac{\pi}{2} + i\sin \frac{\pi}{2} = \cos 3x + i \sin 3x.
+$$
+Opět máme dvojici rovnic
+\begin{align*}
+	\cos \frac{\pi }{2} = \cos 3x, && \sin \frac{\pi }{2} = \sin 3x.
+\end{align*}
+Řešením první rovnice je množina
+$$
+\left \{ \pm \frac{\pi }{6} + \frac{2}{3} k \pi, k \in \mathbb Z  \right \} .
+$$
+Řešením druhé rovnice je
+$$
+\left \{ \frac{\pi}{6} +\frac{2}{3} k\pi, k \in \mathbb Z  \right \} .
+$$
+Celkem je pak
+$$
+    x \in \left \{ \frac{\pi}{6} + \frac{2}{3} k \pi, k \in \mathbb Z  \right \} .
+$$
+Dostáváme tedy, že
+\begin{align*}
+	z =  \cos x + i \sin x &= \cos \frac{\pi}{6} + i \sin \frac{\pi }{6} = \frac{\sqrt{3}}{2} + i \frac{1}{2}, \\
+	&= \cos \frac{5\pi }{6} + i \sin \frac{5\pi }{6} = -\frac{\sqrt{3}}{2} + i \frac{1}{2},\\
+	&= \cos \frac{9\pi}{6} + i \sin \frac{9\pi }{6} = 0 - i.
+\end{align*}
 \end{reseni}
 
 \begin{definition}
