@@ -174,7 +174,7 @@ tvaru $x^n=a$, kde $a\in \mathbb C,n\in \mathbb N, n\geq 2.$ Každý komplexní
 kořen binomické rovnice nazýváme \textbf{komplexní $n$-tou odmocninou} z čísla $a.$
 \end{definition}
 
-\begin{priklad}
+\begin{priklad}\label{prikladkompl}
 Vypočtěte $z=\sqrt{1+\sqrt{3}i }. $
 \end{priklad}
 
@@ -251,9 +251,37 @@ V $\mathbb C$ řešte $z^2+3z+10i=0.$
 \begin{reseni}
 \begin{enumerate}[1.]
 \item způsob: Doplněním na čtverec dostáváme $\left ( z+\frac{3}{2} \right )^2=\frac{9}{4}-10i. $
-Substituujeme a~dále řešíme jako binomickou rovnici.
-\item způsob: Pomocí diskriminantu.
-\item způsob: Vyjádřením neznámé v algebraickém tvaru ($z=a+bi$) a roznásobením.
+Zavedeme substituci $y=z + \frac{3}{2}$ a daále řešíme jako v příkladu \ref{prikladkompl}.
+\item způsob: Pomocí diskriminantu. Je
+$$
+    D = 3^2 - 4 \cdot 10i = 9 - 40i.
+$$
+Nyní můsíme spočítat $\sqrt{9-40i}$, abychom mohli použít vzorec. Položme
+$$
+\sqrt{9-40i} = a+bi.
+$$
+Pak
+$$
+9-40 i = a^2 + 2abi - b^2.
+$$
+Dostáváme soustavu dvou rovnic
+\begin{align*}
+	9 = a^2 - b^2, && -40 = 2ab,
+\end{align*}
+která má řešení $\pm 5 \mp 4i$. Dosadíme do vzorce a dostaneme
+\begin{align*}
+z_{1,2} = \frac{-3 \pm (5-4i)}{2} &= 1-2i,\\
+&= -4+2i.
+\end{align*}
+\item způsob: Vyjádřením neznámé v algebraickém tvaru ($z=a+bi$) a roznásobením. Dostaneme
+$$
+    a^2 + 2abi -b^2 + 3a + 3bi + 10 i = 0.
+$$
+Metodou porovnání koeficientů dostaneme soustavu
+\begin{align*}
+	a^2 - b^2 + 3a =0, && 2ab + 3b+10 = 0,
+\end{align*}
+kterou vyřešíme v $\mathbb R $.
 \end{enumerate}
 \end{reseni}
 
@@ -267,7 +295,7 @@ Užitím Moivreovy věty odvoďte vzorce pro $\sin 3x, \cos 3x.$
 \end{priklad}
 
 \begin{reseni}
-Platí $(\cos x + i\sin x)^3=\cos 3x+i\sin 3x.$ Z binomické věty máme
-$(\cos x+i\sin x)^3=\cos^3 x + 3i\cos^2 x\sin x - 3\cos x\sin^2 x-i\sin^3 x.$
+Platí $(\cos x + i\sin x)^3=\cos 3x+i\sin 3x.$ Z binomické věty máme, že
+$$(\cos x+i\sin x)^3=\cos^3 x + 3i\cos^2 x\sin x - 3\cos x\sin^2 x-i\sin^3 x.$$
 Metodou porovnání koeficientů u $i$ vzorce dostáváme.
 \end{reseni}
