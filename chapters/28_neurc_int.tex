@@ -62,13 +62,13 @@ pokud alespoň jeden z integrálů existuje.
 \end{priklad}
 
 \begin{reseni}
-Řešme \textit{per partes}:
+Řešme \textit{per partes}. Je
 \begin{align*}
 \int x \sin x \, \d x &=\left |\begin{array}{l l}
     u=x & u^\prime= 1\\
     v^\prime = \sin x & v=-\cos x
 \end{array} \right | = x(-\cos x)-\int 1\cdot(-\cos x)\, \d x \\
-&= -x\cos x+\int \cos x \, \d x=-x \cos x +\sin x+c
+&= -x\cos x+\int \cos x \, \d x=-x \cos x +\sin x+c.
 \end{align*}
 \end{reseni}
 
@@ -433,18 +433,15 @@ $$
 \end{reseni}
 
 \begin{veta}
-    Je-li funkce $R(\sin x, \cos x)$ lichá vzhledem k
+    Nechť je dána funkce $R(\sin x, \cos x)$.
+    \begin{itemize}
+	\item Je-li funkce $R$ lichá vzhledem k
     proměnné $\sin x$, používáme substituci $\cos x=t$.
-\end{veta}
-
-\begin{veta}
-    Je-li funkce $R(\sin x, \cos x)$ lichá vzhledem k
+    \item Je-li funkce $R$ lichá vzhledem k
     proměnné $\cos x$, používáme substituci $\sin x=t$.
-\end{veta}
-
-\begin{veta}
-    Je-li funkce $R(\sin x, \cos x)$ sudá vzhledem k
+    \item Je-li funkce $R$ sudá vzhledem k
     oběma proměnným, používáme substituci $\tg x=t$.
+    \end{itemize}
 \end{veta}
 
 \begin{priklad}
