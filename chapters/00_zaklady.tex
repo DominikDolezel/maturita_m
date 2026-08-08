@@ -30,7 +30,7 @@ Dokažte, že pro všechna $n \in \mathbb N$ platí, že je-li $n^2$ sudé, je i
 \end{priklad}
 
 \begin{reseni}
-Nepřímým důkazem. Obměna tohoto výroku zní: Je-i $n$ liché, pak i $n^2$ je liché.
+Nepřímým důkazem. Obměna tohoto výroku zní: Je-li $n$ liché, pak i $n^2$ je liché.
 Předpokládejme, že $n$ je liché. Lze jej tedy zapsat ve tvaru $2k+1, k \in \mathbb N $.
 Pak je $n^2 = (2k+1)^2 = 4k^2+4k + 1$, což je liché číslo. \qed
 \end{reseni}
@@ -134,19 +134,51 @@ $$\frac{1}{2\sqrt{x} }=\frac{1}{2\sqrt{x} }\cdot \frac{\sqrt{x} }{\sqrt{x} }=\fr
 je-li $x>0.$
 \end{reseni}
 
-\begin{priklad}
+\begin{priklad}\label{znacciso}
     Zakreslete na číselné ose
     \begin{enumerate}[$a.$]
-    \item racionální číslo $-4/3.$
-   	\item iracionální číslo $\sqrt{3}. $
+    \item racionální číslo $-\frac{4}{3}$.
+   	\item iracionální číslo $\sqrt{3}$.
     \end{enumerate}
 \end{priklad}
 
-\begin{reseni}\,
+\begin{reseni} Číslo zkonstruujeme pomocí
 \begin{enumerate}[$a.$]
-\item Z podobnosti trojúhelníků.
-\item Z Pythagorovy věty.
+\item podobných trojúhelníků.
+\item Pythagorovy věty.
 \end{enumerate}
+
+\newpage
+
+\begin{figure}[!ht]
+\centering
+\begin{subfigure}{0.48\textwidth}
+	\resizebox{1\textwidth}{!}{%
+		\begin{circuitikz}
+			\ctikzset{nodes={font=\footnotesize}}
+			\draw [short] (6.375,9.375) -- node[above] {1} (10.875,9.375);
+			\draw [short] (6.375,9.375) -- node[below] {2} (11.375,8.375);
+		\end{circuitikz}
+	}%
+	\caption{Konstrukce $-\frac{4}{3}$}
+\end{subfigure}
+\begin{subfigure}{0.48\textwidth}
+\resizebox{1\textwidth}{!}{%
+\begin{circuitikz}
+	\ctikzset{nodes={font=\footnotesize}}
+\draw [short] (6.375,9.375) -- node[below] {1} (8.875,9.375); % vodorovná čára
+\draw [short] (6.375,11.875) -- node[below] {$\sqrt{2}$} (8.875,9.375); % diag čára
+\draw [short] (8.875,9.375) -- node[above] {1} (10.625,11.125); % diag čára 2
+\draw [short] (10.625,11.125) -- node[below] {$\sqrt{3}$} (6.375,11.875);
+\draw [short] (8.625,9.625) arc[start angle=135.00, end angle=45.00, radius=0.3750] node[midway, below] {.};
+\draw [short] (6.375,9.75) arc[start angle=90.00, end angle=0.00, radius=0.3750] node [midway, left] {.};
+\draw [short] (6.375,9.375) -- node[left] {1} (6.375,11.875); % svislá čára
+\end{circuitikz}
+}%
+\caption{Konstrukce $\sqrt 3$}
+\end{subfigure}
+\caption{Řešení příkladu \ref{znacciso}}
+\end{figure}
 \end{reseni}
 
 \begin{priklad}
@@ -175,7 +207,11 @@ $$\frac{x^3+x^2-x-1}{\sqrt{x^2}+1 }.$$
 \end{priklad}
 
 \begin{reseni}
-Platí $\sqrt{x^2}=|x| $.
+Platí $\sqrt{x^2}=|x| $, dále rozdělíme na případy
+\begin{enumerate}[i.]
+	\item $x > 0$: $|x| = x$ $$\frac{x^3+x^2-x-1}{x+1} = x^2 - 1,$$
+	\item $x < 0$: $|x| = -x$ $$\frac{x^3+x^2-x-1}{1-x} = -x^2 - 2x - 1.$$
+\end{enumerate}
 \end{reseni}
 
 \begin{priklad}
@@ -183,7 +219,8 @@ Rozložte $x^2-5x+6$.
 \end{priklad}
 
 \begin{reseni}
-Doplněním na čtverec.
+Řešíme doplněním na čtverec.
+$$x^2-5x+6=\left(x-\frac{5}{2}\right)^2-\frac{25}{4}+6=\left(x-\frac{5}{2}\right)^2-\frac{1}{4}.$$
 \end{reseni}
 
 \begin{priklad}
@@ -191,14 +228,86 @@ Najděte nejmenší hodnotu výrazu $x^2+16x-17.$
 \end{priklad}
 
 \begin{reseni}
-Doplněním na čtverec. Minimum nastane tehdy, když je čtverec nulový.
+Doplníme na čtverec:
+$$x^2+16x-16=(x+8)^2-64-17=(x+8)^2-81.$$
+Minimum nastane tehdy, když je čtverec nulový, tj. pro $x=-8$.
 \end{reseni}
 
 
 \subsection*{Zákadní metody řešení soustav rovnic a nerovnic, matice}
-\begin{priklad}
+\begin{priklad}\label{zaklmet1}
     V $\mathbb R$ řešte $x^2-5x \geq 0.$
 \end{priklad}
+
+\begin{reseni}
+	Výraz na levé straně rozložíme v $\mathbb R$, a tak najdeme jeho nulové body:
+	$$x^2-5x = x(x-5)$$
+  Jedno ze znamének určíme třeba dosazením $x = \num{1000000}$ a dále se znaménko mění v každém nulovém bodě liché mocniny.
+
+	\begin{figure}[!ht]
+  \centering
+  \resizebox{1\textwidth}{!}{%
+  \begin{circuitikz}
+  \tikzstyle{every node}=[font=\fontsize{13.1pt}{17.0pt}\selectfont]
+
+	% osa
+  \draw (2.5,7) to[short] (17.5,7);
+
+	% hodnoty význačných bodů zleva doprava
+  %\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (3.75,6.375) {$-5$};
+  \node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (10,6.375) {0};
+  %\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (11.25,6.375) {(1)};
+  %\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (12.5,6.375) {2};
+  %\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (13.75,6.375) {(3)};
+  \node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (16.25,6.375) {5};
+
+	% knedlíky
+  %\begin{scope}[transparency group, opacity=1]
+  %\node at (3.75,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+  %\end{scope}
+
+  \begin{scope}[transparency group, opacity=1]
+  \node at (10,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+  \end{scope}
+
+  %\begin{scope}[transparency group, opacity=1]
+  %\node at (11.25,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+  %\end{scope}
+
+  %\begin{scope}[transparency group, opacity=1]
+  %\node at (12.5,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+  %\end{scope}
+
+  \begin{scope}[transparency group, opacity=1]
+  \node at (16.25,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+  \end{scope}
+
+	% prázdné kolečko začátek
+  %\draw (13.75,7) to[short, -o] (13.75,7) ;
+  %\draw (13.75,7) to[short, -o] (13.75,7) ;
+  %\draw (13.75,7) to[short, -o] (13.75,7) ;
+  %\draw (13.75,7) to[short, -o] (13.75,7) ;
+
+  %\begin{scope}[transparency group, opacity=1]
+  %\node at (13.75,7) [ocirc, color={rgb,255:red,0; green,0; blue,0}] {};
+  %\end{scope}
+	% prázdné kolečko konec
+
+	% znamínka zprava doleva
+  \node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.010cm] at (16.875,7.5) {$+$};
+  %\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (15,7.5) {$-$};
+  \node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (13.125,7.5) {$-$};
+  %\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.010cm] at (11.875,7.5) {$+$};
+  %\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.010cm] at (10.625,7.5) {$+$};
+  \node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.010cm] at (6.375,7.5) {$+$};
+  %\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (3.125,7.5) {$-$};
+  \end{circuitikz}
+  }%
+	\caption{Řešení příkladu \ref{zaklmet1}}
+\end{figure}
+Řešení (ne)rovnice končí vypsáním pravidvostního oboru, tj. oboru (intervalu), kdy je (ne)rovnice splněna.
+$$P = \left(-\infty, 0\right> \cup \left<5, \infty\right)$$
+\end{reseni}
 
 \begin{priklad}
 V $\mathbb R$ řešte
