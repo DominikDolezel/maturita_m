@@ -1057,6 +1057,36 @@ jedna proměnná tedy bude volná, vyjádřená v závislosti na parametru. Ře�
 $$P=\{[k,1-2k,k]; k \in \mathbb R\}.$$
 \end{reseni}
 
+\begin{definition}
+\textbf{Determinantem} matice $2\times 2$ nazveme číslo
+$$
+    \det \begin{pmatrix}
+	a & b \\
+	c & d
+    \end{pmatrix} = ad-bc,
+$$
+matice $3\times 3$ pak
+$$
+    \det \begin{pmatrix}
+        a & b & c \\
+        d & e & f \\
+        g & h & i
+    \end{pmatrix} = aei + bfg + cdh - ceg - afh - bdi.
+$$
+\end{definition}
+
+Determinant čtvercových matic větších rozměrů lze spočítat pomocí Laplaceova rozvoje.
+
+\begin{veta}[Laplaceův rozvoj]
+Označme $A_{ij}$ matici, která vznikne z matice $A$ vynecháním $i$-tého řádku a $j$-tého sloupce.
+Pak je
+\begin{align*}
+\det A &= \sum_{i=1}^m (-1)^{k+i} a_{ki} A_{ki},\\
+	&= \sum_{j=1} ^ n (-1)^{l+m} a_{ml} A_{ml},
+\end{align*}
+kde $1 \leq k \leq m$ a $1 \leq l \leq n$ jsou celá čísla.
+\end{veta}
+
 \begin{priklad}
 Vypočtete determinant matice
 $$A=\begin{pmatrix}
@@ -1082,6 +1112,20 @@ $$\det A = \begin{vmatrix}
 \end{vmatrix}=1.$$
 \end{reseni}
 
+K řešení soustav rovnic lze také využít Cramerovo pravidlo.
+
+\begin{veta}[Cramerovo pravidlo]
+	Uvažujme soustavu rovnic o matici $A$ s pravou stranou $\vec b$. Pokud má soustava $\left (
+	\begin{array}{c | c }
+	A & \vec b
+	\end{array}
+	\right )$ právě jedno řešení $(x_1, x_2, \dots, x_n)$, je
+	$$
+	    x_i=\frac{\det A_i}{\det A},
+	$$
+	kde $A_i$ je matice $A$, kde $i$-tý sloupec jsme nahradili vektorem pravých stran $\vec b$.
+\end{veta}
+
 \begin{priklad}
 V $\mathbb R$ řešte soustavu rovnic
 \begin{align*}
@@ -1102,7 +1146,7 @@ $$
 $$
 Platí $x_i=\frac{\det A_i}{\det A},$ kde $A_i$ značí matici, kterou jsme získali
 z matice $A$ nahrazením $i$-tého sloupce za sloupec $\vec b$, tj. vektor \uv{pravé strany} soustavy rovnic.
-
+Dostaneme
 $$\det A = \left|\begin{array}{c c c}
     1 & 1&1\\
     1 &1 &0\\
@@ -1149,7 +1193,7 @@ V $\mathbb R$ řešte soustavu rovnic s parametrem $a \in \mathbb R$:
 			\item $a \neq -1$: $y = \frac{4-2a}{1+a}, x = 2+ \frac{4-2a}{1+a} = \frac{6}{1+a} \implies P_2 = \left\{\left[\frac{6}{1+a}, \frac{4-2a}{1+a}\right]; a \in \math\right\}$
 		\end{enumerate}
 	\end{enumerate}
-Buď Gaussovou eliminací () nebo
+Buď Gaussovou eliminací, nebo
 Cramerovým pravidlem (to však funguje jen tehdy, když $\det A \ne 0$, případ $a=0$ tedy
 musíme dořešit Gaussovou eliminací).
 \end{reseni}
