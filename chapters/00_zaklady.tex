@@ -167,7 +167,7 @@ je-li $x>0.$
 \begin{circuitikz}
 	\ctikzset{nodes={font=\footnotesize}}
 \draw [short] (6.375,9.375) -- node[below] {1} (8.875,9.375); % vodorovná čára
-\draw [short] (6.375,11.875) -- node[below] {$\sqrt{2}$} (8.875,9.375); % diag čára
+\draw [short] (6.375,11.875) -- node[anchor=north east] {$\sqrt{2}$} (8.875,9.375); % diag čára
 \draw [short] (8.875,9.375) -- node[above] {1} (10.625,11.125); % diag čára 2
 \draw [short] (10.625,11.125) -- node[below] {$\sqrt{3}$} (6.375,11.875);
 \draw [short] (8.625,9.625) arc[start angle=135.00, end angle=45.00, radius=0.3750] node[midway, below] {.};
@@ -209,8 +209,8 @@ $$\frac{x^3+x^2-x-1}{\sqrt{x^2}+1 }.$$
 \begin{reseni}
 Platí $\sqrt{x^2}=|x| $, dále rozdělíme na případy
 \begin{enumerate}[i.]
-	\item $x > 0$: $|x| = x$ $$\frac{x^3+x^2-x-1}{x+1} = x^2 - 1,$$
-	\item $x < 0$: $|x| = -x$ $$\frac{x^3+x^2-x-1}{1-x} = -x^2 - 2x - 1.$$
+	\item $x \geq 0$: $|x| = x$ $$\frac{x^3+x^2-x-1}{x+1} = x^2 - 1,$$
+	\item $x \leq 0$: $|x| = -x$ $$\frac{x^3+x^2-x-1}{1-x} = -x^2 - 2x - 1.$$
 \end{enumerate}
 \end{reseni}
 
@@ -230,7 +230,7 @@ Najděte nejmenší hodnotu výrazu $x^2+16x-17.$
 \begin{reseni}
 Doplníme na čtverec:
 $$x^2+16x-16=(x+8)^2-64-17=(x+8)^2-81.$$
-Minimum nastane tehdy, když je čtverec nulový, tj. pro $x=-8$.
+Vedoucí člen je kladný, minimum tedy nastane tehdy, když je čtverec nulový, tj. pro $x=-8$.
 \end{reseni}
 
 
@@ -294,7 +294,7 @@ Minimum nastane tehdy, když je čtverec nulový, tj. pro $x=-8$.
 	% prázdné kolečko konec
 
 	% znamínka zprava doleva
-  \node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.010cm] at (16.875,7.5) {$+$};
+	\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.010cm] at (16.875,7.5) {$+$};
   %\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (15,7.5) {$-$};
   \node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (13.125,7.5) {$-$};
   %\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.010cm] at (11.875,7.5) {$+$};
@@ -305,26 +305,216 @@ Minimum nastane tehdy, když je čtverec nulový, tj. pro $x=-8$.
   }%
 	\caption{Řešení příkladu \ref{zaklmet1}}
 \end{figure}
-Řešení (ne)rovnice končí vypsáním pravidvostního oboru, tj. oboru (intervalu), kdy je (ne)rovnice splněna.
-$$P = \left(-\infty, 0\right> \cup \left<5, \infty\right)$$
+Řešení (ne)rovnice končí vypsáním pravdivostního oboru, tj. oboru (intervalu), kdy je (ne)rovnice splněna.
+$$P = \left(-\infty, 0\right> \cup \left<5, \infty\right).$$
 \end{reseni}
 
-\begin{priklad}
+\begin{priklad}\label{zaklmet2}
 V $\mathbb R$ řešte
 $$\frac{(4-x)(6+x)x}{2-x}\leq 0.$$
 \end{priklad}
 
-\begin{priklad}
+\begin{reseni}
+	Výraz na levé straně už je rozložen v reálném oboru, zaneseme tedy body na číselnou osu, zjistíme jedno znaménko dosazením a doplníme ostatní. Nezapomeneme vyloučit nulové body jmenovatele, protože v nich výraz není definován (dělíme nulou).
+
+	\begin{figure}[!ht]
+  \centering
+  \resizebox{1\textwidth}{!}{%
+  \begin{circuitikz}
+  \tikzstyle{every node}=[font=\fontsize{13.1pt}{17.0pt}\selectfont]
+
+	% osa
+  \draw (2.5,7) to[short] (17.5,7);
+
+	% hodnoty význačných bodů zleva doprava
+  \node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (3.75,6.375) {$-6$};
+  \node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (10,6.375) {0};
+  %\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (11.25,6.375) {(1)};
+  \node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (12.5,6.375) {2};
+  %\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (13.75,6.375) {(3)};
+	\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (15,6.375) {4};
+  %\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (16.25,6.375) {5};
+
+	% knedlíky
+
+	%-6
+  \begin{scope}[transparency group, opacity=1]
+  \node at (3.75,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+  \end{scope}
+
+	%0
+  \begin{scope}[transparency group, opacity=1]
+  \node at (10,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+  \end{scope}
+
+	% 1
+  %\begin{scope}[transparency group, opacity=1]
+  %\node at (11.25,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+  %\end{scope}
+
+	% 2 prázdné
+	% prázdné kolečko začátek
+  \draw (12.5,7) to[short, -o] (12.5,7) ;
+
+  \begin{scope}[transparency group, opacity=1]
+  \node at (12.5,7) [ocirc, color={rgb,255:red,0; green,0; blue,0}] {};
+  \end{scope}
+	% prázdné kolečko konec
+
+	% 3 prázdné
+	% prázdné kolečko začátek
+  %\draw (13.75,7) to[short, -o] (13.75,7) ;
+  %\draw (13.75,7) to[short, -o] (13.75,7) ;
+  %\draw (13.75,7) to[short, -o] (13.75,7) ;
+  %\draw (13.75,7) to[short, -o] (13.75,7) ;
+
+  %\begin{scope}[transparency group, opacity=1]
+  %\node at (13.75,7) [ocirc, color={rgb,255:red,0; green,0; blue,0}] {};
+  %\end{scope}
+	% prázdné kolečko konec
+
+	% 4
+	\begin{scope}[transparency group, opacity=1]
+  \node at (15,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+  \end{scope}
+
+	% 5
+  %\begin{scope}[transparency group, opacity=1]
+  %\node at (16.25,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+  %\end{scope}
+
+	% znamínka zprava doleva
+  	\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.010cm] at (16.2,7.5) {$+$};
+  %\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (15,7.5) {$-$};
+  \node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (13.8,7.5) {$-$};
+  \node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.010cm] at (11.2,7.5) {$+$};
+  %\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.010cm] at (10.625,7.5) {$+$};
+  \node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.010cm] at (7.05,7.5) {$-$};
+  \node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (3.125,7.5) {$+$};
+  \end{circuitikz}
+  }%
+	\caption{Řešení příkladu \ref{zaklmet2}}
+\end{figure}
+$$P = \left<-6,0\right> \cup \left(2, 4\right>.$$
+\end{reseni}
+
+\begin{priklad}\label{zaklmet3}
 V $\mathbb R$ řešte $$\frac{(x+1)(x-2)^2}{(3-x)^3(4+x)^4}\leq 0.$$
 \end{priklad}
 
-\begin{priklad}
+\begin{reseni}
+	Postupujeme obdobně jako v příkladu \ref{zaklmet2}. Nezapomeneme, že znaménko se mění pouze v nulovém bodě liché mocniny.
+	\begin{figure}[!ht]
+	\centering
+	\resizebox{1\textwidth}{!}{%
+	\begin{circuitikz}
+	\tikzstyle{every node}=[font=\fontsize{13.1pt}{17.0pt}\selectfont]
+
+	% osa
+	\draw (2.5,7) to[short] (17.5,7);
+
+	% hodnoty význačných bodů zleva doprava
+	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (3.75,6.375) {$-6$};
+	\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (5,6.375) {(-4)};
+	\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (8.75,6.375) {-1};
+	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (10,6.375) {0};
+	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (11.25,6.375) {(1)};
+	\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (12.5,6.375) {(2)};
+	\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (13.75,6.375) {3};
+	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (15,6.375) {4};
+	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (16.25,6.375) {5};
+
+	% knedlíky
+
+	% -6
+	%\begin{scope}[transparency group, opacity=1]
+	%\node at (3.75,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+	%\end{scope}
+
+	% -4 prázdné
+	% prázdné kolečko začátek
+	\draw (5,7) to[short, -o] (5,7) ;
+
+	\begin{scope}[transparency group, opacity=1]
+	\node at (5,7) [ocirc, color={rgb,255:red,0; green,0; blue,0}] {};
+	\end{scope}
+	% prázdné kolečko konec
+
+	% -1
+	\begin{scope}[transparency group, opacity=1]
+	\node at (8.75,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+	\end{scope}
+
+	%0
+	%\begin{scope}[transparency group, opacity=1]
+	%\node at (10,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+	%\end{scope}
+
+	% 1
+	%\begin{scope}[transparency group, opacity=1]
+	%\node at (11.25,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+	%\end{scope}
+
+	% 2
+	\begin{scope}[transparency group, opacity=1]
+	\node at (12.5,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+	\end{scope}
+
+	% 3 prázdné
+	% prázdné kolečko začátek
+	\draw (13.75,7) to[short, -o] (13.75,7) ;
+
+	\begin{scope}[transparency group, opacity=1]
+	\node at (13.75,7) [ocirc, color={rgb,255:red,0; green,0; blue,0}] {};
+	\end{scope}
+	% prázdné kolečko konec
+
+	% 4
+	%\begin{scope}[transparency group, opacity=1]
+	%\node at (15,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+	%\end{scope}
+
+	% 5
+	%\begin{scope}[transparency group, opacity=1]
+	%\node at (16.25,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+	%\end{scope}
+
+	% znamínka zprava doleva
+		\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.010cm] at (15.525,7.5) {$-$};
+	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (15,7.5) {$-$};
+	\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (13.125,7.5) {$+$};
+	\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.010cm] at (10.525,7.5) {$+$};
+	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.010cm] at (10.625,7.5) {$+$};
+	\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.010cm] at (7.05,7.5) {$-$};
+	\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (3.8,7.5) {$-$};
+	\end{circuitikz}
+	}%
+	\caption{Řešení příkladu \ref{zaklmet3}}
+\end{figure}
+$$P=\left(-\infty,-4\right)\cup\left(-4,-1\right>\cup\left(3, \infty\right).$$
+\end{reseni}
+
+\begin{priklad}\label{abshod1}
 V $\mathbb R$ řešte rovnici $|3x-5|=2x+10.$
 \end{priklad}
 
 \begin{reseni}
-Rozdělíme na případy, kdy je výraz v absolutní hodnotě menší / větší než 0
-a dále řešíme jako normálně.
+Rozdělíme na případy, kdy je výraz v absolutní hodnotě menší/větší než nula. V dílčích výsledcích případů nesmíme zapomenout na podmínku absolutní hodnoty.
+\begin{enumerate}[i.]
+	\item $3x-5 \geq 0\implies x \geq \frac{5}{3}$: $|3x-5|=3x-5$
+	\begin{align*}
+			3x-5&=2x+10\\
+			x&=15\\
+			P_1&=\{15\} \cap \left<\frac{5}{3}, \infty \right) = \{15\},
+	\end{align*}
+	\item $3x-5 \leq 0 \implies x \leq \frac{5}{3}$: $|3x-5| = 5-3x$
+	\begin{align*}
+		5-3x&=2x+10\\
+		x&=-1\\
+		P_2&=\{-1\}\cap \left(-\infty, \frac{5}{3} \right> = \{-1\},
+	\end{align*}
+\end{enumerate}
+$$P = \{-1, 15\}.$$
 \end{reseni}
 
 \begin{priklad}
@@ -332,26 +522,284 @@ V $\mathbb R$ řešte $2|4+3x|\leq 6x+11.$
 \end{priklad}
 
 \begin{reseni}
-Rozdělíme na případy, kdy je výraz v absolutní hodnotě menší / větší než 0
-a dále řešíme jako normálně.
+Řešíme obdobně jako příklad \ref{abshod1} rozborem na případy. Dáváme pozor na podmínky.
+\begin{enumerate}[i.]
+	\item $4+3x \geq 0 \implies x \geq -\frac{4}{3}$:
+	\begin{align*}
+		2(4+3x)&\leq 6x+11\\
+		8 &\leq 11\\
+		P_1 &= \left<-\frac{4}{3}, \infty\right),
+	\end{align*}
+	\item $4+3x \leq 0 \implies x \leq -\frac{4}{3}$:
+	\begin{align*}
+		2(-4-3x)&\leq 6x+11\\
+		-12x &\leq 19\\
+		x &\geq -\frac{19}{12}\\
+		P_2 &= \emptyset,
+	\end{align*}
+\end{enumerate}
+$$P = \left<-\frac{4}{3}, \infty\right).$$
 \end{reseni}
 
-\begin{priklad}
+\begin{priklad}\label{abshod2}
 V $\mathbb R$ řešte $|x+2|+|x-2|=2x+2.$
 \end{priklad}
 
 \begin{reseni}
-Rozdělíme na případy, kdy je výraz v absolutní hodnotě menší / větší než 0
-a dále řešíme jako normálně.
+Rozdělíme na případy podle nulových bodů absolutních hodnot, budou tedy tři případy.
+\begin{figure}[!ht]
+	\centering
+	\resizebox{1\textwidth}{!}{%
+	\begin{circuitikz}
+	\tikzstyle{every node}=[font=\fontsize{13.1pt}{17.0pt}\selectfont]
+
+	% osa
+	\draw (2.5,7) to[short] (17.5,7);
+
+	% hodnoty význačných bodů zleva doprava
+	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (3.75,6.375) {$-6$};
+	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (5,6.375) {(-4)};
+	\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (7.5,6.375) {-2};
+	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (8.75,6.375) {-1};
+	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (10,6.375) {0};
+	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (11.25,6.375) {(1)};
+	\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (12.5,6.375) {2};
+	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (13.75,6.375) {3};
+	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (15,6.375) {4};
+	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (16.25,6.375) {5};
+
+	% knedlíky
+
+	% -6
+	%\begin{scope}[transparency group, opacity=1]
+	%\node at (3.75,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+	%\end{scope}
+
+	% -4 prázdné
+	% prázdné kolečko začátek
+	%\draw (5,7) to[short, -o] (5,7) ;
+
+	%\begin{scope}[transparency group, opacity=1]
+	%\node at (5,7) [ocirc, color={rgb,255:red,0; green,0; blue,0}] {};
+	%\end{scope}
+	% prázdné kolečko konec
+
+	% -2
+	\begin{scope}[transparency group, opacity=1]
+	\node at (7.5,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+	\end{scope}
+
+	% -1
+	%\begin{scope}[transparency group, opacity=1]
+	%\node at (8.75,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+	%\end{scope}
+
+	%0
+	%\begin{scope}[transparency group, opacity=1]
+	%\node at (10,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+	%\end{scope}
+
+	% 1
+	%\begin{scope}[transparency group, opacity=1]
+	%\node at (11.25,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+	%\end{scope}
+
+	% 2
+	\begin{scope}[transparency group, opacity=1]
+	\node at (12.5,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+	\end{scope}
+
+	% 3 prázdné
+	% prázdné kolečko začátek
+	%\draw (13.75,7) to[short, -o] (13.75,7) ;
+
+	%\begin{scope}[transparency group, opacity=1]
+	%\node at (13.75,7) [ocirc, color={rgb,255:red,0; green,0; blue,0}] {};
+	%\end{scope}
+	% prázdné kolečko konec
+
+	% 4
+	%\begin{scope}[transparency group, opacity=1]
+	%\node at (15,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+	%\end{scope}
+
+	% 5
+	%\begin{scope}[transparency group, opacity=1]
+	%\node at (16.25,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+	%\end{scope}
+
+	% znamínka zprava doleva
+		\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.010cm] at (14.9,7.5) {$+ +$};
+	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (15,7.5) {$-$};
+	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (13.125,7.5) {$+$};
+	\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.010cm] at (10.212,7.5) {$- +$};
+	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.010cm] at (10.625,7.5) {$+$};
+	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.010cm] at (7.05,7.5) {$-$};
+	\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (5.050,7.5) {$- -$};
+	\end{circuitikz}
+	}%
+	\caption{Řešení příkladu \ref{abshod2}}
+\end{figure}
+\begin{enumerate}[i.]
+	\item $x \leq -2$: $|x+2|=-2-x, |x-2|=2-x$
+	\begin{align*}
+		-2-x+2-x&=2x+2\\
+		0&=4x+2\\
+		x&=-\frac{1}{2}\\
+		P_1&=\emptyset,
+	\end{align*}
+	\item $-2 \geq x \leq 2$: $|x+2|=x+2, |x-2|=2-x$
+	\begin{align*}
+		x+2+2-x&=2x+2\\
+		2&=2x\\
+		x&=1\\
+		P_2&=\{1\},
+	\end{align*}
+	\item $x \geq 2$: $|x+2|=x+2, |x-2|=x-2$
+	\begin{align*}
+		x+2+x-2&=2x+2\\
+		0&=2\\
+		P_3 &= \emptyset,
+	\end{align*}
+\end{enumerate}
+$$P=\{1\}.$$
 \end{reseni}
 
 \begin{priklad}
 V $\mathbb R$ řešte $|3x-2|<5+|x+1|.$
 \end{priklad}
 
-\begin{priklad}
+\begin{reseni}
+	Řešíme obdobně jako příklad \ref{abshod2}.
+	\begin{enumerate}[i.]
+		\item $x \leq -1$: $|x+1|=-x-1, |3x-2|=2-3x$
+		\begin{align*}
+			2-3x&<5-x-1\\
+			-2&<2x\\
+			x&>-1\\
+			P_1&=\emptyset,
+		\end{align*}
+		\item $-1 \geq x \leq \frac{2}{3}$: $|x+1|=x+1, |3x-2|=2-3x$
+		\begin{align*}
+			2-3x&<5+x+1\\
+			-2&<4x\\
+			x&>-\frac{1}{2}\\
+			P_2&=\left(-\frac{1}{2}, \frac{2}{3}\right>,
+		\end{align*}
+		\item $x \geq \frac{2}{3}$: $|x+1|=x+1, |3x+2|=3x+2$
+		\begin{align*}
+			3x+2&<5+x+1\\
+			2x&<4\\
+			x&<2\\
+			P_3 &= \left<\frac{2}{3}, 2\right),
+		\end{align*}
+	\end{enumerate}
+	$$P = \left(-\frac{1}{2}, \frac{2}{3}\right> \cup \left<\frac{2}{3}, 2\right).$$
+\end{reseni}
+
+\begin{priklad}\label{kvadnerce}
 V $\mathbb R$ řešte $x^2-6x+8 >0.$
 \end{priklad}
+
+\begin{reseni}
+	Výraz na levé straně rozložíme v reálném oboru a určíme znaménka na číselné ose.
+	$$x^2-6x+8=(x-2)(x-4)$$
+	\vspace{-1em}
+	\begin{figure}[!ht]
+		\centering
+		\resizebox{1\textwidth}{!}{%
+		\begin{circuitikz}
+		\tikzstyle{every node}=[font=\fontsize{13.1pt}{17.0pt}\selectfont]
+
+		% osa
+		\draw (2.5,7) to[short] (17.5,7);
+
+		% hodnoty význačných bodů zleva doprava
+		%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (3.75,6.375) {$-6$};
+		%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (5,6.375) {(-4)};
+		%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (7.5,6.375) {-2};
+		%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (8.75,6.375) {-1};
+		%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (10,6.375) {0};
+		%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (11.25,6.375) {(1)};
+		\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (12.5,6.375) {2};
+		%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (13.75,6.375) {3};
+		\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (15,6.375) {4};
+		%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (16.25,6.375) {5};
+
+		% knedlíky
+
+		% -6
+		%\begin{scope}[transparency group, opacity=1]
+		%\node at (3.75,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+		%\end{scope}
+
+		% -4 prázdné
+		% prázdné kolečko začátek
+		%\draw (5,7) to[short, -o] (5,7) ;
+
+		%\begin{scope}[transparency group, opacity=1]
+		%\node at (5,7) [ocirc, color={rgb,255:red,0; green,0; blue,0}] {};
+		%\end{scope}
+		% prázdné kolečko konec
+
+		% -2
+		%\begin{scope}[transparency group, opacity=1]
+		%\node at (7.5,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+		%\end{scope}
+
+		% -1
+		%\begin{scope}[transparency group, opacity=1]
+		%\node at (8.75,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+		%\end{scope}
+
+		%0
+		%\begin{scope}[transparency group, opacity=1]
+		%\node at (10,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+		%\end{scope}
+
+		% 1
+		%\begin{scope}[transparency group, opacity=1]
+		%\node at (11.25,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+		%\end{scope}
+
+		% 2
+		\begin{scope}[transparency group, opacity=1]
+		\node at (12.5,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+		\end{scope}
+
+		% 3 prázdné
+		% prázdné kolečko začátek
+		%\draw (13.75,7) to[short, -o] (13.75,7) ;
+
+		%\begin{scope}[transparency group, opacity=1]
+		%\node at (13.75,7) [ocirc, color={rgb,255:red,0; green,0; blue,0}] {};
+		%\end{scope}
+		% prázdné kolečko konec
+
+		% 4
+		\begin{scope}[transparency group, opacity=1]
+		\node at (15,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+		\end{scope}
+
+		% 5
+		%\begin{scope}[transparency group, opacity=1]
+		%\node at (16.25,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+		%\end{scope}
+
+		% znamínka zprava doleva
+		\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.010cm] at (16.4,7.5) {$+$};
+		%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (15,7.5) {$-$};
+		\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (13.75,7.5) {$-$};
+		%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.010cm] at (10.212,7.5) {$-$};
+		%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.010cm] at (10.625,7.5) {$+$};
+		\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.010cm] at (7.988,7.5) {$+$};
+		%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (5.050,7.5) {$-$};
+		\end{circuitikz}
+		}%
+		\caption{Řešení příkladu \ref{kvadnerce}}
+	\end{figure}
+	$$P=\left(-\infty, 2\right) \cup \left(4, \infty\right)$$
+\end{reseni}
 
 \begin{priklad}
 Danou matici převeďte na schodovitý tvar a určete její hodnost.
@@ -363,7 +811,33 @@ $$A=\begin{pmatrix}
 \end{priklad}
 
 \begin{reseni}
-K jednotlivým řádkům přičítáme násobky jiných, aby nám vyšel schodovitý tvar.
+Matici převedeme Gaussovou eliminační metodou na schodovitý tvar.
+$$\begin{pmatrix}
+    1 & 2 & -3 \\
+    -3 & 1 & -2 \\
+    2 & 3 & 2
+\end{pmatrix}\sim
+\begin{pmatrix}
+    1 & 2 & -3 \\
+    0 & 6 & -3 \\
+    2 & 3 & 2
+\end{pmatrix}\sim
+\begin{pmatrix}
+    1 & 2 & -3 \\
+    0 & 6 & -3 \\
+    0 & -1 & 8
+\end{pmatrix}\sim
+\begin{pmatrix}
+    1 & 2 & -3 \\
+    0 & 6 & -3 \\
+    0 & -6 & 48
+\end{pmatrix}\sim
+\begin{pmatrix}
+    1 & 2 & -3 \\
+    0 & 6 & -3 \\
+    0 & 0 & 45
+\end{pmatrix}$$
+Ve schodovitém tvaru se nevynuloval žádný řádek, matice má tedy hodnost $3$.
 \end{reseni}
 
 \begin{priklad}
@@ -377,7 +851,7 @@ V $\mathbb R$ řešte:
 \end{priklad}
 
 \begin{reseni}
-Převedeme na matici
+Převedeme na rozšířenou matici
 $$
 \left (
 \begin{array}{c c c | c }
@@ -389,6 +863,55 @@ $$
 \right )
 $$
 a řešíme Gaussovou eliminační metodou.
+$$\left (
+\begin{array}{c c c | c }
+1 & 8& -7& 12\\
+2& 5& -8& 8\\
+4& 3& -9& 9\\
+2& 3& -5& 7
+\end{array}
+\right )\sim
+\left (
+\begin{array}{c c c | c }
+	1 & 8& -7& 12\\
+	0& -11& 6& -16\\
+	0& -29& 19& -39\\
+	0& -13& 9& -17
+\end{array}
+\right )\sim
+\left (
+\begin{array}{c c c | c }
+	1 & 8& -7& 12\\
+	0& 1& -\frac{6}{11}& \frac{16}{11}\\
+	0& -29& 19& -39\\
+	0& -13& 9& -17
+\end{array}
+\right )\sim
+\left (
+\begin{array}{c c c | c }
+	1 & 0& -\frac{29}{11}& \frac{4}{11}\\
+	0& 1& -\frac{6}{11}& \frac{16}{11}\\
+	0& 0& \frac{35}{11}& \frac{35}{11}\\
+	0& 0& \frac{21}{11}& \frac{21}{11}
+\end{array}
+\right )\sim$$
+$$\sim\left (
+\begin{array}{c c c | c }
+	1 & 0& -\frac{29}{11}& \frac{4}{11}\\
+	0& 1& -\frac{6}{11}& \frac{16}{11}\\
+	0& 0& 1& 1\\
+	0& 0& 0& 0
+\end{array}
+\right )\sim
+\left (
+\begin{array}{c c c | c }
+	1 & 0& 0& 3\\
+	0& 1& 0& 2\\
+	0& 0& 1& 1\\
+	0& 0& 0& 0
+\end{array}
+\right )$$
+$$P=\{[3, 2, 1]\}$$
 \end{reseni}
 
 \begin{priklad}
@@ -410,6 +933,21 @@ $$
 \right )
 $$
 a řešíme Gaussovou eliminační metodou.
+$$\left (
+\begin{array}{c c c | c }
+1 & 1 & 1 & 1\\
+1  & 0 &-1  &0
+\end{array}
+\right )\sim
+\left (
+\begin{array}{c c c | c }
+1 & 1 & 1 & 1\\
+0  & -1 &-2  &-1
+\end{array}
+\right )
+$$
+Matice soustavy rovnic má po převedení do schodovitého tvaru dva nenulové řádky, jedná proměnná tedy bude volná, vyjádřená v závislosti na parametru.
+$$P=\{[k,1-2k,k]; k \in \mathbb R\}$$
 \end{reseni}
 
 \begin{priklad}
@@ -434,11 +972,11 @@ $$\det A = \begin{vmatrix}
 1 &2 &3 \\
 2 &5 &9\\
 3 &9 &19
-\end{vmatrix}=1$$
+\end{vmatrix}=1.$$
 \end{reseni}
 
 \begin{priklad}
-V $\mathbb R$ řešte  soustavu rovnic
+V $\mathbb R$ řešte soustavu rovnic
 \begin{align*}
     x_1+x_2+x_3 &=1,\\
     x_1+x_2 &= 0,\\
@@ -447,16 +985,37 @@ V $\mathbb R$ řešte  soustavu rovnic
 \end{priklad}
 
 \begin{reseni}
-Řešme Cramerovým pravidlem. Soustavu přepišme jako matici
+Řešme Cramerovým pravidlem. Soustavu přepišme jako rozšířenou matici
 $$
-\begin{pmatrix}
-    1 & 1&1\\
-    1 &1 &0 \\
-    1 &0 &1
-\end{pmatrix}.
+(A | \vec b) = \left(\begin{array}{c c c | c}
+    1 & 1&1 &1\\
+    1 &1 &0 &0\\
+    1 &0 &1 &-1
+\end{array}\right).
 $$
 Platí $x_i=\frac{\det A_i}{\det A},$ kde $A_i$ značí matici, kterou jsme získali
-z matice $A$ nahrazením $i$-tého sloupce za vektor \uv{pravé strany} soustavy rovnic.
+z matice $A$ nahrazením $i$-tého sloupce za sloupec $\vec b$, tj. vektor \uv{pravé strany} soustavy rovnic.
+
+$$\det A = \left|\begin{array}{c c c}
+    1 & 1&1\\
+    1 &1 &0\\
+    1 &0 &1
+\end{array}\right|=-1,$$
+$$\det A_1 = \left|\begin{array}{c c c}
+    1 & 1&1\\
+    0 &1 &0\\
+    -1 &0 &1
+\end{array}\right| = 2,\quad \det A_2 = \left|\begin{array}{c c c}
+    1 & 1&1\\
+    1 &0 &0\\
+    1 &-1 &1
+\end{array}\right| = -2,\quad \det A_3 = \left|\begin{array}{c c c}
+    1 & 1&1\\
+    1 &1 &0\\
+    1 &0 &-1
+\end{array}\right|=-1$$
+$$x_1 = \frac{2}{-1}=-2,\quad x_2 = \frac{-2}{-1} = 2,\quad x_3 = \frac{-1}{-1} = 1,$$
+$$P=\{[-2,2,1]\}.$$
 \end{reseni}
 
 \begin{priklad}
@@ -468,7 +1027,22 @@ V $\mathbb R$ řešte soustavu rovnic s parametrem $a \in \mathbb R$:
 \end{priklad}
 
 \begin{reseni}
-Buď Gaussovou eliminací (od druhého řádku odečteme $a$-násobek prvního řádku) nebo
+	\begin{enumerate}[1.]
+		\item způsob: Gaussova eliminační metoda: převedeme soustavu na matici a od druhého řádku odečteme $a$-násobek prvního řádku
+		$$\left(\begin{array}{cc|c}
+			1 &-1&2\\
+			a & 1& 4
+		\end{array}\right)\sim
+		\left(\begin{array}{cc|c}
+			1 &-1&2\\
+			0 & 1+a& 4 -2a
+		\end{array}\right)$$
+		\begin{enumerate}[i.]
+			\item $a = -1$: $0x + 0y = 4 \implies P_1 = \emptyset$
+			\item $a \neq -1$: $y = \frac{4-2a}{1+a}, x = 2+ \frac{4-2a}{1+a} = \frac{6}{1+a} \implies P_2 = \left\{\left[\frac{6}{1+a}, \frac{4-2a}{1+a}\right]; a \in \math\right\}$
+		\end{enumerate}
+	\end{enumerate}
+Buď Gaussovou eliminací () nebo
 Cramerovým pravidlem (to však funguje jen tehdy, když $\det A \ne 0$, případ $a=0$ tedy
 musíme dořešit Gaussovou eliminací).
 \end{reseni}
@@ -493,9 +1067,8 @@ V $\mathbb Z$ řešte $5x-13y=2.$
 
 \begin{reseni}
 \begin{enumerate}[1.]
-\item způsob: Uhodnutí jednoho kořene: $x_0=3, y_0=1.$ Pak další řešení je tvaru
-$x=x_0-\frac{b}{d}r, y=y_0+\frac{a}{d}r,$ kde $r \in \mathbb Z$ a $d$ značí
-největšího společného dělitele koeficientů u~$x$ a~$y$. Je tedy
+\item způsob: Uhodnutí jeden kořen, např. $x_0=3, y_0=1.$ Pak další řešení je tvaru
+$x=x_0-\frac{b}{d}r, y=y_0+\frac{a}{d}r,$ kde $a$, $b$ jsou koeficienty u $x$ a $y$ respektive, $d$ je největší společný dělitel $a$ a $b$ a $r \in \mathbb Z$ je parametr. Je tedy
 \begin{align*}
     x&=3-\frac{-13}{1}r=3+13r, \\
     y &= 1+\frac{5}{1}r = 1+5r,
@@ -504,16 +1077,16 @@ kde $r\in \mathbb Z.$
 \item způsob: Modifikace Eukleidova algoritmu: z rovnice osamostatníme tu neznámou,
 jejíž koeficient je v absolutní hodnotě menší.
 \begin{align*}
-    x &= \frac{13y+2}{5}=\frac{10y}{5}+\frac{3y+2}{5}=2y+\underbrace{\frac{3y+2}{5}}_{\in \mathbb Z}\\
-    \exists u \in \mathbb Z\colon u &= \frac{3y+2}{5}\implies 3y+2=5u \iff y=\frac{5u-2}{3}=u+\underbrace{\frac{2u-2}{2}}_{\in \mathbb Z} \\
-     & \dots \\
-     \exists w \in \mathbb Z\colon w &= \frac{v}{2}\implies v = 2w \implies 2 \mid v.
+    x &= \frac{13y+2}{5}=\frac{10y}{5}+\frac{3y+2}{5}=2y+\underbrace{\frac{3y+2}{5}}_{\in \mathbb Z},\\
+    \exists u \in \mathbb Z\colon u &= \frac{3y+2}{5}\implies 3y+2=5u \implies y=\frac{5u-2}{3}=u+\underbrace{\frac{2u-2}{3}}_{\in \mathbb Z}, \\
+     \exists v \in \mathbb Z\colon v &= \frac{2u-2}{3} \implies 2u-2=3v \implies u = \frac{3v+2}{2} = v + 1 + \underbrace{\frac{v}{2}}_{\in \mathbb Z} ,\\
+     \exists w \in \mathbb Z\colon w &= \frac{v}{2}\implies v = 2w.
 \end{align*}
 Nyní zpětně dosazujeme:
 \begin{align*}
-    u&= \frac{3(2w)+2}{2}=\frac{6w+2}{2}=3w+1\\
-    y&=\frac{5u-2}{3}=\frac{5 \frac{3w+1}{2}-2}{3}=5w+1 \\
-    x &= \frac{13 \frac{5w+1}{1}+2}{5}=13w+3
+    u&= \frac{3(2w)+2}{2}=\frac{6w+2}{2}=3w+1,\\
+    y&=\frac{5u-2}{3}=\frac{5 \frac{3w+1}{2}-2}{3}=5w+1, \\
+    x &= \frac{13 \frac{5w+1}{1}+2}{5}=13w+3.
 \end{align*}
 \end{enumerate}
 \end{reseni}
@@ -523,19 +1096,53 @@ V $\mathbb R$ řešte rovnici $2x^4+3x^3-16x^2+3x+2=0.$
 \end{priklad}
 
 \begin{reseni}
-Reciproká rovnice. Vydělíme $x^2$, neboť 0 není kořen a zavedeme substituci
-$x+\frac{1}{x}=t$ (ostatní mocniny dopočteme). V rovnici vytkneme opakující se členy
-tak, abychom mohli  subsituci použít. Nezapomeneme zpětně dosadit.
+Rovnice je reciproká. Vydělíme $x^2$, neboť 0 není kořen a zavedeme substituci
+$x+\frac{1}{x}=t$ (dále $t^2= x^2 + 2 + \frac{1}{x^2} \implies x^2 + \frac{1}{x^2} = t^2 - 2$, obdobně by se postupovalo s dalšími mocninami).
+\begin{align*}
+	2x^4+3x^3-16x^2+3x+2&=0\\
+	2x^2+3x-16+\frac{3}{x}+\frac{2}{x^2}&=0\\
+	2\left(x^2+\frac{1}{x^2}\right)+3\left(x+\frac{1}{x}\right)-16&=0\\
+	2(t^2-2)+3t-16&=0\\
+	2t^2+3t-20 &= 0\\
+	t_{1,2} = \frac{-1\pm \sqrt{9+4\cdot4\cdot20}}{4} &= \frac{-1 \pm 13}{4}
+\end{align*}
+\begin{enumerate}[i.]
+	\item $t = 3$
+	\begin{align*}
+		\implies x + \frac{1}{x} &= 3\\
+		x^2+1&=3x\\
+		x^2-3x + 1 &= 0\\
+		x_{1,2} &= \frac{3 \pm \sqrt{9-4}}{2} = \frac{3 \pm \sqrt{5}}{2}
+	\end{align*}
+	\item $t = -\frac{7}{2}$
+	\begin{align*}
+		\implies x + \frac{1}{x} &= -\frac{7}{2}\\
+		x^2+1&=-\frac{7}{2}x\\
+		x^2+\frac{7}{2}x + 1 &= 0\\
+		x_{3,4} &= \frac{-\frac{7}{2} \pm \sqrt{\frac{49}{4}-4}}{2} = \frac{-7\pm \sqrt{33}}{4}
+	\end{align*}
+\end{enumerate}
+$$P = \left\{\frac{3 \pm \sqrt{5}}{2}, \frac{-7\pm \sqrt{33}}{4}\right\}$$
 \end{reseni}
 
 \begin{priklad}
-Přibližně určete reálný kořen polynomu $x^3+x-3$.
+Přibližně určete reálný kořen polynomu $P(x)=x^3+x-3$.
 \end{priklad}
 
 \begin{reseni}
-Postupně dosazujeme nějaké hodnoty, dokud nezjistíme, že mezi nějakými dvěma
-musí graf funkce procházet nulou (jedna je záporná a jedna je kladná). Takto postupujeme
-dál.
+Postupně dosazujeme libovolné hodnoty, dokud nezjistíme, že mezi nějakými dvěma
+musí graf funkce procházet nulou (jedna hodnota je záporná a jedna je kladná). Pak vezmeme nějakou třetí hodnotu mezi dvěma předchozími a takto zpřesňujeme odhad do libovolné přesnosti.
+\begin{align*}
+	P(0) &= 0 + 0 -3 = -3\\
+	P(1) &= 1+ 1 -3 = -1\\
+	P(2) &= 8 + 2 - 3 = 7\\
+	P(1{,}5) &= 3{,}375 + 1{,}5 - 3 = 1{,}875\\
+	P(1{,}25) &= 1{,}953125 + 1{,}25 - 3 = 0{,}203125\\
+	P(1{,}125) &= 1{,}423828125 + 1{,}125 -3 = -0{,}451171875\\
+	P(1{,}1925) &= 1{,}6958020781 + 1{,}1925 - 3 = -0{,}1116979219\\
+	\dots &= \dots
+\end{align*}
+Jeden z kořenů polynomu má hodnotu mezi $1{,}1925$ a $1{,}25$.
 \end{reseni}
 
 \begin{priklad}
@@ -543,8 +1150,15 @@ V $\mathbb R$ řešte $1/(5^{2x-4})=125.$
 \end{priklad}
 
 \begin{reseni}
-Převedeme na stejný základ: $5^{4-2x}=5^3$ a přesuneme se do rovnosti exponentů:
-$4-2x=3$.
+Převedeme obě strany na stejný základ
+$$5^{4-2x}=5^3$$
+a přesuneme se do rovnosti exponentů.
+\begin{align*}
+	4-2x&=3\\
+	x&=1\\
+	\\
+	P&=\{1\}
+\end{align*}
 \end{reseni}
 
 \begin{priklad}
@@ -552,7 +1166,16 @@ V $\mathbb R$ řešte rovnici $4^x+2^x-6=0$.
 \end{priklad}
 
 \begin{reseni}
-Použijeme substituci $2^x=t.$
+Použijeme s výhodou substituci $2^x=t$
+\begin{align*}
+t^2+t-6&=0\\
+(t+3)(t-2)&=0\\
+\end{align*}
+a pak zpětně dosadíme.
+\begin{align*}
+	&t=-3 \text{ nelze} &t=2 \implies x = 1
+\end{align*}
+$$P=\{1\}$$
 \end{reseni}
 
 \begin{priklad}
@@ -560,8 +1183,19 @@ V $\mathbb R$ řešte $\log (4x+6)=1+\log(2x-1).$
 \end{priklad}
 
 \begin{reseni}
-Určíme podmínky pro argument (argument je větší než 0). Potom úpravou chceme dostat
-rovnost dvou logaritmů, abychom se mohli přesunou do rovnosti argumentů.
+Určíme podmínky pro argumenty, aby logaritmy byly definované. Poté budeme upravovat tak, abychom získali rovnost dvou logaritmů, a pak se mohli přesunout do rovnosti argumentů.
+\begin{align*}
+	4x+6 > 0 &\implies x > -\frac{3}{2}\\
+	2x-1 >0 &\implies x >\frac{1}{2}\\
+	\\
+	\log(4x+6)&=1+\log(2x-1)\\
+	\log(4x+6)&=\log 10 +\log(2x-1)\\
+	\log(4x+6)&=\log(20x-10)\\
+	4x+6 &= 20x -10\\
+	x&=1\\
+	\\
+	P&=\{1\}
+\end{align*}
 \end{reseni}
 
 \begin{priklad}
@@ -569,15 +1203,139 @@ V $\mathbb R$ řešte rovnici $x^{3+2\log_5 x}=25x^{2+\log_5 x}$.
 \end{priklad}
 
 \begin{reseni}
-Upravíme a rovnici zlogaritmujeme.
+Rovnici zlogaritmujeme a dále upravujeme. Logaritmování nemusí být ekvivalentní úprava a na konci tak provedeme zkoušku.
+\begin{align*}
+	x^{3+2\log_5 x}&=25x^{2+\log_5 x}\\
+	\log_5(x^{3+2\log_5 x})&=\log_5(25x^{2+\log_5 x})\\
+	(3+2\log_5 x)\cdot \log_5 x &= \log_5 25+\log_5(x^{2+\log_5 x})\\
+	(3+2\log_5 x)\cdot \log_5 x &= 2 + (2+\log_5 x)\cdot \log_5 x
+\end{align*}
+Nyní zavedeme substituci $t = \log_5 x$.
+\begin{align*}
+	(3+2t)\cdot t &= 2 + (2+t)\cdot t\\
+	3t+2t^2 &= 2 + 2t + t^2\\
+	t^2+t-2&=0\\
+	(t+2)(t-1)&=0\\
+\end{align*}\begin{align*}
+	&t=-2 \implies x = 5^{-2} = \frac{1}{25} &t=1 \implies x = 5^1 = 5
+\end{align*}
+Zkouška:
+\begin{align*}
+	&x=\frac{1}{25}\colon L = 25, P = 25 &x=5\colon L = 5^5, P = 5^5
+\end{align*}
+$$P=\left\{\frac{1}{25}, 5\right\}$$
 \end{reseni}
 
-\begin{priklad}
+\begin{priklad}\label{expnerce}
 V $\mathbb R$ řešte nerovnici $3^{2x+5}\leq 3^{x+2}+2.$
 \end{priklad}
 
 \begin{reseni}
-Užijeme výhodné substituce $a=3^{x+2}$.
+Užijeme výhodné substituce $t=3^{x+2}$.
+\begin{align*}
+	3^{2x+5}&\leq 3^{x+2}+2\\
+	3\cdot 3^{2(x+2)} &\leq 3^{x+2} + 2\\
+	3t^2 &\leq t + 2\\
+	3t^2 - t - 2 &\leq 0\\
+	(3t+2)(t-1) &\leq 0
+\end{align*}\begin{align*}
+	&t=\frac{-2}{3} \text{ nelze} &t=1 \implies x = -2
+\end{align*}
+\vspace{-1em}
+\begin{figure}[!ht]
+	\centering
+	\resizebox{1\textwidth}{!}{%
+	\begin{circuitikz}
+	\tikzstyle{every node}=[font=\fontsize{13.1pt}{17.0pt}\selectfont]
+
+	% osa
+	\draw (2.5,7) to[short] (17.5,7);
+
+	% hodnoty význačných bodů zleva doprava
+	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (3.75,6.375) {$-6$};
+	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (5,6.375) {(-4)};
+	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (7.5,6.375) {-2};
+	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (8.75,6.375) {-1};
+	\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (10,6.375) {$t=1 \implies x = -2$};
+	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (11.25,6.375) {(1)};
+	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (12.5,6.375) {2};
+	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (13.75,6.375) {3};
+	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (15,6.375) {4};
+	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (16.25,6.375) {5};
+
+	% knedlíky
+
+	% -6
+	%\begin{scope}[transparency group, opacity=1]
+	%\node at (3.75,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+	%\end{scope}
+
+	% -4 prázdné
+	% prázdné kolečko začátek
+	%\draw (5,7) to[short, -o] (5,7) ;
+
+	%\begin{scope}[transparency group, opacity=1]
+	%\node at (5,7) [ocirc, color={rgb,255:red,0; green,0; blue,0}] {};
+	%\end{scope}
+	% prázdné kolečko konec
+
+	% -2
+	%\begin{scope}[transparency group, opacity=1]
+	%\node at (7.5,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+	%\end{scope}
+
+	% -1
+	%\begin{scope}[transparency group, opacity=1]
+	%\node at (8.75,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+	%\end{scope}
+
+	%0
+	\begin{scope}[transparency group, opacity=1]
+	\node at (10,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+	\end{scope}
+
+	% 1
+	%\begin{scope}[transparency group, opacity=1]
+	%\node at (11.25,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+	%\end{scope}
+
+	% 2
+	%\begin{scope}[transparency group, opacity=1]
+	%\node at (12.5,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+	%\end{scope}
+
+	% 3 prázdné
+	% prázdné kolečko začátek
+	%\draw (13.75,7) to[short, -o] (13.75,7) ;
+
+	%\begin{scope}[transparency group, opacity=1]
+	%\node at (13.75,7) [ocirc, color={rgb,255:red,0; green,0; blue,0}] {};
+	%\end{scope}
+	% prázdné kolečko konec
+
+	% 4
+	%\begin{scope}[transparency group, opacity=1]
+	%\node at (15,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+	%\end{scope}
+
+	% 5
+	%\begin{scope}[transparency group, opacity=1]
+	%\node at (16.25,7) [circ, color={rgb,255:red,0; green,0; blue,0}] {};
+	%\end{scope}
+
+	% znamínka zprava doleva
+	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.010cm] at (16.4,7.5) {$+$};
+	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (15,7.5) {$-$};
+	\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (13.75,7.5) {$+$};
+	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.010cm] at (10.212,7.5) {$-$};
+	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.010cm] at (10.625,7.5) {$+$};
+	\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.010cm] at (6.25,7.5) {$-$};
+	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (5.050,7.5) {$-$};
+	\end{circuitikz}
+	}%
+	\caption{Řešení příkladu \ref{expnerce}}
+\end{figure}
+$$P = \left( -\infty, -2 \right>$$
 \end{reseni}
 
 \begin{priklad}
@@ -589,25 +1347,159 @@ V $\mathbb R$ řešte soustavu rovnic
 \end{priklad}
 
 \begin{reseni}
-Druhou rovnici zlogaritmujeme a využijeme substituce $a=\log x, b=\log y.$
+Obě rovnice zlogaritmujeme a využijeme substituce $a=\log x, b=\log y.$
+\begin{align*}
+	\log(x^{\log y})&=\log 4\\
+	\log xy&=\log 40\\
+	&\\
+	\log x \cdot \log y &= \log 4\\
+	\log x + \log y &= 1 + \log 4\\
+	&\\
+	a \cdot b &= \log 4\\
+	a + b &= 1 + \log 4\\
+\end{align*}
+Nyní vyjádříme z druhé rovnice $b$ a dosadíme do první.
+\begin{align*}
+	a \cdot (1+ \log 4 -a) &= \log 4\\
+	-a^2 +(1+ \log 4)a - \log 4 &= 0\\
+	a_{1,2} = \frac{1+\log 4 \pm \sqrt{1+6\log 4 + \log^2 4}}{2} &\implies x_{1,2} = 10^{\frac{1+\log 4 \pm \sqrt{1+6\log 4 + \log^2 4}}{2}}\\
+	b_{1,2} = \frac{1+\log 4 \mp \sqrt{1+6\log 4 + \log^2 4}}{2} &\implies y_{1,2} = 10^{\frac{1+\log 4 \mp \sqrt{1+6\log 4 + \log^2 4}}{2}}
+\end{align*}
 \end{reseni}
 
-\begin{priklad}
+\begin{priklad}\label{gonrce1}
 V $\mathbb R$ řešte rovnici $\sin x = \frac{1}{2}.$
 \end{priklad}
 
 \begin{reseni}
-Z náčrtku jednotkové kružnice zjistíme $x_1 = \frac{\pi}{6}+2k\pi$ a $x_2=\pi-\frac{\pi}{6}+2k\pi.$
+Z náčrtku jednotkové kružnice a základních hodnot funkce $\sin$ vidíme $x_1 = \frac{\pi}{6}$ a $x_2=\frac{5\pi}{6}.$
+\begin{figure}[!ht]
+	\centering
+	        \begin{tikzpicture}[scale=1]
+	            % Kružnice
+	            \draw (0,0) circle (2.5cm);
+
+	            % Počátek
+	            \node[below right] at (0,0) {$O$};
+
+	            % Úhly a jejich výplně
+	            % Úhel alpha (červený, 0° až 25°)
+							\filldraw[gray!10, draw=gray] (0,0) -- (0:0.9) arc (0:150:0.9) -- cycle;
+							\node[gray] at (130.5:1.15) {$\frac{5\pi}{6}$};
+
+	            \filldraw[gray!15, draw=gray] (0,0) -- (0:0.7) arc (0:30:0.7) -- cycle;
+	            \node[gray] at (12.5:1.15) {$\frac{\pi}{6}$};
+
+	            % Úhel beta (modrý, 90° až 60°)
+	            %\filldraw[blue!15, draw=blue] (0,0) -- (90:0.8) arc (90:60:0.8) -- cycle;
+	            %\node[blue] at (75:1.05) {$\beta$};
+
+	            % Úhel phi (šedý, 25° až 60°)
+	            %\filldraw[gray!30, draw=black] (0,0) -- (25:0.8) arc (25:60:0.8) -- cycle;
+	            %\node at (42.5:1.05) {$\varphi$};
+
+	            % Vektory a tečkovaná prodloužení
+							\draw[thick] (150:2.5) -- (30:2.5);
+							\node[anchor= south west] at (0,1.25) {$\frac{1}{2}$};
+	            \draw[->, thick] (0,0) -- (30:2.5);
+							\draw[->, thick] (0,0) -- (150:2.5);
+	            \draw[dotted] (30:2.5) -- (3,1.25);
+							\draw[dotted] (150:2.5) -- (-3,1.25);
+
+	            %\draw[->, thick, blue] (0,0) -- (60:2.5) node[right] {$\vec{v}$};
+	            %\draw[dotted] (60:2.5) -- (60:3.2);
+
+							% Souřadnicové osy
+	            \draw[->] (-3,0) -- (3.2,0);
+	            \draw[->] (0,-3) -- (0,3.2);
+	        \end{tikzpicture}
+					\caption{Řešení příkladu \ref{gonrce1}}
+\end{figure}
+$$P = \left\{\frac{\pi}{6}+2k \pi; k \in \mathbb Z\right\} \cup \left\{\frac{5\pi}{6}+2k \pi; k \in \mathbb Z\right\}$$
 \end{reseni}
 
-\begin{priklad}
+\begin{priklad}\label{gonrce2}
 V $\mathbb R$ řešte rovnici $\tg x = -\sqrt{3}. $
 \end{priklad}
 
 \begin{reseni}
-Z náčrtku zjistíme $x_1=-\frac{\pi}{3}+k\pi$ a $x_2=\frac{2\pi}{3}+k\pi.$
+Z náčrtku grafu a základních hodnot funkce $\tg$ vidíme $x_1=-\frac{\pi}{3}+k\pi$, tedy $P = \{-\frac{2\pi}{3}+k\pi; k \in \mathbb Z\}$.
+\begin{comment}
+\begin{figure}
+	\begin{tikzpicture}
+	\begin{axis}[
+		axis lines=middle,
+		xlabel=$x$, ylabel=$y$,
+		xmin=-2*pi, xmax=2*pi,
+		ymin=-5, ymax=5,
+		trig format plots=rad,
+		xtick={-1.5*pi, -0.5*pi, 0.5*pi, 1.5*pi},
+		xticklabels={$-\frac{3\pi}{2}$, $-\frac{\pi}{2}$, $\frac{\pi}{2}$, $\frac{3\pi}{2}$}
+	]
+		% Define a small offset to avoid infinity
+		\def\offset{0.01}
+
+		% Plot segments with shrunk domains
+		\addplot[red, domain=-2*pi:-1.5*pi+\offset, samples=100] {tan(x)};
+		\addplot[red, domain=-1.5*pi+\offset:-0.5*pi-\offset, samples=100] {tan(x)};
+		\addplot[red, domain=-0.5*pi+\offset:0.5*pi-\offset, samples=100] {tan(x)};
+		\addplot[red, domain=0.5*pi+\offset:1.5*pi-\offset, samples=100] {tan(x)};
+		\addplot[red, domain=1.5*pi+\offset:2*pi, samples=100] {tan(x)};
+	\end{axis}
+\end{tikzpicture}
+	\caption{Řešení příkladu \ref{gonrce2}}
+\end{figure}
+\end{comment}
 \end{reseni}
 
-\begin{priklad}
-V $\mathbb R$ řešte nerovnici $\sin x \geq \frac{\sqrt{2} }{2}.$
+\begin{priklad}\label{gonrce3}
+V $\mathbb R$ řešte nerovnici $\sin x \geq \frac{\sqrt{2}}{2}.$
 \end{priklad}
+
+\begin{reseni}
+	Z náčrtku jednotkové kružnice a základních hodnot funkce $\sin$ vidíme $P = \bigcup\limits_{k \in \mathbb Z} \left<\frac{\pi}{4}+ 2k\pi,\frac{3\pi}{4}+ 2k\pi \right>$.
+	\begin{comment}
+	\begin{figure}[!ht]
+		\centering
+		        \begin{tikzpicture}[scale=1]
+		            % Kružnice
+		            \draw (0,0) circle (2.5cm);
+
+		            % Počátek
+		            \node[below right] at (0,0) {$O$};
+
+		            % Úhly a jejich výplně
+		            % Úhel alpha (červený, 0° až 25°)
+								\filldraw[gray!10, draw=gray] (0,0) -- (0:0.9) arc (0:135:0.9) -- cycle;
+								\node[gray, yshift=3pt] at (120.5:1.15) {$\frac{3\pi}{4}$};
+
+		            \filldraw[gray!15, draw=gray] (0,0) -- (0:0.7) arc (0:45:0.7) -- cycle;
+		            \node[gray] at (27.5:1.15) {$\frac{\pi}{4}$};
+
+		            % Úhel beta (modrý, 90° až 60°)
+		            %\filldraw[blue!15, draw=blue] (0,0) -- (90:0.8) arc (90:60:0.8) -- cycle;
+		            %\node[blue] at (75:1.05) {$\beta$};
+
+		            % Úhel phi (šedý, 25° až 60°)
+		            %\filldraw[gray!30, draw=black] (0,0) -- (25:0.8) arc (25:60:0.8) -- cycle;
+		            %\node at (42.5:1.05) {$\varphi$};
+
+		            % Vektory a tečkovaná prodloužení
+								\draw[thick] (135:2.5) -- (45:2.5);
+								\node[yshift = 4pt, anchor=west] at (0,0.717*2.5) {$\frac{\sqrt{2}}{2}$};
+		            \draw[->, thick] (0,0) -- (45:2.5);
+								\draw[->, thick] (0,0) -- (135:2.5);
+		            \draw[dotted] (45:2.5) -- (2.4,0.717*2.5);
+								\draw[dotted] (135:2.5) -- (-2.4,0.717*2.5);
+
+		            %\draw[->, thick, blue] (0,0) -- (60:2.5) node[right] {$\vec{v}$};
+		            %\draw[dotted] (60:2.5) -- (60:3.2);
+
+								% Souřadnicové osy
+		            \draw[->] (-3,0) -- (3.2,0);
+		            \draw[->] (0,-3) -- (0,3.2);
+		        \end{tikzpicture}
+						\caption{Řešení příkladu \ref{gonrce3}}
+	\end{figure}
+\end{comment}
+\end{reseni}
