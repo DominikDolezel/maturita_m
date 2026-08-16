@@ -1218,11 +1218,11 @@ V $\mathbb Z$ řešte $5x-13y=2.$
 
 \begin{reseni}
 \begin{enumerate}[1.]
-\item způsob: Uhodnutí jeden kořen, např. $x_0=3, y_0=1.$ Pak další řešení je tvaru
-$x=x_0-\frac{b}{d}r, y=y_0+\frac{a}{d}r,$ kde $a$, $b$ jsou koeficienty u $x$ a $y$ respektive, $d$ je největší společný dělitel $a$ a $b$ a $r \in \mathbb Z$ je parametr. Je tedy
+\item způsob: Uhodneme jeden kořen, např. $x_0=3, y_0=1.$ Pak další řešení jsou tvaru
+$$x=x_0-\frac{b}{d}\cdot r,\quad y=y_0+\frac{a}{d}\cdot r,$$ kde $a$, $b$ jsou koeficienty u $x$ a $y$ respektive, $d$ je největší společný dělitel $a$ a $b$ a $r \in \mathbb Z$ je parametr. Je tedy
 \begin{align*}
-    x&=3-\frac{-13}{1}r=3+13r, \\
-    y &= 1+\frac{5}{1}r = 1+5r,
+    x&=3-\frac{-13}{1}\cdot r=3+13r, \\
+    y &= 1+\frac{5}{1}\cdot r = 1+5r,
 \end{align*}
 kde $r\in \mathbb Z.$
 \item způsob: Modifikace Eukleidova algoritmu: z rovnice osamostatníme tu neznámou,
@@ -1249,31 +1249,34 @@ V $\mathbb R$ řešte rovnici $2x^4+3x^3-16x^2+3x+2=0.$
 \begin{reseni}
 Rovnice je reciproká. Vydělíme $x^2$, neboť 0 není kořen a zavedeme substituci
 $x+\frac{1}{x}=t$ (dále $t^2= x^2 + 2 + \frac{1}{x^2} \implies x^2 + \frac{1}{x^2} = t^2 - 2$, obdobně by se postupovalo s dalšími mocninami).
+Dostaneme
 \begin{align*}
 	2x^4+3x^3-16x^2+3x+2&=0\\
 	2x^2+3x-16+\frac{3}{x}+\frac{2}{x^2}&=0\\
 	2\left(x^2+\frac{1}{x^2}\right)+3\left(x+\frac{1}{x}\right)-16&=0\\
 	2(t^2-2)+3t-16&=0\\
 	2t^2+3t-20 &= 0\\
-	t_{1,2} = \frac{-1\pm \sqrt{9+4\cdot4\cdot20}}{4} &= \frac{-1 \pm 13}{4}
+	t_{1,2} = \frac{-1\pm \sqrt{9+4\cdot4\cdot20}}{4} &= \frac{-1 \pm 13}{4}.
 \end{align*}
+Rozdělíme na případy
 \begin{enumerate}[i.]
-	\item $t = 3$
+	\item $t = 3$, pak
 	\begin{align*}
-		\implies x + \frac{1}{x} &= 3\\
+		x + \frac{1}{x} &= 3\\
 		x^2+1&=3x\\
 		x^2-3x + 1 &= 0\\
-		x_{1,2} &= \frac{3 \pm \sqrt{9-4}}{2} = \frac{3 \pm \sqrt{5}}{2}
+		x_{1,2} &= \frac{3 \pm \sqrt{9-4}}{2} = \frac{3 \pm \sqrt{5}}{2}.
 	\end{align*}
-	\item $t = -\frac{7}{2}$
+	\item $t = -\frac{7}{2}$, pak
 	\begin{align*}
-		\implies x + \frac{1}{x} &= -\frac{7}{2}\\
+	    x + \frac{1}{x} &= -\frac{7}{2}\\
 		x^2+1&=-\frac{7}{2}x\\
 		x^2+\frac{7}{2}x + 1 &= 0\\
-		x_{3,4} &= \frac{-\frac{7}{2} \pm \sqrt{\frac{49}{4}-4}}{2} = \frac{-7\pm \sqrt{33}}{4}
+		x_{3,4} &= \frac{-\frac{7}{2} \pm \sqrt{\frac{49}{4}-4}}{2} = \frac{-7\pm \sqrt{33}}{4}.
 	\end{align*}
 \end{enumerate}
-$$P = \left\{\frac{3 \pm \sqrt{5}}{2}, \frac{-7\pm \sqrt{33}}{4}\right\}$$
+Celkem dostaneme řešení
+$$P = \left\{\frac{3 \pm \sqrt{5}}{2}, \frac{-7\pm \sqrt{33}}{4}\right\}.$$
 \end{reseni}
 
 \begin{priklad}
@@ -1303,13 +1306,15 @@ V $\mathbb R$ řešte $1/(5^{2x-4})=125.$
 \begin{reseni}
 Převedeme obě strany na stejný základ
 $$5^{4-2x}=5^3$$
-a přesuneme se do rovnosti exponentů.
+a přesuneme se do rovnosti exponentů. Dostaneme
 \begin{align*}
 	4-2x&=3\\
-	x&=1\\
-	\\
-	P&=\{1\}
+	x&=\frac{1}{2},
 \end{align*}
+a tedy
+$$
+P=\left \{ \frac{1}{2} \right \}.
+$$
 \end{reseni}
 
 \begin{priklad}
@@ -1317,16 +1322,17 @@ V $\mathbb R$ řešte rovnici $4^x+2^x-6=0$.
 \end{priklad}
 
 \begin{reseni}
-Použijeme s výhodou substituci $2^x=t$
+Použijeme s výhodou substituci $2^x=t$. Dostaneme
 \begin{align*}
 t^2+t-6&=0\\
-(t+3)(t-2)&=0\\
+(t+3)(t-2)&=0.
 \end{align*}
-a pak zpětně dosadíme.
+Nyní zpětně dosadíme. Je
 \begin{align*}
-	&t=-3 \text{ nelze} &t=2 \implies x = 1
+	&t=-3 \text{ nelze} &t=2 \implies x = 1,
 \end{align*}
-$$P=\{1\}$$
+a tedy
+$$P=\{1\}.$$
 \end{reseni}
 
 \begin{priklad}
@@ -1334,19 +1340,26 @@ V $\mathbb R$ řešte $\log (4x+6)=1+\log(2x-1).$
 \end{priklad}
 
 \begin{reseni}
-Určíme podmínky pro argumenty, aby logaritmy byly definované. Poté budeme upravovat tak, abychom získali rovnost dvou logaritmů, a pak se mohli přesunout do rovnosti argumentů.
+Určíme podmínky pro argumenty, aby logaritmy byly definované. Poté budeme upravovat tak,
+abychom získali rovnost dvou logaritmů, a pak se mohli přesunout do rovnosti argumentů.
+
+Aby logaritmy byly definované, má platit
 \begin{align*}
-	4x+6 > 0 &\implies x > -\frac{3}{2}\\
-	2x-1 >0 &\implies x >\frac{1}{2}\\
-	\\
+	4x+6 > 0 &\implies x > -\frac{3}{2},\\
+	2x-1 >0 &\implies x >\frac{1}{2}.\\
+\end{align*}
+Dále upravíme
+\begin{align*}
 	\log(4x+6)&=1+\log(2x-1)\\
 	\log(4x+6)&=\log 10 +\log(2x-1)\\
 	\log(4x+6)&=\log(20x-10)\\
 	4x+6 &= 20x -10\\
-	x&=1\\
-	\\
-	P&=\{1\}
+	x&=1.
 \end{align*}
+Celkem je tedy
+$$
+    P=\{1\}.
+$$
 \end{reseni}
 
 \begin{priklad}
@@ -1354,27 +1367,31 @@ V $\mathbb R$ řešte rovnici $x^{3+2\log_5 x}=25x^{2+\log_5 x}$.
 \end{priklad}
 
 \begin{reseni}
-Rovnici zlogaritmujeme a dále upravujeme. Logaritmování nemusí být ekvivalentní úprava a na konci tak provedeme zkoušku.
+Rovnici zlogaritmujeme a dále upravujeme. Logaritmování nemusí být ekvivalentní úprava a na konci tak
+provedeme zkoušku. Je
 \begin{align*}
 	x^{3+2\log_5 x}&=25x^{2+\log_5 x}\\
 	\log_5(x^{3+2\log_5 x})&=\log_5(25x^{2+\log_5 x})\\
 	(3+2\log_5 x)\cdot \log_5 x &= \log_5 25+\log_5(x^{2+\log_5 x})\\
-	(3+2\log_5 x)\cdot \log_5 x &= 2 + (2+\log_5 x)\cdot \log_5 x
+	(3+2\log_5 x)\cdot \log_5 x &= 2 + (2+\log_5 x)\cdot \log_5 x.
 \end{align*}
-Nyní zavedeme substituci $t = \log_5 x$.
+Nyní zavedeme substituci $t = \log_5 x$. Dostaneme
 \begin{align*}
 	(3+2t)\cdot t &= 2 + (2+t)\cdot t\\
 	3t+2t^2 &= 2 + 2t + t^2\\
 	t^2+t-2&=0\\
-	(t+2)(t-1)&=0\\
-\end{align*}\begin{align*}
-	&t=-2 \implies x = 5^{-2} = \frac{1}{25} &t=1 \implies x = 5^1 = 5
+	(t+2)(t-1)&=0.
 \end{align*}
-Zkouška:
+Máme tedy
 \begin{align*}
-	&x=\frac{1}{25}\colon L = 25, P = 25 &x=5\colon L = 5^5, P = 5^5
+	&t=-2 \implies x = 5^{-2} = \frac{1}{25}, &t=1 \implies x = 5^1 = 5,
 \end{align*}
-$$P=\left\{\frac{1}{25}, 5\right\}$$
+Nakonec provedeme zkoušku. Je
+\begin{align*}
+	&x=\frac{1}{25}\colon L = 25, P = 25 &x=5\colon L = 5^5, P = 5^5,
+\end{align*}
+a tedy
+$$P=\left\{\frac{1}{25}, 5\right\}.$$
 \end{reseni}
 
 \begin{priklad}\label{expnerce}
@@ -1382,15 +1399,17 @@ V $\mathbb R$ řešte nerovnici $3^{2x+5}\leq 3^{x+2}+2.$
 \end{priklad}
 
 \begin{reseni}
-Užijeme výhodné substituce $t=3^{x+2}$.
+Užijeme výhodné substituce $t=3^{x+2}$. Je
 \begin{align*}
 	3^{2x+5}&\leq 3^{x+2}+2\\
 	3\cdot 3^{2(x+2)} &\leq 3^{x+2} + 2\\
 	3t^2 &\leq t + 2\\
 	3t^2 - t - 2 &\leq 0\\
-	(3t+2)(t-1) &\leq 0
-\end{align*}\begin{align*}
-	&t=\frac{-2}{3} \text{ nelze} &t=1 \implies x = -2
+	(3t+2)(t-1) &\leq 0.
+\end{align*}
+Dostáváme kořeny
+\begin{align*}
+	&t=\frac{-2}{3}\colon \text{ nelze}, &t=1 \implies x = -2.
 \end{align*}
 \vspace{-1em}
 \begin{figure}[!ht]
@@ -1486,7 +1505,8 @@ Užijeme výhodné substituce $t=3^{x+2}$.
 	}%
 	\caption{Řešení příkladu \ref{expnerce}}
 \end{figure}
-$$P = \left( -\infty, -2 \right>$$
+Proto je
+$$P = \left( -\infty, -2 \right>.$$
 \end{reseni}
 
 \begin{priklad}
@@ -1498,7 +1518,7 @@ V $\mathbb R$ řešte soustavu rovnic
 \end{priklad}
 
 \begin{reseni}
-Obě rovnice zlogaritmujeme a využijeme substituce $a=\log x, b=\log y.$
+Obě rovnice zlogaritmujeme a využijeme substituce $a=\log x, b=\log y.$ Je
 \begin{align*}
 	\log(x^{\log y})&=\log 4\\
 	\log xy&=\log 40\\
@@ -1509,12 +1529,12 @@ Obě rovnice zlogaritmujeme a využijeme substituce $a=\log x, b=\log y.$
 	a \cdot b &= \log 4\\
 	a + b &= 1 + \log 4\\
 \end{align*}
-Nyní vyjádříme z druhé rovnice $b$ a dosadíme do první.
+Nyní vyjádříme z druhé rovnice $b$ a dosadíme do první. Dostaneme
 \begin{align*}
 	a \cdot (1+ \log 4 -a) &= \log 4\\
 	-a^2 +(1+ \log 4)a - \log 4 &= 0\\
-	a_{1,2} = \frac{1+\log 4 \pm \sqrt{1+6\log 4 + \log^2 4}}{2} &\implies x_{1,2} = 10^{\frac{1+\log 4 \pm \sqrt{1+6\log 4 + \log^2 4}}{2}}\\
-	b_{1,2} = \frac{1+\log 4 \mp \sqrt{1+6\log 4 + \log^2 4}}{2} &\implies y_{1,2} = 10^{\frac{1+\log 4 \mp \sqrt{1+6\log 4 + \log^2 4}}{2}}
+	a_{1,2} = \frac{1+\log 4 \pm \sqrt{1+6\log 4 + \log^2 4}}{2} &\implies x_{1,2} = 10^{\frac{1+\log 4 \pm \sqrt{1+6\log 4 + \log^2 4}}{2}},\\
+	b_{1,2} = \frac{1+\log 4 \mp \sqrt{1+6\log 4 + \log^2 4}}{2} &\implies y_{1,2} = 10^{\frac{1+\log 4 \mp \sqrt{1+6\log 4 + \log^2 4}}{2}}.
 \end{align*}
 \end{reseni}
 
@@ -1566,7 +1586,8 @@ Z náčrtku jednotkové kružnice a základních hodnot funkce $\sin$ vidíme $x
 	        \end{tikzpicture}
 					\caption{Řešení příkladu \ref{gonrce1}}
 \end{figure}
-$$P = \left\{\frac{\pi}{6}+2k \pi; k \in \mathbb Z\right\} \cup \left\{\frac{5\pi}{6}+2k \pi; k \in \mathbb Z\right\}$$
+Je tedy
+$$P = \left\{\frac{\pi}{6}+2k \pi; k \in \mathbb Z\right\} \cup \left\{\frac{5\pi}{6}+2k \pi; k \in \mathbb Z\right\}.$$
 \end{reseni}
 
 \begin{priklad}\label{gonrce2}
@@ -1574,7 +1595,8 @@ V $\mathbb R$ řešte rovnici $\tg x = -\sqrt{3}. $
 \end{priklad}
 
 \begin{reseni}
-Z náčrtku grafu a základních hodnot funkce $\tg$ vidíme $x_1=-\frac{\pi}{3}+k\pi$, tedy $P = \{-\frac{2\pi}{3}+k\pi; k \in \mathbb Z\}$.
+Z náčrtku grafu a základních hodnot funkce $\tg$ vidíme $x_1=-\frac{\pi}{3}+k\pi$, tedy
+$$P = \left \{-\frac{2\pi}{3}+k\pi; k \in \mathbb Z\right\}.$$
 \begin{comment}
 \begin{figure}
 	\begin{tikzpicture}
@@ -1608,7 +1630,8 @@ V $\mathbb R$ řešte nerovnici $\sin x \geq \frac{\sqrt{2}}{2}.$
 \end{priklad}
 
 \begin{reseni}
-	Z náčrtku jednotkové kružnice a základních hodnot funkce $\sin$ vidíme $P = \bigcup\limits_{k \in \mathbb Z} \left<\frac{\pi}{4}+ 2k\pi,\frac{3\pi}{4}+ 2k\pi \right>$.
+	Z náčrtku jednotkové kružnice a základních hodnot funkce $\sin$ vidíme
+	$$P = \bigcup\limits_{k \in \mathbb Z} \left<\frac{\pi}{4}+ 2k\pi,\frac{3\pi}{4}+ 2k\pi \right>.$$
 	\begin{comment}
 	\begin{figure}[!ht]
 		\centering
