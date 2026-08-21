@@ -236,6 +236,7 @@ Funkce inverzní k funkci $f\colon y=\sin x$, kde $\mathcal D(f)=\left<  -\frac{
 \begin{definition}
 Funkce inverzní k funkci $g\colon y=\cos x$, kde $\mathcal D(g)=\left<  0,\pi \right>$, označená $g^{-1}\colon y=\arccos x$, se nazývá funkce \textbf{arkuskosinus}.
 \end{definition}
+
 \begin{pozn}
 Funkce arkuskosinus má následující vlastnosti:
 \begin{enumerate}
@@ -243,6 +244,135 @@ Funkce arkuskosinus má následující vlastnosti:
     \item $g^{-1}$ je klesající v celém $\mathcal D(g^{-1})$.
 \end{enumerate}
 \end{pozn}
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{.45\textwidth}
+		\centering
+		\begin{tikzpicture}[scale=0.78]
+         \begin{axis}[
+             axis lines = middle,
+             xlabel = \(x\),
+             ylabel = {\(y\)},
+             xmin=-3,
+             xmax=3,
+             ymin=-2,
+             ymax=2,
+             xtick = {-pi/2, -1, 0, 1, pi/2},
+             xticklabels = {$-\frac{\pi}{2}$, $-1$, 0, 1, $\frac{\pi}{2}$},
+             ytick = {-pi/2, -1, 0, 1, pi/2},
+             yticklabels = {$-\frac{\pi}{2}$, $-1$, 0, 1, $\frac{\pi}{2}$},
+             line width=1.2pt,
+             axis equal image = true,
+         ]
+         \addplot [
+             domain=-1.5:1.5,
+             samples=10,
+             color=gray,
+             dashed,
+         ]
+         {x};
+
+         \addplot [
+             domain=-2.7:2.7,
+             samples=500,
+             color=blue!50,
+             dashed,
+         ]
+         {sin(deg(x))};
+
+         \addplot [
+             domain=-pi/2:pi/2,
+             samples=500,
+             color=blue,
+         ]
+         {sin(deg(x))};
+
+         \addplot [
+             domain=-1:1,
+             samples=500,
+             color=red,
+         ]
+         {asin(x)/180*pi};
+         \end{axis}
+         \end{tikzpicture}
+         \caption{Graf funkce $\arcsin$}
+	\end{subfigure}
+	\begin{subfigure}{.45\textwidth}
+    	\centering
+    	\begin{tikzpicture}[scale=0.87]
+         \begin{axis}[
+             axis lines = middle,
+             xlabel = \(x\),
+             ylabel = {\(y\)},
+             xmin=-5,
+             xmax=5,
+             ymin=-2,
+             ymax=3.5,
+             xtick = {-pi/2, -1, 0, 1, pi/2, pi},
+             xticklabels = {$-\frac{\pi}{2}$, $-1$, 0, 1, $\frac{\pi}{2}$, $\pi$},
+             ytick = {0, 1, pi/2, pi},
+             yticklabels = {0, 1, $\frac{\pi}{2}$, $\pi$},
+             line width=1.2pt,
+             axis equal image = true,
+         ]
+         \addplot [
+             domain=-1.5:2.5,
+             samples=10,
+             color=gray,
+             dashed,
+         ]
+         {x};
+
+         \addplot [
+             domain=-4:4,
+             samples=500,
+             color=blue!50,
+             dashed,
+         ]
+         {cos(deg(x))};
+
+         \addplot [
+             domain=0:pi,
+             samples=500,
+             color=blue,
+         ]
+         {cos(deg(x))};
+
+         \addplot [
+             domain=-1:1,
+             samples=500,
+             color=red,
+         ]
+         {acos(x)/180*pi};
+         \end{axis}
+         \end{tikzpicture}
+         \caption{Graf funkce $\arccos$}
+	\end{subfigure}
+	\caption{Grafy funkcí $\arcsin$ a $\arccos$}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+    \begin{tabularx}{\textwidth}{| p{0.087\textwidth} || p{0.081\textwidth} | p{0.081\textwidth} |
+    p{0.081\textwidth} | p{0.081\textwidth} | p{0.081\textwidth} | p{0.081\textwidth} | p{0.081\textwidth}
+    | p{0.081\textwidth} |}
+    \hline
+    $\alpha$ [$^\circ$] & 0 & 30 & 45 & 60 & 90 & 180 & 270 & 360 \\
+    \hline
+    $\alpha$ [rad] & 0 & $\frac{\pi}{6}$ & $\frac{\pi}{4}$ & $\frac{\pi}{3}$ & $\frac{\pi}{2}$ & $\pi$ & $\frac{3\pi}{2}$ & $2\pi$\\
+    \hline
+    $\sin \alpha$ & 0 & $\frac{1}{2}$ & $\frac{\sqrt{2}}{2}$ & $\frac{\sqrt{3}}{2}$ & 1 & 0 & $-1$ & 0\\
+    \hline
+    $\cos \alpha$ & 1 & $\frac{\sqrt{3}}{2}$ & $\frac{\sqrt{2}}{2}$ & $\frac{1}{2}$ & 0 & $-1$ & 0 & 1\\
+    \hline
+    $\tg \alpha$ & 0 & $\frac{\sqrt{3}}{3}$ & 1 & $\sqrt{3}$ & -- & 0 & -- & 0\\
+    \hline
+    $\cotg \alpha$ & -- & $\sqrt{3}$ & 1 & $\frac{\sqrt{3}}{3}$ & 0 & -- & 0 & --\\
+    \hline
+    \end{tabularx}
+    \caption{Tabulka základních hodnot goniometrických funkcí}
+\end{figure}
 
 \begin{veta}[Trigonometrická jednička]
   Pro všechna $ x \in \mathbb{R} $ platí $\sin^2 x + \cos^2 x = 1$.
@@ -257,9 +387,4 @@ Funkce arkuskosinus má následující vlastnosti:
 
 \begin{pozn}
     \textbf{Goniometrická (ne)rovnice} je (ne)rovnice, v níž se vyskytují goniometrické funkce.
-\end{pozn}
-
-\begin{pozn}
-    Grafy jednotlivých funkcí a tabulka se základními hodnotami jsou k nalezení
-    v příloze \ref{appa}.
 \end{pozn}

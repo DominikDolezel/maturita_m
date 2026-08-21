@@ -2,9 +2,86 @@
 \begin{definition}
   Funkcí \textbf{tangens} (resp. \textbf{kotangens}) nazýváme funkci danou vztahem
   \begin{align*}
-    \tg x = \frac{\sin x}{\cos x}, & & \textrm{resp.} & & \cotg x = \frac{\cos x}{\sin x}.
+    \tg x = \frac{\sin x}{\cos x}, & & \textrm{resp.} & & \cotg x = \frac{\cos x}{\sin x}.
   \end{align*}
 \end{definition}
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{.45\textwidth}
+		\centering
+		\begin{tikzpicture}[scale=0.8]
+         \begin{axis}[
+             axis lines = middle,
+             xlabel = \(x\),
+             ylabel = {\(y\)},
+             xmin=-5.2,
+             xmax=5.2,
+             ymin=-3,
+             ymax=3,
+             xtick = {-3*pi/2, -pi, -pi/2, pi/2, pi, 3*pi/2},
+             xticklabels = {$-\frac{3\pi}{2}$, $-\pi$, $-\frac{\pi}{2}$, $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$},
+             ytick = none,
+             line width=1.2pt,
+             axis equal image = true,
+         ]
+         \addplot [
+             domain=-3*pi/2 + 0.01:-pi/2 - 0.01,
+             samples=500,
+             color=red,
+         ]
+         {tan(deg(x))};
+         \addplot [
+             domain=-pi/2 + 0.01:pi/2 - 0.01,
+             samples=500,
+             color=red,
+         ]
+         {tan(deg(x))};
+         \addplot [
+             domain=pi/2 + 0.01:3*pi/2 - 0.01,
+             samples=500,
+             color=red,
+         ]
+         {tan(deg(x))};
+         \end{axis}
+         \end{tikzpicture}
+         \caption{Graf funkce $\arcsin$}
+	\end{subfigure}
+	\begin{subfigure}{.45\textwidth}
+    	\centering
+    	\begin{tikzpicture}[scale=0.8]
+         \begin{axis}[
+             axis lines = middle,
+             xlabel = \(x\),
+             ylabel = {\(y\)},
+             xmin=-5.2,
+             xmax=5.2,
+             ymin=-3,
+             ymax=3,
+             xtick = {-3*pi/2, -pi, -pi/2, pi/2,pi, 3*pi/2},
+             xticklabels = {$-\frac{3\pi}{2}$, $-\pi$, $-\frac{\pi}{2}$, $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$},
+             ytick = none,
+             line width=1.2pt,
+             axis equal image = true,
+         ]
+         \addplot [
+             domain=-pi+0.01:-0.01,
+             samples=500,
+             color=red,
+         ]
+         {cot(deg(x))};
+         \addplot [
+             domain=0.01:pi-0.01,
+             samples=500,
+             color=red,
+         ]
+         {cot(deg(x))};
+         \end{axis}
+         \end{tikzpicture}
+         \caption{Graf funkce $\arccos$}
+	\end{subfigure}
+	\caption{Grafy funkcí $\arcsin$ a $\arccos$}
+\end{figure}
 
 \begin{veta}
     Vlastnosti funkce tangens $f\colon y = \tg x$, nechť $k\in \mathbb Z$:
@@ -74,8 +151,3 @@ Funkce arkuskotangens má následující vlastnosti:
         \tg \alpha = \frac{ |BC| }{ |AC| }, & & \cotg \alpha = \frac{|AB|}{|BC|}.
     \end{align*}
 \end{veta}
-
-\begin{pozn}
-    Grafy jednotlivých funkcí a tabulka se základními hodnotami jsou k nalezení
-    v příloze \ref{appa}.
-\end{pozn}
