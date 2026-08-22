@@ -118,21 +118,66 @@ Zvolíme-li kartézskou soustavu souřadnic tak, aby $F_1 = [-e,0], F_2=[e,0],
 X[x,y],$ pak postupnou úpravou dostaneme
 $$\frac{x^2}{a^2}+\frac{y^2}{b^2}=1.$$
 
-\begin{minipage}{0.48\linewidth}
-\begin{itemize}
-\item hlavní, vedlejší vrcholy
-\item $F_1, F_2$ ohniska
-\item $a$ hlavní poloosa
-\item $b$ vedlejší poloosa
-\item $c$ (značíme $e$) excentricita, platí $a^2=b^2+e^2$
-\item numerická excentricita $\varepsilon = e/a$
-\item $C$ (značíme $S$) střed
-\end{itemize}
-\end{minipage}
-\hfill
-\begin{minipage}{0.48\linewidth}
-    \includegraphics[width=\linewidth]{elipsa.png}
-\end{minipage}
+\begin{figure}[h]
+\centering
+\begin{subfigure}{.53\linewidth}
+	\begin{itemize}
+	\item hlavní ($A$, $B$), vedlejší ($C$, $D$) vrcholy
+	\item $F_1, F_2$ ohniska
+	\item $a$ hlavní poloosa
+	\item $b$ vedlejší poloosa
+	\item $e$ excentricita, platí $a^2=b^2+e^2$
+	\item numerická excentricita $\varepsilon = e/a$
+	\item $S$ střed
+	\end{itemize}
+	\vspace{2em}
+\end{subfigure}
+\begin{subfigure}{.45\linewidth}
+	\centering
+	\begin{tikzpicture}[scale=0.75]
+  % Define geometric parameters (a=4, c=3, b=sqrt(7), p=7/4=1.75)
+  \pgfmathsetmacro{\a}{4.0}
+  \pgfmathsetmacro{\c}{3.0}
+  \pgfmathsetmacro{\b}{sqrt(\a*\a - \c*\c)}
+  \pgfmathsetmacro{\p}{\b*\b / \a}
+
+  % Dash-dot axes extending past the ellipse
+  \draw[dashed] (-\a-0.5, 0) -- (\a+0.5, 0);
+  \draw[dashed] (0, -\b-0.5) -- (0, \b+0.5);
+
+  % Red ellipse
+  \draw[red, line width=1.5pt] (0, 0) ellipse ({\a} and {\b});
+
+  % Colored geometric segments
+  \draw[teal, line width=1.8pt] (-\a, 0) -- (0, 0);             % Semi-major axis (left)
+  \draw[green!60!black, line width=1.8pt] (0, 0) -- (\c, 0);    % Focal distance c
+  \draw[blue, line width=1.8pt] (0, 0) -- (0, \b);              % Semi-minor axis b
+  \draw[teal, line width=1.8pt] (0, \b) -- (\c, 0);             % Hypotenuse a
+
+  % Dimension arrow for 'a'
+  \draw[<->, >=stealth, thin] (-\a, 0.3) -- (0, 0.3) node[midway, above] {$a$};
+
+  % Key points (Center, Foci, Vertices)
+  \fill (0, 0) circle (2.5pt) node[below left=2pt] {$S$};
+  \fill (\c, 0) circle (2.5pt) node[below right=2pt] {$F_1$};
+  \fill (-\c, 0) circle (2.5pt) node[below=4pt] {$F_2$};
+  \fill (-\a, 0) circle (2.5pt);
+  \fill (\a, 0) circle (2.5pt);
+  \fill (0, \b) circle (2.5pt);
+  \fill (0, -\b) circle (2.5pt);
+
+  % Labels for lengths
+  \node[left] at (0, \b/2) {$b$};
+  \node[below] at (\c/2, 0) {$e$};
+  \node[above right] at (\c/2, \b/2) {$a$};
+  \node[above left] at (-\a,0) {$A$};
+  \node[above right] at (\a,0) {$B$};
+  \node[below left] at (0,-\b) {$C$};
+  \node[above left] at (0,\b) {$D$};
+	\end{tikzpicture}
+\end{subfigure}
+	\caption{Elipsa}
+\end{figure}
 
 
 \subsection*{Parabola}
@@ -145,19 +190,60 @@ $$y^2=4ex.$$
 Označíme-li vzdálenost ohniska od řídící přímky jako $p=2e,$ dostaneme rovnici tvaru
 $$y^2=2px.$$
 
-\begin{minipage}{0.48\linewidth}
-\begin{itemize}
-\item $V$ vrchol
-\item $F$ ohnisko
-\item $d$ řídící přímka
-\item $p$ parametr
-\item $o$ osa
-\end{itemize}
-\end{minipage}
-\hfill
-\begin{minipage}{0.40\linewidth}
-    \includegraphics[width=\linewidth]{parabola.png}
-\end{minipage}
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{.45\linewidth}
+		\begin{itemize}
+		\item $V$ vrchol
+		\item $F$ ohnisko
+		\item $d$ řídící přímka
+		\item $p$ parametr
+		\item $o$ osa
+		\end{itemize}
+		\vspace{6em}
+	\end{subfigure}
+	\begin{subfigure}{.45\linewidth}
+		\centering
+		\begin{tikzpicture}[scale=1]
+  % Define parameter p (distance from directrix to focus)
+  \pgfmathsetmacro{\p}{1.6}
+  \pgfmathsetmacro{\halfp}{\p/2}
+
+  % Axis of symmetry (o)
+  \draw[dash dot] (-2.2, 0) -- (4.2, 0);
+  \node[above left] at (-1.8, 0) {$o$};
+
+  % Directrix line (d)
+  \draw[thick] (-\halfp, -3.2) -- (-\halfp, 3.2);
+  \node[above right] at (-\halfp, 2.8) {$d$};
+
+  % Vertex tangent line (v)
+  \draw[thick] (0, -3.2) -- (0, 3.2);
+  \node[above right] at (0, 2.8) {$v$};
+
+  % Focal parameter p (red segment along the axis)
+  \draw[red, line width=1.5pt] (-\halfp, 0) -- (\halfp, 0);
+  \node[red, below left] at (0, 0) {$p$};
+
+  % Parabola curve (kp)
+  \draw[green!60!black, line width=1.2pt, samples=100, smooth, variable=\y, domain=-3.0:3.0]
+    plot ({\y*\y/(2*\p)}, {\y});
+  \node[green!60!black, below] at ({3.0*3.0/(2*\p)}, 3.0) {$k_p$};
+
+  % Cross mark for Vertex (V)
+  \draw[thick] (-0.08, -0.08) -- (0.08, 0.08);
+  \draw[thick] (-0.08, 0.08) -- (0.08, -0.08);
+  \node[above left] at (0, 0) {$V$};
+
+  % Cross mark for Focus (F)
+  \draw[thick] (\halfp-0.08, -0.08) -- (\halfp+0.08, 0.08);
+  \draw[thick] (\halfp-0.08, 0.08) -- (\halfp+0.08, -0.08);
+  \node[above right] at (\halfp, 0) {$F$};
+
+		\end{tikzpicture}
+	\end{subfigure}
+	\caption{Parabola}
+\end{figure}
 
 \begin{pozn}[Rovnice řídící přímky]
     Parabola s vrcholem v bodě $V[m,n]$ má řídící přímku o rovnici
@@ -166,8 +252,8 @@ $$y^2=2px.$$
 
 \begin{pozn}\,
 \begin{itemize}
-\item $y^2=2px$ -- řídící přímka je rovnoběžná s osou $y$
-\item $x^2=2py$ -- řídící přímka je rovnoběžná s osou $x$
+\item Je-li $y^2=2px$, řídící přímka je rovnoběžná s osou $y$.
+\item Je-li $x^2=2py$, řídící přímka je rovnoběžná s osou $x$.
 \end{itemize}
 \end{pozn}
 
@@ -179,18 +265,71 @@ Zvolíme-li kartézskou soustavu souřadnic tak, aby $F_1[-e,0], F_2[e,0],
 X[x,y],$ postupnou úpravou dostaneme
 $$\frac{x^2}{a^2}-\frac{y^2}{b^2}=1.$$
 
-\begin{minipage}{0.48\linewidth}
-\begin{itemize}
-\item $S$ střed
-\item $F_1,F_2$ ohniska
-\item hlavní, vedlejší vrcholy
-\item asymptoty
-\item $a$ hlavní poloosa
-\item $b$ vedlejší poloosa
-\item $e$ excentricita, platí $e^2=a^2+b^2$
-\end{itemize}
-\end{minipage}
-\hfill
-\begin{minipage}{0.48\linewidth}
-    \includegraphics[width=\linewidth]{hyperbola.png}
-\end{minipage}
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{.4\linewidth}
+		\begin{itemize}
+		\item $S$ střed
+		\item $F_1,F_2$ ohniska
+		\item hlavní, vedlejší vrcholy
+		\item asymptoty
+		\item $a$ hlavní poloosa
+		\item $b$ vedlejší poloosa
+		\item $e$ excentricita, platí $e^2=a^2+b^2$
+		\end{itemize}
+		\vspace{4em}
+	\end{subfigure}
+	\begin{subfigure}{.56\linewidth}
+		\centering
+		\begin{tikzpicture}[scale=0.87]
+  % Geometric parameters
+  \pgfmathsetmacro{\a}{2.0}
+  \pgfmathsetmacro{\b}{1.5}
+  \pgfmathsetmacro{\c}{sqrt(\a*\a + \b*\b)} % c = 2.5
+
+  % Dash-dot principal axis
+  \draw[dash dot] (-4.8, 0) -- (4.8, 0);
+
+  % Dashed central reference box
+  \draw[dashed, thick] (-\a, -\b) rectangle (\a, \b);
+
+  % Asymptotes
+  \draw (-4.5, {-4.5*\b/\a}) -- (4.5, {4.5*\b/\a});
+  \draw (-4.5, {4.5*\b/\a}) -- (4.5, {-4.5*\b/\a});
+
+  % Hyperbola branches
+  \draw[red, line width=1.6pt, samples=100, smooth, variable=\y, domain=-3.0:3.0]
+    plot ({\a * sqrt(1 + (\y/\b)^2)}, {\y});
+  \draw[red, line width=1.6pt, samples=100, smooth, variable=\y, domain=-3.0:3.0]
+    plot ({-\a * sqrt(1 + (\y/\b)^2)}, {\y});
+
+  % Parameter segments & labels
+  % c along the axis (green)
+  \draw[green!80!black, line width=1.2pt] (0, -0.04) -- (\c, -0.04);
+  \node[green!80!black, below] at ({\c/2}, -0.04) {$e$};
+
+  \node[below] at (0,0) {$S$};
+
+  % a along the axis (blue)
+  \draw[blue, line width=1.6pt] (0, 0) -- (\a, 0);
+  \node[blue, above] at ({\a/2}, 0) {$a$};
+
+  % b vertical segment (magenta)
+  \draw[magenta, line width=1.2pt] (\a, 0) -- (\a, \b);
+  \node[magenta, left] at (\a, {\b/2}) {$b$};
+
+  % c hypotenuse (green)
+  \draw[green!80!black, line width=1.2pt] (0, 0) -- (\a, \b);
+  \node[green!80!black, above left] at ({\a/2}, {\b/2}) {$e$};
+
+  % Key points
+  \fill (0, 0) circle (2pt);
+  \fill (\a, 0) circle (2pt);
+  \fill (-\a, 0) circle (2pt);
+  \fill (\c, 0) circle (2pt) node[below right=2pt] {$F_1$};
+  \fill (-\c, 0) circle (2pt) node[below left=2pt] {$F_2$};
+
+		\end{tikzpicture}
+	\end{subfigure}
+	\caption{Hyperbola}
+\end{figure}

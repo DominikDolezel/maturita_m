@@ -17,7 +17,30 @@ označme $\mathscr D(a,b).$
 
 \begin{figure}[ht!]
   \centering
-  \includegraphics[width=0.32\textwidth]{images/deleni.png}
+  \begin{tikzpicture}[scale=1.2]
+    % Axes
+    \draw[->, thick] (-0.5, 0) -- (7.5, 0) node[below] {$x$};
+    \draw[->, thick] (0, -0.5) -- (0, 4.5);
+    \node[below left] at (0, 0) {$0$};
+
+    % Dashed vertical lines
+    \draw[dashed, gray!80] (0.8, 0) -- (0.8, 4.3);
+    \draw[dashed, gray!80] (2.8, 0) -- (2.8, 4.3);
+    \draw[dashed, gray!80] (5.0, 0) -- (5.0, 4.3);
+    \draw[dashed, gray!80] (7.0, 0) -- (7.0, 4.3);
+
+    % Function curve f
+    \draw[very thick] (0.8, 2.0) node[left] {$f$}
+      .. controls (1.5, 1.0) and (2.2, 1.2) .. (2.8, 1.7)
+      .. controls (3.4, 2.3) and (4.3, 2.2) .. (5.0, 3.2)
+      .. controls (5.6, 4.2) and (6.4, 4.3) .. (7.0, 2.8);
+
+    % X-axis labels
+    \node[below] at (0.8, 0) {$a=x_0$};
+    \node[below] at (2.8, 0) {$x_1$};
+    \node[below] at (5.0, 0) {$x_2$};
+    \node[below] at (7.0, 0) {$b=x_3$};
+  \end{tikzpicture}
   \caption{Dělení $D=\left \{ x_0, x_1, x_2, x_3 \right\}$}
 \end{figure}
 
@@ -43,7 +66,162 @@ $f(x)$ příslušný dělení $D$.
 
 \begin{figure}[ht!]
   \centering
-  \includegraphics[width=0.6\textwidth]{images/riemannuv_int.png}
+  \begin{tikzpicture}[scale=0.75]
+
+    % Define macro for the curve f(x)
+    \def\drawcurve{
+      \draw[very thick] (0.8, 2.0) node[left] {$f$}
+        .. controls (1.5, 1.0) and (2.2, 1.2) .. (2.8, 1.7)
+        .. controls (3.4, 2.3) and (4.3, 2.2) .. (5.0, 3.2)
+        .. controls (5.6, 4.2) and (6.4, 4.3) .. (7.0, 2.8);
+    }
+
+    % Macro for standard axes
+    \def\drawaxes{
+      \draw[->] (-0.5, 0) -- (7.5, 0) node[below] {$x$};
+      \draw[->] (0, -0.5) -- (0, 4.3);
+      \node[below left] at (0, 0) {$0$};
+      \node[below] at (0.8, 0) {$a$};
+      \node[below] at (7.0, 0) {$b$};
+    }
+
+    % ==========================================
+    % TOP-LEFT: Coarse Upper Sum U(f, D)
+    % ==========================================
+    \begin{scope}[shift={(0, 5.5)}]
+      % Rectangles
+      \filldraw[fill=gray!40, draw=gray!40] (0.8, 0) rectangle (2.8, 2.0);
+      \filldraw[fill=gray!40, draw=gray!40] (2.8, 0) rectangle (5.0, 3.2);
+      \filldraw[fill=gray!40, draw = gray!40] (5.0, 0) rectangle (7.0, 3.95);
+
+      \draw[dashed, gray]
+            (0.8, 0) -- (0.8, 2.0)
+            (2.8, 0) -- (2.8, 3.2)   % Drawn once to full height of taller rectangle
+            (5.0, 0) -- (5.0, 3.95)
+            (7.0, 0) -- (7.0, 3.95);
+
+        \draw[dashed, gray]
+                (0.8, 2.0) -- (2.8, 2.0)
+                (2.8, 3.2) -- (5.0, 3.2)
+                (5.0, 3.95) -- (7.0, 3.95);
+
+      \drawaxes
+      \draw (2.8, 0.1) -- (2.8, -0.1);
+      \draw (5.0, 0.1) -- (5.0, -0.1);
+      \drawcurve
+    \end{scope}
+
+    % ==========================================
+    % TOP-RIGHT: Coarse Lower Sum L(f, D)
+    % ==========================================
+    \begin{scope}[shift={(8.5, 5.5)}]
+      % Rectangles
+      \filldraw[fill=gray!40, draw=gray!40] (0.8, 0) rectangle (2.8, 1.3);
+      \filldraw[fill=gray!40, draw=gray!40] (2.8, 0) rectangle (5.0, 1.7);
+      \filldraw[fill=gray!40, draw=gray!40] (5.0, 0) rectangle (7.0, 2.8);
+
+      \draw[dashed, gray]
+            (0.8, 0) -- (0.8, 1.3)
+            (2.8, 0) -- (2.8, 1.7)   % Drawn once to full height of taller rectangle
+            (5.0, 0) -- (5.0, 2.8)
+            (7.0, 0) -- (7.0, 2.8);
+
+        \draw[dashed, gray]
+                (0.8, 1.3) -- (2.8, 1.3)
+                (2.8, 1.7) -- (5.0, 1.7)
+                (5.0, 2.8) -- (7.0, 2.8);
+
+      \drawaxes
+      \draw (2.8, 0.1) -- (2.8, -0.1);
+      \draw (5.0, 0.1) -- (5.0, -0.1);
+      \drawcurve
+    \end{scope}
+
+    % ==========================================
+    % BOTTOM-LEFT: Refined Upper Sum U(f, D')
+    % ==========================================
+    \begin{scope}[shift={(0, 0)}]
+      % Rectangles
+      \filldraw[fill=gray!40, draw=gray!40] (0.8, 0) rectangle (1.3, 2.0);
+      \filldraw[fill=gray!40, draw=gray!40] (1.3, 0) rectangle (2.8, 1.7);
+      \filldraw[fill=gray!40, draw=gray!40] (2.8, 0) rectangle (3.7, 2.25);
+      \filldraw[fill=gray!40, draw=gray!40] (3.7, 0) rectangle (4.3, 2.5);
+      \filldraw[fill=gray!40, draw=gray!40] (4.3, 0) rectangle (5.0, 3.2);
+      \filldraw[fill=gray!40, draw=gray!40] (5.0, 0) rectangle (5.6, 3.85);
+      \filldraw[fill=gray!40, draw=gray!40] (5.6, 0) rectangle (6.4, 3.95);
+      \filldraw[fill=gray!40, draw=gray!40] (6.4, 0) rectangle (7.0, 3.73);
+
+      \draw[dashed, gray]
+            (0.8, 0) -- (0.8, 2.0)
+            (1.3, 0) -- (1.3, 2.0)
+            (2.8, 0) -- (2.8, 2.25)
+            (3.7, 0) -- (3.7, 2.5)
+            (4.3, 0) -- (4.3, 3.2)
+            (5.0, 0) -- (5.0, 3.85)
+            (5.6, 0) -- (5.6, 3.95)
+            (6.4, 0) -- (6.4, 3.95)
+            (7.0, 0) -- (7.0, 3.73);
+
+        \draw[dashed, gray]
+                (0.8, 2.0) -- (1.3, 2.0)
+                (1.3, 1.7) -- (2.8, 1.7)
+                (2.8, 2.25) -- (3.7, 2.25)
+                (3.7, 2.5) -- (4.3, 2.5)
+                (4.3, 3.2) -- (5.0, 3.2)
+                (5.0, 3.85) -- (5.6, 3.85)
+                (5.6, 3.95) -- (6.4, 3.95)
+                (6.4, 3.73) -- (7.0, 3.73);
+
+      \drawaxes
+      \foreach \x in {1.3, 2.8, 3.7, 4.3, 5.0, 5.6, 6.4} {
+        \draw (\x, 0.1) -- (\x, -0.1);
+      }
+      \drawcurve
+    \end{scope}
+
+    % ==========================================
+    % BOTTOM-RIGHT: Refined Lower Sum L(f, D')
+    % ==========================================
+    \begin{scope}[shift={(8.5, 0)}]
+      % Rectangles
+      \filldraw[fill=gray!40, draw=gray!40] (0.8, 0) rectangle (1.3, 1.45);
+      \filldraw[fill=gray!40, draw=gray!40] (1.3, 0) rectangle (2.8, 1.3);
+      \filldraw[fill=gray!40, draw=gray!40] (2.8, 0) rectangle (3.7, 1.7);
+      \filldraw[fill=gray!40, draw=gray!40] (3.7, 0) rectangle (4.3, 2.25);
+      \filldraw[fill=gray!40, draw=gray!40] (4.3, 0) rectangle (5.0, 2.55);
+      \filldraw[fill=gray!40, draw=gray!40] (5.0, 0) rectangle (5.6, 3.2);
+      \filldraw[fill=gray!40, draw=gray!40] (5.6, 0) rectangle (6.4, 3.75);
+      \filldraw[fill=gray!40, draw=gray!40] (6.4, 0) rectangle (7.0, 2.8);
+
+      \draw[dashed, gray]
+            (0.8, 0) -- (0.8, 1.45)
+            (1.3, 0) -- (1.3, 1.45)
+            (2.8, 0) -- (2.8, 1.7)
+            (3.7, 0) -- (3.7, 2.25)
+            (4.3, 0) -- (4.3, 2.55)
+            (5.0, 0) -- (5.0, 3.2)
+            (5.6, 0) -- (5.6, 3.75)
+            (6.4, 0) -- (6.4, 3.75)
+            (7.0, 0) -- (7.0, 2.8);
+
+        \draw[dashed, gray]
+            (0.8, 1.45) -- (1.3, 1.45)
+            (1.3, 1.3) -- (2.8, 1.3)
+            (2.8, 1.7) -- (3.7, 1.7)
+            (3.7, 2.25) -- (4.3, 2.25)
+            (4.3, 2.55) -- (5.0, 2.55)
+            (5.0, 3.2) -- (5.6, 3.2)
+            (5.6, 3.75) -- (6.4, 3.75)
+            (6.4, 2.8) -- (7.0, 2.8);
+
+      \drawaxes
+      \foreach \x in {1.3, 2.8, 3.7, 4.3, 5.0, 5.6, 6.4} {
+        \draw (\x, 0.1) -- (\x, -0.1);
+      }
+      \drawcurve
+    \end{scope}
+
+  \end{tikzpicture}
   \caption{Horní (vlevo) a dolní (vpravo) součty funkce $f(x)$}
 \end{figure}
 
