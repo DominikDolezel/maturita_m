@@ -52,14 +52,15 @@ Vzhledem k nerovnosti na pravé straně tento nulový zbytek existuje.
 Potom $D(a,b) = r_n$.
 \end{algoritmus}
 
-\begin{priklad}
+\begin{priklad}\label{preukl}
   Spočítejte největšího společného dělitele čísel 40902 a 24140.
 \end{priklad}
 
 \begin{reseni}
-  Eukleidovým algoritmem: $u = 40902, w = 24140:$
-  \begin{center}
-    \begin{tabular}{c | c | c}
+  Eukleidovým algoritmem pro $u = 40\,902$, $w = 24\,140$.
+  \begin{figure}[h]
+	\centering
+	\begin{tabular}{c | c | c}
       $u$ & $w$ & $u=w\cdot q+r$  \\
       \hline
       40902 & 24140 & $40902 = 24140\cdot1 + 16762$ \\
@@ -72,8 +73,9 @@ Potom $D(a,b) = r_n$.
       68 & 34 & $68 = 34\cdot2 + 0$  \\
       34 & 0 & konec algoritmu  \\
     \end{tabular}
-  \end{center}
-  Je tedy $D(40902, 24140) = 34$.
+	\caption{Řešení příkladu \ref{preukl}}
+  \end{figure}
+  Je tedy $D(40\,902, 24\,140) = 34$.
 \end{reseni}
 
 \begin{definition}
@@ -135,7 +137,7 @@ Potom $D(a,b) = r_n$.
 \end{definition}
 
 \begin{veta}[Věta o iracionálnosti odmocnin]
-  Nechť $n\in \mathbb N.$ Pak platí, že pokud $n$ není druhou mocninou přirozeného čísla, pak odmocnina z $n$ je iracionální.
+  Nechť $n\in \mathbb N.$ Pokud $n$ není druhou mocninou přirozeného čísla, pak odmocnina z $n$ je iracionální.
 \end{veta}
 
 \begin{veta}\label{existencedeleninevim}
@@ -173,7 +175,8 @@ Jsou tedy čtyři možnosti, ovšem nesmíme zapomenout na podmínku $D(q_1,q_2)
 Dokažte přímo a úvahou přes rozklad: $\forall a \in \mathbb Z\colon 3\mid (a^3-a).$
 \end{priklad}
 
-\begin{reseni}\,
+\begin{reseni}
+Lze řešit více způsoby.
     \begin{enumerate}[$i.$]
     	\item přímo: Mohou nastat dvě situace:
         \begin{enumerate}[$a.$]
@@ -193,7 +196,8 @@ Dokažte přímo a úvahou přes rozklad: $\forall a \in \mathbb Z\colon 3\mid (
 Dokažte nepřímo a sporem: $\forall n \in \mathbb N\colon 5 \mid n^2 \implies 5 \mid n.$
 \end{priklad}
 
-\begin{reseni}\,
+\begin{reseni}
+Lze řešit více způsoby.
 \begin{enumerate}[$i.$]
 	\item nepřímo: Dokazujeme obměnu $5 \nmid n \implies 5 \nmid n^2$, což je zřejmé.
 	\item sporem: Předpokládejme, že výrok platí. Pak $n^2=5q, q \in \mathbb Z$. Protože je 5 prvočíslo a~$n$~je
@@ -241,8 +245,8 @@ Platí $n = 10(a_k\cdot 10^{k-1}+a_{k-1}\cdot 10 ^{k-2}+\dots+a_1)+a_0 = 10l+a_0
       & = 9m+S(n), m \in \mathbb N
   \end{align*}
   \begin{enumerate}
-    \item[$\implies$:] $9 \mid n \land 9 \mid 9m \implies 9 \mid S(n)$,
-    \item[$\impliedby$:] $9 \mid S(n) \land 9 \mid 9m \implies 9 \mid n.$ \qedhere
+    \item[$\implies$] je $9 \mid n \land 9 \mid 9m \implies 9 \mid S(n)$,
+    \item[$\impliedby$] je $9 \mid S(n) \land 9 \mid 9m \implies 9 \mid n.$ \qedhere
   \end{enumerate}
 \end{proof}
 
@@ -269,16 +273,16 @@ Platí $n = 10(a_k\cdot 10^{k-1}+a_{k-1}\cdot 10 ^{k-2}+\dots+a_1)+a_0 = 10l+a_0
         10b=10k+50a_0=10k+a_0+49a_0=n+49a_0
       \]
       \begin{enumerate}
-        \item $\implies: 7 \mid n \land 7 \mid 49a_0 \implies 7 \mid 10b \implies 7 \mid b \textrm{, neboť } D(7,10)=1$,
-        \item $\impliedby: 7 \mid b \implies 7 \mid 10 b \land 7 \mid 49 a_0 \implies 7 \mid n$.
+        \item[$\implies$] je $7 \mid n \land 7 \mid 49a_0 \implies 7 \mid 10b \implies 7 \mid b \textrm{, neboť } D(7,10)=1$,
+        \item[$\impliedby$] je $7 \mid b \implies 7 \mid 10 b \land 7 \mid 49 a_0 \implies 7 \mid n$.
       \end{enumerate}
     \item Je-li $b=k+4a_0$, pak
       \[
         10b=10k+40a_0=10k+a_0+39a_0=n+39a_0
       \]
       \begin{enumerate}
-        \item $\implies: 13 \mid n \land 13 \mid 39a_0 \implies 13 \mid 10b \implies 13 \mid b \textrm{, neboť } D(13,10)=1$,
-        \item $\impliedby: 13 \mid b \implies  13 \mid 10 b \land 13 \mid 13a_0 \implies 13 \mid n$. \qedhere
+        \item[$\implies$] je $13 \mid n \land 13 \mid 39a_0 \implies 13 \mid 10b \implies 13 \mid b \textrm{, neboť } D(13,10)=1$,
+        \item[$\impliedby$] je $13 \mid b \implies  13 \mid 10 b \land 13 \mid 13a_0 \implies 13 \mid n$. \qedhere
       \end{enumerate}
   \end{enumerate}
 \end{proof}
@@ -290,7 +294,7 @@ Dokažte, že  $\forall n \in \mathbb N\colon 24 \mid (25^n+23).$
 \begin{reseni}
     Označme $V(n)=25^n+23$. Matematickou indukcí:
     \begin{enumerate}[1.]
-        \item $n=1: 24 \mid (25+23) = 48$, platí
+        \item Pro $n=1: 24 \mid (25+23) = 48$, platí.
         \item Nechť $24 \mid V(n)$. Chceme dokázat, že $24 \mid V(n+1).$ Platí:
         \[
             V(n+1) = 25^{n+1}+ 23 = 25\cdot (25^n+23)-25\cdot 23+23=25V(n)-23(25-1),
