@@ -86,7 +86,7 @@ s předpokladem, že $D(k,l)=1$. \qed
 \end{reseni}
 
 \begin{priklad}
-Dokažte pro všechna $n\in \mathbb N\colon $
+Dokažte pro všechna $n\in \mathbb N$ platí
 $$1+2+3+\dots+n=\frac{n(n+1)}{2}.$$
 \end{priklad}
 
@@ -125,7 +125,7 @@ Dále můžeme využít vzorce $a^2-b^2 = (a-b)(a+b)$. Je
 \end{reseni}
 
 \begin{priklad}
-Odstraňte odmocniny ze jmenovatele: $\frac{1}{2 \sqrt{x} }.$
+Odstraňte odmocniny ze jmenovatele zlomku $\frac{1}{2 \sqrt{x} }.$
 \end{priklad}
 
 \begin{reseni}
@@ -137,7 +137,7 @@ je-li $x>0.$
 \begin{priklad}\label{znacciso}
     Zakreslete na číselné ose
     \begin{enumerate}[$a.$]
-    \item racionální číslo $-\frac{4}{3}$.
+    \item racionální číslo $-4/3$.
    	\item iracionální číslo $\sqrt{3}$.
     \end{enumerate}
 \end{priklad}
@@ -160,7 +160,7 @@ je-li $x>0.$
 			\draw [short] (6.375,9.375) -- node[below] {2} (11.375,8.375);
 		\end{circuitikz}
 	}%
-	\caption{Konstrukce $-\frac{4}{3}$}
+	\caption{Konstrukce $-4/3$}
 \end{subfigure}
 \begin{subfigure}{0.48\textwidth}
 \resizebox{1\textwidth}{!}{%
@@ -239,17 +239,17 @@ Vedoucí člen je kladný, minimum tedy nastane tehdy, když je čtverec nulový
 
 
 \subsection*{Zákadní metody řešení soustav rovnic a nerovnic, matice}
-\par Při řešení rovnic využíváme především \textit{ekvivalentní úpravy}, tj. úpravy, které
+\par Při řešení (ne)rovnic využíváme především \textit{ekvivalentní úpravy}, tj. úpravy, které
 nemění obor pravdivosti. Ekvivalentními úpravami jsou:
 \begin{itemize}
 	\item vynásobení (ne)rovnice nenulovým reálným číslem,
 	\item přičtení stejného reálného čísla k oběma stranám (ne)rovnice,
-	\item prohození stran rovnice.
+	\item prohození stran (ne)rovnice.
 \end{itemize}
 
-U nerovnic při násobení záporným číslem a při prohazování stran rovnice měníme znaménko.
+U nerovnic při násobení záporným číslem a při prohazování stran měníme znaménko.
 
-Existují však i úpravy, které mění obor pravdivosti, říkáme jim \textit{úpravy důsledkové}.
+Existují však i užitečné úpravy, které mohou měnit obor pravdivosti, \textit{úpravy důsledkové}.
 To jsou úpravy, které obor pravdivosti rozšíří, nebo nezmění -- nesmí však dojít ke ztrátě některého
 z kořenů. Mezi důsledkové úpravy patří třeba umocnění rovnice na druhou. Například rovnice
 $$
@@ -261,7 +261,7 @@ $$
 $$
 přestože původní rovnice žádné řešení nemá. Před určením oboru pravdivosti tedy musíme provést zkoušku.
 
-\par Výstupem úlohy o řešení (ne)rovnic je zpravidla zapsání oboru pravdivosti jako intervalu / množiny.
+\par Výstupem úlohy o řešení (ne)rovnic je zpravidla zapsání oboru pravdivosti jako intervalu/množiny.
 Značíme jej $P$ nebo $K$.
 
 
@@ -533,7 +533,7 @@ V $\mathbb R$ řešte rovnici $|3x-5|=2x+10.$
 \end{priklad}
 
 \begin{reseni}
-Rozdělíme na případy, kdy je výraz v absolutní hodnotě menší / větší než nula. V dílčích výsledcích případů nesmíme zapomenout na podmínku absolutní hodnoty. Máme
+Rozdělíme na případy, kdy je výraz v absolutní hodnotě menší/větší než nula. V dílčích výsledcích případů nesmíme zapomenout na podmínku absolutní hodnoty. Máme
 \begin{enumerate}[i.]
 	\item $3x-5 \geq 0\implies x \geq \frac{5}{3}$: $|3x-5|=3x-5$
 	\begin{align*}
@@ -843,7 +843,7 @@ V $\mathbb R$ řešte $x^2-6x+8 >0.$
 Pro pohodlnější počítání soustav rovnic je lze zapsat do \textit{matice}.
 
 \begin{definition}
-\textbf{Maticí} $m\times n$ nad $\mathbb R $ nazveme obdélníkové (čtvercové) schéma
+\textbf{Maticí} řádu $m\times n$ nad $\mathbb R $ nazveme obdélníkové (čtvercové) schéma
 o $m$ řádcích a $n$ sloupcích
 $$
 \begin{pmatrix}
@@ -851,9 +851,9 @@ $$
 	a_{21} & a_{22} & \dots & a_{2n}\\
 	\dots & \dots & \dots & \dots \\
 	a_{m1} & a_{m2} & \dots & a_{mn}
-\end{pmatrix}.
+\end{pmatrix},
 $$
-Číslo $a_{ij}$ nazveme \textbf{prvkem} matice na místě $i,j$.
+kde číslo $a_{ij} \in \mathbb R$ nazveme \textbf{prvkem} matice na místě $i,j$.
 \end{definition}
 
 \begin{pozn}
@@ -861,8 +861,8 @@ $$
 \end{pozn}
 
 \begin{pozn}
-	Při řešení soustav rovnic používáme tzv. \textit{matici s rozšířenou pravou stranou}, tj. matici
-	rozšířenou o jeden sloupec, který píšeme za svislou čáru.
+	Při řešení soustav rovnic používáme tzv. \textit{rozšířenou matici soustavy}, tj. matici
+	rozšířenou o sloupec pravých stran rovnic, který píšeme za svislou čáru.
 \end{pozn}
 
 Při řešení soustav rovnic se snažíme matici převést do \textit{schodovitého tvaru}, ze kterého
@@ -1116,9 +1116,7 @@ K řešení soustav rovnic lze také využít Cramerovo pravidlo.
 
 \begin{veta}[Cramerovo pravidlo]
 	Uvažujme soustavu rovnic o matici $A$ s pravou stranou $\vec b$. Pokud má soustava $\left (
-	\begin{array}{c | c }
-	A & \vec b
-	\end{array}
+	A | \vec b
 	\right )$ právě jedno řešení $(x_1, x_2, \dots, x_n)$, je
 	$$
 	    x_i=\frac{\det A_i}{\det A},
@@ -1329,7 +1327,7 @@ t^2+t-6&=0\\
 \end{align*}
 Nyní zpětně dosadíme. Je
 \begin{align*}
-	&t=-3 \text{ nelze} &t=2 \implies x = 1,
+	&t=-3 \text{ -- nelze} &t=2 \implies x = 1,
 \end{align*}
 a tedy
 $$P=\{1\}.$$
@@ -1367,7 +1365,7 @@ V $\mathbb R$ řešte rovnici $x^{3+2\log_5 x}=25x^{2+\log_5 x}$.
 \end{priklad}
 
 \begin{reseni}
-Rovnici zlogaritmujeme a dále upravujeme. Logaritmování nemusí být ekvivalentní úprava a na konci tak
+Rovnici zlogaritmujeme a dále upravujeme. Logaritmování nemusí být ekvivalentní úprava, a na konci tak
 provedeme zkoušku. Je
 \begin{align*}
 	x^{3+2\log_5 x}&=25x^{2+\log_5 x}\\
@@ -1409,7 +1407,7 @@ Užijeme výhodné substituce $t=3^{x+2}$. Je
 \end{align*}
 Dostáváme kořeny
 \begin{align*}
-	&t=\frac{-2}{3}\colon \text{ nelze}, &t=1 \implies x = -2.
+	&t=\frac{-2}{3} \text{ -- nelze}, &t=1 \implies x = -2.
 \end{align*}
 \vspace{-1em}
 \begin{figure}[!ht]
