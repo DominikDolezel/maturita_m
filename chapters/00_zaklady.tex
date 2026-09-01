@@ -25,7 +25,7 @@ Přímým důkazem. Nechť $n$ je sudé přirozené číslo, tedy lze jej zapsat
 Pak $n^2 = 4k^2 = 2\cdot 2l, 2l\in \mathbb N, $ tedy $n^2$ je sudé. \qed
 \end{reseni}
 
-\begin{priklad}
+\begin{priklad}\label{prsude}
 Dokažte, že pro všechna $n \in \mathbb N$ platí, že je-li $n^2$ sudé, je i $n$ sudé.
 \end{priklad}
 
@@ -68,11 +68,11 @@ Dokažte, že $\sqrt{2} $ je iracionální.
 
 \begin{reseni}
 Sporem. Předpokládejme, že je racionální. Pak existují taková $k,l \in \mathbb Z $, že $D(k,l)=1$ a
-$\frac{k}{l} = \sqrt{2}$. Umocníme-li tuto rovnost na druhou, doustaneme
+$k/l = \sqrt{2}$. Umocníme-li tuto rovnost na druhou, doustaneme
 $$
 \frac{k^2}{l^2} =2.
 $$
-Z již dříve dokázaného proto musí nutně 2 dělit $k^2$, a tedy i $k$. Najdeme tedy takové $m \in \mathbb Z $,
+Protože 2 musí dělit $k^2$, z příkladu \ref{prsude} plyne, že 2 dělí i $k$. Najdeme tedy takové $m \in \mathbb Z $,
 že $k = 2m$. Pak máme
 $$
 \frac{2m}{l} = \sqrt{2}.
@@ -251,7 +251,7 @@ U nerovnic při násobení záporným číslem a při prohazování stran mění
 
 Existují však i užitečné úpravy, které mohou měnit obor pravdivosti, \textit{úpravy důsledkové}.
 To jsou úpravy, které obor pravdivosti rozšíří, nebo nezmění -- nesmí však dojít ke ztrátě některého
-z kořenů. Mezi důsledkové úpravy patří třeba umocnění rovnice na druhou. Například rovnice
+z~kořenů. Mezi důsledkové úpravy patří třeba umocnění rovnice na druhou. Například rovnice
 $$
 \sqrt{x} = -2
 $$
@@ -347,7 +347,8 @@ $$\frac{(4-x)(6+x)x}{2-x}\leq 0.$$
 \end{priklad}
 
 \begin{reseni}
-	Výraz na levé straně už je rozložen v reálném oboru, zaneseme tedy body na číselnou osu, zjistíme jedno znaménko dosazením a doplníme ostatní. Nezapomeneme vyloučit nulové body jmenovatele, protože v nich výraz není definován (dělíme nulou).
+	Výraz na levé straně už je rozložen v reálném oboru, zaneseme tedy body na číselnou osu, zjistíme jedno znaménko dosazením a doplníme ostatní.
+	Nezapomeneme vyloučit nulové body jmenovatele, protože v nich výraz není definován (dělíme nulou).
 
 	\begin{figure}[!ht]
   \centering
@@ -533,7 +534,7 @@ V $\mathbb R$ řešte rovnici $|3x-5|=2x+10.$
 \end{priklad}
 
 \begin{reseni}
-Rozdělíme na případy, kdy je výraz v absolutní hodnotě menší/větší než nula. V dílčích výsledcích případů nesmíme zapomenout na podmínku absolutní hodnoty. Máme
+Rozdělíme na případy, kdy je výraz v absolutní hodnotě menší/větší než nula. V~dílčích výsledcích případů nesmíme zapomenout na podmínku absolutní hodnoty. Máme
 \begin{enumerate}[i.]
 	\item $3x-5 \geq 0\implies x \geq \frac{5}{3}$: $|3x-5|=3x-5$
 	\begin{align*}
@@ -595,7 +596,7 @@ Rozdělíme na případy podle nulových bodů absolutních hodnot, budou tedy t
 	% hodnoty význačných bodů zleva doprava
 	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (3.75,6.375) {$-6$};
 	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (5,6.375) {(-4)};
-	\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (7.5,6.375) {-2};
+	\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (7.5,6.375) {$-2$};
 	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (8.75,6.375) {-1};
 	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (10,6.375) {0};
 	%\node [font=\fontsize{13.1pt}{17.0pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (11.25,6.375) {(1)};
@@ -876,7 +877,7 @@ je řešení již patrné.
 Při řešení soustav rovnic využíváme následující ekvivalentní úpravy:
 \begin{itemize}
 	\item vynásobení jednoho řádku (jedné rovnice) nenulovým reálným číslem,
-	\item prohození dvou řádkl (rovnic),
+	\item prohození dvou řádků (rovnic),
 	\item přičtení $k$-násobku jednoho řádku (rovnice) k druhému, kde $k$ je nenulové reálné číslo.
 \end{itemize}
 
@@ -885,7 +886,7 @@ Při řešení soustav rovnic využíváme následující ekvivalentní úpravy:
 \begin{algoritmus}[Gaussova eliminační metoda]
 	Tento algoritmus převádí matici do schodovitého tvaru. Pro každý řádek matice:
 	\begin{enumerate}
-		\item Najdeme první nnenulový sloupec, jeho index označíme $k_1$. Pokud
+		\item Najdeme první nenulový sloupec, jeho index označíme $k_1$. Pokud
 		takový sloupec neexistuje, je matice ve schodovitém tvaru, neboť je nulová.
 		\item Pokud je $a_{1k_1}=0$, prohodíme první řádek s libovolným řádkem $i$,
 		ve kterém je $a_{ik_1} \ne 0$.
@@ -899,7 +900,7 @@ Při řešení soustav rovnic využíváme následující ekvivalentní úpravy:
 
 \begin{definition}
 \textbf{Hodností} matice $A$ nazveme počet nenulových řádků matice, kterou získáme
-převedením matice $A$ do schodovitého tvaru (tj. po provdední Gaussovy eliminační metody).
+převedením matice $A$ do schodovitého tvaru (tj. po provedení Gaussovy eliminační metody).
 \end{definition}
 
 \begin{priklad}
@@ -937,7 +938,7 @@ $$\begin{pmatrix}
     1 & 2 & -3 \\
     0 & 6 & -3 \\
     0 & 0 & 45
-\end{pmatrix}$$
+\end{pmatrix}.$$
 Ve schodovitém tvaru se nevynuloval žádný řádek, matice má tedy hodnost $3$.
 \end{reseni}
 
@@ -1176,24 +1177,25 @@ V $\mathbb R$ řešte soustavu rovnic s parametrem $a \in \mathbb R$:
 \end{priklad}
 
 \begin{reseni}
-	\begin{enumerate}[1.]
-		\item způsob: Gaussova eliminační metoda: převedeme soustavu na matici a od druhého řádku odečteme $a$-násobek prvního řádku
-		$$\left(\begin{array}{cc|c}
-			1 &-1&2\\
-			a & 1& 4
-		\end{array}\right)\sim
-		\left(\begin{array}{cc|c}
-			1 &-1&2\\
-			0 & 1+a& 4 -2a
-		\end{array}\right)$$
-		\begin{enumerate}[i.]
-			\item $a = -1$: $0x + 0y = 4 \implies P_1 = \emptyset$
-			\item $a \neq -1$: $y = \frac{4-2a}{1+a}, x = 2+ \frac{4-2a}{1+a} = \frac{6}{1+a} \implies P_2 = \left\{\left[\frac{6}{1+a}, \frac{4-2a}{1+a}\right]; a \in \mathbb R \smallsetminus \left \{ -1 \right \} \right\}$
-		\end{enumerate}
+	Gaussovou eliminační metodou. Převedeme soustavu na matici a od druhého řádku odečteme $a$-násobek prvního řádku. Dostaneme
+	$$\left(\begin{array}{cc|c}
+		1 &-1&2\\
+		a & 1& 4
+	\end{array}\right)\sim
+	\left(\begin{array}{cc|c}
+		1 &-1&2\\
+		0 & 1+a& 4 -2a
+	\end{array}\right).$$
+	Dále rozdělíme na případy
+	\begin{enumerate}[i.]
+		\item $a = -1$: $0x + 0y = 4 \implies P_1 = \emptyset$,
+		\item $a \neq -1$, pak
+		\begin{align*}
+		y &= \frac{4-2a}{1+a}, \\
+		x &= 2+ \frac{4-2a}{1+a} = \frac{6}{1+a}, \\
+		P_2 &= \left\{\left[\frac{6}{1+a}, \frac{4-2a}{1+a}\right]; a \in \mathbb R \smallsetminus \left \{ -1 \right \} \right \}.
+		\end{align*}
 	\end{enumerate}
-Buď Gaussovou eliminací, nebo
-Cramerovým pravidlem (to však funguje jen tehdy, když $\det A \ne 0$, případ $a=0$ tedy
-musíme dořešit Gaussovou eliminací).
 \end{reseni}
 
 \begin{priklad}
@@ -1206,8 +1208,87 @@ V $\mathbb R$ řešte soustavu rovnic s parametrem $a\in \mathbb R$:
 \end{priklad}
 
 \begin{reseni}
-Buď Gaussovou eliminační metodou nebo Cramerovým pravidlem. Nesmíme zapomenout
-rozdělit na případy, kdy by některé výrazy nemusely být definovány.
+Řešíme Gaussovou eliminační metodou. Soustavu převedeme do matice. Dostaneme
+$$
+\left(\begin{array}{ccc|c}
+		a &-a&0&0\\
+		0&-a^2 & 1& a\\
+		a & 0 & 1 & a^2
+	\end{array}\right).
+$$
+Po úpravě je
+$$
+\left(\begin{array}{ccc|c}
+		a &-a&0&0\\
+		0&-a^2 & 1& a\\
+		a & 0 & 1 & a^2
+	\end{array}\right) \sim \left(\begin{array}{ccc|c}
+			a &-a&0&0\\
+			0&-a^2 & 1& a\\
+			0 & a & 1 & a^2
+		\end{array}\right).
+$$
+Nyní bychom chtěli vynásobit třetí řádek $a$ a přičíst ho k~druhému řádku. Rozdělíme proto případy
+\begin{enumerate}[$i.$]
+	\item $a = 0$, pak řešíme soustavu
+	$$
+ \left(\begin{array}{ccc|c}
+			0 &0&0&0\\
+			0&0 & 1& 0\\
+			0 & 0 & 1 & 0
+		\end{array}\right),
+	$$
+	která má řešení
+	$$
+	    P_0 = \left \{ \left [ a,b,0 \right ]; a,b, \in \mathbb R \right \}.
+	$$
+	\item $a \ne 0$, pak upravíme a dostaneme
+	$$
+ \left(\begin{array}{ccc|c}
+			a &-a&0&0\\
+			0&-a^2 & 1& a\\
+			0 & 0 & a+1 & a^3 + a
+		\end{array}\right) \sim \left(\begin{array}{ccc|c}
+				a &-a&0&0\\
+				0&-a^2 & 0& a - \frac{a^3 + a}{a+1} \\
+				0 & 0 & 1 & \frac{a^3 + a}{a+1}
+			\end{array}\right),
+	$$
+	která má řešení
+	$$
+	    P_1 = \left \{ \left [ \frac{1-a}{a(a+1)}, \frac{a-1}{a(a+1)}, \frac{a(a^2+1)}{a+1} \right ]; a \in \mathbb R \smallsetminus \left \{ -1, 0 \right \}   \right \} .
+	$$
+	Zbývá ještě zvlášť prověřit případ $a=-1$. Pak je
+	$$
+ \left(\begin{array}{ccc|c}
+			-1 &1&0&0\\
+			0&-1 & 1& -1\\
+			0 & -1 & 1 & 1
+		\end{array}\right),
+	$$
+	po úpravě pak dostaneme
+	$$
+ \left(\begin{array}{ccc|c}
+			-1 &1&0&0\\
+			0&-1 & 1& -1\\
+			0 & -1 & 1 & 1
+		\end{array}\right) \sim \left(\begin{array}{ccc|c}
+				-1 &1&0&0\\
+				0&-1 & 1& -1\\
+				0 & 0 & 0 & 2
+			\end{array}\right),
+	$$
+	tato soustava ale nemá řešení. Součástí řešení je tabulka s pravdivostními hodnotami:
+	\begin{center}
+		\begin{tabular}{c | c}
+		$a$ & $P$\\
+		\hline
+		0 & $\left \{ \left [ a,b,0 \right ]; a,b, \in \mathbb R \right \}$\\
+		$-1$ & $\emptyset$ \\
+		$\mathbb R \smallsetminus \left \{ 0,-1 \right \} $ & $\left \{ \left [ \frac{1-a}{a(a+1)}, \frac{a-1}{a(a+1)}, \frac{a(a^2+1)}{a+1} \right ]; a \in \mathbb R \smallsetminus \left \{ -1, 0 \right \}   \right \}$
+		\end{tabular}
+	\end{center}
+\end{enumerate}
 \end{reseni}
 
 \begin{priklad}
@@ -1541,7 +1622,7 @@ V $\mathbb R$ řešte rovnici $\sin x = \frac{1}{2}.$
 \end{priklad}
 
 \begin{reseni}
-Z náčrtku jednotkové kružnice a základních hodnot funkce $\sin$ vidíme $x_1 = \frac{\pi}{6}$ a $x_2=\frac{5\pi}{6}.$
+Z náčrtku jednotkové kružnice a základních hodnot funkce $\sin$ vidíme $x_1 = \frac{\pi}{6}$ a~$x_2=\frac{5\pi}{6}.$
 \begin{figure}[!ht]
 	\centering
 	        \begin{tikzpicture}[scale=1]
