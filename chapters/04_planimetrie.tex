@@ -238,12 +238,12 @@ Nechť $a\in \mathscr P$, $A\notin a$, $B\notin a$, $A\ne B$. Pak \textbf{přím
   \end{figure}
 \end{definition}
 
-\begin{veta}
+\begin{veta}\label{vetatroj180}
   Součet všech vnitřních úhlů v trojúhelníku je $180^\circ$.
 \end{veta}
 
 \begin{proof}
-    Bez újmy na obecnosti veďme bodem $A$ rovnobežku se stranou $a$.
+    Náčrtek situace je v obázku \ref{dktroj}. Bez újmy na obecnosti veďme bodem $A$ rovnobežku se stranou $a$.
     Odtud lze jasně vidět, že zbylé dva úhly k úhlu $\alpha$ jsou střídavé s
     úhly $\beta$, $\gamma$, a tedy i shodné. Celkem dávají přímý úhel,
     tj. jejich součet je $180^\circ$, což jsme chtěli dokázat.
@@ -251,16 +251,16 @@ Nechť $a\in \mathscr P$, $A\notin a$, $B\notin a$, $A\ne B$. Pak \textbf{přím
       \centering
       \tikzfig{trojuhelnik_soucet}
       \caption{Součet úhlů v trojúhelníku}
+      \label{dktroj}
     \end{figure}
 \end{proof}
-
 
 \begin{veta}
   Součet libovolných dvou vnitřních úhlů v trojúhelníku je menší něž $180^\circ$.
 \end{veta}
 
 \begin{proof}
-  Plyne z předchozí věty a tvrzení, že vnitřní úhel v trojúhelníku je nenulový.
+  Plyne z věty \ref{vetatroj180} a tvrzení, že vnitřní úhel v trojúhelníku je nenulový.
 \end{proof}
 
 \begin{veta}
@@ -290,7 +290,58 @@ Nechť $a\in \mathscr P$, $A\notin a$, $B\notin a$, $A\ne B$. Pak \textbf{přím
 \end{veta}
 
 \begin{proof}
-  Trojúhelníky vrchol -- střední příčka a vrchol -- protilehlá strana jsou zjevně podobné s koeficientem 2.
+  Trojúhelníky $ABC$ a $S_{AC}S_{BC}C$ jsou zjevně podobné s koeficientem 2, jak je vidět v~obrázku \ref{obrazektroj}.
+  \begin{figure}[h!]
+	\centering
+	\begin{tikzpicture}[
+    scale=1,
+    % Styly pro značky polovin stran
+    mid-tick/.style={postaction={decorate, decoration={
+        markings, mark=at position 0.5 with {\draw[thick] (0,-3pt) -- (0,3pt);}
+    }}},
+    mid-double-tick/.style={postaction={decorate, decoration={
+        markings, mark=at position 0.5 with {\draw[thick] (-1.5pt,-3pt) -- (-1.5pt,3pt); \draw[thick] (1.5pt,-3pt) -- (1.5pt,3pt);}
+    }}},
+    % Styl pro šipky značící rovnoběžnost
+    parallel-arrow/.style={postaction={decorate, decoration={
+        markings, mark=at position 0.55 with {\arrow{Stealth[length=2mm]}}
+    }}}
+	]
+
+    % Definice vrcholů velkého trojúhelníku
+    \coordinate (A) at (0, 0);
+    \coordinate (B) at (6, 0);
+    \coordinate (C) at (2, 4);
+
+    % Výpočet středů stran (střední příčka)
+    \coordinate (D) at ($(A)!0.5!(C)$);
+    \coordinate (E) at ($(B)!0.5!(C)$);
+
+    % Lehké podbarvení podobného "horního" trojúhelníku (zmiňuje to důkaz)
+    \fill[blue, opacity=0.05] (C) -- (D) -- (E) -- cycle;
+
+    % Vykreslení obvodu s vyznačením shodných polovin stran
+    \draw[thick] (A) -- (B);
+    \draw[mid-tick] (A) -- (D);
+    \draw[mid-tick] (D) -- (C);
+    \draw[mid-double-tick] (B) -- (E);
+    \draw[mid-double-tick] (E) -- (C);
+
+    % Vykreslení střední příčky a protilehlé strany s šipkami rovnoběžnosti
+    \draw[thick, blue] (D) -- (E) node[midway, above=2pt] {$s$};
+    \draw[thick] (A) -- (B) node[midway, below=2pt] {$2s$};
+
+    % Popisky vrcholů a bodů
+    \node[below left] at (A) {$A$};
+    \node[below right] at (B) {$B$};
+    \node[above] at (C) {$C$};
+    \node[above left] at (D) {$S_{AC}$};
+    \node[above right] at (E) {$S_{BC}$};
+
+	\end{tikzpicture}
+	\caption{Trojúhelník a jeho střední příčka}
+	\label{obrazektroj}
+  \end{figure}
 \end{proof}
 
 \begin{veta}
@@ -298,15 +349,84 @@ Nechť $a\in \mathscr P$, $A\notin a$, $B\notin a$, $A\ne B$. Pak \textbf{přím
 \end{veta}
 
 \begin{proof}
-    V trojúhelníku $ABC$ jsou těžnice $t_a,t_b,t_c$. Sestrojme body $X,Y$ tak, aby
+    V trojúhelníku $ABC$, který je na obrázku \ref{teznicedk} jsou těžnice $t_a,t_b,t_c$. Sestrojme body $X,Y$ tak, aby
     $ABXC$ a~$ABCY$ byly rovnoběžníky. Jistě jsou $AX$, resp. $BY$ jejich úhlopříčky.
-    Zároveň je $|AB|=|CX|=|CY|$, takže $C$ je střed $XY$. Těžnice $t_c$ je tím pádem
-    osou souměrnosti lichoběžníka $ABXY$, a~proto leží na průsečíku jeho úhlopříček
-    (tento lichoběžník je rovnoramenný).\\
+    Zároveň je $|AB|=|CX|=|CY|$, takže $C$ je střed $XY$. Těžnice $t_c$ tím pádem
+    leží na průsečíku jeho úhlopříček.\\
     V~témže trojúhelníku označme středy stran $S_a,S_b,S_c$. Trojúhelník $S_aS_bS_c$ je
     pak podobný s~trojúhelníkem $ABC$ s~koeficientem $1/2$ (jeho strany jsou středními
     příčkami trojúhelníku $ABC$). Navíc těžnice \uv{menšího} trojúhelníku leží na
     těžnicích toho \uv{většího}. Proto i~$|AT|=2|S_{S_bS_c}T|$, což jsme chtěli ukázat.
+    \begin{figure}[h]
+	\centering
+	\begin{tikzpicture}[>=latex, line join=round, scale=1.1]
+
+    % 1. Definice vrcholů hlavního trojúhelníku
+    % Zvoleno jako rovnoramenný trojúhelník, aby platilo tvrzení o rovnoramenném lichoběžníku
+    \coordinate (A) at (0, 0);
+    \coordinate (B) at (6, 0);
+    \coordinate (C) at (4, 4.5);
+
+    % 2. Středy stran (označeny jako Sa, Sb, Sc)
+    \coordinate (Sa) at ($(B)!0.5!(C)$);
+    \coordinate (Sb) at ($(A)!0.5!(C)$);
+    \coordinate (Sc) at ($(A)!0.5!(B)$);
+
+    % 3. Konstrukce bodů X a Y
+    % ABXC je rovnoběžník => \vec{CX} = \vec{AB} => X = C + B - A
+    \coordinate (X) at ($(C) + (B) - (A)$);
+    % ABCY je rovnoběžník => \vec{YC} = \vec{AB} => Y = C - B + A
+    \coordinate (Y) at ($(C) - (B) + (A)$);
+
+    % 4. Těžiště T
+    \coordinate (T) at ($(A)!2/3!(Sa)$);
+
+    % 5. Střed úsečky SbSc (zmíněn v druhém úryvku jako S_{SbSc})
+    \coordinate (Sbc) at ($(Sb)!0.5!(Sc)$);
+
+    % --- VYKRESLENÍ POMOCNÝCH ČAR (Rovnoběžníky a úhlopříčky) ---
+    \draw[dashed, gray] (A) -- (Y) -- (C);
+    \draw[dashed, gray] (B) -- (X) -- (C);
+
+    % Úhlopříčky lichoběžníku protínající se v těžišti T
+    \draw[dashed, orange, thick] (A) -- (X);
+    \draw[dashed, orange, thick] (B) -- (Y);
+
+    % --- VYKRESLENÍ TROJÚHELNÍKŮ ---
+    % Hlavní trojúhelník ABC
+    \draw[thick] (A) -- (B) -- (C) -- cycle;
+
+    % Středový trojúhelník SaSbSc (podobný s koeficientem 1/2)
+    \draw[thick, green!60!black] (Sa) -- (Sb) -- (Sc) -- cycle;
+
+    % --- VYKRESLENÍ TĚŽNIC ---
+    \draw[blue, thick] (A) -- (Sa) node[pos=0.8, below right] {$t_a$};
+    \draw[blue, thick] (B) -- (Sb) node[pos=0.8, below left] {$t_b$};
+    \draw[blue, thick] (C) -- (Sc) node[pos=0.7, right] {$t_c$};
+
+    % Těžnice menšího trojúhelníku překrývající se s hlavní těžnicí ta
+    \draw[red, thick, densely dotted] (Sa) -- (Sbc);
+
+    % --- BODY A POPISKY ---
+    \fill (A) circle (2pt) node[below left] {$A$};
+    \fill (B) circle (2pt) node[below right] {$B$};
+    \fill (C) circle (2pt) node[above] {$C$};
+
+    \fill (X) circle (2pt) node[above right] {$X$};
+    \fill (Y) circle (2pt) node[above left] {$Y$};
+
+    \fill (Sa) circle (2pt) node[right] {$S_a$};
+    \fill (Sb) circle (2pt) node[left] {$S_b$};
+    \fill (Sc) circle (2pt) node[below right] {$S_c$};
+
+    \fill (T) circle (2pt) node[below, yshift=-4pt] {$T$};
+    \fill (Sbc) circle (1.5pt) node[left, xshift=-2pt, yshift=2pt] {$S_{S_bS_c}$};
+
+	\end{tikzpicture}
+	\caption{Trojúhelník a jeho těžnice}
+	\label{teznicedk}
+    \end{figure}
+
 \end{proof}
 
 \begin{definition}
