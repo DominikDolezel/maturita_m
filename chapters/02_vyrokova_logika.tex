@@ -31,33 +31,34 @@
     Zápisy sestavené ze značek, výrokových proměnných, závorek a logických spojek nazýváme \textbf{výrokové formule}.
   \end{definition}
 
-\begin{pozn}
-  Pravdivostní hodnoty výrokových formulí s logickou spojkou:
-  \begin{center}
-    \begin{tabular}{c c | c c | c c c c}
-      $X$ & $Y$ & $X^\prime$ & $Y^\prime$ & $X\land Y$ & $X\lor Y$ & $X\implies Y$ & $X\iff Y$ \\
-      \hline
-      1 & 1 & 0 & 0 & 1 & 1 & 1 & 1 \\
-      1 & 0 & 0 & 1 & 0 & 1 & 0 & 0 \\
-      0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 \\
-      0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 \\
-    \end{tabular}
-  \end{center}
-\end{pozn}
+\begin{figure}[h]
+\centering
+\begin{tabular}{c c | c c | c c c c}
+    $X$ & $Y$ & $X^\prime$ & $Y^\prime$ & $X\land Y$ & $X\lor Y$ & $X\implies Y$ & $X\iff Y$ \\
+    \hline
+    1 & 1 & 0 & 0 & 1 & 1 & 1 & 1 \\
+    1 & 0 & 0 & 1 & 0 & 1 & 0 & 0 \\
+    0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 \\
+    0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 \\
+\end{tabular}
+\caption{Pravdivostní hodnoty výrokových formulí s logickou spojkou}
+\label{pravdhod}
+\end{figure}
 
 \begin{definition}
   Výroková formule, která je pravdivá bez ohledu na pravdivostní hodnoty elementárních výroků, se nazývá \textbf{tautologie}.
 \end{definition}
 
-\begin{priklad}
+\begin{priklad}\label{prstabulkoupravdhod}
     Napište tabulku pravdivostních hodnot výrokové formule $A\land Y \implies (X\lor Y)$ a~určete,
     zda je tautologií.
 \end{priklad}
 
 \begin{reseni}
-Napíšeme tabulku:
-  \begin{center}
-    \begin{tabular}{c c c | c c | c}
+Tabulka pravdivostních hodnot je v obrázku \ref{tabulkaresenipr}.
+  \begin{figure}[h]
+	\centering
+	\begin{tabular}{c c c | c c | c}
       $A$ & $X$ & $Y$ & $A \land Y$ & $X \lor Y$ & $A\land Y \implies (X\lor Y)$ \\
       \hline
       0 & 0 & 0 & 0 & 0 & 1  \\
@@ -69,7 +70,9 @@ Napíšeme tabulku:
       1 & 1 & 0 & 0 & 1 & 1  \\
       1 & 1 & 1 & 1 & 1 & 1  \\
     \end{tabular}
-  \end{center}
+	\caption{Řešení příkladu \ref{prstabulkoupravdhod}}
+	\label{tabulkaresenipr}
+  \end{figure}
   Vidíme, že výroková formule je tautologií.
 \end{reseni}
 
@@ -105,7 +108,7 @@ Napíšeme tabulku:
   \textbf{Výroková forma} je tvrzení obsahující proměnné. Po dosazení konstant za proměnné dostáváme výrok.
 \end{definition}
 
-\begin{priklad}
+\begin{priklad}\label{prstroje}
     V dílně jsou tři stroje $A,B,C,$ které pracují podle těchto pravidel:
     \begin{itemize}
     \item pracuje-li $A$, pracuje i $B$,
@@ -122,9 +125,10 @@ Napíšeme tabulku:
    	\item $B\lor C$,
    	\item $A^\prime \implies C^\prime$.
     \end{itemize}
-    Sestavme tabulku pravdivostních hodnot:
-    \begin{center}
-      \begin{tabular}{c c c | c c c }
+    V obrázku \ref{tabulkaprstroje} jsme sestavili tabulku pravdivostních hodnot.
+    \begin{figure}[h]
+	\centering
+	\begin{tabular}{c c c | c c c }
         $A$ & $B$ & $C$ & $A \implies B$ & $B \lor C$ & $A^\prime \implies C^\prime$ \\
         \hline
         0 & 0 & 0 & 1 & 0 & 1  \\
@@ -136,7 +140,9 @@ Napíšeme tabulku:
         1 & 1 & 0 & 1 & 1 & 1  \\
         1 & 1 & 1 & 1 & 1 & 1  \\
       \end{tabular}
-    \end{center}
+	\caption{Řešení příkladu \ref{prstroje}}
+	\label{tabulkaprstroje}
+    \end{figure}
     Zjišťujeme, že vyhovují možnosti, kdy pracují
     stroje $A,B,C$; $A,B$; nebo jen stroj $B.$
 \end{reseni}
