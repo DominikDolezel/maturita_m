@@ -70,7 +70,7 @@
 	\item Do každého dalšího pole napíšeme hodnotu $c \ \cdot $ \texttt{poslední vyplněné pole} $ + \ a_i$,
 	jako v tabulce \ref{fig:horner}.
     \end{enumerate}
-    Hodnota $P(c)$ je v tabulce na místě otazníku. Pokud je tato hodnota nulová, zároveň jsou v tomto řádku koeficienty
+    Hodnota $P(c)$ je v tabulce na místě otazníku. Pokud je tato hodnota nulová, zároveň jsou v~tomto řádku koeficienty
     polynomu, který získáme po vydělení $P(x)$ polynomem $(x-c)$.
     \begin{figure}[h]
 	\centering
@@ -99,20 +99,20 @@ rovnice tvaru $P(x)=0,$ kde $P(x)$ je polynom $n$-tého stupně s reálnými koe
 \end{veta}
 
 \begin{veta}\label{odecitanivpolynomu}
-    Nechť $\frac{r}{s}$ je racionální kořen algebraické rovnice \ref{alg_rce} s celočíselnými koeficienty.
+    Nechť $r/s$ je racionální kořen algebraické rovnice \ref{alg_rce} s celočíselnými koeficienty.
     Pak platí
     $$\forall m \in \mathbb Z\colon (r-ms) \mid a(m),$$
-    kde $a(m)$ je hodnota polynomu $a(x)$ pro $x=m.$ Nejčastěji používáme $(r + s) \mid a(-1)$ a $(r - s) \mid a(1).$
+    kde $a(m)$ je hodnota polynomu $a(x)$ pro $x=m.$ Nejčastěji používáme $(r + s) \mid a(-1)$ a~$(r - s) \mid a(1).$
 \end{veta}
 
 \begin{algoritmus}[Hledání racionálních kořenů polynomu s racionálními koeficienty]
-  Mějme polynom $P(x) \in \mathbb Q [x]$. Potom najdeme jeho kořeny $\frac{r}{s} \in \mathbb Q$ takto:
+  Mějme polynom $P(x) \in \mathbb Q [x]$. Potom najdeme jeho kořeny $r/s \in \mathbb Q$ takto:
   \begin{enumerate}[1.]
     \item Nalezneme všechny celočíselné dělitele $r$ absolutního členu polynomu $a_0$.
     \item Nalezneme všechny přirozené dělitele $s$ vedoucího členu $a_n$.
-    \item Utvoříme všechny zlomky tvaru $\frac{r}{s}, (r,s) = 1$.
+    \item Utvoříme všechny zlomky tvaru $r/s, (r,s) = 1$.
     \item Hornerovým schématem určíme $P(1)$, případně $P(-1)$ ($1$ a $-1$ také mohou být kořeny).
-    \item Vyškrtáme ty zlomky $\frac{r}{s}$, které nesplňují podmínky $(r-s) \mid P(1) \land (r+s) \mid P(-1)$.
+    \item Vyškrtáme ty zlomky $r/s$, které nesplňují podmínky $(r-s) \mid P(1) \land (r+s) \mid P(-1)$.
     \item U ostatních zlomků vyzkoušíme Hornerovým schématem, zda jsou kořeny daného polynomu.
   \end{enumerate}
 \end{algoritmus}
@@ -313,7 +313,7 @@ Největším společným dělitelem je poslední nenulový zbytek, tj. $x+5$.
 
 \begin{veta}
     Nechť $P(x) \in \mathbb R[x], c \in \mathbb R$ je jeho $k$-násobný kořen, $k\in \mathbb N.$ Pak platí, že $c$ je
-    $k$-násobný kořen $P(x)$ právě tehdy, když $P(c)=P^\prime(c)=P^{\prime \prime}(c)=\dots= P^{(k-1)}(c)=0$ a zároveň $P^{(k)}(c)\ne 0$.
+    $k$-násobný kořen $P(x)$ právě tehdy, když $P(c)=P^\prime(c)=P^{\prime \prime}(c)=\dots= P^{(k-1)}(c)=0$ a~zároveň $P^{(k)}(c)\ne 0$.
 \end{veta}
 
 
