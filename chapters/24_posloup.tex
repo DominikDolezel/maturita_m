@@ -100,6 +100,7 @@ $$\forall n \in \mathbb N\colon S_n = \frac{1}{2}n(a_1+a_n).$$
 \end{veta}
 
 \begin{proof}
+Počítejme
 \begin{align*}
     S_n &= a_1+a_2+a_3+\dots+a_{n-1}+a_n \\
     &= a_1 + (a_1+d)+ (a_1+2d)+ \dots + [a_1+(n-2)d]+[a_1+(n-1)d]\\
@@ -202,13 +203,14 @@ $n$-členné geometrické posloupnosti. Pak $\forall n \in \mathbb N$ platí
 \end{veta}
 
 \begin{proof}
+Počítejme
 \begin{align*}
     S_n &= a_1+a_2+a_3+\dots+a_{n-1}+a_n \\
     &= a_1 + a_1q+ a_1q^2+ \dots + a_1q^{n-1}\\
     qS_n &= a_1q + a_1q^2 +  \dots + a_1q^{n-1} + a_1q^n\\
     qS_n-S_n &= -a_1+a_1q^n\\
     S_n(q-1) &= a_1(q^n-1), \textrm{ jestli } q\ne 1, \textrm{ pak}\\
-    S_n &= \frac{a_1(q^n-1)}{q-1}
+    S_n &= \frac{a_1(q^n-1)}{q-1},
 \end{align*}
 což jsme chtěli dokázat. \qedhere
 \end{proof}
@@ -462,7 +464,7 @@ Počítejme
 \begin{align*}
     A =&\lim_{n\to\infty} S_n = \lim_{n\to\infty}a_1\cdot \frac{q^n - 1}{q-1}=\frac{a_1}{q-1}\cdot \lim_{n\to\infty}(q^n-1)\\
     & \textrm{jestliže } |q|<1, \textrm{ pak} \\
-    = & \frac{a_1}{q-1}\cdot (0-1)=-\frac{a_1}{q-1}=\frac{a_1}{1-q}\qedhere
+    = & \frac{a_1}{q-1}\cdot (0-1)=-\frac{a_1}{q-1}=\frac{a_1}{1-q}.\qedhere
 \end{align*}
 \end{proof}
 

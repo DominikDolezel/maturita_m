@@ -176,7 +176,7 @@ $\lim_{x\to x_0}f(x)$ a  platí $ \lim_{x\to x_0}f(x) = A.$
 \begin{veta}[Věta o součinu nulové a ohraničené funkce]
 Nechť jsou dány dvě funkce $f,g$ a~$\lim_{x\to x_0}f(x)=0.$ Nechť existuje prstencové
 okolí $\mathscr P(x_0),$ bodu $x_0\in \mathbb R^*$ takové, že
-funkce $g$ je na tomto okolí ohraničená. Pak $\lim_{x\to x_0}f(x)g(x)=0.$
+funkce $g$~je na tomto okolí ohraničená. Pak $\lim_{x\to x_0}f(x)g(x)=0.$
 \end{veta}
 
 \begin{priklad}
@@ -252,7 +252,7 @@ Dosaďme:
  $$\lim_{x\to 2^+}\frac{x}{x-2}=\frac{2}{0^+}=+\infty.$$
 \end{reseni}
 
-\begin{veta}[l'Hospitalovo pravidlo]
+\begin{veta}[l'H\^ospitalovo pravidlo]
 Nechť $x_0\in \mathbb R^*$. Nechť je splněna jedna z podmínek
 \begin{enumerate}[$i.$]
 \item $\lim_{x\to x_0}f(x)=\lim_{x\to x_0}g(x)=0,$
@@ -268,7 +268,7 @@ $$\lim_{x\to x_0}\frac{f(x)}{g(x)}=\lim_{x\to x_0}\frac{f^\prime (x)}{g^\prime(x
 \end{priklad}
 
 \begin{reseni}
-  Řešíme l'Hospitalovým pravidlem.
+  Řešíme l'H\^ospitalovým pravidlem.
   Platí
   $$\lim_{x\to 0}\frac{\sin x}{x}=\lim_{x\to 0}\frac{\cos x}{1}=1$$
 \end{reseni}
@@ -279,7 +279,7 @@ Spočtěte $\lim_{x\to 1} \left ( \frac{1}{\ln x}-\frac{1}{x-1} \right ) $.
 \end{priklad}
 
 \begin{reseni}
-Převedeme na společný jmenovatel a použijeme l'Hospitalovo pravidlo. Je
+Převedeme na společný jmenovatel a použijeme l'H\^ospitalovo pravidlo. Je
 \begin{align*}
 \lim_{x\to 1} \left ( \frac{1}{\ln x}-\frac{1}{x-1} \right ) &= \lim_{x \to 1} \frac{x-1-\ln x}{(x-1)\ln x} \stackrel{\text{LP}}{=} \lim_{x \to 1} \frac{1 - \frac{1}{x}}{\ln x + (x-1) \frac{1}{x}}\\
 & \stackrel{\text{LP}}{=}\lim_{x \to 1} \frac{\frac{1}{x^2}}{\frac{1}{x} + \frac{1}{x} - (x-1) \frac{1}{x^2}} = \frac{1}{2}.
