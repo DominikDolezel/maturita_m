@@ -212,15 +212,7 @@ Nechť $a\in \mathscr P$, $A\notin a$, $B\notin a$, $A\ne B$. Pak \textbf{přím
     \item \textbf{střídavé}, jestliže jejich první ramena leží na jedné přímce a druhá ramena jsou rovnoběžná, přitom směr příslušných ramen je opačný,
     \item \textbf{přilehlé}, jestliže jejich první ramena leží na jedné přímce a jdou do opačných směrů a~druhá ramena jsou rovnoběžná.
   \end{itemize}
-  \definecolor{myblue}{HTML}{153243}
-  \definecolor{myred}{HTML}{C1121F}
-  \begin{figure}[h!]
-  \centering
-  \tikzfig{dvojice_uhlu}
-  \caption{Dvojice úhlů}
-  \end{figure}
 \end{definition}
-
 
 \begin{definition}
   Dvě polopřímky ležící na téže přímce nazýváme \textbf{souhlasnými}, jestliže jedna z nich je podmnožinou druhé. V opačném případě je nazveme \textbf{nesouhlasnými}.
@@ -230,29 +222,31 @@ Nechť $a\in \mathscr P$, $A\notin a$, $B\notin a$, $A\ne B$. Pak \textbf{přím
   Nechť je dán trojúhelník $ABC$. \textbf{Vnitřním úhlem} $\triangle ABC$ při vrcholu $A$~(resp. $B$, resp. $C$)
   nazýváme úhly $\sphericalangle CAB$ (resp. $\sphericalangle ABC$, resp. $ \sphericalangle BCA$), \textbf{vnějším úhlem}
   $\triangle ABC$ při vrcholu $A$ (resp. $B$, resp. $C$) pak vedlejší úhel k úhlu $\sphericalangle CAB$ (resp. $\sphericalangle ABC$, resp. $\sphericalangle BCA$).
-  \begin{figure}[ht!]
-    \centering
-    \tikzfig{trojuhelnik_uhly}
-    \caption{Trojúhelník s vnitřními (červené) a
-    vnějšími (modré) úhly}
-  \end{figure}
 \end{definition}
+
+\definecolor{myblue}{HTML}{153243}
+\definecolor{myred}{HTML}{C1121F}
+\begin{figure}[ht!]
+  \centering
+  \tikzfig{dvojice_uhlu}
+  \caption{Dvojice úhlů}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \tikzfig{trojuhelnik_uhly}
+  \caption{Trojúhelník s vnitřními (červené) vnějšími (modré) úhly}
+\end{figure}
 
 \begin{veta}\label{vetatroj180}
   Součet všech vnitřních úhlů v trojúhelníku je $180^\circ$.
 \end{veta}
 
 \begin{proof}
-    Náčrtek situace je v obázku \ref{dktroj}. Bez újmy na obecnosti veďme bodem $A$ rovnobežku se stranou $a$.
+    Náčrtek situace je v obrázku \ref{dktroj}. Bez újmy na obecnosti veďme bodem $A$ rovnobežku se stranou $a$.
     Odtud lze jasně vidět, že zbylé dva úhly k úhlu $\alpha$ jsou střídavé s
     úhly $\beta$, $\gamma$, a tedy i shodné. Celkem dávají přímý úhel,
     tj. jejich součet je $180^\circ$, což jsme chtěli dokázat.
-    \begin{figure}[ht!]
-      \centering
-      \tikzfig{trojuhelnik_soucet}
-      \caption{Součet úhlů v trojúhelníku}
-      \label{dktroj}
-    \end{figure}
 \end{proof}
 
 \begin{veta}
@@ -272,6 +266,13 @@ Nechť $a\in \mathscr P$, $A\notin a$, $B\notin a$, $A\ne B$. Pak \textbf{přím
   vedlejší. Zároveň platí $\alpha + \beta + \gamma = 180^\circ$. Celkem
   tedy máme $\alpha^\prime = \beta + \gamma$, což jsme chtěli dokázat.
 \end{proof}
+
+\begin{figure}[ht!]
+  \centering
+  \tikzfig{trojuhelnik_soucet}
+  \caption{Součet úhlů v trojúhelníku}
+  \label{dktroj}
+\end{figure}
 
 \begin{definition}
   Trojúhelník se nazývá \textbf{rovnoramenný}, jestliže alespoň dvě jeho strany jsou shodné úsečky. Strany stejné délky nazveme \textbf{rameny}, tu třetí \textbf{základnou} a vrchol proti základně \textbf{vrcholem}.
@@ -623,14 +624,14 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
   Čtyřúhelník, jehož všechny čtyři úhly jsou pravé, nazveme \textbf{pravoúhelník}.
 \end{definition}
 
-\begin{veta}\,
+\begin{veta} Vlastnosti pravoúhelníku:
   \begin{enumerate}[$i.$]
     \item Každý pravoúhelník je rovnoběžník.
     \item Úhlopříčky pravoúhelníka jsou shodné.
   \end{enumerate}
 \end{veta}
 
-\begin{proof}\,
+\begin{proof} Postupujeme jednoduchými úvahami.
   \begin{enumerate}[$i.$]
     \item Protější úhly v rovnoběžníku jsou střídavé úhly u rovnoběžek.
     \item Plyne ze shodnosti trojúhelníků $ABD$ a $BAC$.\qedhere
@@ -912,7 +913,7 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
   \end{enumerate}
 \end{veta}
 
-\begin{proof}\,
+\begin{proof} Využijeme klasickou metodu pro důkaz množiny bodů daných vlastností.
   \begin{enumerate}[$i.$]
     \item Nechť $X\in \overrightarrow{oA}$. Nechť $X\in o\implies$ platí podle věty \ref{mbdv}. Nechť $X\notin o$. Nechť $X\in AB$ -- zřejmé. Nechť $X\notin AB$. Označme $Y\in o \cap BX$, $|BX|=|BY|+|YX|=|AY|+|YX|>|AX|\implies |BX|>|AX|\implies$ platí vlastnost.
     \item Nechť $X\notin \overrightarrow{oA}$. Nechť $X\notin o \implies X\in \overrightarrow{oB}\implies |BX|<|AX|\implies$ neplatí vlastnost pro polorovinu $\overrightarrow{oA}.$ \qedhere

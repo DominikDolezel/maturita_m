@@ -123,7 +123,7 @@ Potom $D(a,b) = r_n$.
 \end{proof}
 
 \begin{veta}[Základní věta aritmetiky]\label{zaklvaritmetiky}
-  Každé přirozené číslo $n>1$ lze zapsat ve tvaru:
+  Každé přirozené číslo $n>1$ lze zapsat ve tvaru
   \begin{equation}\label{rozkladnprvoc}
 	n=p_1^{m_1}\cdot p_2^{m_2} \cdot p_3^{m_3}\cdot \hdots \cdot p_r^{m_r},
   \end{equation}
@@ -167,7 +167,7 @@ Potom $864=ab=d^2q_1q_2=36q_1q_2,$ takže $q_1q_2=24$. Zapišme si všechny tyto
 		4 & 6
 	\end{tabular}
 \end{center}
-Jsou tedy čtyři možnosti, ovšem nesmíme zapomenout na podmínku $D(q_1,q_2)=1$. Vyhovují tedy jen možnosti
+Jsou tedy čtyři možnosti, nesmíme ovšem zapomenout na podmínku $D(q_1,q_2)=1$. Vyhovují tedy jen možnosti
 1, 24 a 3, 8. Pak $a=6\cdot 1=6$, $b=6\cdot 24=144$ nebo $a=6\cdot 3=18$, $b=6\cdot 8=48$ nebo v obráceném pořadí.
 \end{reseni}
 
@@ -335,21 +335,17 @@ $D(q_1,q_2)=1.$ Zaznačíme si všechny možnosti do tabulky:
 		6 & 10
 	\end{tabular}
 \end{center}
-Vyhovují možnosti 1 a 60, 3 a 20, 4 a 15 a 5 a 12. Odpovídající $a, b$ už jednoduše dopočítáme. Nezpomeneme,
+Vyhovují možnosti 1 a 60, 3 a 20, 4 a 15 a 5 a 12. Odpovídající $a, b$ už jednoduše dopočítáme. Nezapomeneme,
 že nezáleží na pořadí.
 \end{reseni}
 
-\begin{veta}[Binomická věta]\label{bin_v}
-  Nechť $x,y \in \mathbb N_0$. Pak
-  $$(x+y)^n=\sum_{k=0}^n \binom{n}{k}x^{n-k}y^k.$$
-\end{veta}
-
-\begin{dusledek}
-  Důsledkem věty \ref{bin_v} je následující fakt:
+\begin{pozn}
+  Při řešení některých úloh z dělitelnosti lze s výhodou uplatnit následující fakt:
   \[
-    (a+b)^n=a^n+kb=la+b^n,\quad k,l\in \mathbb N.
+    (a+b)^n=a^n+kb=la+b^n,\quad k,l\in \mathbb N,
   \]
-\end{dusledek}
+  pro zdůvodnění viz větu \ref{binom_v}.
+\end{pozn}
 
 \begin{comment}
 

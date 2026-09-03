@@ -137,15 +137,15 @@ je-li $x>0.$
 \begin{priklad}\label{znacciso}
     Zakreslete na číselné ose
     \begin{enumerate}[$a.$]
-    \item racionální číslo $-4/3$.
+    \item racionální číslo $3/4$.
    	\item iracionální číslo $\sqrt{3}$.
     \end{enumerate}
 \end{priklad}
 
 \begin{reseni} Číslo zkonstruujeme pomocí
 \begin{enumerate}[$a.$]
-\item podobných trojúhelníků.
-\item Pythagorovy věty.
+\item podobných trojúhelníků, a to konstrukcí trojúhelníku o stranách $3$ a $4x$ a pomocí rovnobežek a společného úhlu pak trojúhelníku o stranách $3/4$ a $x$, kde $x$ je libovolná délka.
+\item Pythagorovy věty a posloupnosti trojúhelníků.
 \end{enumerate}
 
 \newpage
@@ -153,26 +153,33 @@ je-li $x>0.$
 \begin{figure}[!ht]
 \centering
 \begin{subfigure}{0.48\textwidth}
-	\resizebox{1\textwidth}{!}{%
+	\resizebox{0.9\textwidth}{!}{%
 		\begin{circuitikz}
 			\ctikzset{nodes={font=\footnotesize}}
-			\draw [short] (6.375,9.375) -- node[above] {1} (10.875,9.375);
-			\draw [short] (6.375,9.375) -- node[below] {2} (11.375,8.375);
+			\draw [short] (6.375,9.375) -- node[above] {3} (10.875,9.375);
+			\draw [short] (6.375,9.375) -- node[below] {x} (7.375,8.875);
+			\draw [short] (7.375,8.875) -- (8.375,8.375);
+			\draw [short] (8.375,8.375) -- node[below] {3x} (9.375,7.875);
+			\draw [short] (9.375,7.875) -- (10.375,7.375);
+			\draw [short] (10.875,9.375) -- (10.375,7.375);
+			\draw [short] (7.375,8.875) -- (7.5,9.375);
 		\end{circuitikz}
 	}%
-	\caption{Konstrukce $-4/3$}
+	\caption{Konstrukce $3/4$}
 \end{subfigure}
 \begin{subfigure}{0.48\textwidth}
 \resizebox{1\textwidth}{!}{%
 \begin{circuitikz}
-	\ctikzset{nodes={font=\footnotesize}}
-\draw [short] (6.375,9.375) -- node[below] {1} (8.875,9.375); % vodorovná čára
-\draw [short] (6.375,11.875) -- node[anchor=north east] {$\sqrt{2}$} (8.875,9.375); % diag čára
-\draw [short] (8.875,9.375) -- node[above] {1} (10.625,11.125); % diag čára 2
-\draw [short] (10.625,11.125) -- node[below] {$\sqrt{3}$} (6.375,11.875);
-\draw [short] (8.625,9.625) arc[start angle=135.00, end angle=45.00, radius=0.3750] node[midway, below] {.};
-\draw [short] (6.375,9.75) arc[start angle=90.00, end angle=0.00, radius=0.3750] node [midway, left] {.};
-\draw [short] (6.375,9.375) -- node[left] {1} (6.375,11.875); % svislá čára
+    \ctikzset{nodes={font=\footnotesize}}
+    \draw [short] (6.375,9.375) -- node[below] {1} (8.875,9.375); % horizontal line
+    \draw [short] (6.375,11.875) -- node[anchor=north east] {$\sqrt{2}$} (8.875,9.375); % diagonal line
+    \draw [short] (8.875,9.375) -- node[above] {1} (10.625,11.125); % diagonal line 2
+    \draw [short] (10.625,11.125) -- node[below] {$\sqrt{3}$} (6.375,11.875);
+    \draw [short] (6.375,9.375) -- node[left] {1} (6.375,11.875); % vertical line
+
+    % Right angle symbols (small squares)
+    \draw (8.875,9.375) ++ (-0.2,0.2) -- ++(0.2,0.2) -- ++(0.2,-0.2);
+    \draw (6.375,9.375) ++ (0,0.282) -- ++(0.282,0) -- ++(0,-0.282);
 \end{circuitikz}
 }%
 \caption{Konstrukce $\sqrt 3$}
@@ -1198,7 +1205,7 @@ V $\mathbb R$ řešte soustavu rovnic s parametrem $a \in \mathbb R$:
 	\end{enumerate}
 \end{reseni}
 
-\begin{priklad}
+\begin{priklad}\label{matpar}
 V $\mathbb R$ řešte soustavu rovnic s parametrem $a\in \mathbb R$:
 \begin{align*}
     ax_1-ax_2 &=0,\\
@@ -1279,7 +1286,9 @@ Nyní bychom chtěli vynásobit třetí řádek $a$ a k~němu druhý řádek. Ro
 			\end{array}\right),
 	$$
 	tato soustava ale nemá řešení. Výstupem řešení je tabulka s pravdivostními obory v závislosti na hodnotě parametru:
-	\begin{center}
+	\begin{figure}[h!]
+		\centering
+
 		\begin{tabular}{c | c}
 		$a$ & $P$\\
 		\hline
@@ -1287,7 +1296,8 @@ Nyní bychom chtěli vynásobit třetí řádek $a$ a k~němu druhý řádek. Ro
 		$-1$ & $\emptyset$ \\
 		$\mathbb R \smallsetminus \left \{ 0,-1 \right \} $ & $\left \{ \left [ \frac{1-a}{a(a+1)}, \frac{a-1}{a(a+1)}, \frac{a(a^2+1)}{a+1} \right ]; a \in \mathbb R \smallsetminus \left \{ -1, 0 \right \}   \right \}$
 		\end{tabular}
-	\end{center}
+		\caption{Řešení příkladu \ref{matpar}}
+	\end{figure}
 \end{enumerate}
 \end{reseni}
 
@@ -1296,6 +1306,7 @@ V $\mathbb Z$ řešte $5x-13y=2.$
 \end{priklad}
 
 \begin{reseni}
+Lze řešit více způsoby.
 \begin{enumerate}[1.]
 \item způsob: Uhodneme jeden kořen, např. $x_0=3, y_0=1.$ Pak další řešení jsou tvaru
 $$x=x_0-\frac{b}{d}\cdot r,\quad y=y_0+\frac{a}{d}\cdot r,$$ kde $a$, $b$ jsou koeficienty u $x$ a $y$ respektive, $d$ je největší společný dělitel $a$ a $b$ a $r \in \mathbb Z$ je parametr. Je tedy
