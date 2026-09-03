@@ -486,7 +486,51 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
   $$v_c^2 = c_a \cdot c_b.$$
   \begin{figure}[ht!]
     \centering
-    \includegraphics[width=0.4\textwidth]{eukl_v_o_vysce}
+    \begin{tikzpicture}[scale=1]
+        % Definice přesných souřadnic (odpovídá trojúhelníku se stranami 6, 8, 10)
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (10,0);
+        \coordinate (C) at (3.6,4.8);
+        \coordinate (P) at (3.6,0); % Pata výšky
+
+        % Vykreslení hlavních linií trojúhelníku a výšky
+        \draw (A) -- (B) -- (C) -- cycle;
+        \draw (C) -- (P);
+
+        % Popisky vrcholů
+        \node[below left] at (A) {$A$};
+        \node[below right] at (B) {$B$};
+        \node[above] at (C) {$C$};
+
+        \node[below] at (P) {$C_0$};
+
+        % Popisky hlavních stran
+        \node[below] at (5,-0.1) {$c$};
+        \node[above left] at (1.8,2.4) {$b$};
+        \node[above right] at (6.8,2.4) {$a$};
+
+        % Popisky úseků přepony a výšky
+        \node[above] at (1.8,0) {$c_b$};
+        \node[above] at (6.8,0) {$c_a$};
+        \node[right] at (3.6,2.4) {$v_c$};
+
+        % Úhel alfa u vrcholu A (cca 53.13 stupňů)
+        \draw (1,0) arc (0:53.13:1);
+        \node at (0.6,0.3) {$\alpha$};
+
+        % Úhel beta u vrcholu B (cca 36.87 stupňů)
+        \draw (9,0) arc (180:143.13:1);
+        \node at (9.4,0.2) {$\beta$};
+
+        % Pravý úhel gama u vrcholu C (oblouk z CA na CB)
+        \draw (C) ++(233.13:1.2) arc (233.13:323.13:1.2);
+        \fill (C) ++(278.13:0.6) circle (1.2pt); % Tečka uprostřed
+
+        % Pravý úhel u paty výšky (bod P, levá strana)
+        \draw (P) ++(-0.8,0) arc (180:90:0.8);
+        \fill (P) ++(135:0.4) circle (1.2pt); % Tečka uprostřed oblouku
+
+    \end{tikzpicture}
     \caption{Eukleidova věta o výšce}
     \label{eukl_v_o_v}
   \end{figure}
@@ -644,12 +688,12 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
 \begin{proof}
   Rozdělíme na tři případy polohy ostrého obvodového úhlu $\sphericalangle AXB$ vůči středu kružnice $S$.
   \begin{enumerate}[$i.$]
-    \item střed kružnice leží na rameni obvodového úhlu\\
+    \item Střed kružnice leží na rameni obvodového úhlu\\
     Trojúhelník $\triangle SXB$ je rovnoramenný se základnou $BX$, takže $|\sphericalangle SBX| = |\sphericalangle SXB|=\varphi$. Označme $|\sphericalangle ASB|=\omega$. Pak $2\varphi + (180^\circ - \omega)=180^\circ$, tedy $\omega = 2\varphi$, což jsme chtěli dokázat.
-    \item střed kružnice leží uvnitř obvodového úhlu\\
+    \item Střed kružnice leží uvnitř obvodového úhlu\\
     Označme průsečík přímky $XS$ s kružnicí $k$, který je různý od $X$ jako $C$. Pak protože $|\sphericalangle AXC|=2\cdot|\sphericalangle ASC|$ a
     $|\sphericalangle BXC|=2\cdot|\sphericalangle BSC|$, což už jsme dokázali v $i.$, pak i~$|\sphericalangle AXB| = 2\cdot|\sphericalangle ASB|$.
-    \item střed kružnice leží vně obvodového úhlu\\
+    \item Střed kružnice leží vně obvodového úhlu\\
     Označme průsečík přímky $XS$ s kružnicí $k$, který je různý od $X$ jako $C$. Pak $|\sphericalangle BXC| = 2\cdot|\sphericalangle BSC|$ a $|\sphericalangle AXC|=2\cdot|\sphericalangle ASC|$, což už jsme dokázali v $i.$. Pak i $|\sphericalangle AXB| = 2\cdot|\sphericalangle ASB|$.\qedhere
   \end{enumerate}
 \end{proof}
@@ -664,7 +708,90 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
 
 \begin{figure}[ht!]
   \centering
-  \includegraphics[width=0.7  \textwidth]{obvodovy_uhel}
+  % Definice barev z obrázku
+  \definecolor{myline}{RGB}{47, 67, 86}      % Tmavě modro-šedá pro kružnice a čáry
+  \definecolor{mypoint}{RGB}{48, 130, 180}   % Světle modrá pro body a popisky bodů
+  \definecolor{myphi}{RGB}{163, 62, 186}     % Fialová pro úhel fí
+  \definecolor{myomega}{RGB}{217, 106, 16}   % Oranžová pro úhel omega
+
+  \begin{tikzpicture}[
+      line/.style={thick},
+      dot/.style={circle, fill=mypoint, inner sep=1.2pt},
+      label/.style={text=mypoint},
+      scale=1.2
+  ]
+
+  % --- 1. Věta o obvodovém úhlu (vlevo) ---
+  \begin{scope}[shift={(0,0)}]
+      \coordinate (O1) at (0,0);
+      \draw[line] (O1) circle (1.5);
+
+      % Definice bodů na kružnici pomocí úhlů
+      \coordinate (A1) at (-100:1.5);
+      \coordinate (B1) at (-25:1.5);
+      \coordinate (V1) at (145:1.5);
+      \coordinate (V1p) at (75:1.5);
+
+      % Vykreslení čar
+      \draw[line] (V1) -- (A1);
+      \draw[line] (V1) -- (B1);
+      \draw[line] (V1p) -- (A1);
+      \draw[line] (V1p) -- (B1);
+
+      % Vykreslení úhlů
+      \pic [draw=myphi, thick, angle radius=0.9cm, angle eccentricity=1.35, "$\varphi$" {text=myphi}] {angle = A1--V1--B1};
+      \pic [draw=myphi, thick, angle radius=0.9cm, angle eccentricity=1.35, "$\varphi$" {text=myphi}] {angle = A1--V1p--B1};
+
+      % Vykreslení bodů a popisků
+      \node[dot] at (A1) {}; \node[label, below] at (A1) {\(A\)};
+      \node[dot] at (B1) {}; \node[label, below right] at (B1) {\(B\)};
+      \node[dot] at (V1) {}; \node[label, above left] at (V1) {\(V\)};
+      \node[dot] at (V1p) {}; \node[label, above right, shift={(-0.1,0)}] at (V1p) {\(V'\)};
+  \end{scope}
+
+  % --- 2. Středový a obvodový úhel (uprostřed) ---
+  \begin{scope}[shift={(4.5,0)}]
+      \coordinate (O2) at (0,0);
+      \draw[line] (O2) circle (1.5);
+
+      \coordinate (A2) at (-160:1.5);
+      \coordinate (B2) at (-20:1.5);
+      \coordinate (V2) at (75:1.5);
+
+      \draw[line] (A2) -- (V2) -- (B2);
+      \draw[line] (A2) -- (O2) -- (B2);
+
+      \pic [draw=myphi, thick, angle radius=0.7cm, angle eccentricity=1.45, "$\varphi$" {text=myphi}] {angle = A2--V2--B2};
+      \pic [draw=myomega, thick, angle radius=0.6cm, angle eccentricity=1.45, "$\omega$" {text=myomega}] {angle = A2--O2--B2};
+
+      \node[dot] at (A2) {}; \node[label, below left] at (A2) {\(A\)};
+      \node[dot] at (B2) {}; \node[label, below right] at (B2) {\(B\)};
+      \node[dot] at (V2) {}; \node[label, above] at (V2) {\(V\)};
+      \node[dot] at (O2) {}; \node[label, above, shift={(0,0.05)}] at (O2) {\(S\)};
+  \end{scope}
+
+  % --- 3. Thaletova věta (vpravo) ---
+  \begin{scope}[shift={(9,0)}]
+      \coordinate (O3) at (0,0);
+      \draw[line] (O3) circle (1.5);
+
+      \coordinate (A3) at (215:1.5);
+      \coordinate (B3) at (35:1.5);
+      \coordinate (V3) at (135:1.5);
+
+      \draw[line] (A3) -- (B3); % Průměr kružnice
+      \draw[line] (A3) -- (V3) -- (B3);
+
+      \pic [draw=myphi, thick, angle radius=0.6cm, angle eccentricity=1.65, "$90^\circ$" {text=myphi}] {angle = A3--V3--B3};
+      \pic [draw=myomega, thick, angle radius=0.5cm, angle eccentricity=1.75, "$180^\circ$" {text=myomega}] {angle = A3--O3--B3};
+
+      \node[dot] at (A3) {}; \node[label, below left] at (A3) {\(A\)};
+      \node[dot] at (B3) {}; \node[label, above right] at (B3) {\(B\)};
+      \node[dot] at (V3) {}; \node[label, above left] at (V3) {\(V\)};
+      \node[dot] at (O3) {}; \node[label, above, shift={(0,0.05)}] at (O3) {\(S\)};
+  \end{scope}
+
+  \end{tikzpicture}
   \caption{Obvodový a středový úhel, Thaletova kružnice}
 \end{figure}
 
@@ -678,7 +805,86 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
 
 \begin{figure}[ht!]
   \centering
-  \includegraphics[width=0.45\textwidth]{usekovy}
+  % Definice barev z obrázku
+  \definecolor{myline}{RGB}{47, 67, 86}      % Tmavě modro-šedá pro kružnice a čáry
+  \definecolor{mypoint}{RGB}{48, 130, 180}   % Světle modrá pro body a popisky bodů
+  \definecolor{myphi}{RGB}{163, 62, 186}     % Fialová pro úhel fí
+  \definecolor{myomega}{RGB}{217, 106, 16}   % Oranžová pro úhel omega
+  \begin{tikzpicture}[
+      line/.style={thick},
+      dot/.style={circle, fill=mypoint, inner sep=1.2pt},
+      label/.style={text=mypoint},
+      scale=1.2,
+      >=stealth
+      ]
+      % --- PRVNÍ OBRÁZEK ---
+      \begin{scope}[shift={(0,0)}]
+          % Definice středového bodu a poloměru
+          \coordinate (S) at (0,1.5);
+          \def\R{1.5}
+
+          % Kružnice
+          \draw[line] (S) circle (\R);
+
+          % Tečna t dole (procházející bodem A = (0,0))
+          \coordinate (A) at (0,0);
+          \draw[line] (-1.2,0) -- (1.5,0) node[below right] {$t$};
+
+          % Bod B na kružnici
+          % Zvolíme úhel tak, aby B odpovídalo pozici vpravo nahoře
+          \coordinate (B) at (\R*0.866, \R*0.5); % úhel 30 stupňů od středu
+
+          % Úsečka AB
+          \draw[line] (A) -- (B);
+
+          % Body a popisky
+          \node[dot] at (S) {}; \node[label, above left] at (S) {$S$};
+          \node[dot] at (A) {}; \node[label, below] at (A) {$A$};
+          \node[dot] at (B) {}; \node[label, right] at (B) {$B$};
+
+          % Úhel phi u bodu A
+          \draw[myphi, thick] (0.6,0) arc (0:30:0.6);
+          \node[myphi] at (0.75, 0.2) {$\varphi$};
+      \end{scope}
+
+      % --- DRUHÝ OBRÁZEK ---
+      \begin{scope}[shift={(4.5,0)}]
+          % Definice středového bodu a poloměru
+          \coordinate (S) at (0,1.5);
+          \def\R{1.5}
+
+          % Kružnice
+          \draw[thick] (S) circle (\R);
+
+          % Tečna t dole
+          \coordinate (A) at (0,0);
+          \draw[thick] (-1.2,0) -- (1.5,0) node[below right] {$t$};
+
+          % Body A, B, V
+          \coordinate (B) at (\R*0.866, \R*0.5);
+          \coordinate (V) at (-\R*0.5, \R*1.866); % přibližně vlevo nahoře na kružnici
+          % Upřesníme bod V hezky na kružnici (např. úhel 120°)
+          \coordinate (V) at ({-1.5*0.5}, {1.5 + 1.5*0.866});
+
+          % Trojúhelník AVB
+          \draw[thick] (A) -- (V) -- (B) -- cycle;
+
+          % Body a popisky
+          \node[dot] at (S) {}; \node[label, below right] at (S) {$S$};
+          \node[dot] at (A) {}; \node[label, below] at (A) {$A$};
+          \node[dot] at (B) {}; \node[label, right] at (B) {$B$};
+          \node[dot] at (V) {}; \node[label, above left] at (V) {$V$};
+
+          % Úhel phi u bodu A (mezi tečnou a tětivou AB)
+          \draw[myphi, thick] (0.5,0) arc (0:30:0.5);
+          \node[myphi] at (0.75, 0.2) {$\varphi$};
+
+          % Úhel phi u vrcholu V (obvodový úhel nad obloukem AB)
+          \draw[myphi, thick]
+              ($(V)!0.25!(A)$) arc (-80:-40:0.55);
+          \node[myphi] at (-0.45, 2.35) {$\varphi$};
+      \end{scope}
+  \end{tikzpicture}
   \caption{Úsekový úhel}
 \end{figure}
 
@@ -835,7 +1041,7 @@ $B$ tedy nalezneme jako průnik přímky $b$ s otočením přímky $a$ o $60^\ci
 bodu $C.$
 \end{reseni}
 
-\begin{priklad}
+\begin{priklad}\label{prlambda}
 Zobrazte bod $X$ ve stejnolehlosti dané bodem $S$ a koeficientem
 \begin{enumerate}[$i.$]
 \item $\lambda = 3,$
@@ -846,10 +1052,46 @@ Zobrazte bod $X$ ve stejnolehlosti dané bodem $S$ a koeficientem
 \end{priklad}
 
 \begin{reseni}
-Řešení vypadá následovně:
-\begin{center}
- \includegraphics[width=0.5\linewidth]{stejnolehlost.png}
-\end{center}
+Řešení je v obrázku \ref{prslambdou}.
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}[scale=0.8]
+    % Definice barev podle obrázku
+    \definecolor{colorS}{RGB}{217, 106, 16}   % Oranžová pro S
+    \definecolor{colorX}{RGB}{163, 62, 186}   % Modrá pro X
+    \definecolor{colorXP}{RGB}{48, 130, 180}  % Fialová pro X'
+
+    % --- 1. Řádek: \lambda = 3 ---
+    \node at (-1.5, 3) {$\lambda = 3$};
+    \draw[dashed, thick, color=gray!60!black] (0,3) -- (6,3);
+    \fill[colorS] (0,3) circle (2pt) node[above, yshift=2pt] {$S$};
+    \fill[colorX] (2,3) circle (2pt) node[above, yshift=2pt] {$X$};
+    \fill[colorXP] (6,3) circle (2pt) node[above, yshift=2pt] {$X'$};
+
+    % --- 2. Řádek: \lambda = 1/3 ---
+    \node at (-1.5, 1.5) {$\lambda = \frac{1}{3}$};
+    \draw[dashed, thick, color=gray!60!black] (0,1.5) -- (2,1.5);
+    \fill[colorS] (0,1.5) circle (2pt) node[above, yshift=2pt] {$S$};
+    \fill[colorXP] (2/3,1.5) circle (2pt) node[above, yshift=2pt] {$X'$};
+    \fill[colorX] (2,1.5) circle (2pt) node[above, yshift=2pt] {$X$};
+
+    % --- 3. Řádek: \lambda = -1/3 ---
+    \node at (5.5, 0) {$\lambda = -\frac{1}{3}$};
+    \draw[dashed, thick, color=gray!60!black] (-2/3,0) -- (2,0);
+    \fill[colorXP] (-2/3,0) circle (2pt) node[above, yshift=2pt] {$X'$};
+    \fill[colorS] (0,0) circle (2pt) node[above, yshift=2pt] {$S$};
+    \fill[colorX] (2,0) circle (2pt) node[above, yshift=2pt] {$X$};
+
+    % --- 4. Řádek: \lambda = -3 ---
+    \node at (5.5, -1.5) {$\lambda = -3$};
+    \draw[dashed, thick, color=gray!60!black] (-6,-1.5) -- (2,-1.5);
+    \fill[colorXP] (-6,-1.5) circle (2pt) node[above, yshift=2pt] {$X'$};
+    \fill[colorS] (0,-1.5) circle (2pt) node[above, yshift=2pt] {$S$};
+    \fill[colorX] (2,-1.5) circle (2pt) node[above, yshift=2pt] {$X$};
+	\end{tikzpicture}
+	\caption{Řešení příkladu \ref{prlambda}}
+	\label{prslambdou}
+\end{figure}
 \end{reseni}
 
 \begin{priklad}
@@ -858,10 +1100,10 @@ procházející bodem $M$, které jsou jím děleny v poměru $3:5.$
 \end{priklad}
 
 \begin{reseni}
-Označme tětivu jako $XY$ ($X,Y$ jsou tedy na kružnici $k$). Pak $Y$ je obraz
-bodu $X$ ve stejnolehlost se středem $M$ a koeficientem $-\frac{5}{3}$. Protože
-body $X$ leží na kružnici $k,$ pak bod $Y$ leží na kružnici $k^\prime$ (tj. obraz
-kružnice $k$ ve výše popsané stejnolehlosti). Proto je $Y$ průsečík $k\cap k^\prime$.
+Označme tětivu jako $XY$ ($X,Y$ jsou tedy na kružnici $k$). Pak $Y$~je obraz
+bodu $X$~ve stejnolehlost se středem $M$ a koeficientem $-\frac{5}{3}$. Protože
+body $X$~leží na kružnici $k,$ pak bod $Y$ leží na kružnici $k^\prime$ (tj. obraz
+kružnice $k$~ve výše popsané stejnolehlosti). Proto je $Y$~průsečík $k\cap k^\prime$.
 \end{reseni}
 
 \begin{priklad}
@@ -882,7 +1124,7 @@ $ABC$ s~úhlem $|\sphericalangle BAC|=60^\circ$ tak, aby $B\in p, C \in k, |AC|=
 \end{priklad}
 
 \begin{reseni}
-Bod $C$ je obraz bodu $B$ ve složeném zobrazení ze stejnolehlosti se středem v bodě
-$A$ a koeficientem 2 a následném otočení o $60^\circ.$ \dots Proto je bod $C$ průsečík
-kružnice $k$ a přímky $p^\prime$ získené výše popsaným zobrazením.
+Bod $C$ je obraz bodu $B$ ve složeném zobrazení ze stejnolehlosti se středem v~bodě
+$A$~a~koeficientem 2 a~následném otočení o $60^\circ.$ \dots Proto je bod $C$ průsečík
+kružnice $k$~a~přímky $p^\prime$ získené výše popsaným zobrazením.
 \end{reseni}
