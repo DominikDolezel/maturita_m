@@ -70,14 +70,14 @@ a číslo $d$ se nazývá \textbf{diference}.
     \end{enumerate}
 \end{veta}
 
-\begin{proof}\,
-\begin{enumerate}[$i.$]
+\begin{proof} Dokazujeme postupně.
+\begin{enumerate}[$i.$]\label{dkaritposl}
 \item Matematickou indukcí:
 \begin{enumerate}[1.]
 \item $n=1\colon a_1 = a_1+(1-1)d$ -- platí
 \item $a_n = a_1+(n-1)d \implies a_{n+1}=a_1+nd,$ takže $a_{n+1}=a_n+d=a_1+(n-1)d+d=a_1+nd$
 \end{enumerate}
-\item Užitím již dokázeného vztahu:
+\item Užitím již dokázeného vztahu \ref{dkaritposl}:
 \begin{align*}
     a_s &= a_1 + (s-1)d,\\
     a_r &= a_1 + (r-1)d.
@@ -170,14 +170,14 @@ počítali bychom $\frac{a_{n+1}}{a_n}$.
     \end{enumerate}
 \end{veta}
 
-\begin{proof}\,
-\begin{enumerate}[$i.$]
+\begin{proof} Dokazujeme postupně.
+\begin{enumerate}[$i.$]\label{dkgeomposl}
 \item Matematickou indukcí:
 \begin{enumerate}[1.]
 \item $n=1\colon a_1 = a_1\cdot q^0$ platí
 \item $a_n = a_1\cdot q^{n-1}\implies a_{n+1}=a_1\cdot q^n,$ takže $a_{n+1}=a_n\cdot q=a_1\cdot q^{n-1}\cdot q=a_1\cdot q^n$
 \end{enumerate}
-\item Užitím již dokázeného vztahu:
+\item Užitím již dokázeného vztahu \ref{dkgeomposl}:
 \begin{align*}
     a_s &= a_1\cdot q^{s-1},\\
     a_r &= a_1\cdot q^{r-1}.
