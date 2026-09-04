@@ -1,5 +1,7 @@
 \section{Kombinatorika}
-V této kapitole se snažíme zjistit, kolik \textit{možností} může nastat.
+\begin{pozn}
+V této kapitole se snažíme zjistit, kolik \textit{možností} (jak něco seřadit, poskládat, vybrat apod.) může dle daných kritérií existovat.
+\end{pozn}
 
 \begin{veta}[Pravidlo součtu]
     Nechť $M$ je konečná množina, $M_1, M_2, \dots M_k, k
@@ -238,6 +240,7 @@ Ve třídě je dvacet chlapců a patnáct dívek. Určete, kolika způsoby z nic
 \end{priklad}
 
 \begin{reseni}
+Pomocí pravidla součtu a pravidla součinu rozložíme na jednoduše vyčíslitelné podpříklady.
 \begin{enumerate}[$a.$]
 \item Je to
 $$\underbrace{\binom{15}{2}}_{\textrm{dívky}} \cdot \underbrace{\binom{20}{4}}_{\textrm{chlapci}}.$$
@@ -307,6 +310,7 @@ Sečtěte:
 \end{priklad}
 
 \begin{reseni}
+Lze řešit více způsoby.
 \begin{enumerate}[$i.$]
 \item To je vlastně počet všech podmnožin $n$-prvkové množiny, tedy $S_1=2^n$. Jiným
 způsobem: po dosazení do binomické věty pro $(1+1)^n$ dostaneme přesně rozvoj $S_1$,
@@ -323,7 +327,7 @@ Určete absolutní člen v rozvoji výrazu $\left(2x^2-\frac{3}{x}\right)^6$.
 \end{priklad}
 
 \begin{reseni}
-Použijeme binomickou větu \ref{binom_v}.
+Použijeme binomickou větu (větu \ref{binom_v}).
 Exponent u $2x^2$ označme $i$, exponent u $-\frac{3}{x}$ označme $j$. Absolutní člen má
 exponent roven nule, tedy $2i-j=0$. Navíc v binomické větě platí $i+j=6$. To je
 soustava dvou rovnic o dvou neznámých, kterou vyřešíme třeba sečtením obou rovnic. Dostaneme
