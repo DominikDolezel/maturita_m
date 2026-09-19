@@ -103,10 +103,10 @@ $$\forall n \in \mathbb N\colon S_n = \frac{1}{2}n(a_1+a_n).$$
 Počítejme
 \begin{align*}
     S_n &= a_1+a_2+a_3+\dots+a_{n-1}+a_n \\
-    &= a_1 + (a_1+d)+ (a_1+2d)+ \dots + [a_1+(n-2)d]+[a_1+(n-1)d]\\
-    &= [a_1+(n-1)d]+[a_1+(n-2)d]+\dots+(a_1+2d)+(a_1+d)+a_1\\
+    &= a_1 + (a_1+d)+ (a_1+2d)+ \dots + (a_1+(n-2)d)+(a_1+(n-1)d)\\
+    &= (a_1+(n-1)d)+(a_1+(n-2)d)+\dots+(a_1+2d)+(a_1+d)+a_1\\
     2S_n &= 2a_1 + (n-1)d + 2a_1 + (n-1)d + \dots + 2a_1 + (n-1)d + 2a_1 + (n-1)d\\
-    2S_n &= n [a_1 + a_1 + (n-1)d], \textrm{ takže }\\
+    2S_n &= n (a_1 + a_1 + (n-1)d)\\
     S_n &= \frac{n(a_1+a_n)}{2},
 \end{align*}
 což jsme chtěli dokázat. \qedhere
