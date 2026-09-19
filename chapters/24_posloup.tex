@@ -12,8 +12,8 @@ Nechť $\left \{ a_n \right \}_{n=1}^\infty $ je posloupnost reálných čísel.
 \item \textbf{nerostoucí}, pokud $\forall n \in \mathbb N\colon a_n\geq a_{n+1},$
 \item \textbf{neklesající}, pokud $\forall n \in \mathbb N\colon a_n\leq a_{n+1}.$
 \end{enumerate}
-Posloupnost, která má jednu z těchto vlastností, se nazývá \textbf{monotónní}.
-Posloupnost rostoucí nebo klesající nazýváme \textbf{ryze monotónní}.
+Posloupnost, která má nějakou z těchto vlastností, se nazývá \textbf{monotónní}.
+Posloupnost rostoucí nebo klesající se nazývá \textbf{ryze monotónní}.
 \end{definition}
 
 \begin{priklad}
@@ -49,16 +49,16 @@ což je kladné číslo pro všechna $n \in \mathbb N $, a tedy posloupnost je r
 \end{definition}
 
 \begin{definition}
-Nechť $\left \{ a_n \right \}_{n=1}^\infty $ je posloupnost reálných čísel a
+Nechť $\left \{ a_n \right \}_{n=1}^\infty $ je posloupnost a
 $\left \{ k_1,k_2,\dots,k_n,\dots \right \} $ je rostoucí posloupnost přirozených čísel.
-Pak posloupnost $\left \{{a_k}_n \right \}_{n=1}^\infty = \left \{ {a_k}_1, {a_k}_2, \dots, {a_k}_n,\dots \right \}  $
+Pak posloupnost $\left \{a_{k_n} \right \}_{n=1}^\infty = \left \{ a_{k_1}, a_{k_2}, \dots, a_{k_n},\dots \right \}  $
 je \textbf{posloupnost vybraná z posloupnosti} $\left \{ a_n \right \}_{n=1}^\infty $.
 \end{definition}
 
 \begin{definition}
 Posloupnost $\left \{ a_n \right \}_{n=1}^\infty $ je \textbf{aritmetická}, pokud
-$$\exists d \in \mathbb R\colon \forall n \in \mathbb N\colon a_n=a_{n-1}+d$$
-a číslo $d$ se nazývá \textbf{diference}.
+$$\exists d \in \mathbb R\colon \forall n \in \mathbb N\colon a_n=a_{n-1}+d,$$
+číslo $d$ se nazývá \textbf{diference}.
 \end{definition}
 
 \begin{veta}
@@ -140,12 +140,12 @@ $$
 
 \begin{definition}
 Posloupnost $\left \{ a_n \right \}_{n=1}^\infty $ je \textbf{geometrická}, pokud
-$$\exists q \in \mathbb R\colon \forall n \in \mathbb N\colon a_n=a_{n-1}\cdot q$$
-a číslo $q$ se nazývá \textbf{kvocient}.
+$$\exists q \in \mathbb R\colon \forall n \in \mathbb N\colon a_n=a_{n-1}\cdot q,$$
+číslo $q$ se nazývá \textbf{kvocient}.
 \end{definition}
 
 \begin{priklad}
-Určete, zda posloupnost $\left \{ \frac{2n-1}{3} \right \}_{n=1}^\infty $ je aritmetická, nebo geometrická.
+Určete, zda posloupnost $\left \{ \frac{2n-1}{3} \right \}_{n=1}^\infty $ je aritmetická nebo geometrická.
 \end{priklad}
 
 \begin{reseni}
@@ -365,7 +365,7 @@ $$\forall x \in M\colon x\leq a \,\, (\textrm{resp. }x\geq a).$$
 \begin{definition}\label{supinf}
 Nechť $M$ je podmnožina množiny reálných čísel. Číslo $c\in \mathbb R$ (pokud existuje)
 nazveme \textbf{supremem} (resp. \textbf{infimem}) množiny $M$, jestliže je její
-nejmenší horní závorou (resp. největší dolní závorou), tzn. že platí:
+nejmenší horní závorou (resp. největší dolní závorou), tzn. že platí
 \begin{enumerate}[$i.$]
 \item $\forall x\in M\colon x\leq c \,\, (\textrm{resp. } x\geq c),$
 \item $\forall t\in \mathbb R\colon \forall x\in  M\colon x\leq t \implies t\geq c \,\, (\textrm{resp. }x\geq t \implies t\leq c).$

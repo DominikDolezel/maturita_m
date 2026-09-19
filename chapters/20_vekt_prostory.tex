@@ -501,13 +501,18 @@ a tedy úhlopříčky nejsou kolmé.
 \end{reseni}
 
 \begin{definition}
-Zobrazení $V\times V\to  V$ nazveme \textbf{vektorovým součinem} (značíme $\times$), pokud pro všechny $\vec u, \vec v, \vec w \in V$ platí
+\textbf{Vektorový součin} je zobrazení $V\times V\to  V$, značíme $\times$, které vektorům $\vec u$ a $\vec v$ přiřadí vektor $\vec w$ tak, že
 \begin{enumerate}[$i.$]
-\item $\vec u\times \vec v = -(\vec v \times \vec u),$
-\item $(\vec u + \vec v)\times \vec w = \vec u \times \vec w + \vec v \times \vec w \land \vec u\times (\vec v + \vec w) = \vec u \times \vec v+\vec u\times \vec w,$
-\item $(p\cdot \vec u)\times \vec v = p\cdot(\vec u \times \vec v) = \vec u \times (p\cdot \vec v)$.
+\item $|\vec w| = |\vec u|\cdot |\vec v|\cdot \sin \varphi,$ kde $\varphi$ je úhel, který svírají vektory $\vec u$ a $\vec v$,
+\item $\vec w\perp \vec u, \vec w \perp \vec v,$
+\item $\vec u, \vec v, \vec w$ jsou kladně orientované (v pravotočivé bázi).
 \end{enumerate}
 \end{definition}
+
+\begin{pozn}
+    Velikost vektorového součinu je obsah rovnoběžníku, jehož dvě sousední strany jsou
+    násobené vektory.
+\end{pozn}
 
 \begin{priklad}
 Vypočtěte obsah trojúhelníku $ABC$, je-li $A[-1,1], B[5,4], C[2,7].$
@@ -525,18 +530,13 @@ $$
 
 \begin{veta}
     Pro každé tři lineárně nezávislé vektory $\vec u, \vec v, \vec w \in V$ takové,
-   že $\vec u\times \vec v = \vec w,$ platí:
+   že $\vec u\times \vec v = \vec w,$ platí
    \begin{enumerate}[$i.$]
-   \item $|\vec w| = |\vec u|\cdot |\vec v|\cdot \sin \varphi,$ kde $\varphi$ je úhel, který svírají vektory $\vec u$ a $\vec v$,
-  	\item $\vec w\perp \vec u, \vec w \perp \vec v,$
-  	\item $\vec u, \vec v, \vec w$ jsou kladně orientované (v pravotočivé bázi).
+   \item $\vec u\times \vec v = -(\vec v \times \vec u),$
+   \item $(\vec u + \vec v)\times \vec w = \vec u \times \vec w + \vec v \times \vec w \land \vec u\times (\vec v + \vec w) = \vec u \times \vec v+\vec u\times \vec w,$
+   \item $(p\cdot \vec u)\times \vec v = p\cdot(\vec u \times \vec v) = \vec u \times (p\cdot \vec v)$.
    \end{enumerate}
 \end{veta}
-
-\begin{pozn}
-    Velikost vektorového součinu je obsah trojúhelníku, jehož dvě strany jsou
-    násobené vektory.
-\end{pozn}
 
 \begin{definition}
     Pro všechny vektory $\vec u, \vec v, \vec w \in V$ je

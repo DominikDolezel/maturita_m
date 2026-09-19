@@ -45,13 +45,12 @@ označme $\mathscr D(a,b).$
 \end{figure}
 
 \begin{definition}
-Nechť $D_1, D_2 \in \mathscr D(a,b)$. Řekneme, že dělení $D_2$ je \textbf{zjemněním
-dělení} $D_1,$ jestliže $D_1 \subset D_2.$
+Nechť $D_1, D_2 \in \mathscr D(a,b)$. Řekneme, že dělení $D_2$ je \textbf{zjemněním dělení} $D_1,$ jestliže $D_1 \subset D_2.$
 \end{definition}
 
 \begin{definition}
 Nechť $f(x)$ je omezená na $\left<  a,b \right> , D\in \mathscr D(a,b),
-D=\left \{ x_0,\dots,x_n \right \}. $ Pak množina $\left \{ f(x),
+D=\left \{ x_0,\dots,x_n \right \}. $ Pak množina $\left \{ f(x);
 x \in \left<  x_{i-1},x_i \right>  \right \} $ je pro všechna $i \in \left \{
 1,\dots,n\right \} $ neprázdná a omezená a tedy má supremum a infimum.
 Označme
@@ -291,14 +290,14 @@ $$\int_0^{\frac{\pi}{4}}\cos x \, \d x=\left [ \sin x  \right ]_0^{\frac{\pi}{4}
 
 \begin{veta}
 Nechť $f(x), f_1(x),\dots,f_n(x), g(x)$ jsou integrovatelné funkce na intervalu $\left<  a,b \right> $
-a~$c; c_1,\dots,c\in \mathbb R.$ Pak
+a $c_1,\dots,c_n\in \mathbb R.$ Pak
 \begin{enumerate}[$i.$]
 \item funkce $f(x)+g(x)$ je integrovatelná na intervalu $\left<  a,b \right> $ a platí
-$$\int _a^b \left [ f(x)+g(x) \right ] \, \d x = \int_a ^b f(x)\, \d x + \int_a ^b g(x) \, \d x,$$
+$$\int _a^b f(x)+g(x) \, \d x = \int_a ^b f(x)\, \d x + \int_a ^b g(x) \, \d x,$$
 \item funkce $c\cdot f(x)$ je integrovatelná na intervalu $\left<  a,b \right> $ a platí
 $$\int _a ^b c\cdot f(x) \, \d x = c \int _a ^b f(x)\, \d x,$$
 \item funkce $c_1\cdot f_1(x) + \dots + c_n \cdot f_n(x)$ je integrovatelná na intervalu $\left<  a,b \right> $ a platí
-$$\int_a ^b \left [ c_1\cdot f_1(x) + \dots + c_n \cdot f_n (x) \right ]\, \d x = c_1 \int _a ^b f_1(x)\, \d x + \dots + c_n \int _a ^b f_n(x)\, \d x. $$
+$$\int_a ^b c_1\cdot f_1(x) + \dots + c_n \cdot f_n (x) \, \d x = c_1 \int _a ^b f_1(x)\, \d x + \dots + c_n \int _a ^b f_n(x)\, \d x. $$
 \end{enumerate}
 \end{veta}
 
@@ -309,7 +308,7 @@ $$\int_a ^b f(x) \, \d x \geq 0.$$
 
 \begin{veta}
 Nechť funkce $f(x),g(x)$ jsou integrovatelné na intervalu $\left<  a,b \right> .$
-Nechť pro každé $x\in \left<  a,b \right> \colon f(x)\leq g(x).$ Pak
+Nechť pro každé $x\in \left<  a,b \right>$ platí, že $f(x)\leq g(x).$ Pak
 $$\int_a^b f(x) \, \d x \leq \int_a^b g(x) \, \d x.$$
 \end{veta}
 
@@ -348,7 +347,7 @@ $$\int _a ^b f(x)\, \d x = \int _\alpha ^\beta f \left [ \varphi(t) \right ]\cdo
 \end{veta}
 
 \begin{pozn}
-    Ve větě \ref{ppui} využíváme tzv. \textbf{transformace mezí}.
+    Ve větě \ref{ppui} využíváme tzv. \textbf{transformace mezí} integrálu.
 \end{pozn}
 
 \begin{priklad}
@@ -356,7 +355,7 @@ Vypočtěte integrál $\int _1^2 \frac{x}{(1+x^2)}\, \d x.$
 \end{priklad}
 
 \begin{reseni}
-Musíme provést transformaci mezí:
+Použijeme substituci, nezapomeneme na transformaci mezí:
 \begin{align*}
 \int _1^2 \frac{x}{(1+x^2)}\, \d x &= \left |\begin{array}{l l}
     t=x^2+1 & x=2\implies t=5 \\
