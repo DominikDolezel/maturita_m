@@ -222,7 +222,6 @@ Postupujeme podle návodu pospaného výše.
 	Obdobně i pro $-\infty$. Asymptota se směrnicí je tedy přímka $y=x+1$.
 	\item Graf je v obrázku \ref{obrazekprubeh}.
 \end{enumerate}
-\begin{figure}[ht!]
 	\centering
 	\begin{tikzpicture}
 	\begin{axis}[
@@ -245,9 +244,28 @@ Postupujeme podle návodu pospaného výše.
         color=red
     ]
     {(x-1)^3/(x-2)^2};
+
+    % vertikální asymptota
+    \addplot [
+        dashed,
+        domain=-4.5:14.5,
+        color=gray
+    ] (2,x);
+
+    % Šikmá asymptota (y = x + 1)
+    \addplot [
+        dashed,
+        domain=-4.5:14.5,
+        color=gray
+    ] {x+1};
+
+    % Průsečík s osou y (x=0, y=-0.25)
+    \node[circle, draw=black, fill=white, inner sep=1.5pt] at (axis cs:0,-0.25) {};
+
+    % Průsečík s osou x (x=1, y=0)
+    \node[circle, draw=black, fill=white, inner sep=1.5pt] at (axis cs:1,0) {};
     \end{axis}
 	\end{tikzpicture}
-	\caption{Průběh funkce $\frac{(x-1)^3}{(x-2)^2}$}
+	\captionof{figure}{Průběh funkce $\frac{(x-1)^3}{(x-2)^2}$}
 	\label{obrazekprubeh}
-\end{figure}
 \end{reseni}

@@ -19,6 +19,39 @@
     $$
 \end{pozn}
 
+\begin{figure}[ht!]
+\centering
+\begin{tikzpicture}[>=Stealth, declare function={f(\x)=-0.1*(\x)^2+5;}]
+    % Osy
+    \draw[->] (-0.5,0) -- (6,0) node[right]{$x$};
+    \draw[->] (0,-0.5) -- (0,6) node[above]{$y$};
+
+    % Funkce y = f(x) (klesající, konvexní)
+    \draw[thick] plot[domain=0:6, smooth] (\x,{f(\x)}) node[right]{$y = f(x)$};
+
+    % Bod a a jeho projekce
+    \def\a{3}
+    \def\fa{-0.1*9+5}
+    \draw[dashed] (\a,0) node[below]{$a$} -- (\a,\fa+1.7);
+    \draw[dashed] (\a+1.7,\fa) -- (0,\fa) node[left]{$A$};
+    \filldraw[white, thick] (\a,\fa) circle (2pt);
+    \draw[thick] (\a,\fa) circle (2pt);
+
+    % Šipky a popisky pro δ (vlevo i vpravo)
+    \draw[<->] (\a-1.5,\fa-1.7) -- (\a,\fa-1.7) node[midway, below]{$\delta$};
+    \draw[<->] (\a,\fa-1.7) -- (\a+1.5,\fa-1.7) node[midway, below]{$\delta$};
+    \draw[dashed] (\a-1.5,0) -- (\a-1.5,\fa+1.7);
+    \draw[dashed] (\a+1.5,0) -- (\a+1.5,\fa+1.7);
+
+    % Šipky a popisky pro ε (nahoru i dolů)
+    \draw[<->] (\a+1.7,\fa+1.5) -- (\a+1.7,\fa) node[midway, right]{$\varepsilon$};
+    \draw[<->] (\a+1.7,\fa) -- (\a+1.7,\fa-1.5) node[midway, right]{$\varepsilon$};
+    \draw[dashed] (\a-1.7,\fa+1.5) -- (\a+1.7,\fa+1.5);
+    \draw[dashed] (\a-1.7,\fa-1.5) -- (\a+1.7,\fa-1.5);
+\end{tikzpicture}
+\caption{Vlastní limita ve vlastním bodě}
+\end{figure}
+
 \begin{definition}[Nevlastní limita ve vlastním bodě]\label{nlimv}
 Funkce $f$ má v bodě $x_0\in \mathbb R$ \textbf{nevlastní limitu} $+\infty$ (resp.
 $-\infty$),
@@ -34,6 +67,33 @@ $$\lim_{x\to x_0}f(x)=\infty \quad(\textrm{resp. } -\infty).$$
     $\lim_{x\to x_0} f(x) =\infty$ (resp. $-\infty$), pokud
     $$\forall M \in \mathbb R\; \exists \delta \in \mathbb R^+\; \forall x \in \left ( x_0-\delta,x_0+\delta \right )\smallsetminus\left \{ x_0 \right \}\colon f(x) > M \,\, (\textrm{resp. } f(x) < M).$$
 \end{pozn}
+
+\begin{figure}[ht!]
+\centering
+\begin{tikzpicture}[>=Stealth, declare function={f(\x)=1+1/(\x-3)^2+\x/3;}]
+    % Osy
+    \draw[->] (-0.5,2) -- (6,2) node[right]{$x$};
+    \draw[->] (0,1.5) -- (0,6) node[above]{$y$};
+
+    % Funkce y = f(x) (s vertikální asymptotou v x = 3)
+    \draw[thick] plot[domain=0:2.555, smooth] (\x,{f(\x)});
+    \draw[thick] plot[domain=3.455:5.5, smooth] (\x,{f(\x)}) node[right]{$y = f(x)$};
+
+    % Bod a (asymptota)
+    \def\a{3}
+    \draw[dashed] (\a,2) node[below]{$x_0$} -- (\a,7);
+
+    % Šipky a popisky pro δ (vlevo i vpravo od a)
+    \draw[<->] (\a-1,4.3) -- (\a,4.3) node[midway, below]{$\delta$};
+    \draw[<->] (\a,4.3) -- (\a+1,4.3) node[midway, below]{$\delta$};
+    \draw[dashed] (\a-1,4.3) -- (\a-1,7);
+    \draw[dashed] (\a+1,4.3) -- (\a+1,7);
+
+    % Popisek K (pro f(x) > K)
+    \draw[dashed] (0,4.5) node[left]{$M$} -- (5.5,4.5);
+\end{tikzpicture}
+\caption{Nevlastní limita ve vlastním bodě}
+\end{figure}
 
 \begin{definition}[Vlastní limita v nevlastním bodě]\label{vlimn}
 Funkce $f$ má v bodě $\infty$ (resp. $-\infty$) \textbf{limitu} $A\in \mathbb R,$
@@ -54,6 +114,32 @@ $$
     f(x) \in \left ( A-\varepsilon, A+\varepsilon \right ).
 $$
 \end{pozn}
+
+\begin{figure}[ht!]
+\centering
+\begin{tikzpicture}[>=Stealth, declare function={f(\x)=2+1/(\x);}]
+    % Osy
+    \draw[->] (-0.5,0) -- (6,0) node[right]{$x$};
+    \draw[->] (0,-0.5) -- (0,4) node[above]{$y$};
+
+    % Funkce y = f(x) (přibližující se k A = 2)
+    \draw[thick] plot[domain=0.35:5.5, smooth] (\x,{f(\x)}) node[right]{$y = f(x)$};
+
+    % Asymptota y = A
+    \def\A{2}
+    \draw[dashed] (0,\A) node[left]{$A$} -- (5.5,\A);
+
+    % Šipky a popisky pro ε (nahoru i dolů od A)
+    \draw[<->] (3.3,\A) -- (3.3,\A-0.8) node[midway, left]{$\varepsilon$};
+    \draw[<->] (3.3, \A) -- (3.3, \A + 0.8) node[left]{$\varepsilon$};
+    \draw[dashed] (3.3,\A+0.8) -- (6.5,\A+0.8);
+    \draw[dashed] (3.3,\A-0.8) -- (6.5,\A-0.8);
+
+    % Popisek M (pro x > M)
+    \draw[dashed] (3.5,0) node[below]{$K$} -- (3.5,\A+1);
+\end{tikzpicture}
+\caption{Vlastní limita v nevlastním bodě}
+\end{figure}
 
 \begin{pozn}
     Definice nevlastní limity v nevlastním bodě jsou celkem čtyři (dvakrát
@@ -79,6 +165,24 @@ $$
     $$
 \end{pozn}
 
+\begin{figure}[ht!]
+	\centering
+	\begin{tikzpicture}[>=Stealth, declare function={f(\x)=0.2*(\x)^2;}]
+    % Osy
+    \draw[->] (-0.5,0) -- (6,0) node[right]{$x$};
+    \draw[->] (0,-0.5) -- (0,6) node[above]{$y$};
+
+    % Funkce y = f(x) (kvadratická, rostoucí do +∞)
+    \draw[thick] plot[domain=0:5.5, smooth] (\x,{f(\x)}) node[right]{$y = f(x)$};
+
+    % Šipky a popisky pro M (na ose x)
+    \draw[dashed] (4,0) node[below]{$K$} -- (4,5.5);
+    \draw[dashed] (0,5) node[left]{$M$} -- (5.5,5);
+
+	\end{tikzpicture}
+	\caption{Nevlastní limita v nevlastním bodě}
+\end{figure}
+
 \begin{definition}
 \textbf{Okolím bodu}
 \begin{enumerate}[$i.$]
@@ -92,7 +196,7 @@ Množinu $\mathbb R \cup \left \{ \pm \infty \right \} $ nazvěme \textbf{rozš�
 reálných čísel} a označme $\mathbb R^*.$
 \end{definition}
 
-\begin{definition}[Souhrnná definice limity]
+\begin{definition}[Souhrnná definice limity]\label{limsouhr}
 Řekneme, že $f$ má v bodě $x_0\in \mathbb R^*$ limitu $A \in \mathbb R^*$,
 jestliže ke každému okolí $\mathscr O(A)$ bodu $A$ existuje prstencové
 okolí $\mathscr P(x_0)$ bodu $x_0$ takové, že pro všechna $x\in \mathscr P(x_0)$
@@ -102,6 +206,15 @@ $$
 $$
 \end{definition}
 
+\begin{pozn}
+    Definici \ref{limsouhr} lze také zapsat symbolicky. Řekneme, že
+    $\lim_{x\to x_0} f(x) = A$, pokud
+    $$
+    \forall \mathscr O(A)\;
+        \exists \mathscr P(x_0)\; \forall x \in \mathscr P(x_0)\colon
+        f(x) \in \mathscr O(A).
+    $$
+\end{pozn}
 \begin{veta}
     Funkce $f$ má v bodě $x_0\in \mathbb R^*$ nejvýše jednu limitu.
 \end{veta}
@@ -110,6 +223,10 @@ $$
 Funkce $f$ je \textbf{spojitá v bodě} $x_0\in \mathbb R,$ jestliže
 $$\lim_{x\to x_0}f(x)=f(x_0).$$
 \end{definition}
+
+\begin{pozn}
+	Pojmy limity i spojitosti se dále používají i v jednostranné formě, tj. zleva a zprava. V definicích se pak podmínky omezí u limity na levé, resp. pravé prstencové okolí bodu $x_0$ (tedy na levou, resp. pravou polovinu prstencového okolí) a u spojitosti na rovnost limity zleva, resp. limity zprava.
+\end{pozn}
 
 \begin{definition}
 Funkce $f$ je \textbf{spojitá na intervalu} $J \subseteq \mathbb R,$ jestliže

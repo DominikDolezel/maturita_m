@@ -344,8 +344,16 @@ $$
     \binom{k+n}{k+1}.$$
 \end{veta}
 
+\begin{pozn}
+	Je-li dáno $k$ konečných množin $M_1, M_2, M_3, \dots, M_k$, vyjádříme počet prvků jejich sjednocení pomocí počtů prvků množin a jejich průniků. Pro $k=2$ a $k=3$ můžeme tento vztah vypozorovat z Vennova diagramu a dále jej zobecnit pro libovolné $k$.
+	\begin{align*}
+	k=2\colon |M_1\cup M_2| &= |M_1|+|M_2|-|M_1 \cap M_2|,\\
+	k=3\colon |M_1\cup M_2 \cup M_3| &= |M_1|+|M_2|+|M_3|-|M_1 \cap M_2|-|M_2 \cap M_3|-|M_3\cap M_1|\\&+|M_1 \cap M_2 \cap M_3|.
+	\end{align*}
+\end{pozn}
+
 \begin{veta}[Princip inkluze a exkluze]
-    Nechť $M_1, M_2, M_2, \dots, M_k$ jsou konečné množiny. Pak platí
+    Nechť $M_1, M_2, M_3, \dots, M_k$ jsou konečné množiny. Pak platí
     $$
         \left | \bigcup\limits_{i=1}^k M_i \right | = \sum_{j=1}^k (-1)^{j+1} \sum_{I \in \binom{[n]}{j}} \left |\bigcap_{i \in I} A_i \right|,
     $$
