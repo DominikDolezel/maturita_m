@@ -21,12 +21,15 @@
   \centering
   \begin{tikzpicture}
     \begin{axis}[
-        axis lines = left,
+        axis lines = middle,
+        xlabel = \(x\),
+        ylabel = {\(y\)},
         ymin=0,
         ymax=2.9,
         xmin=0,
         xmax=3.2,
         line width=1.5pt,
+        grid,
     ]
     %Below the red parabola is defined
     \addplot [

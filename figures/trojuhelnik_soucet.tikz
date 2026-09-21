@@ -2,8 +2,15 @@
     \definecolor{angleblue}{HTML}{B8D0EB}   % Jemná tlumená modrá
     \definecolor{anglered}{HTML}{F2B5B5}    % Jemná tlumená červená/růžová
     \definecolor{angleyellow}{HTML}{FCEEA7} % Jemná pastelová žlutá
-      \begin{tikzpicture}[x=1cm, y=1cm, scale=2.6]
-
+      \begin{tikzpicture}[
+      x=1cm,
+      y=1cm,
+      scale=2.6,
+      % def rovnob. značek
+      mid-double-tick/.style={postaction={decorate, decoration={
+        markings, mark=at position 0.5 with {\draw[thick] (-1.5pt,-3pt) -- (-1.5pt,3pt); \draw[thick] (1.5pt,-3pt) -- (1.5pt,3pt);}
+      }}}
+      ]
         % =========================================================================
         % SOUŘADNICE VRCHOLŮ TROJÚHELNÍKU
         % =========================================================================
@@ -41,10 +48,11 @@
         \draw[black, thick] (B) -- (A);
         \draw[black, thick] (A) -- (C);
         \draw[black, thick] (B) -- (C);
+        \draw[mid-double-tick] (B) -- (C);
 
         % Rovnoběžka "x" procházející bodem A
         \draw[black, thick] (A) ++(170.91:1.5) -- ++(-9.09:4.5);
-
+        \draw[mid-double-tick] (A) -- ++(-9.09:4.5);
 
         % =========================================================================
         % POPISKY (v klasickém matematickém fontu)

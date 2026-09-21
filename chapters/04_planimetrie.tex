@@ -502,7 +502,6 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
         \node[below left] at (A) {$A$};
         \node[below right] at (B) {$B$};
         \node[above] at (C) {$C$};
-
         \node[below] at (P) {$C_0$};
 
         % Popisky hlavních stran
@@ -523,14 +522,11 @@ Průsečík těžnic nazýváme \textbf{těžištěm}.
         \draw (9,0) arc (180:143.13:1);
         \node at (9.4,0.2) {$\beta$};
 
-        % Pravý úhel gama u vrcholu C (oblouk z CA na CB)
-        \draw (C) ++(233.13:1.2) arc (233.13:323.13:1.2);
-        \fill (C) ++(278.13:0.6) circle (1.2pt); % Tečka uprostřed
+        % Pravý úhel gama u vrcholu C (čtvereček)
+        \draw (C) -- ++(-0.24,-0.32) -- ++(0.32,-0.24) -- ++ (0.24,0.32);
 
-        % Pravý úhel u paty výšky (bod P, levá strana)
-        \draw (P) ++(-0.8,0) arc (180:90:0.8);
-        \fill (P) ++(135:0.4) circle (1.2pt); % Tečka uprostřed oblouku
-
+        % Pravý úhel u paty výšky (bod P, čtvereček)
+        \draw (P) ++(-0.4,0) rectangle ++(0.4,0.4);
     \end{tikzpicture}
     \caption{Eukleidova věta o výšce}
     \label{eukl_v_o_v}
